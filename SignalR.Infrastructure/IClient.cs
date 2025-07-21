@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SignalR.Application.Client
+{
+    /// <summary>
+    /// IClient 接口定义了 SignalR 客户端的基本行为。
+    /// </summary>
+    public interface IClient
+    {
+        public Task SendMessage(string message);
+    }
+}
