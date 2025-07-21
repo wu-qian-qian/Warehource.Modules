@@ -31,3 +31,4 @@ D:\Program\仓库\Warehource.Modules\User.Contrancts\obj\Debug\net8.0\User.Contr
 D:\Program\仓库\Warehource.Modules\User.Contrancts\obj\Debug\net8.0\refint\User.Contrancts.dll
 D:\Program\仓库\Warehource.Modules\User.Contrancts\obj\Debug\net8.0\User.Contrancts.pdb
 D:\Program\仓库\Warehource.Modules\User.Contrancts\obj\Debug\net8.0\ref\User.Contrancts.dll
+D:\Program\仓库\Warehource.Modules\User.Contrancts\obj\Debug\net8.0\User.Contrancts.sourcelink.json

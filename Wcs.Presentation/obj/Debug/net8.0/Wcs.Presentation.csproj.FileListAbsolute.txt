@@ -85,3 +85,4 @@ D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Prese
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\refint\Wcs.Presentation.dll
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.pdb
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\ref\Wcs.Presentation.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.sourcelink.json

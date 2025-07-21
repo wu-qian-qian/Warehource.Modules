@@ -31,4 +31,14 @@ public class UserManager(IUserRepository userRepository, IRoleRepository roleRep
     {
         await roleRepository.InserAsync(role);
     }
+
+    public async Task<User?> GetUserAndRoleAsync(string userName)
+    {
+        return await userRepository.GetUserAndRoleAsync(userName);
+    }
+
+    public async Task<IEnumerable<User>> GetAllUserAndRoleAsync()
+    {
+        return await userRepository.GetAllUserAndRoleAsync();
+    }
 }

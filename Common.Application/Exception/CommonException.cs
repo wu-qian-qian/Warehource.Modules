@@ -1,5 +1,9 @@
 ﻿namespace Common.Application.Exception;
 
+
+/// <summary>
+/// 
+/// </summary>
 public sealed class CommonException : System.Exception
 {
     public CommonException(string requestName, System.Exception? innerException = default)

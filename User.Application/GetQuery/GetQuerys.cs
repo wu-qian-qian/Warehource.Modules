@@ -3,10 +3,10 @@ using User.Contrancts;
 
 namespace User.Application.GetQuery;
 
-internal class GetUserQuery : IQuery<IEnumerable<UserDto>>
+public class GetUserQuery : IQuery<IEnumerable<UserDto>>
 {
 }
 
-internal class GetRoleQuery : IQuery<IEnumerable<RoleDto>>
+public class GetRoleQuery : IQuery<IEnumerable<RoleDto>>
 {
 }

@@ -17,7 +17,7 @@ using Wcs.Infrastructure.DB.WcsTask;
 
 namespace Wcs.Infrastructure.Database;
 
-//Add-Migration InitialCreate -OutputDir "Data/Migrations"
+//Add-Migration InitialCreate -OutputDir "Database/Migrations" -Context WCSDBContext
 public sealed class WCSDBContext : BaseDbContext, IUnitOfWork
 {
     public WCSDBContext(DbContextOptions<WCSDBContext> options, LastModificationInterceptor lastModificationInterceptor)

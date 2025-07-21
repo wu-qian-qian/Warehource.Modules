@@ -8,7 +8,7 @@ public class RoleEntityTypeConfiguration : IEntityTypeConfiguration<Domain.Role>
 {
     public void Configure(EntityTypeBuilder<Domain.Role> builder)
     {
-        builder.ToTable(nameof(Domain.Role), Schemas.TableSchema);
+        builder.ToTable(nameof(Domain.Role),Schemas.TableSchema);
         builder.HasKey(builder => builder.Id).IsClustered(false);
         builder.HasIndex(p => p.RoleName).IsClustered(false);
         builder.Property(p => p.RoleName)

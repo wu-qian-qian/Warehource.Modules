@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using Common.Infrastructure.Authorization;
 using Common.Infrastructure.Swagger;
 using Microsoft.AspNetCore.Authentication;
@@ -22,8 +24,14 @@ public static class AuthenticationExtensions
         JWTOptions options)
     {
         services.Configure<SwaggerGenOptions>(c => { c.AddAuthenticationHeader(); });
-        services.AddAuthorization();
-        services.AddAuthentication();
+        services.AddAuthorization(options =>
+        {
+            options.AddPolicy(JwtBearerDefaults.AuthenticationScheme, policy =>
+            {
+                policy.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);
+                policy.RequireClaim(ClaimTypes.NameIdentifier);
+            });
+        });
         //添加jwt的默认配置
         return services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(jwt =>
@@ -65,8 +73,8 @@ public static class AuthenticationExtensions
     /// <returns></returns>
     internal static IServiceCollection AddAuthenticationInternal(this IServiceCollection services, JWTOptions options)
     {
+        //可在其中对编写一些策略
         services.AddAuthorization();
-
         services.AddAuthentication().AddJwtBearer(jwt =>
         {
             jwt.TokenValidationParameters = new TokenValidationParameters
@@ -78,11 +86,28 @@ public static class AuthenticationExtensions
                 ValidIssuer = options.Issuer,
                 ValidAudience = options.Audience,
                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.Key)),
-                RequireExpirationTime = true
+                RequireExpirationTime = true,
+            };
+            // 处理SignalR的特殊情况：Bearer Token可能通过查询字符串传递
+            jwt.Events = new JwtBearerEvents
+            {
+                OnMessageReceived = context =>
+                {
+                    // 从查询字符串中获取access_token参数（SignalR默认将jwt字符放到access_token）
+                    var accessToken = context.Request.Query["access_token"];
+
+                    // 如果请求是针对SignalR集线器的
+                    var path = context.HttpContext.Request.Path;
+                    if (!string.IsNullOrEmpty(accessToken) &&
+                        (path.StartsWithSegments("/chat"))) // 替换为你的Hub路径
+                    {
+                        //赋值这里鉴权中间件就可以获取到
+                        context.Token = accessToken;
+                    }
+                    return Task.CompletedTask;
+                }
             };
         });
-        //它使得在应用程序的任何地方（包括非控制器类）都能访问当前 HTTP 请求的 HttpContext；注入   IHttpContextAccessor
-        services.AddHttpContextAccessor();
         return services;
     }
 

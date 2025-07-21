@@ -22,7 +22,7 @@ public sealed class HttpClientFactory
     /// <summary>
     ///     请求头参数集合
     /// </summary>
-    protected IDictionary<string, string> HeaderParams { get; }
+    protected IDictionary<string, string> HeaderParams { get; set; }
 
     /// <summary>
     ///     Cookie参数集合
@@ -30,10 +30,47 @@ public sealed class HttpClientFactory
     protected IDictionary<string, string> Cookies { get; }
 
 
+    /// <summary>
+    ///    添加请求头参数
+    /// </summary>
+    /// <param name="key"></param>
+    /// <param name="value"></param>
+    public void AddHeader(string key, string value)
+    {
+        if (HeaderParams == null)
+        {
+            HeaderParams = new Dictionary<string, string>();
+        }
+        if (HeaderParams.ContainsKey(key))
+        {
+            HeaderParams[key] = value;
+        }
+        else
+        {
+            HeaderParams.Add(key, value);
+        }
+    }
+
+    /// <summary>
+    ///     获取HttpClient实例
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
     public HttpClient TryGetInstance(string name = "")
     {
         var temp = _name ?? name;
-        return _httpClient.CreateClient(temp);
+        var client= _httpClient.CreateClient(temp);
+        if(HeaderParams != null)
+        {
+            foreach (var header in HeaderParams)
+            {
+                if (!client.DefaultRequestHeaders.Contains(header.Key))
+                {
+                    client.DefaultRequestHeaders.Add(header.Key, header.Value);
+                }
+            }
+        }
+        return client;
     }
 
     /// <summary>

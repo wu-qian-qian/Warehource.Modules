@@ -49,3 +49,4 @@ D:\Program\仓库\Warehource.Modules\Common.Application\obj\Debug\net8.0\Common.
 D:\Program\仓库\Warehource.Modules\Common.Application\obj\Debug\net8.0\refint\Common.Application.dll
 D:\Program\仓库\Warehource.Modules\Common.Application\obj\Debug\net8.0\Common.Application.pdb
 D:\Program\仓库\Warehource.Modules\Common.Application\obj\Debug\net8.0\ref\Common.Application.dll
+D:\Program\仓库\Warehource.Modules\Common.Application\obj\Debug\net8.0\Common.Application.sourcelink.json

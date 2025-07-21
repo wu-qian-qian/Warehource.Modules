@@ -67,3 +67,4 @@ D:\Program\仓库\Warehource.Modules\User.Application\obj\Debug\net8.0\User.Appl
 D:\Program\仓库\Warehource.Modules\User.Application\obj\Debug\net8.0\refint\User.Application.dll
 D:\Program\仓库\Warehource.Modules\User.Application\obj\Debug\net8.0\User.Application.pdb
 D:\Program\仓库\Warehource.Modules\User.Application\obj\Debug\net8.0\ref\User.Application.dll
+D:\Program\仓库\Warehource.Modules\User.Application\obj\Debug\net8.0\User.Application.sourcelink.json

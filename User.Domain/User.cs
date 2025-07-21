@@ -25,4 +25,14 @@ public class User : IEntity
     public Guid RoleId { get; set; }
 
     public Role? Role { get; set; }
+
+    public bool CheckLockoutEnd()
+    {
+      return  DateTime.Now > LockoutEnd;
+    }
+
+    public bool CheckLogin(string pwd)
+    {
+        return pwd == Password;
+    }
 }

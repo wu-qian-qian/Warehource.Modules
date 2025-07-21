@@ -16,7 +16,7 @@ namespace User.Infrastructure;
 
 public static class UserInfrastructureConfigurator
 {
-    public static void AddUserInfrastructureConfigurator(this IServiceCollection services,
+    public static void AddUserInfrastructureConfiguration(this IServiceCollection services,
         IConfiguration configuration)
     {
         AddRepository(services);

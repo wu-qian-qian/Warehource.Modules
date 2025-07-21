@@ -97,3 +97,4 @@ D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\refint
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\User.Infrastructure.pdb
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\User.Infrastructure.genruntimeconfig.cache
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\ref\User.Infrastructure.dll
+D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\User.Infrastructure.sourcelink.json

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using System.Security.Claims;
 
 namespace Common.Infrastructure.EF;
 
@@ -19,7 +20,7 @@ public class LastModificationInterceptor : SaveChangesInterceptor
     {
         if (eventData.Context is not null)
         {
-            var user = _httpContextAccessor.HttpContext?.User.Claims.FirstOrDefault(c => c.Type == "Permission")?.Value;
+            var user = _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.Name);
             eventData.Context.ChangeTracker.Entries<ILastModification>()
                 .Where(e => e.State == EntityState.Modified).ToList()
                 .ForEach(entry => { entry.Entity.SetLastModification(user); });

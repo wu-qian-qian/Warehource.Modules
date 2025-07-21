@@ -22,16 +22,20 @@ public sealed class TokenService(IOptions<JWTOptions> options) : ITokenService
         return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
     }
 
-    public string BuildJwtString(List<string> roles, List<string> permissions)
+    public string BuildJwtString(List<string> roles, List<string> names)
     {
         // 创建Claims
         var claims = new List<Claim>();
         var ts = TimeSpan.FromSeconds(options.Value.ExpireSeconds);
+
+      
         // 添加角色
         roles.ForEach(role => claims.Add(new Claim(ClaimTypes.Role, role)));
 
         // 添加权限（自定义声明）
-        permissions.ForEach(permission => claims.Add(new Claim("Permission", permission)));
+   //     permissions.ForEach(permission => claims.Add(new Claim("Permission", permission)));
+
+        names.ForEach(name => claims.Add(new Claim(ClaimTypes.Name, name)));
 
         //构建密钥
         var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.Value.Key));

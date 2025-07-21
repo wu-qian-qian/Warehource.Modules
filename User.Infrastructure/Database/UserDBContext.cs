@@ -6,7 +6,7 @@ using User.Infrastructure.User;
 
 namespace User.Infrastructure.Database;
 
-// Add-Migration InitialCreate -OutputDir "Data/Migrations" -Context UserDBContext
+// Add-Migration InitialCreate -OutputDir "Database/Migrations" -Context UserDBContext
 public class UserDBContext : BaseDbContext, IUnitOfWork
 {
     public UserDBContext(DbContextOptions<UserDBContext> options,

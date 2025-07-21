@@ -43,3 +43,4 @@ D:\Program\仓库\Warehource.Modules\User.Domain\obj\Debug\net8.0\User.Domain.dl
 D:\Program\仓库\Warehource.Modules\User.Domain\obj\Debug\net8.0\refint\User.Domain.dll
 D:\Program\仓库\Warehource.Modules\User.Domain\obj\Debug\net8.0\User.Domain.pdb
 D:\Program\仓库\Warehource.Modules\User.Domain\obj\Debug\net8.0\ref\User.Domain.dll
+D:\Program\仓库\Warehource.Modules\User.Domain\obj\Debug\net8.0\User.Domain.sourcelink.json

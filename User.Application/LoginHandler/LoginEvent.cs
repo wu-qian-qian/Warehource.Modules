@@ -3,7 +3,7 @@ using User.Contrancts;
 
 namespace User.Application.LoginHandler;
 
-internal sealed record LoginEvent : ICommand<UserDto>
+public sealed record LoginEvent : ICommand<UserDto>
 {
     public string Username { get; set; }
 

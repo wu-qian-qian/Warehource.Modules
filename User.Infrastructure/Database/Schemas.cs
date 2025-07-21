@@ -2,5 +2,5 @@
 
 public class Schemas
 {
-    public static string TableSchema => "User.";
+    public static string TableSchema => "User";
 }

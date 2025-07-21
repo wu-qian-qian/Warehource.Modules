@@ -12,23 +12,25 @@ internal class AddUserEventHandler(IUnitOfWork unitOfWork, UserManager userManag
 {
     public async Task<UserDto> Handle(AddUserEvent request, CancellationToken cancellationToken)
     {
-        var user = await userManager.GetUserAsync(request.Name);
+        var user = await userManager.GetUserAsync(request.Username);
         var role = await userManager.GetRoleAsync(request.RoleName);
         var LockoutEnd = DateTimeOffset.Now.AddYears(-100);
         if (user == null && role != null)
         {
             user = new Domain.User
             {
-                RoleId = role.Id,
                 Description = request.Description,
                 Email = request.Email,
                 Phone = request.Phone,
                 LockoutEnd = LockoutEnd,
-                Username = request.Name,
+                Username = request.Username,
                 Password = request.Password,
-                Name = request.Name
+                Name = request.Name,
+               RoleId = role.Id,
             };
             await userManager.InserUserAsync(user);
+            await unitOfWork.SaveChangesAsync();
+            user.Role = role;
             return mapper.Map<UserDto>(user);
         }
 
@@ -36,11 +38,26 @@ internal class AddUserEventHandler(IUnitOfWork unitOfWork, UserManager userManag
     }
 }
 
-internal class AddRoleEventHandler(IUnitOfWork unitOfWork, UserManager userManager)
+internal class AddRoleEventHandler(IUnitOfWork unitOfWork, UserManager userManager, IMapper mapper)
     : ICommandHandler<AddRoleEvent, RoleDto>
 {
-    public Task<RoleDto> Handle(AddRoleEvent request, CancellationToken cancellationToken)
+    public async Task<RoleDto> Handle(AddRoleEvent request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var role = await userManager.GetRoleAsync(request.RoleName);
+        if (role == null)
+        {
+            role = new Role
+            {
+                RoleName = request.RoleName,
+                Description = request.Description
+            };
+           await userManager.InserRoleAsync(role);
+            await unitOfWork.SaveChangesAsync();
+            return mapper.Map<RoleDto>(role);
+        }
+        else
+        {
+            throw new CommonException("添加角色失败存在该角色");
+        }
     }
 }

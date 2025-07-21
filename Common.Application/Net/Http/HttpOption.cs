@@ -25,8 +25,6 @@ public sealed record HttpOptions
     /// </summary>
     public int RetryDelay { get; set; }
 
-    /// <summary>
-    ///     获取鉴权Jwt
-    /// </summary>
-    public HttpRequestMessage GetAuthorization { get; set; }
+    public HttpRequestMessage? GetAuthorization { get; set; }
+
 }

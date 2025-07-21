@@ -79,3 +79,4 @@ D:\Program\仓库\Warehource.Modules\User.Presentation\obj\Debug\net8.0\User.Pre
 D:\Program\仓库\Warehource.Modules\User.Presentation\obj\Debug\net8.0\refint\User.Presentation.dll
 D:\Program\仓库\Warehource.Modules\User.Presentation\obj\Debug\net8.0\User.Presentation.pdb
 D:\Program\仓库\Warehource.Modules\User.Presentation\obj\Debug\net8.0\ref\User.Presentation.dll
+D:\Program\仓库\Warehource.Modules\User.Presentation\obj\Debug\net8.0\User.Presentation.sourcelink.json

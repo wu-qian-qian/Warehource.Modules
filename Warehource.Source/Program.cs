@@ -6,6 +6,7 @@ using Common.Infrastructure.Middleware;
 using Common.Presentation.Endpoints;
 using Common.Shared;
 using Serilog;
+using Signal.Infrastructure;
 using User.Infrastructure;
 using Warehource.Source;
 using Wcs.Application;
@@ -19,7 +20,7 @@ var currentAssembly = Assembly.GetExecutingAssembly();
 //服务通用模块
 Action<HttpResponseMessage> policyCallback = result =>
 {
-    Log.Logger.ForCategory(LogCategory.Http).Information(
+    Log.Logger.ForCategory(LogCategory.Error).Information(
         "Http请求失败，状态码：{StatusCode}，请求地址：{RequestUri}，请求方法：{Method}",
         result.StatusCode, result.RequestMessage?.RequestUri, result.RequestMessage?.Method);
 };
@@ -33,7 +34,7 @@ builder.Services.AddModules(builder.Configuration,
     //模块的独立基础设施注入
     [
         WcsInfrastructureConfigurator.AddWcsInfrastructureModule,
-        UserInfrastructureConfigurator.AddUserInfrastructureConfigurator
+        UserInfrastructureConfigurator.AddUserInfrastructureConfiguration,
     ],
     //模块化的MediatR管道注入
     [WcsInfrastructureConfigurator.AddBehaviorModule],
@@ -44,7 +45,7 @@ builder.Services.AddModules(builder.Configuration,
     //模块化aotoMapper注入
     , [WcsInfrastructureConfigurator.AddAutoMapper, UserInfrastructureConfigurator.AddAutoMapper]
 );
-
+builder.Services.AddSignalRConfiguration();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

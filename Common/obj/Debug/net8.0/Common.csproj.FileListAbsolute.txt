@@ -31,3 +31,4 @@ D:\Program\仓库\Warehource.Modules\Common\obj\Debug\net8.0\Common.dll
 D:\Program\仓库\Warehource.Modules\Common\obj\Debug\net8.0\refint\Common.dll
 D:\Program\仓库\Warehource.Modules\Common\obj\Debug\net8.0\Common.pdb
 D:\Program\仓库\Warehource.Modules\Common\obj\Debug\net8.0\ref\Common.dll
+D:\Program\仓库\Warehource.Modules\Common\obj\Debug\net8.0\Common.sourcelink.json

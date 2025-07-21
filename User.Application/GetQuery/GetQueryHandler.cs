@@ -1,20 +1,24 @@
-﻿using Common.Application.MediatR.Message;
+﻿using AutoMapper;
+using Common.Application.MediatR.Message;
 using User.Contrancts;
+using User.Domain;
 
 namespace User.Application.GetQuery;
 
-internal class GetUserQueryHandler : IQueryHandler<GetUserQuery, IEnumerable<UserDto>>
+internal class GetUserQueryHandler(UserManager userManager,IMapper mapper) : IQueryHandler<GetUserQuery, IEnumerable<UserDto>>
 {
-    public Task<IEnumerable<UserDto>> Handle(GetUserQuery request, CancellationToken cancellationToken)
+    public async Task<IEnumerable<UserDto>> Handle(GetUserQuery request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var userList =await userManager.GetAllUserAndRoleAsync();
+        return mapper.Map<IEnumerable<UserDto>>(userList);
     }
 }
 
-internal class GetRoleQueryHandler : IQueryHandler<GetRoleQuery, IEnumerable<RoleDto>>
+internal class GetRoleQueryHandler(UserManager userManager, IMapper mapper) : IQueryHandler<GetRoleQuery, IEnumerable<RoleDto>>
 {
-    public Task<IEnumerable<RoleDto>> Handle(GetRoleQuery request, CancellationToken cancellationToken)
+    public async Task<IEnumerable<RoleDto>> Handle(GetRoleQuery request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var userList = await userManager.GetRolesAsync();
+        return mapper.Map<IEnumerable<RoleDto>>(userList);
     }
 }

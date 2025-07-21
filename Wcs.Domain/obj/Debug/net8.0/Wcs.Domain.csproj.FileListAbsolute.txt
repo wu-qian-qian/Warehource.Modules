@@ -49,3 +49,4 @@ D:\Program\仓库\Warehource.Modules\Wcs.Domain\obj\Debug\net8.0\Wcs.Domain.dll
 D:\Program\仓库\Warehource.Modules\Wcs.Domain\obj\Debug\net8.0\refint\Wcs.Domain.dll
 D:\Program\仓库\Warehource.Modules\Wcs.Domain\obj\Debug\net8.0\Wcs.Domain.pdb
 D:\Program\仓库\Warehource.Modules\Wcs.Domain\obj\Debug\net8.0\ref\Wcs.Domain.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Domain\obj\Debug\net8.0\Wcs.Domain.sourcelink.json
