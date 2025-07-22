@@ -1,12 +1,14 @@
 ﻿using Common.Application.Event;
 using Common.Application.QuartzJob;
+using MediatR;
 using Quartz;
 using Wcs.Application.Custom;
+using Wcs.Application.S7Plc.ReadPlcCommand;
 
 namespace Wcs.Infrastructure.ReadPlcJob;
 
 [DisallowConcurrentExecution]
-internal class ReadPlcJob(IMassTransitEventBus bus) : BaseJob
+internal class ReadPlcJob(IMassTransitEventBus bus, ISender sender) : BaseJob
 {
     public override async Task Execute(IJobExecutionContext context)
     {
@@ -22,5 +24,10 @@ internal class ReadPlcJob(IMassTransitEventBus bus) : BaseJob
         }
 
         Console.WriteLine("结束");
+    }
+
+    private async Task ReadPlc()
+    {
+        sender.Send(new PlcEventCommand());
     }
 }

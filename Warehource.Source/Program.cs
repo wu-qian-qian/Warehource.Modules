@@ -34,7 +34,7 @@ builder.Services.AddModules(builder.Configuration,
     //模块的独立基础设施注入
     [
         WcsInfrastructureConfigurator.AddWcsInfrastructureModule,
-        UserInfrastructureConfigurator.AddUserInfrastructureConfiguration,
+        UserInfrastructureConfigurator.AddUserInfrastructureConfiguration
     ],
     //模块化的MediatR管道注入
     [WcsInfrastructureConfigurator.AddBehaviorModule],

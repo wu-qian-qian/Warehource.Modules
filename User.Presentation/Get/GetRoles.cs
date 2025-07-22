@@ -12,9 +12,8 @@ internal class GetRoles : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapGet("user/get-roles", [Authorize] async (ISender sender) =>
-        {
-            return await sender.Send(new GetRoleQuery());
-        }).WithTags(AssemblyReference.User);
+        app.MapGet("user/get-roles",
+                [Authorize] async (ISender sender) => { return await sender.Send(new GetRoleQuery()); })
+            .WithTags(AssemblyReference.User);
     }
 }

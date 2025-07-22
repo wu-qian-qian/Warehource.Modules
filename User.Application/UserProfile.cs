@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using User.Contrancts;
+using User.Domain;
 
 namespace User.Application;
 
@@ -10,6 +11,6 @@ internal class UserProfile : Profile
         CreateMap<Domain.User, UserDto>()
             .ForMember(dest => dest.RoleName,
                 opt => opt.MapFrom(src => src.Role.RoleName));
-        CreateMap<Domain.Role, RoleDto>();
+        CreateMap<Role, RoleDto>();
     }
 }

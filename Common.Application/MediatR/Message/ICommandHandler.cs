@@ -3,7 +3,7 @@
 namespace Common.Application.MediatR.Message;
 
 /// <summary>
-/// 可以对返回值进行统一的包装
+///     可以对返回值进行统一的包装
 /// </summary>
 /// <typeparam name="TCommand"></typeparam>
 /// <typeparam name="TResult"></typeparam>

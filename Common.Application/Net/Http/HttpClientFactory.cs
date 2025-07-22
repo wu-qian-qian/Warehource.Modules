@@ -31,24 +31,17 @@ public sealed class HttpClientFactory
 
 
     /// <summary>
-    ///    添加请求头参数
+    ///     添加请求头参数
     /// </summary>
     /// <param name="key"></param>
     /// <param name="value"></param>
     public void AddHeader(string key, string value)
     {
-        if (HeaderParams == null)
-        {
-            HeaderParams = new Dictionary<string, string>();
-        }
+        if (HeaderParams == null) HeaderParams = new Dictionary<string, string>();
         if (HeaderParams.ContainsKey(key))
-        {
             HeaderParams[key] = value;
-        }
         else
-        {
             HeaderParams.Add(key, value);
-        }
     }
 
     /// <summary>
@@ -59,17 +52,11 @@ public sealed class HttpClientFactory
     public HttpClient TryGetInstance(string name = "")
     {
         var temp = _name ?? name;
-        var client= _httpClient.CreateClient(temp);
-        if(HeaderParams != null)
-        {
+        var client = _httpClient.CreateClient(temp);
+        if (HeaderParams != null)
             foreach (var header in HeaderParams)
-            {
                 if (!client.DefaultRequestHeaders.Contains(header.Key))
-                {
                     client.DefaultRequestHeaders.Add(header.Key, header.Value);
-                }
-            }
-        }
         return client;
     }
 

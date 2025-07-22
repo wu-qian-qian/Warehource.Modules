@@ -9,7 +9,7 @@ internal class UserEntityTypeConfiguration : IEntityTypeConfiguration<Domain.Use
     public void Configure(EntityTypeBuilder<Domain.User> builder)
     {
         builder.ToTable(nameof(Domain.User), Schemas.TableSchema);
-        builder .HasKey(u => u.Id).IsClustered(false);
+        builder.HasKey(u => u.Id).IsClustered(false);
         builder.HasIndex(p => p.Username).IsClustered(false);
         builder.Property(p => p.Username)
             .IsRequired()

@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{211EB02F-D0D6-4AE2-B6D7-56ECC4B2FEE5}|SignalR.Infrastructure\\SignalR.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\signalr.infrastructure\\signalr.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{211EB02F-D0D6-4AE2-B6D7-56ECC4B2FEE5}|SignalR.Infrastructure\\SignalR.Application.csproj|solutionrelative:signalr.infrastructure\\signalr.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D61DE6FF-E50A-4255-ABBE-06F5ACA08E86}|Signal.Infrastructure\\SignalR.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\signal.infrastructure\\signalrconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D61DE6FF-E50A-4255-ABBE-06F5ACA08E86}|Signal.Infrastructure\\SignalR.Infrastructure.csproj|solutionrelative:signal.infrastructure\\signalrconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D61DE6FF-E50A-4255-ABBE-06F5ACA08E86}|Signal.Infrastructure\\SignalR.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\signal.infrastructure\\hubmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D61DE6FF-E50A-4255-ABBE-06F5ACA08E86}|Signal.Infrastructure\\SignalR.Infrastructure.csproj|solutionrelative:signal.infrastructure\\hubmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{211EB02F-D0D6-4AE2-B6D7-56ECC4B2FEE5}|SignalR.Infrastructure\\SignalR.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\signalr.infrastructure\\iclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{211EB02F-D0D6-4AE2-B6D7-56ECC4B2FEE5}|SignalR.Infrastructure\\SignalR.Application.csproj|solutionrelative:signalr.infrastructure\\iclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\warehource.source\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|solutionrelative:warehource.source\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\warehource.source\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|solutionrelative:warehource.source\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,81 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SignalR.Application",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\SignalR.Infrastructure\\SignalR.Application.csproj",
-              "RelativeDocumentMoniker": "SignalR.Infrastructure\\SignalR.Application.csproj",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\SignalR.Infrastructure\\SignalR.Application.csproj",
-              "RelativeToolTip": "SignalR.Infrastructure\\SignalR.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-21T08:27:43.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HubManager.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Signal.Infrastructure\\HubManager.cs",
-              "RelativeDocumentMoniker": "Signal.Infrastructure\\HubManager.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Signal.Infrastructure\\HubManager.cs",
-              "RelativeToolTip": "Signal.Infrastructure\\HubManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T08:06:10.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IClient.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\SignalR.Infrastructure\\IClient.cs",
-              "RelativeDocumentMoniker": "SignalR.Infrastructure\\IClient.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\SignalR.Infrastructure\\IClient.cs",
-              "RelativeToolTip": "SignalR.Infrastructure\\IClient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T08:06:05.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Program.cs",
-              "RelativeDocumentMoniker": "Warehource.Source\\Program.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Program.cs",
-              "RelativeToolTip": "Warehource.Source\\Program.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAkwC8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T08:04:16.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Startup.cs",
-              "RelativeDocumentMoniker": "Warehource.Source\\Startup.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Startup.cs",
-              "RelativeToolTip": "Warehource.Source\\Startup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T08:04:15.702Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SignalRConfigurator.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Signal.Infrastructure\\SignalRConfigurator.cs",
-              "RelativeDocumentMoniker": "Signal.Infrastructure\\SignalRConfigurator.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Signal.Infrastructure\\SignalRConfigurator.cs",
-              "RelativeToolTip": "Signal.Infrastructure\\SignalRConfigurator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswBQAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T08:02:52.477Z",
-              "EditorCaption": ""
             }
           ]
         }

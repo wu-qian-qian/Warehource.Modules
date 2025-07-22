@@ -31,3 +31,4 @@ D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\Common
 D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\refint\Common.Presentation.dll
 D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\Common.Presentation.pdb
 D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\ref\Common.Presentation.dll
+D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\Common.Presentation.sourcelink.json

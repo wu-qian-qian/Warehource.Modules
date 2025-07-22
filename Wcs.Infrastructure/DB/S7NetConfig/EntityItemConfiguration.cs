@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Wcs.Domain.S7;
 using Wcs.Infrastructure.Database;
 
-namespace Wcs.Infrastructure.DB.EntityItem;
+namespace Wcs.Infrastructure.DB.S7NetConfig;
 
 public class EntityItemConfiguration : IEntityTypeConfiguration<S7EntityItem>
 {

@@ -8,6 +8,7 @@
 
     <ItemGroup>
         <Folder Include="Custom\Events\"/>
+        <Folder Include="ExecuteDevice\Behaviors\"/>
     </ItemGroup>
 
     <ItemGroup>

@@ -53,9 +53,16 @@ public class S7NetToken : Common.Application.Net.S7.S7Net
         byte[] bufferBlock = default;
         if (_plc.IsConnected)
         {
-            var result = _plc.ReadBytes(DataType.DataBlock, bulkItem.DB, bulkItem.StartByteAdr, bulkItem.Count);
-            bufferBlock = result ?? Array.Empty<byte>();
-            Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--读取数据成功");
+            try
+            {
+                var result = _plc.ReadBytes(DataType.DataBlock, bulkItem.DB, bulkItem.StartByteAdr, bulkItem.Count);
+                bufferBlock = result ?? Array.Empty<byte>();
+                Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--读取数据成功");
+            }
+            catch (Exception e)
+            {
+                Log.Logger.ForCategory(LogCategory.Net).Information($"读取失败详细{e.Message}");
+            }
         }
         else
         {

@@ -50,6 +50,7 @@ public static class EventExtension
 
             foreach (var item in handlerDomains)
             {
+                //获取所有实现了IDomainEventHandler<item>接口的处理器类型
                 var handlers = assembly.GetTypes()
                     .Where(t => t is { IsAbstract: false, IsInterface: false } &&
                                 t.IsAssignableTo(typeof(IDomainEventHandler<>).MakeGenericType(item)))

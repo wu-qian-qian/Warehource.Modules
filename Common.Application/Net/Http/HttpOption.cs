@@ -26,5 +26,4 @@ public sealed record HttpOptions
     public int RetryDelay { get; set; }
 
     public HttpRequestMessage? GetAuthorization { get; set; }
-
 }

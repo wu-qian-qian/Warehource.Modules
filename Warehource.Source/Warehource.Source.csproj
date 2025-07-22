@@ -7,18 +7,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.11" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.11"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Signal.Infrastructure\SignalR.Infrastructure.csproj" />
-        <ProjectReference Include="..\User.Infrastructure\User.Infrastructure.csproj" />
-        <ProjectReference Include="..\Wcs.Infrastructure\Wcs.Infrastructure.csproj" />
+        <ProjectReference Include="..\Signal.Infrastructure\SignalR.Infrastructure.csproj"/>
+        <ProjectReference Include="..\User.Infrastructure\User.Infrastructure.csproj"/>
+        <ProjectReference Include="..\Wcs.Infrastructure\Wcs.Infrastructure.csproj"/>
     </ItemGroup>
 
 </Project>

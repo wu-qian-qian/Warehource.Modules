@@ -1,8 +1,6 @@
 ﻿namespace Common.Application.Exception;
 
-
 /// <summary>
-/// 
 /// </summary>
 public sealed class CommonException : System.Exception
 {

@@ -12,9 +12,11 @@ internal class GetUsers : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapGet("get/get-users", [Authorize(Roles = "admin")] async (ISender sender) =>
-        {
-             return await sender.Send(new GetUserQuery());
-        }).WithTags(AssemblyReference.User);
+        app.MapGet("get/get-users",
+                [Authorize(Roles = "admin")] async (ISender sender) =>
+                {
+                    return await sender.Send(new GetUserQuery());
+                })
+            .WithTags(AssemblyReference.User);
     }
 }

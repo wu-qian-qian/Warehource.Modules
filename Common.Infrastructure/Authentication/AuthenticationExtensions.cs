@@ -1,5 +1,4 @@
-﻿using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Text;
 using Common.Infrastructure.Authorization;
 using Common.Infrastructure.Swagger;
@@ -86,7 +85,7 @@ public static class AuthenticationExtensions
                 ValidIssuer = options.Issuer,
                 ValidAudience = options.Audience,
                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.Key)),
-                RequireExpirationTime = true,
+                RequireExpirationTime = true
             };
             // 处理SignalR的特殊情况：Bearer Token可能通过查询字符串传递
             jwt.Events = new JwtBearerEvents
@@ -94,16 +93,13 @@ public static class AuthenticationExtensions
                 OnMessageReceived = context =>
                 {
                     // 从查询字符串中获取access_token参数（SignalR默认将jwt字符放到access_token）
-                    var accessToken = context.Request.Query["access_token"];
-
+                    var accessToken = context.Request.Query["access_token"].ToString() ??
+                                      context.Request.Headers.Authorization.ToString();
                     // 如果请求是针对SignalR集线器的
                     var path = context.HttpContext.Request.Path;
-                    if (!string.IsNullOrEmpty(accessToken) &&
-                        (path.StartsWithSegments("/chat"))) // 替换为你的Hub路径
-                    {
+                    if (!string.IsNullOrEmpty(accessToken)) // 替换为你的Hub路径
                         //赋值这里鉴权中间件就可以获取到
                         context.Token = accessToken;
-                    }
                     return Task.CompletedTask;
                 }
             };

@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "8.0.11",
           "Microsoft.EntityFrameworkCore.Design": "8.0.0",
+          "SignalR.Infrastructure": "1.0.0",
           "Swashbuckle.AspNetCore": "6.6.2",
           "User.Infrastructure": "1.0.0",
           "Wcs.Infrastructure": "1.0.0"
@@ -1441,6 +1442,38 @@
           }
         }
       },
+      "SignalR.Application/1.0.0": {
+        "runtime": {
+          "SignalR.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SignalR.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
+          "SignalR.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "SignalR.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SignalR.Presentation/1.0.0": {
+        "dependencies": {
+          "Common.Presentation": "1.0.0",
+          "SignalR.Application": "1.0.0"
+        },
+        "runtime": {
+          "SignalR.Presentation.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "User.Application/1.0.0": {
         "dependencies": {
           "Common.Application": "1.0.0",
@@ -2394,6 +2427,21 @@
       "sha512": ""
     },
     "Common.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SignalR.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SignalR.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SignalR.Presentation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

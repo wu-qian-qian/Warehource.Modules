@@ -3,13 +3,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using SignalR.Application.ChatHub;
 
-namespace SignalR.Presentation
+namespace SignalR.Presentation;
+
+public class SignalEndpoint : IEndpoint
 {
-    public class SignalEndpoint : IEndpoint
+    public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        public void MapEndpoint(IEndpointRouteBuilder app)
-        {
-            app.MapHub<WcsHub>("/wcshub"); 
-        }
+        app.MapHub<WcsHub>("/wcshub");
     }
 }

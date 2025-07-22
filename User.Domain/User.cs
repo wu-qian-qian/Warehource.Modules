@@ -28,7 +28,7 @@ public class User : IEntity
 
     public bool CheckLockoutEnd()
     {
-      return  DateTime.Now > LockoutEnd;
+        return DateTime.Now > LockoutEnd;
     }
 
     public bool CheckLogin(string pwd)

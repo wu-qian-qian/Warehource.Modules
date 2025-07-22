@@ -1,4 +1,6 @@
-namespace Common.Application.Net;
+using Common.Application.Net;
+
+namespace Wcs.Application.Abstract;
 
 public interface INetService
 {
@@ -9,4 +11,6 @@ public interface INetService
     Task ReConnect();
 
     void AddConnect(INet connect);
+
+    void Initialization();
 }

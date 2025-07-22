@@ -1,5 +1,5 @@
 ﻿using Common.Application.MediatR.Message;
-using Common.Application.Net;
+using Wcs.Application.Abstract;
 
 namespace Wcs.Application.S7Plc.ReadPlcCommand;
 

@@ -26,7 +26,7 @@ internal class AddUserEventHandler(IUnitOfWork unitOfWork, UserManager userManag
                 Username = request.Username,
                 Password = request.Password,
                 Name = request.Name,
-               RoleId = role.Id,
+                RoleId = role.Id
             };
             await userManager.InserUserAsync(user);
             await unitOfWork.SaveChangesAsync();
@@ -51,13 +51,11 @@ internal class AddRoleEventHandler(IUnitOfWork unitOfWork, UserManager userManag
                 RoleName = request.RoleName,
                 Description = request.Description
             };
-           await userManager.InserRoleAsync(role);
+            await userManager.InserRoleAsync(role);
             await unitOfWork.SaveChangesAsync();
             return mapper.Map<RoleDto>(role);
         }
-        else
-        {
-            throw new CommonException("添加角色失败存在该角色");
-        }
+
+        throw new CommonException("添加角色失败存在该角色");
     }
 }

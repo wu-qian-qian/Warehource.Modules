@@ -53,7 +53,7 @@ public static class SerilogExtensions
                     outputTemplate:
                     "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
             //error日志
-              .WriteTo.Logger(l => l
+            .WriteTo.Logger(l => l
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&
                                              e.Properties["Category"].ToString() == "Error")
                 .WriteTo.File("Logs/Https/http-.log", rollingInterval: RollingInterval.Day,

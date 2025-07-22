@@ -295,7 +295,6 @@ D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwe
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Warehource.Source.props
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Warehource.Source.props
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets.pack.json
-D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehour.B4D12DB0.Up2Date
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehource.Source.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\refint\Warehource.Source.dll
@@ -368,3 +367,10 @@ D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\ru\Micro
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\SignalR.Application.dll
+D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\SignalR.Infrastructure.dll
+D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\SignalR.Presentation.dll
+D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\SignalR.Infrastructure.pdb
+D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\SignalR.Application.pdb
+D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\SignalR.Presentation.pdb
+D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
