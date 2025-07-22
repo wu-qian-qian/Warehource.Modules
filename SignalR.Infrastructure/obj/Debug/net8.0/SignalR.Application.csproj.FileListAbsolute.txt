@@ -1,0 +1,12 @@
+D:\Program\仓库\Warehource.Modules\SignalR.Infrastructure\bin\Debug\net8.0\SignalR.Application.deps.json
+D:\Program\仓库\Warehource.Modules\SignalR.Infrastructure\bin\Debug\net8.0\SignalR.Application.dll
+D:\Program\仓库\Warehource.Modules\SignalR.Infrastructure\bin\Debug\net8.0\SignalR.Application.pdb
+D:\Program\仓库\Warehource.Modules\SignalR.Infrastructure\obj\Debug\net8.0\SignalR.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program\仓库\Warehource.Modules\SignalR.Infrastructure\obj\Debug\net8.0\SignalR.Application.AssemblyInfoInputs.cache
+D:\Program\仓库\Warehource.Modules\SignalR.Infrastructure\obj\Debug\net8.0\SignalR.Application.AssemblyInfo.cs
+D:\Program\仓库\Warehource.Modules\SignalR.Infrastructure\obj\Debug\net8.0\SignalR.Application.csproj.CoreCompileInputs.cache
+D:\Program\仓库\Warehource.Modules\SignalR.Infrastructure\obj\Debug\net8.0\SignalR.Application.sourcelink.json
+D:\Program\仓库\Warehource.Modules\SignalR.Infrastructure\obj\Debug\net8.0\SignalR.Application.dll
+D:\Program\仓库\Warehource.Modules\SignalR.Infrastructure\obj\Debug\net8.0\refint\SignalR.Application.dll
+D:\Program\仓库\Warehource.Modules\SignalR.Infrastructure\obj\Debug\net8.0\SignalR.Application.pdb
+D:\Program\仓库\Warehource.Modules\SignalR.Infrastructure\obj\Debug\net8.0\ref\SignalR.Application.dll
