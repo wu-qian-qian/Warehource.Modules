@@ -1,6 +1,6 @@
 ﻿using Common.Domain.EF;
 
-namespace User.Domain;
+namespace Identity.Domain;
 
 public interface IUserRepository : IRepository<User>
 {

@@ -1,11 +1,11 @@
 ﻿using Common.Presentation.Endpoints;
+using Identity.Application.AddHandler;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using User.Application.AddHandler;
 
-namespace User.Presentation.AddAdmin;
+namespace Identity.Presentation.AddAdmin;
 
 internal class AddAdminUser : IEndpoint
 {

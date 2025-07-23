@@ -1,4 +1,4 @@
-﻿namespace User.Application.Abstract;
+﻿namespace Identity.Application.Abstract;
 
 public interface IUnitOfWork
 {

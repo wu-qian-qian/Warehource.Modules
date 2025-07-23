@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fU2wwAXOqes=",
+  "dgSpecHash": "9Wbo83OAsCM=",
   "success": true,
-  "projectFilePath": "D:\\Program\\仓库\\Warehource.Modules\\User.Presentation\\User.Presentation.csproj",
+  "projectFilePath": "D:\\Program\\仓库\\Warehource.Modules\\User.Presentation\\Identity.Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\吴\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",

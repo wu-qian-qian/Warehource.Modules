@@ -9,7 +9,9 @@
       "Wcs.Application/1.0.0": {
         "dependencies": {
           "Common.Application": "1.0.0",
+          "Plc.CustomEvents": "1.0.0",
           "Wcs.Contracts": "1.0.0",
+          "Wcs.CustomEvents": "1.0.0",
           "Wcs.Domain": "1.0.0"
         },
         "runtime": {
@@ -694,12 +696,34 @@
           }
         }
       },
+      "Plc.CustomEvents/1.0.0": {
+        "dependencies": {
+          "Common.Application": "1.0.0"
+        },
+        "runtime": {
+          "Plc.CustomEvents.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Wcs.Contracts/1.0.0": {
         "dependencies": {
           "Wcs.Shared": "1.0.0"
         },
         "runtime": {
           "Wcs.Contracts.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Wcs.CustomEvents/1.0.0": {
+        "dependencies": {
+          "Common.Application": "1.0.0"
+        },
+        "runtime": {
+          "Wcs.CustomEvents.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1147,7 +1171,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Plc.CustomEvents/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Wcs.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Wcs.CustomEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

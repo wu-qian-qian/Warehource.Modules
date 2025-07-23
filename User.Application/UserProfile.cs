@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using User.Contrancts;
-using User.Domain;
+using Identity.Contrancts;
+using Identity.Domain;
 
-namespace User.Application;
+namespace Identity.Application;
 
 internal class UserProfile : Profile
 {

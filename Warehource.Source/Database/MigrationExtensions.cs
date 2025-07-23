@@ -1,5 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using User.Infrastructure.Database;
+﻿using Identity.Infrastructure.Database;
+using Microsoft.EntityFrameworkCore;
+using Plc.Infrastructure.Database;
 using Wcs.Infrastructure.Database;
 
 namespace Warehource.Source.Database;
@@ -12,6 +13,7 @@ public static class MigrationExtensions
 
         ApplyMigration<WCSDBContext>(scope);
         ApplyMigration<UserDBContext>(scope);
+        ApplyMigration<PlcDBContext>(scope);
     }
 
     private static void ApplyMigration<TDbContext>(IServiceScope scope)

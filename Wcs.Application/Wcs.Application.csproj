@@ -8,14 +8,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="Custom\Events\"/>
-        <Folder Include="ExecuteDevice\Behaviors\"/>
+        <Folder Include="ExecuteDevice\Behaviors\" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Common.Application\Common.Application.csproj"/>
-        <ProjectReference Include="..\Wcs.Contracts\Wcs.Contracts.csproj"/>
-        <ProjectReference Include="..\Wcs.Domain\Wcs.Domain.csproj"/>
+        <ProjectReference Include="..\Common.Application\Common.Application.csproj" />
+        <ProjectReference Include="..\Plc.IntegrationEvents\Plc.CustomEvents.csproj" />
+        <ProjectReference Include="..\Wcs.Contracts\Wcs.Contracts.csproj" />
+        <ProjectReference Include="..\Wcs.CustomEvents\Wcs.CustomEvents.csproj" />
+        <ProjectReference Include="..\Wcs.Domain\Wcs.Domain.csproj" />
     </ItemGroup>
 
 </Project>

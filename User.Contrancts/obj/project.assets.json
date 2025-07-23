@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\User.Contrancts.csproj",
-      "projectName": "User.Contrancts",
-      "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\User.Contrancts.csproj",
+      "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\Identity.Contrancts.csproj",
+      "projectName": "Identity.Contrancts",
+      "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\Identity.Contrancts.csproj",
       "packagesPath": "C:\\Users\\吴\\.nuget\\packages\\",
       "outputPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\obj\\",
       "projectStyle": "PackageReference",

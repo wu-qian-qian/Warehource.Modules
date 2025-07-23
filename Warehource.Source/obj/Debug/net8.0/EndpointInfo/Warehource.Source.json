@@ -6,6 +6,220 @@
     "version": "v1"
   },
   "paths": {
+    "/user/user-login": {
+      "post": {
+        "tags": [
+          "Identity"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Identity.Presentation.Login.LoginRequst"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/get-roles": {
+      "get": {
+        "tags": [
+          "Identity"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Identity.Contrancts.RoleDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/get/get-users": {
+      "get": {
+        "tags": [
+          "Identity"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Identity.Contrancts.UserDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/Delete-role/{roleName}": {
+      "delete": {
+        "tags": [
+          "Identity"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/Delete-user/id": {
+      "delete": {
+        "tags": [
+          "Identity"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/add-role": {
+      "post": {
+        "tags": [
+          "Identity"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Identity.Presentation.Add.AddRoleRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Identity.Contrancts.RoleDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/add-user": {
+      "post": {
+        "tags": [
+          "Identity"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Identity.Presentation.Add.AddUserRequst"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Identity.Contrancts.UserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/add-adminrole": {
+      "post": {
+        "tags": [
+          "Identity"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Identity.Contrancts.RoleDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/add-adminuser": {
+      "post": {
+        "tags": [
+          "Identity"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Identity.Contrancts.UserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/job/add-job": {
       "post": {
         "tags": [
@@ -94,28 +308,10 @@
         }
       }
     },
-    "/job/get-jobs/{name}/{type}": {
+    "/job/get-jobs": {
       "get": {
         "tags": [
           "Job"
-        ],
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
         ],
         "responses": {
           "200": {
@@ -163,126 +359,34 @@
         }
       }
     },
-    "/plc/get-allplc": {
+    "/plc/add-allplc-centity-item": {
       "post": {
         "tags": [
           "Plc"
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/Wcs.Presentation.Job.AddJobRequest"
+                "required": [
+                  "file"
+                ],
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
               }
             }
-          },
-          "required": true
+          }
         },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Wcs.Domain.S7.S7NetConfig"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/user/user-login": {
-      "post": {
-        "tags": [
-          "User"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/User.Presentation.Login.LoginRequst"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/user/get-roles": {
-      "get": {
-        "tags": [
-          "User"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/User.Contrancts.RoleDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/get/get-users": {
-      "get": {
-        "tags": [
-          "User"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/User.Contrancts.UserDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/user/Delete-role/{roleName}": {
-      "delete": {
-        "tags": [
-          "User"
-        ],
-        "parameters": [
-          {
-            "name": "request",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -290,121 +394,58 @@
         }
       }
     },
-    "/user/Delete-user/id": {
-      "delete": {
+    "/plc/get-allplc-centity-item": {
+      "get": {
         "tags": [
-          "User"
+          "Plc"
         ],
-        "parameters": [
-          {
-            "name": "request",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Plc.Contracts.S7Plc.S7EntityItemDto"
+                  }
+                }
+              }
             }
           }
+        }
+      }
+    },
+    "/plc/get-allplc": {
+      "get": {
+        "tags": [
+          "Plc"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Plc.Contracts.S7Plc.S7NetDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/plc/downLoad-plc-template": {
+      "get": {
+        "tags": [
+          "Plc"
         ],
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/user/add-role": {
-      "post": {
-        "tags": [
-          "User"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/User.Presentation.Add.AddRoleRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/User.Contrancts.RoleDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/user/add-user": {
-      "post": {
-        "tags": [
-          "User"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/User.Presentation.Add.AddUserRequst"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/User.Contrancts.UserDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/user/add-adminrole": {
-      "post": {
-        "tags": [
-          "User"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/User.Contrancts.RoleDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/user/add-adminuser": {
-      "post": {
-        "tags": [
-          "User"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/User.Contrancts.UserDto"
-                }
-              }
-            }
           }
         }
       }
@@ -412,7 +453,7 @@
   },
   "components": {
     "schemas": {
-      "User.Contrancts.RoleDto": {
+      "Identity.Contrancts.RoleDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -430,7 +471,7 @@
         },
         "additionalProperties": false
       },
-      "User.Contrancts.UserDto": {
+      "Identity.Contrancts.UserDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -468,7 +509,7 @@
         },
         "additionalProperties": false
       },
-      "User.Presentation.Add.AddRoleRequest": {
+      "Identity.Presentation.Add.AddRoleRequest": {
         "type": "object",
         "properties": {
           "roleName": {
@@ -482,7 +523,7 @@
         },
         "additionalProperties": false
       },
-      "User.Presentation.Add.AddUserRequst": {
+      "Identity.Presentation.Add.AddUserRequst": {
         "type": "object",
         "properties": {
           "name": {
@@ -516,7 +557,7 @@
         },
         "additionalProperties": false
       },
-      "User.Presentation.Login.LoginRequst": {
+      "Identity.Presentation.Login.LoginRequst": {
         "type": "object",
         "properties": {
           "username": {
@@ -529,6 +570,122 @@
           }
         },
         "additionalProperties": false
+      },
+      "Plc.Contracts.S7Plc.S7EntityItemDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "s7DataType": {
+            "$ref": "#/components/schemas/Plc.Shared.S7DataTypeEnum"
+          },
+          "dataOffset": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bitOffset": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "s7BlockType": {
+            "$ref": "#/components/schemas/Plc.Shared.S7BlockTypeEnum"
+          },
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "arrtypeLength": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Plc.Contracts.S7Plc.S7NetDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ip": {
+            "type": "string",
+            "nullable": true
+          },
+          "port": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "s7Type": {
+            "$ref": "#/components/schemas/Plc.Shared.S7TypeEnum"
+          },
+          "solt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rack": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "readTimeOut": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "writeTimeOut": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Plc.Shared.S7BlockTypeEnum": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          28
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Plc.Shared.S7DataTypeEnum": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Plc.Shared.S7TypeEnum": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "Wcs.Contracts.Job.JobDto": {
         "type": "object",
@@ -559,142 +716,6 @@
           },
           "isStart": {
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Wcs.Domain.S7.S7EntityItem": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "creationTime": {
-            "type": "string",
-            "format": "date-time",
-            "readOnly": true
-          },
-          "lastModifierUser": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "lastModificationTime": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true,
-            "readOnly": true
-          },
-          "isDeleted": {
-            "type": "boolean",
-            "readOnly": true
-          },
-          "s7DataType": {
-            "$ref": "#/components/schemas/Wcs.Shared.S7DataTypeEnum"
-          },
-          "dataOffset": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "bitOffset": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "s7BlockType": {
-            "$ref": "#/components/schemas/Wcs.Shared.S7BlockTypeEnum"
-          },
-          "index": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "arrtypeLength": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "deviceId": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "netGuid": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Wcs.Domain.S7.S7NetConfig": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "creationTime": {
-            "type": "string",
-            "format": "date-time",
-            "readOnly": true
-          },
-          "lastModifierUser": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "lastModificationTime": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true,
-            "readOnly": true
-          },
-          "isDeleted": {
-            "type": "boolean",
-            "readOnly": true
-          },
-          "ip": {
-            "type": "string",
-            "nullable": true
-          },
-          "port": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "s7Type": {
-            "$ref": "#/components/schemas/Wcs.Shared.S7TypeEnum"
-          },
-          "solt": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "rack": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "readTimeOut": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "writeTimeOut": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "s7EntityItems": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Wcs.Domain.S7.S7EntityItem"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -750,43 +771,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "Wcs.Shared.S7BlockTypeEnum": {
-        "enum": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          28
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "Wcs.Shared.S7DataTypeEnum": {
-        "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "Wcs.Shared.S7TypeEnum": {
-        "enum": [
-          0,
-          1
-        ],
-        "type": "integer",
-        "format": "int32"
       }
     },
     "securitySchemes": {

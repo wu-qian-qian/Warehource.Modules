@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ABwKrq5okjc=",
+  "dgSpecHash": "I9rQaEeYssE=",
   "success": true,
-  "projectFilePath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\User.Domain.csproj",
+  "projectFilePath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\Identity.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

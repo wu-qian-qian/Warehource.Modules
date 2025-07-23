@@ -1,12 +1,12 @@
 ﻿using Common.Presentation.Endpoints;
+using Identity.Application.AddHandler;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using User.Application.AddHandler;
 
-namespace User.Presentation.Add;
+namespace Identity.Presentation.Add;
 
 internal class AddUser : IEndpoint
 {
@@ -26,21 +26,4 @@ internal class AddUser : IEndpoint
             });
         }).WithTags(AssemblyReference.User);
     }
-}
-
-internal sealed class AddUserRequst
-{
-    public string Name { get; set; }
-
-    public string Description { get; set; }
-
-    public string Email { get; set; }
-
-    public string Phone { get; set; }
-
-    public string Username { get; set; }
-
-    public string Password { get; set; }
-
-    public string RoleName { get; set; }
 }

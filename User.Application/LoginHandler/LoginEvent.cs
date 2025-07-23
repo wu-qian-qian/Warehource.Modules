@@ -1,7 +1,7 @@
 ﻿using Common.Application.MediatR.Message;
-using User.Contrancts;
+using Identity.Contrancts;
 
-namespace User.Application.LoginHandler;
+namespace Identity.Application.LoginHandler;
 
 public sealed record LoginEvent : ICommand<UserDto>
 {

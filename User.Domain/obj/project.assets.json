@@ -33,9 +33,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\User.Domain.csproj",
-      "projectName": "User.Domain",
-      "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\User.Domain.csproj",
+      "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\Identity.Domain.csproj",
+      "projectName": "Identity.Domain",
+      "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\Identity.Domain.csproj",
       "packagesPath": "C:\\Users\\吴\\.nuget\\packages\\",
       "outputPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\obj\\",
       "projectStyle": "PackageReference",

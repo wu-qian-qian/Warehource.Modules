@@ -1,10 +1,10 @@
 ﻿using Common.Infrastructure.EF;
 using Common.Infrastructure.EF.Repository;
+using Identity.Domain;
+using Identity.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
-using User.Domain;
-using User.Infrastructure.Database;
 
-namespace User.Infrastructure.User;
+namespace Identity.Infrastructure.User;
 
 internal class UserRepository : EfCoreRepository<Domain.User, UserDBContext>, IUserRepository
 {

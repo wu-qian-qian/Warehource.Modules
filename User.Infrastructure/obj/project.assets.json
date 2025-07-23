@@ -2263,56 +2263,56 @@
           "bin/placeholder/Common.Shared.dll": {}
         }
       },
-      "User.Application/1.0.0": {
+      "Identity.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Common.Application": "1.0.0",
-          "User.Contrancts": "1.0.0",
-          "User.Domain": "1.0.0"
+          "Identity.Contrancts": "1.0.0",
+          "Identity.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/User.Application.dll": {}
+          "bin/placeholder/Identity.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/User.Application.dll": {}
+          "bin/placeholder/Identity.Application.dll": {}
         }
       },
-      "User.Contrancts/1.0.0": {
+      "Identity.Contrancts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/User.Contrancts.dll": {}
+          "bin/placeholder/Identity.Contrancts.dll": {}
         },
         "runtime": {
-          "bin/placeholder/User.Contrancts.dll": {}
+          "bin/placeholder/Identity.Contrancts.dll": {}
         }
       },
-      "User.Domain/1.0.0": {
+      "Identity.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Common.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/User.Domain.dll": {}
+          "bin/placeholder/Identity.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/User.Domain.dll": {}
+          "bin/placeholder/Identity.Domain.dll": {}
         }
       },
-      "User.Presentation/1.0.0": {
+      "Identity.Presentation/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Common.Presentation": "1.0.0",
-          "User.Application": "1.0.0"
+          "Identity.Application": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/User.Presentation.dll": {}
+          "bin/placeholder/Identity.Presentation.dll": {}
         },
         "runtime": {
-          "bin/placeholder/User.Presentation.dll": {}
+          "bin/placeholder/Identity.Presentation.dll": {}
         }
       }
     }
@@ -5818,35 +5818,35 @@
       "path": "../Common.Shared/Common.Shared.csproj",
       "msbuildProject": "../Common.Shared/Common.Shared.csproj"
     },
-    "User.Application/1.0.0": {
+    "Identity.Application/1.0.0": {
       "type": "project",
-      "path": "../User.Application/User.Application.csproj",
-      "msbuildProject": "../User.Application/User.Application.csproj"
+      "path": "../User.Application/Identity.Application.csproj",
+      "msbuildProject": "../User.Application/Identity.Application.csproj"
     },
-    "User.Contrancts/1.0.0": {
+    "Identity.Contrancts/1.0.0": {
       "type": "project",
-      "path": "../User.Contrancts/User.Contrancts.csproj",
-      "msbuildProject": "../User.Contrancts/User.Contrancts.csproj"
+      "path": "../User.Contrancts/Identity.Contrancts.csproj",
+      "msbuildProject": "../User.Contrancts/Identity.Contrancts.csproj"
     },
-    "User.Domain/1.0.0": {
+    "Identity.Domain/1.0.0": {
       "type": "project",
-      "path": "../User.Domain/User.Domain.csproj",
-      "msbuildProject": "../User.Domain/User.Domain.csproj"
+      "path": "../User.Domain/Identity.Domain.csproj",
+      "msbuildProject": "../User.Domain/Identity.Domain.csproj"
     },
-    "User.Presentation/1.0.0": {
+    "Identity.Presentation/1.0.0": {
       "type": "project",
-      "path": "../User.Presentation/User.Presentation.csproj",
-      "msbuildProject": "../User.Presentation/User.Presentation.csproj"
+      "path": "../User.Presentation/Identity.Presentation.csproj",
+      "msbuildProject": "../User.Presentation/Identity.Presentation.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Common.Infrastructure >= 1.0.0",
+      "Identity.Application >= 1.0.0",
+      "Identity.Domain >= 1.0.0",
+      "Identity.Presentation >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0",
-      "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
-      "User.Application >= 1.0.0",
-      "User.Domain >= 1.0.0",
-      "User.Presentation >= 1.0.0"
+      "Microsoft.EntityFrameworkCore.Tools >= 8.0.0"
     ]
   },
   "packageFolders": {
@@ -5856,9 +5856,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Infrastructure\\User.Infrastructure.csproj",
-      "projectName": "User.Infrastructure",
-      "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Infrastructure\\User.Infrastructure.csproj",
+      "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Infrastructure\\Identity.Infrastructure.csproj",
+      "projectName": "Identity.Infrastructure",
+      "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Infrastructure\\Identity.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\吴\\.nuget\\packages\\",
       "outputPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
@@ -5885,14 +5885,14 @@
             "D:\\Program\\仓库\\Warehource.Modules\\Common.Infrastructure\\Common.Infrastructure.csproj": {
               "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common.Infrastructure\\Common.Infrastructure.csproj"
             },
-            "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\User.Application.csproj": {
-              "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\User.Application.csproj"
+            "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\Identity.Application.csproj": {
+              "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\Identity.Application.csproj"
             },
-            "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\User.Domain.csproj": {
-              "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\User.Domain.csproj"
+            "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\Identity.Domain.csproj": {
+              "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\Identity.Domain.csproj"
             },
-            "D:\\Program\\仓库\\Warehource.Modules\\User.Presentation\\User.Presentation.csproj": {
-              "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Presentation\\User.Presentation.csproj"
+            "D:\\Program\\仓库\\Warehource.Modules\\User.Presentation\\Identity.Presentation.csproj": {
+              "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Presentation\\Identity.Presentation.csproj"
             }
           }
         }

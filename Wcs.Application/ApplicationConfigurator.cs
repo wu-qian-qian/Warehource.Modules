@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
-using Common.Application.Event.Custom;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using Wcs.Application.Custom;
-using Wcs.Application.S7Plc.Behaviors;
+using Wcs.CustomEvents;
 
 namespace Wcs.Application;
 
@@ -14,12 +13,11 @@ public static class ApplicationConfigurator
 {
     public static void AddMediatR(MediatRServiceConfiguration configuration)
     {
-        configuration.AddBehavior<ReadS7PlcPipelineBehavior>();
     }
 
     public static void AddCustom(IRegistrationConfigurator registrationConfigurator)
     {
-        registrationConfigurator.AddConsumer<IntegrationEventConsumer<SendWmsTasksIntegrationEvent>>();
+        registrationConfigurator.AddConsumer<WcsCustomEventConsumer<WcsIntegrationEvent>>();
     }
 
     public static void AddAutoMapper(IMapperConfigurationExpression config)

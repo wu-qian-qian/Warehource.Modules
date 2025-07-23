@@ -1,4 +1,4 @@
-﻿namespace User.Domain;
+﻿namespace Identity.Domain;
 
 public class UserManager(IUserRepository userRepository, IRoleRepository roleRepository)
 {

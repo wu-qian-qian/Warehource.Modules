@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace User.Application.LoginHandler;
+namespace Identity.Application.LoginHandler;
 
 internal class LoginEventValidator : AbstractValidator<LoginEvent>
 {

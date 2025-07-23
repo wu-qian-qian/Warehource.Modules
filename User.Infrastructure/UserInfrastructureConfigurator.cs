@@ -1,18 +1,18 @@
 ﻿using AutoMapper;
 using Common.Presentation.Endpoints;
+using Identity.Application;
+using Identity.Application.Abstract;
+using Identity.Domain;
+using Identity.Infrastructure.Database;
+using Identity.Infrastructure.Role;
+using Identity.Infrastructure.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using User.Application;
-using User.Application.Abstract;
-using User.Domain;
-using User.Infrastructure.Database;
-using User.Infrastructure.Role;
-using User.Infrastructure.User;
-using AssemblyReference = User.Presentation.AssemblyReference;
+using AssemblyReference = Identity.Presentation.AssemblyReference;
 
-namespace User.Infrastructure;
+namespace Identity.Infrastructure;
 
 public static class UserInfrastructureConfigurator
 {
@@ -26,7 +26,7 @@ public static class UserInfrastructureConfigurator
         {
             var connStr = configuration.GetConnectionString("default");
             options.UseSqlServer(connStr, builder =>
-                builder.MigrationsHistoryTable(HistoryRepository.DefaultTableName, Schemas.TableSchema));
+                builder.MigrationsHistoryTable(Schemas.TableSchema + HistoryRepository.DefaultTableName));
         });
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<UserDBContext>());
     }

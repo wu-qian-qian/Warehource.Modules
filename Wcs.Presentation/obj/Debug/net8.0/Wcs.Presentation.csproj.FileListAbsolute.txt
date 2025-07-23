@@ -86,3 +86,7 @@ D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\refint\Wc
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.pdb
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\ref\Wcs.Presentation.dll
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.sourcelink.json
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Common.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Common.pdb
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Wcs.CustomEvents.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Wcs.CustomEvents.pdb

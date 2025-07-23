@@ -1,12 +1,12 @@
 ﻿using Common.Presentation.Endpoints;
+using Identity.Application.GetQuery;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using User.Application.GetQuery;
 
-namespace User.Presentation.Get;
+namespace Identity.Presentation.Get;
 
 internal class GetUsers : IEndpoint
 {

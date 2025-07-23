@@ -51,7 +51,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -170,7 +171,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -235,7 +237,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -303,7 +306,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -328,12 +332,12 @@
         }
       }
     },
-    "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\User.Application.csproj": {
+    "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\Identity.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\User.Application.csproj",
-        "projectName": "User.Application",
-        "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\User.Application.csproj",
+        "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\Identity.Application.csproj",
+        "projectName": "Identity.Application",
+        "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\Identity.Application.csproj",
         "packagesPath": "C:\\Users\\吴\\.nuget\\packages\\",
         "outputPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\obj\\",
         "projectStyle": "PackageReference",
@@ -360,11 +364,11 @@
               "D:\\Program\\仓库\\Warehource.Modules\\Common.Application\\Common.Application.csproj": {
                 "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common.Application\\Common.Application.csproj"
               },
-              "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\User.Contrancts.csproj": {
-                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\User.Contrancts.csproj"
+              "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\Identity.Contrancts.csproj": {
+                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\Identity.Contrancts.csproj"
               },
-              "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\User.Domain.csproj": {
-                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\User.Domain.csproj"
+              "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\Identity.Domain.csproj": {
+                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\Identity.Domain.csproj"
               }
             }
           }
@@ -378,7 +382,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -403,12 +408,12 @@
         }
       }
     },
-    "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\User.Contrancts.csproj": {
+    "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\Identity.Contrancts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\User.Contrancts.csproj",
-        "projectName": "User.Contrancts",
-        "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\User.Contrancts.csproj",
+        "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\Identity.Contrancts.csproj",
+        "projectName": "Identity.Contrancts",
+        "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\Identity.Contrancts.csproj",
         "packagesPath": "C:\\Users\\吴\\.nuget\\packages\\",
         "outputPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\obj\\",
         "projectStyle": "PackageReference",
@@ -443,7 +448,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -468,12 +474,12 @@
         }
       }
     },
-    "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\User.Domain.csproj": {
+    "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\Identity.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\User.Domain.csproj",
-        "projectName": "User.Domain",
-        "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\User.Domain.csproj",
+        "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\Identity.Domain.csproj",
+        "projectName": "Identity.Domain",
+        "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\Identity.Domain.csproj",
         "packagesPath": "C:\\Users\\吴\\.nuget\\packages\\",
         "outputPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\obj\\",
         "projectStyle": "PackageReference",
@@ -512,7 +518,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -569,8 +576,8 @@
               "D:\\Program\\仓库\\Warehource.Modules\\Common.Presentation\\Common.Presentation.csproj": {
                 "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common.Presentation\\Common.Presentation.csproj"
               },
-              "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\User.Application.csproj": {
-                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\User.Application.csproj"
+              "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\Identity.Application.csproj": {
+                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\Identity.Application.csproj"
               }
             }
           }
@@ -584,7 +591,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {

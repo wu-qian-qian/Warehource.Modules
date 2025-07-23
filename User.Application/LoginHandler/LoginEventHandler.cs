@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using Common.Application.Exception;
 using Common.Application.MediatR.Message;
-using User.Contrancts;
-using User.Domain;
+using Identity.Contrancts;
+using Identity.Domain;
 
-namespace User.Application.LoginHandler;
+namespace Identity.Application.LoginHandler;
 
 internal class LoginEventHandler(UserManager userManager, IMapper mapper) : ICommandHandler<LoginEvent, UserDto>
 {

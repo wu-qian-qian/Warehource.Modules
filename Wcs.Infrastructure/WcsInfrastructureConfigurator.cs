@@ -1,7 +1,6 @@
 using AutoMapper;
 using Common.Presentation.Endpoints;
 using MassTransit;
-using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
@@ -10,12 +9,9 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Wcs.Application;
 using Wcs.Application.Abstract;
 using Wcs.Domain.JobConfigs;
-using Wcs.Domain.S7;
 using Wcs.Infrastructure.Database;
 using Wcs.Infrastructure.DB.JobConfig;
-using Wcs.Infrastructure.DB.S7NetConfig;
-using Wcs.Infrastructure.ReadPlcJob;
-using Wcs.Infrastructure.S7Net;
+using Wcs.Infrastructure.Job;
 using Wcs.Shared;
 using AssemblyReference = Wcs.Presentation.AssemblyReference;
 
@@ -31,18 +27,11 @@ public static class WcsInfrastructureConfigurator
     {
         AddRepository(services);
         AddEndPoint(services);
-        services.TryAddSingleton<INetService>(sp =>
-        {
-            var sender = sp.CreateScope().ServiceProvider.GetService<ISender>();
-            INetService netService = new S7NetService();
-            netService.Initialization(sender);
-            return netService;
-        });
         services.AddDbContext<WCSDBContext>(options =>
         {
             var connStr = configuration.GetConnectionString("default");
             options.UseSqlServer(connStr, builder =>
-                builder.MigrationsHistoryTable(HistoryRepository.DefaultTableName, Schemas.TableSchema));
+                builder.MigrationsHistoryTable(Schemas.TableSchema + HistoryRepository.DefaultTableName));
         });
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<WCSDBContext>());
     }
@@ -50,7 +39,6 @@ public static class WcsInfrastructureConfigurator
     public static IServiceCollection AddRepository(this IServiceCollection service)
     {
         service.AddScoped<JobService>();
-        service.AddScoped<IS7NetManager,S7NetManager>();
         service.AddScoped<IJobConfigRepository, JobConfigRepository>();
         return service;
     }
@@ -82,7 +70,7 @@ public static class WcsInfrastructureConfigurator
     public static void AddJobs(IServiceCollection service)
     {
         service.TryAddSingleton<JobOptions>();
-        Type[] jobtypes = { typeof(ReadPlcJob.ReadPlcJob) };
+        Type[] jobtypes = { typeof(ReadPlcJob) };
         service.AddKeyedSingleton(Constant.JobKey, jobtypes);
     }
 

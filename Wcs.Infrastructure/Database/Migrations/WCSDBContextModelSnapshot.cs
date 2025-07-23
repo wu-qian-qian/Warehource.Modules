@@ -22,7 +22,7 @@ namespace Wcs.Infrastructure.Database.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Job.Domain.ExecuteNode.ExecuteNodePath", b =>
+            modelBuilder.Entity("Wcs.Domain.ExecuteNode.ExecuteNodePath", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -59,10 +59,10 @@ namespace Wcs.Infrastructure.Database.Migrations
                         .IsUnique()
                         .HasFilter("[RegionId] IS NOT NULL");
 
-                    b.ToTable("Job.ExecuteNodePath", (string)null);
+                    b.ToTable("Wcs.ExecuteNodePath", (string)null);
                 });
 
-            modelBuilder.Entity("Job.Domain.JobConfigs.JobConfig", b =>
+            modelBuilder.Entity("Wcs.Domain.JobConfigs.JobConfig", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -110,10 +110,10 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Job.JobConfig", (string)null);
+                    b.ToTable("Wcs.JobConfig", (string)null);
                 });
 
-            modelBuilder.Entity("Job.Domain.Region.Region", b =>
+            modelBuilder.Entity("Wcs.Domain.Region.Region", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -147,116 +147,10 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("Job.Region", (string)null);
+                    b.ToTable("Wcs.Region", (string)null);
                 });
 
-            modelBuilder.Entity("Job.Domain.S7.S7EntityItem", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int?>("ArrtypeLength")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("BitOffset")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("DataOffset")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<Guid?>("DeviceId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Index")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LastModifierUser")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<Guid?>("NetGuid")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("S7BlockType")
-                        .HasColumnType("int");
-
-                    b.Property<int>("S7DataType")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"), false);
-
-                    b.HasIndex("NetGuid");
-
-                    b.ToTable("Job.S7EntityItem", (string)null);
-                });
-
-            modelBuilder.Entity("Job.Domain.S7.S7NetConfig", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Ip")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LastModifierUser")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Port")
-                        .HasColumnType("int");
-
-                    b.Property<short>("Rack")
-                        .HasColumnType("smallint");
-
-                    b.Property<int>("ReadTimeOut")
-                        .HasColumnType("int");
-
-                    b.Property<int>("S7Type")
-                        .HasColumnType("int");
-
-                    b.Property<short>("Solt")
-                        .HasColumnType("smallint");
-
-                    b.Property<int>("WriteTimeOut")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"), false);
-
-                    b.ToTable("Job.S7NetConfig", (string)null);
-                });
-
-            modelBuilder.Entity("Job.Domain.Task.WcsTask", b =>
+            modelBuilder.Entity("Wcs.Domain.Task.WcsTask", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -320,10 +214,10 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                     b.HasIndex("TaskExecuteStepId");
 
-                    b.ToTable("Job.WcsTask", (string)null);
+                    b.ToTable("Wcs.WcsTask", (string)null);
                 });
 
-            modelBuilder.Entity("Job.Domain.TaskExecuteStep.TaskExecuteStep", b =>
+            modelBuilder.Entity("Wcs.Domain.TaskExecuteStep.TaskExecuteStep", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -366,34 +260,27 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                     SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"), false);
 
-                    b.ToTable("Job.TaskExecuteStep", (string)null);
+                    b.ToTable("Wcs.TaskExecuteStep", (string)null);
                 });
 
-            modelBuilder.Entity("Job.Domain.ExecuteNode.ExecuteNodePath", b =>
+            modelBuilder.Entity("Wcs.Domain.ExecuteNode.ExecuteNodePath", b =>
                 {
-                    b.HasOne("Job.Domain.Region.Region", "Region")
+                    b.HasOne("Wcs.Domain.Region.Region", "Region")
                         .WithOne()
-                        .HasForeignKey("Job.Domain.ExecuteNode.ExecuteNodePath", "RegionId");
+                        .HasForeignKey("Wcs.Domain.ExecuteNode.ExecuteNodePath", "RegionId");
 
                     b.Navigation("Region");
                 });
 
-            modelBuilder.Entity("Job.Domain.S7.S7EntityItem", b =>
+            modelBuilder.Entity("Wcs.Domain.Task.WcsTask", b =>
                 {
-                    b.HasOne("Job.Domain.S7.S7NetConfig", null)
-                        .WithMany("S7EntityItems")
-                        .HasForeignKey("NetGuid");
-                });
-
-            modelBuilder.Entity("Job.Domain.Task.WcsTask", b =>
-                {
-                    b.HasOne("Job.Domain.TaskExecuteStep.TaskExecuteStep", "TaskExecuteStep")
+                    b.HasOne("Wcs.Domain.TaskExecuteStep.TaskExecuteStep", "TaskExecuteStep")
                         .WithMany()
                         .HasForeignKey("TaskExecuteStepId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.OwnsOne("Job.Domain.Task.GetLocation", "GetLocation", b1 =>
+                    b.OwnsOne("Wcs.Domain.Task.GetLocation", "GetLocation", b1 =>
                         {
                             b1.Property<Guid>("WcsTaskId")
                                 .HasColumnType("uniqueidentifier");
@@ -420,13 +307,13 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                             b1.HasKey("WcsTaskId");
 
-                            b1.ToTable("Job.WcsTask");
+                            b1.ToTable("Wcs.WcsTask");
 
                             b1.WithOwner()
                                 .HasForeignKey("WcsTaskId");
                         });
 
-                    b.OwnsOne("Job.Domain.Task.PutLocation", "PutLocation", b1 =>
+                    b.OwnsOne("Wcs.Domain.Task.PutLocation", "PutLocation", b1 =>
                         {
                             b1.Property<Guid>("WcsTaskId")
                                 .HasColumnType("uniqueidentifier");
@@ -453,7 +340,7 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                             b1.HasKey("WcsTaskId");
 
-                            b1.ToTable("Job.WcsTask");
+                            b1.ToTable("Wcs.WcsTask");
 
                             b1.WithOwner()
                                 .HasForeignKey("WcsTaskId");
@@ -466,11 +353,6 @@ namespace Wcs.Infrastructure.Database.Migrations
                         .IsRequired();
 
                     b.Navigation("TaskExecuteStep");
-                });
-
-            modelBuilder.Entity("Job.Domain.S7.S7NetConfig", b =>
-                {
-                    b.Navigation("S7EntityItems");
                 });
 #pragma warning restore 612, 618
         }

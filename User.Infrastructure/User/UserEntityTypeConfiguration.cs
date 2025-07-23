@@ -1,14 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Identity.Infrastructure.Database;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using User.Infrastructure.Database;
 
-namespace User.Infrastructure.User;
+namespace Identity.Infrastructure.User;
 
 internal class UserEntityTypeConfiguration : IEntityTypeConfiguration<Domain.User>
 {
     public void Configure(EntityTypeBuilder<Domain.User> builder)
     {
-        builder.ToTable(nameof(Domain.User), Schemas.TableSchema);
+        builder.ToTable(Schemas.TableSchema + nameof(Domain.User));
         builder.HasKey(u => u.Id).IsClustered(false);
         builder.HasIndex(p => p.Username).IsClustered(false);
         builder.Property(p => p.Username)

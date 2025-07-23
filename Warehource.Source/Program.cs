@@ -5,12 +5,12 @@ using Common.Infrastructure.Log;
 using Common.Infrastructure.Middleware;
 using Common.Presentation.Endpoints;
 using Common.Shared;
+using Identity.Infrastructure;
+using Plc.Infrastructure;
 using Serilog;
 using SignalR.Infrastructure;
-using User.Infrastructure;
 using Warehource.Source;
 using Wcs.Application;
-using Wcs.Application.Abstract;
 using Wcs.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,20 +31,34 @@ builder.Services.AddInfrastructure(builder.Configuration, policyCallback);
 
 builder.Services.AddModules(builder.Configuration,
     //程序集
-    [AssemblyReference.Assembly, User.Application.AssemblyReference.Assembly],
+    [
+        AssemblyReference.Assembly,
+        Identity.Application.AssemblyReference.Assembly,
+        Plc.Application.AssemblyReference.Assembly
+    ],
     //模块的独立基础设施注入
     [
         WcsInfrastructureConfigurator.AddWcsInfrastructureModule,
-        UserInfrastructureConfigurator.AddUserInfrastructureConfiguration
+        UserInfrastructureConfigurator.AddUserInfrastructureConfiguration,
+        PlcInfrastructureConfigurator.AddPlcInfrastructureModule
     ],
     //模块化的MediatR管道注入
-    [WcsInfrastructureConfigurator.AddBehaviorModule],
+    [
+        WcsInfrastructureConfigurator.AddBehaviorModule, PlcInfrastructureConfigurator.AddBehaviorModule
+    ],
     //模块的的公共事件注入
-    [WcsInfrastructureConfigurator.AddConsumers]
+    [
+        WcsInfrastructureConfigurator.AddConsumers,
+        PlcInfrastructureConfigurator.AddConsumers
+    ]
     //模块化job的注入
     , [WcsInfrastructureConfigurator.AddJobs]
     //模块化aotoMapper注入
-    , [WcsInfrastructureConfigurator.AddAutoMapper, UserInfrastructureConfigurator.AddAutoMapper]
+    , [
+        WcsInfrastructureConfigurator.AddAutoMapper,
+        UserInfrastructureConfigurator.AddAutoMapper,
+        PlcInfrastructureConfigurator.AddAutoMapper
+    ]
 );
 builder.Services.AddSignalRConfiguration();
 
@@ -61,10 +75,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
     app.Initialization(); //在开发环境中应用数据库迁移
-
-  var netservice=  app.Services.GetService<INetService>();
 }
-
+//app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 app.UseMiddleware<GlobalResponseMiddleware>();
 app.UseMiddleware<GlobalEncodingRequestMiddleware>();

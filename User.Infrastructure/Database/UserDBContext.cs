@@ -1,10 +1,10 @@
 ﻿using Common.Infrastructure.EF;
+using Identity.Application.Abstract;
+using Identity.Infrastructure.Role;
+using Identity.Infrastructure.User;
 using Microsoft.EntityFrameworkCore;
-using User.Application.Abstract;
-using User.Infrastructure.Role;
-using User.Infrastructure.User;
 
-namespace User.Infrastructure.Database;
+namespace Identity.Infrastructure.Database;
 
 // Add-Migration InitialCreate -OutputDir "Database/Migrations" -Context UserDBContext
 public class UserDBContext : BaseDbContext, IUnitOfWork

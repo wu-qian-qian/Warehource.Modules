@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
-using Common.Application.Event.Custom;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
-using User.Application.Custom;
 
-namespace User.Application;
+namespace Identity.Application;
 
 /// <summary>
 ///     一些注入配置
@@ -17,7 +15,7 @@ public static class ApplicationConfigurator
 
     public static void AddCustom(IRegistrationConfigurator registrationConfigurator)
     {
-        registrationConfigurator.AddConsumer<IntegrationEventConsumer<NotificationIntegrationEvent>>();
+        
     }
 
     public static void AddAutoMapper(IMapperConfigurationExpression config)

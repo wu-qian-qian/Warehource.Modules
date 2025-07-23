@@ -1,8 +1,8 @@
 ﻿using Common.Infrastructure.EF.Repository;
-using User.Domain;
-using User.Infrastructure.Database;
+using Identity.Domain;
+using Identity.Infrastructure.Database;
 
-namespace User.Infrastructure.Role;
+namespace Identity.Infrastructure.Role;
 
 internal class RoleRepository : EfCoreRepository<Domain.Role, UserDBContext>, IRoleRepository
 {

@@ -104,3 +104,9 @@ D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\obj\Debug\net8.0\Wcs.Inf
 D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\obj\Debug\net8.0\Wcs.Infrastructure.genruntimeconfig.cache
 D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\obj\Debug\net8.0\ref\Wcs.Infrastructure.dll
 D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\obj\Debug\net8.0\Wcs.Infrastructure.sourcelink.json
+D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\bin\Debug\net8.0\Common.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\bin\Debug\net8.0\Common.pdb
+D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\bin\Debug\net8.0\Wcs.CustomEvents.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\bin\Debug\net8.0\Wcs.CustomEvents.pdb
+D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\bin\Debug\net8.0\Plc.CustomEvents.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\bin\Debug\net8.0\Plc.CustomEvents.pdb

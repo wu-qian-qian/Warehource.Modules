@@ -1,4 +1,4 @@
-﻿namespace User.Contrancts;
+﻿namespace Identity.Contrancts;
 
 public class RoleDto
 {

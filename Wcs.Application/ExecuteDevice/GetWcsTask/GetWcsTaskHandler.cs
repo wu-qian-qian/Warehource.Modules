@@ -2,8 +2,9 @@
 using Wcs.Contracts.WcsTask;
 
 namespace Wcs.Application.ExecuteDevice.GetWcsTask;
+
 /// <summary>
-/// 用来获取任务
+///     用来获取任务
 /// </summary>
 internal class GetWcsTaskHandler : ICommandHandler<GetWcsTaskEvent, WcsTaskDto>
 {

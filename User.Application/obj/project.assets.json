@@ -1097,27 +1097,27 @@
           "bin/placeholder/Common.Shared.dll": {}
         }
       },
-      "User.Contrancts/1.0.0": {
+      "Identity.Contrancts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/User.Contrancts.dll": {}
+          "bin/placeholder/Identity.Contrancts.dll": {}
         },
         "runtime": {
-          "bin/placeholder/User.Contrancts.dll": {}
+          "bin/placeholder/Identity.Contrancts.dll": {}
         }
       },
-      "User.Domain/1.0.0": {
+      "Identity.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Common.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/User.Domain.dll": {}
+          "bin/placeholder/Identity.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/User.Domain.dll": {}
+          "bin/placeholder/Identity.Domain.dll": {}
         }
       }
     }
@@ -2673,22 +2673,22 @@
       "path": "../Common.Shared/Common.Shared.csproj",
       "msbuildProject": "../Common.Shared/Common.Shared.csproj"
     },
-    "User.Contrancts/1.0.0": {
+    "Identity.Contrancts/1.0.0": {
       "type": "project",
-      "path": "../User.Contrancts/User.Contrancts.csproj",
-      "msbuildProject": "../User.Contrancts/User.Contrancts.csproj"
+      "path": "../User.Contrancts/Identity.Contrancts.csproj",
+      "msbuildProject": "../User.Contrancts/Identity.Contrancts.csproj"
     },
-    "User.Domain/1.0.0": {
+    "Identity.Domain/1.0.0": {
       "type": "project",
-      "path": "../User.Domain/User.Domain.csproj",
-      "msbuildProject": "../User.Domain/User.Domain.csproj"
+      "path": "../User.Domain/Identity.Domain.csproj",
+      "msbuildProject": "../User.Domain/Identity.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Common.Application >= 1.0.0",
-      "User.Contrancts >= 1.0.0",
-      "User.Domain >= 1.0.0"
+      "Identity.Contrancts >= 1.0.0",
+      "Identity.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2698,9 +2698,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\User.Application.csproj",
-      "projectName": "User.Application",
-      "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\User.Application.csproj",
+      "projectUniqueName": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\Identity.Application.csproj",
+      "projectName": "Identity.Application",
+      "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\Identity.Application.csproj",
       "packagesPath": "C:\\Users\\吴\\.nuget\\packages\\",
       "outputPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Application\\obj\\",
       "projectStyle": "PackageReference",
@@ -2727,11 +2727,11 @@
             "D:\\Program\\仓库\\Warehource.Modules\\Common.Application\\Common.Application.csproj": {
               "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common.Application\\Common.Application.csproj"
             },
-            "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\User.Contrancts.csproj": {
-              "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\User.Contrancts.csproj"
+            "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\Identity.Contrancts.csproj": {
+              "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Contrancts\\Identity.Contrancts.csproj"
             },
-            "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\User.Domain.csproj": {
-              "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\User.Domain.csproj"
+            "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\Identity.Domain.csproj": {
+              "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Domain\\Identity.Domain.csproj"
             }
           }
         }

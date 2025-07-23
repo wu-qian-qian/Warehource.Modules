@@ -8,6 +8,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Common.Presentation\Common.Presentation.csproj"/>
+        <ProjectReference Include="..\Common\Common.csproj"/>
         <ProjectReference Include="..\Wcs.Application\Wcs.Application.csproj"/>
     </ItemGroup>
 

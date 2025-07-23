@@ -16,8 +16,9 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\Plc.Infrastructure\Plc.Infrastructure.csproj"/>
         <ProjectReference Include="..\Signal.Infrastructure\SignalR.Infrastructure.csproj"/>
-        <ProjectReference Include="..\User.Infrastructure\User.Infrastructure.csproj"/>
+        <ProjectReference Include="..\User.Infrastructure\Identity.Infrastructure.csproj"/>
         <ProjectReference Include="..\Wcs.Infrastructure\Wcs.Infrastructure.csproj"/>
     </ItemGroup>
 

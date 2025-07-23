@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 
-namespace User.Presentation;
+namespace Identity.Presentation;
 
 public static class AssemblyReference
 {
     public static readonly Assembly Assembly = typeof(AssemblyReference).Assembly;
 
-    public static readonly string User = "User";
+    public static readonly string User = "Identity";
 }

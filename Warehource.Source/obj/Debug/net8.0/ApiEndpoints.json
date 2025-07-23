@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "User.Presentation.Get.GetUsers\u002B\u003C\u003Ec",
+    "ContainingType": "Identity.Presentation.Get.GetUsers\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "get/get-users",
     "HttpMethod": "GET",
@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[User.Contrancts.UserDto, User.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Identity.Contrancts.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -17,7 +17,7 @@
       }
     ],
     "Tags": [
-      "User"
+      "Identity"
     ]
   },
   {
@@ -104,22 +104,11 @@
   {
     "ContainingType": "Wcs.Presentation.Job.GetJobsConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
-    "RelativePath": "job/get-jobs/{name}/{type}",
+    "RelativePath": "job/get-jobs",
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "name",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "type",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
@@ -161,22 +150,60 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.S7Plc.GetS7NetConfig\u002B\u003C\u003Ec",
+    "ContainingType": "Plc.Presentation.S7Plc.AddS7NetConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
-    "RelativePath": "plc/get-allplc",
+    "RelativePath": "plc/add-allplc-centity-item",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "Wcs.Presentation.Job.AddJobRequest",
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Domain.S7.S7NetConfig, Wcs.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Plc"
+    ]
+  },
+  {
+    "ContainingType": "Plc.Presentation.S7Plc.DownLoad\u002BDownLoadS7NetTemplate\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/downLoad-plc-template",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Plc"
+    ]
+  },
+  {
+    "ContainingType": "Plc.Presentation.S7Plc.GetS7NetConfig\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/get-allplc",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.S7Plc.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -188,7 +215,28 @@
     ]
   },
   {
-    "ContainingType": "User.Presentation.AddAdmin.AddAdminRole\u002B\u003C\u003Ec",
+    "ContainingType": "Plc.Presentation.S7Plc.GetS7EntityItem\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/get-allplc-centity-item",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.S7Plc.S7EntityItemDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Plc"
+    ]
+  },
+  {
+    "ContainingType": "Identity.Presentation.AddAdmin.AddAdminRole\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "user/add-adminrole",
     "HttpMethod": "POST",
@@ -197,7 +245,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "User.Contrancts.RoleDto",
+        "Type": "Identity.Contrancts.RoleDto",
         "MediaTypes": [
           "application/json"
         ],
@@ -205,11 +253,11 @@
       }
     ],
     "Tags": [
-      "User"
+      "Identity"
     ]
   },
   {
-    "ContainingType": "User.Presentation.AddAdmin.AddAdminUser\u002B\u003C\u003Ec",
+    "ContainingType": "Identity.Presentation.AddAdmin.AddAdminUser\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "user/add-adminuser",
     "HttpMethod": "POST",
@@ -218,7 +266,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "User.Contrancts.UserDto",
+        "Type": "Identity.Contrancts.UserDto",
         "MediaTypes": [
           "application/json"
         ],
@@ -226,11 +274,11 @@
       }
     ],
     "Tags": [
-      "User"
+      "Identity"
     ]
   },
   {
-    "ContainingType": "User.Presentation.Add.AddRole\u002B\u003C\u003Ec",
+    "ContainingType": "Identity.Presentation.Add.AddRole\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "user/add-role",
     "HttpMethod": "POST",
@@ -239,13 +287,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "User.Presentation.Add.AddRoleRequest",
+        "Type": "Identity.Presentation.Add.AddRoleRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "User.Contrancts.RoleDto",
+        "Type": "Identity.Contrancts.RoleDto",
         "MediaTypes": [
           "application/json"
         ],
@@ -253,11 +301,11 @@
       }
     ],
     "Tags": [
-      "User"
+      "Identity"
     ]
   },
   {
-    "ContainingType": "User.Presentation.Add.AddUser\u002B\u003C\u003Ec",
+    "ContainingType": "Identity.Presentation.Add.AddUser\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "user/add-user",
     "HttpMethod": "POST",
@@ -266,13 +314,13 @@
     "Parameters": [
       {
         "Name": "requst",
-        "Type": "User.Presentation.Add.AddUserRequst",
+        "Type": "Identity.Presentation.Add.AddUserRequst",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "User.Contrancts.UserDto",
+        "Type": "Identity.Contrancts.UserDto",
         "MediaTypes": [
           "application/json"
         ],
@@ -280,11 +328,11 @@
       }
     ],
     "Tags": [
-      "User"
+      "Identity"
     ]
   },
   {
-    "ContainingType": "User.Presentation.Delete.DeleteRole\u002B\u003C\u003Ec",
+    "ContainingType": "Identity.Presentation.Delete.DeleteRole\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "user/Delete-role/{roleName}",
     "HttpMethod": "DELETE",
@@ -305,11 +353,11 @@
       }
     ],
     "Tags": [
-      "User"
+      "Identity"
     ]
   },
   {
-    "ContainingType": "User.Presentation.Delete.DeleteUser\u002B\u003C\u003Ec",
+    "ContainingType": "Identity.Presentation.Delete.DeleteUser\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "user/Delete-user/id",
     "HttpMethod": "DELETE",
@@ -330,11 +378,11 @@
       }
     ],
     "Tags": [
-      "User"
+      "Identity"
     ]
   },
   {
-    "ContainingType": "User.Presentation.Get.GetRoles\u002B\u003C\u003Ec",
+    "ContainingType": "Identity.Presentation.Get.GetRoles\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "user/get-roles",
     "HttpMethod": "GET",
@@ -343,7 +391,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[User.Contrancts.RoleDto, User.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Identity.Contrancts.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -351,11 +399,11 @@
       }
     ],
     "Tags": [
-      "User"
+      "Identity"
     ]
   },
   {
-    "ContainingType": "User.Presentation.Login.Login\u002B\u003C\u003Ec",
+    "ContainingType": "Identity.Presentation.Login.Login\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "user/user-login",
     "HttpMethod": "POST",
@@ -364,7 +412,7 @@
     "Parameters": [
       {
         "Name": "requst",
-        "Type": "User.Presentation.Login.LoginRequst",
+        "Type": "Identity.Presentation.Login.LoginRequst",
         "IsRequired": true
       }
     ],
@@ -378,7 +426,7 @@
       }
     ],
     "Tags": [
-      "User"
+      "Identity"
     ]
   }
 ]
