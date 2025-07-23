@@ -20,7 +20,8 @@ public sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logge
         Exception exception,
         CancellationToken cancellationToken)
     {
-        Serilog.Log.Logger.ForCategory(LogCategory.Error).Information(exception.Message);
+        Serilog.Log.Logger.ForCategory(LogCategory.Error)
+            .Error(exception.StackTrace);
 
         var problemDetails = new ProblemDetails
         {

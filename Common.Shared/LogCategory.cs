@@ -5,5 +5,6 @@ public enum LogCategory
     Business,
     Error,
     Net,
-    Http
+    Http,
+    BataBase
 }

@@ -90,3 +90,5 @@ D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Common.dl
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Common.pdb
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Wcs.CustomEvents.dll
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Wcs.CustomEvents.pdb
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Plc.CustomEvents.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Plc.CustomEvents.pdb

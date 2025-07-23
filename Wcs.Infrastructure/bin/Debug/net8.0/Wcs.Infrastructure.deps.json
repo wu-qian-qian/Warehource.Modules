@@ -1596,6 +1596,7 @@
       "Wcs.Application/1.0.0": {
         "dependencies": {
           "Common.Application": "1.0.0",
+          "Plc.CustomEvents": "1.0.0",
           "Wcs.Contracts": "1.0.0",
           "Wcs.CustomEvents": "1.0.0",
           "Wcs.Domain": "1.0.0"

@@ -10,8 +10,6 @@ internal class ReadPlcEventConsumer<TIntegrationEvent>(IMassTransitEventBus bus)
 {
     public async Task Consume(ConsumeContext<TIntegrationEvent> context)
     {
-        await bus.PublishAsync(new PlcIntegrationEvent(DateTime.Now));
         Console.WriteLine("去读取Plc数据");
-       
     }
 }
