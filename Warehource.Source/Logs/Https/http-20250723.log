@@ -1,0 +1,4 @@
+2025-07-23 10:57:43.838 +08:00 [INF] Please set the license using one of the methods on the static property ExcelPackage.License. See https://epplussoftware.com/developers/licensenotsetexception for more information
+2025-07-23 10:58:49.489 +08:00 [INF] The type initializer for 'Common.Helper.ExcelHelper' threw an exception.
+2025-07-23 10:59:34.860 +08:00 [INF] The type initializer for 'Common.Helper.ExcelHelper' threw an exception.
+2025-07-23 10:59:45.511 +08:00 [INF] The type initializer for 'Common.Helper.ExcelHelper' threw an exception.
