@@ -22,7 +22,7 @@ namespace Wcs.Infrastructure.Database.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Wcs.Domain.ExecuteNode.ExecuteNodePath", b =>
+            modelBuilder.Entity("Job.Domain.ExecuteNode.ExecuteNodePath", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -59,10 +59,10 @@ namespace Wcs.Infrastructure.Database.Migrations
                         .IsUnique()
                         .HasFilter("[RegionId] IS NOT NULL");
 
-                    b.ToTable("Wcs.ExecuteNodePath", (string)null);
+                    b.ToTable("Job.ExecuteNodePath", (string)null);
                 });
 
-            modelBuilder.Entity("Wcs.Domain.JobConfigs.JobConfig", b =>
+            modelBuilder.Entity("Job.Domain.JobConfigs.JobConfig", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -110,10 +110,10 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Wcs.JobConfig", (string)null);
+                    b.ToTable("Job.JobConfig", (string)null);
                 });
 
-            modelBuilder.Entity("Wcs.Domain.Region.Region", b =>
+            modelBuilder.Entity("Job.Domain.Region.Region", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -147,10 +147,10 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("Wcs.Region", (string)null);
+                    b.ToTable("Job.Region", (string)null);
                 });
 
-            modelBuilder.Entity("Wcs.Domain.S7.S7EntityItem", b =>
+            modelBuilder.Entity("Job.Domain.S7.S7EntityItem", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -206,10 +206,10 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                     b.HasIndex("NetGuid");
 
-                    b.ToTable("Wcs.S7EntityItem", (string)null);
+                    b.ToTable("Job.S7EntityItem", (string)null);
                 });
 
-            modelBuilder.Entity("Wcs.Domain.S7.S7NetConfig", b =>
+            modelBuilder.Entity("Job.Domain.S7.S7NetConfig", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -253,10 +253,10 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                     SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"), false);
 
-                    b.ToTable("Wcs.S7NetConfig", (string)null);
+                    b.ToTable("Job.S7NetConfig", (string)null);
                 });
 
-            modelBuilder.Entity("Wcs.Domain.Task.WcsTask", b =>
+            modelBuilder.Entity("Job.Domain.Task.WcsTask", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -320,10 +320,10 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                     b.HasIndex("TaskExecuteStepId");
 
-                    b.ToTable("Wcs.WcsTask", (string)null);
+                    b.ToTable("Job.WcsTask", (string)null);
                 });
 
-            modelBuilder.Entity("Wcs.Domain.TaskExecuteStep.TaskExecuteStep", b =>
+            modelBuilder.Entity("Job.Domain.TaskExecuteStep.TaskExecuteStep", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -366,34 +366,34 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                     SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"), false);
 
-                    b.ToTable("Wcs.TaskExecuteStep", (string)null);
+                    b.ToTable("Job.TaskExecuteStep", (string)null);
                 });
 
-            modelBuilder.Entity("Wcs.Domain.ExecuteNode.ExecuteNodePath", b =>
+            modelBuilder.Entity("Job.Domain.ExecuteNode.ExecuteNodePath", b =>
                 {
-                    b.HasOne("Wcs.Domain.Region.Region", "Region")
+                    b.HasOne("Job.Domain.Region.Region", "Region")
                         .WithOne()
-                        .HasForeignKey("Wcs.Domain.ExecuteNode.ExecuteNodePath", "RegionId");
+                        .HasForeignKey("Job.Domain.ExecuteNode.ExecuteNodePath", "RegionId");
 
                     b.Navigation("Region");
                 });
 
-            modelBuilder.Entity("Wcs.Domain.S7.S7EntityItem", b =>
+            modelBuilder.Entity("Job.Domain.S7.S7EntityItem", b =>
                 {
-                    b.HasOne("Wcs.Domain.S7.S7NetConfig", null)
+                    b.HasOne("Job.Domain.S7.S7NetConfig", null)
                         .WithMany("S7EntityItems")
                         .HasForeignKey("NetGuid");
                 });
 
-            modelBuilder.Entity("Wcs.Domain.Task.WcsTask", b =>
+            modelBuilder.Entity("Job.Domain.Task.WcsTask", b =>
                 {
-                    b.HasOne("Wcs.Domain.TaskExecuteStep.TaskExecuteStep", "TaskExecuteStep")
+                    b.HasOne("Job.Domain.TaskExecuteStep.TaskExecuteStep", "TaskExecuteStep")
                         .WithMany()
                         .HasForeignKey("TaskExecuteStepId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.OwnsOne("Wcs.Domain.Task.GetLocation", "GetLocation", b1 =>
+                    b.OwnsOne("Job.Domain.Task.GetLocation", "GetLocation", b1 =>
                         {
                             b1.Property<Guid>("WcsTaskId")
                                 .HasColumnType("uniqueidentifier");
@@ -420,13 +420,13 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                             b1.HasKey("WcsTaskId");
 
-                            b1.ToTable("Wcs.WcsTask");
+                            b1.ToTable("Job.WcsTask");
 
                             b1.WithOwner()
                                 .HasForeignKey("WcsTaskId");
                         });
 
-                    b.OwnsOne("Wcs.Domain.Task.PutLocation", "PutLocation", b1 =>
+                    b.OwnsOne("Job.Domain.Task.PutLocation", "PutLocation", b1 =>
                         {
                             b1.Property<Guid>("WcsTaskId")
                                 .HasColumnType("uniqueidentifier");
@@ -453,7 +453,7 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                             b1.HasKey("WcsTaskId");
 
-                            b1.ToTable("Wcs.WcsTask");
+                            b1.ToTable("Job.WcsTask");
 
                             b1.WithOwner()
                                 .HasForeignKey("WcsTaskId");
@@ -468,7 +468,7 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Navigation("TaskExecuteStep");
                 });
 
-            modelBuilder.Entity("Wcs.Domain.S7.S7NetConfig", b =>
+            modelBuilder.Entity("Job.Domain.S7.S7NetConfig", b =>
                 {
                     b.Navigation("S7EntityItems");
                 });

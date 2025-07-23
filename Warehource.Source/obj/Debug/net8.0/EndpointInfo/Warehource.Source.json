@@ -6,6 +6,195 @@
     "version": "v1"
   },
   "paths": {
+    "/job/add-job": {
+      "post": {
+        "tags": [
+          "Job"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Presentation.Job.AddJobRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/job/delete-job": {
+      "post": {
+        "tags": [
+          "Job"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Presentation.Job.DeleteRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/job/get-job/{id}": {
+      "get": {
+        "tags": [
+          "Job"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/job/get-jobs/{name}/{type}": {
+      "get": {
+        "tags": [
+          "Job"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/job/job-status": {
+      "post": {
+        "tags": [
+          "Job"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Presentation.Job.StatusRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/plc/get-allplc": {
+      "post": {
+        "tags": [
+          "Plc"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Presentation.Job.AddJobRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Wcs.Domain.S7.S7NetConfig"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/user/user-login": {
       "post": {
         "tags": [
@@ -219,163 +408,6 @@
           }
         }
       }
-    },
-    "/job/add-job": {
-      "post": {
-        "tags": [
-          "Wcs"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Wcs.Presentation.Job.AddJobRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/job/delete-job": {
-      "post": {
-        "tags": [
-          "Wcs"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Wcs.Presentation.Job.DeleteRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/job/get-job/{id}": {
-      "get": {
-        "tags": [
-          "Wcs"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/job/get-jobs/{name}/{type}": {
-      "get": {
-        "tags": [
-          "Wcs"
-        ],
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/job/job-status": {
-      "post": {
-        "tags": [
-          "Wcs"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Wcs.Presentation.Job.StatusRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
@@ -531,6 +563,142 @@
         },
         "additionalProperties": false
       },
+      "Wcs.Domain.S7.S7EntityItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "creationTime": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "lastModifierUser": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "lastModificationTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "readOnly": true
+          },
+          "isDeleted": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "s7DataType": {
+            "$ref": "#/components/schemas/Wcs.Shared.S7DataTypeEnum"
+          },
+          "dataOffset": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bitOffset": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "s7BlockType": {
+            "$ref": "#/components/schemas/Wcs.Shared.S7BlockTypeEnum"
+          },
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "arrtypeLength": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "deviceId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "netGuid": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wcs.Domain.S7.S7NetConfig": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "creationTime": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "lastModifierUser": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "lastModificationTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "readOnly": true
+          },
+          "isDeleted": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "ip": {
+            "type": "string",
+            "nullable": true
+          },
+          "port": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "s7Type": {
+            "$ref": "#/components/schemas/Wcs.Shared.S7TypeEnum"
+          },
+          "solt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rack": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "readTimeOut": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "writeTimeOut": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "s7EntityItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wcs.Domain.S7.S7EntityItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Wcs.Presentation.Job.AddJobRequest": {
         "type": "object",
         "properties": {
@@ -582,6 +750,43 @@
           }
         },
         "additionalProperties": false
+      },
+      "Wcs.Shared.S7BlockTypeEnum": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          28
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Wcs.Shared.S7DataTypeEnum": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Wcs.Shared.S7TypeEnum": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
       }
     },
     "securitySchemes": {

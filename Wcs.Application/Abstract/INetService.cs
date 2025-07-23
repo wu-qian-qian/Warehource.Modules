@@ -1,4 +1,5 @@
 using Common.Application.Net;
+using MediatR;
 
 namespace Wcs.Application.Abstract;
 
@@ -12,5 +13,5 @@ public interface INetService
 
     void AddConnect(INet connect);
 
-    void Initialization();
+    void Initialization(ISender sender);
 }

@@ -6,5 +6,7 @@ public static class AssemblyReference
 {
     public static readonly Assembly Assembly = typeof(AssemblyReference).Assembly;
 
-    public static readonly string Wcs = "Wcs";
+    public static readonly string Job = "Job";
+
+    public static readonly string Plc = "Plc";
 }

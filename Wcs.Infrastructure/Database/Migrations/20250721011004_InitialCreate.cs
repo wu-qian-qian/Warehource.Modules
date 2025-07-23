@@ -12,7 +12,7 @@ namespace Wcs.Infrastructure.Database.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Wcs.JobConfig",
+                name: "Job.JobConfig",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -34,7 +34,7 @@ namespace Wcs.Infrastructure.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Wcs.Region",
+                name: "Job.Region",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -52,7 +52,7 @@ namespace Wcs.Infrastructure.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Wcs.S7NetConfig",
+                name: "Job.S7NetConfig",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -75,7 +75,7 @@ namespace Wcs.Infrastructure.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Wcs.TaskExecuteStep",
+                name: "Job.TaskExecuteStep",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -97,7 +97,7 @@ namespace Wcs.Infrastructure.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Wcs.ExecuteNodePath",
+                name: "Job.ExecuteNodePath",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -116,12 +116,12 @@ namespace Wcs.Infrastructure.Database.Migrations
                     table.ForeignKey(
                         name: "FK_Wcs.ExecuteNodePath_Wcs.Region_RegionId",
                         column: x => x.RegionId,
-                        principalTable: "Wcs.Region",
+                        principalTable: "Job.Region",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "Wcs.S7EntityItem",
+                name: "Job.S7EntityItem",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -147,12 +147,12 @@ namespace Wcs.Infrastructure.Database.Migrations
                     table.ForeignKey(
                         name: "FK_Wcs.S7EntityItem_Wcs.S7NetConfig_NetGuid",
                         column: x => x.NetGuid,
-                        principalTable: "Wcs.S7NetConfig",
+                        principalTable: "Job.S7NetConfig",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "Wcs.WcsTask",
+                name: "Job.WcsTask",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -188,51 +188,51 @@ namespace Wcs.Infrastructure.Database.Migrations
                     table.ForeignKey(
                         name: "FK_Wcs.WcsTask_Wcs.TaskExecuteStep_TaskExecuteStepId",
                         column: x => x.TaskExecuteStepId,
-                        principalTable: "Wcs.TaskExecuteStep",
+                        principalTable: "Job.TaskExecuteStep",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Wcs.ExecuteNodePath_RegionId",
-                table: "Wcs.ExecuteNodePath",
+                table: "Job.ExecuteNodePath",
                 column: "RegionId",
                 unique: true,
                 filter: "[RegionId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Wcs.JobConfig_Name",
-                table: "Wcs.JobConfig",
+                table: "Job.JobConfig",
                 column: "Name",
                 unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Wcs.Region_Code",
-                table: "Wcs.Region",
+                table: "Job.Region",
                 column: "Code",
                 unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Wcs.S7EntityItem_NetGuid",
-                table: "Wcs.S7EntityItem",
+                table: "Job.S7EntityItem",
                 column: "NetGuid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Wcs.WcsTask_SerialNumber",
-                table: "Wcs.WcsTask",
+                table: "Job.WcsTask",
                 column: "SerialNumber",
                 unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Wcs.WcsTask_TaskCode",
-                table: "Wcs.WcsTask",
+                table: "Job.WcsTask",
                 column: "TaskCode",
                 unique: true,
                 filter: "[TaskCode] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Wcs.WcsTask_TaskExecuteStepId",
-                table: "Wcs.WcsTask",
+                table: "Job.WcsTask",
                 column: "TaskExecuteStepId");
         }
 
@@ -240,25 +240,25 @@ namespace Wcs.Infrastructure.Database.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Wcs.ExecuteNodePath");
+                name: "Job.ExecuteNodePath");
 
             migrationBuilder.DropTable(
-                name: "Wcs.JobConfig");
+                name: "Job.JobConfig");
 
             migrationBuilder.DropTable(
-                name: "Wcs.S7EntityItem");
+                name: "Job.S7EntityItem");
 
             migrationBuilder.DropTable(
-                name: "Wcs.WcsTask");
+                name: "Job.WcsTask");
 
             migrationBuilder.DropTable(
-                name: "Wcs.Region");
+                name: "Job.Region");
 
             migrationBuilder.DropTable(
-                name: "Wcs.S7NetConfig");
+                name: "Job.S7NetConfig");
 
             migrationBuilder.DropTable(
-                name: "Wcs.TaskExecuteStep");
+                name: "Job.TaskExecuteStep");
         }
     }
 }

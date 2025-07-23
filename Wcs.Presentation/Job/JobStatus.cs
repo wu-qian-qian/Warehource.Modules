@@ -16,7 +16,7 @@ internal sealed class JobStatusConfig : IEndpoint
             ISender sender) =>
         {
             return await sender.Send(new StatusJobEvent { Name = request.Name, Status = request.Status });
-        }).WithTags(AssemblyReference.Wcs);
+        }).WithTags(AssemblyReference.Job);
     }
 }
 

@@ -1,7 +1,52 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\wcsinfrastructureconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\wcsinfrastructureconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\warehource.source\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|solutionrelative:warehource.source\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\s7plc\\get\\gets7netqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\s7plc\\get\\gets7netqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\database\\schemas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\database\\schemas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\db\\jobconfig\\jobconfigconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\db\\jobconfig\\jobconfigconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D070FC3E-90F8-4A2A-BB92-3A07881F9895}|Wcs.Domain\\Wcs.Domain.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.domain\\jobconfigs\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D070FC3E-90F8-4A2A-BB92-3A07881F9895}|Wcs.Domain\\Wcs.Domain.csproj|solutionrelative:wcs.domain\\jobconfigs\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\warehource.source\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|solutionrelative:warehource.source\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\s7plc\\gets7netconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\s7plc\\gets7netconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\assemblyreference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\assemblyreference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\s7net\\s7netservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\s7net\\s7netservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\abstract\\inetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\abstract\\inetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +75,149 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Schemas.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\Schemas.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\Database\\Schemas.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\Schemas.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\Database\\Schemas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:44:34.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JobConfigConfiguration.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\DB\\JobConfig\\JobConfigConfiguration.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\DB\\JobConfig\\JobConfigConfiguration.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\DB\\JobConfig\\JobConfigConfiguration.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\DB\\JobConfig\\JobConfigConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:44:30.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JobService.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Domain\\JobConfigs\\JobService.cs",
+              "RelativeDocumentMoniker": "Wcs.Domain\\JobConfigs\\JobService.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Domain\\JobConfigs\\JobService.cs",
+              "RelativeToolTip": "Wcs.Domain\\JobConfigs\\JobService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:43:00.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Program.cs",
+              "RelativeDocumentMoniker": "Warehource.Source\\Program.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Program.cs",
+              "RelativeToolTip": "Warehource.Source\\Program.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwEAAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:42:06.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\appsettings.json",
+              "RelativeDocumentMoniker": "Warehource.Source\\appsettings.json",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\appsettings.json",
+              "RelativeToolTip": "Warehource.Source\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-23T00:42:33.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AssemblyReference.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\AssemblyReference.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\AssemblyReference.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\AssemblyReference.cs",
+              "RelativeToolTip": "Wcs.Presentation\\AssemblyReference.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:40:29.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetS7NetConfig.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\S7Plc\\GetS7NetConfig.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\S7Plc\\GetS7NetConfig.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\S7Plc\\GetS7NetConfig.cs",
+              "RelativeToolTip": "Wcs.Presentation\\S7Plc\\GetS7NetConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:39:41.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "INetService.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Abstract\\INetService.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\Abstract\\INetService.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Abstract\\INetService.cs",
+              "RelativeToolTip": "Wcs.Application\\Abstract\\INetService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:33:19.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "S7NetService.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\S7Net\\S7NetService.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\S7Net\\S7NetService.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\S7Net\\S7NetService.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\S7Net\\S7NetService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:31:56.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetS7NetQueryHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\S7Plc\\Get\\GetS7NetQueryHandler.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\S7Plc\\Get\\GetS7NetQueryHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\S7Plc\\Get\\GetS7NetQueryHandler.cs",
+              "RelativeToolTip": "Wcs.Application\\S7Plc\\Get\\GetS7NetQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:30:21.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WcsInfrastructureConfigurator.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\WcsInfrastructureConfigurator.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\WcsInfrastructureConfigurator.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\WcsInfrastructureConfigurator.cs*",
+              "RelativeToolTip": "Wcs.Infrastructure\\WcsInfrastructureConfigurator.cs*",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwCMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:28:55.631Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -17,6 +17,6 @@ internal sealed class GetJobsConfig : IEndpoint
             ISender sender) =>
         {
             return await sender.Send(new GetAllJobQuery());
-        }).WithTags(AssemblyReference.Wcs);
+        }).WithTags(AssemblyReference.Job);
     }
 }

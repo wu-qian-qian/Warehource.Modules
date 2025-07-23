@@ -1,9 +1,10 @@
 ﻿using Common.Application.MediatR.Message;
-using Wcs.Application.GetWcsTask;
 using Wcs.Contracts.WcsTask;
 
-namespace Wcs.Application.ExecuteDevice;
-
+namespace Wcs.Application.ExecuteDevice.GetWcsTask;
+/// <summary>
+/// 用来获取任务
+/// </summary>
 internal class GetWcsTaskHandler : ICommandHandler<GetWcsTaskEvent, WcsTaskDto>
 {
     public Task<WcsTaskDto> Handle(GetWcsTaskEvent request, CancellationToken cancellationToken)

@@ -16,7 +16,7 @@ internal sealed class DeleteJobConfig : IEndpoint
             ISender sender) =>
         {
             return await sender.Send(new DeleteJobEvent { Name = request.Name });
-        }).WithTags(AssemblyReference.Wcs);
+        }).WithTags(AssemblyReference.Job);
     }
 }
 

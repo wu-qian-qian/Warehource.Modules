@@ -3,6 +3,7 @@ using Common.Application.Net;
 using Common.Shared;
 using MediatR;
 using Serilog;
+using System.Reflection;
 using Wcs.Application.Abstract;
 using Wcs.Application.S7Plc.Get;
 
@@ -12,11 +13,11 @@ namespace Wcs.Infrastructure.S7Net;
 ///     S7的服务类型
 ///     注册类型为单例
 /// </summary>
-public class S7NetService(ISender sender) : INetService
+public class S7NetService() : INetService
 {
     public readonly Dictionary<string, INet> NetMap = new();
 
-    public void Initialization()
+    public void Initialization(ISender sender)
     {
         try
         {

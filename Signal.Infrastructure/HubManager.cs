@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using SignalR.Application;
 using SignalR.Application.ChatHub;
-using SignalR.Application.Client;
 
 namespace SignalR.Infrastructure;
 

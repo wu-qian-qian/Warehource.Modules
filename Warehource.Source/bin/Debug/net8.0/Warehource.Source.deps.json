@@ -1547,6 +1547,9 @@
         }
       },
       "Wcs.Contracts/1.0.0": {
+        "dependencies": {
+          "Wcs.Shared": "1.0.0"
+        },
         "runtime": {
           "Wcs.Contracts.dll": {
             "assemblyVersion": "1.0.0",

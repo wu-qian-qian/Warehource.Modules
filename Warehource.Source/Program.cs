@@ -6,10 +6,11 @@ using Common.Infrastructure.Middleware;
 using Common.Presentation.Endpoints;
 using Common.Shared;
 using Serilog;
-using Signal.Infrastructure;
+using SignalR.Infrastructure;
 using User.Infrastructure;
 using Warehource.Source;
 using Wcs.Application;
+using Wcs.Application.Abstract;
 using Wcs.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -60,6 +61,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
     app.Initialization(); //在开发环境中应用数据库迁移
+
+  var netservice=  app.Services.GetService<INetService>();
 }
 
 

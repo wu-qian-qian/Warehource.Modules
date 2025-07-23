@@ -1128,6 +1128,9 @@
       "Wcs.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Wcs.Shared": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Wcs.Contracts.dll": {}
         },

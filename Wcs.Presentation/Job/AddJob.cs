@@ -21,7 +21,7 @@ internal sealed class AddJobConfig : IEndpoint
                 Description = request.Description, TimeOut = request.TimeOut, Timer = request.Timer,
                 IsStart = request.IsStart
             });
-        }).WithTags(AssemblyReference.Wcs);
+        }).WithTags(AssemblyReference.Job);
     }
 }
 

@@ -1,10 +1,9 @@
 ﻿using Common.Presentation.Endpoints;
 using Microsoft.Extensions.DependencyInjection;
 using SignalR.Application;
-using SignalR.Infrastructure;
 using SignalR.Presentation;
 
-namespace Signal.Infrastructure;
+namespace SignalR.Infrastructure;
 
 public static class SignalRConfigurator
 {

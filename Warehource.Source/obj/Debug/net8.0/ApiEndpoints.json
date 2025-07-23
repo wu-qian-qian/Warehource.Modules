@@ -44,7 +44,7 @@
       }
     ],
     "Tags": [
-      "Wcs"
+      "Job"
     ]
   },
   {
@@ -71,7 +71,7 @@
       }
     ],
     "Tags": [
-      "Wcs"
+      "Job"
     ]
   },
   {
@@ -98,7 +98,7 @@
       }
     ],
     "Tags": [
-      "Wcs"
+      "Job"
     ]
   },
   {
@@ -130,7 +130,7 @@
       }
     ],
     "Tags": [
-      "Wcs"
+      "Job"
     ]
   },
   {
@@ -157,7 +157,34 @@
       }
     ],
     "Tags": [
-      "Wcs"
+      "Job"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.S7Plc.GetS7NetConfig\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/get-allplc",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Wcs.Presentation.Job.AddJobRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Domain.S7.S7NetConfig, Wcs.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Plc"
     ]
   },
   {

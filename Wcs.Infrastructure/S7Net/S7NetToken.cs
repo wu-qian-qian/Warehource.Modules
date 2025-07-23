@@ -3,6 +3,7 @@ using Common.Shared;
 using S7.Net;
 using S7.Net.Types;
 using Serilog;
+using Wcs.Contracts.S7Plc;
 using Wcs.Domain.S7;
 using Wcs.Shared;
 
@@ -10,7 +11,7 @@ namespace Wcs.Infrastructure.S7Net;
 
 public class S7NetToken : Common.Application.Net.S7.S7Net
 {
-    public S7NetToken(S7NetConfig netConfig)
+    public S7NetToken(S7NetDto netConfig)
     {
         var s7Cpu = netConfig.S7Type switch
         {

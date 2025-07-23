@@ -10,8 +10,10 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Wcs.Application;
 using Wcs.Application.Abstract;
 using Wcs.Domain.JobConfigs;
+using Wcs.Domain.S7;
 using Wcs.Infrastructure.Database;
 using Wcs.Infrastructure.DB.JobConfig;
+using Wcs.Infrastructure.DB.S7NetConfig;
 using Wcs.Infrastructure.ReadPlcJob;
 using Wcs.Infrastructure.S7Net;
 using Wcs.Shared;
@@ -31,12 +33,11 @@ public static class WcsInfrastructureConfigurator
         AddEndPoint(services);
         services.TryAddSingleton<INetService>(sp =>
         {
-            var sender = sp.GetService<ISender>();
-            INetService netService = new S7NetService(sender);
-            netService.Initialization();
+            var sender = sp.CreateScope().ServiceProvider.GetService<ISender>();
+            INetService netService = new S7NetService();
+            netService.Initialization(sender);
             return netService;
         });
-        services.AddScoped<JobService>();
         services.AddDbContext<WCSDBContext>(options =>
         {
             var connStr = configuration.GetConnectionString("default");
@@ -48,6 +49,8 @@ public static class WcsInfrastructureConfigurator
 
     public static IServiceCollection AddRepository(this IServiceCollection service)
     {
+        service.AddScoped<JobService>();
+        service.AddScoped<IS7NetManager,S7NetManager>();
         service.AddScoped<IJobConfigRepository, JobConfigRepository>();
         return service;
     }

@@ -3,4 +3,6 @@
 public interface IS7NetManager
 {
     public Task<List<S7NetConfig>> GetAllNet();
+    
+    public Task<List<S7EntityItem>> GetAllNetEntityItem();
 }
