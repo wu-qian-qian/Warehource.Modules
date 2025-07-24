@@ -1,0 +1,171 @@
+2025-07-24 10:14:03.892 +08:00 [ERR]    at Common.Domain.EF.IEntity.SetLastModification(String user) in D:\Program\仓库\Warehource.Modules\Common.Domain\EF\IEntity.cs:line 22
+   at Common.Infrastructure.EF.LastModificationInterceptor.<>c__DisplayClass2_0.<SavingChangesAsync>b__1(EntityEntry`1 entry) in D:\Program\仓库\Warehource.Modules\Common.Infrastructure\EF\LastModificationInterceptor.cs:line 26
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Common.Infrastructure.EF.LastModificationInterceptor.SavingChangesAsync(DbContextEventData eventData, InterceptionResult`1 result, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Infrastructure\EF\LastModificationInterceptor.cs:line 24
+   at Microsoft.EntityFrameworkCore.Diagnostics.CoreLoggerExtensions.SaveChangesStartingAsync(IDiagnosticsLogger`1 diagnostics, DbContext context, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Common.Infrastructure.EF.BaseDbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Infrastructure\EF\BaseDbContext.cs:line 26
+   at Wcs.Application.JobHandler.SetStatusCommand.StatusJobEventHandler.Handle(StatusJobEvent request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Wcs.Application\JobHandler\SetStatusCommand\StatusJobEventHandler.cs:line 35
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Wcs.Presentation.Job.JobStatusConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Wcs.Presentation\Job\JobStatusConfig.cs:line 19
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfTFast>g__ExecuteAwaited|132_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 10:16:33.546 +08:00 [ERR]    at Common.Domain.EF.IEntity.SetLastModification(String user) in D:\Program\仓库\Warehource.Modules\Common.Domain\EF\IEntity.cs:line 22
+   at Common.Infrastructure.EF.LastModificationInterceptor.<>c__DisplayClass2_0.<SavingChangesAsync>b__1(EntityEntry`1 entry) in D:\Program\仓库\Warehource.Modules\Common.Infrastructure\EF\LastModificationInterceptor.cs:line 26
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Common.Infrastructure.EF.LastModificationInterceptor.SavingChangesAsync(DbContextEventData eventData, InterceptionResult`1 result, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Infrastructure\EF\LastModificationInterceptor.cs:line 24
+   at Microsoft.EntityFrameworkCore.Diagnostics.CoreLoggerExtensions.SaveChangesStartingAsync(IDiagnosticsLogger`1 diagnostics, DbContext context, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Common.Infrastructure.EF.BaseDbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Infrastructure\EF\BaseDbContext.cs:line 26
+   at Wcs.Application.JobHandler.SetStatusCommand.StatusJobEventHandler.Handle(StatusJobEvent request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Wcs.Application\JobHandler\SetStatusCommand\StatusJobEventHandler.cs:line 35
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Wcs.Presentation.Job.JobStatusConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Wcs.Presentation\Job\JobStatusConfig.cs:line 19
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfTFast>g__ExecuteAwaited|132_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 10:23:56.494 +08:00 [ERR]    at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at Common.Helper.ExcelHelper.CreateObjectFromList[T](Stream stream, String sheetName) in D:\Program\仓库\Warehource.Modules\Common\Helper\ExcelHelper.cs:line 113
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 21
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 15:36:37.076 +08:00 [ERR]    at ICSharpCode.SharpZipLib.Zip.Compression.Streams.InflaterInputStream.set_Position(Int64 value)
+   at NPOI.OpenXml4Net.Util.ZipInputStreamZipEntrySource..ctor(ZipInputStream inp)
+   at NPOI.OpenXml4Net.OPC.ZipPackage..ctor(Stream in1, PackageAccess access)
+   at NPOI.OpenXml4Net.OPC.OPCPackage.Open(Stream stream, Boolean readOnly)
+   at NPOI.Util.PackageHelper.Open(Stream stream, Boolean readOnly)
+   at NPOI.XSSF.UserModel.XSSFWorkbook..ctor(Stream fileStream, Boolean readOnly)
+   at Common.Helper.ExcelHelper.CreateObjectFromList[T](Stream stream, String sheetName) in D:\Program\仓库\Warehource.Modules\Common\Helper\ExcelHelper.cs:line 96
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 24
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 15:36:45.193 +08:00 [ERR]    at ICSharpCode.SharpZipLib.Zip.Compression.Streams.InflaterInputStream.set_Position(Int64 value)
+   at NPOI.OpenXml4Net.Util.ZipInputStreamZipEntrySource..ctor(ZipInputStream inp)
+   at NPOI.OpenXml4Net.OPC.ZipPackage..ctor(Stream in1, PackageAccess access)
+   at NPOI.OpenXml4Net.OPC.OPCPackage.Open(Stream stream, Boolean readOnly)
+   at NPOI.Util.PackageHelper.Open(Stream stream, Boolean readOnly)
+   at NPOI.XSSF.UserModel.XSSFWorkbook..ctor(Stream fileStream, Boolean readOnly)
+   at Common.Helper.ExcelHelper.CreateObjectFromList[T](Stream stream, String sheetName) in D:\Program\仓库\Warehource.Modules\Common\Helper\ExcelHelper.cs:line 96
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 24
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 15:37:03.118 +08:00 [ERR]    at ICSharpCode.SharpZipLib.Zip.Compression.Streams.InflaterInputStream.set_Position(Int64 value)
+   at NPOI.OpenXml4Net.Util.ZipInputStreamZipEntrySource..ctor(ZipInputStream inp)
+   at NPOI.OpenXml4Net.OPC.ZipPackage..ctor(Stream in1, PackageAccess access)
+   at NPOI.OpenXml4Net.OPC.OPCPackage.Open(Stream stream, Boolean readOnly)
+   at NPOI.Util.PackageHelper.Open(Stream stream, Boolean readOnly)
+   at NPOI.XSSF.UserModel.XSSFWorkbook..ctor(Stream fileStream, Boolean readOnly)
+   at Common.Helper.ExcelHelper.CreateObjectFromList[T](Stream stream, String sheetName) in D:\Program\仓库\Warehource.Modules\Common\Helper\ExcelHelper.cs:line 96
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 24
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 15:38:16.227 +08:00 [ERR]    at Microsoft.AspNetCore.Http.ReferenceReadStream.set_Position(Int64 value)
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 25
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 15:39:21.794 +08:00 [ERR]    at Microsoft.AspNetCore.Http.ReferenceReadStream.set_Position(Int64 value)
+   at Microsoft.AspNetCore.Http.ReferenceReadStream.Seek(Int64 offset, SeekOrigin origin)
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 25
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 15:51:43.449 +08:00 [ERR]    at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at Common.Helper.ExcelHelper.CreateObjectFromList(Stream stream, List`1 types) in D:\Program\仓库\Warehource.Modules\Common\Helper\ExcelHelper.cs:line 123
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 23
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 15:52:24.623 +08:00 [ERR]    at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at Common.Helper.ExcelHelper.CreateObjectFromList(Stream stream, List`1 types) in D:\Program\仓库\Warehource.Modules\Common\Helper\ExcelHelper.cs:line 123
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 23
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 15:54:41.788 +08:00 [ERR]    at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at Common.Helper.ExcelHelper.CreateObjectFromList(Stream stream, List`1 types) in D:\Program\仓库\Warehource.Modules\Common\Helper\ExcelHelper.cs:line 123
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 23
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 15:54:57.742 +08:00 [ERR]    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.ReadAllBytes(String path)
+   at Plc.Presentation.S7Plc.DownLoad.DownLoadS7NetTemplate.<>c.<MapEndpoint>b__0_0() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\DownLoad.cs:line 71
+   at lambda_method67(Closure, Object, HttpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 15:56:13.019 +08:00 [ERR]    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.ReadAllBytes(String path)
+   at Plc.Presentation.S7Plc.DownLoad.DownLoadS7NetTemplate.<>c.<MapEndpoint>b__0_0() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\DownLoad.cs:line 71
+   at lambda_method67(Closure, Object, HttpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 16:16:05.781 +08:00 [ERR]    at System.Number.ThrowFormatException[TChar](ReadOnlySpan`1 value)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Common.Helper.TypeHelper.NullableSetValue(Type datatype, String value) in D:\Program\仓库\Warehource.Modules\Common\Helper\TypeHelper.cs:line 25
+   at Common.Helper.ExcelHelper.CreateObjectFromList(Stream stream, List`1 types) in D:\Program\仓库\Warehource.Modules\Common\Helper\ExcelHelper.cs:line 127
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 23
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
