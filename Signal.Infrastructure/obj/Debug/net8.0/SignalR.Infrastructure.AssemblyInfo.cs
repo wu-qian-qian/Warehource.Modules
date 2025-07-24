@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SignalR.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92ff6ea86fabfefa4921f781e1f24de82fd80410")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b19e13deb643a8f28207db4a9a48753f991347c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SignalR.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SignalR.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

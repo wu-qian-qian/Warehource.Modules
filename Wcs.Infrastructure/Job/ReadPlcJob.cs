@@ -15,7 +15,8 @@ internal class ReadPlcJob(IMassTransitEventBus bus, ISender sender) : BaseJob
         Console.WriteLine("启动");
         try
         {
-             await bus.PublishAsync(new PlcIntegrationEvent(DateTime.Now));
+            //事件触发，最终直接通过读取唯一id
+            await bus.PublishAsync(new CacheMemoryEvent(DateTime.Now));
         }
         catch (OperationCanceledException ex)
         {

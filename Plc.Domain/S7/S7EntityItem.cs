@@ -17,6 +17,12 @@ public class S7EntityItem : IEntity
     /// </summary>
     public S7DataTypeEnum S7DataType { get; set; }
 
+
+    /// <summary>
+    ///     db地址
+    /// </summary>
+    public int DBAddress { get; set; }
+
     /// <summary>
     ///     PLC的byte的偏移量
     /// </summary>
@@ -53,12 +59,24 @@ public class S7EntityItem : IEntity
     public int? ArrtypeLength { get; set; }
 
     /// <summary>
-    ///     设备Id
+    ///     关联设备
     /// </summary>
-    public Guid? DeviceId { get; set; }
+    public string DeviceName { get; set; }
 
     /// <summary>
     ///     网络配置
     /// </summary>
     public Guid? NetGuid { get; set; }
+
+    ///// <summary>
+    ///// 需要配置索引
+    ///// 唯一编码防止重复添加
+    ///// </summary>
+    //public int HashCode { get; set; }
+
+    //public void CreateCode()
+    //{
+    //    var code = $"{S7DataType}{DBAddress}{DataOffset}{BitOffset}{S7BlockType}{ArrtypeLength}";
+    //    HashCode = code.GetHashCode();
+    //}
 }

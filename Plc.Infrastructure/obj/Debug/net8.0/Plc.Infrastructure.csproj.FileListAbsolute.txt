@@ -38,3 +38,4 @@ D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\Plc.Inf
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\ref\Plc.Infrastructure.dll
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Plc.CustomEvents.dll
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Plc.CustomEvents.pdb
+D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\示例数据.xlsx

@@ -1,6 +1,6 @@
 using Common.Application.Log;
 using Common.Shared;
-using Plc.Contracts.S7Plc;
+using Plc.Contracts.Respon;
 using Plc.Shared;
 using S7.Net;
 using S7.Net.Types;

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Wcs.Application.JobHandler.AddCommand;
-using Wcs.Contracts.Job;
+using Wcs.Application.Job.Insert;
+using Wcs.Contracts.Respon.Job;
 using Wcs.Domain.JobConfigs;
 
 namespace Wcs.Application;

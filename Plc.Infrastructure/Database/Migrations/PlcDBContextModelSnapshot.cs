@@ -37,6 +37,9 @@ namespace Plc.Infrastructure.Database.Migrations
                     b.Property<DateTime>("CreationTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("DBAddress")
+                        .HasColumnType("int");
+
                     b.Property<int>("DataOffset")
                         .HasColumnType("int");
 
@@ -44,8 +47,9 @@ namespace Plc.Infrastructure.Database.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<Guid?>("DeviceId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("DeviceName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Index")
                         .HasColumnType("int");

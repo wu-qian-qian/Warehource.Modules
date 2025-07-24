@@ -1,13 +1,10 @@
 ﻿using Plc.Shared;
 
-namespace Plc.Presentation.S7Plc;
+namespace Plc.Contracts.Respon;
 
-internal record S7NetEntityItemRequest
+public class S7EntityItemDto
 {
-    /// <summary>
-    ///     所属的地址
-    /// </summary>
-    public string Ip { get; set; }
+    public Guid Id { get; set; }
 
     /// <summary>
     ///     PLC的的数据类型

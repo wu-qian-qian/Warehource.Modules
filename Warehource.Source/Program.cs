@@ -16,6 +16,8 @@ using Wcs.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 builder.AddSerilogConfiguratorCategory();
 
+//builder.Services.AddCors();
+
 
 var currentAssembly = Assembly.GetExecutingAssembly();
 //服务通用模块
@@ -82,9 +84,9 @@ app.UseMiddleware<GlobalResponseMiddleware>();
 app.UseMiddleware<GlobalEncodingRequestMiddleware>();
 app.UseHttpsRedirection();
 
+
 app.UseSerilogRequest();
 app.AddGlobalExceptionMiddleware();
-
 app.UseAuthentication();
 app.UseAuthorization();
 

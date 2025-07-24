@@ -152,7 +152,7 @@
   {
     "ContainingType": "Plc.Presentation.S7Plc.AddS7NetConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
-    "RelativePath": "plc/add-allplc-centity-item",
+    "RelativePath": "plc/add-allplc-config",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,

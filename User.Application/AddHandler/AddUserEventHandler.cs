@@ -17,7 +17,7 @@ internal class AddUserEventHandler(IUnitOfWork unitOfWork, UserManager userManag
         var LockoutEnd = DateTimeOffset.Now.AddYears(-100);
         if (user == null && role != null)
         {
-            user = new Domain.User
+            user = new User
             {
                 Description = request.Description,
                 Email = request.Email,

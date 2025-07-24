@@ -35,4 +35,15 @@ public static class EnumHelper
 
         return null;
     }
+
+    public static Enum TryGetEnum(string enumName, Type enumType)
+    {
+        if (enumType.IsEnum)
+        {
+            var enumValue = Enum.Parse(enumType, enumName, true);
+            return (Enum)enumValue;
+        }
+
+        throw new ArgumentException($"Type {enumType.Name} is not an enum type.");
+    }
 }

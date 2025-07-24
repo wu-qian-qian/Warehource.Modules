@@ -1,21 +1,23 @@
 ﻿using Plc.Shared;
 
-namespace Plc.Presentation.S7Plc;
+namespace Plc.Contracts.Respon;
 
-internal record S7NetRequest
+public class S7NetDto
 {
+    public Guid Id { get; set; }
+
     /// <summary>
-    ///     PLC 地址
+    ///     地址
     /// </summary>
-    public string Ip { get; set; }
+    public string Ip { get; init; }
 
     /// <summary>
     ///     端口
     /// </summary>
-    public int Port { get; set; }
+    public int Port { get; init; }
 
     /// <summary>
-    ///     PLC 类型
+    ///     Plc类型
     /// </summary>
     public S7TypeEnum S7Type { get; set; }
 

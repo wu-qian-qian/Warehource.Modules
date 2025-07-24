@@ -1,5 +1,5 @@
 ﻿using Common.Application.MediatR.Message;
-using Wcs.Contracts.WcsTask;
+using Wcs.Contracts.Respon.WcsTask;
 
 namespace Wcs.Application.ExecuteDevice.GetWcsTask;
 

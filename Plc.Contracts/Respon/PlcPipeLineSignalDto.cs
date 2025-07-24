@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Plc.Contracts.S7Plc;
+namespace Plc.Contracts.Respon;
 
 public sealed class PlcPipeLineSignalDto
 {

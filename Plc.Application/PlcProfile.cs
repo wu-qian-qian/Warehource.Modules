@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Plc.Contracts.S7Plc;
+using Plc.Contracts.Respon;
 using Plc.Domain.S7;
 
 namespace Plc.Application;

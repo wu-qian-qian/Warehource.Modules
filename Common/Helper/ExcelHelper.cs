@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using System.Data;
 using System.Reflection;
 using NPOI.XSSF.UserModel;
 
@@ -7,40 +6,6 @@ namespace Common.Helper;
 
 public static class ExcelHelper
 {
-    // DataTable 转 Excel
-    public static byte[] CreateExcelFromDataTable(DataTable dataTable, string sheetName = "Sheet1")
-    {
-        using var workbook = new XSSFWorkbook();
-        var sheet = workbook.CreateSheet(sheetName);
-
-        // 创建表头行
-        var headerRow = sheet.CreateRow(0);
-        for (var i = 0; i < dataTable.Columns.Count; i++)
-        {
-            var cell = headerRow.CreateCell(i);
-            cell.SetCellValue(dataTable.Columns[i].ColumnName);
-        }
-
-        // 添加数据行
-        for (var i = 0; i < dataTable.Rows.Count; i++)
-        {
-            var row = sheet.CreateRow(i + 1);
-            for (var j = 0; j < dataTable.Columns.Count; j++)
-            {
-                var cell = row.CreateCell(j);
-                cell.SetCellValue(dataTable.Rows[i][j]?.ToString() ?? "");
-            }
-        }
-
-        // 自动调整列宽
-        for (var i = 0; i < dataTable.Columns.Count; i++) sheet.AutoSizeColumn(i);
-
-        // 保存到内存流
-        using var ms = new MemoryStream();
-        workbook.Write(ms);
-        return ms.ToArray();
-    }
-
     // 从对象列表创建 Excel
     public static byte[] CreateExcelFromList<T>(List<T> list, string sheetName = "Sheet1")
     {
@@ -122,6 +87,54 @@ public static class ExcelHelper
         workbook.Write(ms);
         return ms.ToArray();
     }
+
+
+    public static Dictionary<string, List<object>> CreateObjectFromList(Stream stream, List<Type> types)
+    {
+        using var workbook = new XSSFWorkbook(stream);
+        var dic = new Dictionary<string, List<object>>();
+        foreach (var type in types)
+        {
+            var worksheet = string.IsNullOrEmpty(type.Name) ? workbook.GetSheetAt(0) : workbook.GetSheet(type.Name);
+            var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            var headerRow = worksheet.GetRow(0);
+            var dataList = new List<object>();
+            for (var rowIndex = 1; rowIndex <= worksheet.LastRowNum; rowIndex++)
+            {
+                var ins = Activator.CreateInstance(type);
+                var rowData = worksheet.GetRow(rowIndex);
+                for (var i = 0; i < headerRow.LastCellNum; i++)
+                {
+                    var headCell = headerRow.GetCell(i);
+                    var propertie = properties
+                        .FirstOrDefault(p => p.Name == headCell.ToString().Trim());
+
+                    //列值
+                    var cellData = rowData.GetCell(i)?.ToString()?.Trim();
+                    if (cellData == string.Empty || cellData == null)
+                        continue;
+                    //属性
+                    var datatype = propertie.PropertyType;
+                    if (datatype.IsEnum)
+                    {
+                        // 如果是枚举类型，尝试转换
+                        var enumValue = Enum.Parse(datatype, cellData, true);
+                        propertie.SetValue(ins, enumValue);
+                        continue;
+                    }
+
+                    propertie.SetValue(ins, TypeHelper.NullableSetValue(datatype, cellData));
+                }
+
+                dataList.Add(ins);
+            }
+
+            dic.Add(type.Name, dataList);
+        }
+
+        return dic;
+    }
+
 
     // 将 Excel 字节数组保存为文件
     public static void SaveExcelFile(byte[] excelData, string filePath)

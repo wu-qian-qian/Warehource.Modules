@@ -1,10 +1,13 @@
 ﻿using Plc.Shared;
 
-namespace Plc.Contracts.S7Plc;
+namespace Plc.Contracts.Request;
 
-public class S7EntityItemDto
+internal record S7NetEntityItemRequest
 {
-    public Guid Id { get; set; }
+    /// <summary>
+    ///     所属的地址
+    /// </summary>
+    public string Ip { get; set; }
 
     /// <summary>
     ///     PLC的的数据类型
@@ -37,12 +40,23 @@ public class S7EntityItemDto
     public string? Description { get; set; }
 
     /// <summary>
-    ///     字段名称
+    ///     关联设备
     /// </summary>
-    public string? Name { get; set; }
+    public string DeviceName { get; set; }
+
 
     /// <summary>
     ///     数组类型的长度
     /// </summary>
     public int? ArrtypeLength { get; set; }
+
+    /// <summary>
+    ///     db地址
+    /// </summary>
+    public int DBAddress { get; set; }
+
+    /// <summary>
+    ///     名称
+    /// </summary>
+    public string Name { get; set; }
 }

@@ -2,7 +2,7 @@ using Common.Infrastructure.EF;
 using Microsoft.EntityFrameworkCore;
 using Plc.Application.Abstract;
 using Plc.Domain.S7;
-using Plc.Infrastructure.S7Net;
+using Plc.Infrastructure.db;
 
 namespace Plc.Infrastructure.Database;
 

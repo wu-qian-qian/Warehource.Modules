@@ -19,4 +19,9 @@ public class S7NetManager(PlcDBContext context) : IS7NetManager
         return context.Query<S7EntityItem>()
             .ToListAsync();
     }
+
+    public Task InsertS7Net(IEnumerable<S7NetConfig> s7NetConfigs)
+    {
+        return context.Nets.AddRangeAsync(s7NetConfigs);
+    }
 }

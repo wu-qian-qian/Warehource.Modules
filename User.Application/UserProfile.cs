@@ -8,7 +8,7 @@ internal class UserProfile : Profile
 {
     public UserProfile()
     {
-        CreateMap<Domain.User, UserDto>()
+        CreateMap<User, UserDto>()
             .ForMember(dest => dest.RoleName,
                 opt => opt.MapFrom(src => src.Role.RoleName));
         CreateMap<Role, RoleDto>();

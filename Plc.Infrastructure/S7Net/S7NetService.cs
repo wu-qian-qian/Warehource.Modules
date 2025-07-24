@@ -4,6 +4,7 @@ using Common.Shared;
 using MediatR;
 using Plc.Application.Abstract;
 using Plc.Application.S7Plc.Get;
+using Plc.Application.S7Plc.Get.Net;
 using Serilog;
 
 namespace Plc.Infrastructure.S7Net;
@@ -18,18 +19,11 @@ public class S7NetService : INetService
 
     public void Initialization(ISender sender)
     {
-        try
+        var netList = sender.Send(new GetS7NetQuery()).GetAwaiter().GetResult();
+        foreach (var netConfig in netList)
         {
-            var netList = sender.Send(new GetS7NetQuery()).GetAwaiter().GetResult();
-            foreach (var netConfig in netList)
-            {
-                var token = new S7NetToken(netConfig);
-                AddConnect(token);
-            }
-        }
-        catch (Exception e)
-        {
-            Log.Logger.ForCategory(LogCategory.Net).Error($"{e.Message}-无法初始化服务");
+            var token = new S7NetToken(netConfig);
+            AddConnect(token);
         }
     }
 

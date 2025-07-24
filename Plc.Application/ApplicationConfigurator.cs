@@ -23,7 +23,7 @@ public static class ApplicationConfigurator
 
     public static void AddCustom(IRegistrationConfigurator registrationConfigurator)
     {
-        registrationConfigurator.AddConsumer<ReadPlcEventConsumer<PlcIntegrationEvent>>();
+        registrationConfigurator.AddConsumer<ReadPlcEventConsumer<CacheMemoryEvent>>();
     }
 
     public static void AddAutoMapper(IMapperConfigurationExpression config)

@@ -1,4 +1,4 @@
-﻿namespace Wcs.Contracts.Job;
+﻿namespace Wcs.Contracts.Respon.Job;
 
 public sealed class JobDto
 {

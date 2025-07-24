@@ -15,7 +15,6 @@ public static class ApplicationConfigurator
 
     public static void AddCustom(IRegistrationConfigurator registrationConfigurator)
     {
-        
     }
 
     public static void AddAutoMapper(IMapperConfigurationExpression config)

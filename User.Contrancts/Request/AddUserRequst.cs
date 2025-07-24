@@ -1,6 +1,6 @@
-﻿namespace Identity.Presentation.Add;
+﻿namespace Identity.Contrancts.Request;
 
-internal sealed class AddUserRequst
+public sealed class AddUserRequst
 {
     public string Name { get; set; }
 

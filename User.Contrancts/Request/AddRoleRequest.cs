@@ -1,4 +1,4 @@
-﻿namespace Identity.Presentation.Add;
+﻿namespace Identity.Contrancts.Request;
 
 public record AddRoleRequest
 {

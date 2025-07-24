@@ -359,7 +359,7 @@
         }
       }
     },
-    "/plc/add-allplc-centity-item": {
+    "/plc/add-allplc-config": {
       "post": {
         "tags": [
           "Plc"
