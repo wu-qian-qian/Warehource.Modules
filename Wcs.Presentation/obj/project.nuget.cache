@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fGQp64WSNi8=",
+  "dgSpecHash": "PZ/hny2ddqY=",
   "success": true,
   "projectFilePath": "D:\\Program\\仓库\\Warehource.Modules\\Wcs.Presentation\\Wcs.Presentation.csproj",
   "expectedPackageFiles": [
@@ -46,7 +46,6 @@
     "C:\\Users\\吴\\.nuget\\packages\\quartz\\3.8.1\\quartz.3.8.1.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\quartz.extensions.dependencyinjection\\3.8.1\\quartz.extensions.dependencyinjection.3.8.1.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\quartz.extensions.hosting\\3.8.1\\quartz.extensions.hosting.3.8.1.nupkg.sha512",
-    "C:\\Users\\吴\\.nuget\\packages\\s7netplus\\0.20.0\\s7netplus.0.20.0.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\serilog\\4.2.0\\serilog.4.2.0.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\serilog.aspnetcore\\9.0.0\\serilog.aspnetcore.9.0.0.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\serilog.enrichers.environment\\3.0.1\\serilog.enrichers.environment.3.0.1.nupkg.sha512",

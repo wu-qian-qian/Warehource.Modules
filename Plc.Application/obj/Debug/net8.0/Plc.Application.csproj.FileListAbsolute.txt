@@ -26,3 +26,5 @@ D:\Program\仓库\Warehource.Modules\Plc.Application\obj\Debug\net8.0\Plc.Applic
 D:\Program\仓库\Warehource.Modules\Plc.Application\obj\Debug\net8.0\ref\Plc.Application.dll
 D:\Program\仓库\Warehource.Modules\Plc.Application\bin\Debug\net8.0\Plc.CustomEvents.dll
 D:\Program\仓库\Warehource.Modules\Plc.Application\bin\Debug\net8.0\Plc.CustomEvents.pdb
+D:\Program\仓库\Warehource.Modules\Plc.Application\bin\Debug\net8.0\Common.dll
+D:\Program\仓库\Warehource.Modules\Plc.Application\bin\Debug\net8.0\Common.pdb

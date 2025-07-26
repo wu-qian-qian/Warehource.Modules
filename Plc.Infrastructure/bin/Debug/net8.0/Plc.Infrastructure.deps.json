@@ -1524,7 +1524,6 @@
           "Microsoft.Extensions.Http": "8.0.0",
           "Microsoft.Extensions.Http.Polly": "8.0.0",
           "Quartz.Extensions.Hosting": "3.8.1",
-          "S7netplus": "0.20.0",
           "Serilog.AspNetCore": "9.0.0",
           "Serilog.Enrichers.Environment": "3.0.1",
           "Serilog.Sinks.Console": "6.0.0",
@@ -1586,7 +1585,8 @@
           "Common.Application": "1.0.0",
           "Plc.Contracts": "1.0.0",
           "Plc.CustomEvents": "1.0.0",
-          "Plc.Domain": "1.0.0"
+          "Plc.Domain": "1.0.0",
+          "S7netplus": "0.20.0"
         },
         "runtime": {
           "Plc.Application.dll": {

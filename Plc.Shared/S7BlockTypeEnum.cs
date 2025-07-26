@@ -23,7 +23,7 @@ public enum S7BlockTypeEnum
     /// <summary>
     ///     Flag area memory (M0.0, M0.1, ...)
     /// </summary>
-    Flag = 4,
+    Memory = 4,
 
     /// <summary>
     ///     Timer area memory (T1, T2, ...)

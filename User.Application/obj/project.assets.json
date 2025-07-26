@@ -631,19 +631,6 @@
           }
         }
       },
-      "S7netplus/0.20.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/S7.Net.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/S7.Net.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Serilog/4.2.0": {
         "type": "package",
         "compile": {
@@ -1063,7 +1050,6 @@
           "Microsoft.Extensions.Http": "8.0.0",
           "Microsoft.Extensions.Http.Polly": "8.0.0",
           "Quartz.Extensions.Hosting": "3.8.1",
-          "S7netplus": "0.20.0",
           "Serilog.AspNetCore": "9.0.0",
           "Serilog.Enrichers.Environment": "3.0.1",
           "Serilog.Sinks.Console": "6.0.0",
@@ -2033,31 +2019,6 @@
         "quartz-logo-small.png",
         "quartz.extensions.hosting.3.8.1.nupkg.sha512",
         "quartz.extensions.hosting.nuspec"
-      ]
-    },
-    "S7netplus/0.20.0": {
-      "sha512": "XAubZ076bhWHQZlnBkzwQO4WxqF5ofwhrkDxfBhGbeD1JC1jBDn3EbWIqMLW6+G0RsxzxirSjLERCQZPfjwGdw==",
-      "type": "package",
-      "path": "s7netplus/0.20.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net452/S7.Net.dll",
-        "lib/net452/S7.Net.xml",
-        "lib/net462/S7.Net.dll",
-        "lib/net462/S7.Net.xml",
-        "lib/net5.0/S7.Net.dll",
-        "lib/net5.0/S7.Net.xml",
-        "lib/net6.0/S7.Net.dll",
-        "lib/net6.0/S7.Net.xml",
-        "lib/net7.0/S7.Net.dll",
-        "lib/net7.0/S7.Net.xml",
-        "lib/netstandard1.3/S7.Net.dll",
-        "lib/netstandard1.3/S7.Net.xml",
-        "lib/netstandard2.0/S7.Net.dll",
-        "lib/netstandard2.0/S7.Net.xml",
-        "s7netplus.0.20.0.nupkg.sha512",
-        "s7netplus.nuspec"
       ]
     },
     "Serilog/4.2.0": {

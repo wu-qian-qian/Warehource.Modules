@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.presentation\\s7plc\\adds7netconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|solutionrelative:plc.presentation\\s7plc\\adds7netconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\net\\behaviors\\memoryreadplc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\net\\behaviors\\memoryreadplc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51944082-D2CD-448A-9BF5-82E49BEFC722}|Common\\Common.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common\\helper\\excelhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51944082-D2CD-448A-9BF5-82E49BEFC722}|Common\\Common.csproj|solutionrelative:common\\helper\\excelhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\net\\behaviors\\reads7plcpipelinebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\net\\behaviors\\reads7plcpipelinebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51944082-D2CD-448A-9BF5-82E49BEFC722}|Common\\Common.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common\\helper\\typehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51944082-D2CD-448A-9BF5-82E49BEFC722}|Common\\Common.csproj|solutionrelative:common\\helper\\typehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.infrastructure\\s7net\\s7netservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|solutionrelative:plc.infrastructure\\s7net\\s7netservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51944082-D2CD-448A-9BF5-82E49BEFC722}|Common\\Common.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common\\helper\\enumhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51944082-D2CD-448A-9BF5-82E49BEFC722}|Common\\Common.csproj|solutionrelative:common\\helper\\enumhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\net\\readplc\\readlplceventhandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\net\\readplc\\readlplceventhandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\middleware\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\middleware\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.presentation\\plc.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|solutionrelative:plc.presentation\\plc.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.infrastructure\\plcinfrastructureconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|solutionrelative:plc.infrastructure\\plcinfrastructureconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,22 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ExcelHelper.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common\\Helper\\ExcelHelper.cs",
-              "RelativeDocumentMoniker": "Common\\Helper\\ExcelHelper.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common\\Helper\\ExcelHelper.cs",
-              "RelativeToolTip": "Common\\Helper\\ExcelHelper.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAgwHUAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T07:10:10.363Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
@@ -72,67 +54,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TypeHelper.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common\\Helper\\TypeHelper.cs",
-              "RelativeDocumentMoniker": "Common\\Helper\\TypeHelper.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common\\Helper\\TypeHelper.cs",
-              "RelativeToolTip": "Common\\Helper\\TypeHelper.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAADgvxgAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T08:13:10.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EnumHelper.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common\\Helper\\EnumHelper.cs",
-              "RelativeDocumentMoniker": "Common\\Helper\\EnumHelper.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common\\Helper\\EnumHelper.cs",
-              "RelativeToolTip": "Common\\Helper\\EnumHelper.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAvwCYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T08:10:22.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AddS7NetConfig.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\S7Plc\\AddS7NetConfig.cs",
-              "RelativeDocumentMoniker": "Plc.Presentation\\S7Plc\\AddS7NetConfig.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\S7Plc\\AddS7NetConfig.cs",
-              "RelativeToolTip": "Plc.Presentation\\S7Plc\\AddS7NetConfig.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAawBwAAAAnAAAAAAAAAA==",
+              "Title": "MemoryReadPlc.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Net\\Behaviors\\MemoryReadPlc.cs",
+              "RelativeDocumentMoniker": "Plc.Application\\Net\\Behaviors\\MemoryReadPlc.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Net\\Behaviors\\MemoryReadPlc.cs",
+              "RelativeToolTip": "Plc.Application\\Net\\Behaviors\\MemoryReadPlc.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBAAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T07:23:12.377Z",
+              "WhenOpened": "2025-07-26T03:02:07.138Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Plc.Presentation",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\Plc.Presentation.csproj",
-              "RelativeDocumentMoniker": "Plc.Presentation\\Plc.Presentation.csproj",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\Plc.Presentation.csproj",
-              "RelativeToolTip": "Plc.Presentation\\Plc.Presentation.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-24T07:14:11.47Z",
+              "DocumentIndex": 1,
+              "Title": "ReadS7PlcPipelineBehavior.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Net\\Behaviors\\ReadS7PlcPipelineBehavior.cs",
+              "RelativeDocumentMoniker": "Plc.Application\\Net\\Behaviors\\ReadS7PlcPipelineBehavior.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Net\\Behaviors\\ReadS7PlcPipelineBehavior.cs",
+              "RelativeToolTip": "Plc.Application\\Net\\Behaviors\\ReadS7PlcPipelineBehavior.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T03:02:05.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "GlobalExceptionHandler.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalExceptionHandler.cs",
-              "RelativeDocumentMoniker": "Common.Infrastructure\\Middleware\\GlobalExceptionHandler.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalExceptionHandler.cs",
-              "RelativeToolTip": "Common.Infrastructure\\Middleware\\GlobalExceptionHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBYAAAAIAAAAAAAAAA==",
+              "Title": "PlcInfrastructureConfigurator.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
+              "RelativeDocumentMoniker": "Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
+              "RelativeToolTip": "Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T07:10:10.353Z",
+              "WhenOpened": "2025-07-26T03:01:34.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "S7NetService.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\S7Net\\S7NetService.cs",
+              "RelativeDocumentMoniker": "Plc.Infrastructure\\S7Net\\S7NetService.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\S7Net\\S7NetService.cs",
+              "RelativeToolTip": "Plc.Infrastructure\\S7Net\\S7NetService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAArwEAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T03:01:15.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReadlPlcEventHandle.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Net\\ReadPlc\\ReadlPlcEventHandle.cs",
+              "RelativeDocumentMoniker": "Plc.Application\\Net\\ReadPlc\\ReadlPlcEventHandle.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Net\\ReadPlc\\ReadlPlcEventHandle.cs",
+              "RelativeToolTip": "Plc.Application\\Net\\ReadPlc\\ReadlPlcEventHandle.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T03:00:05.892Z",
               "EditorCaption": ""
             }
           ]

@@ -5,6 +5,9 @@ using MediatR;
 using Plc.Application.Abstract;
 using Plc.Application.S7Plc.Get;
 using Plc.Application.S7Plc.Get.Net;
+using Plc.Contracts.Input;
+using Plc.Shared;
+using S7.Net.Types;
 using Serilog;
 
 namespace Plc.Infrastructure.S7Net;
@@ -15,7 +18,7 @@ namespace Plc.Infrastructure.S7Net;
 /// </summary>
 public class S7NetService : INetService
 {
-    public readonly Dictionary<string, INet> NetMap = new();
+    public readonly Dictionary<string, Common.Application.Net.S7.S7Net> NetMap = new();
 
     public void Initialization(ISender sender)
     {
@@ -43,9 +46,23 @@ public class S7NetService : INetService
         }
     }
 
-    public Task<byte[]> ReadAsync()
+    public Task<byte[]> ReadAsync(ReadBufferInput input)
     {
-        throw new NotImplementedException();
+        var dbType = input.S7BlockType switch
+        {
+            S7BlockTypeEnum.DataBlock=>S7.Net.DataType.DataBlock,
+            S7BlockTypeEnum.Memory=>S7.Net.DataType.Memory,
+            S7BlockTypeEnum.Input=>S7.Net.DataType.Input,
+            _ =>throw new AggregateException("无法解析")
+        };
+        DataItem dataItem = new DataItem()
+        {
+            DB = input.DBAddress,
+            StartByteAdr = input.DBStart,
+            Count = input.DBEnd-input.DBStart,
+            DataType = dbType
+        };
+      return  NetMap[input.Ip].ReadAsync(dataItem);
     }
 
     public async Task ReConnect()

@@ -10,7 +10,7 @@ internal class GetS7NetQueryHandler(IS7NetManager netManager, IMapper mapper)
 {
     public async Task<IEnumerable<S7NetDto>> Handle(GetS7NetQuery request, CancellationToken cancellationToken)
     {
-        var netList = await netManager.GetAllNet();
+        var netList = await netManager.GetAllNetAsync();
         return mapper.Map<IEnumerable<S7NetDto>>(netList);
     }
 }

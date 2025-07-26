@@ -2,7 +2,7 @@
 
 namespace Plc.Contracts.Request;
 
-internal record S7NetEntityItemRequest
+public record S7NetEntityItemRequest
 {
     /// <summary>
     ///     所属的地址

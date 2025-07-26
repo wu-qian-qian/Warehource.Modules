@@ -23,16 +23,16 @@ public sealed class WCSDBContext : BaseDbContext, IUnitOfWork
     }
 
 
-    public DbSet<ExecuteNodePath> ExecuteNodes { get; }
+    public DbSet<ExecuteNodePath> ExecuteNodes { get; set; }
 
 
-    public DbSet<Region> Regions { get; }
+    public DbSet<Region> Regions { get; set; }
 
-    public DbSet<TaskExecuteStep> TaskExecuteSteps { get; }
+    public DbSet<TaskExecuteStep> TaskExecuteSteps { get; set; }
 
-    public DbSet<WcsTask> WcsTasks { get; }
+    public DbSet<WcsTask> WcsTasks { get; set; }
 
-    public DbSet<JobConfig> JobConfigs { get; }
+    public DbSet<JobConfig> JobConfigs { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

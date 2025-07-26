@@ -2,7 +2,7 @@
 
 namespace Plc.Contracts.Request;
 
-internal record S7NetRequest
+public record S7NetRequest
 {
     /// <summary>
     ///     PLC 地址

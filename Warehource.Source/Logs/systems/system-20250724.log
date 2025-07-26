@@ -3443,3 +3443,369 @@ WHERE [w].[IsDeleted] = CAST(0 AS bit)
 2025-07-24 16:34:25.482 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/plc/add-allplc-config - multipart/form-data; boundary=----WebKitFormBoundarytB2GoSZ9gk3EvXa1 11030
 2025-07-24 16:34:25.493 +08:00 [WRN] Failed to determine the https port for redirect.
 2025-07-24 16:34:25.556 +08:00 [INF] Executing endpoint 'HTTP: POST plc/add-allplc-config'
+2025-07-24 17:26:46.142 +08:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 17:26:46.230 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Wcs.__EFMigrationsHistory]');
+2025-07-24 17:26:46.233 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 17:26:46.235 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Wcs.__EFMigrationsHistory]');
+2025-07-24 17:26:46.246 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Wcs.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-24 17:26:46.259 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-24 17:26:46.296 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 17:26:46.300 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Identity.__EFMigrationsHistory]');
+2025-07-24 17:26:46.302 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 17:26:46.304 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Identity.__EFMigrationsHistory]');
+2025-07-24 17:26:46.309 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Identity.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-24 17:26:46.311 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-24 17:26:46.394 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 17:26:46.397 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Plc.__EFMigrationsHistory]');
+2025-07-24 17:26:46.399 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 17:26:46.402 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Plc.__EFMigrationsHistory]');
+2025-07-24 17:26:46.410 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Plc.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-24 17:26:46.412 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-24 17:26:46.500 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2025-07-24 17:26:46.505 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2025-07-24 17:26:46.507 +08:00 [INF] Quartz Scheduler created
+2025-07-24 17:26:46.508 +08:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2025-07-24 17:26:46.509 +08:00 [INF] RAMJobStore initialized.
+2025-07-24 17:26:46.510 +08:00 [INF] Quartz Scheduler 3.8.1.0 - 'JobScheduler' with instanceId '-1136815813' initialized
+2025-07-24 17:26:46.510 +08:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2025-07-24 17:26:46.511 +08:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2025-07-24 17:26:46.520 +08:00 [INF] Adding 0 jobs, 0 triggers.
+2025-07-24 17:26:46.691 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[CreationTime], [w].[Description], [w].[IsDeleted], [w].[IsStart], [w].[JobType], [w].[LastModificationTime], [w].[LastModifierUser], [w].[Name], [w].[TimeOut], [w].[Timer]
+FROM [Wcs.JobConfig] AS [w]
+WHERE [w].[IsDeleted] = CAST(0 AS bit)
+2025-07-24 17:26:46.785 +08:00 [INF] User profile is available. Using 'C:\Users\吴\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-24 17:26:46.954 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-07-24 17:26:46.961 +08:00 [INF] Configured endpoint CacheMemoryEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.CacheMemoryEvent>
+2025-07-24 17:26:47.051 +08:00 [DBG] Starting bus instances: IBus
+2025-07-24 17:26:47.056 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-07-24 17:26:47.087 +08:00 [DBG] Endpoint Ready: "loopback://localhost/CacheMemoryEvent"
+2025-07-24 17:26:47.087 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_yb9yyyg93sneypc7bdqhifbsbw"
+2025-07-24 17:26:47.087 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-07-24 17:26:47.094 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-07-24 17:26:47.115 +08:00 [INF] Now listening on: http://localhost:5050
+2025-07-24 17:26:47.117 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-24 17:26:47.118 +08:00 [INF] Hosting environment: Development
+2025-07-24 17:26:47.119 +08:00 [INF] Content root path: D:\Program\仓库\Warehource.Modules\Warehource.Source
+2025-07-24 17:26:47.120 +08:00 [INF] Scheduler JobScheduler_$_-1136815813 started.
+2025-07-24 17:26:47.121 +08:00 [DBG] Batch acquisition of 0 triggers
+2025-07-24 17:26:47.649 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/index.html - null null
+2025-07-24 17:26:47.901 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/index.html - 200 null text/html;charset=utf-8 254.2627ms
+2025-07-24 17:26:48.154 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - null null
+2025-07-24 17:26:48.162 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-07-24 17:26:48.329 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 175.186ms
+2025-07-24 17:26:51.997 +08:00 [INF] Application is shutting down...
+2025-07-24 17:26:52.008 +08:00 [DBG] Stopping bus instances: IBus
+2025-07-24 17:26:52.012 +08:00 [DBG] Stopping bus: "loopback://localhost/"
+2025-07-24 17:26:52.019 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/WcsIntegrationEvent"
+2025-07-24 17:26:52.020 +08:00 [DBG] Consumer Stopping: "loopback://localhost/WcsIntegrationEvent" (Stop Receive Transport)
+2025-07-24 17:26:52.030 +08:00 [DBG] Endpoint Completed: "loopback://localhost/WcsIntegrationEvent"
+2025-07-24 17:26:52.040 +08:00 [DBG] Consumer Completed: "loopback://localhost/WcsIntegrationEvent": 0 received, 0 concurrent
+2025-07-24 17:26:52.044 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/CacheMemoryEvent"
+2025-07-24 17:26:52.046 +08:00 [DBG] Consumer Stopping: "loopback://localhost/CacheMemoryEvent" (Stop Receive Transport)
+2025-07-24 17:26:52.047 +08:00 [DBG] Endpoint Completed: "loopback://localhost/CacheMemoryEvent"
+2025-07-24 17:26:52.048 +08:00 [DBG] Consumer Completed: "loopback://localhost/CacheMemoryEvent": 0 received, 0 concurrent
+2025-07-24 17:26:52.050 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/_WarehourceSource_bus_yb9yyyg93sneypc7bdqhifbsbw"
+2025-07-24 17:26:52.051 +08:00 [DBG] Consumer Stopping: "loopback://localhost/_WarehourceSource_bus_yb9yyyg93sneypc7bdqhifbsbw" (Stop Receive Transport)
+2025-07-24 17:26:52.053 +08:00 [DBG] Endpoint Completed: "loopback://localhost/_WarehourceSource_bus_yb9yyyg93sneypc7bdqhifbsbw"
+2025-07-24 17:26:52.053 +08:00 [DBG] Consumer Completed: "loopback://localhost/_WarehourceSource_bus_yb9yyyg93sneypc7bdqhifbsbw": 0 received, 0 concurrent
+2025-07-24 17:26:52.064 +08:00 [INF] Bus stopped: "loopback://localhost/"
+2025-07-24 17:26:52.068 +08:00 [INF] Scheduler JobScheduler_$_-1136815813 shutting down.
+2025-07-24 17:26:52.070 +08:00 [INF] Scheduler JobScheduler_$_-1136815813 paused.
+2025-07-24 17:26:52.074 +08:00 [DBG] Shutting down threadpool...
+2025-07-24 17:26:52.075 +08:00 [DBG] Waiting for 0 threads to complete.
+2025-07-24 17:26:52.076 +08:00 [DBG] No executing jobs remaining, all threads stopped.
+2025-07-24 17:26:52.077 +08:00 [DBG] Shutdown of threadpool complete.
+2025-07-24 17:26:52.079 +08:00 [INF] Scheduler JobScheduler_$_-1136815813 Shutdown complete.
+2025-07-24 18:01:45.109 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:01:45.158 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Wcs.__EFMigrationsHistory]');
+2025-07-24 18:01:45.162 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:01:45.165 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Wcs.__EFMigrationsHistory]');
+2025-07-24 18:01:45.176 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Wcs.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-24 18:01:45.189 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-24 18:01:45.226 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:01:45.230 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Identity.__EFMigrationsHistory]');
+2025-07-24 18:01:45.232 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:01:45.234 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Identity.__EFMigrationsHistory]');
+2025-07-24 18:01:45.238 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Identity.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-24 18:01:45.240 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-24 18:01:45.303 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:01:45.306 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Plc.__EFMigrationsHistory]');
+2025-07-24 18:01:45.309 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:01:45.312 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Plc.__EFMigrationsHistory]');
+2025-07-24 18:01:45.316 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Plc.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-24 18:01:45.319 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-24 18:01:45.402 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2025-07-24 18:01:45.424 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2025-07-24 18:01:45.426 +08:00 [INF] Quartz Scheduler created
+2025-07-24 18:01:45.426 +08:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2025-07-24 18:01:45.428 +08:00 [INF] RAMJobStore initialized.
+2025-07-24 18:01:45.429 +08:00 [INF] Quartz Scheduler 3.8.1.0 - 'JobScheduler' with instanceId '311614406' initialized
+2025-07-24 18:01:45.429 +08:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2025-07-24 18:01:45.430 +08:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2025-07-24 18:01:45.437 +08:00 [INF] Adding 0 jobs, 0 triggers.
+2025-07-24 18:01:45.588 +08:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[CreationTime], [w].[Description], [w].[IsDeleted], [w].[IsStart], [w].[JobType], [w].[LastModificationTime], [w].[LastModifierUser], [w].[Name], [w].[TimeOut], [w].[Timer]
+FROM [Wcs.JobConfig] AS [w]
+WHERE [w].[IsDeleted] = CAST(0 AS bit)
+2025-07-24 18:01:45.727 +08:00 [INF] User profile is available. Using 'C:\Users\吴\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-24 18:01:45.778 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-07-24 18:01:45.784 +08:00 [INF] Configured endpoint CacheMemoryEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.CacheMemoryEvent>
+2025-07-24 18:01:46.001 +08:00 [DBG] Starting bus instances: IBus
+2025-07-24 18:01:46.006 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-07-24 18:01:46.071 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_ft6oyyg93sneb85ybdqhige3n8"
+2025-07-24 18:01:46.071 +08:00 [DBG] Endpoint Ready: "loopback://localhost/CacheMemoryEvent"
+2025-07-24 18:01:46.071 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-07-24 18:01:46.074 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-07-24 18:01:46.159 +08:00 [INF] Now listening on: http://localhost:5050
+2025-07-24 18:01:46.164 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-07-24 18:01:46.276 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-24 18:01:46.279 +08:00 [INF] Scheduler JobScheduler_$_311614406 started.
+2025-07-24 18:01:46.279 +08:00 [INF] Hosting environment: Development
+2025-07-24 18:01:46.280 +08:00 [DBG] Batch acquisition of 0 triggers
+2025-07-24 18:01:46.282 +08:00 [INF] Content root path: D:\Program\仓库\Warehource.Modules\Warehource.Source
+2025-07-24 18:01:46.938 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/index.html - null null
+2025-07-24 18:01:47.155 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/index.html - 200 null text/html;charset=utf-8 227.9358ms
+2025-07-24 18:01:47.318 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/_vs/browserLink - null null
+2025-07-24 18:01:47.318 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-24 18:01:47.324 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.3499ms
+2025-07-24 18:01:47.359 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.1189ms
+2025-07-24 18:01:47.411 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - null null
+2025-07-24 18:01:47.424 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.8143ms
+2025-07-24 18:01:56.436 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/plc/add-allplc-config - multipart/form-data; boundary=----WebKitFormBoundaryjCYYVoMyPgePgP7h 11030
+2025-07-24 18:01:56.446 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-07-24 18:01:56.499 +08:00 [INF] Executing endpoint 'HTTP: POST plc/add-allplc-config'
+2025-07-24 18:01:57.697 +08:00 [INF] Executed endpoint 'HTTP: POST plc/add-allplc-config'
+2025-07-24 18:01:57.786 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+FluentValidation.ValidationException: Validation failed: 
+ -- S7NetRequests: 'S7 Net Requests' 不能为Null。 Severity: Error
+ -- S7NetEntityItemRequests: 'S7 Net Entity Item Requests' 不能为Null。 Severity: Error
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 21
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 28
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-07-24 18:01:57.874 +08:00 [ERR] HTTP POST /plc/add-allplc-config responded 500 in 1425.2517 ms
+2025-07-24 18:01:57.886 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5050/plc/add-allplc-config - 500 null application/json; charset=utf-8 1449.922ms
+2025-07-24 18:02:11.643 +08:00 [DBG] Batch acquisition of 0 triggers
+2025-07-24 18:02:38.249 +08:00 [DBG] Batch acquisition of 0 triggers
+2025-07-24 18:03:52.798 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:03:52.848 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Wcs.__EFMigrationsHistory]');
+2025-07-24 18:03:52.858 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:03:52.862 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Wcs.__EFMigrationsHistory]');
+2025-07-24 18:03:52.873 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Wcs.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-24 18:03:52.891 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-24 18:03:52.939 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:03:52.943 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Identity.__EFMigrationsHistory]');
+2025-07-24 18:03:52.946 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:03:52.949 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Identity.__EFMigrationsHistory]');
+2025-07-24 18:03:52.956 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Identity.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-24 18:03:52.959 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-24 18:03:53.033 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:03:53.040 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Plc.__EFMigrationsHistory]');
+2025-07-24 18:03:53.047 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:03:53.052 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Plc.__EFMigrationsHistory]');
+2025-07-24 18:03:53.058 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Plc.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-24 18:03:53.063 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-24 18:03:53.150 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2025-07-24 18:03:53.160 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2025-07-24 18:03:53.161 +08:00 [INF] Quartz Scheduler created
+2025-07-24 18:03:53.162 +08:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2025-07-24 18:03:53.163 +08:00 [INF] RAMJobStore initialized.
+2025-07-24 18:03:53.165 +08:00 [INF] Quartz Scheduler 3.8.1.0 - 'JobScheduler' with instanceId '-54466879' initialized
+2025-07-24 18:03:53.166 +08:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2025-07-24 18:03:53.167 +08:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2025-07-24 18:03:53.175 +08:00 [INF] Adding 0 jobs, 0 triggers.
+2025-07-24 18:03:53.330 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[CreationTime], [w].[Description], [w].[IsDeleted], [w].[IsStart], [w].[JobType], [w].[LastModificationTime], [w].[LastModifierUser], [w].[Name], [w].[TimeOut], [w].[Timer]
+FROM [Wcs.JobConfig] AS [w]
+WHERE [w].[IsDeleted] = CAST(0 AS bit)
+2025-07-24 18:03:53.465 +08:00 [INF] User profile is available. Using 'C:\Users\吴\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-24 18:03:53.521 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-07-24 18:03:53.529 +08:00 [INF] Configured endpoint CacheMemoryEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.CacheMemoryEvent>
+2025-07-24 18:03:53.813 +08:00 [DBG] Starting bus instances: IBus
+2025-07-24 18:03:53.832 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-07-24 18:03:53.898 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_gbqoyyg93sneyc1gbdqhigmfdw"
+2025-07-24 18:03:53.898 +08:00 [DBG] Endpoint Ready: "loopback://localhost/CacheMemoryEvent"
+2025-07-24 18:03:53.898 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-07-24 18:03:53.900 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-07-24 18:03:54.005 +08:00 [INF] Now listening on: http://localhost:5050
+2025-07-24 18:03:54.014 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-07-24 18:03:54.151 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-24 18:03:54.153 +08:00 [INF] Hosting environment: Development
+2025-07-24 18:03:54.153 +08:00 [INF] Scheduler JobScheduler_$_-54466879 started.
+2025-07-24 18:03:54.154 +08:00 [INF] Content root path: D:\Program\仓库\Warehource.Modules\Warehource.Source
+2025-07-24 18:03:54.154 +08:00 [DBG] Batch acquisition of 0 triggers
+2025-07-24 18:03:54.726 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/index.html - null null
+2025-07-24 18:03:54.975 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/index.html - 200 null text/html;charset=utf-8 257.8162ms
+2025-07-24 18:03:55.190 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/_vs/browserLink - null null
+2025-07-24 18:03:55.190 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-24 18:03:55.215 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 25.3887ms
+2025-07-24 18:03:55.246 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.8211ms
+2025-07-24 18:03:55.320 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - null null
+2025-07-24 18:03:55.341 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.3564ms
+2025-07-24 18:04:09.316 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/plc/add-allplc-config - multipart/form-data; boundary=----WebKitFormBoundarygv4fowRbIJkCvsBk 11030
+2025-07-24 18:04:09.339 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-07-24 18:04:09.418 +08:00 [INF] Executing endpoint 'HTTP: POST plc/add-allplc-config'
+2025-07-24 18:05:52.833 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:05:52.894 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Wcs.__EFMigrationsHistory]');
+2025-07-24 18:05:52.900 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:05:52.903 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Wcs.__EFMigrationsHistory]');
+2025-07-24 18:05:52.913 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Wcs.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-24 18:05:52.924 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-24 18:05:52.947 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:05:52.951 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Identity.__EFMigrationsHistory]');
+2025-07-24 18:05:52.960 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:05:52.965 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Identity.__EFMigrationsHistory]');
+2025-07-24 18:05:52.974 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Identity.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-24 18:05:52.978 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-24 18:05:53.048 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:05:53.052 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Plc.__EFMigrationsHistory]');
+2025-07-24 18:05:53.055 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-24 18:05:53.058 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Plc.__EFMigrationsHistory]');
+2025-07-24 18:05:53.063 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Plc.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-24 18:05:53.066 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-24 18:05:53.150 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2025-07-24 18:05:53.160 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2025-07-24 18:05:53.162 +08:00 [INF] Quartz Scheduler created
+2025-07-24 18:05:53.163 +08:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2025-07-24 18:05:53.164 +08:00 [INF] RAMJobStore initialized.
+2025-07-24 18:05:53.166 +08:00 [INF] Quartz Scheduler 3.8.1.0 - 'JobScheduler' with instanceId '1842090598' initialized
+2025-07-24 18:05:53.167 +08:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2025-07-24 18:05:53.169 +08:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2025-07-24 18:05:53.179 +08:00 [INF] Adding 0 jobs, 0 triggers.
+2025-07-24 18:05:53.329 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[CreationTime], [w].[Description], [w].[IsDeleted], [w].[IsStart], [w].[JobType], [w].[LastModificationTime], [w].[LastModifierUser], [w].[Name], [w].[TimeOut], [w].[Timer]
+FROM [Wcs.JobConfig] AS [w]
+WHERE [w].[IsDeleted] = CAST(0 AS bit)
+2025-07-24 18:05:53.471 +08:00 [INF] User profile is available. Using 'C:\Users\吴\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-24 18:05:53.520 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-07-24 18:05:53.527 +08:00 [INF] Configured endpoint CacheMemoryEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.CacheMemoryEvent>
+2025-07-24 18:05:53.740 +08:00 [DBG] Starting bus instances: IBus
+2025-07-24 18:05:53.745 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-07-24 18:05:53.801 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-07-24 18:05:53.801 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_1nqyyyg93snebwzebdqhigpc8t"
+2025-07-24 18:05:53.801 +08:00 [DBG] Endpoint Ready: "loopback://localhost/CacheMemoryEvent"
+2025-07-24 18:05:53.804 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-07-24 18:05:53.895 +08:00 [INF] Now listening on: http://localhost:5050
+2025-07-24 18:05:53.900 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-07-24 18:05:54.027 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-24 18:05:54.029 +08:00 [INF] Hosting environment: Development
+2025-07-24 18:05:54.030 +08:00 [INF] Scheduler JobScheduler_$_1842090598 started.
+2025-07-24 18:05:54.030 +08:00 [INF] Content root path: D:\Program\仓库\Warehource.Modules\Warehource.Source
+2025-07-24 18:05:54.031 +08:00 [DBG] Batch acquisition of 0 triggers
+2025-07-24 18:05:54.713 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/index.html - null null
+2025-07-24 18:05:54.935 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/index.html - 200 null text/html;charset=utf-8 232.9525ms
+2025-07-24 18:05:55.109 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-24 18:05:55.109 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/_vs/browserLink - null null
+2025-07-24 18:05:55.116 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.2643ms
+2025-07-24 18:05:55.147 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.7732ms
+2025-07-24 18:05:55.235 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - null null
+2025-07-24 18:05:55.283 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 47.5881ms
+2025-07-24 18:06:04.961 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5050/plc/add-allplc-config - multipart/form-data; boundary=----WebKitFormBoundaryBBZ7y0f3wj9VySms 11030
+2025-07-24 18:06:04.977 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-07-24 18:06:05.060 +08:00 [INF] Executing endpoint 'HTTP: POST plc/add-allplc-config'
+2025-07-24 18:06:06.810 +08:00 [INF] Executed DbCommand (116ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int16), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = Int16), @p11='?' (DbType = Int32), @p12='?' (DbType = Guid), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?' (DbType = DateTime2), @p16='?' (DbType = Int32), @p17='?' (DbType = Int32), @p18='?' (Size = 50), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = Boolean), @p22='?' (DbType = DateTime2), @p23='?' (Size = 4000), @p24='?' (Size = 20), @p25='?' (DbType = Guid), @p26='?' (DbType = Int32), @p27='?' (DbType = Int32), @p28='?' (DbType = Guid), @p29='?' (DbType = Int32), @p30='?' (DbType = Int32), @p31='?' (DbType = DateTime2), @p32='?' (DbType = Int32), @p33='?' (DbType = Int32), @p34='?' (Size = 50), @p35='?' (Size = 4000), @p36='?' (DbType = Int32), @p37='?' (DbType = Boolean), @p38='?' (DbType = DateTime2), @p39='?' (Size = 4000), @p40='?' (Size = 20), @p41='?' (DbType = Guid), @p42='?' (DbType = Int32), @p43='?' (DbType = Int32), @p44='?' (DbType = Guid), @p45='?' (DbType = Int32), @p46='?' (DbType = Int32), @p47='?' (DbType = DateTime2), @p48='?' (DbType = Int32), @p49='?' (DbType = Int32), @p50='?' (Size = 50), @p51='?' (Size = 4000), @p52='?' (DbType = Int32), @p53='?' (DbType = Boolean), @p54='?' (DbType = DateTime2), @p55='?' (Size = 4000), @p56='?' (Size = 20), @p57='?' (DbType = Guid), @p58='?' (DbType = Int32), @p59='?' (DbType = Int32), @p60='?' (DbType = Guid), @p61='?' (DbType = Int32), @p62='?' (DbType = Int32), @p63='?' (DbType = DateTime2), @p64='?' (DbType = Int32), @p65='?' (DbType = Int32), @p66='?' (Size = 50), @p67='?' (Size = 4000), @p68='?' (DbType = Int32), @p69='?' (DbType = Boolean), @p70='?' (DbType = DateTime2), @p71='?' (Size = 4000), @p72='?' (Size = 20), @p73='?' (DbType = Guid), @p74='?' (DbType = Int32), @p75='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Plc.S7NetConfig] ([Id], [CreationTime], [Ip], [IsDeleted], [LastModificationTime], [LastModifierUser], [Port], [Rack], [ReadTimeOut], [S7Type], [Solt], [WriteTimeOut])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+INSERT INTO [Plc.S7EntityItem] ([Id], [ArrtypeLength], [BitOffset], [CreationTime], [DBAddress], [DataOffset], [Description], [DeviceName], [Index], [IsDeleted], [LastModificationTime], [LastModifierUser], [Name], [NetGuid], [S7BlockType], [S7DataType])
+VALUES (@p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27),
+(@p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43),
+(@p44, @p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55, @p56, @p57, @p58, @p59),
+(@p60, @p61, @p62, @p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71, @p72, @p73, @p74, @p75);
+2025-07-24 18:06:06.852 +08:00 [INF] Executed endpoint 'HTTP: POST plc/add-allplc-config'
+2025-07-24 18:06:06.859 +08:00 [INF] HTTP POST /plc/add-allplc-config responded 200 in 1875.6396 ms
+2025-07-24 18:06:06.872 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5050/plc/add-allplc-config - 200 0 null 1910.5307ms
+2025-07-24 18:06:21.524 +08:00 [DBG] Batch acquisition of 0 triggers
+2025-07-24 18:06:46.475 +08:00 [DBG] Batch acquisition of 0 triggers
+2025-07-24 18:07:15.105 +08:00 [DBG] Batch acquisition of 0 triggers
+2025-07-24 18:07:39.643 +08:00 [DBG] Batch acquisition of 0 triggers

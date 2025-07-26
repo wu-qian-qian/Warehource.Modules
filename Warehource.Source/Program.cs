@@ -46,7 +46,8 @@ builder.Services.AddModules(builder.Configuration,
     ],
     //模块化的MediatR管道注入
     [
-        WcsInfrastructureConfigurator.AddBehaviorModule, PlcInfrastructureConfigurator.AddBehaviorModule
+        WcsInfrastructureConfigurator.AddBehaviorModule
+        , PlcInfrastructureConfigurator.AddBehaviorModule
     ],
     //模块的的公共事件注入
     [

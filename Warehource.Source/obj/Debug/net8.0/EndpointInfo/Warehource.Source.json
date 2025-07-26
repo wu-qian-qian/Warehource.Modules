@@ -15,7 +15,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Identity.Presentation.Login.LoginRequst"
+                "$ref": "#/components/schemas/Identity.Contrancts.Request.LoginRequst"
               }
             }
           },
@@ -133,7 +133,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Identity.Presentation.Add.AddRoleRequest"
+                "$ref": "#/components/schemas/Identity.Contrancts.Request.AddRoleRequest"
               }
             }
           },
@@ -162,7 +162,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Identity.Presentation.Add.AddUserRequst"
+                "$ref": "#/components/schemas/Identity.Contrancts.Request.AddUserRequst"
               }
             }
           },
@@ -220,7 +220,7 @@
         }
       }
     },
-    "/job/add-job": {
+    "/job/job-status": {
       "post": {
         "tags": [
           "Job"
@@ -229,7 +229,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Wcs.Presentation.Job.AddJobRequest"
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.Job.StatusRequest"
               }
             }
           },
@@ -241,36 +241,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/job/delete-job": {
-      "post": {
-        "tags": [
-          "Job"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Wcs.Presentation.Job.DeleteRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
+                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Job.JobDto"
                 }
               }
             }
@@ -300,7 +271,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
+                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Job.JobDto"
                 }
               }
             }
@@ -321,7 +292,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
+                    "$ref": "#/components/schemas/Wcs.Contracts.Respon.Job.JobDto"
                   }
                 }
               }
@@ -330,7 +301,7 @@
         }
       }
     },
-    "/job/job-status": {
+    "/job/delete-job": {
       "post": {
         "tags": [
           "Job"
@@ -339,7 +310,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Wcs.Presentation.Job.StatusRequest"
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.Job.DeleteRequest"
               }
             }
           },
@@ -351,7 +322,36 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Job.JobDto"
+                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Job.JobDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/job/add-job": {
+      "post": {
+        "tags": [
+          "Job"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.Job.AddJobRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Job.JobDto"
                 }
               }
             }
@@ -389,25 +389,13 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/plc/get-allplc-centity-item": {
-      "get": {
-        "tags": [
-          "Plc"
-        ],
-        "responses": {
-          "200": {
             "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Plc.Contracts.S7Plc.S7EntityItemDto"
+                    "$ref": "#/components/schemas/Plc.Contracts.Respon.S7NetDto"
                   }
                 }
               }
@@ -429,7 +417,29 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Plc.Contracts.S7Plc.S7NetDto"
+                    "$ref": "#/components/schemas/Plc.Contracts.Respon.S7NetDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/plc/get-allplc-centity-item": {
+      "get": {
+        "tags": [
+          "Plc"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Plc.Contracts.Respon.S7EntityItemDto"
                   }
                 }
               }
@@ -453,6 +463,68 @@
   },
   "components": {
     "schemas": {
+      "Identity.Contrancts.Request.AddRoleRequest": {
+        "type": "object",
+        "properties": {
+          "roleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Identity.Contrancts.Request.AddUserRequst": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Identity.Contrancts.Request.LoginRequst": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Identity.Contrancts.RoleDto": {
         "type": "object",
         "properties": {
@@ -509,69 +581,7 @@
         },
         "additionalProperties": false
       },
-      "Identity.Presentation.Add.AddRoleRequest": {
-        "type": "object",
-        "properties": {
-          "roleName": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Identity.Presentation.Add.AddUserRequst": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "phone": {
-            "type": "string",
-            "nullable": true
-          },
-          "username": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
-          "roleName": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Identity.Presentation.Login.LoginRequst": {
-        "type": "object",
-        "properties": {
-          "username": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Plc.Contracts.S7Plc.S7EntityItemDto": {
+      "Plc.Contracts.Respon.S7EntityItemDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -613,7 +623,7 @@
         },
         "additionalProperties": false
       },
-      "Plc.Contracts.S7Plc.S7NetDto": {
+      "Plc.Contracts.Respon.S7NetDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -687,40 +697,7 @@
         "type": "integer",
         "format": "int32"
       },
-      "Wcs.Contracts.Job.JobDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "jobType": {
-            "type": "string",
-            "nullable": true
-          },
-          "timeOut": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "timer": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "isStart": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Wcs.Presentation.Job.AddJobRequest": {
+      "Wcs.Contracts.Request.Job.AddJobRequest": {
         "type": "object",
         "properties": {
           "name": {
@@ -749,7 +726,7 @@
         },
         "additionalProperties": false
       },
-      "Wcs.Presentation.Job.DeleteRequest": {
+      "Wcs.Contracts.Request.Job.DeleteRequest": {
         "type": "object",
         "properties": {
           "name": {
@@ -759,7 +736,7 @@
         },
         "additionalProperties": false
       },
-      "Wcs.Presentation.Job.StatusRequest": {
+      "Wcs.Contracts.Request.Job.StatusRequest": {
         "type": "object",
         "properties": {
           "name": {
@@ -767,6 +744,39 @@
             "nullable": true
           },
           "status": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wcs.Contracts.Respon.Job.JobDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "jobType": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeOut": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "timer": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isStart": {
             "type": "boolean"
           }
         },

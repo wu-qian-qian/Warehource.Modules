@@ -56,14 +56,14 @@ public static class SerilogExtensions
             .WriteTo.Logger(l => l
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&
                                              e.Properties["Category"].ToString() == "Error")
-                .WriteTo.File("Logs/Https/http-.log", rollingInterval: RollingInterval.Day,
+                .WriteTo.File("Logs/Error/error-.log", rollingInterval: RollingInterval.Day,
                     outputTemplate:
                     "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
             //网络链接日志
             .WriteTo.Logger(l => l
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&
                                              e.Properties["Category"].ToString() == "Net")
-                .WriteTo.File("Logs/Nets/Net-.log", rollingInterval: RollingInterval.Day,
+                .WriteTo.File("Logs/Nets/net-.log", rollingInterval: RollingInterval.Day,
                     outputTemplate:
                     "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
             .CreateLogger();

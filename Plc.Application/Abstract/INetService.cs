@@ -1,11 +1,12 @@
 using Common.Application.Net;
 using MediatR;
+using Plc.Contracts.Input;
 
 namespace Plc.Application.Abstract;
 
 public interface INetService
 {
-    Task<byte[]> ReadAsync();
+    public Task<byte[]> ReadAsync(ReadBufferInput input);
 
     Task<bool> WriteAsync();
 

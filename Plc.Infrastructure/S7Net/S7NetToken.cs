@@ -48,7 +48,7 @@ public class S7NetToken : Common.Application.Net.S7.S7Net
         Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--关闭链接");
     }
 
-    public async Task<byte[]> ReadAsync(DataItem bulkItem)
+    public  override Task<byte[]> ReadAsync(DataItem bulkItem)
     {
         byte[] bufferBlock = default;
         if (_plc.IsConnected)
@@ -65,6 +65,6 @@ public class S7NetToken : Common.Application.Net.S7.S7Net
         else
             Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC未连接");
 
-        return bufferBlock;
+        return Task.FromResult(bufferBlock);
     }
 }

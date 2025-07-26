@@ -63,6 +63,8 @@ public class S7EntityItem : IEntity
     /// </summary>
     public string DeviceName { get; set; }
 
+    public bool IsUse { get; set; }
+
     /// <summary>
     ///     网络配置
     /// </summary>

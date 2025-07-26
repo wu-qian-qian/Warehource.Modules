@@ -85,10 +85,6 @@
               "target": "Package",
               "version": "[3.8.1, )"
             },
-            "S7netplus": {
-              "target": "Package",
-              "version": "[0.20.0, )"
-            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -431,6 +427,9 @@
               "D:\\Program\\仓库\\Warehource.Modules\\Common.Application\\Common.Application.csproj": {
                 "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common.Application\\Common.Application.csproj"
               },
+              "D:\\Program\\仓库\\Warehource.Modules\\Common\\Common.csproj": {
+                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common\\Common.csproj"
+              },
               "D:\\Program\\仓库\\Warehource.Modules\\Plc.Contracts\\Plc.Contracts.csproj": {
                 "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Plc.Contracts\\Plc.Contracts.csproj"
               },
@@ -457,6 +456,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "S7netplus": {
+              "target": "Package",
+              "version": "[0.20.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

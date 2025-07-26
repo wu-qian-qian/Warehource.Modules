@@ -2,6 +2,9 @@
 using Common.Application.Event;
 using Common.Domain.Event;
 using MassTransit;
+using MediatR;
+using Plc.Application.S7Plc.ReadPlc;
+using Plc.CustomEvents;
 
 namespace Plc.Application.Custom;
 
@@ -13,12 +16,26 @@ namespace Plc.Application.Custom;
 /// <typeparam name="TIntegrationEvent"></typeparam>
 /// <param name="bus"></param>
 /// <param name="cache"></param>
-internal class ReadPlcEventConsumer<TIntegrationEvent>(IMassTransitEventBus bus, ICacheService cache)
+internal class ReadPlcEventConsumer<TIntegrationEvent>(IMassTransitEventBus bus,ISender sender)
     : IConsumer<TIntegrationEvent>
     where TIntegrationEvent : IMassTransitDomainEvent
 {
     public async Task Consume(ConsumeContext<TIntegrationEvent> context)
     {
-        Console.WriteLine("读取Plc数据");
+        if (context.Message.EventHash == nameof(S7CacheMemoryEvent).GetHashCode())
+        {
+            if (context.Message is S7CacheMemoryEvent s7CacheMemoryEvent)
+            {
+               await sender.Send
+                (
+                    new PlcEventCommand
+                    {
+                        UseMemory = s7CacheMemoryEvent.UserMemory,
+                        Ip = s7CacheMemoryEvent.Ip,
+                        DeviceName = s7CacheMemoryEvent.DeviceName
+                    }
+                );
+            }
+        }
     }
 }

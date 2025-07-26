@@ -11,7 +11,7 @@ public class GetS7EntityItemQueryHandler(IS7NetManager netManager, IMapper mappe
     public async Task<IEnumerable<S7EntityItemDto>> Handle(GetS7EntityItemQuery request,
         CancellationToken cancellationToken)
     {
-        var entityItemList = await netManager.GetAllNetEntityItem();
+        var entityItemList = await netManager.GetAllNetEntityItemAsync();
         return mapper.Map<IEnumerable<S7EntityItemDto>>(entityItemList);
     }
 }

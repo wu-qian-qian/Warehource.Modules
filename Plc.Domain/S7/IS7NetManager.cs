@@ -2,9 +2,11 @@
 
 public interface IS7NetManager
 {
-    public Task<List<S7NetConfig>> GetAllNet();
+    public Task<List<S7NetConfig>> GetAllNetAsync();
 
-    public Task<List<S7EntityItem>> GetAllNetEntityItem();
+    public Task<List<S7EntityItem>> GetAllNetEntityItemAsync();
 
-    public Task InsertS7Net(IEnumerable<S7NetConfig> s7NetConfigs);
+    public Task InsertS7NetAsync(IEnumerable<S7NetConfig> s7NetConfigs);
+    
+    public Task<S7NetConfig> GetNetWiteIpAsync(string ip);
 }

@@ -10,7 +10,7 @@ public static class EnumHelper
     /// </summary>
     /// <param name="thisEnum"></param>
     /// <returns></returns>
-    public static string GetEnumDescription(this Enum thisEnum)
+    public static string? GetEnumDescription(this Enum thisEnum)
     {
         var descriptionAttribute = thisEnum.GetEnumAttribute<DescriptionAttribute>();
         return descriptionAttribute?.Description;

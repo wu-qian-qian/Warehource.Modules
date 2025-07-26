@@ -21,7 +21,7 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.Job.AddJobConfig\u002B\u003C\u003Ec",
+    "ContainingType": "Wcs.Presentation.Job.Add.AddJobConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "job/add-job",
     "HttpMethod": "POST",
@@ -30,13 +30,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Wcs.Presentation.Job.AddJobRequest",
+        "Type": "Wcs.Contracts.Request.Job.AddJobRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Job.JobDto",
+        "Type": "Wcs.Contracts.Respon.Job.JobDto",
         "MediaTypes": [
           "application/json"
         ],
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.Job.DeleteJobConfig\u002B\u003C\u003Ec",
+    "ContainingType": "Wcs.Presentation.Job.Delete.DeleteJobConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "job/delete-job",
     "HttpMethod": "POST",
@@ -57,13 +57,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Wcs.Presentation.Job.DeleteRequest",
+        "Type": "Wcs.Contracts.Request.Job.DeleteRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Job.JobDto",
+        "Type": "Wcs.Contracts.Respon.Job.JobDto",
         "MediaTypes": [
           "application/json"
         ],
@@ -75,7 +75,7 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.Job.GetJobConfig\u002B\u003C\u003Ec",
+    "ContainingType": "Wcs.Presentation.Job.Get.GetJobConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "job/get-job/{id}",
     "HttpMethod": "GET",
@@ -90,7 +90,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Job.JobDto",
+        "Type": "Wcs.Contracts.Respon.Job.JobDto",
         "MediaTypes": [
           "application/json"
         ],
@@ -102,7 +102,7 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.Job.GetJobsConfig\u002B\u003C\u003Ec",
+    "ContainingType": "Wcs.Presentation.Job.Get.GetJobsConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "job/get-jobs",
     "HttpMethod": "GET",
@@ -111,7 +111,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -123,7 +123,7 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.Job.JobStatusConfig\u002B\u003C\u003Ec",
+    "ContainingType": "Wcs.Presentation.Job.Status.JobStatusConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "job/job-status",
     "HttpMethod": "POST",
@@ -132,13 +132,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Wcs.Presentation.Job.StatusRequest",
+        "Type": "Wcs.Contracts.Request.Job.StatusRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Job.JobDto",
+        "Type": "Wcs.Contracts.Respon.Job.JobDto",
         "MediaTypes": [
           "application/json"
         ],
@@ -165,8 +165,10 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.Respon.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
         "StatusCode": 200
       }
     ],
@@ -194,7 +196,7 @@
     ]
   },
   {
-    "ContainingType": "Plc.Presentation.S7Plc.GetS7NetConfig\u002B\u003C\u003Ec",
+    "ContainingType": "Plc.Presentation.S7Plc.Net.GetS7NetConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "plc/get-allplc",
     "HttpMethod": "GET",
@@ -203,7 +205,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.S7Plc.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.Respon.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -215,7 +217,7 @@
     ]
   },
   {
-    "ContainingType": "Plc.Presentation.S7Plc.GetS7EntityItem\u002B\u003C\u003Ec",
+    "ContainingType": "Plc.Presentation.S7Plc.Entity.GetS7EntityItem\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "plc/get-allplc-centity-item",
     "HttpMethod": "GET",
@@ -224,7 +226,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.S7Plc.S7EntityItemDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.Respon.S7EntityItemDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -287,7 +289,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Identity.Presentation.Add.AddRoleRequest",
+        "Type": "Identity.Contrancts.Request.AddRoleRequest",
         "IsRequired": true
       }
     ],
@@ -314,7 +316,7 @@
     "Parameters": [
       {
         "Name": "requst",
-        "Type": "Identity.Presentation.Add.AddUserRequst",
+        "Type": "Identity.Contrancts.Request.AddUserRequst",
         "IsRequired": true
       }
     ],
@@ -412,7 +414,7 @@
     "Parameters": [
       {
         "Name": "requst",
-        "Type": "Identity.Presentation.Login.LoginRequst",
+        "Type": "Identity.Contrancts.Request.LoginRequst",
         "IsRequired": true
       }
     ],

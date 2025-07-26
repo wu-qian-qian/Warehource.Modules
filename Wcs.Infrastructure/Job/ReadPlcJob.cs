@@ -16,7 +16,7 @@ internal class ReadPlcJob(IMassTransitEventBus bus, ISender sender) : BaseJob
         try
         {
             //事件触发，最终直接通过读取唯一id
-            await bus.PublishAsync(new CacheMemoryEvent(DateTime.Now));
+            await bus.PublishAsync(new S7CacheMemoryEvent(DateTime.Now));
         }
         catch (OperationCanceledException ex)
         {

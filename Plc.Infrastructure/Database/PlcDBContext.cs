@@ -14,10 +14,10 @@ public sealed class PlcDBContext : BaseDbContext, IUnitOfWork
     {
     }
 
-    public DbSet<S7EntityItem> S7Entities { get; }
+    public DbSet<S7EntityItem> S7Entities { get;protected set; }
 
 
-    public DbSet<S7NetConfig> Nets { get; }
+    public DbSet<S7NetConfig> Nets { get; protected set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
