@@ -6,9 +6,9 @@ namespace Plc.Application.Abstract;
 
 public interface INetService
 {
-    public Task<byte[]> ReadAsync(ReadBufferInput input);
+    Task<byte[]> ReadAsync(ReadBufferInput input);
 
-    Task<bool> WriteAsync();
+    Task<bool> WriteAsync(WriteBufferInput input);
 
     Task ReConnect();
 

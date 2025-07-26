@@ -39,7 +39,7 @@ public sealed class WCSDBContext : BaseDbContext, IUnitOfWork
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfiguration(new RegionConfiguration());
         modelBuilder.ApplyConfiguration(new JobConfigConfiguration());
-        modelBuilder.ApplyConfiguration(new ExecuteNodePathConfiguration());
+        modelBuilder.ApplyConfiguration(new DeviceConfiguration());
         modelBuilder.ApplyConfiguration(new TaskExecuteStepConfiguration());
         modelBuilder.ApplyConfiguration(new WcsTaskConfiguration());
         modelBuilder.EnableSoftDeletionGlobalFilter();

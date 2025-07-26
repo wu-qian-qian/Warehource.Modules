@@ -1,7 +1,7 @@
 ﻿using Common.Application.MediatR.Message;
 using Identity.Contrancts;
 
-namespace Identity.Application.AddHandler;
+namespace Identity.Application.AddHandler.Role;
 
 public sealed record AddRoleEvent : ICommand<RoleDto>
 {

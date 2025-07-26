@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Plc.Application.S7Plc.ReadPlc;
+namespace Plc.Application.Net.ReadPlc;
 
 ///
 internal class ReadPlcEventCommandValidator : AbstractValidator<PlcEventCommand>
@@ -8,9 +8,9 @@ internal class ReadPlcEventCommandValidator : AbstractValidator<PlcEventCommand>
     public ReadPlcEventCommandValidator()
     {
         RuleFor(model => model)
-            .Must(model => 
-                model.Ip!=null ||
-                model.DeviceName!=null)
+            .Must(model =>
+                model.Ip != null ||
+                model.DeviceName != null)
             .WithMessage("ip和设备编号必须存在一个");
     }
 }

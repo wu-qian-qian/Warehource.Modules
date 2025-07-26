@@ -3,7 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Plc.Application.S7Plc.Get.Entity;
+using Plc.Application.PlcEvent.Get.Entity;
 
 namespace Plc.Presentation.S7Plc.Entity;
 

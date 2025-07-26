@@ -13,7 +13,7 @@ public static class ApplicationConfigurator
 {
     public static void AddMediatR(MediatRServiceConfiguration configuration)
     {
-      //  configuration.AddOpenBehavior(typeof(ReadS7PlcPipelineBehavior<>));
+        //  configuration.AddOpenBehavior(typeof(ReadS7PlcPipelineBehavior<>));
     }
 
     public static void AddCustom(IRegistrationConfigurator registrationConfigurator)

@@ -3,10 +3,10 @@ using Common.Application.Net;
 using Common.Shared;
 using MediatR;
 using Plc.Application.Abstract;
-using Plc.Application.S7Plc.Get;
-using Plc.Application.S7Plc.Get.Net;
+using Plc.Application.PlcEvent.Get.Net;
 using Plc.Contracts.Input;
 using Plc.Shared;
+using S7.Net;
 using S7.Net.Types;
 using Serilog;
 
@@ -18,7 +18,7 @@ namespace Plc.Infrastructure.S7Net;
 /// </summary>
 public class S7NetService : INetService
 {
-    public readonly Dictionary<string, Common.Application.Net.S7.S7Net> NetMap = new();
+    public readonly Dictionary<string, Application.Net.S7Net> NetMap = new();
 
     public void Initialization(ISender sender)
     {
@@ -32,7 +32,7 @@ public class S7NetService : INetService
 
     public void AddConnect(INet connect)
     {
-        if (connect is Common.Application.Net.S7.S7Net s7Net)
+        if (connect is Application.Net.S7Net s7Net)
         {
             if (!NetMap.ContainsKey(s7Net._plc.IP))
             {
@@ -48,21 +48,7 @@ public class S7NetService : INetService
 
     public Task<byte[]> ReadAsync(ReadBufferInput input)
     {
-        var dbType = input.S7BlockType switch
-        {
-            S7BlockTypeEnum.DataBlock=>S7.Net.DataType.DataBlock,
-            S7BlockTypeEnum.Memory=>S7.Net.DataType.Memory,
-            S7BlockTypeEnum.Input=>S7.Net.DataType.Input,
-            _ =>throw new AggregateException("无法解析")
-        };
-        DataItem dataItem = new DataItem()
-        {
-            DB = input.DBAddress,
-            StartByteAdr = input.DBStart,
-            Count = input.DBEnd-input.DBStart,
-            DataType = dbType
-        };
-      return  NetMap[input.Ip].ReadAsync(dataItem);
+        return NetMap[input.Ip].ReadAsync(input);
     }
 
     public async Task ReConnect()
@@ -70,8 +56,9 @@ public class S7NetService : INetService
         //通过后台job执行，并进行心跳处理
     }
 
-    public Task<bool> WriteAsync()
+    public Task<bool> WriteAsync(WriteBufferInput input)
     {
-        throw new NotImplementedException();
+
+        return Task.FromResult(true);
     }
 }

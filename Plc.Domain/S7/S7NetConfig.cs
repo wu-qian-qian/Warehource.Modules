@@ -32,7 +32,7 @@ public class S7NetConfig : INetEnitty
     public int WriteTimeOut { get; set; }
 
     /// <summary>
-    /// 是否启用
+    ///     是否启用
     /// </summary>
     public bool IsUse { get; set; }
 

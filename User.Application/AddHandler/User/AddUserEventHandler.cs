@@ -5,7 +5,7 @@ using Identity.Application.Abstract;
 using Identity.Contrancts;
 using Identity.Domain;
 
-namespace Identity.Application.AddHandler;
+namespace Identity.Application.AddHandler.User;
 
 internal class AddUserEventHandler(IUnitOfWork unitOfWork, UserManager userManager, IMapper mapper)
     : ICommandHandler<AddUserEvent, UserDto>
@@ -17,7 +17,7 @@ internal class AddUserEventHandler(IUnitOfWork unitOfWork, UserManager userManag
         var LockoutEnd = DateTimeOffset.Now.AddYears(-100);
         if (user == null && role != null)
         {
-            user = new User
+            user = new Domain.User
             {
                 Description = request.Description,
                 Email = request.Email,

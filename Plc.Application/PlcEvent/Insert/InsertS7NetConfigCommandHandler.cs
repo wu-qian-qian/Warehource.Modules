@@ -3,7 +3,7 @@ using Plc.Application.Abstract;
 using Plc.Contracts.Respon;
 using Plc.Domain.S7;
 
-namespace Plc.Application.S7Plc.Insert;
+namespace Plc.Application.PlcEvent.Insert;
 
 /// <summary>
 ///     excel导入只能一块插入
@@ -11,14 +11,15 @@ namespace Plc.Application.S7Plc.Insert;
 public class InsertS7NetConfigCommandHandler(IS7NetManager netManager, IUnitOfWork unitOfWork)
     : ICommandHandler<InsertS7NetConfigCommand, IEnumerable<S7NetDto>>
 {
-    public async Task<IEnumerable<S7NetDto>> Handle(InsertS7NetConfigCommand request, CancellationToken cancellationToken)
+    public async Task<IEnumerable<S7NetDto>> Handle(InsertS7NetConfigCommand request,
+        CancellationToken cancellationToken)
     {
-        List<S7NetConfig> s7NetConfigs = new List<S7NetConfig>();
+        var s7NetConfigs = new List<S7NetConfig>();
         foreach (var netDto in request.S7NetRequests)
         {
-            S7NetConfig config = new S7NetConfig
+            var config = new S7NetConfig
             {
-                Ip=netDto.Ip,
+                Ip = netDto.Ip,
                 Port = netDto.Port,
                 S7Type = netDto.S7Type,
                 Solt = netDto.Solt,
@@ -30,22 +31,22 @@ public class InsertS7NetConfigCommandHandler(IS7NetManager netManager, IUnitOfWo
                 .Where(p => p.Ip == netDto.Ip);
             var s7EntityItemsList = s7entityItems
                 .Select(p => new S7EntityItem
-            {
-                Name = p.Name,
-                DBAddress = p.DBAddress,
-                S7DataType = p.S7DataType,
-                DataOffset = p.DataOffset,
-                BitOffset = p.BitOffset,
-                S7BlockType = p.S7BlockType,
-                Description = p.Description,
-                Index = p.Index,
-                ArrtypeLength = p.ArrtypeLength,
-                DeviceName = p.DeviceName,
-
-            });
+                {
+                    Name = p.Name,
+                    DBAddress = p.DBAddress,
+                    S7DataType = p.S7DataType,
+                    DataOffset = p.DataOffset,
+                    BitOffset = p.BitOffset,
+                    S7BlockType = p.S7BlockType,
+                    Description = p.Description,
+                    Index = p.Index,
+                    ArrtypeLength = p.ArrtypeLength,
+                    DeviceName = p.DeviceName
+                });
             config.S7EntityItems = s7EntityItemsList.ToList();
             s7NetConfigs.Add(config);
         }
+
         await netManager.InsertS7NetAsync(s7NetConfigs);
         await unitOfWork.SaveChangesAsync();
         return s7NetConfigs.Select(p =>

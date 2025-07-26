@@ -4,7 +4,7 @@ using Wcs.Infrastructure.Database;
 
 namespace Wcs.Infrastructure.DB.ExecuteNodePath;
 
-public class ExecuteNodePathConfiguration : IEntityTypeConfiguration<Domain.ExecuteNode.ExecuteNodePath>
+public class ExecuteNodePatheConfiguration : IEntityTypeConfiguration<Domain.ExecuteNode.ExecuteNodePath>
 {
     public void Configure(EntityTypeBuilder<Domain.ExecuteNode.ExecuteNodePath> builder)
     {

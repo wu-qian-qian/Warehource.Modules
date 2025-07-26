@@ -40,7 +40,7 @@ internal sealed class CacheService(IDistributedCache cache) : ICacheService
     {
         return cache.SetAsync(key, value, CacheOptions.Create(expiration), cancellationToken);
     }
-    
+
     public Task RemoveAsync(string key, CancellationToken cancellationToken = default)
     {
         return cache.RemoveAsync(key, cancellationToken);

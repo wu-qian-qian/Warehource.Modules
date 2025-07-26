@@ -1,7 +1,7 @@
 ﻿using Common.Application.MediatR.Message;
 using Plc.Contracts.Respon;
 
-namespace Plc.Application.S7Plc.Get.Entity;
+namespace Plc.Application.PlcEvent.Get.Entity;
 
 public class GetS7EntityItemQuery : IQuery<IEnumerable<S7EntityItemDto>>
 {

@@ -3,7 +3,7 @@ using Common.Application.MediatR.Message;
 using Identity.Contrancts;
 using Identity.Domain;
 
-namespace Identity.Application.GetQuery;
+namespace Identity.Application.GetQuery.Role;
 
 internal class GetRoleQueryHandler(UserManager userManager, IMapper mapper)
     : IQueryHandler<GetRoleQuery, IEnumerable<RoleDto>>

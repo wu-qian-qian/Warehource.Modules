@@ -3,7 +3,7 @@ using Common.Application.MediatR.Message;
 using Plc.Contracts.Respon;
 using Plc.Domain.S7;
 
-namespace Plc.Application.S7Plc.Get.Entity;
+namespace Plc.Application.PlcEvent.Get.Entity;
 
 public class GetS7EntityItemQueryHandler(IS7NetManager netManager, IMapper mapper)
     : IQueryHandler<GetS7EntityItemQuery, IEnumerable<S7EntityItemDto>>

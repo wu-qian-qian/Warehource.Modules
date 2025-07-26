@@ -2,7 +2,7 @@
 using Plc.Contracts.Respon;
 using Plc.Shared;
 
-namespace Plc.Application.S7Plc.Get.Net;
+namespace Plc.Application.PlcEvent.Get.Net;
 
 public class GetS7NetQuery : IQuery<IEnumerable<S7NetDto>>
 {

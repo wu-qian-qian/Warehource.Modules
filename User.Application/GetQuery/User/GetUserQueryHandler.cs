@@ -3,7 +3,7 @@ using Common.Application.MediatR.Message;
 using Identity.Contrancts;
 using Identity.Domain;
 
-namespace Identity.Application.GetQuery;
+namespace Identity.Application.GetQuery.User;
 
 internal class GetUserQueryHandler(UserManager userManager, IMapper mapper)
     : IQueryHandler<GetUserQuery, IEnumerable<UserDto>>

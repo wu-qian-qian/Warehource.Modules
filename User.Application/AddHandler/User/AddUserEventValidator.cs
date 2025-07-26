@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Identity.Application.AddHandler;
+namespace Identity.Application.AddHandler.User;
 
 internal class AddUserEventValidator : AbstractValidator<AddUserEvent>
 {

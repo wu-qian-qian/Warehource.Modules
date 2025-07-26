@@ -28,7 +28,16 @@ public class S7NetManager(PlcDBContext context) : IS7NetManager
     public async Task<S7NetConfig> GetNetWiteIpAsync(string ip)
     {
         return await context.Query<S7NetConfig>()
-            .Include(p=>p.S7EntityItems)
+            .Include(p => p.S7EntityItems)
             .FirstOrDefaultAsync(p => p.Ip == ip);
+    }
+
+    public Task<S7NetConfig> GetNetWiteIpAsync(string ip, string deviceName)
+    {
+        var netconfig= context.Query<S7NetConfig>()
+           .Where(p => p.Ip == ip)
+           .Include(p => p.S7EntityItems.Select(p=>p.DeviceName==deviceName)).FirstOrDefault();
+        return Task.FromResult(netconfig);
+
     }
 }

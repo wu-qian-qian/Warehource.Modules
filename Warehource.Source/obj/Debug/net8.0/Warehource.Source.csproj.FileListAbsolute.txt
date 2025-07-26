@@ -408,4 +408,3 @@ D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\Identity
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\Identity.Domain.pdb
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\Identity.Presentation.pdb
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\示例数据.xlsx
-D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

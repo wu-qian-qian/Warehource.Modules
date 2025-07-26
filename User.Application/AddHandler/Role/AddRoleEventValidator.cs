@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Identity.Application.AddHandler;
+namespace Identity.Application.AddHandler.Role;
 
 internal class AddRoleEventValidator : AbstractValidator<AddRoleEvent>
 {

@@ -1,0 +1,139 @@
+﻿@page "/JobConfig"
+@using AntDesign.TableModels
+@using UI.Model.Job
+@using UI.Service.JobService
+@inject IJobService _JobService
+
+
+<div>
+    <Row Style="display: flex; justify-content: space-between; margin:5px">
+
+        <AntDesign.Col >
+            <Button Type="ButtonType.Primary" Style="margin-top:20px" @onclick="_ => LoadTableData()">重新加载</Button>
+        </AntDesign.Col>
+        <AntDesign.Col >
+            <Text>名称</Text>
+            <Input Placeholder="请输入" TValue="string"/>
+        </AntDesign.Col>
+
+        <AntDesign.Col Style="float:right;margin:5px">
+            <Row>
+                <Button Type="ButtonType.Primary">查询</Button>
+            </Row>
+            <Row Style="margin-top:5px">
+                <Button Type="ButtonType.Primary">重置</Button>
+            </Row>
+        </AntDesign.Col>
+    </Row>
+    <Row Style="display: flex; flex-direction: column; height: calc(100vh - 100px);">
+        <Table DataSource="data" PageSize="10" ScrollX="2000" StickyOffsetHeader="64" OnRowClick="_rowClickCallback" Class="my-table">
+            <PropertyColumn Property="c => c.Name" Width="140" Fixed="ColumnFixPlacement.Left" Title="名称"/>
+            <PropertyColumn Property="c => c.JobType" Width="120" Title="任务类型"/>
+            <PropertyColumn Property="c => c.Description" Width="120" Title="描述"/>
+            <PropertyColumn Property="c => c.Timer" Width="200" Title="执行间隔"/>
+            <PropertyColumn Property="c => c.TimeOut" Width="70" Title="超时时间"/>
+            <PropertyColumn Property="c => c.IsStart" Width="70" Title="是否启动"/>
+            <PropertyColumn Property="c => c.CreationTime" Width="168" Title="创建时间"/>
+        </Table>
+    </Row>
+</div>
+
+<div>
+    <Drawer Closable="true" Width="420" Visible="JobDetailVisible" Title='"任务面板"' OnClose="_ => JobDetailPanelClose()">
+        <Template style="height:90%">
+            <Row Gutter="18">
+                <AntDesign.Col Span="12">
+                    <Text>名称：</Text>
+                    <a>@SelectJobModel?.Name</a>
+                </AntDesign.Col>
+            </Row>
+            <br/>
+            <Row Gutter="18">
+                <AntDesign.Col Span="12">
+                    <Text>取货巷道：</Text>
+                    <a>@SelectJobModel?.Description</a>
+                </AntDesign.Col>
+
+            </Row>
+            <br/>
+            <Row Gutter="15">
+
+            </Row>
+            <br/>
+            <Row>
+                <AntDesign.Col Span="18">
+
+                </AntDesign.Col>
+                <AntDesign.Col Span="6">
+                    <Button Type="ButtonType.Default">Cancel</Button>
+                    <Button Type="ButtonType.Primary">提交</Button>
+                </AntDesign.Col>
+            </Row>
+        </Template>
+    </Drawer>
+</div>
+
+
+<style>
+    /* 在 wwwroot/css/site.css 或组件样式部分添加 */
+    .my-table .ant-table-tbody > tr:nth-child(odd) > td {
+        background-color: #f8f8f8; /* 浅色行 */
+    }
+
+    .my-table .ant-table-tbody > tr:nth-child(even) > td {
+        background-color: #ffffff; /* 白色行（或更深颜色） */
+    }
+
+    /* 鼠标悬停效果 */
+    .my-table .ant-table-tbody > tr:hover > td {
+        background-color: #e6f7ff !important; /* 悬停高亮色 */
+    }
+
+</style>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        _rowClickCallback = EventCallback.Factory.Create<RowData<JobModel>>(this, SelectRowCallback);
+        await LoadTableData();
+        base.OnInitializedAsync();
+    }
+
+    #region table
+
+    JobModel SelectJobModel { get; set; }
+    JobModel[] data;
+
+    EventCallback<RowData<JobModel>> _rowClickCallback;
+
+    private async Task LoadTableData()
+    {
+        data = await _JobService.GetJobsAsync();
+    }
+
+    private void SelectRowCallback(RowData<JobModel> rowData)
+    {
+        SelectJobModel = rowData.Data;
+        JobDetailPanelOpen();
+    }
+
+    #endregion
+
+    #region Drawer
+
+    bool JobDetailVisible;
+
+    void JobDetailPanelOpen()
+    {
+        JobDetailVisible = true;
+    }
+
+    void JobDetailPanelClose()
+    {
+        JobDetailVisible = false;
+    }
+
+    #endregion
+
+}

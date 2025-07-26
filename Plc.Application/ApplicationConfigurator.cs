@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
-using Common.Application.MediatR.Behaviors;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using Plc.Application.Custom;
-using Plc.Application.S7Plc.Behaviors;
+using Plc.Application.Net.Behaviors;
 using Plc.CustomEvents;
 
 namespace Plc.Application;

@@ -1,0 +1,168 @@
+﻿@using UI.Model.Main
+@using UI.Service.MainService
+@inherits LayoutComponentBase
+@inject NotificationService _notice;
+@inject IMainService MainService;
+@inject NavigationManager NavigationManager
+<Layout Style="min-height: 100vh; ">
+    <Sider Collapsible>
+        <div class="logo"/>
+        <Menu Theme="MenuTheme.Dark" Mode="MenuMode.Inline">
+            @*   <MenuItem Key="1"  >
+             <NavLink class="nav-link" href="" Match="NavLinkMatch.Prefix">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+            </MenuItem>
+            <SubMenu Key="sub1" Title="Wcs配置">
+                <MenuItem Key="2">后台任务配置</MenuItem>
+                <MenuItem Key="3">Plc数据配置</MenuItem>
+            </SubMenu>
+            <SubMenu Key="sub2" Title="角色管理">
+                <MenuItem Key="4">用户</MenuItem>
+                <MenuItem Key="5">角色</MenuItem>
+            </SubMenu> *@
+            @foreach (var item in menuItems)
+            {
+                @if (item.Children?.Any() == true)
+                {
+                    <SubMenu Key="@item.Key" Title="@item.Title">
+                        @foreach (var child in item.Children)
+                        {
+                            <MenuItem Key="@child.Key" OnClick="_ => NavigateTo(child.Href)">
+                                @child.Title
+                            </MenuItem>
+                        }
+                    </SubMenu>
+                }
+                else
+                {
+                    <MenuItem Key="@item.Key" OnClick="_ => NavigateTo(item.Href)">
+                        @item.Title
+                    </MenuItem>
+                }
+            }
+        </Menu>
+    </Sider>
+    <Layout Class="site-layout">
+        <Header Class="site-layout-background" Style="padding: 3px;">
+            <Image Src="/Image/Warehouse.jpg" Height="45px" Width="45px"></Image>
+            <div Style="float: right;">
+                <Avatar Icon="@IconType.Outline.User"/>
+                <Button type="ButtonType.Link" @onclick="_ => LoginPanelOpen()">@User?.Name</Button>
+            </div>
+        </Header>
+        <Content Style="margin:0 16px;">
+            @Body
+        </Content>
+        <Footer Style="text-align:center">Ant Design ©2018 Created by Ant UED</Footer>
+        <div>
+            <Drawer Closable="true" Width="420" Visible="LoginVisible" Title='"登入"' OnClose="_ => LoginPanelClose()">
+                <Template style="height:90%">
+                    <Row Gutter="16">
+                        <AntDesign.Col Span="12">
+                            <Text>用户名</Text>
+                            <Input Placeholder="请输入用户名" TValue="string" @bind-Value="UserName"/>
+                        </AntDesign.Col>
+                        <AntDesign.Col Span="12">
+                            <Text>密码</Text>
+                            <InputPassword @bind-Value="@PassWord"/>
+                        </AntDesign.Col>
+                    </Row>
+                    <Row Style="margin-top:20px">
+                        <AntDesign.Col Span="6">
+                            <Button Type="ButtonType.Primary">注册</Button>
+                        </AntDesign.Col>
+                        <AntDesign.Col Span="6">
+                            <Button Type="ButtonType.Primary" @onclick="_ => Login()">登入</Button>
+                        </AntDesign.Col>
+                    </Row>
+                </Template>
+            </Drawer>
+        </div>
+    </Layout>
+</Layout>
+
+
+<style>
+    .site-layout .site-layout-background {
+        background: #fff;
+    }
+</style>
+
+@code{
+
+    /// <summary>
+    ///     可考虑使用依赖注入
+    /// </summary>
+    public UserModel User { get; private set; }
+
+    /// <summary>
+    ///     用户名
+    /// </summary>
+    private string UserName { get; set; }
+
+    /// <summary>
+    ///     密码
+    /// </summary>
+    private string PassWord { get; set; }
+
+
+    private List<MenuItemData> menuItems;
+
+    protected override async Task OnInitializedAsync()
+    {
+        User = new UserModel
+        {
+            Name = "游客",
+            RoleName = "游客"
+        };
+        // 异步加载菜单数据
+        menuItems = await MainService.GetMenuItemDatas(User?.RoleName);
+    }
+
+    private void NavigateTo(string href)
+    {
+        NavigationManager.NavigateTo(href);
+    }
+
+    #region 登入注册的抽屉显示事件
+
+    public bool LoginVisible { get; set; }
+
+    void LoginPanelOpen()
+    {
+        if (User.IsLogin == false)
+            LoginVisible = true;
+        else
+        {
+            _notice.Open(new NotificationConfig
+            {
+                Message = "已登入，无法打开登入界面",
+                Duration = 3
+            });
+        }
+    }
+
+    void LoginPanelClose()
+    {
+        LoginVisible = false;
+    }
+
+    async void Login()
+    {
+        if (User.IsLogin == false)
+        {
+            _notice.Open(new NotificationConfig
+            {
+                Message = "登入成功",
+                Duration = 3
+            });
+            User = await MainService.LoginAsync(UserName, PassWord);
+            menuItems = await MainService.GetMenuItemDatas(User.RoleName);
+            LoginPanelClose();
+        }
+    }
+
+    #endregion
+
+}

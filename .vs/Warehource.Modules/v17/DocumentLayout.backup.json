@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\net\\behaviors\\memoryreadplc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\net\\behaviors\\memoryreadplc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\net\\behaviors\\reads7plcpipelinebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\net\\behaviors\\reads7plcpipelinebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.infrastructure\\s7net\\s7nettoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|solutionrelative:plc.infrastructure\\s7net\\s7nettoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.infrastructure\\s7net\\s7netservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|solutionrelative:plc.infrastructure\\s7net\\s7netservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\net\\readplc\\readlplceventhandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\net\\readplc\\readlplceventhandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AB3544A4-FA30-4064-ABF1-4367D6474706}|Plc.Contracts\\Plc.Contracts.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.contracts\\input\\readbufferinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB3544A4-FA30-4064-ABF1-4367D6474706}|Plc.Contracts\\Plc.Contracts.csproj|solutionrelative:plc.contracts\\input\\readbufferinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.infrastructure\\plcinfrastructureconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|solutionrelative:plc.infrastructure\\plcinfrastructureconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\db\\device\\deviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\db\\device\\deviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReadBufferInput.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Contracts\\Input\\ReadBufferInput.cs",
+              "RelativeDocumentMoniker": "Plc.Contracts\\Input\\ReadBufferInput.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Contracts\\Input\\ReadBufferInput.cs",
+              "RelativeToolTip": "Plc.Contracts\\Input\\ReadBufferInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T12:27:26.998Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
@@ -55,66 +64,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MemoryReadPlc.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Net\\Behaviors\\MemoryReadPlc.cs",
-              "RelativeDocumentMoniker": "Plc.Application\\Net\\Behaviors\\MemoryReadPlc.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Net\\Behaviors\\MemoryReadPlc.cs",
-              "RelativeToolTip": "Plc.Application\\Net\\Behaviors\\MemoryReadPlc.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBAAAABDAAAAAAAAAA==",
+              "Title": "S7NetToken.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\S7Net\\S7NetToken.cs",
+              "RelativeDocumentMoniker": "Plc.Infrastructure\\S7Net\\S7NetToken.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\S7Net\\S7NetToken.cs*",
+              "RelativeToolTip": "Plc.Infrastructure\\S7Net\\S7NetToken.cs*",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAUwFwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T03:02:07.138Z",
+              "WhenOpened": "2025-07-28T12:20:39.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ReadS7PlcPipelineBehavior.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Net\\Behaviors\\ReadS7PlcPipelineBehavior.cs",
-              "RelativeDocumentMoniker": "Plc.Application\\Net\\Behaviors\\ReadS7PlcPipelineBehavior.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Net\\Behaviors\\ReadS7PlcPipelineBehavior.cs",
-              "RelativeToolTip": "Plc.Application\\Net\\Behaviors\\ReadS7PlcPipelineBehavior.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T03:02:05.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlcInfrastructureConfigurator.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
-              "RelativeDocumentMoniker": "Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
-              "RelativeToolTip": "Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB8AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T03:01:34.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "S7NetService.cs",
               "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\S7Net\\S7NetService.cs",
               "RelativeDocumentMoniker": "Plc.Infrastructure\\S7Net\\S7NetService.cs",
               "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\S7Net\\S7NetService.cs",
               "RelativeToolTip": "Plc.Infrastructure\\S7Net\\S7NetService.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAArwEAAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T03:01:15.951Z",
+              "WhenOpened": "2025-07-28T12:20:36.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ReadlPlcEventHandle.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Net\\ReadPlc\\ReadlPlcEventHandle.cs",
-              "RelativeDocumentMoniker": "Plc.Application\\Net\\ReadPlc\\ReadlPlcEventHandle.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Net\\ReadPlc\\ReadlPlcEventHandle.cs",
-              "RelativeToolTip": "Plc.Application\\Net\\ReadPlc\\ReadlPlcEventHandle.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwBoAAAAIAAAAAAAAAA==",
+              "Title": "DeviceConfiguration.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\DB\\Device\\DeviceConfiguration.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\DB\\Device\\DeviceConfiguration.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\DB\\Device\\DeviceConfiguration.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\DB\\Device\\DeviceConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T03:00:05.892Z",
+              "WhenOpened": "2025-07-28T12:19:47.584Z",
               "EditorCaption": ""
             }
           ]

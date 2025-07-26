@@ -5,7 +5,7 @@ using Identity.Application.Abstract;
 using Identity.Contrancts;
 using Identity.Domain;
 
-namespace Identity.Application.AddHandler;
+namespace Identity.Application.AddHandler.Role;
 
 internal class AddRoleEventHandler(IUnitOfWork unitOfWork, UserManager userManager, IMapper mapper)
     : ICommandHandler<AddRoleEvent, RoleDto>
@@ -15,7 +15,7 @@ internal class AddRoleEventHandler(IUnitOfWork unitOfWork, UserManager userManag
         var role = await userManager.GetRoleAsync(request.RoleName);
         if (role == null)
         {
-            role = new Role
+            role = new Domain.Role
             {
                 RoleName = request.RoleName,
                 Description = request.Description

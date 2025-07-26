@@ -1,7 +1,6 @@
 ﻿using Common.Application.Exception;
 using Common.Application.Log;
 using Common.Shared;
-using MassTransit;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -25,13 +24,13 @@ public sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logge
         Serilog.Log.Logger.ForCategory(LogCategory.Error)
             .Error(exception.StackTrace);
 
-        CommonException command =exception as CommonException;
+        var command = exception as CommonException;
         var problemDetails = new ProblemDetails
         {
             Status = StatusCodes.Status500InternalServerError,
             Type = "https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1",
             Title = "Server failure",
-            Detail = command.RequestName,
+            Detail = command.RequestName
         };
 
         httpContext.Response.StatusCode = problemDetails.Status.Value;
@@ -40,5 +39,4 @@ public sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logge
 
         return true;
     }
-
 }

@@ -1,6 +1,8 @@
+using Common.Application.Net;
+using Plc.Contracts.Input;
 using S7.Net.Types;
 
-namespace Common.Application.Net.S7;
+namespace Plc.Application.Net;
 
 public abstract class S7Net : INet
 {
@@ -9,7 +11,9 @@ public abstract class S7Net : INet
     public abstract void Connect();
 
     public abstract void ReConnect();
-
-    public abstract Task<byte[]> ReadAsync(DataItem bulkItem);
     public abstract void Close();
+
+    public abstract Task<byte[]> ReadAsync(ReadBufferInput input);
+
+    public abstract Task<bool> WriteAsync(WriteBufferInput[] bulkItem);
 }

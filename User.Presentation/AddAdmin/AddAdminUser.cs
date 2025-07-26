@@ -1,5 +1,6 @@
 ﻿using Common.Presentation.Endpoints;
 using Identity.Application.AddHandler;
+using Identity.Application.AddHandler.User;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;

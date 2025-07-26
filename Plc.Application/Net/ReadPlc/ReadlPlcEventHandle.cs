@@ -3,18 +3,16 @@ using Common.Application.Log;
 using Common.Application.MediatR.Message;
 using Common.Shared;
 using Plc.Application.Abstract;
-using Plc.Contracts.Input;
-using Plc.Domain.S7;
-using Plc.Shared;
+using Serilog;
 
-namespace Plc.Application.S7Plc.ReadPlc;
+namespace Plc.Application.Net.ReadPlc;
 
 /// <summary>
 ///     最终处理者
 /// </summary>
 /// <param name="service"></param>
-internal class ReadlPlcEventHandle(INetService netService
-    ,ICacheService cacheService) : ICommandHandler<PlcEventCommand>
+internal class ReadlPlcEventHandle(INetService netService, ICacheService cacheService)
+    : ICommandHandler<PlcEventCommand>
 {
     /// <summary>
     ///     进行一些操作
@@ -27,12 +25,13 @@ internal class ReadlPlcEventHandle(INetService netService
         var inputs = request.readBufferInputs;
         if (request.DeviceName == null)
         {
-            List<byte> memory = new List<byte>();
+            var memory = new List<byte>();
             foreach (var input in inputs)
             {
                 var buffer = await netService.ReadAsync(input);
                 memory.AddRange(buffer);
             }
+
             await cacheService.SetAsync(request.Ip.GetHashCode().ToString(), memory.ToArray());
         }
         else
@@ -45,11 +44,9 @@ internal class ReadlPlcEventHandle(INetService netService
             }
             else
             {
-                Serilog.Log.Logger.ForCategory(LogCategory.Net)
+                Log.Logger.ForCategory(LogCategory.Net)
                     .Error($"IP:{request.Ip} 设备名称{request.DeviceName}未找到对应的DB块或地址");
             }
         }
     }
-
-  
 }
