@@ -31,5 +31,11 @@ public class S7NetConfig : INetEnitty
     /// </summary>
     public int WriteTimeOut { get; set; }
 
+    /// <summary>
+    /// 是否启用
+    /// </summary>
+    public bool IsUse { get; set; }
+
+
     public ICollection<S7EntityItem> S7EntityItems { get; set; }
 }
