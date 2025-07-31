@@ -357,12 +357,6 @@ D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\ru\Micro
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\SignalR.Application.dll
-D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\SignalR.Infrastructure.dll
-D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\SignalR.Presentation.dll
-D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\SignalR.Infrastructure.pdb
-D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\SignalR.Application.pdb
-D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\SignalR.Presentation.pdb
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll

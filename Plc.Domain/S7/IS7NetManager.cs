@@ -10,5 +10,5 @@ public interface IS7NetManager
 
     public Task<S7NetConfig> GetNetWiteIpAsync(string ip);
 
-    public Task<S7NetConfig> GetNetWiteIpAsync(string ip,string deviceName);
+    public Task<S7NetConfig> GetNetWiteDeviceNameAsync(string ip,string deviceName);
 }

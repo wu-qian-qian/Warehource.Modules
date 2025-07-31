@@ -3,8 +3,8 @@ using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Plc.Application.Net.ReadPlc;
 using Plc.Application.PlcEvent.Get.Net;
+using Plc.Application.ReadPlc;
 
 namespace Plc.Presentation.S7Plc.Net;
 

@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xKb2JDb25maWcucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Program/仓库/Warehource.Modules/UI/Components/Pages/WcsConfig/PlcConfig.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXY3NDb25maWdcUGxjQ29uZmlnLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Program/仓库/Warehource.Modules/UI/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

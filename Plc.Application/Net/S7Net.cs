@@ -15,5 +15,7 @@ public abstract class S7Net : INet
 
     public abstract Task<byte[]> ReadAsync(ReadBufferInput input);
 
-    public abstract Task<bool> WriteAsync(WriteBufferInput[] bulkItem);
+    public abstract Task WriteAsync(WriteBufferItemInput[] bulkItem);
+
+    public abstract Task<T> ReadTResultAsync<T>(ReadBufferInput input);
 }

@@ -1,7 +1,9 @@
 using Common.Application.Log;
+using Common.Helper;
 using Common.Shared;
 using Plc.Contracts.Input;
 using Plc.Contracts.Respon;
+using Plc.Infrastructure.Helper;
 using Plc.Shared;
 using S7.Net;
 using S7.Net.Types;
@@ -49,6 +51,12 @@ public class S7NetToken : Application.Net.S7Net
         Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--关闭链接");
     }
 
+    /// <summary>
+    /// 需要反转
+    /// 批量读取
+    /// </summary>
+    /// <param name="input"></param>
+    /// <returns></returns>
     public override Task<byte[]> ReadAsync(ReadBufferInput input)
     {
        var bulkItem = CreatReadS7Item(input);
@@ -70,66 +78,169 @@ public class S7NetToken : Application.Net.S7Net
         return Task.FromResult(bufferBlock);
     }
 
-    public override Task<bool> WriteAsync(WriteBufferInput[] bulkItems)
+    /// <summary>
+    /// 直接读取并转换类型
+    /// </summary>
+    /// <param name="input"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public override async Task<T> ReadTResultAsync<T>(ReadBufferInput input)
+    {
+        T t = default(T);
+        if (_plc.IsConnected == false)
+        {
+            Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC未连接");
+            return t;
+        }
+        else
+        {
+            try
+            {
+                var dbType = EnumConvert.S7BlockTypeToDataType(input.S7BlockType);
+                switch (input.S7DataType)
+                {
+                    case S7DataTypeEnum.Bool:
+                    {
+                        var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.Bit, input.DBBit);
+                        t = (T)res;
+                        break;
+                    }
+                    case S7DataTypeEnum.Byte:
+                    {
+                        var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.Byte,1);
+                        t = (T)res;
+                        break;
+                    }
+                    case S7DataTypeEnum.Int:
+                    {
+                        var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.Int,1);
+                        t = (T)res;
+                        break;
+                    }
+                    case S7DataTypeEnum.DInt: 
+                    {
+                        var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.DInt,1);
+                        t = (T)res;
+                        break;
+                    }
+                    case S7DataTypeEnum.Word: 
+                    {
+                        var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.Word,1);
+                        t = (T)res;
+                        break;
+                    }
+                    case S7DataTypeEnum.DWord: 
+                    {
+                        var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.DWord,1);
+                        t = (T)res;
+                        break;
+                    }
+                    case S7DataTypeEnum.Real: 
+                    {
+                        var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.Real,1);
+                        t = (T)res;
+                        break;
+                    }
+                    case S7DataTypeEnum.LReal:    
+                    {
+                        var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.LReal,1);
+                        t = (T)res;
+                        break;
+                    }
+                    case S7DataTypeEnum.String:
+                    {
+                        var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.String,input.ArratCount);
+                        t = (T)res;
+                        break;
+                    }
+                    case S7DataTypeEnum.S7String:
+                    {
+                        var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.S7String,input.ArratCount);
+                        t = (T)res;
+                        break;
+                    }
+                    case S7DataTypeEnum.Array:
+                    {
+                        var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.Byte,input.ArratCount);
+                        t = (T)res;
+                        break;
+                    }
+                    default:
+                        Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC无解析数据");
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC读取出现异常：{e.Message}");
+            }
+        }
+        return t;
+    }
+
+    /// <summary>
+    /// 数据写入
+    /// </summary>
+    /// <param name="bulkItems"></param>
+    /// <exception cref="AggregateException"></exception>
+    public override async Task WriteAsync(WriteBufferItemInput[] bulkItems)
     {
         if (!_plc.IsConnected)
         {
             Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC未连接");
-            return Task.FromResult(false);
         }
         else
         {
-            var arrayType = bulkItems.FirstOrDefault(bulkItems => bulkItems.S7DataType == S7DataTypeEnum.Array);
-            if (arrayType != null)
+            if (bulkItems.Any(bulkItems => bulkItems.S7DataType == S7DataTypeEnum.Array))
             {
-                var dbType = arrayType.S7BlockType switch
-                {
-                    S7BlockTypeEnum.DataBlock => DataType.DataBlock,
-                    S7BlockTypeEnum.Memory => DataType.Memory,
-                    S7BlockTypeEnum.Input => DataType.Input,
-                    _ => throw new AggregateException("无法解析")
-                };
-              
-                _plc.WriteAsync(dbType,arrayType.DBAddress,arrayType.DBStart,arrayType.Value);
+                await WriteToBytesAsync(bulkItems.Where(p=>p.S7DataType == S7DataTypeEnum.Array).ToArray());
             }
             else
             {
                 var items = CreatWriteS7Item(bulkItems);
                 try
                 {
-                    _plc.WriteAsync(items);
+                    await _plc.WriteAsync(items);
                     Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--写入数据成功");
-                    return Task.FromResult(true);
                 }
                 catch (Exception e)
                 {
                     Log.Logger.ForCategory(LogCategory.Net).Information($"写入失败详细{e.Message}");
                 }
             }
-            return Task.FromResult(false);
         }
     }
-
+    
+    public  async Task WriteToBytesAsync(WriteBufferItemInput[] bulkItems)
+    {
+        if (!_plc.IsConnected)
+        {
+            Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC未连接");
+        }
+        else
+        {
+            foreach (var arrayType in bulkItems)
+            {
+                var dbType = EnumConvert.S7BlockTypeToDataType(arrayType.S7BlockType);
+                await _plc.WriteBytesAsync(dbType,arrayType.DBAddress,arrayType.DBStart,arrayType.Buffer);
+            }
+        }
+    }
     public static DataItem CreatReadS7Item(ReadBufferInput input)
     {
-        var dbType = input.S7BlockType switch
-        {
-            S7BlockTypeEnum.DataBlock => DataType.DataBlock,
-            S7BlockTypeEnum.Memory => DataType.Memory,
-            S7BlockTypeEnum.Input => DataType.Input,
-            _ => throw new AggregateException("无法解析")
-        };
+        var dbType = EnumConvert.S7BlockTypeToDataType(input.S7BlockType);
         var bulkItem = new DataItem
         {
             DB = input.DBAddress,
             StartByteAdr = input.DBStart,
+            BitAdr = input.DBBit,
             Count = input.DBEnd - input.DBStart,
             DataType = dbType
         };
         return bulkItem;
     }
 
-    public static DataItem[] CreatWriteS7Item(WriteBufferInput[] inputs)
+    public static DataItem[] CreatWriteS7Item(WriteBufferItemInput[] inputs)
     {
         List<DataItem> items = new();
         foreach (var input in inputs)
@@ -140,29 +251,8 @@ public class S7NetToken : Application.Net.S7Net
                 // 这里可以根据具体的需求进行实现
                 continue;
             }
-
-            var dbType = input.S7BlockType switch
-            {
-                S7BlockTypeEnum.DataBlock => DataType.DataBlock,
-                S7BlockTypeEnum.Memory => DataType.Memory,
-                S7BlockTypeEnum.Input => DataType.Input,
-                _ => throw new AggregateException("无法解析")
-            };
-
-            var s7DataType = input.S7DataType switch
-            {
-                S7DataTypeEnum.Bool => VarType.Bit,
-                S7DataTypeEnum.Byte => VarType.Byte,
-                S7DataTypeEnum.Word => VarType.Word,
-                S7DataTypeEnum.DWord => VarType.DWord,
-                S7DataTypeEnum.Int => VarType.Int,
-                S7DataTypeEnum.DInt => VarType.DInt,
-                S7DataTypeEnum.Real => VarType.Real,
-                S7DataTypeEnum.LReal => VarType.LReal,
-                S7DataTypeEnum.String => VarType.String,
-                S7DataTypeEnum.S7String => VarType.S7String,
-                _ => throw new AggregateException("无法解析")
-            };
+            var dbType = EnumConvert.S7BlockTypeToDataType(input.S7BlockType);
+            var s7DataType =  EnumConvert.S7DataTypeToVarType(input.S7DataType);
             var bulkItem = new DataItem
             {
                 DB = input.DBAddress,
@@ -170,6 +260,7 @@ public class S7NetToken : Application.Net.S7Net
                 BitAdr = input.DBBit,
                 DataType = dbType,
                 VarType = s7DataType,
+                Value = input.Value
             };
             items.Add(bulkItem);
         }

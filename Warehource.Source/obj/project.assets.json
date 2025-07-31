@@ -2657,47 +2657,6 @@
           "bin/placeholder/Plc.Shared.dll": {}
         }
       },
-      "SignalR.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/SignalR.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SignalR.Application.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "SignalR.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
-          "SignalR.Presentation": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SignalR.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SignalR.Infrastructure.dll": {}
-        }
-      },
-      "SignalR.Presentation/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Common.Presentation": "1.0.0",
-          "SignalR.Application": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SignalR.Presentation.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SignalR.Presentation.dll": {}
-        }
-      },
       "Wcs.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -6687,21 +6646,6 @@
       "path": "../Plc.Shared/Plc.Shared.csproj",
       "msbuildProject": "../Plc.Shared/Plc.Shared.csproj"
     },
-    "SignalR.Application/1.0.0": {
-      "type": "project",
-      "path": "../SignalR.Infrastructure/SignalR.Application.csproj",
-      "msbuildProject": "../SignalR.Infrastructure/SignalR.Application.csproj"
-    },
-    "SignalR.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../Signal.Infrastructure/SignalR.Infrastructure.csproj",
-      "msbuildProject": "../Signal.Infrastructure/SignalR.Infrastructure.csproj"
-    },
-    "SignalR.Presentation/1.0.0": {
-      "type": "project",
-      "path": "../SignalR.Presentation/SignalR.Presentation.csproj",
-      "msbuildProject": "../SignalR.Presentation/SignalR.Presentation.csproj"
-    },
     "Wcs.Application/1.0.0": {
       "type": "project",
       "path": "../Wcs.Application/Wcs.Application.csproj",
@@ -6744,7 +6688,6 @@
       "Microsoft.AspNetCore.OpenApi >= 8.0.11",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.0",
       "Plc.Infrastructure >= 1.0.0",
-      "SignalR.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2",
       "Wcs.Infrastructure >= 1.0.0"
     ]
@@ -6784,9 +6727,6 @@
           "projectReferences": {
             "D:\\Program\\仓库\\Warehource.Modules\\Plc.Infrastructure\\Plc.Infrastructure.csproj": {
               "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Plc.Infrastructure\\Plc.Infrastructure.csproj"
-            },
-            "D:\\Program\\仓库\\Warehource.Modules\\Signal.Infrastructure\\SignalR.Infrastructure.csproj": {
-              "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Signal.Infrastructure\\SignalR.Infrastructure.csproj"
             },
             "D:\\Program\\仓库\\Warehource.Modules\\User.Infrastructure\\Identity.Infrastructure.csproj": {
               "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\User.Infrastructure\\Identity.Infrastructure.csproj"

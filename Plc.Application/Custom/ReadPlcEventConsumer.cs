@@ -2,7 +2,7 @@
 using Common.Domain.Event;
 using MassTransit;
 using MediatR;
-using Plc.Application.Net.ReadPlc;
+using Plc.Application.ReadPlc;
 using Plc.CustomEvents;
 
 namespace Plc.Application.Custom;
@@ -29,7 +29,9 @@ internal class ReadPlcEventConsumer<TIntegrationEvent>(IMassTransitEventBus bus,
                     {
                         UseMemory = s7CacheMemoryEvent.UserMemory,
                         Ip = s7CacheMemoryEvent.Ip,
-                        DeviceName = s7CacheMemoryEvent.DeviceName
+                        DeviceName = s7CacheMemoryEvent.DeviceName,
+                        IsBath = s7CacheMemoryEvent.IsBath,
+                        DBNames = s7CacheMemoryEvent.DBNames
                     }
                 );
     }

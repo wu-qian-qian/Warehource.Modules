@@ -1,5 +1,6 @@
 ﻿using Common.Application.Log;
 using Common.Application.Net;
+using Common.Helper;
 using Common.Shared;
 using MediatR;
 using Plc.Application.Abstract;
@@ -55,10 +56,22 @@ public class S7NetService : INetService
     {
         //通过后台job执行，并进行心跳处理
     }
-
     public Task<bool> WriteAsync(WriteBufferInput input)
     {
-
+        NetMap[input.Ip].WriteAsync(input.WriteBufferItemArray);
+        var readBuffers = input.WriteBufferItemArray.Select(p =>
+        {
+            int end = p.DBStart + p.S7DataType.GetEnumAttribute<S7DataTypeAttribute>().DataSize;
+            return new ReadBufferInput()
+            {
+                Ip = input.Ip,
+                DBAddress = p.DBAddress,
+                DBStart = p.DBStart,
+                DBBit = p.DBBit,
+              
+            };
+        });
+        
         return Task.FromResult(true);
     }
 }

@@ -32,12 +32,11 @@ public class S7NetManager(PlcDBContext context) : IS7NetManager
             .FirstOrDefaultAsync(p => p.Ip == ip);
     }
 
-    public Task<S7NetConfig> GetNetWiteIpAsync(string ip, string deviceName)
+    public Task<S7NetConfig> GetNetWiteDeviceNameAsync(string ip, string deviceName)
     {
         var netconfig= context.Query<S7NetConfig>()
-           .Where(p => p.Ip == ip)
-           .Include(p => p.S7EntityItems.Select(p=>p.DeviceName==deviceName)).FirstOrDefault();
+            .Where(p => p.Ip == ip)
+            .Include(p => p.S7EntityItems.Select(p=>p.DeviceName==deviceName)).FirstOrDefault();
         return Task.FromResult(netconfig);
-
     }
 }

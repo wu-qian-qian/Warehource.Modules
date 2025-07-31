@@ -8,10 +8,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Wcs.Application;
 using Wcs.Application.Abstract;
+using Wcs.Application.SignalR;
 using Wcs.Domain.JobConfigs;
 using Wcs.Infrastructure.Database;
 using Wcs.Infrastructure.DB.JobConfig;
 using Wcs.Infrastructure.Job;
+using Wcs.Infrastructure.SignalR;
 using Wcs.Shared;
 using AssemblyReference = Wcs.Presentation.AssemblyReference;
 
@@ -34,6 +36,7 @@ public static class WcsInfrastructureConfigurator
                 builder.MigrationsHistoryTable(Schemas.TableSchema + HistoryRepository.DefaultTableName));
         });
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<WCSDBContext>());
+        services.AddSignalRConfiguration();
     }
 
     public static IServiceCollection AddRepository(this IServiceCollection service)
@@ -42,7 +45,14 @@ public static class WcsInfrastructureConfigurator
         service.AddScoped<IJobConfigRepository, JobConfigRepository>();
         return service;
     }
-
+    public static IServiceCollection AddSignalRConfiguration(this IServiceCollection services)
+    {
+        // 注册SignalR服务
+        services.AddSignalR();
+        // 可以在这里添加其他SignalR相关的配置或服务
+        services.AddScoped<IHubManager, HubManager>();
+        return services;
+    }
     public static IServiceCollection AddEndPoint(this IServiceCollection services)
     {
         services.AddEndpoints(AssemblyReference.Assembly);

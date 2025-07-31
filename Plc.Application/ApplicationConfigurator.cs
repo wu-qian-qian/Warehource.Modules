@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
+using Plc.Application.Behaviors;
 using Plc.Application.Custom;
-using Plc.Application.Net.Behaviors;
 using Plc.CustomEvents;
 
 namespace Plc.Application;
@@ -18,7 +18,9 @@ public static class ApplicationConfigurator
     /// <param name="configuration"></param>
     public static void AddMediatR(MediatRServiceConfiguration configuration)
     {
-        configuration.AddOpenBehavior(typeof(ReadS7PlcPipelineBehavior<,>));
+        configuration.AddOpenBehavior(typeof(BathReadS7PlcPipelineBehavior<,>));
+        configuration.AddOpenBehavior(typeof(SingleReadS7PlcPipelineBehavior<,>));
+        configuration.AddOpenBehavior(typeof(FilterReadS7PlcPipelineBehavior<,>));
     }
 
     public static void AddCustom(IRegistrationConfigurator registrationConfigurator)

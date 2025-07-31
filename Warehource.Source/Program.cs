@@ -8,15 +8,15 @@ using Common.Shared;
 using Identity.Infrastructure;
 using Plc.Infrastructure;
 using Serilog;
-using SignalR.Infrastructure;
 using Warehource.Source;
 using Wcs.Application;
 using Wcs.Infrastructure;
 
+
 var builder = WebApplication.CreateBuilder(args);
 builder.AddSerilogConfiguratorCategory();
 
-//builder.Services.AddCors();
+builder.Services.AddCors();
 
 
 var currentAssembly = Assembly.GetExecutingAssembly();
@@ -62,7 +62,7 @@ builder.Services.AddModules(builder.Configuration,
         PlcInfrastructureConfigurator.AddAutoMapper
     ]
 );
-builder.Services.AddSignalRConfiguration();
+
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -78,7 +78,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
     app.Initialization(); //在开发环境中应用数据库迁移
 }
-//app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 app.UseMiddleware<GlobalResponseMiddleware>();
 app.UseMiddleware<GlobalEncodingRequestMiddleware>();
