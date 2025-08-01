@@ -11,8 +11,10 @@ public class EntityItemConfiguration : IEntityTypeConfiguration<S7EntityItem>
     {
         builder.ToTable(Schemas.TableSchema + nameof(S7EntityItem));
         builder.HasKey(e => e.Id).IsClustered(false);
-        builder.Property(e => e.Name)
+        builder.Property(e => e.Name).IsRequired()
             .HasMaxLength(20);
+        builder.Property(e => e.Ip).IsRequired()
+           .HasMaxLength(20);
         builder.Property(e => e.Description).IsRequired(false).HasMaxLength(50);
     }
 }

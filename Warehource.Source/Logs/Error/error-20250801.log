@@ -1,0 +1,121 @@
+2025-08-01 09:10:23.692 +08:00 [ERR]    at Plc.Infrastructure.S7Net.S7NetManager.InsertS7NetAsync(IEnumerable`1 s7NetConfigs) in D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\S7Net\S7NetManager.cs:line 30
+   at Plc.Application.PlcEvent.Insert.InsertS7NetConfigCommandHandler.Handle(InsertS7NetConfigCommand request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Plc.Application\PlcEvent\Insert\InsertS7NetConfigCommandHandler.cs:line 51
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 28
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-01 09:11:40.183 +08:00 [ERR]    at Plc.Infrastructure.S7Net.S7NetManager.InsertS7NetAsync(IEnumerable`1 s7NetConfigs) in D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\S7Net\S7NetManager.cs:line 30
+   at Plc.Application.PlcEvent.Insert.InsertS7NetConfigCommandHandler.Handle(InsertS7NetConfigCommand request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Plc.Application\PlcEvent\Insert\InsertS7NetConfigCommandHandler.cs:line 51
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 28
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-01 09:11:45.313 +08:00 [ERR]    at Plc.Infrastructure.S7Net.S7NetManager.InsertS7NetAsync(IEnumerable`1 s7NetConfigs) in D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\S7Net\S7NetManager.cs:line 30
+   at Plc.Application.PlcEvent.Insert.InsertS7NetConfigCommandHandler.Handle(InsertS7NetConfigCommand request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Plc.Application\PlcEvent\Insert\InsertS7NetConfigCommandHandler.cs:line 51
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 28
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-01 09:11:58.485 +08:00 [ERR]    at Plc.Infrastructure.S7Net.S7NetManager.InsertS7NetAsync(IEnumerable`1 s7NetConfigs) in D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\S7Net\S7NetManager.cs:line 30
+   at Plc.Application.PlcEvent.Insert.InsertS7NetConfigCommandHandler.Handle(InsertS7NetConfigCommand request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Plc.Application\PlcEvent\Insert\InsertS7NetConfigCommandHandler.cs:line 51
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 28
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-01 09:12:10.904 +08:00 [ERR]    at Plc.Infrastructure.S7Net.S7NetManager.InsertS7NetAsync(IEnumerable`1 s7NetConfigs) in D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\S7Net\S7NetManager.cs:line 30
+   at Plc.Application.PlcEvent.Insert.InsertS7NetConfigCommandHandler.Handle(InsertS7NetConfigCommand request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Plc.Application\PlcEvent\Insert\InsertS7NetConfigCommandHandler.cs:line 51
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 28
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-01 09:14:02.830 +08:00 [ERR]    at Plc.Infrastructure.S7Net.S7NetManager.InsertS7NetAsync(IEnumerable`1 s7NetConfigs) in D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\S7Net\S7NetManager.cs:line 30
+   at Plc.Application.PlcEvent.Insert.InsertS7NetConfigCommandHandler.Handle(InsertS7NetConfigCommand request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Plc.Application\PlcEvent\Insert\InsertS7NetConfigCommandHandler.cs:line 51
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 28
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-01 09:23:14.445 +08:00 [ERR]    at System.Linq.ThrowHelper.ThrowNoMatchException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Wcs.Application.Job.Insert.AddJobEventHandler.Handle(AddJobEvent request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Wcs.Application\Job\Insert\AddJobEventHandler.cs:line 34
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Wcs.Presentation.Job.Add.AddJobConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Wcs.Presentation\Job\Add\AddJobConfig.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfTFast>g__ExecuteAwaited|132_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-01 09:35:42.253 +08:00 [ERR]    at Plc.Infrastructure.S7Net.S7NetManager.InsertS7NetAsync(IEnumerable`1 s7NetConfigs) in D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\S7Net\S7NetManager.cs:line 30
+   at Plc.Application.PlcEvent.Insert.InsertS7NetConfigCommandHandler.Handle(InsertS7NetConfigCommand request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Plc.Application\PlcEvent\Insert\InsertS7NetConfigCommandHandler.cs:line 52
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 28
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-01 09:53:42.873 +08:00 [ERR]    at Plc.Infrastructure.S7Net.S7NetManager.InsertS7NetAsync(IEnumerable`1 s7NetConfigs) in D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\S7Net\S7NetManager.cs:line 30
+   at Plc.Application.PlcEvent.Insert.InsertS7NetConfigCommandHandler.Handle(InsertS7NetConfigCommand request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Plc.Application\PlcEvent\Insert\InsertS7NetConfigCommandHandler.cs:line 52
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Plc.Presentation.S7Plc.AddS7NetConfig.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\Plc.Presentation\S7Plc\AddS7NetConfig.cs:line 28
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass104_2.<<HandleRequestBodyAndCompileRequestDelegateForForm>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-01 10:33:03.352 +08:00 [ERR]    at Identity.Application.LoginHandler.LoginEventHandler.Handle(LoginEvent request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\User.Application\LoginHandler\LoginEventHandler.cs:line 16
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Identity.Presentation.Login.Login.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\User.Presentation\Login\Login.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfString>g__ExecuteAwaited|134_0(Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-01 10:36:56.797 +08:00 [ERR] Microsoft.AspNetCore.Http.DefaultHttpRequest--::1--用户不存在
+2025-08-01 10:39:14.059 +08:00 [ERR] Microsoft.AspNetCore.Http.DefaultHttpRequest--::1--用户不存在

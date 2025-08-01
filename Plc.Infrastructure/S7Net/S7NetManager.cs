@@ -7,6 +7,11 @@ namespace Plc.Infrastructure.S7Net;
 
 public class S7NetManager(PlcDBContext context) : IS7NetManager
 {
+    public Task<S7NetConfig> GetNetWiteIdAsync(Guid id)
+    {
+        return context.Query<S7NetConfig>().FirstAsync(p => p.Id == id);
+    }
+
     public Task<List<S7NetConfig>> GetAllNetAsync()
     {
         return context.Query<S7NetConfig>()
@@ -25,18 +30,28 @@ public class S7NetManager(PlcDBContext context) : IS7NetManager
         return context.Nets.AddRangeAsync(s7NetConfigs);
     }
 
-    public async Task<S7NetConfig> GetNetWiteIpAsync(string ip)
+    public async Task<S7NetConfig?> GetNetWiteIpAsync(string ip)
     {
         return await context.Query<S7NetConfig>()
             .Include(p => p.S7EntityItems)
             .FirstOrDefaultAsync(p => p.Ip == ip);
     }
 
-    public Task<S7NetConfig> GetNetWiteDeviceNameAsync(string ip, string deviceName)
+    public Task<List<S7EntityItem>?> GetNetWiteDeviceNameAsync(string deviceName)
     {
-        var netconfig= context.Query<S7NetConfig>()
-            .Where(p => p.Ip == ip)
-            .Include(p => p.S7EntityItems.Select(p=>p.DeviceName==deviceName)).FirstOrDefault();
-        return Task.FromResult(netconfig);
+        var netconfig = context.Query<S7EntityItem>()
+            .Where(p => p.DeviceName == deviceName)
+            .ToListAsync();
+        return netconfig;
     }
+
+    public  Task<List<S7EntityItem>> GetDeviceNameWithDBNameAsync(string deviceName, List<string> dbNames)
+    {
+        var netconfig = context.Query<S7EntityItem>()
+            .Where(p => p.DeviceName == deviceName && dbNames.Contains(p.Name))
+            .ToListAsync();
+        return netconfig;
+    }
+
+   
 }

@@ -18,9 +18,4 @@
         <PackageReference Include="S7netplus" Version="0.20.0"/>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Behaviors\Write\" />
-      <Folder Include="WritePlc\" />
-    </ItemGroup>
-
 </Project>

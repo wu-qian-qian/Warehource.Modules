@@ -8,11 +8,13 @@ public interface INetService
 {
     Task<byte[]> ReadAsync(ReadBufferInput input);
 
-    Task<bool> WriteAsync(WriteBufferInput input);
+    Task WriteAsync(WriteBufferInput input);
 
     Task ReConnect();
 
     void AddConnect(INet connect);
 
     void Initialization(ISender sender);
+    
+    Task<bool> CheckWriteByteAsync(WriteBufferInput input);
 }

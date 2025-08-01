@@ -4,7 +4,7 @@ using Plc.Domain.S7;
 
 namespace Plc.Application.ReadPlc.Behaviors;
 
-public class WriteS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManager netManager)
+public class WriteDtoInitPipelineBehavior<TRequest, TResponse>(IS7NetManager netManager)
     : IPipelineBehavior<TRequest, TResponse> where TRequest : WritePlcEventCommand
 {
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)

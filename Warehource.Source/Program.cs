@@ -12,7 +12,6 @@ using Warehource.Source;
 using Wcs.Application;
 using Wcs.Infrastructure;
 
-
 var builder = WebApplication.CreateBuilder(args);
 builder.AddSerilogConfiguratorCategory();
 
@@ -78,6 +77,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
     app.Initialization(); //在开发环境中应用数据库迁移
 }
+
 app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 app.UseMiddleware<GlobalResponseMiddleware>();

@@ -2,6 +2,7 @@
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using Plc.Application.Behaviors;
+using Plc.Application.Behaviors.Read;
 using Plc.Application.Custom;
 using Plc.CustomEvents;
 
@@ -25,7 +26,8 @@ public static class ApplicationConfigurator
 
     public static void AddCustom(IRegistrationConfigurator registrationConfigurator)
     {
-        registrationConfigurator.AddConsumer<ReadPlcEventConsumer<S7CacheMemoryEvent>>();
+        registrationConfigurator.AddConsumer<ReadPlcEventConsumer<S7ReadPlcDataBlockEvent>>();
+        registrationConfigurator.AddConsumer<WritePlcEventConsumer<S7WritePlcDataBlockEvent>>();
     }
 
     public static void AddAutoMapper(IMapperConfigurationExpression config)

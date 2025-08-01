@@ -15,10 +15,6 @@ internal class GetS7NetConfig : IEndpoint
         app.MapGet("plc/get-allplc",
                 async (ISender sender) =>
                 {
-                    await sender.Send(new PlcEventCommand
-                    {
-                        Ip = "127.0.0.1"
-                    });
                     return await sender.Send(new GetS7NetQuery());
                 })
             .WithTags(AssemblyReference.Plc);

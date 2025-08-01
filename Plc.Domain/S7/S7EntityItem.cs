@@ -12,6 +12,7 @@ public class S7EntityItem : IEntity
     {
     }
 
+    public string Ip { get; set; }
     /// <summary>
     ///     PLC的的数据类型
     /// </summary>
@@ -31,7 +32,7 @@ public class S7EntityItem : IEntity
     /// <summary>
     ///     bit的偏移量
     /// </summary>
-    public int? BitOffset { get; set; }
+    public byte? BitOffset { get; set; }
 
     /// <summary>
     ///     PLC的类型
@@ -51,12 +52,12 @@ public class S7EntityItem : IEntity
     /// <summary>
     ///     字段名称
     /// </summary>
-    public string? Name { get; set; }
+    public string Name { get; set; }
 
     /// <summary>
     ///     数组类型的长度
     /// </summary>
-    public int? ArrtypeLength { get; set; }
+    public byte? ArrtypeLength { get; set; }
 
     /// <summary>
     ///     关联设备
@@ -68,7 +69,7 @@ public class S7EntityItem : IEntity
     /// <summary>
     ///     网络配置
     /// </summary>
-    public Guid? NetGuid { get; set; }
+    public Guid NetGuid { get; set; }
 
     ///// <summary>
     ///// 需要配置索引

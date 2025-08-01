@@ -6,9 +6,8 @@ using MediatR;
 using Plc.Application.Abstract;
 using Plc.Application.PlcEvent.Get.Net;
 using Plc.Contracts.Input;
+using Plc.Infrastructure.Token;
 using Plc.Shared;
-using S7.Net;
-using S7.Net.Types;
 using Serilog;
 
 namespace Plc.Infrastructure.S7Net;
@@ -56,22 +55,13 @@ public class S7NetService : INetService
     {
         //通过后台job执行，并进行心跳处理
     }
-    public Task<bool> WriteAsync(WriteBufferInput input)
+    public async Task WriteAsync(WriteBufferInput input)
     {
-        NetMap[input.Ip].WriteAsync(input.WriteBufferItemArray);
-        var readBuffers = input.WriteBufferItemArray.Select(p =>
-        {
-            int end = p.DBStart + p.S7DataType.GetEnumAttribute<S7DataTypeAttribute>().DataSize;
-            return new ReadBufferInput()
-            {
-                Ip = input.Ip,
-                DBAddress = p.DBAddress,
-                DBStart = p.DBStart,
-                DBBit = p.DBBit,
-              
-            };
-        });
-        
-        return Task.FromResult(true);
+        await NetMap[input.Ip].WriteAsync(input.WriteBufferItemArray);
+    }
+    
+    public async Task<bool> CheckWriteByteAsync(WriteBufferInput input)
+    {
+       return await NetMap[input.Ip].CheckWriteToBytesAsync(input.WriteBufferItemArray);
     }
 }

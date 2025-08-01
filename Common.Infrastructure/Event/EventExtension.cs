@@ -73,8 +73,11 @@ public static class EventExtension
     {
         services.AddMassTransit(busConfigurator =>
         {
-            foreach (var item in moduleConfigureConsumers) item(busConfigurator);
-            busConfigurator.UsingInMemory((context, cfg) => { cfg.ConfigureEndpoints(context); });
+           foreach (var item in moduleConfigureConsumers) item(busConfigurator);
+            busConfigurator.UsingInMemory((context, cfg) =>
+            {
+                cfg.ConfigureEndpoints(context); 
+            });
             // 使用内存作为消息传输
         });
         services.TryAddSingleton<IMassTransitEventBus, MassTransitEventBus>();

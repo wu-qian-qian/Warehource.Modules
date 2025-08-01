@@ -11,7 +11,7 @@ public static class SerilogExtensions
         //配置日志
         Serilog.Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Debug()
-            .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+            .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
             .Enrich.FromLogContext()
             .WriteTo.File("logs/Info/log.txt",
                 LogEventLevel.Information,
@@ -30,7 +30,8 @@ public static class SerilogExtensions
         Serilog.Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Debug()
             .WriteTo.Console()
-            .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+            .MinimumLevel.Override("Microsoft", LogEventLevel.Fatal)
+            .MinimumLevel.Override("Quartz", LogEventLevel.Warning)
             .Enrich.FromLogContext()
             // 系统日志
             .WriteTo.Logger(l => l
@@ -57,6 +58,14 @@ public static class SerilogExtensions
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&
                                              e.Properties["Category"].ToString() == "Error")
                 .WriteTo.File("Logs/Error/error-.log", rollingInterval: RollingInterval.Day,
+                    outputTemplate:
+                    "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
+            
+            //Event日志
+            .WriteTo.Logger(l => l
+                .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&
+                                             e.Properties["Event"].ToString() == "Event")
+                .WriteTo.File("Logs/Event/event-.log", rollingInterval: RollingInterval.Day,
                     outputTemplate:
                     "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
             //网络链接日志

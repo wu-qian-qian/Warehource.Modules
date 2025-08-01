@@ -1,5 +1,4 @@
 ﻿using Common.Presentation.Endpoints;
-using Identity.Application.AddHandler;
 using Identity.Application.AddHandler.User;
 using Identity.Contrancts.Request;
 using MediatR;

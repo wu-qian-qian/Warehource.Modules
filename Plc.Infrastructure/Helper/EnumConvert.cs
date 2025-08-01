@@ -16,7 +16,7 @@ public static class EnumConvert
         };
         return dbType;
     }
-    
+
     public static VarType S7DataTypeToVarType(S7DataTypeEnum @enum)
     {
         var dbType = @enum switch

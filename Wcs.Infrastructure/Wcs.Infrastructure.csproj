@@ -7,13 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Common.Infrastructure\Common.Infrastructure.csproj" />
-        <ProjectReference Include="..\Plc.IntegrationEvents\Plc.CustomEvents.csproj" />
-        <ProjectReference Include="..\Wcs.Application\Wcs.Application.csproj" />
-        <ProjectReference Include="..\Wcs.Presentation\Wcs.Presentation.csproj" />
+        <ProjectReference Include="..\Common.Infrastructure\Common.Infrastructure.csproj"/>
+        <ProjectReference Include="..\Plc.IntegrationEvents\Plc.CustomEvents.csproj"/>
+        <ProjectReference Include="..\Wcs.Application\Wcs.Application.csproj"/>
+        <ProjectReference Include="..\Wcs.Presentation\Wcs.Presentation.csproj"/>
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

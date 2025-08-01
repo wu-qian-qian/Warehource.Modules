@@ -3,6 +3,7 @@ using Identity.Application.Abstract;
 using Identity.Infrastructure.Role;
 using Identity.Infrastructure.User;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Identity.Infrastructure.Database;
 
@@ -24,5 +25,10 @@ public class UserDBContext : BaseDbContext, IUnitOfWork
         modelBuilder.ApplyConfiguration(new UserEntityTypeConfiguration());
         modelBuilder.ApplyConfiguration(new RoleEntityTypeConfiguration());
         modelBuilder.EnableSoftDeletionGlobalFilter();
+    }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        base.OnConfiguring(optionsBuilder);
+      
     }
 }

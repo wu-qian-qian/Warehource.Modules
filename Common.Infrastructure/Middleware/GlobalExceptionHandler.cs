@@ -21,10 +21,9 @@ public sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logge
         Exception exception,
         CancellationToken cancellationToken)
     {
-        Serilog.Log.Logger.ForCategory(LogCategory.Error)
-            .Error(exception.StackTrace);
-
         var command = exception as CommonException;
+        Serilog.Log.Logger.ForCategory(LogCategory.Error)
+           .Error($"{httpContext.Request}--{httpContext.Connection.LocalIpAddress}--{command.RequestName}");
         var problemDetails = new ProblemDetails
         {
             Status = StatusCodes.Status500InternalServerError,

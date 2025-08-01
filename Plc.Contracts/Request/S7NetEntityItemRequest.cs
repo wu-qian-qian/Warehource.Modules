@@ -22,7 +22,7 @@ public record S7NetEntityItemRequest
     /// <summary>
     ///     bit的偏移量
     /// </summary>
-    public int? BitOffset { get; set; }
+    public byte? BitOffset { get; set; }
 
     /// <summary>
     ///     PLC的类型
@@ -48,7 +48,7 @@ public record S7NetEntityItemRequest
     /// <summary>
     ///     数组类型的长度
     /// </summary>
-    public int? ArrtypeLength { get; set; }
+    public byte? ArrtypeLength { get; set; }
 
     /// <summary>
     ///     db地址

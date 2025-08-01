@@ -45,6 +45,7 @@ public static class WcsInfrastructureConfigurator
         service.AddScoped<IJobConfigRepository, JobConfigRepository>();
         return service;
     }
+
     public static IServiceCollection AddSignalRConfiguration(this IServiceCollection services)
     {
         // 注册SignalR服务
@@ -53,6 +54,7 @@ public static class WcsInfrastructureConfigurator
         services.AddScoped<IHubManager, HubManager>();
         return services;
     }
+
     public static IServiceCollection AddEndPoint(this IServiceCollection services)
     {
         services.AddEndpoints(AssemblyReference.Assembly);

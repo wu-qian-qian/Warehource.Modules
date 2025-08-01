@@ -25,7 +25,8 @@ public class InsertS7NetConfigCommandHandler(IS7NetManager netManager, IUnitOfWo
                 Solt = netDto.Solt,
                 Rack = netDto.Rack,
                 ReadTimeOut = netDto.ReadTimeOut,
-                WriteTimeOut = netDto.WriteTimeOut
+                WriteTimeOut = netDto.WriteTimeOut,
+                IsUse=false,
             };
             var s7entityItems = request.S7NetEntityItemRequests
                 .Where(p => p.Ip == netDto.Ip);
@@ -33,6 +34,7 @@ public class InsertS7NetConfigCommandHandler(IS7NetManager netManager, IUnitOfWo
                 .Select(p => new S7EntityItem
                 {
                     Name = p.Name,
+                    Ip = netDto.Ip,
                     DBAddress = p.DBAddress,
                     S7DataType = p.S7DataType,
                     DataOffset = p.DataOffset,

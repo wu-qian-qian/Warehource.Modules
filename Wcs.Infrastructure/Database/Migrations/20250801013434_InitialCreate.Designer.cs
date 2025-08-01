@@ -12,7 +12,7 @@ using Wcs.Infrastructure.Database;
 namespace Wcs.Infrastructure.Database.Migrations
 {
     [DbContext(typeof(WCSDBContext))]
-    [Migration("20250723061944_InitialCreate")]
+    [Migration("20250801013434_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -25,6 +25,48 @@ namespace Wcs.Infrastructure.Database.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Wcs.Domain.Device.Device", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Config")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeviceName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("DeviceType")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Enable")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastModifierUser")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"), false);
+
+                    b.HasIndex("DeviceName")
+                        .IsUnique();
+
+                    b.ToTable("Wcs.Device", (string)null);
+                });
+
             modelBuilder.Entity("Wcs.Domain.ExecuteNode.ExecuteNodePath", b =>
                 {
                     b.Property<Guid>("Id")
@@ -36,8 +78,7 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                     b.Property<string>("CurrentDeviceName")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CurrentDeviceType")
                         .HasColumnType("int");
@@ -56,13 +97,9 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                     b.HasKey("Id");
 
-                    SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"), false);
+                    b.HasIndex("RegionId");
 
-                    b.HasIndex("RegionId")
-                        .IsUnique()
-                        .HasFilter("[RegionId] IS NOT NULL");
-
-                    b.ToTable("Wcs.ExecuteNodePath", (string)null);
+                    b.ToTable("ExecuteNodes");
                 });
 
             modelBuilder.Entity("Wcs.Domain.JobConfigs.JobConfig", b =>
@@ -269,8 +306,8 @@ namespace Wcs.Infrastructure.Database.Migrations
             modelBuilder.Entity("Wcs.Domain.ExecuteNode.ExecuteNodePath", b =>
                 {
                     b.HasOne("Wcs.Domain.Region.Region", "Region")
-                        .WithOne()
-                        .HasForeignKey("Wcs.Domain.ExecuteNode.ExecuteNodePath", "RegionId");
+                        .WithMany()
+                        .HasForeignKey("RegionId");
 
                     b.Navigation("Region");
                 });

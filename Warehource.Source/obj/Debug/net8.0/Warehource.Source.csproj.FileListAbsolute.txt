@@ -273,7 +273,6 @@ D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehour
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehource.Source.AssemblyInfoInputs.cache
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehource.Source.AssemblyInfo.cs
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehource.Source.csproj.CoreCompileInputs.cache
-D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehource.Source.MvcApplicationPartsAssemblyInfo.cs
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehource.Source.MvcApplicationPartsAssemblyInfo.cache
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\scopedcss\bundle\Warehource.Source.styles.css
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets.build.json
@@ -402,3 +401,5 @@ D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\Identity
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\Identity.Domain.pdb
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\Identity.Presentation.pdb
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\示例数据.xlsx
+D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehource.Source.MvcApplicationPartsAssemblyInfo.cs
+D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

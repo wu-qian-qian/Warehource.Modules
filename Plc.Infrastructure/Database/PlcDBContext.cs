@@ -14,10 +14,10 @@ public sealed class PlcDBContext : BaseDbContext, IUnitOfWork
     {
     }
 
-    public DbSet<S7EntityItem> S7Entities { get; }
+    public DbSet<S7EntityItem> S7Entitys { get; set; }
 
 
-    public DbSet<S7NetConfig> Nets { get; }
+    public DbSet<S7NetConfig> Nets { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -27,7 +27,6 @@ public sealed class PlcDBContext : BaseDbContext, IUnitOfWork
         modelBuilder.ApplyConfiguration(new EntityItemConfiguration());
         modelBuilder.EnableSoftDeletionGlobalFilter();
     }
-
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);

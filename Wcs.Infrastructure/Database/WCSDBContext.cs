@@ -7,7 +7,6 @@ using Wcs.Domain.Region;
 using Wcs.Domain.Task;
 using Wcs.Domain.TaskExecuteStep;
 using Wcs.Infrastructure.DB.Device;
-using Wcs.Infrastructure.DB.ExecuteNodePath;
 using Wcs.Infrastructure.DB.JobConfig;
 using Wcs.Infrastructure.DB.Region;
 using Wcs.Infrastructure.DB.TaskExecuteStep;

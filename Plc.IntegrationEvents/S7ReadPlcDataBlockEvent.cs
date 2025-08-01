@@ -10,10 +10,16 @@ namespace Plc.CustomEvents;
 ///     设备名+变量名读取 需要ip地址和设备名和变量名
 ///     3种读取模式
 /// </summary>
-public class S7CacheMemoryEvent : IMassTransitDomainEvent
+public class S7ReadPlcDataBlockEvent : IMassTransitDomainEvent
 {
-    public S7CacheMemoryEvent(DateTime occurredOnUtc) : base(occurredOnUtc)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="occurredOnUtc"></param>
+    /// <param name="id">通过id标识</param>
+    public S7ReadPlcDataBlockEvent(DateTime occurredOnUtc) : base(occurredOnUtc)
     {
+
     }
 
     /// <summary>
@@ -32,10 +38,12 @@ public class S7CacheMemoryEvent : IMassTransitDomainEvent
     ///     是否使用缓存
     ///     这样可以减少对数据库的访问
     /// </summary>
-    public bool UserMemory { get; set; } = true;
+    public bool UseMemory { get; set; } = true;
 
     /// <summary>
     ///     是否为批量读取
+    ///     非批处理需要唯一id来获取缓存中的变量
+    ///     批处理可通过唯一id，或者设备好，ip
     /// </summary>
     public bool IsBath
     {

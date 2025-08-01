@@ -11,10 +11,32 @@ namespace Common.TransferBuffer;
 /// </summary>
 public static class TransferBufferHelper
 {
-    public static bool GetBool(byte buffer, byte index)
+    public static bool ByteFromBool(byte buffer, byte index)
     {
         var bitArray = new BitArray(new[] { buffer });
         return bitArray[index];
+    }
+
+    /// <summary>
+    ///     bit 转换byte
+    /// </summary>
+    /// <param name="buffer"></param>
+    /// <param name="index"></param>
+    /// <param name="bool"></param>
+    /// <returns></returns>
+    /// <exception cref="AggregateException"></exception>
+    public static byte BoolFromByte(byte buffer, byte index, bool @bool)
+    {
+        if (index > 7)
+            throw new AggregateException("一个byte为0---7位");
+        var bitArray = new BitArray(new[] { buffer });
+        bitArray[index] = @bool;
+        byte result = 0;
+        for (var i = 0; i < bitArray.Length; i++)
+            if (bitArray[i])
+                // 如果该位为1，则累加2的i次方
+                result |= (byte)(1 << i);
+        return result;
     }
 
     #region PLC的Word类型对应ushort 此处为Plc Word类型操作
@@ -41,7 +63,7 @@ public static class TransferBufferHelper
     /// <param name="value"></param>
     /// <param name="isLittleEndian">对方是否为小端</param>
     /// <returns></returns>
-    public static byte[] UshortToByteArray(ushort value, bool isLittleEndian = false)
+    public static byte[] WordToByteArray(ushort value, bool isLittleEndian = false)
     {
         if (BitConverter.IsLittleEndian == isLittleEndian) return BitConverter.GetBytes(value);
 
@@ -145,6 +167,11 @@ public static class TransferBufferHelper
         return BitConverter.ToSingle(bytes, 0);
     }
 
+    /// <summary>
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="isLittleEndian" 其他系统是否为小端存储></param>
+    /// <returns></returns>
     public static byte[] RealToByteArray(float value, bool isLittleEndian = false)
     {
         var bytes = BitConverter.GetBytes(value);
@@ -163,7 +190,13 @@ public static class TransferBufferHelper
 
     #region PLC的LReal类型对应Double 此处为Plc LReal类型操作
 
-    public static double LRealFromByteArray(byte[] bytes, bool isLittleEndian)
+    /// <summary>
+    /// </summary>
+    /// <param name="bytes"></param>
+    /// <param name="isLittleEndian" 其他系统是否为小端存储></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentException"></exception>
+    public static double LRealFromByteArray(byte[] bytes, bool isLittleEndian = false)
     {
         if (bytes.Length != 8) throw new ArgumentException("Wrong number of bytes. Bytes array must contain 8 bytes.");
 
@@ -172,7 +205,7 @@ public static class TransferBufferHelper
         return BitConverter.ToDouble(bytes, 0);
     }
 
-    public static byte[] LRealToByteArray(double value, bool isLittleEndian)
+    public static byte[] LRealToByteArray(double value, bool isLittleEndian = false)
     {
         var bytes = BitConverter.GetBytes(value);
         if (BitConverter.IsLittleEndian) Array.Reverse(bytes);
@@ -227,7 +260,7 @@ public static class TransferBufferHelper
         }
     }
 
-    public static byte[] ToByteArray(string? value, int reservedLength, Encoding stringEncoding)
+    public static byte[] S7StringToByteArray(string? value, int reservedLength, Encoding stringEncoding)
     {
         if (value == null) throw new ArgumentNullException("value");
 

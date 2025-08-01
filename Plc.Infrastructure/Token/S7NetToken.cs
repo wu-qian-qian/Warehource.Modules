@@ -7,13 +7,12 @@ using Plc.Contracts.Respon;
 using Plc.Infrastructure.Helper;
 using Plc.Shared;
 using S7.Net;
-using S7.Net.Types;
 using Serilog;
 using String = System.String;
 
-namespace Plc.Infrastructure.S7Net;
+namespace Plc.Infrastructure.Token;
 
-public class S7NetToken : Application.Net.S7Net
+public partial class S7NetToken : Application.Net.S7Net
 {
     public S7NetToken(S7NetDto netConfig)
     {
@@ -327,19 +326,5 @@ public class S7NetToken : Application.Net.S7Net
             }
         }
         return @bool;
-    }
-    
-    public static DataItem CreatReadS7Item(ReadBufferInput input)
-    {
-        var dbType = EnumConvert.S7BlockTypeToDataType(input.S7BlockType);
-        var bulkItem = new DataItem
-        {
-            DB = input.DBAddress,
-            StartByteAdr = input.DBStart,
-            BitAdr = input.DBBit.Value,
-            Count = input.DBEnd - input.DBStart,
-            DataType = dbType
-        };
-        return bulkItem;
     }
 }

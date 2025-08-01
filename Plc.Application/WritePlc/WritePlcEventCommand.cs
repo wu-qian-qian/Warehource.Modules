@@ -11,8 +11,7 @@ public class WritePlcEventCommand : ICommand
     /// <summary>
     ///     PLC的读取数据结构
     /// </summary>
-    public IEnumerable<ReadBufferInput> readBufferInputs;
-
+    public IEnumerable<WriteBufferInput> writeBufferInputs;
     public string? Ip { get; set; }
 
     /// <summary>
@@ -23,15 +22,7 @@ public class WritePlcEventCommand : ICommand
     /// <summary>
     ///     变量名
     /// </summary>
-    public IEnumerable<string> DBNames { get; set; }
+    public Dictionary<string,string> DBNameToDataValue { get; set; }
 
-    /// <summary>
-    ///     是否使用内存缓存
-    ///     可以减少对数据库的访问
-    /// </summary>
-    public bool UseMemory { get; set; }
-
-    public bool IsBath { get; set; } = true;
-
-    public string Key { get; set; }
+    public bool UseMemory { get; set; } = true;
 }
