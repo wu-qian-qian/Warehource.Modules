@@ -1,4 +1,5 @@
-﻿using Common.Application.Caching;
+﻿using System.Buffers;
+using Common.Application.Caching;
 using Common.Application.Log;
 using Common.Application.MediatR.Message;
 using Common.Shared;
@@ -11,26 +12,26 @@ namespace Plc.Application.ReadPlc;
 ///     最终处理者
 /// </summary>
 /// <param name="service"></param>
-internal class ReadlPlcEventHandle(INetService netService, ICacheService cacheService)
-    : ICommandHandler<PlcEventCommand>
+internal class ReadPlcEventHandle(INetService netService)
+    : ICommandHandler<ReadPlcEventCommand,byte[]>
 {
     /// <summary>
     ///     进行一些操作
-    ///   Todo  添加方式将读取的数据以json的方式存储
+    ///     Todo  添加方式将读取的数据以json的方式存储
     /// </summary>
     /// <param name="request"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    public async Task Handle(PlcEventCommand request, CancellationToken cancellationToken)
+    public async Task<byte[]> Handle(ReadPlcEventCommand request, CancellationToken cancellationToken)
     {
-        var memory = new List<byte>();
+        List<byte> memory = new();
         foreach (var input in request.readBufferInputs)
         {
             var buffer = await netService.ReadAsync(input);
             memory.AddRange(buffer);
         }
-        await cacheService.SetAsync(request.DeviceName.GetHashCode().ToString(), memory.ToArray());
         Log.Logger.ForCategory(LogCategory.Net)
-            .Error($"IP:{request.Ip} 设备名称{request.DeviceName}未找到对应的DB块或地址");
+            .Error($"IP:{request.Ip} 设备名称{request.DeviceName}读取成功");
+        return memory.ToArray();
     }
 }

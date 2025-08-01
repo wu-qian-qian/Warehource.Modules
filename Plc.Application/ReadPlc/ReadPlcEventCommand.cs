@@ -6,7 +6,7 @@ namespace Plc.Application.ReadPlc;
 /// <summary>
 ///     上层的 模型
 /// </summary>
-public class PlcEventCommand : ICommand
+public class ReadPlcEventCommand : ICommand<byte[]>
 {
     /// <summary>
     ///     PLC的读取数据结构
@@ -16,12 +16,12 @@ public class PlcEventCommand : ICommand
     public string? Ip { get; set; }
 
     /// <summary>
-    /// 设备名
+    ///     设备名
     /// </summary>
     public string? DeviceName { get; set; }
-    
+
     /// <summary>
-    /// 变量名
+    ///     变量名
     /// </summary>
     public IEnumerable<string> DBNames { get; set; }
 
@@ -33,5 +33,5 @@ public class PlcEventCommand : ICommand
 
     public bool IsBath { get; set; } = true;
     
-    public string Key { get; set; }
+    public Guid? Id { get; set; }
 }

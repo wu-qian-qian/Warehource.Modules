@@ -3,7 +3,7 @@
 namespace Plc.Application.ReadPlc;
 
 ///
-internal class ReadPlcEventCommandValidator : AbstractValidator<PlcEventCommand>
+internal class ReadPlcEventCommandValidator : AbstractValidator<ReadPlcEventCommand>
 {
     public ReadPlcEventCommandValidator()
     {
