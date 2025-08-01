@@ -4,7 +4,7 @@ using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Plc.Application.PlcEvent.Insert;
+using Plc.Application.DBHandler.Insert;
 using Plc.Contracts.Request;
 
 namespace Plc.Presentation.S7Plc;

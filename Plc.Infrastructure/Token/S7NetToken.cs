@@ -2,6 +2,7 @@ using System.Text;
 using Common.Application.Log;
 using Common.Shared;
 using Common.TransferBuffer;
+using Plc.Application.Abstract;
 using Plc.Contracts.Input;
 using Plc.Contracts.Respon;
 using Plc.Infrastructure.Helper;
@@ -12,7 +13,7 @@ using String = System.String;
 
 namespace Plc.Infrastructure.Token;
 
-public partial class S7NetToken : Application.Net.S7Net
+public partial class S7NetToken : S7Net
 {
     public S7NetToken(S7NetDto netConfig)
     {
@@ -25,6 +26,10 @@ public partial class S7NetToken : Application.Net.S7Net
         _plc = new S7.Net.Plc(s7Cpu, netConfig.Ip, netConfig.Port, netConfig.Rack, netConfig.Solt);
         _plc.ReadTimeout = netConfig.ReadTimeOut;
         _plc.WriteTimeout = netConfig.WriteTimeOut;
+        if (netConfig.IsUse)
+        {
+           this.Connect();
+        }
     }
 
     public override void Connect()
@@ -311,7 +316,7 @@ public partial class S7NetToken : Application.Net.S7Net
                     await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
                     var buffer=await  ReadAsync(new ReadBufferInput
                     {
-                        DBBit = item.DBBit.Value,
+                        DBBit = item.DBBit,
                         DBAddress = item.DBAddress,
                         S7BlockType = item.S7BlockType,
                         DBEnd = item.Buffer.Length,

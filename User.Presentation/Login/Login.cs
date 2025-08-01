@@ -1,6 +1,6 @@
 ﻿using Common.Application.Encodings;
 using Common.Presentation.Endpoints;
-using Identity.Application.LoginHandler;
+using Identity.Application.Handler.Login;
 using Identity.Contrancts.Request;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;

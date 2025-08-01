@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.Job.Get;
+using Wcs.Application.DBHandler.Job.Get;
 
 namespace Wcs.Presentation.Job.Get;
 

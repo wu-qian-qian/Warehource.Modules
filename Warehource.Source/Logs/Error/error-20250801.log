@@ -119,3 +119,4 @@
    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
 2025-08-01 10:36:56.797 +08:00 [ERR] Microsoft.AspNetCore.Http.DefaultHttpRequest--::1--用户不存在
 2025-08-01 10:39:14.059 +08:00 [ERR] Microsoft.AspNetCore.Http.DefaultHttpRequest--::1--用户不存在
+2025-08-01 11:13:17.035 +08:00 [ERR] Microsoft.AspNetCore.Http.DefaultHttpRequest--::1--AddJobEvent--不存在该类型

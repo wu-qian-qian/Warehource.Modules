@@ -4,7 +4,7 @@ using Common.Domain.Event;
 using Common.Shared;
 using MassTransit;
 using MediatR;
-using Plc.Application.ReadPlc;
+using Plc.Application.PlcHandler.Read;
 using Plc.CustomEvents;
 using Serilog;
 

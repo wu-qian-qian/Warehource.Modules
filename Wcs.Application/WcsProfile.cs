@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Wcs.Application.Job.Insert;
+using Wcs.Application.DBHandler.Job.Insert;
 using Wcs.Contracts.Respon.Job;
 using Wcs.Domain.JobConfigs;
 

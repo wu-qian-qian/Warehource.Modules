@@ -1,5 +1,5 @@
 ﻿using Common.Presentation.Endpoints;
-using Identity.Application.GetQuery.Role;
+using Identity.Application.Handler.Get.Role;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;

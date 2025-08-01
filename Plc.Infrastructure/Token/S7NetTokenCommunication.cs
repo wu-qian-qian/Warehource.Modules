@@ -13,7 +13,7 @@ public partial class S7NetToken
         {
             DB = input.DBAddress,
             StartByteAdr = input.DBStart,
-            BitAdr =(byte)input.DBBit.Value,
+            BitAdr =input.DBBit??0,
             Count = input.DBEnd - input.DBStart,
             DataType = dbType
         };

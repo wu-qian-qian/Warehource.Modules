@@ -11,7 +11,8 @@ using Plc.Application;
 using Plc.Application.Abstract;
 using Plc.Domain.S7;
 using Plc.Infrastructure.Database;
-using Plc.Infrastructure.S7Net;
+using Plc.Infrastructure.db;
+using Plc.Infrastructure.Service;
 using AssemblyReference = Plc.Presentation.AssemblyReference;
 
 namespace Plc.Infrastructure;

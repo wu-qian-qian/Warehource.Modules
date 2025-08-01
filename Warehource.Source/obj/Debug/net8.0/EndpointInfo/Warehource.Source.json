@@ -656,6 +656,9 @@
           "writeTimeOut": {
             "type": "integer",
             "format": "int32"
+          },
+          "isUse": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

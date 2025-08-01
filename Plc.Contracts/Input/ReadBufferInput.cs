@@ -15,7 +15,7 @@ public class ReadBufferInput
 
     public int DBEnd { get; set; }
 
-    public int? DBBit { get; set; }
+    public byte? DBBit { get; set; }
 
     /// <summary>
     ///     2的16次方

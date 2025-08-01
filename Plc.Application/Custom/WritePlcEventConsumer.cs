@@ -4,7 +4,7 @@ using Common.Domain.Event;
 using Common.Shared;
 using MassTransit;
 using MediatR;
-using Plc.Application.ReadPlc;
+using Plc.Application.PlcHandler.Write;
 using Plc.CustomEvents;
 using Serilog;
 
@@ -28,7 +28,6 @@ internal class WritePlcEventConsumer<TIntegrationEvent>(IMassTransitEventBus bus
         var readPlcEvent = new WritePlcEventCommand()
         {
             UseMemory = s7ReadPlcConsumevent.UseMemory,
-            Ip = s7ReadPlcConsumevent.Ip,
             DeviceName = s7ReadPlcConsumevent.DeviceName,
             DBNameToDataValue= s7ReadPlcConsumevent.DBNameToDataValue
         };

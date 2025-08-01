@@ -3,6 +3,7 @@ using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using Plc.Application.Behaviors;
 using Plc.Application.Behaviors.Read;
+using Plc.Application.Behaviors.Write;
 using Plc.Application.Custom;
 using Plc.CustomEvents;
 
@@ -22,12 +23,14 @@ public static class ApplicationConfigurator
         configuration.AddOpenBehavior(typeof(BathReadS7PlcPipelineBehavior<,>));
         configuration.AddOpenBehavior(typeof(SingleReadS7PlcPipelineBehavior<,>));
         configuration.AddOpenBehavior(typeof(FilterReadS7PlcPipelineBehavior<,>));
+        configuration.AddOpenBehavior(typeof(WriteDtoInitPipelineBehavior<,>));
     }
 
     public static void AddCustom(IRegistrationConfigurator registrationConfigurator)
     {
         registrationConfigurator.AddConsumer<ReadPlcEventConsumer<S7ReadPlcDataBlockEvent>>();
         registrationConfigurator.AddConsumer<WritePlcEventConsumer<S7WritePlcDataBlockEvent>>();
+
     }
 
     public static void AddAutoMapper(IMapperConfigurationExpression config)

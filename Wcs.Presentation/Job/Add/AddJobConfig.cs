@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.Job.Insert;
+using Wcs.Application.DBHandler.Job.Insert;
 using Wcs.Contracts.Request.Job;
 
 namespace Wcs.Presentation.Job.Add;

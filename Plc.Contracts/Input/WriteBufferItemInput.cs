@@ -14,7 +14,7 @@ public class WriteBufferItemInput
     /// <summary>
     ///     bit地址
     /// </summary>
-    public int? DBBit { get; set; }
+    public byte? DBBit { get; set; }
 
     /// <summary>
     ///     起始地址
@@ -29,7 +29,7 @@ public class WriteBufferItemInput
     /// <summary>
     ///     数组长度
     /// </summary>
-    public int? ArratCount { get; set; }
+    public byte? ArratCount { get; set; }
 
     public S7BlockTypeEnum S7BlockType { get; set; }
 
