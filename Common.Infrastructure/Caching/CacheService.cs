@@ -21,14 +21,12 @@ internal sealed class CacheService(IDistributedCache cache) : ICacheService
         CancellationToken cancellationToken = default)
     {
         var bytes = Serialize(value);
-
         return cache.SetAsync(key, bytes, CacheOptions.Create(expiration), cancellationToken);
     }
 
-    public async Task<byte[]> GetAsync(string key, CancellationToken cancellationToken = default)
+    public async Task<byte[]?> GetAsync(string key, CancellationToken cancellationToken = default)
     {
         var bytes = await cache.GetAsync(key, cancellationToken);
-
         return bytes;
     }
 

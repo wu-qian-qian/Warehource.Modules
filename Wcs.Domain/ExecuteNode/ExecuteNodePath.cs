@@ -19,6 +19,7 @@ public class ExecuteNodePath : IEntity
 
     public string CurrentDeviceName { get; set; }
 
+    public string? NextDeviceName { get; set; }
     public Guid? RegionId { get; set; }
 
     public Region.Region Region { get; set; }

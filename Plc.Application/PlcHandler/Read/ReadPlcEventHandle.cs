@@ -11,7 +11,7 @@ namespace Plc.Application.PlcHandler.Read;
 /// </summary>
 /// <param name="service"></param>
 internal class ReadPlcEventHandle(INetService netService)
-    : ICommandHandler<ReadPlcEventCommand,byte[]>
+    : ICommandHandler<ReadPlcEventCommand, byte[]>
 {
     /// <summary>
     ///     进行一些操作
@@ -26,13 +26,13 @@ internal class ReadPlcEventHandle(INetService netService)
         foreach (var input in request.readBufferInputs)
         {
             var buffer = await netService.ReadAsync(input);
-            if(buffer!=null)
+            if (buffer != null)
                 memory.AddRange(buffer);
             else
                 Log.Logger.ForCategory(LogCategory.Net)
-           .Error($"IP:{request.Ip} 设备名称{request.DeviceName}读取失败");
+                    .Error($"IP:{request.Ip} 设备名称{request.DeviceName}读取失败");
         }
-       
+
         return memory.ToArray();
     }
 }

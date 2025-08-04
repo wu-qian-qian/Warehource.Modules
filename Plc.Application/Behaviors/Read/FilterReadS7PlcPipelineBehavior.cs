@@ -1,7 +1,6 @@
 ﻿using Common.Application.Caching;
 using MediatR;
 using Plc.Application.PlcHandler.Read;
-using Plc.Domain.S7;
 
 namespace Plc.Application.Behaviors.Read;
 
@@ -9,32 +8,48 @@ namespace Plc.Application.Behaviors.Read;
 ///     筛选者，筛选出符合处理条件的模型
 /// </summary>
 internal class FilterReadS7PlcPipelineBehavior<TRequest, TResponse>(ICacheService cacheService)
-    : IPipelineBehavior<TRequest, TResponse> where TRequest : ReadPlcEventCommand
+    : IPipelineBehavior<TRequest, TResponse>
+    where TRequest : ReadPlcEventCommand
 {
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next,
         CancellationToken cancellationToken)
     {
-        string key = String.Empty;;
+        var key = string.Empty;
+        ;
         if (request.IsBath)
         {
             if (request.DeviceName != null)
-            {
                 key = request.Id != null ? request.Id.ToString() : request.DeviceName;
-            } 
             else
-            {
                 key = request.Id != null ? request.Id.ToString() : request.Ip;
-            }
         }
         else
         {
             key = request.Id.ToString();
         }
-        var response= await next();
-        if (response is byte[] buffer)
+
+        //分布式事件触发会出现无返回值
+        if (request.IsApi == false)
         {
-            cacheService.SetAsync(key, buffer);
+            var buffer = await cacheService.GetAsync(key);
+            //减少了读取次数保证了
+            if (buffer == null)
+            {
+                var response = await next();
+                if (response is byte[] tempbuffer)
+                {
+                    buffer = tempbuffer;
+                    cacheService.SetAsync(key, buffer);
+                }
+            }
+
+            return default;
         }
-        return response;
+        else
+        {
+            var response = await next();
+            if (response is byte[] buffer) cacheService.SetAsync(key, buffer);
+            return response;
+        }
     }
 }

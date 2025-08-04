@@ -60,7 +60,7 @@ public static class SerilogExtensions
                 .WriteTo.File("Logs/Error/error-.log", rollingInterval: RollingInterval.Day,
                     outputTemplate:
                     "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
-            
+
             //Event日志
             .WriteTo.Logger(l => l
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&

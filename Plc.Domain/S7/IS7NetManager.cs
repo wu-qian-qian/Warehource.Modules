@@ -12,6 +12,6 @@ public interface IS7NetManager
     public Task<S7NetConfig> GetNetWiteIpAsync(string ip);
 
     public Task<List<S7EntityItem>> GetNetWiteDeviceNameAsync(string deviceName);
-    
-    public Task<List<S7EntityItem>> GetDeviceNameWithDBNameAsync(string deviceName,List<string> dbNames);
+
+    public Task<List<S7EntityItem>> GetDeviceNameWithDBNameAsync(string deviceName, List<string> dbNames);
 }

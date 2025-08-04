@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.infrastructure\\database\\plcdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|solutionrelative:plc.infrastructure\\database\\plcdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +35,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlcDBContext.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\Database\\PlcDBContext.cs",
+              "RelativeDocumentMoniker": "Plc.Infrastructure\\Database\\PlcDBContext.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\Database\\PlcDBContext.cs",
+              "RelativeToolTip": "Plc.Infrastructure\\Database\\PlcDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T00:32:49.383Z",
+              "EditorCaption": ""
             }
           ]
         }

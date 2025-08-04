@@ -20,12 +20,13 @@ internal class BathReadS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManager 
                 if (request.DeviceName != null)
                 {
                     //将该设备模型加载到内存
-                    var key = request.DeviceName+"Bath";
-                    if (PlcReadWriteDtoHelper._readBufferInputs.ContainsKey(key)==false)
+                    var key = request.DeviceName + "Bath";
+                    if (PlcReadWriteDtoHelper._readBufferInputs.ContainsKey(key) == false)
                     {
                         var s7EntityItems = await netManager.GetNetWiteDeviceNameAsync(request.DeviceName);
-                        PlcReadWriteDtoHelper.UseMemoryInitReadBufferInput(key,s7EntityItems.ToArray());
+                        PlcReadWriteDtoHelper.UseMemoryInitReadBufferInput(key, s7EntityItems.ToArray());
                     }
+
                     request.readBufferInputs = PlcReadWriteDtoHelper._readBufferInputs[key];
                 }
                 else
@@ -36,6 +37,7 @@ internal class BathReadS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManager 
                         var netConfig = await netManager.GetNetWiteIpAsync(request.Ip);
                         PlcReadWriteDtoHelper.UseMemoryInitReadBufferInput(netConfig, request.Ip);
                     }
+
                     request.readBufferInputs = PlcReadWriteDtoHelper._readBufferInputs[request.Ip];
                 }
             }
@@ -48,8 +50,8 @@ internal class BathReadS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManager 
                 }
                 else
                 {
-                   var netConfig = await netManager.GetNetWiteIpAsync(request.Ip);
-                   request.readBufferInputs = PlcReadWriteDtoHelper.InitBufferInput(netConfig);
+                    var netConfig = await netManager.GetNetWiteIpAsync(request.Ip);
+                    request.readBufferInputs = PlcReadWriteDtoHelper.InitBufferInput(netConfig);
                 }
             }
         }

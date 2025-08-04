@@ -10,8 +10,4 @@
         <ProjectReference Include="..\Wcs.Shared\Wcs.Shared.csproj"/>
     </ItemGroup>
 
-    <ItemGroup>
-        <Folder Include="Respon\"/>
-    </ItemGroup>
-
 </Project>

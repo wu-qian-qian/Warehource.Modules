@@ -10,7 +10,7 @@ public interface ICacheService
         TimeSpan? expiration = null,
         CancellationToken cancellationToken = default);
 
-    Task<byte[]> GetAsync(string key, CancellationToken cancellationToken = default);
+    Task<byte[]?> GetAsync(string key, CancellationToken cancellationToken = default);
 
     Task SetAsync(
         string key,

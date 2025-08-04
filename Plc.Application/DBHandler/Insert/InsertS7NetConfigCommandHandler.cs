@@ -26,7 +26,7 @@ public class InsertS7NetConfigCommandHandler(IS7NetManager netManager, IUnitOfWo
                 Rack = netDto.Rack,
                 ReadTimeOut = netDto.ReadTimeOut,
                 WriteTimeOut = netDto.WriteTimeOut,
-                IsUse=false,
+                IsUse = false
             };
             var s7entityItems = request.S7NetEntityItemRequests
                 .Where(p => p.Ip == netDto.Ip);
@@ -44,7 +44,7 @@ public class InsertS7NetConfigCommandHandler(IS7NetManager netManager, IUnitOfWo
                     Index = p.Index,
                     ArrtypeLength = p.ArrtypeLength,
                     DeviceName = p.DeviceName,
-                    IsUse=true
+                    IsUse = true
                 });
             config.S7EntityItems = s7EntityItemsList.ToList();
             s7NetConfigs.Add(config);

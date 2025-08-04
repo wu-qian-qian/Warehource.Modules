@@ -82,7 +82,10 @@ public static class QuatrzJobExtensions
 
         var trigger = TriggerBuilder.Create()
             .WithSimpleSchedule(p
-            => { p.WithInterval(new TimeSpan(0, 0, 0, 0, jobConfig.Timer)).RepeatForever(); })
+                =>
+            {
+                p.WithInterval(new TimeSpan(0, 0, 0, 0, jobConfig.Timer)).RepeatForever();
+            })
             .Build();
         scheduler.ScheduleJob(jobDetail, trigger);
 

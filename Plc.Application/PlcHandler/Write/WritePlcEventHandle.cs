@@ -1,6 +1,5 @@
 ﻿using Common.Application.MediatR.Message;
 using Plc.Application.Abstract;
-using Plc.Contracts.Input;
 using Plc.Domain.S7;
 
 namespace Plc.Application.PlcHandler.Write;
@@ -13,7 +12,6 @@ internal class WritelPlcEventHandle(INetService netService, IS7NetManager netMan
     : ICommandHandler<WritePlcEventCommand>
 {
     /// <summary>
-    ///   
     /// </summary>
     /// <param name="request"></param>
     /// <param name="cancellationToken"></param>
@@ -21,12 +19,9 @@ internal class WritelPlcEventHandle(INetService netService, IS7NetManager netMan
     public async Task Handle(WritePlcEventCommand request, CancellationToken cancellationToken)
     {
         var dbName = request.DBNameToDataValue.Keys.ToArray();
-        var s7EntityItems =await netManager
+        var s7EntityItems = await netManager
             .GetDeviceNameWithDBNameAsync(request.DeviceName, dbName.ToList());
         var S7EntityItemGroup = s7EntityItems.GroupBy(p => p.Ip);
-        foreach (var item in request.writeBufferInputs)
-        {
-            await netService.WriteAsync(item);
-        }
+        foreach (var item in request.writeBufferInputs) await netService.WriteAsync(item);
     }
 }

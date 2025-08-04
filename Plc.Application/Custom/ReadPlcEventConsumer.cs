@@ -1,6 +1,4 @@
-﻿using Common.Application.Event;
-using Common.Application.Log;
-using Common.Domain.Event;
+﻿using Common.Application.Log;
 using Common.Shared;
 using MassTransit;
 using MediatR;
@@ -37,7 +35,7 @@ internal class ReadPlcEventConsumer<TIntegrationEvent>(ISender sender)
         try
         {
             //3种读取模式   设备单独读取、ip单独读取，自定义变量读取
-          await sender.Send(readPlcEvent);
+            await sender.Send(readPlcEvent);
         }
         catch (Exception e)
         {

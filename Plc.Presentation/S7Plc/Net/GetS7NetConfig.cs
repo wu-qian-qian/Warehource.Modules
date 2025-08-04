@@ -12,10 +12,7 @@ internal class GetS7NetConfig : IEndpoint
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
         app.MapGet("plc/get-allplc",
-                async (ISender sender) =>
-                {
-                    return await sender.Send(new GetS7NetQuery());
-                })
+                async (ISender sender) => { return await sender.Send(new GetS7NetQuery()); })
             .WithTags(AssemblyReference.Plc);
     }
 }

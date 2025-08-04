@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using Plc.Application.PlcHandler.Read;
 using Plc.Domain.S7;
-using S7.Net;
 
 namespace Plc.Application.Behaviors.Read;
 
@@ -20,19 +19,22 @@ internal class SingleReadS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManage
             if (request.UseMemory)
             {
                 //加载所有的变量模型
-                var key = request.DeviceName+"Sigle";
-                if (PlcReadWriteDtoHelper._readBufferInputs.ContainsKey(key)==false)
+                var key = request.DeviceName + "Sigle";
+                if (PlcReadWriteDtoHelper._readBufferInputs.ContainsKey(key) == false)
                 {
                     var s7EntityItems = await netManager.GetNetWiteDeviceNameAsync(request.DeviceName);
-                    PlcReadWriteDtoHelper.UseMemoryInitReadBufferInput(key,s7EntityItems.ToArray());
+                    PlcReadWriteDtoHelper.UseMemoryInitReadBufferInput(key, s7EntityItems.ToArray());
                 }
+
                 //筛选出指定的模型
-                request.readBufferInputs = PlcReadWriteDtoHelper._readBufferInputs[key].Where(p=>request.DBNames.Contains(p.HashId));
+                request.readBufferInputs = PlcReadWriteDtoHelper._readBufferInputs[key]
+                    .Where(p => request.DBNames.Contains(p.HashId));
             }
             else
             {
                 //直接获取到指定的变量模型
-                var s7EntityItems = await netManager.GetDeviceNameWithDBNameAsync(request.DeviceName, request.DBNames.ToList());
+                var s7EntityItems =
+                    await netManager.GetDeviceNameWithDBNameAsync(request.DeviceName, request.DBNames.ToList());
                 request.readBufferInputs = PlcReadWriteDtoHelper.CreatReadBufferInput(s7EntityItems.ToArray());
             }
         }

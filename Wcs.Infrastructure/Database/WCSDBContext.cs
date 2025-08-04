@@ -5,11 +5,9 @@ using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.JobConfigs;
 using Wcs.Domain.Region;
 using Wcs.Domain.Task;
-using Wcs.Domain.TaskExecuteStep;
 using Wcs.Infrastructure.DB.Device;
 using Wcs.Infrastructure.DB.JobConfig;
 using Wcs.Infrastructure.DB.Region;
-using Wcs.Infrastructure.DB.TaskExecuteStep;
 using Wcs.Infrastructure.DB.WcsTask;
 
 namespace Wcs.Infrastructure.Database;
@@ -28,7 +26,7 @@ public sealed class WCSDBContext : BaseDbContext, IUnitOfWork
 
     public DbSet<Region> Regions { get; set; }
 
-    public DbSet<TaskExecuteStep> TaskExecuteSteps { get; set; }
+    // public DbSet<TaskExecuteStep> TaskExecuteSteps { get; set; }
 
     public DbSet<WcsTask> WcsTasks { get; set; }
 
@@ -40,7 +38,7 @@ public sealed class WCSDBContext : BaseDbContext, IUnitOfWork
         modelBuilder.ApplyConfiguration(new RegionConfiguration());
         modelBuilder.ApplyConfiguration(new JobConfigConfiguration());
         modelBuilder.ApplyConfiguration(new DeviceConfiguration());
-        modelBuilder.ApplyConfiguration(new TaskExecuteStepConfiguration());
+        // modelBuilder.ApplyConfiguration(new TaskExecuteStepConfiguration());
         modelBuilder.ApplyConfiguration(new WcsTaskConfiguration());
         modelBuilder.EnableSoftDeletionGlobalFilter();
     }

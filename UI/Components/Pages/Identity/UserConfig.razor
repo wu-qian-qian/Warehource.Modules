@@ -1,0 +1,70 @@
+﻿@page "/UserConfig"
+@using UI.Model.Identity
+@using UI.Service.IdentityService
+@inject IIdentityService _IdentityService
+
+<PageTitle>User</PageTitle>
+
+<div>
+    <Row Style="display: flex; justify-content: space-between; margin:5px">
+        <AntDesign.Col Flex="1">
+            <Button Type="ButtonType.Primary" Style="margin-top:20px" @onclick="_ => LoadTableData()">重新加载</Button>
+        </AntDesign.Col>
+        <AntDesign.Col Flex="8">
+            <div Style="margin-top:20px">
+                <Text>角色名</Text>
+                <Input Placeholder="请输入" TValue="string" width="160px"/>
+            </div>
+        </AntDesign.Col>
+
+        <AntDesign.Col Flex="1">
+            <Button Type="ButtonType.Primary" Style="margin-top:20px">重置</Button>
+        </AntDesign.Col>
+    </Row>
+    <Row Style="display: flex;margin-top: 30px; flex-direction: column; height: calc(100vh - 100px);">
+        <Table DataSource="data" PageSize="10" ScrollX="1680" StickyOffsetHeader="64" Class="my-table">
+            <PropertyColumn Property="c => c.Name" Width="120" Fixed="ColumnFixPlacement.Left" Title="名称"/>
+            <PropertyColumn Property="c => c.RoleName" Width="80" Title="角色"/>
+            <PropertyColumn Property="c => c.Email" Width="140" Title="邮箱"/>
+            <PropertyColumn Property="c => c.Phone" Width="140" Title="电话"/>
+            <PropertyColumn Property="c => c.Username" Width="100" Title="账户"/>
+            <PropertyColumn Property="c => c.LockoutEnd" Width="160" Title="锁定时间"/>
+        </Table>
+    </Row>
+</div>
+
+
+<style>
+    /* 在 wwwroot/css/site.css 或组件样式部分添加 */
+    .my-table .ant-table-tbody > tr:nth-child(odd) > td {
+        background-color: #f8f8f8; /* 浅色行 */
+    }
+
+    .my-table .ant-table-tbody > tr:nth-child(even) > td {
+        background-color: #ffffff; /* 白色行（或更深颜色） */
+    }
+
+    /* 鼠标悬停效果 */
+    .my-table .ant-table-tbody > tr:hover > td {
+        background-color: #e6f7ff !important; /* 悬停高亮色 */
+    }
+
+</style>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await LoadTableData();
+    }
+
+    IdentityUserModel[] data;
+
+    async Task LoadTableData()
+    {
+        data = await _IdentityService.GetUsersAsync();
+    }
+
+
+}

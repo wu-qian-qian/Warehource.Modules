@@ -7,7 +7,6 @@ public class WcsTask : IEntity
 {
     public WcsTask() : base(Guid.NewGuid())
     {
-        IsRead = false;
     }
 
     public string TaskCode { get; set; }
@@ -18,6 +17,11 @@ public class WcsTask : IEntity
     public int SerialNumber { get; set; }
 
     /// <summary>
+    ///     容器编码
+    /// </summary>
+    public string Container { get; set; }
+
+    /// <summary>
     ///     任务类型
     /// </summary>
     public WcsTaskTypeEnum TaskType { get; set; }
@@ -26,6 +30,11 @@ public class WcsTask : IEntity
     ///     任务状态
     /// </summary>
     public WcsTaskStatusEnum TaskStatus { get; set; }
+
+    /// <summary>
+    ///     创建系统
+    /// </summary>
+    public CreatorSystemTypeEnum CreatorSystemType { get; set; }
 
     /// <summary>
     ///     任务描述
@@ -42,16 +51,15 @@ public class WcsTask : IEntity
     /// </summary>
     public PutLocation PutLocation { get; set; }
 
-    public bool IsRead { get; set; }
 
     public Guid? DeviceId { get; set; }
 
     public Guid? RegionId { get; set; }
 
-    /// <summary>
-    ///     任务执行步骤
-    /// </summary>
-    public Guid TaskExecuteStepId { get; set; }
-
-    public TaskExecuteStep.TaskExecuteStep TaskExecuteStep { get; set; }
+    // /// <summary>
+    // ///     任务执行步骤
+    // /// </summary>
+    // public Guid TaskExecuteStepId { get; set; }
+    //
+    // public TaskExecuteStep.TaskExecuteStep TaskExecuteStep { get; set; }
 }

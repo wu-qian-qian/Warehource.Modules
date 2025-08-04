@@ -32,6 +32,8 @@ public class ReadPlcEventCommand : ICommand<byte[]>
     public bool UseMemory { get; set; }
 
     public bool IsBath { get; set; } = true;
-    
+
     public Guid? Id { get; set; }
+
+    public bool IsApi { get; set; } = false;
 }

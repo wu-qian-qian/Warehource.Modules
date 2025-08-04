@@ -8,12 +8,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="DBHandler\Job\" />
+        <Folder Include="DBHandler\Job\"/>
         <Folder Include="ExecuteDevice\Behaviors\"/>
     </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\Common.Application\Common.Application.csproj"/>
+        <ProjectReference Include="..\Common\Common.csproj"/>
         <ProjectReference Include="..\Plc.IntegrationEvents\Plc.CustomEvents.csproj"/>
         <ProjectReference Include="..\Wcs.Contracts\Wcs.Contracts.csproj"/>
         <ProjectReference Include="..\Wcs.CustomEvents\Wcs.CustomEvents.csproj"/>

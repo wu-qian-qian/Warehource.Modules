@@ -27,6 +27,7 @@ public sealed class PlcDBContext : BaseDbContext, IUnitOfWork
         modelBuilder.ApplyConfiguration(new EntityItemConfiguration());
         modelBuilder.EnableSoftDeletionGlobalFilter();
     }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);

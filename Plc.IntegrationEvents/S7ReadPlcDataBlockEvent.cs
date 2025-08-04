@@ -13,13 +13,11 @@ namespace Plc.CustomEvents;
 public class S7ReadPlcDataBlockEvent : IMassTransitDomainEvent
 {
     /// <summary>
-    /// 
     /// </summary>
     /// <param name="occurredOnUtc"></param>
     /// <param name="id">通过id标识</param>
     public S7ReadPlcDataBlockEvent(DateTime occurredOnUtc) : base(occurredOnUtc)
     {
-
     }
 
     /// <summary>

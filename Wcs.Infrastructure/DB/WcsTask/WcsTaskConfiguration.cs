@@ -12,9 +12,11 @@ public class WcsTaskConfiguration : IEntityTypeConfiguration<Domain.Task.WcsTask
         builder.HasKey(t => t.Id).IsClustered(false);
         builder.HasIndex(p => p.SerialNumber).IsUnique();
         builder.HasIndex(p => p.TaskCode).IsUnique();
+        builder.Property(p => p.SerialNumber).UseIdentityColumn(4000);
         builder.Property(t => t.TaskCode)
             .IsRequired(false)
             .HasMaxLength(50);
+        builder.Property(p => p.Container).IsRequired().HasMaxLength(50);
         builder.OwnsOne(t => t.GetLocation, g =>
         {
             g.Property(p => p.GetColumn).IsRequired(false).HasMaxLength(10);
@@ -31,13 +33,11 @@ public class WcsTaskConfiguration : IEntityTypeConfiguration<Domain.Task.WcsTask
             g.Property(p => p.PutTunnel).IsRequired(false).HasMaxLength(10);
             g.Property(p => p.PutDepth).IsRequired(false).HasMaxLength(10);
         });
-        builder.HasOne(t => t.TaskExecuteStep)
-            .WithOne()
-            .HasForeignKey<Domain.TaskExecuteStep.TaskExecuteStep>(t => t.Id);
+        // builder.HasOne(t => t.TaskExecuteStep)
+        //     .WithOne()
+        //     .HasForeignKey<Domain.TaskExecuteStep.TaskExecuteStep>(t => t.Id);
 
-        builder.HasOne(a => a.TaskExecuteStep).WithMany()
-            .HasForeignKey(a => a.TaskExecuteStepId);
-
+        //并发字段
         builder.Property<byte[]>("Version").IsRowVersion();
     }
 }

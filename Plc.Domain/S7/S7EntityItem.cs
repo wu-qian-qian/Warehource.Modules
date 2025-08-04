@@ -13,6 +13,7 @@ public class S7EntityItem : IEntity
     }
 
     public string Ip { get; set; }
+
     /// <summary>
     ///     PLC的的数据类型
     /// </summary>

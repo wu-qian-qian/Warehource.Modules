@@ -22,7 +22,7 @@ public class WritePlcEventCommand : ICommand
     /// <summary>
     ///     变量名
     /// </summary>
-    public Dictionary<string,string> DBNameToDataValue { get; set; }
+    public Dictionary<string, string> DBNameToDataValue { get; set; }
 
     public bool UseMemory { get; set; } = true;
 }

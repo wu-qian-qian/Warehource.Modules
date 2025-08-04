@@ -9,13 +9,12 @@ using Plc.Infrastructure.Helper;
 using Plc.Shared;
 using S7.Net;
 using Serilog;
-using String = System.String;
 
 namespace Plc.Infrastructure.Token;
 
 public partial class S7NetToken : S7Net
 {
-    public S7NetToken(S7NetDto netConfig)
+    public S7NetToken(S7NetDto netConfig) : base(netConfig.IsUse)
     {
         var s7Cpu = netConfig.S7Type switch
         {
@@ -26,10 +25,6 @@ public partial class S7NetToken : S7Net
         _plc = new S7.Net.Plc(s7Cpu, netConfig.Ip, netConfig.Port, netConfig.Rack, netConfig.Solt);
         _plc.ReadTimeout = netConfig.ReadTimeOut;
         _plc.WriteTimeout = netConfig.WriteTimeOut;
-        if (netConfig.IsUse)
-        {
-           this.Connect();
-        }
     }
 
     public override void Connect()
@@ -92,7 +87,8 @@ public partial class S7NetToken : S7Net
     /// <returns></returns>
     public override async Task<string> ReadTResultAsync(ReadBufferInput input)
     {
-        string result=String.Empty;;
+        var result = string.Empty;
+        ;
         if (_plc.IsConnected == false)
         {
             Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC未连接");
@@ -160,19 +156,21 @@ public partial class S7NetToken : S7Net
                 }
                 case S7DataTypeEnum.S7String:
                 {
-                    var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.S7String, input.ArratCount.Value);
+                    var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.S7String,
+                        input.ArratCount.Value);
                     result = res?.ToString();
                     break;
                 }
                 case S7DataTypeEnum.Array:
                 {
-                    string separator = "-";
+                    var separator = "-";
                     var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.Byte, input.ArratCount.Value);
                     if (res is byte[] byteArray)
                     {
-                        string[] hexValues = Array.ConvertAll(byteArray, b => b.ToString());
-                        result= string.Join(separator, hexValues);
+                        var hexValues = Array.ConvertAll(byteArray, b => b.ToString());
+                        result = string.Join(separator, hexValues);
                     }
+
                     break;
                 }
                 default:
@@ -184,6 +182,7 @@ public partial class S7NetToken : S7Net
         {
             Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC读取出现异常：{e.Message}");
         }
+
         return result;
     }
 
@@ -201,10 +200,8 @@ public partial class S7NetToken : S7Net
         else
         {
             foreach (var item in bulkItems)
-            {
-                 if (item.Buffer == null)
-                {
-                      switch (item.S7DataType)
+                if (item.Buffer == null)
+                    switch (item.S7DataType)
                     {
                         case S7DataTypeEnum.Bool:
                         {
@@ -263,15 +260,15 @@ public partial class S7NetToken : S7Net
                         case S7DataTypeEnum.S7String:
                         {
                             item.Buffer =
-                                TransferBufferHelper.S7StringToByteArray(item.Value, item.ArratCount.Value, Encoding.ASCII);
+                                TransferBufferHelper.S7StringToByteArray(item.Value, item.ArratCount.Value,
+                                    Encoding.ASCII);
                             break;
                         }
                         default:
                             Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC无解析数据");
                             break;
                     }
-                }
-            }
+
             try
             {
                 await WriteToBytesAsync(bulkItems);
@@ -283,7 +280,7 @@ public partial class S7NetToken : S7Net
             }
         }
     }
-    
+
     public override async Task WriteToBytesAsync(WriteBufferItemInput[] bulkItems)
     {
         if (!_plc.IsConnected)
@@ -291,16 +288,16 @@ public partial class S7NetToken : S7Net
         else
             foreach (var item in bulkItems)
             {
-                if(item.S7DataType==S7DataTypeEnum.Bool)
+                if (item.S7DataType == S7DataTypeEnum.Bool)
                     continue;
                 var dbType = EnumConvert.S7BlockTypeToDataType(item.S7BlockType);
                 await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
             }
     }
 
-    public  override async Task<bool> CheckWriteToBytesAsync(WriteBufferItemInput[] bulkItems)
+    public override async Task<bool> CheckWriteToBytesAsync(WriteBufferItemInput[] bulkItems)
     {
-        bool @bool = true;
+        var @bool = true;
         if (!_plc.IsConnected)
         {
             Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC未连接");
@@ -309,18 +306,17 @@ public partial class S7NetToken : S7Net
         else
         {
             foreach (var item in bulkItems)
-            {
                 if (item.Buffer != null)
                 {
                     var dbType = EnumConvert.S7BlockTypeToDataType(item.S7BlockType);
                     await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
-                    var buffer=await  ReadAsync(new ReadBufferInput
+                    var buffer = await ReadAsync(new ReadBufferInput
                     {
                         DBBit = item.DBBit,
                         DBAddress = item.DBAddress,
                         S7BlockType = item.S7BlockType,
                         DBEnd = item.Buffer.Length,
-                        DBStart = item.DBStart,
+                        DBStart = item.DBStart
                     });
                     if (ReferenceEquals(item.Buffer, buffer) == false)
                     {
@@ -328,8 +324,8 @@ public partial class S7NetToken : S7Net
                         break;
                     }
                 }
-            }
         }
+
         return @bool;
     }
 }

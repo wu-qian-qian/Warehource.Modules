@@ -4,6 +4,7 @@ using Wcs.Shared;
 namespace Wcs.Domain.TaskExecuteStep;
 
 /// <summary>
+///     一条任务一条执行步骤
 ///     任务执行步骤
 ///     每种任务类型对应一类执行步骤
 ///     执行方式--》(获取执行任务，执行任务拿到执行设备《通过区域筛选；如一个巷道一个区域》，执行设备执行该条任务)
@@ -19,12 +20,15 @@ public class TaskExecuteStep : IEntity
 
     public string? Description { get; set; }
 
-    public Guid? ExecuteNodePath { get; set; }
+    /// <summary>
+    ///     当前节点执行的设备
+    /// </summary>
+    public Guid CurrentExecuteNodePath { get; set; }
 
     /// <summary>
-    ///     区域
+    ///     当前节点区域
     /// </summary>
-    public Guid? RegionId { get; set; }
+    public Guid RegionId { get; set; }
 
     /// <summary>
     ///     任务类型

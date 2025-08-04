@@ -4395,3 +4395,22 @@ System.ArgumentNullException: Value cannot be null. (Parameter 'collection')
 2025-08-01 17:40:41.411 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
 2025-08-01 17:40:41.411 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
 2025-08-01 17:40:41.415 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-01 17:42:08.741 +08:00 [DBG] Stopping bus instances: IBus
+2025-08-01 17:42:08.745 +08:00 [DBG] Stopping bus: "loopback://localhost/"
+2025-08-01 17:42:08.750 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/WcsIntegrationEvent"
+2025-08-01 17:42:08.751 +08:00 [DBG] Consumer Stopping: "loopback://localhost/WcsIntegrationEvent" (Stop Receive Transport)
+2025-08-01 17:42:08.758 +08:00 [DBG] Endpoint Completed: "loopback://localhost/WcsIntegrationEvent"
+2025-08-01 17:42:08.767 +08:00 [DBG] Consumer Completed: "loopback://localhost/WcsIntegrationEvent": 0 received, 0 concurrent
+2025-08-01 17:42:08.770 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-01 17:42:08.771 +08:00 [DBG] Consumer Stopping: "loopback://localhost/S7ReadPlcDataBlockEvent" (Stop Receive Transport)
+2025-08-01 17:42:08.772 +08:00 [DBG] Endpoint Completed: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-01 17:42:08.773 +08:00 [DBG] Consumer Completed: "loopback://localhost/S7ReadPlcDataBlockEvent": 0 received, 0 concurrent
+2025-08-01 17:42:08.774 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-01 17:42:08.774 +08:00 [DBG] Consumer Stopping: "loopback://localhost/S7WritePlcDataBlockEvent" (Stop Receive Transport)
+2025-08-01 17:42:08.775 +08:00 [DBG] Endpoint Completed: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-01 17:42:08.776 +08:00 [DBG] Consumer Completed: "loopback://localhost/S7WritePlcDataBlockEvent": 0 received, 0 concurrent
+2025-08-01 17:42:08.778 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/_WarehourceSource_bus_my5oyyg93snebweabdq7bz54gk"
+2025-08-01 17:42:08.779 +08:00 [DBG] Consumer Stopping: "loopback://localhost/_WarehourceSource_bus_my5oyyg93snebweabdq7bz54gk" (Stop Receive Transport)
+2025-08-01 17:42:08.780 +08:00 [DBG] Endpoint Completed: "loopback://localhost/_WarehourceSource_bus_my5oyyg93snebweabdq7bz54gk"
+2025-08-01 17:42:08.780 +08:00 [DBG] Consumer Completed: "loopback://localhost/_WarehourceSource_bus_my5oyyg93snebweabdq7bz54gk": 0 received, 0 concurrent
+2025-08-01 17:42:08.791 +08:00 [INF] Bus stopped: "loopback://localhost/"

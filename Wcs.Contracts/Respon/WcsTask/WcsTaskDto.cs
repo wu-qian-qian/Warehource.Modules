@@ -1,5 +1,5 @@
 ﻿namespace Wcs.Contracts.Respon.WcsTask;
 
-public class WcsTaskDto
+public class WcsTaskDto : BaseDto
 {
 }

@@ -23,7 +23,7 @@ public sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logge
     {
         var command = exception as CommonException;
         Serilog.Log.Logger.ForCategory(LogCategory.Error)
-           .Error($"{httpContext.Request}--{httpContext.Connection.LocalIpAddress}--{command.RequestName}");
+            .Error($"{httpContext.Request}--{httpContext.Connection.LocalIpAddress}--{command.RequestName}");
         var problemDetails = new ProblemDetails
         {
             Status = StatusCodes.Status500InternalServerError,

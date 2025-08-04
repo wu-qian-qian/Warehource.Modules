@@ -2,11 +2,12 @@
 
 namespace Plc.CustomEvents;
 
-public class S7WritePlcDataBlockEvent: IMassTransitDomainEvent
+public class S7WritePlcDataBlockEvent : IMassTransitDomainEvent
 {
     public S7WritePlcDataBlockEvent(DateTime occurredOnUtc) : base(occurredOnUtc)
     {
     }
+
     /// <summary>
     ///     设备名称
     /// </summary>
@@ -15,7 +16,7 @@ public class S7WritePlcDataBlockEvent: IMassTransitDomainEvent
     /// <summary>
     ///     变量和值的对应
     /// </summary>
-    public Dictionary<string,string> DBNameToDataValue { get;private set; }
+    public Dictionary<string, string> DBNameToDataValue { get; }
 
     public string Ip { get; set; }
 

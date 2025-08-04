@@ -7,5 +7,5 @@ public enum LogCategory
     Net,
     Event,
     Http,
-    BataBase,
+    BataBase
 }

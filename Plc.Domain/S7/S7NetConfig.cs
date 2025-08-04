@@ -36,6 +36,15 @@ public class S7NetConfig : INetEnitty
     /// </summary>
     public bool IsUse { get; set; }
 
+    /// <summary>
+    ///     读取心跳地址
+    /// </summary>
+    public string? ReadHeart { get; set; }
+
+    /// <summary>
+    ///     写入心跳地址
+    /// </summary>
+    public string? WriteHeart { get; set; }
 
     public ICollection<S7EntityItem> S7EntityItems { get; set; }
 }

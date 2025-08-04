@@ -8,7 +8,7 @@ using Quartz;
 namespace Wcs.Infrastructure.Job;
 
 [DisallowConcurrentExecution]
-internal class ReadPlcJob(IMassTransitEventBus bus, ISender sender,ICacheService cacheService) : BaseJob
+internal class ReadPlcJob(IMassTransitEventBus bus, ISender sender, ICacheService cacheService) : BaseJob
 {
     public override async Task Execute(IJobExecutionContext context)
     {
@@ -20,13 +20,22 @@ internal class ReadPlcJob(IMassTransitEventBus bus, ISender sender,ICacheService
             var guid = Guid.NewGuid();
             await bus.PublishAsync(new S7ReadPlcDataBlockEvent(DateTime.Now)
             {
-                Ip="127.0.0.1"
+                Ip = "127.0.0.1"
             });
-            var buffer =await cacheService.GetAsync("127.0.0.1");
+            var buffer = await cacheService.GetAsync("127.0.0.1");
+            //获取完数据就进行清除
+            if (buffer != null)
+            {
+            }
         }
         catch (OperationCanceledException ex)
         {
             throw new JobExecutionException($"任务执行超时，已取消: {ex.Message}", ex, true);
+        }
+        finally
+        {
+            //确保每一次读取的数据不是上一次的数据
+            await cacheService.RemoveAsync("127.0.0.1");
         }
 
         Console.WriteLine("结束");

@@ -1,6 +1,5 @@
 ﻿using Common.Application.Event;
 using Common.Application.Log;
-using Common.Domain.Event;
 using Common.Shared;
 using MassTransit;
 using MediatR;
@@ -25,11 +24,11 @@ internal class WritePlcEventConsumer<TIntegrationEvent>(IMassTransitEventBus bus
     public async Task Consume(ConsumeContext<TIntegrationEvent> context)
     {
         S7WritePlcDataBlockEvent s7ReadPlcConsumevent = context.Message;
-        var readPlcEvent = new WritePlcEventCommand()
+        var readPlcEvent = new WritePlcEventCommand
         {
             UseMemory = s7ReadPlcConsumevent.UseMemory,
             DeviceName = s7ReadPlcConsumevent.DeviceName,
-            DBNameToDataValue= s7ReadPlcConsumevent.DBNameToDataValue
+            DBNameToDataValue = s7ReadPlcConsumevent.DBNameToDataValue
         };
         try
         {

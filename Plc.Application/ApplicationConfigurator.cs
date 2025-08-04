@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
-using Plc.Application.Behaviors;
 using Plc.Application.Behaviors.Read;
 using Plc.Application.Behaviors.Write;
 using Plc.Application.Custom;
@@ -30,7 +29,6 @@ public static class ApplicationConfigurator
     {
         registrationConfigurator.AddConsumer<ReadPlcEventConsumer<S7ReadPlcDataBlockEvent>>();
         registrationConfigurator.AddConsumer<WritePlcEventConsumer<S7WritePlcDataBlockEvent>>();
-
     }
 
     public static void AddAutoMapper(IMapperConfigurationExpression config)

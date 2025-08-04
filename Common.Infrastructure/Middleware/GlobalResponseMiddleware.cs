@@ -33,12 +33,7 @@ public class GlobalResponseMiddleware
             {
                 // 检查响应状态码和内容类型
                 var contentType = context.Response.ContentType;
-                var isFileResponse = contentType != null && (
-                    contentType.StartsWith("application/octet-stream") ||
-                    contentType.StartsWith("application/pdf") ||
-                    contentType.StartsWith("image/") ||
-                    contentType.StartsWith("application/vnd.")
-                );
+                var isFileResponse = MiddlewareHelper.IsFileResponse(contentType);
                 //非文件类型进行统一封装
                 if (isFileResponse == false)
                 {

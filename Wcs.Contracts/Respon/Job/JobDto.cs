@@ -1,6 +1,6 @@
 ﻿namespace Wcs.Contracts.Respon.Job;
 
-public sealed class JobDto
+public sealed class JobDto : BaseDto
 {
     // Primary constructor  
     public JobDto(Guid id, string name, string description, string jobType, int timeOut, int timer, bool isStart)
@@ -19,7 +19,6 @@ public sealed class JobDto
     {
     }
 
-    public Guid Id { get; init; }
     public string Name { get; init; }
     public string Description { get; init; }
     public string JobType { get; init; }

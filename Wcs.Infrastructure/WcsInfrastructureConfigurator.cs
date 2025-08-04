@@ -10,8 +10,12 @@ using Wcs.Application;
 using Wcs.Application.Abstract;
 using Wcs.Application.SignalR;
 using Wcs.Domain.JobConfigs;
+using Wcs.Domain.Region;
+using Wcs.Domain.Task;
 using Wcs.Infrastructure.Database;
 using Wcs.Infrastructure.DB.JobConfig;
+using Wcs.Infrastructure.DB.Region;
+using Wcs.Infrastructure.DB.WcsTask;
 using Wcs.Infrastructure.Job;
 using Wcs.Infrastructure.SignalR;
 using Wcs.Shared;
@@ -43,6 +47,8 @@ public static class WcsInfrastructureConfigurator
     {
         service.AddScoped<JobService>();
         service.AddScoped<IJobConfigRepository, JobConfigRepository>();
+        service.AddScoped<IRegionRepository, RegionRepository>();
+        service.AddScoped<IWcsTaskRepository, WcsTaskRepository>();
         return service;
     }
 

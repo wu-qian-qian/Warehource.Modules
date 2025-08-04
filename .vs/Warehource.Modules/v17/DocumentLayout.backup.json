@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\behaviors\\write\\writedtoinitpipelinebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\behaviors\\write\\writedtoinitpipelinebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.presentation\\s7plc\\entity\\gets7entityitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|solutionrelative:plc.presentation\\s7plc\\entity\\gets7entityitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\plchandler\\write\\writeplceventhandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\plchandler\\write\\writeplceventhandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.infrastructure\\token\\s7nettoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|solutionrelative:plc.infrastructure\\token\\s7nettoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.infrastructure\\service\\s7netservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|solutionrelative:plc.infrastructure\\service\\s7netservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\applicationconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\applicationconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.infrastructure\\database\\plcdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|solutionrelative:plc.infrastructure\\database\\plcdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,79 +39,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WriteDtoInitPipelineBehavior.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Behaviors\\Write\\WriteDtoInitPipelineBehavior.cs",
-              "RelativeDocumentMoniker": "Plc.Application\\Behaviors\\Write\\WriteDtoInitPipelineBehavior.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Behaviors\\Write\\WriteDtoInitPipelineBehavior.cs",
-              "RelativeToolTip": "Plc.Application\\Behaviors\\Write\\WriteDtoInitPipelineBehavior.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvw4AAAApAAAAAAAAAA==",
+              "Title": "PlcDBContext.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\Database\\PlcDBContext.cs",
+              "RelativeDocumentMoniker": "Plc.Infrastructure\\Database\\PlcDBContext.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\Database\\PlcDBContext.cs",
+              "RelativeToolTip": "Plc.Infrastructure\\Database\\PlcDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T08:29:22.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "S7NetService.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\Service\\S7NetService.cs",
-              "RelativeDocumentMoniker": "Plc.Infrastructure\\Service\\S7NetService.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\Service\\S7NetService.cs",
-              "RelativeToolTip": "Plc.Infrastructure\\Service\\S7NetService.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAA6wDAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T08:19:03.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApplicationConfigurator.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\ApplicationConfigurator.cs",
-              "RelativeDocumentMoniker": "Plc.Application\\ApplicationConfigurator.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\ApplicationConfigurator.cs",
-              "RelativeToolTip": "Plc.Application\\ApplicationConfigurator.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAADwvxIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T08:19:46.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "S7NetToken.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\Token\\S7NetToken.cs",
-              "RelativeDocumentMoniker": "Plc.Infrastructure\\Token\\S7NetToken.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\Token\\S7NetToken.cs",
-              "RelativeToolTip": "Plc.Infrastructure\\Token\\S7NetToken.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAowB4AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T08:19:03.749Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WritePlcEventHandle.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\PlcHandler\\Write\\WritePlcEventHandle.cs",
-              "RelativeDocumentMoniker": "Plc.Application\\PlcHandler\\Write\\WritePlcEventHandle.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\PlcHandler\\Write\\WritePlcEventHandle.cs",
-              "RelativeToolTip": "Plc.Application\\PlcHandler\\Write\\WritePlcEventHandle.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAADwvxYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T08:10:33.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetS7EntityItem.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\S7Plc\\Entity\\GetS7EntityItem.cs",
-              "RelativeDocumentMoniker": "Plc.Presentation\\S7Plc\\Entity\\GetS7EntityItem.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\S7Plc\\Entity\\GetS7EntityItem.cs",
-              "RelativeToolTip": "Plc.Presentation\\S7Plc\\Entity\\GetS7EntityItem.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAhwBcAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T08:09:48.855Z",
+              "WhenOpened": "2025-08-04T00:32:49.383Z",
               "EditorCaption": ""
             }
           ]

@@ -1,5 +1,137 @@
-﻿<h3>PlcConfig</h3>
+﻿@page "/PlcConfig"
+@using AntDesign.TableModels
+@using UI.Model.Plc
+@using UI.Service.PlcSevice
+@inject  IPlcService _plcService
+@inject IMessageService _message;
+<div>
+    <Row Style="display: flex; justify-content: space-between; margin:5px">
+        <AntDesign.Col >
+            <Row>
+                <AntDesign.Col >
+                    <InputFile id="singleFile" OnChange="HandleSingleFileSelected" class="form-control"/>
+                    <Button type="ButtonType.Primary" @onclick="UploadFileAsync">上传 </Button>
+                </AntDesign.Col>
+            </Row>
+            <Row Style="margin-top:5px">
+                <a class="btn btn-primary" href="http://localhost:5050/plc/downLoad-plc-template">下载</a>
+            </Row>
+        </AntDesign.Col>
+        <AntDesign.Col Span="3">
+            <Text>IP地址</Text>
+            <Input Placeholder="请输入" TValue="string"/>
+        </AntDesign.Col>
+
+        <AntDesign.Col Span="3">
+            <Text>设备名称</Text>
+            <Input Placeholder="请输入" TValue="string"/>
+        </AntDesign.Col>
+
+        <AntDesign.Col Style="float:right;margin:5px">
+            <Row>
+                <Button Type="ButtonType.Primary">查询</Button>
+            </Row>
+            <Row Style="margin-top:5px">
+                <Button Type="ButtonType.Primary">重置</Button>
+            </Row>
+        </AntDesign.Col>
+    </Row>
+    <Row Style="display: flex; flex-direction: column; height: calc(100vh - 100px);">
+        <Table DataSource="@data" TItem="S7NetModel" ScrollX="1920" OnExpand="OnRowExpand">
+            <ColumnDefinitions>
+                <PropertyColumn Property="c => c.Ip" title="Ip地址"/>
+                <PropertyColumn Property="c => c.Port" title="端口"/>
+                <PropertyColumn Property="c => c.ReadTimeOut" title="读取超时"/>
+                <PropertyColumn Property="c => c.WriteTimeOut" title="写入超时"/>
+                <PropertyColumn Property="c => c.S7Type" title="Plc类型"/>
+                <PropertyColumn Property="c => c.Rack" title="机架号"/>
+                <PropertyColumn Property="c => c.Solt" title="卡槽号"/>
+            </ColumnDefinitions>
+            <ExpandTemplate Context="rowData">
+                <Table DataSource="rowData.Data.s7EntityItemModels" Loading="rowData.Data.s7EntityItemModels == null" HidePagination>
+                    <PropertyColumn Property="c => c.Index" Title="序号"/>
+                    <PropertyColumn Property="c => c.S7DataType" Title="Plc数据块"/>
+                    <PropertyColumn Property="c => c.BitOffset" Title="bit偏移量"/>
+                    <PropertyColumn Property="c => c.DBAddress" title="数据读取块"/>
+                    <PropertyColumn Property="c => c.DataOffset" Title="数据偏移量"/>
+                    <PropertyColumn Property="c => c.Name" Title="变量名"/>
+                    <PropertyColumn Property="c => c.DeviceName" title="对应设备"/>
+                    <PropertyColumn Property="c => c.ArrtypeLength" Title="数组长度"/>
+                    <PropertyColumn Property="c => c.DeviceName" title="对应设备"/>
+                </Table>
+            </ExpandTemplate>
+        </Table>
+    </Row>
+</div>
+
+<style>
+    /* 在 wwwroot/css/site.css 或组件样式部分添加 */
+    .my-table .ant-table-tbody > tr:nth-child(odd) > td {
+        background-color: #f8f8f8; /* 浅色行 */
+    }
+
+    .my-table .ant-table-tbody > tr:nth-child(even) > td {
+        background-color: #ffffff; /* 白色行（或更深颜色） */
+    }
+
+    /* 鼠标悬停效果 */
+    .my-table .ant-table-tbody > tr:hover > td {
+        background-color: #e6f7ff !important; /* 悬停高亮色 */
+    }
+
+</style>
 
 @code {
+    private IBrowserFile selectedFile;
+
+    private void HandleSingleFileSelected(InputFileChangeEventArgs e)
+    {
+        selectedFile = e.GetMultipleFiles(1).First(); // 限制只能选择1个文件
+    }
+
+    // 上传文件到后端
+    private async Task UploadFileAsync()
+    {
+        if (selectedFile == null)
+        {
+            return;
+        }
+
+        var isSucess = await _plcService.UpLoadFileAsync(selectedFile);
+        if (isSucess)
+            _message.Success("上传成功");
+        else
+            _message.Success("上传失败");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await LoadDataAsync();
+    }
+
+    #region
+
+    S7NetModel[] data;
+
+    async Task LoadDataAsync()
+    {
+        data = await _plcService.GetS7NetModesAsync();
+    }
+
+    //只有展开时才获取数据
+    async Task OnRowExpand(RowData<S7NetModel> rowData)
+    {
+        if (rowData.Data.s7EntityItemModels != null)
+        {
+            return;
+        }
+
+        await Task.Delay(1000);
+
+        StateHasChanged();
+    }
+
+    #endregion
 
 }

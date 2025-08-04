@@ -14,7 +14,7 @@ public class EntityItemConfiguration : IEntityTypeConfiguration<S7EntityItem>
         builder.Property(e => e.Name).IsRequired()
             .HasMaxLength(20);
         builder.Property(e => e.Ip).IsRequired()
-           .HasMaxLength(20);
+            .HasMaxLength(20);
         builder.Property(e => e.Description).IsRequired(false).HasMaxLength(50);
     }
 }
