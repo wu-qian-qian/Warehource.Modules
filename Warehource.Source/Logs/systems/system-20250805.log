@@ -325,3 +325,23 @@ System.ArgumentNullException: Value cannot be null. (Parameter 'user')
 2025-08-05 16:22:58.208 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_st1yyyg93sneb8pfbdq786ke8k"
 2025-08-05 16:22:58.212 +08:00 [INF] Bus started: "loopback://localhost/"
 2025-08-05 16:23:07.240 +08:00 [ERR] HTTP POST /user/user-login responded 500 in 794.0611 ms
+2025-08-05 16:38:07.399 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 16:38:07.449 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 16:38:07.452 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 16:38:07.697 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 16:38:07.702 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 16:38:07.769 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 16:38:07.769 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 16:38:07.769 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_ntjoyyg93sneyhn6bdq78658y1"
+2025-08-05 16:38:07.769 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 16:38:07.774 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 16:38:55.277 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 16:38:55.324 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 16:38:55.327 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 16:38:55.568 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 16:38:55.573 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 16:38:55.648 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 16:38:55.648 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_qnyoyyg93sneb79ebdq786hdr4"
+2025-08-05 16:38:55.648 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 16:38:55.648 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 16:38:55.654 +08:00 [INF] Bus started: "loopback://localhost/"
