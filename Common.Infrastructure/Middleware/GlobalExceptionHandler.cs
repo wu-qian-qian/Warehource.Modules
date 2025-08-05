@@ -21,15 +21,13 @@ public sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logge
         Exception exception,
         CancellationToken cancellationToken)
     {
-        var command = exception as CommonException;
-        Serilog.Log.Logger.ForCategory(LogCategory.Error)
-            .Error($"{httpContext.Request}--{httpContext.Connection.LocalIpAddress}--{command.RequestName}");
+        //Serilog.Log.Logger.ForCategory(LogCategory.Error)
+        //    .Error($"{exception.StackTrace}--{exception.Message}");
         var problemDetails = new ProblemDetails
         {
             Status = StatusCodes.Status500InternalServerError,
             Type = "https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1",
             Title = "Server failure",
-            Detail = command.RequestName
         };
 
         httpContext.Response.StatusCode = problemDetails.Status.Value;

@@ -7,8 +7,68 @@
       "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\wcsprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.infrastructure\\database\\plcdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|solutionrelative:plc.infrastructure\\database\\plcdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\middleware\\globallogmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\middleware\\globallogmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\middleware\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\middleware\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\warehource.source\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|solutionrelative:warehource.source\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\middleware\\globalencodingrequestmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\middleware\\globalencodingrequestmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\middleware\\addglobalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\middleware\\addglobalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\wcstask\\getwcstask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\wcstask\\getwcstask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\region\\updateregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\region\\updateregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\region\\getregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\region\\getregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\region\\deleteregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\region\\deleteregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\region\\addregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\region\\addregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\wcstask\\updateexecutestep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\wcstask\\updateexecutestep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\dbhandler\\wcstask\\updateexecute\\updatewcstaskexecutestepevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\dbhandler\\wcstask\\updateexecute\\updatewcstaskexecutestepevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\wcstask\\udatetaskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\wcstask\\udatetaskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A3D8FA2-7C38-4832-B813-01F48A0B468B}|Wcs.Contracts\\Wcs.Contracts.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.contracts\\request\\wcstask\\updatestatusrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A3D8FA2-7C38-4832-B813-01F48A0B468B}|Wcs.Contracts\\Wcs.Contracts.csproj|solutionrelative:wcs.contracts\\request\\wcstask\\updatestatusrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\dbhandler\\wcstask\\updatestatus\\updatewcstaskstatushandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\dbhandler\\wcstask\\updatestatus\\updatewcstaskstatushandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\dbhandler\\wcstask\\updateexecute\\updatewcstaskexecuestephandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\dbhandler\\wcstask\\updateexecute\\updatewcstaskexecuestephandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,10 +98,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
@@ -52,22 +108,217 @@
               "RelativeDocumentMoniker": "Wcs.Application\\WcsProfile.cs",
               "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\WcsProfile.cs",
               "RelativeToolTip": "Wcs.Application\\WcsProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T07:54:20.003Z",
+              "WhenOpened": "2025-08-05T08:23:39.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PlcDBContext.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\Database\\PlcDBContext.cs",
-              "RelativeDocumentMoniker": "Plc.Infrastructure\\Database\\PlcDBContext.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\Database\\PlcDBContext.cs",
-              "RelativeToolTip": "Plc.Infrastructure\\Database\\PlcDBContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwoAAAABAAAAAAAAAA==",
+              "Title": "GlobalLogMiddleware.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
+              "RelativeDocumentMoniker": "Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
+              "RelativeToolTip": "Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAzwCIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T00:32:49.383Z",
+              "WhenOpened": "2025-08-05T08:15:01.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Program.cs",
+              "RelativeDocumentMoniker": "Warehource.Source\\Program.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Program.cs",
+              "RelativeToolTip": "Warehource.Source\\Program.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAwFMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:13:37.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GlobalEncodingRequestMiddleware.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalEncodingRequestMiddleware.cs",
+              "RelativeDocumentMoniker": "Common.Infrastructure\\Middleware\\GlobalEncodingRequestMiddleware.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalEncodingRequestMiddleware.cs",
+              "RelativeToolTip": "Common.Infrastructure\\Middleware\\GlobalEncodingRequestMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:13:34.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Common.Infrastructure\\Middleware\\GlobalExceptionHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "Common.Infrastructure\\Middleware\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:12:57.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddGlobalExceptionHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\AddGlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Common.Infrastructure\\Middleware\\AddGlobalExceptionHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\AddGlobalExceptionHandler.cs",
+              "RelativeToolTip": "Common.Infrastructure\\Middleware\\AddGlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:12:55.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UpdateRegion.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\UpdateRegion.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\Region\\UpdateRegion.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\UpdateRegion.cs",
+              "RelativeToolTip": "Wcs.Presentation\\Region\\UpdateRegion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:10:58.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetRegion.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\GetRegion.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\Region\\GetRegion.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\GetRegion.cs",
+              "RelativeToolTip": "Wcs.Presentation\\Region\\GetRegion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:10:52.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DeleteRegion.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\DeleteRegion.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\Region\\DeleteRegion.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\DeleteRegion.cs",
+              "RelativeToolTip": "Wcs.Presentation\\Region\\DeleteRegion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:10:42.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AddRegion.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\AddRegion.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\Region\\AddRegion.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\AddRegion.cs",
+              "RelativeToolTip": "Wcs.Presentation\\Region\\AddRegion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:10:40.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UpdateExecuteStep.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\UpdateExecuteStep.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\WcsTask\\UpdateExecuteStep.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\UpdateExecuteStep.cs",
+              "RelativeToolTip": "Wcs.Presentation\\WcsTask\\UpdateExecuteStep.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:09:20.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UpdateWcsTaskExecuteStepEvent.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\UpdateExecute\\UpdateWcsTaskExecuteStepEvent.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\DBHandler\\WcsTask\\UpdateExecute\\UpdateWcsTaskExecuteStepEvent.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\UpdateExecute\\UpdateWcsTaskExecuteStepEvent.cs",
+              "RelativeToolTip": "Wcs.Application\\DBHandler\\WcsTask\\UpdateExecute\\UpdateWcsTaskExecuteStepEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:08:43.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UpdateStatusRequest.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Contracts\\Request\\WcsTask\\UpdateStatusRequest.cs",
+              "RelativeDocumentMoniker": "Wcs.Contracts\\Request\\WcsTask\\UpdateStatusRequest.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Contracts\\Request\\WcsTask\\UpdateStatusRequest.cs",
+              "RelativeToolTip": "Wcs.Contracts\\Request\\WcsTask\\UpdateStatusRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:06:15.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UdateTaskStatus.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\UdateTaskStatus.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\WcsTask\\UdateTaskStatus.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\UdateTaskStatus.cs",
+              "RelativeToolTip": "Wcs.Presentation\\WcsTask\\UdateTaskStatus.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvxkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:05:24.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetWcsTask.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\GetWcsTask.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\WcsTask\\GetWcsTask.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\GetWcsTask.cs",
+              "RelativeToolTip": "Wcs.Presentation\\WcsTask\\GetWcsTask.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:05:15.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UpdateWcsTaskStatusHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\UpdateStatus\\UpdateWcsTaskStatusHandler.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\DBHandler\\WcsTask\\UpdateStatus\\UpdateWcsTaskStatusHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\UpdateStatus\\UpdateWcsTaskStatusHandler.cs",
+              "RelativeToolTip": "Wcs.Application\\DBHandler\\WcsTask\\UpdateStatus\\UpdateWcsTaskStatusHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:05:12.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UpdateWcsTaskExecueStepHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\UpdateExecute\\UpdateWcsTaskExecueStepHandler.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\DBHandler\\WcsTask\\UpdateExecute\\UpdateWcsTaskExecueStepHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\UpdateExecute\\UpdateWcsTaskExecueStepHandler.cs",
+              "RelativeToolTip": "Wcs.Application\\DBHandler\\WcsTask\\UpdateExecute\\UpdateWcsTaskExecueStepHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T08:05:08.496Z",
               "EditorCaption": ""
             }
           ]

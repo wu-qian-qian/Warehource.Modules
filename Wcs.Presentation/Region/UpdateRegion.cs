@@ -13,7 +13,7 @@ public class UpdateRegion : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("region/add-region", [Authorize(Roles = "admin")] async (
+        app.MapPost("region/update-region", [Authorize(Roles = "admin")] async (
             RegionRequest request,
             ISender sender) =>
         {

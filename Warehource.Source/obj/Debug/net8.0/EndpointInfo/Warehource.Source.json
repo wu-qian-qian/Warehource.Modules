@@ -459,6 +459,251 @@
           }
         }
       }
+    },
+    "/region/add-region": {
+      "post": {
+        "tags": [
+          "Region"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.Region.RegionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Region.RegionDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/region/delete-region/{id}": {
+      "delete": {
+        "tags": [
+          "Region"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Region.RegionDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/region/get-region": {
+      "post": {
+        "tags": [
+          "Region"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Wcs.Contracts.Respon.Region.RegionDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/region/update-region": {
+      "post": {
+        "tags": [
+          "Region"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.Region.RegionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Region.RegionDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wcstask/add-or-update-wcstask": {
+      "post": {
+        "tags": [
+          "WcsTask"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.WcsTask.InsertWcsTaskRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.WcsTask.WcsTaskDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wcstask/delete-wcstask/{serialNumber}": {
+      "delete": {
+        "tags": [
+          "WcsTask"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.WcsTask.WcsTaskDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wcstask/get-wcstask": {
+      "post": {
+        "tags": [
+          "WcsTask"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.WcsTask.GetWcsTaskRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Wcs.Contracts.Respon.WcsTask.WcsTaskDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wcstask/update-wcstask-status": {
+      "put": {
+        "tags": [
+          "WcsTask"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.WcsTask.UpdateWcsTaskRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/wcstask/update-wcstask-executestep": {
+      "put": {
+        "tags": [
+          "WcsTask"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.WcsTask.UpdateWcsTaskRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -659,6 +904,14 @@
           },
           "isUse": {
             "type": "boolean"
+          },
+          "readHeart": {
+            "type": "string",
+            "nullable": true
+          },
+          "writeHeart": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -752,12 +1005,185 @@
         },
         "additionalProperties": false
       },
+      "Wcs.Contracts.Request.Region.RegionRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wcs.Contracts.Request.WcsTask.GetWcsTaskRequest": {
+        "type": "object",
+        "properties": {
+          "container": {
+            "type": "string",
+            "nullable": true
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "taskCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "serialNumber": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getLocation": {
+            "type": "string",
+            "nullable": true
+          },
+          "putLocation": {
+            "type": "string",
+            "nullable": true
+          },
+          "taskStatus": {
+            "$ref": "#/components/schemas/Wcs.Shared.WcsTaskStatusEnum"
+          },
+          "creatorSystemType": {
+            "$ref": "#/components/schemas/Wcs.Shared.CreatorSystemTypeEnum"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wcs.Contracts.Request.WcsTask.InsertWcsTaskRequest": {
+        "type": "object",
+        "properties": {
+          "taskCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "taskType": {
+            "$ref": "#/components/schemas/Wcs.Shared.WcsTaskTypeEnum"
+          },
+          "creatorSystemType": {
+            "$ref": "#/components/schemas/Wcs.Shared.CreatorSystemTypeEnum"
+          },
+          "container": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "getTunnel": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getFloor": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getRow": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getColumn": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getDepth": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putTunnel": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putFloor": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putRow": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putColumn": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putDepth": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "executeDesc": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wcs.Contracts.Request.WcsTask.UpdateWcsTaskRequest": {
+        "type": "object",
+        "properties": {
+          "serialNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "deviceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "wcsTaskStatusType": {
+            "$ref": "#/components/schemas/Wcs.Shared.WcsTaskStatusEnum"
+          }
+        },
+        "additionalProperties": false
+      },
       "Wcs.Contracts.Respon.Job.JobDto": {
         "type": "object",
         "properties": {
           "id": {
             "type": "string",
             "format": "uuid"
+          },
+          "creationTime": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "lastModifierUser": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "lastModificationTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "readOnly": true
           },
           "name": {
             "type": "string",
@@ -784,6 +1210,94 @@
           }
         },
         "additionalProperties": false
+      },
+      "Wcs.Contracts.Respon.Region.RegionDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "creationTime": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "lastModifierUser": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "lastModificationTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "readOnly": true
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wcs.Contracts.Respon.WcsTask.WcsTaskDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "creationTime": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "lastModifierUser": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "lastModificationTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wcs.Shared.CreatorSystemTypeEnum": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Wcs.Shared.WcsTaskStatusEnum": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Wcs.Shared.WcsTaskTypeEnum": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
       }
     },
     "securitySchemes": {

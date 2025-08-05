@@ -28,12 +28,16 @@ public class GlobalLogMiddleware
         //可以让 Request.Body 可以再次读取
         if (request.ContentLength != null)
         {
-            request.EnableBuffering();
-            var stream = request.Body;
-            var buffer = new byte[stream.Length];
-            await stream.ReadAsync(buffer, 0, buffer.Length);
-            request.Body.Position = 0;
-            requestData = Encoding.UTF8.GetString(buffer);
+            // 允许请求体被多次读取
+            context.Request.EnableBuffering();
+
+            // 读取请求体内容
+            using (var reader = new StreamReader(context.Request.Body, leaveOpen: true))
+            {
+                requestData = await reader.ReadToEndAsync();
+                // 重置流的位置，让后续中间件能正常读取
+                context.Request.Body.Position = 0;
+            }
         }
 
         var contentType = context.Response.ContentType;

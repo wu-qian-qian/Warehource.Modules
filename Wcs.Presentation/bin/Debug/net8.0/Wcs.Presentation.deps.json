@@ -859,6 +859,7 @@
       },
       "Wcs.Application/1.0.0": {
         "dependencies": {
+          "Common": "1.0.0",
           "Common.Application": "1.0.0",
           "Plc.CustomEvents": "1.0.0",
           "Wcs.Contracts": "1.0.0",

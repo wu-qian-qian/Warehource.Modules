@@ -12,7 +12,7 @@ public class DeleteRegion : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapDelete("region/add-region/{id}", [Authorize(Roles = "admin")] async (
+        app.MapDelete("region/delete-region/{id}", [Authorize(Roles = "admin")] async (
             Guid id,
             ISender sender) =>
         {

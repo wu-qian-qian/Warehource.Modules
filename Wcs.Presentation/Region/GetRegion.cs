@@ -12,7 +12,7 @@ public class GetRegion : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("region/add-region", [Authorize(Roles = "admin")] async (
+        app.MapPost("region/get-region", [Authorize(Roles = "admin")] async (
             ISender sender) =>
         {
             return await sender.Send(new GetRegionQuery());
