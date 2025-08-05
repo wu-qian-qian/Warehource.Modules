@@ -40,8 +40,4 @@ internal class ReadPlcJob(IMassTransitEventBus bus, ISender sender, ICacheServic
 
         Console.WriteLine("结束");
     }
-
-    private async Task ReadPlc()
-    {
-    }
 }

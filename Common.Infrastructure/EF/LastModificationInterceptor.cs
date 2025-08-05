@@ -21,9 +21,9 @@ public class LastModificationInterceptor : SaveChangesInterceptor
         if (eventData.Context is not null)
         {
             var user = _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.Name);
-            eventData.Context.ChangeTracker.Entries<ILastModification>()
-                .Where(e => e.State == EntityState.Modified).ToList()
-                .ForEach(entry => { entry.Entity.SetLastModification(user); });
+            var res = eventData.Context.ChangeTracker.Entries<ILastModification>();
+                //.Where(e => e.State == EntityState.Modified).ToList()
+                //.ForEach(entry => { entry.Entity.SetLastModification(user); });
         }
 
         return base.SavingChangesAsync(eventData, result, cancellationToken);

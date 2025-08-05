@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Common.Application.Exception;
+using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using Common.Application.QuartzJob;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,10 +16,11 @@ internal class AddJobEventHandler(
     JobService jobService,
     IUnitOfWork unitOfWork,
     IServiceProvider serviceProvider,
-    IMapper mapper) : ICommandHandler<AddJobEvent, JobDto>
+    IMapper mapper) : ICommandHandler<AddJobEvent, Result<JobDto>>
 {
-    public async Task<JobDto> Handle(AddJobEvent request, CancellationToken cancellationToken)
+    public async Task<Result<JobDto>> Handle(AddJobEvent request, CancellationToken cancellationToken)
     {
+        Result<JobDto> result= new Result<JobDto>();
         var jobConfig = new JobConfig
         {
             Name = request.Name,
@@ -33,10 +35,16 @@ internal class AddJobEventHandler(
         var types = serviceProvider.GetKeyedService<Type[]>(Constant.JobKey);
         var sc = serviceProvider.GetService<IScheduler>();
         if (types.Any(p => p.Name == request.JobType) == false)
-            throw new CommonException($"{nameof(AddJobEvent)}--不存在该类型");
-        var jobtype = types.First(x => x.Name == request.JobType);
-        QuatrzJobExtensions.CreateJobDetail(jobtype, jobConfig, sc);
-        await unitOfWork.SaveChangesAsync();
-        return mapper.Map<JobDto>(request);
+        {
+            result.SetMessage($"{nameof(AddJobEvent)}--不存在该类型");
+        }
+        else
+        {
+            var jobtype = types.First(x => x.Name == request.JobType);
+            QuatrzJobExtensions.CreateJobDetail(jobtype, jobConfig, sc);
+            await unitOfWork.SaveChangesAsync();
+            result.SetValue( mapper.Map<JobDto>(request));
+        }
+        return result;
     }
 }

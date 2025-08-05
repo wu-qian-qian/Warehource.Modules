@@ -1,4 +1,5 @@
-﻿using Common.Application.MediatR.Message;
+﻿using Common.Application.MediatR.Behaviors;
+using Common.Application.MediatR.Message;
 using Plc.Application.Abstract;
 using Plc.Contracts.Respon;
 using Plc.Domain.S7;
@@ -9,11 +10,12 @@ namespace Plc.Application.DBHandler.Insert;
 ///     excel导入只能一块插入
 /// </summary>
 public class InsertS7NetConfigCommandHandler(IS7NetManager netManager, IUnitOfWork unitOfWork)
-    : ICommandHandler<InsertS7NetConfigCommand, IEnumerable<S7NetDto>>
+    : ICommandHandler<InsertS7NetConfigCommand, Result<IEnumerable<S7NetDto>>>
 {
-    public async Task<IEnumerable<S7NetDto>> Handle(InsertS7NetConfigCommand request,
+    public async Task<Result<IEnumerable<S7NetDto>>> Handle(InsertS7NetConfigCommand request,
         CancellationToken cancellationToken)
     {
+        Result<IEnumerable<S7NetDto>> result = new();
         var s7NetConfigs = new List<S7NetConfig>();
         foreach (var netDto in request.S7NetRequests)
         {
@@ -52,7 +54,7 @@ public class InsertS7NetConfigCommandHandler(IS7NetManager netManager, IUnitOfWo
 
         await netManager.InsertS7NetAsync(s7NetConfigs);
         await unitOfWork.SaveChangesAsync();
-        return s7NetConfigs.Select(p =>
+        result.SetValue(s7NetConfigs.Select(p =>
         {
             return new S7NetDto
             {
@@ -65,6 +67,7 @@ public class InsertS7NetConfigCommandHandler(IS7NetManager netManager, IUnitOfWo
                 ReadTimeOut = p.ReadTimeOut,
                 WriteTimeOut = p.WriteTimeOut
             };
-        });
+        }));
+        return result;
     }
 }

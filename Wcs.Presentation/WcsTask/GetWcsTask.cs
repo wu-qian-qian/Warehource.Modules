@@ -12,27 +12,21 @@ using Wcs.Contracts.Respon.WcsTask;
 
 namespace Wcs.Presentation.WcsTask;
 
-public class GetWcsTasks:IEndpoint
+public class GetWcsTask:IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("wcstask/get-wcstasks", [Authorize] async (
-            GetWcsTaskRequest request,
+        app.MapGet("wcstask/get-wcstask/{serialNumber}", [Authorize] async (
+            int request,
             ISender sender) =>
         {
-            Result<IEnumerable<WcsTaskDto>> result = new();
+            Result<IEnumerable<WcsTaskDto>> reslut = new();
             var data= await sender.Send(new GetWcsTaskQuery
             {
-                Container = request.Container,
-                CreatorSystemType = request.CreatorSystemType,
-                EndTime = request.EndTime,
-                StartTime = request.StartTime,
-                TaskCode = request.TaskCode,
-                SerialNumber = request.SerialNumber,
-                TaskStatus = request.TaskStatus
+                SerialNumber = request
             });
-            result.SetValue(data);
-            return result;
+            reslut.SetValue(data);
+            return reslut;
         }).WithTags(AssemblyReference.WcsTask);
     }
 }

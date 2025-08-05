@@ -25,9 +25,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
                 }
               }
             }
@@ -145,7 +145,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Identity.Contrancts.RoleDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Identity.Contrancts.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -174,7 +174,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Identity.Contrancts.UserDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Identity.Contrancts.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -193,7 +193,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Identity.Contrancts.RoleDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Identity.Contrancts.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -212,7 +212,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Identity.Contrancts.UserDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Identity.Contrancts.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -241,7 +241,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Job.JobDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -271,7 +271,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Job.JobDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -290,10 +290,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Wcs.Contracts.Respon.Job.JobDto"
-                  }
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
                 }
               }
             }
@@ -322,7 +319,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Job.JobDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -351,7 +348,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Job.JobDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -393,10 +390,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Plc.Contracts.Respon.S7NetDto"
-                  }
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Plc.Contracts.Respon.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
                 }
               }
             }
@@ -415,10 +409,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Plc.Contracts.Respon.S7NetDto"
-                  }
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Plc.Contracts.Respon.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
                 }
               }
             }
@@ -426,7 +417,7 @@
         }
       }
     },
-    "/plc/get-allplc-centity-item": {
+    "/plc/get-allplc-entityitem": {
       "get": {
         "tags": [
           "Plc"
@@ -437,10 +428,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Plc.Contracts.Respon.S7EntityItemDto"
-                  }
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Plc.Contracts.Respon.S7EntityItemDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
                 }
               }
             }
@@ -481,7 +469,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Region.RegionDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -511,7 +499,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Region.RegionDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -530,10 +518,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Wcs.Contracts.Respon.Region.RegionDto"
-                  }
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
                 }
               }
             }
@@ -562,7 +547,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.Region.RegionDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -591,7 +576,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.WcsTask.WcsTaskDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -621,7 +606,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Wcs.Contracts.Respon.WcsTask.WcsTaskDto"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -629,7 +614,40 @@
         }
       }
     },
-    "/wcstask/get-wcstask": {
+    "/wcstask/get-wcstask/{serialNumber}": {
+      "get": {
+        "tags": [
+          "WcsTask"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Wcs.Contracts.Respon.WcsTask.WcsTaskDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wcstask/get-wcstasks": {
       "post": {
         "tags": [
           "WcsTask"
@@ -650,10 +668,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Wcs.Contracts.Respon.WcsTask.WcsTaskDto"
-                  }
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
                 }
               }
             }
@@ -708,6 +723,203 @@
   },
   "components": {
     "schemas": {
+      "Common.Application.MediatR.Behaviors.Result`1[[Identity.Contrancts.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "$ref": "#/components/schemas/Identity.Contrancts.RoleDto"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[Identity.Contrancts.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "$ref": "#/components/schemas/Identity.Contrancts.UserDto"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Plc.Contracts.Respon.S7EntityItemDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Plc.Contracts.Respon.S7EntityItemDto"
+            },
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Plc.Contracts.Respon.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Plc.Contracts.Respon.S7NetDto"
+            },
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wcs.Contracts.Respon.Job.JobDto"
+            },
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wcs.Contracts.Respon.Region.RegionDto"
+            },
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wcs.Contracts.Respon.WcsTask.WcsTaskDto"
+            },
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "$ref": "#/components/schemas/Wcs.Contracts.Respon.Job.JobDto"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "$ref": "#/components/schemas/Wcs.Contracts.Respon.Region.RegionDto"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "$ref": "#/components/schemas/Wcs.Contracts.Respon.WcsTask.WcsTaskDto"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Identity.Contrancts.Request.AddRoleRequest": {
         "type": "object",
         "properties": {
@@ -1267,6 +1479,92 @@
             "format": "date-time",
             "nullable": true,
             "readOnly": true
+          },
+          "taskCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "serialNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "container": {
+            "type": "string",
+            "nullable": true
+          },
+          "taskType": {
+            "type": "string",
+            "nullable": true
+          },
+          "taskStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "creatorSystemType": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "getTunnel": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getFloor": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getRow": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getColumn": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getDepth": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putTunnel": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putFloor": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putRow": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putColumn": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putDepth": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "executeDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "executePath": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

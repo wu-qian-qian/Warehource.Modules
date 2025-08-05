@@ -36,7 +36,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Respon.Job.JobDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -63,7 +63,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Respon.Job.JobDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -90,7 +90,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Respon.Job.JobDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -111,7 +111,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -138,7 +138,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Respon.Job.JobDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -165,7 +165,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.Respon.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.Respon.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -205,7 +205,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.Respon.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.Respon.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -219,14 +219,14 @@
   {
     "ContainingType": "Plc.Presentation.S7Plc.Entity.GetS7EntityItem\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
-    "RelativePath": "plc/get-allplc-centity-item",
+    "RelativePath": "plc/get-allplc-entityitem",
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.Respon.S7EntityItemDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[Plc.Contracts.Respon.S7EntityItemDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -253,7 +253,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Respon.Region.RegionDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -280,7 +280,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Respon.Region.RegionDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -301,7 +301,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -328,7 +328,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Respon.Region.RegionDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -349,7 +349,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Identity.Contrancts.RoleDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -370,7 +370,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Identity.Contrancts.UserDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -397,7 +397,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Identity.Contrancts.RoleDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -424,7 +424,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Identity.Contrancts.UserDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -522,9 +522,9 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain"
+          "application/json"
         ],
         "StatusCode": 200
       }
@@ -549,7 +549,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Respon.WcsTask.WcsTaskDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -576,7 +576,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Wcs.Contracts.Respon.WcsTask.WcsTaskDto",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -590,7 +590,34 @@
   {
     "ContainingType": "Wcs.Presentation.WcsTask.GetWcsTask\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
-    "RelativePath": "wcstask/get-wcstask",
+    "RelativePath": "wcstask/get-wcstask/{serialNumber}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "WcsTask"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.WcsTask.GetWcsTasks\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "wcstask/get-wcstasks",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
@@ -603,7 +630,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "application/json"
         ],

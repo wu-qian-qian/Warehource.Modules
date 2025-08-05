@@ -22,10 +22,13 @@ public class S7NetService : INetService
     public void Initialization(ISender sender)
     {
         var netList = sender.Send(new GetS7NetQuery()).GetAwaiter().GetResult();
-        foreach (var netConfig in netList)
+        if (netList.IsSuccess)
         {
-            var token = new S7NetToken(netConfig);
-            AddConnect(token);
+            foreach (var netConfig in netList.Value)
+            {
+                var token = new S7NetToken(netConfig);
+                AddConnect(token);
+            }
         }
     }
 

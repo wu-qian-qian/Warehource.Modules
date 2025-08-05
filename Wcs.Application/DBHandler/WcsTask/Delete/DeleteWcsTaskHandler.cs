@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using Wcs.Application.Abstract;
 using Wcs.Contracts.Respon.WcsTask;
@@ -7,10 +8,11 @@ using Wcs.Domain.Task;
 namespace Wcs.Application.DBHandler.WcsTask.Cancel;
 
 public class DeleteWcsTaskHandler(IWcsTaskRepository _wcsTaskRepository
-        ,IUnitOfWork _unitOfWork,IMapper _mapper):ICommandHandler<DeleteWcsTaskEvent,WcsTaskDto>
+        ,IUnitOfWork _unitOfWork,IMapper _mapper):ICommandHandler<DeleteWcsTaskEvent, Result<WcsTaskDto>>
 {
-    public async Task<WcsTaskDto> Handle(DeleteWcsTaskEvent request, CancellationToken cancellationToken)
+    public async Task<Result<WcsTaskDto>> Handle(DeleteWcsTaskEvent request, CancellationToken cancellationToken)
     {
+        Result<WcsTaskDto> result = new();
         Domain.Task.WcsTask wcsTask = default;
         if (request.TaskCode != null)
         {
@@ -20,8 +22,12 @@ public class DeleteWcsTaskHandler(IWcsTaskRepository _wcsTaskRepository
         {
             wcsTask = _wcsTaskRepository.Get(request.SerialNumber.Value);
         }
-        wcsTask.SoftDelete();
-        await _unitOfWork.SaveChangesAsync();
-        return _mapper.Map<WcsTaskDto>(wcsTask);
+        if (wcsTask != null)
+        {
+            wcsTask.SoftDelete();
+            await _unitOfWork.SaveChangesAsync();
+            result.SetValue(_mapper.Map<WcsTaskDto>(wcsTask));
+        }
+        return result;
     }
 }

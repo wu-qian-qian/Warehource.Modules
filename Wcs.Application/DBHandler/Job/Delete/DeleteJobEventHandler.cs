@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using AutoMapper;
+using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using Quartz;
 using Wcs.Application.Abstract;
@@ -12,24 +13,24 @@ internal class DeleteJobEventHandler(
     JobService jobService,
     IUnitOfWork unitOfWork,
     IScheduler scheduler,
-    IMapper mapper) : ICommandHandler<DeleteJobEvent, JobDto>
+    IMapper mapper) : ICommandHandler<DeleteJobEvent, Result<JobDto>>
 {
-    public async Task<JobDto> Handle(DeleteJobEvent request, CancellationToken cancellationToken)
+    public async Task<Result<JobDto>> Handle(DeleteJobEvent request, CancellationToken cancellationToken)
     {
+        Result<JobDto> result = new();
         var jobconfig = await jobService.DeleteJobConfigAsync(request.Name);
         if (jobconfig != null)
         {
             //只有删除成功才保存数据库
             DeleteJob(scheduler, request.Name);
             await unitOfWork.SaveChangesAsync();
+            result.SetValue( mapper.Map<JobDto>(request));
         }
         else
         {
-            throw new ArgumentException(string.Format(CultureInfo.CurrentCulture,
-                "Job with name {0} does not exist.", request.Name));
+            result.SetMessage("没有任务信息删除失败");
         }
-
-        return mapper.Map<JobDto>(request);
+        return result;
     }
 
     private static void DeleteJob(IScheduler scheduler, string name)

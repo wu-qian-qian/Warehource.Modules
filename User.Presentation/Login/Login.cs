@@ -17,12 +17,12 @@ internal class Login : IEndpoint
         app.MapPost("user/user-login", [AllowAnonymous]
             async (ISender sender, LoginRequst requst, ITokenService tokenService) =>
             {
-                var userdto = await sender.Send(new LoginEvent
+                return await sender.Send(new LoginEvent
                 {
                     Username = requst.Username,
                     Password = requst.Password
                 });
-                return tokenService.BuildJwtString([userdto.RoleName], [userdto.Name]);
+              
             }).WithTags(AssemblyReference.User);
     }
 }

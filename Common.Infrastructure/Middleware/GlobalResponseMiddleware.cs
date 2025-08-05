@@ -1,6 +1,8 @@
 ﻿using System.Text.Json;
+using Common.Application.MediatR.Behaviors;
 using Common.Domain.Response;
 using Microsoft.AspNetCore.Http;
+using System.Text.Json.Schema;
 
 namespace Common.Infrastructure.Middleware;
 
@@ -10,6 +12,11 @@ namespace Common.Infrastructure.Middleware;
 public class GlobalResponseMiddleware
 {
     private readonly RequestDelegate _next;
+    public readonly static  JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true,
+                        WriteIndented = true // 格式化输出，方便调试
+                    };
 
     public GlobalResponseMiddleware(RequestDelegate next)
     {
@@ -47,24 +54,34 @@ public class GlobalResponseMiddleware
                         500 => "Internal Server Error",
                         _ => "Unknown Error"
                     };
-                    memoryStream.Seek(0, SeekOrigin.Begin);
-                    var rawResponse = await new StreamReader(memoryStream).ReadToEndAsync();
-                    ApiResponse<object> apiResponse = default;
-                    //如果是json就进行统一的包装
-                    if (contentType != null && contentType.StartsWith("application/json"))
+                    
+                    if (message == "Success")
                     {
-                        var data = rawResponse != string.Empty ? JsonSerializer.Deserialize<object>(rawResponse) : null;
-                        apiResponse = ApiResponse<object>.CreatApiResponse(context.Response.StatusCode, message, data);
+                        memoryStream.Seek(0, SeekOrigin.Begin);
+                        var rawResponse = await new StreamReader(memoryStream).ReadToEndAsync();
+                        var data = rawResponse != string.Empty ? JsonSerializer.Deserialize<Result<object>>(rawResponse, options) : null;
+                        ApiResponse<object> apiResponse = default;
+                        //如果是json就进行统一的包装
+                        if (data.IsSuccess)
+                        {
+                            apiResponse = ApiResponse<object>.CreatApiResponse(1, message, data.Value);
+                            memoryStream.SetLength(0);
+                            await context.Response.WriteAsJsonAsync(apiResponse);
+                        }
+                        else
+                        {
+                            apiResponse = ApiResponse<object>.CreatApiResponse(0, data.Message);
+                            memoryStream.SetLength(0);
+                            await context.Response.WriteAsJsonAsync(apiResponse);
+                        }
+                    }
+                    else
+                    {
+                        var apiResponse = ApiResponse<object>.CreatApiResponse(500, message);
                         memoryStream.SetLength(0);
                         await context.Response.WriteAsJsonAsync(apiResponse);
                     }
-                    //else
-                    //{
-                    //    apiResponse = ApiResponse<object>.CreatApiResponse(context.Response.StatusCode, message, rawResponse);
-                    //    memoryStream.SetLength(0);
-                    //    await context.Response.WriteAsJsonAsync(apiResponse);
-                    //}
-                }
+            }
             }
 
             memoryStream.Seek(0, SeekOrigin.Begin);

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Common.Application.Exception;
+using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using Identity.Application.Abstract;
 using Identity.Contrancts;
@@ -8,10 +9,11 @@ using Identity.Domain;
 namespace Identity.Application.Handler.Add.Role;
 
 internal class AddRoleEventHandler(IUnitOfWork unitOfWork, UserManager userManager, IMapper mapper)
-    : ICommandHandler<AddRoleEvent, RoleDto>
+    : ICommandHandler<AddRoleEvent, Result<RoleDto>>
 {
-    public async Task<RoleDto> Handle(AddRoleEvent request, CancellationToken cancellationToken)
+    public async Task<Result<RoleDto>> Handle(AddRoleEvent request, CancellationToken cancellationToken)
     {
+        Result<RoleDto> result = new();
         var role = await userManager.GetRoleAsync(request.RoleName);
         if (role == null)
         {
@@ -22,9 +24,12 @@ internal class AddRoleEventHandler(IUnitOfWork unitOfWork, UserManager userManag
             };
             await userManager.InserRoleAsync(role);
             await unitOfWork.SaveChangesAsync();
-            return mapper.Map<RoleDto>(role);
+            result.SetValue( mapper.Map<RoleDto>(role));
         }
-
-        throw new CommonException("添加角色失败存在该角色");
+        else
+        {
+            result.SetMessage("添加失败，无角色");
+        }
+        return result;
     }
 }

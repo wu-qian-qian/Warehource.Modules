@@ -85,14 +85,14 @@ public partial class S7NetToken : S7Net
     /// <param name="input"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public override async Task<string> ReadTResultAsync(ReadBufferInput input)
+    public override  Task<string> ReadTResultAsync(ReadBufferInput input)
     {
         var result = string.Empty;
         ;
         if (_plc.IsConnected == false)
         {
             Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC未连接");
-            return result;
+            return Task.FromResult(result);
         }
 
         try
@@ -182,8 +182,7 @@ public partial class S7NetToken : S7Net
         {
             Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC读取出现异常：{e.Message}");
         }
-
-        return result;
+        return Task.FromResult(result);
     }
 
     /// <summary>

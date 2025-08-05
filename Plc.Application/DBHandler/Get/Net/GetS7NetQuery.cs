@@ -1,10 +1,11 @@
-﻿using Common.Application.MediatR.Message;
+﻿using Common.Application.MediatR.Behaviors;
+using Common.Application.MediatR.Message;
 using Plc.Contracts.Respon;
 using Plc.Shared;
 
 namespace Plc.Application.DBHandler.Get.Net;
 
-public class GetS7NetQuery : IQuery<IEnumerable<S7NetDto>>
+public class GetS7NetQuery : IQuery<Result<IEnumerable<S7NetDto>>>
 {
     public GetS7NetQuery()
     {

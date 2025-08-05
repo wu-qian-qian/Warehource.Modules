@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using AutoMapper;
+using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using Quartz;
 using Wcs.Application.Abstract;
@@ -12,10 +13,11 @@ internal class StatusJobEventHandler(
     JobService jobService,
     IUnitOfWork unitOfWork,
     IScheduler scheduler,
-    IMapper mapper) : ICommandHandler<StatusJobEvent, JobDto>
+    IMapper mapper) : ICommandHandler<StatusJobEvent, Result<JobDto>>
 {
-    public async Task<JobDto> Handle(StatusJobEvent request, CancellationToken cancellationToken)
+    public async Task<Result<JobDto>> Handle(StatusJobEvent request, CancellationToken cancellationToken)
     {
+        Result<JobDto> result = new();
         var jobconfig = await jobService.GetJobConfigAsync(request.Name);
         if (jobconfig != null)
         {
@@ -31,18 +33,18 @@ internal class StatusJobEventHandler(
                     PauseJob(scheduler, request.Name);
                     jobconfig.IsStart = false;
                 }
-
                 await unitOfWork.SaveChangesAsync();
+                result.SetValue(mapper.Map<JobDto>(jobconfig));
             }
         }
         else
         {
-            throw new ArgumentException(string.Format(CultureInfo.CurrentCulture,
-                "Job with name {0} does not exist.", request.Name));
+            result.SetMessage("没有该任务信息");
         }
-
-        return mapper.Map<JobDto>(jobconfig);
+        return result;
     }
+
+       
 
     private static void PauseJob(IScheduler scheduler, string name)
     {

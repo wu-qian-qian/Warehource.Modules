@@ -1,12 +1,13 @@
-﻿using Common.Application.MediatR.Message;
+﻿using Common.Application.MediatR.Behaviors;
+using Common.Application.MediatR.Message;
 using Wcs.Contracts.Respon.WcsTask;
 using Wcs.Shared;
 
 namespace Wcs.Application.DBHandler.WcsTask.Insert;
 
-public class AddOrUpdateWcsTaskEvent : ICommand<WcsTaskDto>
+public class AddOrUpdateWcsTaskEvent : ICommand<Result<WcsTaskDto>>
 {
-    public int? SerialNumber { get; set; }
+    public Guid Id { get; set; }
     public string TaskCode { get; set; }
 
     /// <summary>

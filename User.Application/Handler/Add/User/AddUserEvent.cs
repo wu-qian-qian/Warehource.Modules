@@ -1,9 +1,10 @@
-﻿using Common.Application.MediatR.Message;
+﻿using Common.Application.MediatR.Behaviors;
+using Common.Application.MediatR.Message;
 using Identity.Contrancts;
 
 namespace Identity.Application.Handler.Add.User;
 
-public sealed record AddUserEvent : ICommand<UserDto>
+public sealed record AddUserEvent : ICommand<Result<UserDto>>
 {
     public string Name { get; set; }
 

@@ -345,3 +345,219 @@ System.ArgumentNullException: Value cannot be null. (Parameter 'user')
 2025-08-05 16:38:55.648 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
 2025-08-05 16:38:55.648 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
 2025-08-05 16:38:55.654 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 16:42:25.092 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 16:42:25.149 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 16:42:25.161 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 16:42:25.388 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 16:42:25.391 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 16:42:25.455 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_wt4yyyg93snebbngbdq789yyfc"
+2025-08-05 16:42:25.455 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 16:42:25.455 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 16:42:25.455 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 16:42:25.459 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 16:42:37.438 +08:00 [INF] HTTP GET /wcstask/get-wcstask/{serialNumber} responded 401 in 134.1139 ms
+2025-08-05 16:43:32.808 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 16:43:32.849 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 16:43:32.852 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 16:43:33.092 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 16:43:33.097 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 16:43:33.177 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 16:43:33.177 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 16:43:33.177 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 16:43:33.177 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_3oroyyg93sneyjfcbdq789bjye"
+2025-08-05 16:43:33.181 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 16:43:44.492 +08:00 [INF] HTTP GET /wcstask/get-wcstask/{serialNumber} responded 401 in 56.5650 ms
+2025-08-05 16:43:57.823 +08:00 [INF] HTTP POST /user/user-login responded 200 in 525.9378 ms
+2025-08-05 16:44:15.179 +08:00 [INF] HTTP GET /wcstask/get-wcstask/{serialNumber} responded 200 in 530.1377 ms
+2025-08-05 16:44:49.481 +08:00 [ERR] HTTP POST /wcstask/add-or-update-wcstask responded 500 in 654.2532 ms
+2025-08-05 16:45:35.091 +08:00 [ERR] HTTP POST /wcstask/add-or-update-wcstask responded 500 in 252.2181 ms
+2025-08-05 16:45:42.636 +08:00 [INF] HTTP GET /wcstask/get-wcstask/{serialNumber} responded 401 in 1.7038 ms
+2025-08-05 16:46:01.499 +08:00 [ERR] HTTP POST /wcstask/add-or-update-wcstask responded 500 in 9506.9281 ms
+2025-08-05 16:46:22.638 +08:00 [ERR] HTTP POST /wcstask/add-or-update-wcstask responded 500 in 16388.9158 ms
+2025-08-05 16:46:50.928 +08:00 [INF] HTTP POST /wcstask/add-or-update-wcstask responded 200 in 16369.4528 ms
+2025-08-05 16:47:36.836 +08:00 [INF] HTTP PUT /wcstask/update-wcstask-status responded 200 in 339.5913 ms
+2025-08-05 16:47:57.037 +08:00 [INF] HTTP DELETE /wcstask/delete-wcstask/{serialNumber} responded 200 in 337.7543 ms
+2025-08-05 16:48:02.961 +08:00 [INF] HTTP GET /wcstask/get-wcstask/{serialNumber} responded 200 in 14.2828 ms
+2025-08-05 17:00:48.309 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 17:00:48.347 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 17:00:48.349 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 17:00:48.439 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 17:00:48.443 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 17:00:48.474 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_yb4oyyg93sneyc9gbdq789w1be"
+2025-08-05 17:00:48.474 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 17:00:48.474 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 17:00:48.474 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 17:00:48.478 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 17:00:55.014 +08:00 [DBG] Stopping bus instances: IBus
+2025-08-05 17:00:55.018 +08:00 [DBG] Stopping bus: "loopback://localhost/"
+2025-08-05 17:00:55.022 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 17:00:55.024 +08:00 [DBG] Consumer Stopping: "loopback://localhost/WcsIntegrationEvent" (Stop Receive Transport)
+2025-08-05 17:00:55.030 +08:00 [DBG] Endpoint Completed: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 17:00:55.037 +08:00 [DBG] Consumer Completed: "loopback://localhost/WcsIntegrationEvent": 0 received, 0 concurrent
+2025-08-05 17:00:55.040 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 17:00:55.041 +08:00 [DBG] Consumer Stopping: "loopback://localhost/S7ReadPlcDataBlockEvent" (Stop Receive Transport)
+2025-08-05 17:00:55.043 +08:00 [DBG] Endpoint Completed: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 17:00:55.043 +08:00 [DBG] Consumer Completed: "loopback://localhost/S7ReadPlcDataBlockEvent": 0 received, 0 concurrent
+2025-08-05 17:00:55.044 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 17:00:55.045 +08:00 [DBG] Consumer Stopping: "loopback://localhost/S7WritePlcDataBlockEvent" (Stop Receive Transport)
+2025-08-05 17:00:55.045 +08:00 [DBG] Endpoint Completed: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 17:00:55.046 +08:00 [DBG] Consumer Completed: "loopback://localhost/S7WritePlcDataBlockEvent": 0 received, 0 concurrent
+2025-08-05 17:00:55.049 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/_WarehourceSource_bus_yb4oyyg93sneyc9gbdq789w1be"
+2025-08-05 17:00:55.050 +08:00 [DBG] Consumer Stopping: "loopback://localhost/_WarehourceSource_bus_yb4oyyg93sneyc9gbdq789w1be" (Stop Receive Transport)
+2025-08-05 17:00:55.052 +08:00 [DBG] Endpoint Completed: "loopback://localhost/_WarehourceSource_bus_yb4oyyg93sneyc9gbdq789w1be"
+2025-08-05 17:00:55.052 +08:00 [DBG] Consumer Completed: "loopback://localhost/_WarehourceSource_bus_yb4oyyg93sneyc9gbdq789w1be": 0 received, 0 concurrent
+2025-08-05 17:00:55.065 +08:00 [INF] Bus stopped: "loopback://localhost/"
+2025-08-05 17:01:52.766 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 17:01:52.808 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 17:01:52.811 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 17:01:53.033 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 17:01:53.036 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 17:01:53.113 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 17:01:53.113 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 17:01:53.113 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_7t7oyyg93snebr8mbdq789iafg"
+2025-08-05 17:01:53.113 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 17:01:53.118 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 17:04:30.895 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 17:04:30.936 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 17:04:30.940 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 17:04:31.188 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 17:04:31.195 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 17:04:31.274 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 17:04:31.274 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_gtwyyyg93sneb9chbdq789as8g"
+2025-08-05 17:04:31.274 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 17:04:31.274 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 17:04:31.278 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 17:16:38.403 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 17:16:38.464 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 17:16:38.471 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 17:16:38.705 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 17:16:38.717 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 17:16:38.792 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 17:16:38.792 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 17:16:38.792 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_dt6yyyg93sneych4bdq7eygerc"
+2025-08-05 17:16:38.792 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 17:16:38.813 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 17:16:44.202 +08:00 [ERR] HTTP POST /user/user-login responded 500 in 941.5077 ms
+2025-08-05 17:17:15.231 +08:00 [ERR] HTTP POST /user/user-login responded 500 in 217.5350 ms
+2025-08-05 17:36:00.132 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 17:36:00.215 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 17:36:00.224 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 17:36:00.803 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 17:36:00.831 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 17:36:01.031 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 17:36:01.031 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 17:36:01.031 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 17:36:01.031 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_3y3oyyg93sneyyosbdq7ey57bn"
+2025-08-05 17:36:01.037 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 17:41:06.779 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 17:41:06.821 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 17:41:06.825 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 17:41:07.056 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 17:41:07.061 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 17:41:07.123 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 17:41:07.123 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 17:41:07.123 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 17:41:07.123 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_aojoyyg93snebt9cbdq7ebbuf6"
+2025-08-05 17:41:07.126 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 17:41:12.012 +08:00 [INF] HTTP POST /user/user-login responded 200 in 555.3494 ms
+2025-08-05 17:41:30.132 +08:00 [INF] HTTP POST /user/user-login responded 200 in 37.4996 ms
+2025-08-05 17:43:21.025 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 17:43:21.075 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 17:43:21.078 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 17:43:21.302 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 17:43:21.309 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 17:43:21.386 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 17:43:21.386 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_1y4oyyg93sneysk4bdq7ebrdgr"
+2025-08-05 17:43:21.386 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 17:43:21.386 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 17:43:21.389 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 17:43:26.411 +08:00 [INF] HTTP POST /user/user-login responded 200 in 526.9020 ms
+2025-08-05 17:44:44.893 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 17:44:44.947 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 17:44:44.972 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 17:44:45.244 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 17:44:45.252 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 17:44:45.343 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_nt3yyyg93snebsgcbdq7ebfigk"
+2025-08-05 17:44:45.343 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 17:44:45.343 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 17:44:45.343 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 17:44:45.345 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 17:44:52.375 +08:00 [INF] HTTP POST /user/user-login responded 200 in 429.4670 ms
+2025-08-05 17:46:01.031 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 17:46:01.088 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 17:46:01.092 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 17:46:01.347 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 17:46:01.352 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 17:46:01.414 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 17:46:01.414 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 17:46:01.414 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 17:46:01.414 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_4b9oyyg93snebjj6bdq7eb8dbk"
+2025-08-05 17:46:01.418 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 17:46:06.618 +08:00 [ERR] HTTP POST /user/user-login responded 500 in 993.7758 ms
+2025-08-05 18:23:17.692 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 18:23:17.729 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 18:23:17.731 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 18:23:17.921 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 18:23:17.924 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 18:23:17.969 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_3bwoyyg93snebfadbdq7enoanr"
+2025-08-05 18:23:17.969 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 18:23:17.969 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 18:23:17.969 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 18:23:17.976 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 18:23:28.110 +08:00 [INF] HTTP POST /user/user-login responded 200 in 2441.2529 ms
+2025-08-05 18:25:51.714 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 18:25:51.752 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 18:25:51.758 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 18:25:51.969 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 18:25:51.976 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 18:25:52.055 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 18:25:52.055 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 18:25:52.055 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 18:25:52.055 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_zt9oyyg93snebcfjbdq7enuwys"
+2025-08-05 18:25:52.058 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 18:26:02.807 +08:00 [INF] HTTP POST /user/user-login responded 200 in 596.3533 ms
+2025-08-05 18:29:17.892 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 18:29:17.930 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 18:29:17.934 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 18:29:18.168 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 18:29:18.173 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 18:29:18.254 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 18:29:18.254 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 18:29:18.254 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 18:29:18.254 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_utfyyyg93sneyjzqbdq7enzq8h"
+2025-08-05 18:29:18.257 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 18:29:23.026 +08:00 [INF] HTTP POST /user/user-login responded 200 in 484.6108 ms
+2025-08-05 18:32:12.985 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 18:32:13.023 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 18:32:13.027 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 18:32:13.232 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 18:32:13.237 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 18:32:13.291 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 18:32:13.291 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 18:32:13.291 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 18:32:13.291 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_rndoyyg93sneydwdbdq7en4znz"
+2025-08-05 18:32:13.293 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 18:32:19.677 +08:00 [INF] HTTP POST /user/user-login responded 200 in 486.6492 ms
+2025-08-05 18:36:23.929 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 18:36:23.969 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 18:36:23.982 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 18:36:24.284 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 18:36:24.294 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 18:36:24.384 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_fb6oyyg93sneya8xbdq7en9c8o"
+2025-08-05 18:36:24.384 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 18:36:24.384 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 18:36:24.384 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 18:36:24.386 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 18:36:33.755 +08:00 [INF] HTTP POST /user/user-login responded 200 in 479.6518 ms
+2025-08-05 18:36:45.763 +08:00 [INF] HTTP POST /user/user-login responded 200 in 176.3273 ms
+2025-08-05 18:43:00.944 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 18:43:00.992 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 18:43:00.997 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 18:43:01.234 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 18:43:01.241 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 18:43:01.311 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 18:43:01.311 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 18:43:01.311 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_5oryyyg93snebiprbdq7edg3rt"
+2025-08-05 18:43:01.311 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 18:43:01.314 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 18:43:15.247 +08:00 [INF] HTTP GET /user/get-roles responded 401 in 76.0545 ms

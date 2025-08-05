@@ -1,4 +1,5 @@
-﻿using Common.Application.MediatR.Message;
+﻿using Common.Application.MediatR.Behaviors;
+using Common.Application.MediatR.Message;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,16 +9,21 @@ using Wcs.Domain.Task;
 
 namespace Wcs.Application.DBHandler.WcsTask.UpdateExecute
 {
-    internal class UpdateWcsTaskExecueStepHandler(IWcsTaskRepository _wcsTaskRepositoty) : ICommandHandler<UpdateWcsTaskExecuteStepEvent>
+    internal class UpdateWcsTaskExecueStepHandler(IWcsTaskRepository _wcsTaskRepositoty) : ICommandHandler<UpdateWcsTaskExecuteStepEvent, Result<string>>
     {
-        public Task Handle(UpdateWcsTaskExecuteStepEvent request, CancellationToken cancellationToken)
+        public Task<Result<string>> Handle(UpdateWcsTaskExecuteStepEvent request, CancellationToken cancellationToken)
         {
             var wcstask = _wcsTaskRepositoty.Get(request.SerialNumber);
+            Result<string> result = new();
             if (wcstask != null)
             {
-                
+                result.SetMessage("修改成功");
             }
-            return Task.CompletedTask;
+            else
+            {
+                result.SetMessage("无该任务");
+            }
+            return Task.FromResult(result);
         }
     }
 }

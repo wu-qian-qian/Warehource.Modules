@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Common.Application.Exception;
+using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using Identity.Application.Abstract;
 using Identity.Contrancts;
@@ -8,10 +9,11 @@ using Identity.Domain;
 namespace Identity.Application.Handler.Add.User;
 
 internal class AddUserEventHandler(IUnitOfWork unitOfWork, UserManager userManager, IMapper mapper)
-    : ICommandHandler<AddUserEvent, UserDto>
+    : ICommandHandler<AddUserEvent, Result<UserDto>>
 {
-    public async Task<UserDto> Handle(AddUserEvent request, CancellationToken cancellationToken)
+    public async Task<Result<UserDto>> Handle(AddUserEvent request, CancellationToken cancellationToken)
     {
+        Result <UserDto> result = new();
         var user = await userManager.GetUserAsync(request.Username);
         var role = await userManager.GetRoleAsync(request.RoleName);
         var LockoutEnd = DateTimeOffset.Now.AddYears(-100);
@@ -31,9 +33,13 @@ internal class AddUserEventHandler(IUnitOfWork unitOfWork, UserManager userManag
             await userManager.InserUserAsync(user);
             await unitOfWork.SaveChangesAsync();
             user.Role = role;
-            return mapper.Map<UserDto>(user);
+            result.SetValue( mapper.Map<UserDto>(user));
         }
 
-        throw new CommonException("添加角色失败存在该用户");
+        else
+        {
+            result.SetMessage("角色信息错误");
+        }
+        return result;
     }
 }

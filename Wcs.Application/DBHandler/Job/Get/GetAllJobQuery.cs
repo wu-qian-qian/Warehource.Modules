@@ -3,4 +3,4 @@ using Wcs.Contracts.Respon.Job;
 
 namespace Wcs.Application.DBHandler.Job.Get;
 
-public sealed record GetAllJobQuery : IQuery<IEnumerable<JobDto>?>;
+public sealed record GetAllJobQuery : IQuery<IEnumerable<JobDto>>;
