@@ -590,7 +590,34 @@
   {
     "ContainingType": "Wcs.Presentation.WcsTask.GetWcsTask\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
-    "RelativePath": "wcstask/get-wcstask",
+    "RelativePath": "wcstask/get-wcstask/{serialNumber}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "WcsTask"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.WcsTask.GetWcsTasks\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "wcstask/get-wcstasks",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,

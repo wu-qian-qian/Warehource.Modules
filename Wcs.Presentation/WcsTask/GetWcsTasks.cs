@@ -14,7 +14,7 @@ public class GetWcsTasks:IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("wcstask/get-wcstask", [Authorize] async (
+        app.MapPost("wcstask/get-wcstasks", [Authorize] async (
             GetWcsTaskRequest request,
             ISender sender) =>
         {

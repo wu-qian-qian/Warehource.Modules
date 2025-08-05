@@ -9,3 +9,108 @@
   "username": "string",
   "password": "string"
 }--响应体：{"code":500,"message":"Internal Server Error","data":{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}}--时间：3674
+2025-08-05 16:42:37.457 +08:00 [INF] 地址：::1-URL:/wcstask/get-wcstask/%7BserialNumber%7D--请求体：--响应体：--时间：154
+2025-08-05 16:43:44.502 +08:00 [INF] 地址：::1-URL:/wcstask/get-wcstask/%7BserialNumber%7D--请求体：--响应体：--时间：70
+2025-08-05 16:43:57.836 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "admin",
+  "password": "qwe"
+}--响应体：eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODU5MTk0MzcsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.5ZVyTL4g8r76zL8h3qdKvE_zYaD19vw0Je3d-IMSVMg--时间：541
+2025-08-05 16:44:15.187 +08:00 [INF] 地址：::1-URL:/wcstask/get-wcstask/%7BserialNumber%7D--请求体：--响应体：{"code":200,"message":"Success","data":[{"taskCode":"string","serialNumber":4000,"container":"string","taskType":"StockIn","taskStatus":"Created","creatorSystemType":"Wcs","description":"string","getTunnel":0,"getFloor":1,"getRow":1,"getColumn":0,"getDepth":0,"putTunnel":0,"putFloor":0,"putRow":0,"putColumn":0,"putDepth":0,"executeDesc":null,"executePath":null,"id":"e5958d8a-3057-4779-95ec-7ab3554e4c45","creationTime":"0001-01-01T00:00:00","lastModifierUser":null,"lastModificationTime":null}]}--时间：538
+2025-08-05 16:44:49.484 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 2,
+  "getFloor": 2,
+  "getRow": 2,
+  "getColumn": 1,
+  "getDepth": 1,
+  "putTunnel": 1,
+  "putFloor": 1,
+  "putRow": 1,
+  "putColumn": 1,
+  "putDepth": 1,
+  "executeDesc": "string"
+}--响应体：{"code":500,"message":"Internal Server Error","data":{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}}--时间：656
+2025-08-05 16:45:35.104 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 2,
+  "getFloor": 2,
+  "getRow": 2,
+  "getColumn": 1,
+  "getDepth": 1,
+  "putTunnel": 1,
+  "putFloor": 1,
+  "putRow": 1,
+  "putColumn": 1,
+  "putDepth": 1,
+  "executeDesc": "string"
+}--响应体：{"code":500,"message":"Internal Server Error","data":{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}}--时间：264
+2025-08-05 16:45:42.653 +08:00 [INF] 地址：::1-URL:/wcstask/get-wcstask/%7BserialNumber%7D--请求体：--响应体：--时间：18
+2025-08-05 16:46:01.520 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 2,
+  "getFloor": 2,
+  "getRow": 2,
+  "getColumn": 1,
+  "getDepth": 1,
+  "putTunnel": 1,
+  "putFloor": 1,
+  "putRow": 1,
+  "putColumn": 1,
+  "putDepth": 1,
+  "executeDesc": "string"
+}--响应体：{"code":500,"message":"Internal Server Error","data":{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}}--时间：9528
+2025-08-05 16:46:22.640 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 2,
+  "getFloor": 2,
+  "getRow": 2,
+  "getColumn": 1,
+  "getDepth": 1,
+  "putTunnel": 1,
+  "putFloor": 1,
+  "putRow": 1,
+  "putColumn": 1,
+  "putDepth": 1,
+  "executeDesc": "string"
+}--响应体：{"code":500,"message":"Internal Server Error","data":{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}}--时间：16391
+2025-08-05 16:46:50.936 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 2,
+  "getFloor": 2,
+  "getRow": 2,
+  "getColumn": 1,
+  "getDepth": 1,
+  "putTunnel": 1,
+  "putFloor": 1,
+  "putRow": 1,
+  "putColumn": 1,
+  "putDepth": 1,
+  "executeDesc": "string"
+}--响应体：{"code":200,"message":"Success","data":{"taskCode":"string","serialNumber":4000,"container":"string","taskType":"StockIn","taskStatus":"Created","creatorSystemType":"Wcs","description":"string","getTunnel":2,"getFloor":2,"getRow":2,"getColumn":1,"getDepth":0,"putTunnel":1,"putFloor":1,"putRow":1,"putColumn":1,"putDepth":0,"executeDesc":null,"executePath":null,"id":"e5958d8a-3057-4779-95ec-7ab3554e4c45","creationTime":"0001-01-01T00:00:00","lastModifierUser":null,"lastModificationTime":null}}--时间：16377
+2025-08-05 16:47:36.839 +08:00 [INF] 地址：::1-URL:/wcstask/update-wcstask-status--请求体：{
+  "serialNumber": 4000,
+  "deviceName": "string",
+  "wcsTaskStatusType": 2
+}--响应体：--时间：342
+2025-08-05 16:47:57.045 +08:00 [INF] 地址：::1-URL:/wcstask/delete-wcstask/%7BserialNumber%7D--请求体：--响应体：{"code":200,"message":"Success","data":{"taskCode":"string","serialNumber":4000,"container":"string","taskType":"StockIn","taskStatus":"InProgress","creatorSystemType":"Wcs","description":"string","getTunnel":2,"getFloor":2,"getRow":2,"getColumn":1,"getDepth":0,"putTunnel":1,"putFloor":1,"putRow":1,"putColumn":1,"putDepth":0,"executeDesc":null,"executePath":null,"id":"e5958d8a-3057-4779-95ec-7ab3554e4c45","creationTime":"0001-01-01T00:00:00","lastModifierUser":null,"lastModificationTime":null}}--时间：345
+2025-08-05 16:48:02.971 +08:00 [INF] 地址：::1-URL:/wcstask/get-wcstask/%7BserialNumber%7D--请求体：--响应体：{"code":200,"message":"Success","data":[]}--时间：24

@@ -629,7 +629,40 @@
         }
       }
     },
-    "/wcstask/get-wcstask": {
+    "/wcstask/get-wcstask/{serialNumber}": {
+      "get": {
+        "tags": [
+          "WcsTask"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Wcs.Contracts.Respon.WcsTask.WcsTaskDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wcstask/get-wcstasks": {
       "post": {
         "tags": [
           "WcsTask"
@@ -1267,6 +1300,92 @@
             "format": "date-time",
             "nullable": true,
             "readOnly": true
+          },
+          "taskCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "serialNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "container": {
+            "type": "string",
+            "nullable": true
+          },
+          "taskType": {
+            "type": "string",
+            "nullable": true
+          },
+          "taskStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "creatorSystemType": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "getTunnel": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getFloor": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getRow": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getColumn": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "getDepth": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putTunnel": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putFloor": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putRow": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putColumn": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "putDepth": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "executeDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "executePath": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

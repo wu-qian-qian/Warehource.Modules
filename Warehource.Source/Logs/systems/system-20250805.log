@@ -345,3 +345,36 @@ System.ArgumentNullException: Value cannot be null. (Parameter 'user')
 2025-08-05 16:38:55.648 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
 2025-08-05 16:38:55.648 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
 2025-08-05 16:38:55.654 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 16:42:25.092 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 16:42:25.149 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 16:42:25.161 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 16:42:25.388 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 16:42:25.391 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 16:42:25.455 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_wt4yyyg93snebbngbdq789yyfc"
+2025-08-05 16:42:25.455 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 16:42:25.455 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 16:42:25.455 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 16:42:25.459 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 16:42:37.438 +08:00 [INF] HTTP GET /wcstask/get-wcstask/{serialNumber} responded 401 in 134.1139 ms
+2025-08-05 16:43:32.808 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-05 16:43:32.849 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-05 16:43:32.852 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-05 16:43:33.092 +08:00 [DBG] Starting bus instances: IBus
+2025-08-05 16:43:33.097 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-05 16:43:33.177 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-05 16:43:33.177 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-05 16:43:33.177 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-05 16:43:33.177 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_3oroyyg93sneyjfcbdq789bjye"
+2025-08-05 16:43:33.181 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-05 16:43:44.492 +08:00 [INF] HTTP GET /wcstask/get-wcstask/{serialNumber} responded 401 in 56.5650 ms
+2025-08-05 16:43:57.823 +08:00 [INF] HTTP POST /user/user-login responded 200 in 525.9378 ms
+2025-08-05 16:44:15.179 +08:00 [INF] HTTP GET /wcstask/get-wcstask/{serialNumber} responded 200 in 530.1377 ms
+2025-08-05 16:44:49.481 +08:00 [ERR] HTTP POST /wcstask/add-or-update-wcstask responded 500 in 654.2532 ms
+2025-08-05 16:45:35.091 +08:00 [ERR] HTTP POST /wcstask/add-or-update-wcstask responded 500 in 252.2181 ms
+2025-08-05 16:45:42.636 +08:00 [INF] HTTP GET /wcstask/get-wcstask/{serialNumber} responded 401 in 1.7038 ms
+2025-08-05 16:46:01.499 +08:00 [ERR] HTTP POST /wcstask/add-or-update-wcstask responded 500 in 9506.9281 ms
+2025-08-05 16:46:22.638 +08:00 [ERR] HTTP POST /wcstask/add-or-update-wcstask responded 500 in 16388.9158 ms
+2025-08-05 16:46:50.928 +08:00 [INF] HTTP POST /wcstask/add-or-update-wcstask responded 200 in 16369.4528 ms
+2025-08-05 16:47:36.836 +08:00 [INF] HTTP PUT /wcstask/update-wcstask-status responded 200 in 339.5913 ms
+2025-08-05 16:47:57.037 +08:00 [INF] HTTP DELETE /wcstask/delete-wcstask/{serialNumber} responded 200 in 337.7543 ms
+2025-08-05 16:48:02.961 +08:00 [INF] HTTP GET /wcstask/get-wcstask/{serialNumber} responded 200 in 14.2828 ms
