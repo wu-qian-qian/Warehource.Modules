@@ -51,15 +51,14 @@ public class WcsTask : IEntity
     /// </summary>
     public PutLocation PutLocation { get; set; }
 
-
-    public Guid? DeviceId { get; set; }
+    
 
     public Guid? RegionId { get; set; }
 
-    // /// <summary>
-    // ///     任务执行步骤
-    // /// </summary>
-    // public Guid TaskExecuteStepId { get; set; }
-    //
-    // public TaskExecuteStep.TaskExecuteStep TaskExecuteStep { get; set; }
+    /// <summary>
+    ///     任务执行步骤
+    /// </summary>
+    public Guid TaskExecuteStepId { get; set; }
+    
+    public TaskExecuteStep.TaskExecuteStep TaskExecuteStep { get; set; }
 }

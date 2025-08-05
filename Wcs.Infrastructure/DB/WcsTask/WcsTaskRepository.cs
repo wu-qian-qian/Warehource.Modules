@@ -21,7 +21,16 @@ public class WcsTaskRepository(WCSDBContext _db) : IWcsTaskRepository
     public Domain.Task.WcsTask Get(string taskCode)
     {
         Domain.Task.WcsTask wcsTask = default;
-        if (_db.WcsTasks.Any(p => p.TaskCode == taskCode)) wcsTask = _db.WcsTasks.First(p => p.TaskCode == taskCode);
+        if (_db.WcsTasks.Any(p => p.TaskCode == taskCode))
+            wcsTask = _db.WcsTasks.First(p => p.TaskCode == taskCode);
+        return wcsTask;
+    }
+
+    public Domain.Task.WcsTask Get(int serialNumber)
+    {
+        Domain.Task.WcsTask wcsTask = default;
+        if (_db.WcsTasks.Any(p => p.SerialNumber == serialNumber)) 
+            wcsTask = _db.WcsTasks.First(p => p.SerialNumber == serialNumber);
         return wcsTask;
     }
 

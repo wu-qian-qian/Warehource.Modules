@@ -4,6 +4,7 @@ using Wcs.Application.Abstract;
 using Wcs.Contracts.Respon.WcsTask;
 using Wcs.Domain.Region;
 using Wcs.Domain.Task;
+using Wcs.Domain.TaskExecuteStep;
 using Wcs.Shared;
 
 namespace Wcs.Application.DBHandler.WcsTask.Insert;
@@ -30,7 +31,11 @@ public class InsertWcsTaskHandler(
             GetLocation = new GetLocation(request.GetTunnel.ToString()
                 , request.GetFloor.ToString(), request.GetRow.ToString()
                 , request.GetColumn.ToString(), request.GetDepth.ToString()),
-            Description = request.Description
+            Description = request.Description,
+            TaskExecuteStep = new TaskExecuteStep
+            {
+                Description = "任务创建"
+            }
         };
         _wcsTaskRepository.Insert([wcsTask]);
         await _unitOfWork.SaveChangesAsync();

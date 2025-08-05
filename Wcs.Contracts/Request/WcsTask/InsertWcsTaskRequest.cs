@@ -2,7 +2,7 @@
 
 namespace Wcs.Contracts.Request.WcsTask;
 
-public class WcsTaskRequest
+public class InsertWcsTaskRequest
 {
     public string TaskCode { get; set; }
 

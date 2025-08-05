@@ -33,9 +33,9 @@ public class WcsTaskConfiguration : IEntityTypeConfiguration<Domain.Task.WcsTask
             g.Property(p => p.PutTunnel).IsRequired(false).HasMaxLength(10);
             g.Property(p => p.PutDepth).IsRequired(false).HasMaxLength(10);
         });
-        // builder.HasOne(t => t.TaskExecuteStep)
-        //     .WithOne()
-        //     .HasForeignKey<Domain.TaskExecuteStep.TaskExecuteStep>(t => t.Id);
+        builder.HasOne(t => t.TaskExecuteStep)
+            .WithOne()
+            .HasForeignKey<Domain.TaskExecuteStep.TaskExecuteStep>(t => t.Id);
 
         //并发字段
         builder.Property<byte[]>("Version").IsRowVersion();
