@@ -1,0 +1,30 @@
+2025-08-05 16:14:24.178 +08:00 [ERR]    at Identity.Application.Handler.Login.LoginEventHandler.Handle(LoginEvent request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\User.Application\Handler\Login\LoginEventHandler.cs:line 16
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Identity.Presentation.Login.Login.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\User.Presentation\Login\Login.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfString>g__ExecuteAwaited|134_0(Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)--Application exception
+2025-08-05 16:16:17.544 +08:00 [ERR]    at Identity.Application.Handler.Login.LoginEventHandler.Handle(LoginEvent request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\User.Application\Handler\Login\LoginEventHandler.cs:line 16
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Identity.Presentation.Login.Login.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\User.Presentation\Login\Login.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfString>g__ExecuteAwaited|134_0(Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)--Application exception
+2025-08-05 16:22:04.734 +08:00 [ERR]    at Identity.Application.Handler.Login.LoginEventHandler.Handle(LoginEvent request, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\User.Application\Handler\Login\LoginEventHandler.cs:line 16
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 20
+   at Identity.Presentation.Login.Login.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\User.Presentation\Login\Login.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfString>g__ExecuteAwaited|134_0(Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)--Application exception

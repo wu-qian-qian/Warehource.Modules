@@ -1,0 +1,11 @@
+2025-08-05 16:14:24.342 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：--响应体：{"code":500,"message":"Internal Server Error","data":{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}}--时间：1597
+2025-08-05 16:16:17.662 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：--响应体：{"code":500,"message":"Internal Server Error","data":{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}}--时间：22150
+2025-08-05 16:16:49.389 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：--响应体：eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODU5MTc4MDksImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.qYLy-VdYzTc1nuzzuUkNl9fY7Hj4UuLFdp-1UVxylW4--时间：18407
+2025-08-05 16:22:04.815 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":500,"message":"Internal Server Error","data":{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}}--时间：9609
+2025-08-05 16:23:07.254 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":500,"message":"Internal Server Error","data":{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}}--时间：3674
