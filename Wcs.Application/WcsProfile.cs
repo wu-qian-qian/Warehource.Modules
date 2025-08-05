@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using Wcs.Application.DBHandler.Job.Insert;
+using Wcs.Application.DBHandler.WcsTask.Insert;
+using Wcs.Contracts.Request.WcsTask;
 using Wcs.Contracts.Respon.Job;
 using Wcs.Contracts.Respon.Region;
 using Wcs.Contracts.Respon.WcsTask;
@@ -19,5 +21,7 @@ internal class WcsProfile : Profile
         CreateMap<Region, RegionDto>();
 
         CreateMap<WcsTask, WcsTaskDto>();
+        
+        CreateMap<InsertWcsTaskRequest,InsertWcsTaskEvent>();
     }
 }

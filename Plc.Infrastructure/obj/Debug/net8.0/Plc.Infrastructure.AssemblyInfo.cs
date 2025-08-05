@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Plc.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca2f13c1363e21a22d0a825f321ce8335bd5faa8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c29d7cb3e41da1b71c04715b68fdcf3549574ef4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Plc.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Plc.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

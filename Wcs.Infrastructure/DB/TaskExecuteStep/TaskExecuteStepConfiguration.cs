@@ -12,6 +12,8 @@ public class TaskExecuteStepConfiguration : IEntityTypeConfiguration<Domain.Task
         builder.HasKey(t => t.Id).IsClustered(false);
         builder.Property(t => t.Description)
             .HasMaxLength(50);
+        builder.Property(t => t.PathNodeGroup)
+            .HasMaxLength(50);
         builder.Property<byte[]>("Version").IsRowVersion();
     }
 }

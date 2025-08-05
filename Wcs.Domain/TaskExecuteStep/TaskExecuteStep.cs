@@ -16,22 +16,21 @@ public class TaskExecuteStep : IEntity
     {
     }
 
-    public int StepIndex { get; set; }
+    /// <summary>
+    /// 是否发送设备
+    /// </summary>
+    public bool IsSend { get; set; }
 
     public string? Description { get; set; }
 
     /// <summary>
-    ///     当前节点执行的设备
+    /// 路径组用来区分行走的路劲
     /// </summary>
-    public Guid CurrentExecuteNodePath { get; set; }
-
+    public string? PathNodeGroup { get; set; }
     /// <summary>
-    ///     当前节点区域
+    ///     当前节点
     /// </summary>
-    public Guid RegionId { get; set; }
+    public Guid? ExecuteNodePath { get; set; }
 
-    /// <summary>
-    ///     任务类型
-    /// </summary>
-    public WcsTaskTypeEnum WcsTaskType { get; set; }
+   
 }
