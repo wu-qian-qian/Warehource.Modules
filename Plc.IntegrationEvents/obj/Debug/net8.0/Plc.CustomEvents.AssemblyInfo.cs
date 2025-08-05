@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Plc.CustomEvents")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+efb5b25d35d39d6982a678e8687fa94bb843a642")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c29d7cb3e41da1b71c04715b68fdcf3549574ef4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Plc.CustomEvents")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Plc.CustomEvents")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,4 @@
-﻿using Common.Presentation.Endpoints;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -10,7 +9,7 @@ using Wcs.Contracts.Request.WcsTask;
 
 namespace Wcs.Presentation.WcsTask;
 
-public class GetWcsTask : IEndpoint
+public class GetWcsTask
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {

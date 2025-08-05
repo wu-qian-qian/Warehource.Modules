@@ -22,6 +22,6 @@ internal class WcsProfile : Profile
 
         CreateMap<WcsTask, WcsTaskDto>();
         
-        CreateMap<InsertWcsTaskRequest,AddOrUpdateWcsTaskEvent>();
+        CreateMap<InsertWcsTaskRequest,InsertWcsTaskEvent>();
     }
 }

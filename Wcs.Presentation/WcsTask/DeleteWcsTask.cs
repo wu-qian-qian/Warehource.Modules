@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.DBHandler.WcsTask.Cancel;
 using Wcs.Application.DBHandler.WcsTask.Get;
 using Wcs.Contracts.Request.WcsTask;
 
@@ -14,13 +13,19 @@ public class DeleteWcsTask : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapDelete("wcstask/delete-wcstask/{serialNumber}", [Authorize] async (
-            int request,
+        app.MapPost("wcstask/cancel-wcstask", [Authorize] async (
+            GetWcsTaskRequest request,
             ISender sender) =>
         {
-            return await sender.Send(new DeleteWcsTaskEvent
+            return await sender.Send(new GetWcsTaskQuery
             {
-               SerialNumber=request
+                Container = request.Container,
+                CreatorSystemType = request.CreatorSystemType,
+                EndTime = request.EndTime,
+                StartTime = request.StartTime,
+                TaskCode = request.TaskCode,
+                SerialNumber = request.SerialNumber,
+                TaskStatus = request.TaskStatus
             });
         }).WithTags(AssemblyReference.WcsTask);
     }
