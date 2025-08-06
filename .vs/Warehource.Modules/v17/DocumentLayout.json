@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\wcstask\\getwcstask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\wcstask\\getwcstask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\dbhandler\\wcstask\\addorupdate\\addorupdatewcstaskhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\dbhandler\\wcstask\\addorupdate\\addorupdatewcstaskhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\wcstask\\getwcstasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\wcstask\\getwcstasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\dbhandler\\wcstask\\get\\getwcstaskqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\dbhandler\\wcstask\\get\\getwcstaskqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\dbhandler\\wcstask\\get\\getwcstaskquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\dbhandler\\wcstask\\get\\getwcstaskquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75BCB8B5-D36E-4C4C-B249-55BDB1E90899}|User.Infrastructure\\Identity.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.infrastructure\\user\\userentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75BCB8B5-D36E-4C4C-B249-55BDB1E90899}|User.Infrastructure\\Identity.Infrastructure.csproj|solutionrelative:user.infrastructure\\user\\userentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\dbhandler\\wcstask\\addorupdate\\addorupdatewcstaskevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\dbhandler\\wcstask\\addorupdate\\addorupdatewcstaskevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,68 +42,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetWcsTasks.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\GetWcsTasks.cs",
-              "RelativeDocumentMoniker": "Wcs.Presentation\\WcsTask\\GetWcsTasks.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\GetWcsTasks.cs",
-              "RelativeToolTip": "Wcs.Presentation\\WcsTask\\GetWcsTasks.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T06:17:00.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetWcsTaskQueryHandler.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\Get\\GetWcsTaskQueryHandler.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\DBHandler\\WcsTask\\Get\\GetWcsTaskQueryHandler.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\Get\\GetWcsTaskQueryHandler.cs",
-              "RelativeToolTip": "Wcs.Application\\DBHandler\\WcsTask\\Get\\GetWcsTaskQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvw4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T06:15:41.634Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetWcsTaskQuery.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\Get\\GetWcsTaskQuery.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\DBHandler\\WcsTask\\Get\\GetWcsTaskQuery.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\Get\\GetWcsTaskQuery.cs",
-              "RelativeToolTip": "Wcs.Application\\DBHandler\\WcsTask\\Get\\GetWcsTaskQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T06:15:40.094Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GetWcsTask.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\GetWcsTask.cs",
-              "RelativeDocumentMoniker": "Wcs.Presentation\\WcsTask\\GetWcsTask.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\GetWcsTask.cs",
-              "RelativeToolTip": "Wcs.Presentation\\WcsTask\\GetWcsTask.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAaAAAAAAAAAA==",
+              "Title": "AddOrUpdateWcsTaskHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskHandler.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\DBHandler\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskHandler.cs",
+              "RelativeToolTip": "Wcs.Application\\DBHandler\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T06:15:18.843Z",
+              "WhenOpened": "2025-08-05T08:45:27.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserEntityTypeConfiguration.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Infrastructure\\User\\UserEntityTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "User.Infrastructure\\User\\UserEntityTypeConfiguration.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Infrastructure\\User\\UserEntityTypeConfiguration.cs",
-              "RelativeToolTip": "User.Infrastructure\\User\\UserEntityTypeConfiguration.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AddOrUpdateWcsTaskEvent.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskEvent.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\DBHandler\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskEvent.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskEvent.cs",
+              "RelativeToolTip": "Wcs.Application\\DBHandler\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T06:13:28.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T08:45:24.674Z"
             }
           ]
         }
