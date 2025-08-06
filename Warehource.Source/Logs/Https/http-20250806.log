@@ -1,0 +1,394 @@
+2025-08-06 08:34:51.073 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：2146
+2025-08-06 08:35:00.046 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：46
+2025-08-06 08:35:07.596 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：29
+2025-08-06 08:35:09.279 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：15
+2025-08-06 08:35:10.540 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：12
+2025-08-06 08:35:11.396 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：21
+2025-08-06 08:35:11.708 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：12
+2025-08-06 08:35:11.931 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：11
+2025-08-06 08:35:12.214 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：12
+2025-08-06 08:35:12.374 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：12
+2025-08-06 08:35:12.598 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：11
+2025-08-06 08:35:12.900 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：15
+2025-08-06 08:35:13.134 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：12
+2025-08-06 08:35:13.286 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：9
+2025-08-06 08:35:13.492 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：13
+2025-08-06 08:35:13.778 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：13
+2025-08-06 08:35:14.111 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：10
+2025-08-06 08:35:14.324 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：12
+2025-08-06 08:35:14.556 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：19
+2025-08-06 08:35:14.775 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：17
+2025-08-06 08:35:15.006 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：13
+2025-08-06 08:35:15.372 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"code":0,"message":"无该用户string","data":null}--时间：15
+2025-08-06 08:37:11.598 +08:00 [INF] 地址：127.0.0.1-URL:/user/user-login--请求体：{
+  "username": "admin",
+  "password": "qwe"
+}--响应体：{"code":1,"message":"Success","data":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODU5NzY2MzEsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.WKJy_hx9h9jMCJXsXkTKdsKZaCnVGk9zTtexafCmTHY"}--时间：875
+2025-08-06 08:37:31.547 +08:00 [INF] 地址：127.0.0.1-URL:/user/get-roles--请求体：--响应体：{"code":1,"message":"Success","data":[{"id":"cac6b329-d8f3-426d-8892-c29400293a45","roleName":"admin","description":null}]}--时间：231
+2025-08-06 09:00:01.820 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"isSuccess":false,"value":null,"message":"无该用户string"}--时间：5087
+2025-08-06 09:29:11.972 +08:00 [INF] 地址：::1-URL:/user/get-roles--请求体：--响应体：{"code":500,"message":"Unauthorized","data":null}--时间：436
+2025-08-06 09:29:27.550 +08:00 [INF] 地址：::1-URL:/get/get-users--请求体：--响应体：{"code":500,"message":"Unauthorized","data":null}--时间：49
+2025-08-06 09:30:46.836 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"isSuccess":false,"value":null,"message":"无该用户string"}--时间：1518
+2025-08-06 09:30:55.891 +08:00 [INF] 地址：::1-URL:/user/get-roles--请求体：--响应体：--时间：67
+2025-08-06 13:18:37.572 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "string",
+  "password": "string"
+}--响应体：{"isSuccess":false,"value":null,"message":"无该用户string"}--时间：2125
+2025-08-06 13:19:00.599 +08:00 [INF] 地址：::1-URL:/user/user-login--请求体：{
+  "username": "admin",
+  "password": "qwe"
+}--响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODU5OTM1NDAsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.jqEcoTsbULb_ARbHVwNx1tUZwRrswFO4RteNXGsxqp4","message":null}--时间：82
+2025-08-06 13:19:15.548 +08:00 [INF] 地址：::1-URL:/user/get-roles--请求体：--响应体：--时间：36
+2025-08-06 13:19:37.771 +08:00 [INF] 地址：::1-URL:/user/get-roles--请求体：--响应体：[{"id":"cac6b329-d8f3-426d-8892-c29400293a45","roleName":"admin","description":null}]--时间：426
+2025-08-06 13:19:53.658 +08:00 [INF] 地址：::1-URL:/get/get-users--请求体：--响应体：[{"id":"ed483618-a7ef-462d-b5a5-9eb7a019b2c6","name":"管理员","description":null,"email":null,"phone":null,"username":"admin","lockoutEnd":"1925-08-05T13:26:15.722371+08:00","roleName":"admin"}]--时间：361
+2025-08-06 13:20:03.305 +08:00 [INF] 地址：::1-URL:/user/Delete-role/%7BroleName%7D--请求体：--响应体：--时间：26
+2025-08-06 13:20:25.319 +08:00 [INF] 地址：::1-URL:/user/add-user--请求体：{
+  "name": "string",
+  "description": "string",
+  "email": "string",
+  "phone": "string",
+  "username": "string",
+  "password": "string",
+  "roleName": "string"
+}--响应体：{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}--时间：830
+2025-08-06 13:23:20.489 +08:00 [INF] 地址：::1-URL:/user/add-user--请求体：{
+  "name": "string",
+  "description": "string",
+  "email": "string",
+  "phone": "string",
+  "username": "string",
+  "password": "string",
+  "roleName": "string"
+}--响应体：{"isSuccess":false,"value":null,"message":"角色信息错误"}--时间：900
+2025-08-06 13:23:33.347 +08:00 [INF] 地址：::1-URL:/job/job-status--请求体：{
+  "name": "string",
+  "status": true
+}--响应体：{"isSuccess":false,"value":null,"message":"没有该任务信息"}--时间：341
+2025-08-06 13:23:41.696 +08:00 [INF] 地址：::1-URL:/job/get-jobs--请求体：--响应体：{"isSuccess":true,"value":[],"message":null}--时间：482
+2025-08-06 13:23:49.916 +08:00 [INF] 地址：::1-URL:/job/add-job--请求体：{
+  "name": "string",
+  "description": "string",
+  "jobtype": "string",
+  "timeOut": 0,
+  "timer": 0,
+  "isStart": true
+}--响应体：{"isSuccess":false,"value":null,"message":"AddJobEvent--不存在该类型"}--时间：441
+2025-08-06 13:24:05.212 +08:00 [INF] 地址：::1-URL:/job/delete-job--请求体：{
+  "name": "string"
+}--响应体：{"isSuccess":false,"value":null,"message":"没有任务信息删除失败"}--时间：266
+2025-08-06 13:24:15.280 +08:00 [INF] 地址：::1-URL:/plc/get-allplc--请求体：--响应体：{"isSuccess":true,"value":[],"message":null}--时间：375
+2025-08-06 13:26:11.914 +08:00 [INF] 地址：::1-URL:/user/get-roles--请求体：--响应体：[{"id":"cac6b329-d8f3-426d-8892-c29400293a45","roleName":"admin","description":null}]--时间：592
+2025-08-06 13:26:23.103 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}--时间：2691
+2025-08-06 13:27:10.895 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}--时间：14746
+2025-08-06 13:28:56.581 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string1",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}--时间：29033
+2025-08-06 13:31:18.865 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string1",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}--时间：87392
+2025-08-06 13:34:16.681 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string1",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}--时间：99656
+2025-08-06 13:37:46.493 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string1",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}--时间：4013
+2025-08-06 13:38:59.833 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string1",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}--时间：4999
+2025-08-06 13:53:54.585 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "strineeg",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}--时间：106734
+2025-08-06 13:58:21.784 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "strqwing",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}--时间：2212
+2025-08-06 14:03:13.507 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"isSuccess":true,"value":{"taskCode":"string","serialNumber":4000,"container":"string","taskType":"StockIn","taskStatus":"Created","creatorSystemType":"Wcs","description":"string","getTunnel":0,"getFloor":0,"getRow":0,"getColumn":0,"getDepth":0,"putTunnel":0,"putFloor":0,"putRow":0,"putColumn":0,"putDepth":0,"executeDesc":null,"executePath":null,"id":"11d58465-f686-4560-9390-04f695b1f021","creationTime":"0001-01-01T00:00:00","lastModifierUser":null,"lastModificationTime":null},"message":null}--时间：881
+2025-08-06 14:06:42.746 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "string",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}--时间：2647
+2025-08-06 14:07:09.753 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "striwwng",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"isSuccess":true,"value":{"taskCode":"striwwng","serialNumber":4002,"container":"string","taskType":"StockIn","taskStatus":"Created","creatorSystemType":"Wcs","description":"string","getTunnel":0,"getFloor":0,"getRow":0,"getColumn":0,"getDepth":0,"putTunnel":0,"putFloor":0,"putRow":0,"putColumn":0,"putDepth":0,"executeDesc":null,"executePath":null,"id":"1e9f6a7e-72b9-4f27-8027-2893f2d307cf","creationTime":"0001-01-01T00:00:00","lastModifierUser":null,"lastModificationTime":null},"message":null}--时间：159
+2025-08-06 14:14:29.845 +08:00 [INF] 地址：::1-URL:/wcstask/delete-wcstask/%7BserialNumber%7D--请求体：--响应体：--时间：50
+2025-08-06 14:14:44.028 +08:00 [INF] 地址：::1-URL:/wcstask/delete-wcstask/%7BserialNumber%7D--请求体：--响应体：{"isSuccess":true,"value":{"taskCode":"string","serialNumber":4000,"container":"string","taskType":"StockIn","taskStatus":"Created","creatorSystemType":"Wcs","description":"string","getTunnel":0,"getFloor":0,"getRow":0,"getColumn":0,"getDepth":0,"putTunnel":0,"putFloor":0,"putRow":0,"putColumn":0,"putDepth":0,"executeDesc":null,"executePath":null,"id":"11d58465-f686-4560-9390-04f695b1f021","creationTime":"0001-01-01T00:00:00","lastModifierUser":null,"lastModificationTime":null},"message":null}--时间：659
+2025-08-06 14:14:56.276 +08:00 [INF] 地址：::1-URL:/wcstask/get-wcstask/%7BserialNumber%7D--请求体：--响应体：[]--时间：520
+2025-08-06 14:15:05.027 +08:00 [INF] 地址：::1-URL:/wcstask/get-wcstask/%7BserialNumber%7D--请求体：--响应体：[]--时间：19
+2025-08-06 14:15:07.380 +08:00 [INF] 地址：::1-URL:/wcstask/get-wcstask/%7BserialNumber%7D--请求体：--响应体：[]--时间：22
+2025-08-06 14:16:07.510 +08:00 [INF] 地址：::1-URL:/wcstask/get-wcstask/%7BserialNumber%7D--请求体：--响应体：--时间：17317
+2025-08-06 14:16:27.085 +08:00 [INF] 地址：::1-URL:/wcstask/add-or-update-wcstask--请求体：{
+  "taskCode": "stringasd",
+  "taskType": 1,
+  "creatorSystemType": 0,
+  "container": "string",
+  "description": "string",
+  "getTunnel": 0,
+  "getFloor": 0,
+  "getRow": 0,
+  "getColumn": 0,
+  "getDepth": 0,
+  "putTunnel": 0,
+  "putFloor": 0,
+  "putRow": 0,
+  "putColumn": 0,
+  "putDepth": 0,
+  "executeDesc": "string"
+}--响应体：{"isSuccess":true,"value":{"taskCode":"stringasd","serialNumber":4003,"container":"string","taskType":"StockIn","taskStatus":"Created","creatorSystemType":"Wcs","description":"string","getTunnel":0,"getFloor":0,"getRow":0,"getColumn":0,"getDepth":0,"putTunnel":0,"putFloor":0,"putRow":0,"putColumn":0,"putDepth":0,"executeDesc":null,"executePath":null,"id":"5816de14-12e9-41bd-af38-b938a1f0eecc","creationTime":"0001-01-01T00:00:00","lastModifierUser":null,"lastModificationTime":null},"message":null}--时间：41
+2025-08-06 14:16:39.131 +08:00 [INF] 地址：::1-URL:/wcstask/get-wcstask/%7BserialNumber%7D--请求体：--响应体：--时间：14
+2025-08-06 14:16:51.424 +08:00 [INF] 地址：::1-URL:/wcstask/get-wcstask/%7BserialNumber%7D--请求体：--响应体：[{"taskCode":"striwwng","serialNumber":4002,"container":"string","taskType":"StockIn","taskStatus":"Created","creatorSystemType":"Wcs","description":"string","getTunnel":0,"getFloor":0,"getRow":0,"getColumn":0,"getDepth":0,"putTunnel":0,"putFloor":0,"putRow":0,"putColumn":0,"putDepth":0,"executeDesc":null,"executePath":null,"id":"1e9f6a7e-72b9-4f27-8027-2893f2d307cf","creationTime":"0001-01-01T00:00:00","lastModifierUser":null,"lastModificationTime":null}]--时间：1544
