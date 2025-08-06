@@ -1805,3 +1805,86 @@ WHERE [w].[IsDeleted] = CAST(0 AS bit)
 2025-08-06 14:52:07.964 +08:00 [DBG] Endpoint Completed: "loopback://localhost/_WarehourceSource_bus_htwoyynqz1igyh3wbdq7jpchg5"
 2025-08-06 14:52:07.965 +08:00 [DBG] Consumer Completed: "loopback://localhost/_WarehourceSource_bus_htwoyynqz1igyh3wbdq7jpchg5": 0 received, 0 concurrent
 2025-08-06 14:52:07.978 +08:00 [INF] Bus stopped: "loopback://localhost/"
+2025-08-06 14:54:45.171 +08:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-06 14:54:45.235 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Wcs.__EFMigrationsHistory]');
+2025-08-06 14:54:45.238 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-06 14:54:45.242 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Wcs.__EFMigrationsHistory]');
+2025-08-06 14:54:45.253 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Wcs.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-06 14:54:45.268 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-08-06 14:54:45.302 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-06 14:54:45.305 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Identity.__EFMigrationsHistory]');
+2025-08-06 14:54:45.309 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-06 14:54:45.314 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Identity.__EFMigrationsHistory]');
+2025-08-06 14:54:45.328 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Identity.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-06 14:54:45.331 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-08-06 14:54:45.444 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-06 14:54:45.448 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Plc.__EFMigrationsHistory]');
+2025-08-06 14:54:45.452 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-06 14:54:45.457 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Plc.__EFMigrationsHistory]');
+2025-08-06 14:54:45.464 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Plc.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-06 14:54:45.468 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-08-06 14:54:45.860 +08:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[CreationTime], [w].[Description], [w].[IsDeleted], [w].[IsStart], [w].[JobType], [w].[LastModificationTime], [w].[LastModifierUser], [w].[Name], [w].[TimeOut], [w].[Timer]
+FROM [Wcs.JobConfig] AS [w]
+WHERE [w].[IsDeleted] = CAST(0 AS bit)
+2025-08-06 14:54:45.920 +08:00 [INF] User profile is available. Using 'C:\Users\吴\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-06 14:54:46.087 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Application.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-06 14:54:46.093 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Application.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-06 14:54:46.097 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Application.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-06 14:54:46.187 +08:00 [DBG] Starting bus instances: IBus
+2025-08-06 14:54:46.191 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-06 14:54:46.220 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_wbuyyynqz1igyfuobdq7jptby7"
+2025-08-06 14:54:46.220 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-06 14:54:46.220 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-06 14:54:46.220 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-06 14:54:46.223 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-06 14:54:46.248 +08:00 [INF] Now listening on: http://localhost:5050
+2025-08-06 14:54:46.249 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-06 14:54:46.250 +08:00 [INF] Hosting environment: Development
+2025-08-06 14:54:46.250 +08:00 [INF] Content root path: D:\Program\仓库\Warehource.Modules\Warehource.Source
+2025-08-06 14:54:46.289 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/index.html - null null
+2025-08-06 14:54:46.543 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/index.html - 200 null text/html;charset=utf-8 254.6941ms
+2025-08-06 14:54:47.420 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - null null
+2025-08-06 14:54:47.430 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-08-06 14:54:47.611 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 191.3251ms
+2025-08-06 14:55:21.309 +08:00 [INF] Application is shutting down...
+2025-08-06 14:55:21.326 +08:00 [DBG] Stopping bus instances: IBus
+2025-08-06 14:55:21.329 +08:00 [DBG] Stopping bus: "loopback://localhost/"
+2025-08-06 14:55:21.335 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/WcsIntegrationEvent"
+2025-08-06 14:55:21.336 +08:00 [DBG] Consumer Stopping: "loopback://localhost/WcsIntegrationEvent" (Stop Receive Transport)
+2025-08-06 14:55:21.342 +08:00 [DBG] Endpoint Completed: "loopback://localhost/WcsIntegrationEvent"
+2025-08-06 14:55:21.351 +08:00 [DBG] Consumer Completed: "loopback://localhost/WcsIntegrationEvent": 0 received, 0 concurrent
+2025-08-06 14:55:21.355 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-06 14:55:21.356 +08:00 [DBG] Consumer Stopping: "loopback://localhost/S7ReadPlcDataBlockEvent" (Stop Receive Transport)
+2025-08-06 14:55:21.357 +08:00 [DBG] Endpoint Completed: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-06 14:55:21.358 +08:00 [DBG] Consumer Completed: "loopback://localhost/S7ReadPlcDataBlockEvent": 0 received, 0 concurrent
+2025-08-06 14:55:21.358 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-06 14:55:21.359 +08:00 [DBG] Consumer Stopping: "loopback://localhost/S7WritePlcDataBlockEvent" (Stop Receive Transport)
+2025-08-06 14:55:21.360 +08:00 [DBG] Endpoint Completed: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-06 14:55:21.360 +08:00 [DBG] Consumer Completed: "loopback://localhost/S7WritePlcDataBlockEvent": 0 received, 0 concurrent
+2025-08-06 14:55:21.362 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/_WarehourceSource_bus_wbuyyynqz1igyfuobdq7jptby7"
+2025-08-06 14:55:21.362 +08:00 [DBG] Consumer Stopping: "loopback://localhost/_WarehourceSource_bus_wbuyyynqz1igyfuobdq7jptby7" (Stop Receive Transport)
+2025-08-06 14:55:21.363 +08:00 [DBG] Endpoint Completed: "loopback://localhost/_WarehourceSource_bus_wbuyyynqz1igyfuobdq7jptby7"
+2025-08-06 14:55:21.364 +08:00 [DBG] Consumer Completed: "loopback://localhost/_WarehourceSource_bus_wbuyyynqz1igyfuobdq7jptby7": 0 received, 0 concurrent
+2025-08-06 14:55:21.375 +08:00 [INF] Bus stopped: "loopback://localhost/"

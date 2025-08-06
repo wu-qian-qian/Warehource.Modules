@@ -20,15 +20,3 @@ D:\Program\仓库\Warehouse.Modules\Warehource.Modules\Common.Presentation\obj\D
 D:\Program\仓库\Warehouse.Modules\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\refint\Common.Presentation.dll
 D:\Program\仓库\Warehouse.Modules\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\Common.Presentation.pdb
 D:\Program\仓库\Warehouse.Modules\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\ref\Common.Presentation.dll
-D:\Program\仓库\Warehource.Modules\Common.Presentation\bin\Debug\net8.0\Common.Presentation.deps.json
-D:\Program\仓库\Warehource.Modules\Common.Presentation\bin\Debug\net8.0\Common.Presentation.dll
-D:\Program\仓库\Warehource.Modules\Common.Presentation\bin\Debug\net8.0\Common.Presentation.pdb
-D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\Common.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\Common.Presentation.AssemblyInfoInputs.cache
-D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\Common.Presentation.AssemblyInfo.cs
-D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\Common.Presentation.csproj.CoreCompileInputs.cache
-D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\Common.Presentation.sourcelink.json
-D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\Common.Presentation.dll
-D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\refint\Common.Presentation.dll
-D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\Common.Presentation.pdb
-D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Debug\net8.0\ref\Common.Presentation.dll
