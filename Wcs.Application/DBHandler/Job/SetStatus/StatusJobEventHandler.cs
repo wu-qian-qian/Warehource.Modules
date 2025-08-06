@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using AutoMapper;
+﻿using AutoMapper;
 using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using Quartz;
@@ -33,6 +32,7 @@ internal class StatusJobEventHandler(
                     PauseJob(scheduler, request.Name);
                     jobconfig.IsStart = false;
                 }
+
                 await unitOfWork.SaveChangesAsync();
                 result.SetValue(mapper.Map<JobDto>(jobconfig));
             }
@@ -41,10 +41,10 @@ internal class StatusJobEventHandler(
         {
             result.SetMessage("没有该任务信息");
         }
+
         return result;
     }
 
-       
 
     private static void PauseJob(IScheduler scheduler, string name)
     {

@@ -5,12 +5,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Wcs.Application.DBHandler.WcsTask.Get;
-using Wcs.Application.DBHandler.WcsTask.Insert;
-using Wcs.Contracts.Request.WcsTask;
 
 namespace Wcs.Presentation.WcsTask;
 
-public class GetWcsTask:IEndpoint
+public class GetWcsTask : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {

@@ -6,6 +6,8 @@ public interface IRegionRepository
 
     Region Get(Guid id);
 
+    Region Get(string regionCode);
+
     void Update(Region region);
 
     void Delete(Guid id);

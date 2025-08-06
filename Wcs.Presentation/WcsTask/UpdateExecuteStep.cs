@@ -14,8 +14,8 @@ public class UpdateExecuteStep : IEndpoint
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
         app.MapPut("wcstask/update-wcstask-executestep", [Authorize] async (
-              UpdateWcsTaskRequest request,
-              ISender sender) =>
+            UpdateWcsTaskRequest request,
+            ISender sender) =>
         {
             await sender.Send(new UpdateWcsTaskExecuteStepEvent
             {

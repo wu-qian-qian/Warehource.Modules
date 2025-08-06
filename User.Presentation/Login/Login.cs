@@ -22,7 +22,6 @@ internal class Login : IEndpoint
                     Username = requst.Username,
                     Password = requst.Password
                 });
-              
             }).WithTags(AssemblyReference.User);
     }
 }

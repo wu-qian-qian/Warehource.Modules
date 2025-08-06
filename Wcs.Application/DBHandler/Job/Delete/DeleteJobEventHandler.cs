@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using AutoMapper;
+﻿using AutoMapper;
 using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using Quartz;
@@ -24,12 +23,13 @@ internal class DeleteJobEventHandler(
             //只有删除成功才保存数据库
             DeleteJob(scheduler, request.Name);
             await unitOfWork.SaveChangesAsync();
-            result.SetValue( mapper.Map<JobDto>(request));
+            result.SetValue(mapper.Map<JobDto>(request));
         }
         else
         {
             result.SetMessage("没有任务信息删除失败");
         }
+
         return result;
     }
 

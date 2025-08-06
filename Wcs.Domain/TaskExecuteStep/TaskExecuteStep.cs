@@ -1,5 +1,4 @@
 ﻿using Common.Domain.EF;
-using Wcs.Shared;
 
 namespace Wcs.Domain.TaskExecuteStep;
 
@@ -17,20 +16,19 @@ public class TaskExecuteStep : IEntity
     }
 
     /// <summary>
-    /// 是否发送设备
+    ///     是否发送设备
     /// </summary>
     public bool IsSend { get; set; }
 
     public string? Description { get; set; }
 
     /// <summary>
-    /// 路径组用来区分行走的路劲
+    ///     路径组用来区分行走的路劲
     /// </summary>
     public string? PathNodeGroup { get; set; }
+
     /// <summary>
     ///     当前节点
     /// </summary>
     public Guid? ExecuteNodePath { get; set; }
-
-   
 }

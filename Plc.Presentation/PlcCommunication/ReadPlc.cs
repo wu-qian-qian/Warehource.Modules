@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Plc.Presentation.PlcCommunication;
 
-namespace Plc.Presentation.PlcCommunication
+internal class ReadPlc
 {
-    internal class ReadPlc
-    {
-    }
 }

@@ -3,12 +3,11 @@ using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using Wcs.Application.Abstract;
 using Wcs.Contracts.Respon.WcsTask;
-using Wcs.Domain.Region;
 using Wcs.Domain.Task;
 using Wcs.Domain.TaskExecuteStep;
 using Wcs.Shared;
 
-namespace Wcs.Application.DBHandler.WcsTask.Insert;
+namespace Wcs.Application.DBHandler.WcsTask.AddOrUpdate;
 
 public class AddOrUpdateWcsTaskHandler(
     IWcsTaskRepository _wcsTaskRepository,
@@ -30,11 +29,11 @@ public class AddOrUpdateWcsTaskHandler(
                 TaskType = request.TaskType,
                 Container = request.Container,
                 PutLocation = new PutLocation(request.PutTunnel.ToString()
-                , request.PutFloor.ToString(), request.PutRow.ToString()
-                , request.PutColumn.ToString(), request.PutDepth.ToString()),
+                    , request.PutFloor.ToString(), request.PutRow.ToString()
+                    , request.PutColumn.ToString(), request.PutDepth.ToString()),
                 GetLocation = new GetLocation(request.GetTunnel.ToString()
-                , request.GetFloor.ToString(), request.GetRow.ToString()
-                , request.GetColumn.ToString(), request.GetDepth.ToString()),
+                    , request.GetFloor.ToString(), request.GetRow.ToString()
+                    , request.GetColumn.ToString(), request.GetDepth.ToString()),
                 Description = request.Description,
                 TaskExecuteStep = new TaskExecuteStep
                 {
@@ -47,7 +46,9 @@ public class AddOrUpdateWcsTaskHandler(
         {
             if (wcsTask.TaskCode == request.TaskCode)
             {
-                var getTunnel = request.GetTunnel != null ? request.GetTunnel.ToString() : wcsTask.GetLocation.GetTunnel;
+                var getTunnel = request.GetTunnel != null
+                    ? request.GetTunnel.ToString()
+                    : wcsTask.GetLocation.GetTunnel;
                 var getRow = request.GetRow != null ? request.GetRow.ToString() : wcsTask.GetLocation.GetRow;
                 var getColum = request.GetColumn != null ? request.GetColumn.ToString() : wcsTask.GetLocation.GetColumn;
                 var getFloor = request.GetFloor != null ? request.GetFloor.ToString() : wcsTask.GetLocation.GetFloor;
@@ -55,10 +56,12 @@ public class AddOrUpdateWcsTaskHandler(
                 var putRow = request.PutRow != null ? request.PutRow.ToString() : wcsTask.PutLocation.PutRow;
                 var putColum = request.PutColumn != null ? request.PutColumn.ToString() : wcsTask.PutLocation.PutColumn;
                 var putFloor = request.PutFloor != null ? request.PutFloor.ToString() : wcsTask.PutLocation.PutFloor;
-                var putTunnel = request.PutTunnel != null ? request.PutTunnel.ToString() : wcsTask.PutLocation.PutTunnel;
+                var putTunnel = request.PutTunnel != null
+                    ? request.PutTunnel.ToString()
+                    : wcsTask.PutLocation.PutTunnel;
 
-                GetLocation getLocation = new GetLocation(getTunnel, getFloor, getRow, getColum, wcsTask.GetLocation.GetDepth);
-                PutLocation putLocation = new PutLocation(putTunnel, putFloor, putRow, putColum, wcsTask.PutLocation.PutRow);
+                var getLocation = new GetLocation(getTunnel, getFloor, getRow, getColum, wcsTask.GetLocation.GetDepth);
+                var putLocation = new PutLocation(putTunnel, putFloor, putRow, putColum, wcsTask.PutLocation.PutRow);
 
                 wcsTask.GetLocation = getLocation;
                 wcsTask.PutLocation = putLocation;
@@ -68,6 +71,7 @@ public class AddOrUpdateWcsTaskHandler(
                 result.SetMessage("任务信息错误无法更新任务数据");
             }
         }
+
         await _unitOfWork.SaveChangesAsync();
         result.SetValue(_mapper.Map<WcsTaskDto>(wcsTask));
         return result;

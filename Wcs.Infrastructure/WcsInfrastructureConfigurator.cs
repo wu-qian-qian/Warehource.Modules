@@ -9,10 +9,14 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Wcs.Application;
 using Wcs.Application.Abstract;
 using Wcs.Application.SignalR;
+using Wcs.Domain.Device;
+using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.JobConfigs;
 using Wcs.Domain.Region;
 using Wcs.Domain.Task;
 using Wcs.Infrastructure.Database;
+using Wcs.Infrastructure.DB.Device;
+using Wcs.Infrastructure.DB.ExecuteNodePath;
 using Wcs.Infrastructure.DB.JobConfig;
 using Wcs.Infrastructure.DB.Region;
 using Wcs.Infrastructure.DB.WcsTask;
@@ -39,6 +43,7 @@ public static class WcsInfrastructureConfigurator
             options.UseSqlServer(connStr, builder =>
                 builder.MigrationsHistoryTable(Schemas.TableSchema + HistoryRepository.DefaultTableName));
         });
+        //获取到当前使用的生命周期，在从中获取到dbContext
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<WCSDBContext>());
         services.AddSignalRConfiguration();
     }
@@ -49,6 +54,8 @@ public static class WcsInfrastructureConfigurator
         service.AddScoped<IJobConfigRepository, JobConfigRepository>();
         service.AddScoped<IRegionRepository, RegionRepository>();
         service.AddScoped<IWcsTaskRepository, WcsTaskRepository>();
+        service.AddScoped<IExecuteNodeRepository, ExecuteNodeRepository>();
+        service.AddScoped<IDeviceRepository, DeviceRepository>();
         return service;
     }
 

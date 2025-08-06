@@ -10,7 +10,7 @@ namespace Wcs.Domain.Device;
 /// </summary>
 public class Device : IEntity
 {
-    public Device(Guid id) : base(id)
+    public Device() : base(Guid.NewGuid())
     {
     }
 
@@ -18,14 +18,12 @@ public class Device : IEntity
 
     public string DeviceName { get; set; }
 
+    public string? Description { get; set; }
+
     /// <summary>
     ///     配置
     /// </summary>
     public string Config { get; set; }
 
     public bool Enable { get; set; }
-
-    public Guid RegionId { get; set; }
-
-    public Region.Region? Region { get; set; }
 }

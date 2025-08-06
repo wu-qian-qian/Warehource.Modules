@@ -1,9 +1,8 @@
 ﻿using FluentValidation;
 
-namespace Wcs.Application.DBHandler.WcsTask.Cancel;
+namespace Wcs.Application.DBHandler.WcsTask.Delete;
 
-
-public class DeleteWcsTaskValibator:AbstractValidator<DeleteWcsTaskEvent>
+public class DeleteWcsTaskValibator : AbstractValidator<DeleteWcsTaskEvent>
 {
     public DeleteWcsTaskValibator()
     {

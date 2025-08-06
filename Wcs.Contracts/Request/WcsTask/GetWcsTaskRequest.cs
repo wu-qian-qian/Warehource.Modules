@@ -17,6 +17,7 @@ public class GetWcsTaskRequest
     public string? GetLocation { get; set; }
 
     public string? PutLocation { get; set; }
+
     /// <summary>
     ///     任务状态
     /// </summary>

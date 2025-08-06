@@ -51,7 +51,6 @@ public class WcsTask : IEntity
     /// </summary>
     public PutLocation PutLocation { get; set; }
 
-    
 
     public Guid? RegionId { get; set; }
 
@@ -59,6 +58,6 @@ public class WcsTask : IEntity
     ///     任务执行步骤
     /// </summary>
     public Guid TaskExecuteStepId { get; set; }
-    
+
     public TaskExecuteStep.TaskExecuteStep TaskExecuteStep { get; set; }
 }

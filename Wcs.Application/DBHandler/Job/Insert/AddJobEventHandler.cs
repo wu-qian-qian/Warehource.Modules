@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Common.Application.Exception;
 using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using Common.Application.QuartzJob;
@@ -20,7 +19,7 @@ internal class AddJobEventHandler(
 {
     public async Task<Result<JobDto>> Handle(AddJobEvent request, CancellationToken cancellationToken)
     {
-        Result<JobDto> result= new Result<JobDto>();
+        var result = new Result<JobDto>();
         var jobConfig = new JobConfig
         {
             Name = request.Name,
@@ -43,8 +42,9 @@ internal class AddJobEventHandler(
             var jobtype = types.First(x => x.Name == request.JobType);
             QuatrzJobExtensions.CreateJobDetail(jobtype, jobConfig, sc);
             await unitOfWork.SaveChangesAsync();
-            result.SetValue( mapper.Map<JobDto>(request));
+            result.SetValue(mapper.Map<JobDto>(request));
         }
+
         return result;
     }
 }

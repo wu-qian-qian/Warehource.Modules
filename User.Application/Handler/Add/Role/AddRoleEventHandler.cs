@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Common.Application.Exception;
 using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using Identity.Application.Abstract;
@@ -24,12 +23,13 @@ internal class AddRoleEventHandler(IUnitOfWork unitOfWork, UserManager userManag
             };
             await userManager.InserRoleAsync(role);
             await unitOfWork.SaveChangesAsync();
-            result.SetValue( mapper.Map<RoleDto>(role));
+            result.SetValue(mapper.Map<RoleDto>(role));
         }
         else
         {
             result.SetMessage("添加失败，无角色");
         }
+
         return result;
     }
 }

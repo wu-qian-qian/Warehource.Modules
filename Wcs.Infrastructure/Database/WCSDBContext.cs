@@ -1,6 +1,7 @@
 using Common.Infrastructure.EF;
 using Microsoft.EntityFrameworkCore;
 using Wcs.Application.Abstract;
+using Wcs.Domain.Device;
 using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.JobConfigs;
 using Wcs.Domain.Region;
@@ -33,6 +34,8 @@ public sealed class WCSDBContext : BaseDbContext, IUnitOfWork
     public DbSet<WcsTask> WcsTasks { get; set; }
 
     public DbSet<JobConfig> JobConfigs { get; set; }
+
+    public DbSet<Device> Devices { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

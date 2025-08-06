@@ -16,7 +16,7 @@ public class DeleteRegionHandler(IRegionRepository _regionRepository, IMapper _m
         var region = _regionRepository.Get(request.Id.Value);
         region?.SoftDelete();
         await _unitOfWork.SaveChangesAsync();
-        result.SetValue( _mapper.Map<RegionDto>(region));
+        result.SetValue(_mapper.Map<RegionDto>(region));
         return result;
     }
 }

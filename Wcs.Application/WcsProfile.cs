@@ -1,10 +1,14 @@
 ﻿using AutoMapper;
 using Wcs.Application.DBHandler.Job.Insert;
-using Wcs.Application.DBHandler.WcsTask.Insert;
+using Wcs.Application.DBHandler.WcsTask.AddOrUpdate;
 using Wcs.Contracts.Request.WcsTask;
+using Wcs.Contracts.Respon.Device;
+using Wcs.Contracts.Respon.ExecuteNode;
 using Wcs.Contracts.Respon.Job;
 using Wcs.Contracts.Respon.Region;
 using Wcs.Contracts.Respon.WcsTask;
+using Wcs.Domain.Device;
+using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.JobConfigs;
 using Wcs.Domain.Region;
 using Wcs.Domain.Task;
@@ -31,6 +35,12 @@ internal class WcsProfile : Profile
             .ForMember(x => x.PutDepth, x => x.MapFrom(x => x.PutLocation.PutDepth))
             .ForMember(x => x.PutFloor, x => x.MapFrom(x => x.PutLocation.PutFloor))
             .ForMember(x => x.PutTunnel, x => x.MapFrom(x => x.PutLocation.PutTunnel));
-        CreateMap<InsertWcsTaskRequest,AddOrUpdateWcsTaskEvent>();
+        CreateMap<InsertWcsTaskRequest, AddOrUpdateWcsTaskEvent>();
+
+        CreateMap<ExecuteNodePath, ExecuteNodeDto>()
+            .ForMember(x => x.RegionDescription, x => x.MapFrom(x => x.Region.Description))
+            .ForMember(x => x.RegionCode, x => x.MapFrom(x => x.Region.Code));
+
+        CreateMap<Device, DeviceDto>();
     }
 }

@@ -1,0 +1,28 @@
+﻿using AutoMapper;
+using Common.Application.MediatR.Behaviors;
+using Common.Application.MediatR.Message;
+using Common.Helper;
+using Wcs.Contracts.Respon.ExecuteNode;
+using Wcs.Domain.ExecuteNode;
+
+namespace Wcs.Application.DBHandler.ExecueNode.Get;
+
+public class GetExecuteNodeQueryHandler(IExecuteNodeRepository _executeNodeRepository, IMapper _mapper)
+    : IQueryHandler<GetExecuteNodeQuery, Result<IEnumerable<ExecuteNodeDto>>>
+{
+    public Task<Result<IEnumerable<ExecuteNodeDto>>> Handle(GetExecuteNodeQuery request,
+        CancellationToken cancellationToken)
+    {
+        var result = new Result<IEnumerable<ExecuteNodeDto>>();
+        var data = _executeNodeRepository.GetQuerys()
+            .WhereIf(request.RegionCode != null, x => x.Region.Code == request.RegionCode)
+            .WhereIf(request.PahtNodeGroup != null, x => x.PahtNodeGroup == request.PahtNodeGroup)
+            .WhereIf(request.CurrentDeviceName != null, x => x.CurrentDeviceName == request.CurrentDeviceName)
+            .WhereIf(request.TaskType != null, x => x.TaskType == request.TaskType)
+            .WhereIf(request.CurrentDeviceType != null, x => x.CurrentDeviceType == request.CurrentDeviceType)
+            .ToList();
+        var source = _mapper.Map<IEnumerable<ExecuteNodeDto>>(data);
+        result.SetValue(source);
+        return Task.FromResult(result);
+    }
+}

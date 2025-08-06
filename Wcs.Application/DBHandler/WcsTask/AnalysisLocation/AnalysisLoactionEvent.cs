@@ -1,6 +1,5 @@
-﻿namespace Wcs.Application.DBHandler.WcsTask;
+﻿namespace Wcs.Application.DBHandler.WcsTask.AnalysisLocation;
 
 public class AnalysisLoactionEvent
 {
-    
 }

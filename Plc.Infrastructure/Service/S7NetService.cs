@@ -23,13 +23,11 @@ public class S7NetService : INetService
     {
         var netList = sender.Send(new GetS7NetQuery()).GetAwaiter().GetResult();
         if (netList.IsSuccess)
-        {
             foreach (var netConfig in netList.Value)
             {
                 var token = new S7NetToken(netConfig);
                 AddConnect(token);
             }
-        }
     }
 
     public void AddConnect(INet connect)

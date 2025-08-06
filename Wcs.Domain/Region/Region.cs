@@ -14,10 +14,10 @@ public class Region : IEntity
     public string Code { get; set; }
 
     public string? Description { get; set; }
-    
+
     /// <summary>
-    /// 当前区域任务进行中数量
-    /// 用来限流
+    ///     当前区域任务进行中数量
+    ///     用来限流
     /// </summary>
     public int? CurrentNum { get; set; }
 }

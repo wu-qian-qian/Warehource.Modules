@@ -2,7 +2,6 @@
 using Common.Application.MediatR.Behaviors;
 using Common.Domain.Response;
 using Microsoft.AspNetCore.Http;
-using System.Text.Json.Schema;
 
 namespace Common.Infrastructure.Middleware;
 
@@ -11,12 +10,13 @@ namespace Common.Infrastructure.Middleware;
 /// </summary>
 public class GlobalResponseMiddleware
 {
+    public static readonly JsonSerializerOptions options = new()
+    {
+        PropertyNameCaseInsensitive = true,
+        WriteIndented = true // 格式化输出，方便调试
+    };
+
     private readonly RequestDelegate _next;
-    public readonly static  JsonSerializerOptions options = new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true,
-                        WriteIndented = true // 格式化输出，方便调试
-                    };
 
     public GlobalResponseMiddleware(RequestDelegate next)
     {
@@ -54,12 +54,14 @@ public class GlobalResponseMiddleware
                         500 => "Internal Server Error",
                         _ => "Unknown Error"
                     };
-                    
+
                     if (message == "Success")
                     {
                         memoryStream.Seek(0, SeekOrigin.Begin);
                         var rawResponse = await new StreamReader(memoryStream).ReadToEndAsync();
-                        var data = rawResponse != string.Empty ? JsonSerializer.Deserialize<Result<object>>(rawResponse, options) : null;
+                        var data = rawResponse != string.Empty
+                            ? JsonSerializer.Deserialize<Result<object>>(rawResponse, options)
+                            : null;
                         ApiResponse<object> apiResponse = default;
                         //如果是json就进行统一的包装
                         if (data.IsSuccess)
@@ -81,7 +83,7 @@ public class GlobalResponseMiddleware
                         memoryStream.SetLength(0);
                         await context.Response.WriteAsJsonAsync(apiResponse);
                     }
-            }
+                }
             }
 
             memoryStream.Seek(0, SeekOrigin.Begin);

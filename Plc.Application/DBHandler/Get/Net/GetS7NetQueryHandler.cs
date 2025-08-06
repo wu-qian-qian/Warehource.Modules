@@ -13,7 +13,7 @@ internal class GetS7NetQueryHandler(IS7NetManager netManager, IMapper mapper)
     {
         Result<IEnumerable<S7NetDto>> result = new();
         var netList = await netManager.GetAllNetAsync();
-        result.SetValue( mapper.Map<IEnumerable<S7NetDto>>(netList));
+        result.SetValue(mapper.Map<IEnumerable<S7NetDto>>(netList));
         return result;
     }
 }

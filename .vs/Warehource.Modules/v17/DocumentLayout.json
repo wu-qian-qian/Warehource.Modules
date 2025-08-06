@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\Migrations\\20250806092859_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Wcs.Infrastructure\\Database\\Migrations\\20250806092859_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\database\\wcsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\database\\wcsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\dbhandler\\wcstask\\addorupdate\\addorupdatewcstaskhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\dbhandler\\wcstask\\addorupdate\\addorupdatewcstaskhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,6 +51,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20250806092859_InitialCreate.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\Migrations\\20250806092859_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\Database\\Migrations\\20250806092859_InitialCreate.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\Migrations\\20250806092859_InitialCreate.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\Database\\Migrations\\20250806092859_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T09:28:59.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WCSDBContext.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\WCSDBContext.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\Database\\WCSDBContext.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\WCSDBContext.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\Database\\WCSDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxEAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T09:28:37.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AddOrUpdateWcsTaskHandler.cs",
               "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskHandler.cs",
               "RelativeDocumentMoniker": "Wcs.Application\\DBHandler\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskHandler.cs",
@@ -55,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AddOrUpdateWcsTaskEvent.cs",
               "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskEvent.cs",
               "RelativeDocumentMoniker": "Wcs.Application\\DBHandler\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskEvent.cs",

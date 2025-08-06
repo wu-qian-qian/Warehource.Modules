@@ -1,18 +1,16 @@
-﻿using AutoMapper;
-using Common.Application.Encodings;
-using Common.Application.Exception;
+﻿using Common.Application.Encodings;
 using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
-using Identity.Contrancts;
 using Identity.Domain;
 
 namespace Identity.Application.Handler.Login;
 
-internal class LoginEventHandler(UserManager userManager,ITokenService tokenService) : ICommandHandler<LoginEvent, Result<string>>
+internal class LoginEventHandler(UserManager userManager, ITokenService tokenService)
+    : ICommandHandler<LoginEvent, Result<string>>
 {
     public async Task<Result<string>> Handle(LoginEvent request, CancellationToken cancellationToken)
     {
-        Result<string> result=new Result<string>();
+        var result = new Result<string>();
         var user = await userManager.GetUserAndRoleAsync(request.Username);
         if (user != null && user.CheckLockoutEnd() && user.CheckLogin(request.Password))
         {
@@ -24,6 +22,7 @@ internal class LoginEventHandler(UserManager userManager,ITokenService tokenServ
             result.IsSuccess = false;
             result.Message = $"无该用户{request.Username}";
         }
+
         return result;
     }
 }

@@ -3,7 +3,7 @@ using Common.Application.MediatR.Message;
 using Wcs.Contracts.Respon.WcsTask;
 using Wcs.Shared;
 
-namespace Wcs.Application.DBHandler.WcsTask.Insert;
+namespace Wcs.Application.DBHandler.WcsTask.AddOrUpdate;
 
 public class AddOrUpdateWcsTaskEvent : ICommand<Result<WcsTaskDto>>
 {

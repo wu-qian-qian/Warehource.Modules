@@ -2,11 +2,11 @@
 using Common.Application.MediatR.Message;
 using Wcs.Contracts.Respon.WcsTask;
 
-namespace Wcs.Application.DBHandler.WcsTask.Cancel;
+namespace Wcs.Application.DBHandler.WcsTask.Delete;
 
-public class DeleteWcsTaskEvent:ICommand<Result<WcsTaskDto>>
+public class DeleteWcsTaskEvent : ICommand<Result<WcsTaskDto>>
 {
     public int? SerialNumber { get; set; }
-    
+
     public string? TaskCode { get; set; }
 }

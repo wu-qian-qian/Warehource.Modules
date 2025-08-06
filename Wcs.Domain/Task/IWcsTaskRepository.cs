@@ -7,7 +7,7 @@ public interface IWcsTaskRepository
     WcsTask Get(Guid id);
 
     WcsTask Get(string taskCode);
-    
+
     WcsTask Get(int serialNumber);
 
     IQueryable<WcsTask> GetWcsTaskQuerys();

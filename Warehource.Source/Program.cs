@@ -1,4 +1,3 @@
-using System.Reflection;
 using Common.Application.Log;
 using Common.Infrastructure;
 using Common.Infrastructure.Log;
@@ -18,7 +17,6 @@ builder.AddSerilogConfiguratorCategory();
 builder.Services.AddCors();
 
 
-var currentAssembly = Assembly.GetExecutingAssembly();
 //服务通用模块
 Action<HttpResponseMessage> policyCallback = result =>
 {

@@ -11,4 +11,8 @@ public static class AssemblyReference
     public static readonly string Region = "Region";
 
     public static readonly string WcsTask = "WcsTask";
+
+    public static readonly string ExecuteNode = "ExecuteNode";
+
+    public static readonly string Decive = "Decive";
 }

@@ -18,7 +18,7 @@ internal sealed class GetJobConfig : IEndpoint
             Guid id,
             ISender sender) =>
         {
-            var data= await sender.Send(new GetJobQuery(id));
+            var data = await sender.Send(new GetJobQuery(id));
             var result = new Result<JobDto>();
             result.SetValue(data);
             return result;

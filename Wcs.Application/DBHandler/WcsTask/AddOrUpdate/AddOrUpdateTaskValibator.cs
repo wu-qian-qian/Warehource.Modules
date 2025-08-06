@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Wcs.Application.DBHandler.WcsTask.Insert;
+namespace Wcs.Application.DBHandler.WcsTask.AddOrUpdate;
 
 public class AddOrUpdateTaskValibator : AbstractValidator<AddOrUpdateWcsTaskEvent>
 {

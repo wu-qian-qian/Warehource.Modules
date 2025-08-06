@@ -13,13 +13,13 @@ internal sealed class GetJobsConfig : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapGet("job/get-jobs", async (ISender sender) => 
-        {
-            var result = new Result<IEnumerable<JobDto>>();
-            IEnumerable<JobDto> data= await sender.Send(new GetAllJobQuery());
-            result.SetValue(data);
-            return result;
-        })
+        app.MapGet("job/get-jobs", async (ISender sender) =>
+            {
+                var result = new Result<IEnumerable<JobDto>>();
+                var data = await sender.Send(new GetAllJobQuery());
+                result.SetValue(data);
+                return result;
+            })
             .WithTags(AssemblyReference.Job);
     }
 }

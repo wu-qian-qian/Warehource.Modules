@@ -48,7 +48,7 @@ internal class FilterReadS7PlcPipelineBehavior<TRequest, TResponse>(ICacheServic
         else
         {
             var response = await next();
-            if (response is byte[] buffer) cacheService.SetAsync(key, buffer);
+            if (response is byte[] buffer) await cacheService.SetAsync(key, buffer);
             return response;
         }
     }

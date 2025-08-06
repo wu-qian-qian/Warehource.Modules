@@ -29,8 +29,9 @@ public class AddOrUpdateRegionHandler(
             region.Description = request.Description;
             _regionPepository.Insert(region);
         }
+
         await _unitOfWork.SaveChangesAsync();
-        result.SetValue( _mapper.Map<RegionDto>(region));
+        result.SetValue(_mapper.Map<RegionDto>(region));
         return result;
     }
 }

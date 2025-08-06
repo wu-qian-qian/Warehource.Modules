@@ -6,13 +6,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Wcs.Application.DBHandler.WcsTask.Get;
-using Wcs.Application.DBHandler.WcsTask.Insert;
 using Wcs.Contracts.Request.WcsTask;
 using Wcs.Contracts.Respon.WcsTask;
 
 namespace Wcs.Presentation.WcsTask;
 
-public class GetWcsTasks:IEndpoint
+public class GetWcsTasks : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
@@ -21,7 +20,7 @@ public class GetWcsTasks:IEndpoint
             ISender sender) =>
         {
             Result<IEnumerable<WcsTaskDto>> result = new();
-            var data= await sender.Send(new GetWcsTaskQuery
+            var data = await sender.Send(new GetWcsTaskQuery
             {
                 Container = request.Container,
                 CreatorSystemType = request.CreatorSystemType,

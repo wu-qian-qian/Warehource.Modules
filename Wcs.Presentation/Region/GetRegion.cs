@@ -18,7 +18,7 @@ public class GetRegion : IEndpoint
             ISender sender) =>
         {
             Result<IEnumerable<RegionDto>> result = new();
-            var data= await sender.Send(new GetRegionQuery());
+            var data = await sender.Send(new GetRegionQuery());
             result.SetValue(data);
             return result;
         }).WithTags(AssemblyReference.Region);

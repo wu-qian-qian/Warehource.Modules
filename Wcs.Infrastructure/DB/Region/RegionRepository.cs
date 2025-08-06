@@ -17,6 +17,12 @@ public sealed class RegionRepository(WCSDBContext _db) : IRegionRepository
         return default;
     }
 
+    public Domain.Region.Region Get(string regionCode)
+    {
+        if (_db.Regions.Any(p => p.Code == regionCode)) return _db.Regions.First(p => p.Code == regionCode);
+        return default;
+    }
+
     public void Update(Domain.Region.Region region)
     {
         _db.Regions.Add(region);

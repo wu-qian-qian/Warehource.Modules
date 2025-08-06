@@ -85,7 +85,7 @@ public partial class S7NetToken : S7Net
     /// <param name="input"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public override  Task<string> ReadTResultAsync(ReadBufferInput input)
+    public override Task<string> ReadTResultAsync(ReadBufferInput input)
     {
         var result = string.Empty;
         ;
@@ -182,6 +182,7 @@ public partial class S7NetToken : S7Net
         {
             Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC读取出现异常：{e.Message}");
         }
+
         return Task.FromResult(result);
     }
 

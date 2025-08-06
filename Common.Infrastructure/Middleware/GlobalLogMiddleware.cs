@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Text;
 using Common.Application.Log;
 using Common.Shared;
 using Microsoft.AspNetCore.Http;

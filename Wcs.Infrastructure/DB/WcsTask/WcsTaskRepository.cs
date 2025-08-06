@@ -29,7 +29,7 @@ public class WcsTaskRepository(WCSDBContext _db) : IWcsTaskRepository
     public Domain.Task.WcsTask Get(int serialNumber)
     {
         Domain.Task.WcsTask wcsTask = default;
-        if (_db.WcsTasks.Any(p => p.SerialNumber == serialNumber)) 
+        if (_db.WcsTasks.Any(p => p.SerialNumber == serialNumber))
             wcsTask = _db.WcsTasks.First(p => p.SerialNumber == serialNumber);
         return wcsTask;
     }
