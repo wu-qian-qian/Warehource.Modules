@@ -40,5 +40,6 @@ public class WcsTaskConfiguration : IEntityTypeConfiguration<Domain.Task.WcsTask
             .HasForeignKey<Domain.Task.WcsTask>(t => t.TaskExecuteStepId);
         //并发字段
         builder.Property<byte[]>("Version").IsRowVersion();
+        builder.Property(p => p.LastModifierUser).HasMaxLength(20);
     }
 }

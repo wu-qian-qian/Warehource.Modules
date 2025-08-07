@@ -52,9 +52,7 @@ public class GlobalLogMiddleware
 
         _stopwatch.Stop();
         Serilog.Log.Logger.ForCategory(LogCategory.Http)
-            .Information($"地址：{context.Connection.RemoteIpAddress.ToString()}" +
-                         $"-URL:{context.Request.Path}--请求体：{requestData}" +
-                         $"--响应体：{responseData}--时间：{_stopwatch.ElapsedMilliseconds}");
+            .Information($"地址：{context.Connection.RemoteIpAddress.ToString()}\nURL:{context.Request.Path}\n请求体：{requestData}\n响应体：{responseData}\n时间：{_stopwatch.ElapsedMilliseconds}");
     }
 
     /// <summary>

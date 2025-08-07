@@ -7,9 +7,6 @@ namespace Wcs.Application.DBHandler.ExecueNode.Get;
 
 public class GetExecuteNodeQuery : IQuery<Result<IEnumerable<ExecuteNodeDto>>>
 {
-    /// <summary>
-    /// </summary>
-    public Guid Id { get; set; }
 
     /// <summary>
     ///     路径组

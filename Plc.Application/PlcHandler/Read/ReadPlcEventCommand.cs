@@ -1,17 +1,18 @@
 ﻿using Common.Application.MediatR.Message;
 using Plc.Contracts.Input;
+using Plc.Contracts.Respon;
 
 namespace Plc.Application.PlcHandler.Read;
 
 /// <summary>
 ///     上层的 模型
 /// </summary>
-public class ReadPlcEventCommand : ICommand<byte[]>
+public class ReadPlcEventCommand : ICommand<IEnumerable<ReadBuffer>>
 {
     /// <summary>
     ///     PLC的读取数据结构
     /// </summary>
-    public IEnumerable<ReadBufferInput> readBufferInputs;
+    public ReadBufferInput[] readBufferInputs;
 
     public string? Ip { get; set; }
 

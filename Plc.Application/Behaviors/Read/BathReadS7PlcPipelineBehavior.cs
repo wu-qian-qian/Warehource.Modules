@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Plc.Application.PlcHandler.Read;
+using Plc.Contracts.Input;
 using Plc.Domain.S7;
 
 namespace Plc.Application.Behaviors.Read;
@@ -23,11 +24,10 @@ internal class BathReadS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManager 
                     var key = request.DeviceName + "Bath";
                     if (PlcReadWriteDtoHelper._readBufferInputs.ContainsKey(key) == false)
                     {
-                        var s7EntityItems = await netManager.GetNetWiteDeviceNameAsync(request.DeviceName);
+                        var s7EntityItems = (await netManager.GetNetWiteDeviceNameAsync(request.DeviceName));
                         PlcReadWriteDtoHelper.UseMemoryInitReadBufferInput(key, s7EntityItems.ToArray());
                     }
-
-                    request.readBufferInputs = PlcReadWriteDtoHelper._readBufferInputs[key];
+                    request.readBufferInputs = PlcReadWriteDtoHelper._readBufferInputs[key].ToArray();
                 }
                 else
                 {
@@ -38,20 +38,22 @@ internal class BathReadS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManager 
                         PlcReadWriteDtoHelper.UseMemoryInitReadBufferInput(netConfig, request.Ip);
                     }
 
-                    request.readBufferInputs = PlcReadWriteDtoHelper._readBufferInputs[request.Ip];
+                    request.readBufferInputs = PlcReadWriteDtoHelper._readBufferInputs[request.Ip].ToArray();
                 }
             }
             else
             {
                 if (request.DeviceName != null)
                 {
-                    var s7EntityItems = await netManager.GetNetWiteDeviceNameAsync(request.DeviceName);
-                    request.readBufferInputs = PlcReadWriteDtoHelper.CreatReadBufferInput(s7EntityItems.ToArray());
+                    var s7EntityItems = (await netManager.GetNetWiteDeviceNameAsync(request.DeviceName));
+                    request.readBufferInputs = PlcReadWriteDtoHelper.CreatReadBufferInput(s7EntityItems.ToArray()).ToArray();
                 }
                 else
                 {
                     var netConfig = await netManager.GetNetWiteIpAsync(request.Ip);
-                    request.readBufferInputs = PlcReadWriteDtoHelper.InitBufferInput(netConfig);
+                    List<ReadBufferInput> readBufferInputs = new List<ReadBufferInput>();
+                    PlcReadWriteDtoHelper.CreatReadBufferInput(netConfig, readBufferInputs);
+                    request.readBufferInputs = readBufferInputs.ToArray();
                 }
             }
         }

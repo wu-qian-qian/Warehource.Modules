@@ -28,7 +28,7 @@ internal static partial class PlcReadWriteDtoHelper
             {
                 List<ReadBufferInput> readBufferInputs = new();
                 CreatReadBufferInput(netConfig, readBufferInputs);
-                _readBufferInputs.Add(key, readBufferInputs);
+                _readBufferInputs.Add(key, readBufferInputs.ToArray());
             }
         }
         finally
@@ -38,24 +38,11 @@ internal static partial class PlcReadWriteDtoHelper
     }
 
     /// <summary>
-    ///     直接初始化模型
-    ///     访问数据库频繁，但是无锁
-    /// </summary>
-    /// <param name="netConfig"></param>
-    /// <returns></returns>
-    internal static IEnumerable<ReadBufferInput> InitBufferInput(params S7NetConfig[] netConfigs)
-    {
-        var readBufferInputs = new List<ReadBufferInput>();
-        foreach (var item in netConfigs) CreatReadBufferInput(item, readBufferInputs);
-        return readBufferInputs.ToArray();
-    }
-
-    /// <summary>
     ///     创建模型
     /// </summary>
     /// <param name="netConfig"></param>
     /// <param name="readBufferInputs"></param>
-    private static void CreatReadBufferInput(S7NetConfig netConfig, List<ReadBufferInput> readBufferInputs)
+    internal static void CreatReadBufferInput(S7NetConfig netConfig, List<ReadBufferInput> readBufferInputs)
     {
         //对同一ip下的db块与db地址进行分组
         var entityGroups = netConfig.S7EntityItems
@@ -112,25 +99,28 @@ internal static partial class PlcReadWriteDtoHelper
     internal static List<ReadBufferInput> CreatReadBufferInput(params S7EntityItem[] items)
     {
         var readBufferInputs = new List<ReadBufferInput>();
-        var itemsGroup = items.GroupBy(p => p.Ip);
+        var itemsGroup = 
+            items.GroupBy(p => new {p.S7BlockType,p.Ip,p.DBAddress });
         foreach (var itemGroup in itemsGroup)
-        foreach (var item in itemGroup)
         {
+            var entitys = itemGroup.OrderBy(p => p.Index).ToArray();
+            var start = entitys.Min(p => p.DataOffset);
+            var maxEntity = entitys.MaxBy(p => p.Index);
             var input = new ReadBufferInput
             {
-                Ip = itemGroup.Key,
-                S7BlockType = item.S7BlockType,
-                DBStart = item.DataOffset,
-                DBAddress = item.DBAddress,
-                HashId = item.Name
+                Ip = itemGroup.Key.Ip,
+                S7BlockType = itemGroup.Key.S7BlockType,
+                DBStart = start,
+                DBAddress = itemGroup.Key.DBAddress,
+                HashId = entitys.First().DeviceName
             };
-            if (item.S7DataType != S7DataTypeEnum.Array && item.S7DataType != S7DataTypeEnum.String
-                                                        && item.S7DataType != S7DataTypeEnum.S7String)
-                input.DBEnd = item.DataOffset +
-                              item.S7DataType.GetEnumAttribute<S7DataTypeAttribute>().DataSize;
+            if (maxEntity.S7DataType != S7DataTypeEnum.Array && maxEntity.S7DataType != S7DataTypeEnum.String
+                                                        && maxEntity.S7DataType != S7DataTypeEnum.S7String)
+                input.DBEnd = maxEntity.DataOffset +
+                              maxEntity.S7DataType.GetEnumAttribute<S7DataTypeAttribute>().DataSize;
             else
-                input.DBEnd = item.DataOffset +
-                              item.ArrtypeLength.Value;
+                input.DBEnd = maxEntity.DataOffset +
+                              maxEntity.ArrtypeLength.Value;
 
             readBufferInputs.Add(input);
         }

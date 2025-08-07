@@ -19,7 +19,8 @@ internal class UserEntityTypeConfiguration : IEntityTypeConfiguration<Domain.Use
             .HasMaxLength(20);
         builder.Property(p => p.RoleId).IsRequired();
         builder.HasOne(t => t.Role)
-            .WithOne()
-            .HasForeignKey<Domain.User>(t => t.RoleId);
+            .WithMany()
+            .HasForeignKey(t => t.RoleId);
+        builder.Property(p => p.LastModifierUser).HasMaxLength(20);
     }
 }

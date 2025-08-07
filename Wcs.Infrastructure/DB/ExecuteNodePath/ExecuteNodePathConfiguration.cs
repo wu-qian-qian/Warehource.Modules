@@ -13,7 +13,8 @@ public class ExecuteNodePatheConfiguration : IEntityTypeConfiguration<Domain.Exe
         builder.Property(t => t.CurrentDeviceName).IsRequired(false)
             .HasMaxLength(20);
         builder.HasOne(b => b.Region)
-            .WithOne()
-            .HasForeignKey<Domain.ExecuteNode.ExecuteNodePath>(b => b.RegionId);
+            .WithMany()
+            .HasForeignKey(b => b.RegionId);
+        builder.Property(p => p.LastModifierUser).HasMaxLength(20);
     }
 }

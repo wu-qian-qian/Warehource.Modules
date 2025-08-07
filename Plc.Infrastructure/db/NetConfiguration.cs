@@ -16,5 +16,6 @@ public class NetConfiguration : IEntityTypeConfiguration<S7NetConfig>
         builder.HasMany(e => e.S7EntityItems)
             .WithOne()
             .HasForeignKey(e => e.NetGuid);
+        builder.Property(p => p.LastModifierUser).HasMaxLength(20);
     }
 }

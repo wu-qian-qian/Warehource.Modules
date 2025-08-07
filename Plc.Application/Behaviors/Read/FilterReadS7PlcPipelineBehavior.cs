@@ -1,11 +1,13 @@
 ﻿using Common.Application.Caching;
+using MassTransit;
 using MediatR;
 using Plc.Application.PlcHandler.Read;
+using Plc.Contracts.Respon;
 
 namespace Plc.Application.Behaviors.Read;
 
 /// <summary>
-///     筛选者，筛选出符合处理条件的模型
+///     筛选者，筛选出符合的数据
 /// </summary>
 internal class FilterReadS7PlcPipelineBehavior<TRequest, TResponse>(ICacheService cacheService)
     : IPipelineBehavior<TRequest, TResponse>
@@ -27,29 +29,21 @@ internal class FilterReadS7PlcPipelineBehavior<TRequest, TResponse>(ICacheServic
         {
             key = request.Id.ToString();
         }
-
+        var response = await next();
         //分布式事件触发会出现无返回值
         if (request.IsApi == false)
         {
-            var buffer = await cacheService.GetAsync(key);
+            var buffer = await cacheService.GetAsync<IEnumerable<ReadBuffer>>(key);
             //减少了读取次数保证了
             if (buffer == null)
             {
-                var response = await next();
-                if (response is byte[] tempbuffer)
+                if (response is IEnumerable<ReadBuffer> tempbuffer)
                 {
                     buffer = tempbuffer;
-                    cacheService.SetAsync(key, buffer);
+                    await cacheService.SetAsync(key, buffer);
                 }
             }
-
-            return default;
         }
-        else
-        {
-            var response = await next();
-            if (response is byte[] buffer) await cacheService.SetAsync(key, buffer);
-            return response;
-        }
+        return response;
     }
 }

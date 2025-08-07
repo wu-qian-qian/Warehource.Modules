@@ -27,10 +27,6 @@ public class AddOrUpdateExecuteNodeHandler(
         {
             if (region != null && device != null)
             {
-                result.SetMessage("无区域和设备编码");
-            }
-            else
-            {
                 entity = new ExecuteNodePath
                 {
                     PahtNodeGroup = request.PahtNodeGroup,
@@ -44,6 +40,10 @@ public class AddOrUpdateExecuteNodeHandler(
                 _executeNodeRepository.Insert([entity]);
                 await _unitOfWork.SaveChangesAsync();
                 result.SetValue(_mapper.Map<ExecuteNodeDto>(entity));
+            }
+            else
+            {
+                result.SetMessage("无区域和设备编码");
             }
         }
         else

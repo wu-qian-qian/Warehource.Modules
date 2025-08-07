@@ -2,11 +2,11 @@
 
 public class BaseDto
 {
-    public Guid Id { get; init; }
+    public Guid Id { get; set; }
 
-    public DateTime CreationTime { get; }
+    public DateTime CreationTime { get; set;}
 
-    public string? LastModifierUser { get; }
+    public string? LastModifierUser { get; set;}
 
-    public DateTime? LastModificationTime { get; }
+    public DateTime? LastModificationTime { get; set;}
 }

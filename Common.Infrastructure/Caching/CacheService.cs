@@ -1,6 +1,5 @@
-﻿using System.Buffers;
-using System.Text.Json;
-using Common.Application.Caching;
+﻿using Common.Application.Caching;
+using Common.Helper;
 using Microsoft.Extensions.Caching.Distributed;
 
 namespace Common.Infrastructure.Caching;
@@ -11,7 +10,7 @@ internal sealed class CacheService(IDistributedCache cache) : ICacheService
     {
         var bytes = await cache.GetAsync(key, cancellationToken);
 
-        return bytes is null ? default : Deserialize<T>(bytes);
+        return bytes is null ? default : BufferHelper.Deserialize<T>(bytes);
     }
 
     public Task SetAsync<T>(
@@ -20,7 +19,7 @@ internal sealed class CacheService(IDistributedCache cache) : ICacheService
         TimeSpan? expiration = null,
         CancellationToken cancellationToken = default)
     {
-        var bytes = Serialize(value);
+        var bytes = BufferHelper.Serialize(value);
         return cache.SetAsync(key, bytes, CacheOptions.Create(expiration), cancellationToken);
     }
 
@@ -44,16 +43,5 @@ internal sealed class CacheService(IDistributedCache cache) : ICacheService
         return cache.RemoveAsync(key, cancellationToken);
     }
 
-    private static T Deserialize<T>(byte[] bytes)
-    {
-        return JsonSerializer.Deserialize<T>(bytes)!;
-    }
-
-    private static byte[] Serialize<T>(T value)
-    {
-        var buffer = new ArrayBufferWriter<byte>();
-        using var writer = new Utf8JsonWriter(buffer);
-        JsonSerializer.Serialize(writer, value);
-        return buffer.WrittenSpan.ToArray();
-    }
+  
 }

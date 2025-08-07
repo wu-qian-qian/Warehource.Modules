@@ -19,5 +19,6 @@ internal class JobConfigConfiguration : IEntityTypeConfiguration<Domain.JobConfi
         builder.Property(builder => builder.Description)
             .IsRequired(false)
             .HasMaxLength(50);
+        builder.Property(p => p.LastModifierUser).HasMaxLength(20);
     }
 }

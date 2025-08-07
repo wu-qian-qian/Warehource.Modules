@@ -2,7 +2,9 @@
 using Common.Application.MediatR.Message;
 using Common.Shared;
 using Plc.Application.Abstract;
+using Plc.Contracts.Respon;
 using Serilog;
+using System;
 
 namespace Plc.Application.PlcHandler.Read;
 
@@ -11,7 +13,7 @@ namespace Plc.Application.PlcHandler.Read;
 /// </summary>
 /// <param name="service"></param>
 internal class ReadPlcEventHandle(INetService netService)
-    : ICommandHandler<ReadPlcEventCommand, byte[]>
+    : ICommandHandler<ReadPlcEventCommand, IEnumerable<ReadBuffer>>
 {
     /// <summary>
     ///     进行一些操作
@@ -20,19 +22,19 @@ internal class ReadPlcEventHandle(INetService netService)
     /// <param name="request"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    public async Task<byte[]> Handle(ReadPlcEventCommand request, CancellationToken cancellationToken)
+    public async Task<IEnumerable<ReadBuffer>> Handle(ReadPlcEventCommand request, CancellationToken cancellationToken)
     {
-        List<byte> memory = new();
-        foreach (var input in request.readBufferInputs)
+        var buffers = new ReadBuffer[request.readBufferInputs.Count()];
+        for (int i = 0; i < request.readBufferInputs.Count(); i++)
         {
+            var input = request.readBufferInputs[i];
             var buffer = await netService.ReadAsync(input);
             if (buffer != null)
-                memory.AddRange(buffer);
+                buffers[i] = new ReadBuffer(input.DBAddress,buffer);
             else
                 Log.Logger.ForCategory(LogCategory.Net)
                     .Error($"IP:{request.Ip} 设备名称{request.DeviceName}读取失败");
         }
-
-        return memory.ToArray();
+        return buffers;
     }
 }

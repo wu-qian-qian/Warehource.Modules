@@ -17,11 +17,12 @@ public class InsertOrUpdate : IEndpoint
             DeviceRequest request,
             ISender sender) =>
         {
+            var json=System.Text.Json.JsonSerializer.Serialize(request.Config);
             return await sender.Send(new AddOrUpdateDeviceEvent
             {
                 DeviceName = request.DeviceName,
                 DeviceType = request.DeviceType,
-                Config = request.Config,
+                Config = json,
                 Enable = request.Enable,
                 Description = request.Description,
                 Id = request.Id.Value

@@ -14,5 +14,6 @@ public class RoleEntityTypeConfiguration : IEntityTypeConfiguration<Domain.Role>
         builder.Property(p => p.RoleName)
             .IsRequired()
             .HasMaxLength(50);
+        builder.Property(p => p.LastModifierUser).HasMaxLength(20);
     }
 }

@@ -14,5 +14,7 @@ public class DeviceConfiguration : IEntityTypeConfiguration<Domain.Device.Device
             .IsUnique();
         builder.Property(p => p.Description).HasMaxLength(100);
         builder.Property(p => p.Config).HasMaxLength(512);
+        builder.Property(p => p.LastModifierUser).HasMaxLength(20);
+
     }
 }

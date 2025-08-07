@@ -96,7 +96,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -765,7 +765,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "application/json"
         ],

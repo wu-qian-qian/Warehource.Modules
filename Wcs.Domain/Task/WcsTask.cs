@@ -51,6 +51,8 @@ public class WcsTask : IEntity
     /// </summary>
     public PutLocation PutLocation { get; set; }
 
+    public string? StockOutPosition { get; set; }
+
 
     public Guid? RegionId { get; set; }
 

@@ -15,5 +15,6 @@ public class RegionConfiguration : IEntityTypeConfiguration<Domain.Region.Region
             .IsRequired()
             .HasMaxLength(20);
         builder.Property(r => r.Description).HasMaxLength(50);
+        builder.Property(p => p.LastModifierUser).HasMaxLength(20);
     }
 }

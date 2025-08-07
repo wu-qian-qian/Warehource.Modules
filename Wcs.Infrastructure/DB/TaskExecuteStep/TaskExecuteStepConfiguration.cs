@@ -15,5 +15,6 @@ public class TaskExecuteStepConfiguration : IEntityTypeConfiguration<Domain.Task
         builder.Property(t => t.PathNodeGroup)
             .HasMaxLength(50);
         builder.Property<byte[]>("Version").IsRowVersion();
+        builder.Property(p => p.LastModifierUser).HasMaxLength(20);
     }
 }

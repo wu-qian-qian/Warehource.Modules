@@ -174,7 +174,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -812,10 +812,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Wcs.Contracts.Respon.WcsTask.WcsTaskDto"
-                  }
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
                 }
               }
             }
@@ -1096,6 +1093,22 @@
           },
           "value": {
             "$ref": "#/components/schemas/Wcs.Contracts.Respon.Device.DeviceDto"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "$ref": "#/components/schemas/Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto"
           },
           "message": {
             "type": "string",
@@ -1417,7 +1430,6 @@
             "nullable": true
           },
           "config": {
-            "type": "string",
             "nullable": true
           },
           "enable": {
@@ -1432,7 +1444,8 @@
         "properties": {
           "id": {
             "type": "string",
-            "format": "uuid"
+            "format": "uuid",
+            "nullable": true
           },
           "pahtNodeGroup": {
             "type": "string",
@@ -1449,6 +1462,10 @@
             "nullable": true
           },
           "regionCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "nextDeviceName": {
             "type": "string",
             "nullable": true
           }
@@ -1673,19 +1690,16 @@
           },
           "creationTime": {
             "type": "string",
-            "format": "date-time",
-            "readOnly": true
+            "format": "date-time"
           },
           "lastModifierUser": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "lastModificationTime": {
             "type": "string",
             "format": "date-time",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "deviceType": {
             "$ref": "#/components/schemas/Wcs.Shared.DeviceTypeEnum"
@@ -1717,19 +1731,16 @@
           },
           "creationTime": {
             "type": "string",
-            "format": "date-time",
-            "readOnly": true
+            "format": "date-time"
           },
           "lastModifierUser": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "lastModificationTime": {
             "type": "string",
             "format": "date-time",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "pahtNodeGroup": {
             "type": "string",
@@ -1771,19 +1782,16 @@
           },
           "creationTime": {
             "type": "string",
-            "format": "date-time",
-            "readOnly": true
+            "format": "date-time"
           },
           "lastModifierUser": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "lastModificationTime": {
             "type": "string",
             "format": "date-time",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "name": {
             "type": "string",
@@ -1820,19 +1828,16 @@
           },
           "creationTime": {
             "type": "string",
-            "format": "date-time",
-            "readOnly": true
+            "format": "date-time"
           },
           "lastModifierUser": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "lastModificationTime": {
             "type": "string",
             "format": "date-time",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "code": {
             "type": "string",
@@ -1854,19 +1859,16 @@
           },
           "creationTime": {
             "type": "string",
-            "format": "date-time",
-            "readOnly": true
+            "format": "date-time"
           },
           "lastModifierUser": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "lastModificationTime": {
             "type": "string",
             "format": "date-time",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "taskCode": {
             "type": "string",
@@ -1968,7 +1970,10 @@
       "Wcs.Shared.DeviceTypeEnum": {
         "enum": [
           1,
-          2
+          2,
+          3,
+          4,
+          5
         ],
         "type": "integer",
         "format": "int32"

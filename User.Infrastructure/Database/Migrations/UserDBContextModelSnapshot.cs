@@ -110,8 +110,7 @@ namespace Identity.Infrastructure.Database.Migrations
 
                     SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"), false);
 
-                    b.HasIndex("RoleId")
-                        .IsUnique();
+                    b.HasIndex("RoleId");
 
                     b.HasIndex("Username");
 
@@ -123,8 +122,8 @@ namespace Identity.Infrastructure.Database.Migrations
             modelBuilder.Entity("Identity.Domain.User", b =>
                 {
                     b.HasOne("Identity.Domain.Role", "Role")
-                        .WithOne()
-                        .HasForeignKey("Identity.Domain.User", "RoleId")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

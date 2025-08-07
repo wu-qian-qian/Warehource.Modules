@@ -224,6 +224,9 @@
             "projectReferences": {
               "D:\\Program\\仓库\\Warehource.Modules\\Common.Application\\Common.Application.csproj": {
                 "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common.Application\\Common.Application.csproj"
+              },
+              "D:\\Program\\仓库\\Warehource.Modules\\Common\\Common.csproj": {
+                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common\\Common.csproj"
               }
             }
           }

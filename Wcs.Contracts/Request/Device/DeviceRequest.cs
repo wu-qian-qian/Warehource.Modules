@@ -15,7 +15,7 @@ public class DeviceRequest
     /// <summary>
     ///     配置
     /// </summary>
-    public string? Config { get; set; }
+    public object? Config { get; set; }
 
     public bool? Enable { get; set; }
 }

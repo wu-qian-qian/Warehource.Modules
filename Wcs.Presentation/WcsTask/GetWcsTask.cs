@@ -1,10 +1,13 @@
-﻿using Common.Presentation.Endpoints;
+﻿using Common.Application.MediatR.Behaviors;
+using Common.Presentation.Endpoints;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using NPOI.OpenXmlFormats;
 using Wcs.Application.DBHandler.WcsTask.Get;
+using Wcs.Contracts.Respon.WcsTask;
 
 namespace Wcs.Presentation.WcsTask;
 
@@ -16,10 +19,13 @@ public class GetWcsTask : IEndpoint
             int request,
             ISender sender) =>
         {
-            return await sender.Send(new GetWcsTaskQuery
+            Result<IEnumerable<WcsTaskDto>> result = new();
+            var data= await sender.Send(new GetWcsTaskQuery
             {
                 SerialNumber = request
             });
+            result.SetValue(data);
+            return result;
         }).WithTags(AssemblyReference.WcsTask);
     }
 }
