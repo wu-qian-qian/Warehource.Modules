@@ -4,7 +4,7 @@ namespace Wcs.Contracts.Request.Device;
 
 public class DeviceRequest
 {
-    public Guid Id { get; set; }
+    public Guid? Id { get; set; }
 
     public DeviceTypeEnum? DeviceType { get; set; }
 

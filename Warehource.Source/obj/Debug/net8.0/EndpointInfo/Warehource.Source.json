@@ -6,6 +6,182 @@
     "version": "v1"
   },
   "paths": {
+    "/decive/delete/{id}": {
+      "delete": {
+        "tags": [
+          "Decive"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/decive/get": {
+      "post": {
+        "tags": [
+          "Decive"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.Device.DeviceRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.Device.DeviceDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/decive/add-or-update": {
+      "post": {
+        "tags": [
+          "Decive"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.Device.DeviceRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.Device.DeviceDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/executenode/delete/{id}": {
+      "delete": {
+        "tags": [
+          "ExecuteNode"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/executenode/get": {
+      "post": {
+        "tags": [
+          "ExecuteNode"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.ExecuteNode.ExecuteNodeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/executenode/add-or-update": {
+      "post": {
+        "tags": [
+          "ExecuteNode"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.ExecuteNode.ExecuteNodeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/user/user-login": {
       "post": {
         "tags": [
@@ -795,6 +971,46 @@
         },
         "additionalProperties": false
       },
+      "Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.Device.DeviceDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wcs.Contracts.Respon.Device.DeviceDto"
+            },
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto"
+            },
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]": {
         "type": "object",
         "properties": {
@@ -864,6 +1080,22 @@
           "value": {
             "type": "string",
             "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.Device.DeviceDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "value": {
+            "$ref": "#/components/schemas/Wcs.Contracts.Respon.Device.DeviceDto"
           },
           "message": {
             "type": "string",
@@ -1165,6 +1397,64 @@
         "type": "integer",
         "format": "int32"
       },
+      "Wcs.Contracts.Request.Device.DeviceRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "deviceType": {
+            "$ref": "#/components/schemas/Wcs.Shared.DeviceTypeEnum"
+          },
+          "deviceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "config": {
+            "type": "string",
+            "nullable": true
+          },
+          "enable": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wcs.Contracts.Request.ExecuteNode.ExecuteNodeRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "pahtNodeGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentDeviceType": {
+            "$ref": "#/components/schemas/Wcs.Shared.DeviceTypeEnum"
+          },
+          "taskType": {
+            "$ref": "#/components/schemas/Wcs.Shared.WcsTaskTypeEnum"
+          },
+          "currentDeviceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "regionCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Wcs.Contracts.Request.Job.AddJobRequest": {
         "type": "object",
         "properties": {
@@ -1374,6 +1664,104 @@
         },
         "additionalProperties": false
       },
+      "Wcs.Contracts.Respon.Device.DeviceDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "creationTime": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "lastModifierUser": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "lastModificationTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "readOnly": true
+          },
+          "deviceType": {
+            "$ref": "#/components/schemas/Wcs.Shared.DeviceTypeEnum"
+          },
+          "deviceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "config": {
+            "type": "string",
+            "nullable": true
+          },
+          "enable": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "creationTime": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "lastModifierUser": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "lastModificationTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "readOnly": true
+          },
+          "pahtNodeGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentDeviceType": {
+            "type": "string",
+            "nullable": true
+          },
+          "taskType": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentDeviceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "nextDeviceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "regionDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "regionCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Wcs.Contracts.Respon.Job.JobDto": {
         "type": "object",
         "properties": {
@@ -1573,6 +1961,14 @@
         "enum": [
           0,
           1
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Wcs.Shared.DeviceTypeEnum": {
+        "enum": [
+          1,
+          2
         ],
         "type": "integer",
         "format": "int32"

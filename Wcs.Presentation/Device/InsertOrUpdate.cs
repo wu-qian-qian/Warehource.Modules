@@ -24,7 +24,7 @@ public class InsertOrUpdate : IEndpoint
                 Config = request.Config,
                 Enable = request.Enable,
                 Description = request.Description,
-                Id = request.Id
+                Id = request.Id.Value
             });
         }).WithTags(AssemblyReference.Decive);
     }

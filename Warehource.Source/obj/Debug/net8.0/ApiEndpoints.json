@@ -1,5 +1,167 @@
 [
   {
+    "ContainingType": "Wcs.Presentation.Device.InsertOrUpdate\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "decive/add-or-update",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Wcs.Contracts.Request.Device.DeviceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.Device.DeviceDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Decive"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.Device.Delete\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "decive/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Decive"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.Device.Get\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "decive/get",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Wcs.Contracts.Request.Device.DeviceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.Device.DeviceDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Decive"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.ExecuteNode.InsertOrUpdate\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "executenode/add-or-update",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Wcs.Contracts.Request.ExecuteNode.ExecuteNodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "ExecuteNode"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.ExecuteNode.Delete\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "executenode/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "ExecuteNode"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.ExecuteNode.Get\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "executenode/get",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Wcs.Contracts.Request.ExecuteNode.ExecuteNodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "ExecuteNode"
+    ]
+  },
+  {
     "ContainingType": "Identity.Presentation.Get.GetUsers\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "get/get-users",
