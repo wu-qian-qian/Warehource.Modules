@@ -56,3 +56,5 @@ D:\Program\仓库\Warehource.Modules\Common.Infrastructure\obj\Debug\net8.0\Comm
 D:\Program\仓库\Warehource.Modules\Common.Infrastructure\obj\Debug\net8.0\refint\Common.Infrastructure.dll
 D:\Program\仓库\Warehource.Modules\Common.Infrastructure\obj\Debug\net8.0\Common.Infrastructure.pdb
 D:\Program\仓库\Warehource.Modules\Common.Infrastructure\obj\Debug\net8.0\ref\Common.Infrastructure.dll
+D:\Program\仓库\Warehource.Modules\Common.Infrastructure\bin\Debug\net8.0\Common.dll
+D:\Program\仓库\Warehource.Modules\Common.Infrastructure\bin\Debug\net8.0\Common.pdb

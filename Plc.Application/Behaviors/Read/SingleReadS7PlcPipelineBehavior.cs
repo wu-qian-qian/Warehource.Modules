@@ -28,14 +28,14 @@ internal class SingleReadS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManage
 
                 //筛选出指定的模型
                 request.readBufferInputs = PlcReadWriteDtoHelper._readBufferInputs[key]
-                    .Where(p => request.DBNames.Contains(p.HashId));
+                    .Where(p => request.DBNames.Contains(p.HashId)).ToArray();
             }
             else
             {
                 //直接获取到指定的变量模型
                 var s7EntityItems =
                     (await netManager.GetDeviceNameWithDBNameAsync(request.DeviceName, request.DBNames.ToList())).OrderBy(p=>p.Index);
-                request.readBufferInputs = PlcReadWriteDtoHelper.CreatReadBufferInput(s7EntityItems.ToArray());
+                request.readBufferInputs = PlcReadWriteDtoHelper.CreatReadBufferInput(s7EntityItems.ToArray()).ToArray();
             }
         }
 

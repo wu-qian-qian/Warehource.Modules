@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wcs.Device")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7401c1161e0e59b1f16fd5cce8f83b81ebd9c107")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e81b48fe7ee9b55b44aaff1ef654b57c27e07d49")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wcs.Device")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wcs.Device")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

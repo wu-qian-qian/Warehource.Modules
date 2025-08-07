@@ -32,3 +32,5 @@ D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\refint
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\Identity.Infrastructure.pdb
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\Identity.Infrastructure.genruntimeconfig.cache
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\ref\Identity.Infrastructure.dll
+D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.dll
+D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.pdb

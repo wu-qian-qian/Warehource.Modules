@@ -402,4 +402,3 @@ D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\refint\W
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehource.Source.pdb
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehource.Source.genruntimeconfig.cache
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\ref\Warehource.Source.dll
-D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

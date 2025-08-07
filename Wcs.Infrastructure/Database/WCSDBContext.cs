@@ -36,7 +36,7 @@ public sealed class WCSDBContext : BaseDbContext, IUnitOfWork
 
     public DbSet<JobConfig> JobConfigs { get; set; }
 
-    public DbSet<Device> Devices { get; set; }
+    public DbSet<Domain.Device.Device> Devices { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
