@@ -9,19 +9,23 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Wcs.Application;
 using Wcs.Application.Abstract;
 using Wcs.Application.SignalR;
+using Wcs.CustomEvents;
 using Wcs.Domain.Device;
 using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.JobConfigs;
+using Wcs.Domain.Plc;
 using Wcs.Domain.Region;
 using Wcs.Domain.Task;
 using Wcs.Infrastructure.Database;
 using Wcs.Infrastructure.DB.Device;
 using Wcs.Infrastructure.DB.ExecuteNodePath;
 using Wcs.Infrastructure.DB.JobConfig;
+using Wcs.Infrastructure.DB.PlcMap;
 using Wcs.Infrastructure.DB.Region;
 using Wcs.Infrastructure.DB.WcsTask;
 using Wcs.Infrastructure.Job;
 using Wcs.Infrastructure.SignalR;
+using Wcs.Presentation.Custom;
 using Wcs.Shared;
 using AssemblyReference = Wcs.Presentation.AssemblyReference;
 
@@ -56,6 +60,7 @@ public static class WcsInfrastructureConfigurator
         service.AddScoped<IWcsTaskRepository, WcsTaskRepository>();
         service.AddScoped<IExecuteNodeRepository, ExecuteNodeRepository>();
         service.AddScoped<IDeviceRepository, DeviceRepository>();
+        service.AddScoped<IPlcMapRepository, PlcMapRepository>();
         return service;
     }
 
@@ -80,12 +85,13 @@ public static class WcsInfrastructureConfigurator
     }
 
     /// <summary>
-    ///     公共事件注入
+    ///     公共事件消费者
     /// </summary>
     /// <param name="registrationConfigurator"></param>
     public static void AddConsumers(IRegistrationConfigurator registrationConfigurator)
     {
-        ApplicationConfigurator.AddCustom(registrationConfigurator);
+        registrationConfigurator.AddConsumer<WcsCustomEventConsumer<WcsIntegrationEvent>>();
+        registrationConfigurator.AddConsumer<PlcMapDataIntegrationEventConsumer>();
     }
 
     /// <summary>

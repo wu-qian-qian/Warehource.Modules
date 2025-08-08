@@ -3,17 +3,6 @@ using Plc.Domain.S7;
 
 namespace Plc.Application.Behaviors;
 
-internal struct WriteKey
-{
-    public string _key;
-
-    public string _ipAddress;
-
-    public WriteBufferItemInput _value;
-
-    public string _dBName;
-}
-
 internal static partial class PlcReadWriteDtoHelper
 {
     internal static List<WriteKey> _WriteBufferInputs = new();

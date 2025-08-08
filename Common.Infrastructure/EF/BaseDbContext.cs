@@ -2,6 +2,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Common.Infrastructure.EF;
 
+
+/// <summary>
+/// 优化项  AutoDetectChangesEnabled 属性  手动控制状态跟踪
+/// </summary>
 public abstract class BaseDbContext : DbContext
 {
     private readonly LastModificationInterceptor _lastModificationInterceptor;

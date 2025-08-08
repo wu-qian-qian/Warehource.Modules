@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
-using Wcs.Application.Custom;
 using Wcs.CustomEvents;
 
 namespace Wcs.Application;
@@ -16,10 +15,6 @@ public static class ApplicationConfigurator
         //  configuration.AddOpenBehavior(typeof(ReadS7PlcPipelineBehavior<>));
     }
 
-    public static void AddCustom(IRegistrationConfigurator registrationConfigurator)
-    {
-        registrationConfigurator.AddConsumer<WcsCustomEventConsumer<WcsIntegrationEvent>>();
-    }
 
     public static void AddAutoMapper(IMapperConfigurationExpression config)
     {

@@ -67,7 +67,7 @@
             },
             "MassTransit": {
               "target": "Package",
-              "version": "[8.5.0, )"
+              "version": "[8.2.1, )"
             },
             "MediatR": {
               "target": "Package",
@@ -922,6 +922,9 @@
               },
               "D:\\Program\\仓库\\Warehource.Modules\\Plc.Application\\Plc.Application.csproj": {
                 "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Plc.Application\\Plc.Application.csproj"
+              },
+              "D:\\Program\\仓库\\Warehource.Modules\\Wcs.CustomEvents\\Wcs.CustomEvents.csproj": {
+                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Wcs.CustomEvents\\Wcs.CustomEvents.csproj"
               }
             }
           }

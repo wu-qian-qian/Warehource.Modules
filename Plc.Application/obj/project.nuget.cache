@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ycloQEFXoeY=",
+  "dgSpecHash": "35wVWHxYu3k=",
   "success": true,
   "projectFilePath": "D:\\Program\\仓库\\Warehource.Modules\\Plc.Application\\Plc.Application.csproj",
   "expectedPackageFiles": [
@@ -9,8 +9,8 @@
     "C:\\Users\\吴\\.nuget\\packages\\enums.net\\5.0.0\\enums.net.5.0.0.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\extendednumerics.bigdecimal\\2025.1001.2.129\\extendednumerics.bigdecimal.2025.1001.2.129.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
-    "C:\\Users\\吴\\.nuget\\packages\\masstransit\\8.5.0\\masstransit.8.5.0.nupkg.sha512",
-    "C:\\Users\\吴\\.nuget\\packages\\masstransit.abstractions\\8.5.0\\masstransit.abstractions.8.5.0.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\masstransit\\8.2.1\\masstransit.8.2.1.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\masstransit.abstractions\\8.2.1\\masstransit.abstractions.8.2.1.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\mathnet.numerics.signed\\5.0.0\\mathnet.numerics.signed.5.0.0.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

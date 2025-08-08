@@ -31,10 +31,10 @@
           }
         }
       },
-      "MassTransit/8.5.0": {
+      "MassTransit/8.2.1": {
         "type": "package",
         "dependencies": {
-          "MassTransit.Abstractions": "8.5.0",
+          "MassTransit.Abstractions": "8.2.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
           "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "8.0.0",
@@ -52,7 +52,7 @@
           }
         }
       },
-      "MassTransit.Abstractions/8.5.0": {
+      "MassTransit.Abstractions/8.2.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/MassTransit.Abstractions.dll": {
@@ -1045,7 +1045,7 @@
           "Common.Domain": "1.0.0",
           "Common.Shared": "1.0.0",
           "FluentValidation": "12.0.0",
-          "MassTransit": "8.5.0",
+          "MassTransit": "8.2.1",
           "MediatR": "12.2.0",
           "Microsoft.Extensions.Http": "8.0.0",
           "Microsoft.Extensions.Http.Polly": "8.0.0",
@@ -1167,44 +1167,52 @@
         "lib/net8.0/FluentValidation.xml"
       ]
     },
-    "MassTransit/8.5.0": {
-      "sha512": "K0dkuWGqSD3i23Qnmeltk7igEHlnrm93IuKV8ZfspoxfyKPzvqMfQVkC8V1/UxHbwIevdhdRhtV7SArNAda6aw==",
+    "MassTransit/8.2.1": {
+      "sha512": "bjDmaE+XaYYRytDM2W5hFm62lb+gQpJtsZD9Eyol1ULBwQxlnQAIszKovc1GHmgJ2cLmwl8gI5KjCj23ev9ilg==",
       "type": "package",
-      "path": "masstransit/8.5.0",
+      "path": "masstransit/8.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "NuGet.README.md",
         "lib/net472/MassTransit.dll",
         "lib/net472/MassTransit.xml",
+        "lib/net6.0/MassTransit.dll",
+        "lib/net6.0/MassTransit.xml",
+        "lib/net7.0/MassTransit.dll",
+        "lib/net7.0/MassTransit.xml",
         "lib/net8.0/MassTransit.dll",
         "lib/net8.0/MassTransit.xml",
-        "lib/net9.0/MassTransit.dll",
-        "lib/net9.0/MassTransit.xml",
         "lib/netstandard2.0/MassTransit.dll",
         "lib/netstandard2.0/MassTransit.xml",
-        "masstransit.8.5.0.nupkg.sha512",
+        "lib/netstandard2.1/MassTransit.dll",
+        "lib/netstandard2.1/MassTransit.xml",
+        "masstransit.8.2.1.nupkg.sha512",
         "masstransit.nuspec",
         "mt-logo-small.png"
       ]
     },
-    "MassTransit.Abstractions/8.5.0": {
-      "sha512": "Dkc+LudZCkg0HSO9z/WfdO18x4czA82SMkBBrtliBo+gIeXu39/Y8xgPiyN2/3TJ0fbmg6C5w/dBTHXFS2TH6g==",
+    "MassTransit.Abstractions/8.2.1": {
+      "sha512": "9dk3hcAlXXXEVPZC+5UPJnYnQ9Hcv71kXtkHL85w5wtQ43go1Ieso6QJYvCVj++mq61LCjnhJSPlN/eWgScbkw==",
       "type": "package",
-      "path": "masstransit.abstractions/8.5.0",
+      "path": "masstransit.abstractions/8.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "NuGet.README.md",
         "lib/net472/MassTransit.Abstractions.dll",
         "lib/net472/MassTransit.Abstractions.xml",
+        "lib/net6.0/MassTransit.Abstractions.dll",
+        "lib/net6.0/MassTransit.Abstractions.xml",
+        "lib/net7.0/MassTransit.Abstractions.dll",
+        "lib/net7.0/MassTransit.Abstractions.xml",
         "lib/net8.0/MassTransit.Abstractions.dll",
         "lib/net8.0/MassTransit.Abstractions.xml",
-        "lib/net9.0/MassTransit.Abstractions.dll",
-        "lib/net9.0/MassTransit.Abstractions.xml",
         "lib/netstandard2.0/MassTransit.Abstractions.dll",
         "lib/netstandard2.0/MassTransit.Abstractions.xml",
-        "masstransit.abstractions.8.5.0.nupkg.sha512",
+        "lib/netstandard2.1/MassTransit.Abstractions.dll",
+        "lib/netstandard2.1/MassTransit.Abstractions.xml",
+        "masstransit.abstractions.8.2.1.nupkg.sha512",
         "masstransit.abstractions.nuspec",
         "mt-logo-small.png"
       ]

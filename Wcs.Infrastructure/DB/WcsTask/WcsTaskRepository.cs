@@ -8,7 +8,27 @@ public class WcsTaskRepository(WCSDBContext _db) : IWcsTaskRepository
 {
     public void Insert(IEnumerable<Domain.Task.WcsTask> tasks)
     {
-        _db.WcsTasks.AddRange(tasks);
+        if (tasks.Count() > 100)
+        {
+            //更新也一样只触发一次状态跟踪
+            _db.ChangeTracker.AutoDetectChangesEnabled = false;
+            try
+            {
+                // 添加大量实体，此时不会自动触发变更检测
+                _db.WcsTasks.AddRange(tasks);
+
+                // 手动触发一次变更检测（仅一次）
+                _db.ChangeTracker.DetectChanges();
+            }
+            finally
+            {
+                _db.ChangeTracker.AutoDetectChangesEnabled = true;
+            }
+        }
+        else
+        {
+            _db.WcsTasks.AddRange(tasks);
+        }
     }
 
     public Domain.Task.WcsTask Get(Guid id)

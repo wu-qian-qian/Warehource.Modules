@@ -9,10 +9,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Plc.Application;
 using Plc.Application.Abstract;
+using Plc.CustomEvents;
 using Plc.Domain.S7;
 using Plc.Infrastructure.Database;
 using Plc.Infrastructure.db;
 using Plc.Infrastructure.Service;
+using Plc.Presentation.Custom;
 using AssemblyReference = Plc.Presentation.AssemblyReference;
 
 namespace Plc.Infrastructure;
@@ -66,9 +68,26 @@ public static class PlcInfrastructureConfigurator
     /// <param name="registrationConfigurator"></param>
     public static void AddConsumers(IRegistrationConfigurator registrationConfigurator)
     {
-        ApplicationConfigurator.AddCustom(registrationConfigurator);
+        registrationConfigurator.AddConsumer<ReadPlcEventConsumer<S7ReadPlcDataBlockEvent>>();
+        registrationConfigurator.AddConsumer<WritePlcEventConsumer<S7WritePlcDataBlockEvent>>();
+        registrationConfigurator.AddConsumer<PlcMapEventCommitConsumer>();
+        //saga注入
+        registrationConfigurator.AddSagaStateMachine<Presentation.Saga.PlcMapSaga, Presentation.Saga.PlcMapState>()
+       .InMemoryRepository();
     }
+    /// <summary>
+    /// 端点配置
+    /// </summary>
+    /// <param name="cfg"></param>
+    /// <param name="context"></param>
+    public static void AddConsumerEndpoint(IInMemoryBusFactoryConfigurator cfg, IBusRegistrationContext context)
+    {
+        cfg.ReceiveEndpoint("endpoint", e =>
+        {
+            // e.ConfigureConsumer<PlcMapDataIntegrationConsumer>(context);
+        });
 
+    }
     /// <summary>
     ///     automapper注入
     /// </summary>

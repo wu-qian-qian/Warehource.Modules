@@ -13,5 +13,9 @@ public interface IS7NetManager
 
     public Task<List<S7EntityItem>> GetNetWiteDeviceNameAsync(string deviceName);
 
+    public Task<List<S7EntityItem>?> GetNetWiteDeviceNameAsync(string deviceName, bool isUse);
+
     public Task<List<S7EntityItem>> GetDeviceNameWithDBNameAsync(string deviceName, List<string> dbNames);
+
+    public void UpdateS7EntityItem(IEnumerable<S7EntityItem> entityItems);
 }
