@@ -24,9 +24,10 @@ internal class BathReadS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManager 
                     var key = request.DeviceName + "Bath";
                     if (PlcReadWriteDtoHelper._readBufferInputs.ContainsKey(key) == false)
                     {
-                        var s7EntityItems = (await netManager.GetNetWiteDeviceNameAsync(request.DeviceName));
+                        var s7EntityItems = await netManager.GetNetWiteDeviceNameAsync(request.DeviceName);
                         PlcReadWriteDtoHelper.UseMemoryInitReadBufferInput(key, s7EntityItems.ToArray());
                     }
+
                     request.readBufferInputs = PlcReadWriteDtoHelper._readBufferInputs[key].ToArray();
                 }
                 else
@@ -45,13 +46,14 @@ internal class BathReadS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManager 
             {
                 if (request.DeviceName != null)
                 {
-                    var s7EntityItems = (await netManager.GetNetWiteDeviceNameAsync(request.DeviceName));
-                    request.readBufferInputs = PlcReadWriteDtoHelper.CreatReadBufferInput(s7EntityItems.ToArray()).ToArray();
+                    var s7EntityItems = await netManager.GetNetWiteDeviceNameAsync(request.DeviceName);
+                    request.readBufferInputs =
+                        PlcReadWriteDtoHelper.CreatReadBufferInput(s7EntityItems.ToArray()).ToArray();
                 }
                 else
                 {
                     var netConfig = await netManager.GetNetWiteIpAsync(request.Ip);
-                    List<ReadBufferInput> readBufferInputs = new List<ReadBufferInput>();
+                    var readBufferInputs = new List<ReadBufferInput>();
                     PlcReadWriteDtoHelper.CreatReadBufferInput(netConfig, readBufferInputs);
                     request.readBufferInputs = readBufferInputs.ToArray();
                 }

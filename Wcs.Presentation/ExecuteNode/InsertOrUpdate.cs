@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Wcs.Application.DBHandler.ExecueNode.AddOrUpdate;
-using Wcs.Application.DBHandler.ExecueNode.Get;
 using Wcs.Contracts.Request.ExecuteNode;
 
 namespace Wcs.Presentation.ExecuteNode;
@@ -20,13 +19,13 @@ public class InsertOrUpdate : IEndpoint
         {
             return await sender.Send(new AddOrUpdateExecuteNodeEvent
             {
-                Id = request.Id??Guid.NewGuid(),
+                Id = request.Id ?? Guid.NewGuid(),
                 PahtNodeGroup = request.PahtNodeGroup,
                 CurrentDeviceName = request.CurrentDeviceName,
                 CurrentDeviceType = request.CurrentDeviceType,
                 RegionCode = request.RegionCode,
                 TaskType = request.TaskType,
-                NextDeviceName=request.NextDeviceName
+                NextDeviceName = request.NextDeviceName
             });
         }).WithTags(AssemblyReference.ExecuteNode);
     }

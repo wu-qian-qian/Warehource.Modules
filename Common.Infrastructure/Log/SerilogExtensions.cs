@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Common.Infrastructure.Middleware;
+using Microsoft.AspNetCore.Builder;
 using Serilog;
 using Serilog.Events;
 
@@ -30,7 +31,7 @@ public static class SerilogExtensions
         Serilog.Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Debug()
             .WriteTo.Console()
-            .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+            .MinimumLevel.Override("Microsoft", LogEventLevel.Fatal)
             .MinimumLevel.Override("Quartz", LogEventLevel.Warning)
             .Enrich.FromLogContext()
             // 系统日志
@@ -83,8 +84,11 @@ public static class SerilogExtensions
 
     public static WebApplication UseSerilogRequest(this WebApplication app)
     {
+        app.UseMiddleware<GlobalLogMiddleware>();
+        //app.UseMiddleware<GlobalResponseMiddleware>();
+        //app.UseMiddleware<GlobalEncodingRequestMiddleware>();
         //使用Serilog中间件
-        app.UseSerilogRequestLogging();
+        // app.UseSerilogRequestLogging();
         return app;
     }
 }

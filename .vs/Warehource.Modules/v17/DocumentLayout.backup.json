@@ -1,7 +1,72 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\middleware\\globallogmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\middleware\\globallogmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\log\\serilogextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\log\\serilogextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\warehource.source\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|solutionrelative:warehource.source\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\middleware\\globalresponsemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\middleware\\globalresponsemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\dbhandler\\insert\\inserts7netconfigcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\dbhandler\\insert\\inserts7netconfigcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.application\\handler\\add\\role\\addroleeventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|solutionrelative:user.application\\handler\\add\\role\\addroleeventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\db\\device\\deviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\db\\device\\deviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\device\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\device\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\Migrations\\20250808084317_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Wcs.Infrastructure\\Database\\Migrations\\20250808084317_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\database\\wcsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\database\\wcsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\db\\plcmap\\plcmapconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\db\\plcmap\\plcmapconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D070FC3E-90F8-4A2A-BB92-3A07881F9895}|Wcs.Domain\\Wcs.Domain.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.domain\\plc\\plcmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D070FC3E-90F8-4A2A-BB92-3A07881F9895}|Wcs.Domain\\Wcs.Domain.csproj|solutionrelative:wcs.domain\\plc\\plcmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\custom\\plcmapdataintegrationeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\custom\\plcmapdataintegrationeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5DDA494-356D-4703-9C20-62F76855C95E}|Wcs.CustomEvents\\Wcs.CustomEvents.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.customevents\\plcmapdataintegrationevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5DDA494-356D-4703-9C20-62F76855C95E}|Wcs.CustomEvents\\Wcs.CustomEvents.csproj|solutionrelative:wcs.customevents\\plcmapdataintegrationevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.presentation\\saga\\plcmapsaga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|solutionrelative:plc.presentation\\saga\\plcmapsaga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\database\\migrations\\20250808084501_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\database\\migrations\\20250808084501_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +95,203 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Program.cs",
+              "RelativeDocumentMoniker": "Warehource.Source\\Program.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Program.cs*",
+              "RelativeToolTip": "Warehource.Source\\Program.cs*",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAhwFEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:57:39.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SerilogExtensions.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Log\\SerilogExtensions.cs",
+              "RelativeDocumentMoniker": "Common.Infrastructure\\Log\\SerilogExtensions.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Log\\SerilogExtensions.cs",
+              "RelativeToolTip": "Common.Infrastructure\\Log\\SerilogExtensions.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAMwFYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:52:38.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GlobalLogMiddleware.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
+              "RelativeDocumentMoniker": "Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
+              "RelativeToolTip": "Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAIwCMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:51:54.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GlobalResponseMiddleware.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalResponseMiddleware.cs",
+              "RelativeDocumentMoniker": "Common.Infrastructure\\Middleware\\GlobalResponseMiddleware.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalResponseMiddleware.cs",
+              "RelativeToolTip": "Common.Infrastructure\\Middleware\\GlobalResponseMiddleware.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:51:47.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20250808084501_InitialCreate.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\Migrations\\20250808084501_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\Database\\Migrations\\20250808084501_InitialCreate.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\Migrations\\20250808084501_InitialCreate.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\Database\\Migrations\\20250808084501_InitialCreate.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAUwAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:45:01.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WCSDBContext.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\WCSDBContext.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\Database\\WCSDBContext.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\WCSDBContext.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\Database\\WCSDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxQAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:43:02.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PlcMapConfiguration.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\DB\\PlcMap\\PlcMapConfiguration.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\DB\\PlcMap\\PlcMapConfiguration.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\DB\\PlcMap\\PlcMapConfiguration.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\DB\\PlcMap\\PlcMapConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxAAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:42:15.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PlcMap.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Domain\\Plc\\PlcMap.cs",
+              "RelativeDocumentMoniker": "Wcs.Domain\\Plc\\PlcMap.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Domain\\Plc\\PlcMap.cs",
+              "RelativeToolTip": "Wcs.Domain\\Plc\\PlcMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:41:50.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PlcMapDataIntegrationEventConsumer.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Custom\\PlcMapDataIntegrationEventConsumer.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\Custom\\PlcMapDataIntegrationEventConsumer.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Custom\\PlcMapDataIntegrationEventConsumer.cs",
+              "RelativeToolTip": "Wcs.Presentation\\Custom\\PlcMapDataIntegrationEventConsumer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:39:04.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddRoleEventHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Add\\Role\\AddRoleEventHandler.cs",
+              "RelativeDocumentMoniker": "User.Application\\Handler\\Add\\Role\\AddRoleEventHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Add\\Role\\AddRoleEventHandler.cs",
+              "RelativeToolTip": "User.Application\\Handler\\Add\\Role\\AddRoleEventHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:39:04.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InsertS7NetConfigCommandHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\DBHandler\\Insert\\InsertS7NetConfigCommandHandler.cs",
+              "RelativeDocumentMoniker": "Plc.Application\\DBHandler\\Insert\\InsertS7NetConfigCommandHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\DBHandler\\Insert\\InsertS7NetConfigCommandHandler.cs",
+              "RelativeToolTip": "Plc.Application\\DBHandler\\Insert\\InsertS7NetConfigCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:38:08.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20250808084317_InitialCreate.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\Migrations\\20250808084317_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\Database\\Migrations\\20250808084317_InitialCreate.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\Migrations\\20250808084317_InitialCreate.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\Database\\Migrations\\20250808084317_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:43:17.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DeviceService.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Device\\DeviceService.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\Device\\DeviceService.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Device\\DeviceService.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\Device\\DeviceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:44:01.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DeviceConfiguration.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\DB\\Device\\DeviceConfiguration.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\DB\\Device\\DeviceConfiguration.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\DB\\Device\\DeviceConfiguration.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\DB\\Device\\DeviceConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw4AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:44:08.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PlcMapDataIntegrationEvent.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.CustomEvents\\PlcMapDataIntegrationEvent.cs",
+              "RelativeDocumentMoniker": "Wcs.CustomEvents\\PlcMapDataIntegrationEvent.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.CustomEvents\\PlcMapDataIntegrationEvent.cs",
+              "RelativeToolTip": "Wcs.CustomEvents\\PlcMapDataIntegrationEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:38:36.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PlcMapSaga.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\Saga\\PlcMapSaga.cs",
+              "RelativeDocumentMoniker": "Plc.Presentation\\Saga\\PlcMapSaga.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\Saga\\PlcMapSaga.cs",
+              "RelativeToolTip": "Plc.Presentation\\Saga\\PlcMapSaga.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswDcAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T08:38:26.291Z"
             }
           ]
         }

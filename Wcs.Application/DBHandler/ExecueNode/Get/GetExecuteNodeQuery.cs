@@ -7,7 +7,6 @@ namespace Wcs.Application.DBHandler.ExecueNode.Get;
 
 public class GetExecuteNodeQuery : IQuery<Result<IEnumerable<ExecuteNodeDto>>>
 {
-
     /// <summary>
     ///     路径组
     /// </summary>

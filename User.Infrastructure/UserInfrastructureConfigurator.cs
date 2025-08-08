@@ -28,6 +28,7 @@ public static class UserInfrastructureConfigurator
             options.UseSqlServer(connStr, builder =>
                 builder.MigrationsHistoryTable(Schemas.TableSchema + HistoryRepository.DefaultTableName));
         });
+
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<UserDBContext>());
     }
 

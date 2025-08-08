@@ -1,4 +1,5 @@
 ﻿using Common.Presentation.Endpoints;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -15,17 +16,16 @@ public class DownLoad
         //直接读取文件
         public void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapGet("plc/downLoad-plc-template",
-                () =>
-                {
-                    var path = Path.Combine(AppContext.BaseDirectory, "示例数据.xlsx");
-                    var excelBytes = File.ReadAllBytes(path);
-                    return Results.File(
-                        excelBytes,
-                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                        "示例数据.xlsx"
-                    );
-                }).WithTags(AssemblyReference.Plc);
+            app.MapGet("plc/downLoad-plc-template", [Authorize]() =>
+            {
+                var path = Path.Combine(AppContext.BaseDirectory, "示例数据.xlsx");
+                var excelBytes = File.ReadAllBytes(path);
+                return Results.File(
+                    excelBytes,
+                    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    "示例数据.xlsx"
+                );
+            }).WithTags(AssemblyReference.Plc);
         }
 
         //使用反射性能较差，暂时不使用

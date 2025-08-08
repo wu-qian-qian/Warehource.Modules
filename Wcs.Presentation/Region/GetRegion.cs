@@ -14,7 +14,7 @@ public class GetRegion : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("region/get-region", [Authorize(Roles = "admin")] async (
+        app.MapPost("region/get-region", [Authorize] async (
             ISender sender) =>
         {
             Result<IEnumerable<RegionDto>> result = new();

@@ -33,7 +33,8 @@ public class GlobalLogMiddleware
             // 读取请求体内容
             using (var reader = new StreamReader(context.Request.Body, leaveOpen: true))
             {
-                requestData = await reader.ReadToEndAsync();
+                if (!request.ContentType.StartsWith("multipart/form-data", StringComparison.OrdinalIgnoreCase))
+                    requestData = await reader.ReadToEndAsync();
                 // 重置流的位置，让后续中间件能正常读取
                 context.Request.Body.Position = 0;
             }
@@ -52,7 +53,8 @@ public class GlobalLogMiddleware
 
         _stopwatch.Stop();
         Serilog.Log.Logger.ForCategory(LogCategory.Http)
-            .Information($"地址：{context.Connection.RemoteIpAddress.ToString()}\nURL:{context.Request.Path}\n请求体：{requestData}\n响应体：{responseData}\n时间：{_stopwatch.ElapsedMilliseconds}");
+            .Information(
+                $"地址：{context.Connection.RemoteIpAddress.ToString()}\nURL:{context.Request.Path}\n请求体：{requestData}\n响应体：{responseData}\n时间：{_stopwatch.ElapsedMilliseconds}");
     }
 
     /// <summary>

@@ -4,7 +4,6 @@ using Common.Shared;
 using Plc.Application.Abstract;
 using Plc.Contracts.Respon;
 using Serilog;
-using System;
 
 namespace Plc.Application.PlcHandler.Read;
 
@@ -25,16 +24,17 @@ internal class ReadPlcEventHandle(INetService netService)
     public async Task<IEnumerable<ReadBuffer>> Handle(ReadPlcEventCommand request, CancellationToken cancellationToken)
     {
         var buffers = new ReadBuffer[request.readBufferInputs.Count()];
-        for (int i = 0; i < request.readBufferInputs.Count(); i++)
+        for (var i = 0; i < request.readBufferInputs.Count(); i++)
         {
             var input = request.readBufferInputs[i];
             var buffer = await netService.ReadAsync(input);
             if (buffer != null)
-                buffers[i] = new ReadBuffer(input.DBAddress,buffer);
+                buffers[i] = new ReadBuffer(input.DBAddress, buffer);
             else
                 Log.Logger.ForCategory(LogCategory.Net)
                     .Error($"IP:{request.Ip} 设备名称{request.DeviceName}读取失败");
         }
+
         return buffers;
     }
 }

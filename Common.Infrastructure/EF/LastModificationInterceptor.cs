@@ -22,11 +22,9 @@ public class LastModificationInterceptor : SaveChangesInterceptor
         {
             var user = _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.Name);
             if (user != null)
-            {
                 eventData.Context.ChangeTracker.Entries<ILastModification>()
-          .Where(e => e.State != EntityState.Detached && e.State != EntityState.Unchanged).ToList()
-          .ForEach(entry => { entry.Entity.SetLastModification(user); });
-            }
+                    .Where(e => e.State != EntityState.Detached && e.State != EntityState.Unchanged).ToList()
+                    .ForEach(entry => { entry.Entity.SetLastModification(user); });
         }
 
         return base.SavingChangesAsync(eventData, result, cancellationToken);

@@ -1,4 +1,5 @@
-﻿using Common.Presentation.Endpoints;
+﻿using System.Text.Json;
+using Common.Presentation.Endpoints;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -17,7 +18,7 @@ public class InsertOrUpdate : IEndpoint
             DeviceRequest request,
             ISender sender) =>
         {
-            var json=System.Text.Json.JsonSerializer.Serialize(request.Config);
+            var json = JsonSerializer.Serialize(request.Config);
             return await sender.Send(new AddOrUpdateDeviceEvent
             {
                 DeviceName = request.DeviceName,

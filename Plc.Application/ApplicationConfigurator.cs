@@ -1,10 +1,7 @@
 ﻿using AutoMapper;
-using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using Plc.Application.Behaviors.Read;
 using Plc.Application.Behaviors.Write;
-using Plc.CustomEvents;
-using Polly;
 
 namespace Plc.Application;
 
@@ -25,8 +22,6 @@ public static class ApplicationConfigurator
         configuration.AddOpenBehavior(typeof(WriteDtoInitPipelineBehavior<,>));
     }
 
-
-  
 
     public static void AddAutoMapper(IMapperConfigurationExpression config)
     {

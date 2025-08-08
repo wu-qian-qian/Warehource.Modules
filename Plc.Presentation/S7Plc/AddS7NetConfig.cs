@@ -1,6 +1,7 @@
 ﻿using Common.Helper;
 using Common.Presentation.Endpoints;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -17,7 +18,7 @@ internal class AddS7NetConfig : IEndpoint
     /// <param name="app"></param>
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("plc/add-allplc-config", async (
+        app.MapPost("plc/add-allplc-config", [Authorize(Roles = "admin")] async (
                 IFormFile file, ISender sender) =>
             {
                 var stream = file.OpenReadStream();

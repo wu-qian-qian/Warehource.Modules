@@ -13,7 +13,7 @@ public class Get : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("decive/get", [Authorize(Roles = "admin")] async (
+        app.MapPost("decive/get", [Authorize] async (
             DeviceRequest request,
             ISender sender) =>
         {

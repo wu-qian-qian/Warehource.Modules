@@ -22,7 +22,8 @@ internal class SingleReadS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManage
                 var key = request.DeviceName + "Sigle";
                 if (PlcReadWriteDtoHelper._readBufferInputs.ContainsKey(key) == false)
                 {
-                    var s7EntityItems = (await netManager.GetNetWiteDeviceNameAsync(request.DeviceName)).OrderBy(p=>p.Index);
+                    var s7EntityItems =
+                        (await netManager.GetNetWiteDeviceNameAsync(request.DeviceName)).OrderBy(p => p.Index);
                     PlcReadWriteDtoHelper.UseMemoryInitReadBufferInput(key, s7EntityItems.ToArray());
                 }
 
@@ -34,8 +35,10 @@ internal class SingleReadS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManage
             {
                 //直接获取到指定的变量模型
                 var s7EntityItems =
-                    (await netManager.GetDeviceNameWithDBNameAsync(request.DeviceName, request.DBNames.ToList())).OrderBy(p=>p.Index);
-                request.readBufferInputs = PlcReadWriteDtoHelper.CreatReadBufferInput(s7EntityItems.ToArray()).ToArray();
+                    (await netManager.GetDeviceNameWithDBNameAsync(request.DeviceName, request.DBNames.ToList()))
+                    .OrderBy(p => p.Index);
+                request.readBufferInputs =
+                    PlcReadWriteDtoHelper.CreatReadBufferInput(s7EntityItems.ToArray()).ToArray();
             }
         }
 

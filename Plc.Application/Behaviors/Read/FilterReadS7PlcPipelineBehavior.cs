@@ -1,5 +1,4 @@
 ﻿using Common.Application.Caching;
-using MassTransit;
 using MediatR;
 using Plc.Application.PlcHandler.Read;
 using Plc.Contracts.Respon;
@@ -29,6 +28,7 @@ internal class FilterReadS7PlcPipelineBehavior<TRequest, TResponse>(ICacheServic
         {
             key = request.Id.ToString();
         }
+
         var response = await next();
         //分布式事件触发会出现无返回值
         if (request.IsApi == false)
@@ -36,14 +36,13 @@ internal class FilterReadS7PlcPipelineBehavior<TRequest, TResponse>(ICacheServic
             var buffer = await cacheService.GetAsync<IEnumerable<ReadBuffer>>(key);
             //减少了读取次数保证了
             if (buffer == null)
-            {
                 if (response is IEnumerable<ReadBuffer> tempbuffer)
                 {
                     buffer = tempbuffer;
                     await cacheService.SetAsync(key, buffer);
                 }
-            }
         }
+
         return response;
     }
 }

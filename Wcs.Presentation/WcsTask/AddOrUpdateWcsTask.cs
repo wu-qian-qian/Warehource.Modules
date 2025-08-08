@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Common.Presentation.Endpoints;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -13,7 +14,7 @@ public class AddOrUpdateWcsTask : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("wcstask/add-or-update-wcstask", async (
+        app.MapPost("wcstask/add-or-update-wcstask", [Authorize] async (
             InsertWcsTaskRequest request,
             ISender sender, IMapper mapper) =>
         {

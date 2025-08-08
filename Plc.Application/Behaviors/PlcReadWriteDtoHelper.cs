@@ -99,8 +99,8 @@ internal static partial class PlcReadWriteDtoHelper
     internal static List<ReadBufferInput> CreatReadBufferInput(params S7EntityItem[] items)
     {
         var readBufferInputs = new List<ReadBufferInput>();
-        var itemsGroup = 
-            items.GroupBy(p => new {p.S7BlockType,p.Ip,p.DBAddress });
+        var itemsGroup =
+            items.GroupBy(p => new { p.S7BlockType, p.Ip, p.DBAddress });
         foreach (var itemGroup in itemsGroup)
         {
             var entitys = itemGroup.OrderBy(p => p.Index).ToArray();
@@ -115,7 +115,7 @@ internal static partial class PlcReadWriteDtoHelper
                 HashId = entitys.First().DeviceName
             };
             if (maxEntity.S7DataType != S7DataTypeEnum.Array && maxEntity.S7DataType != S7DataTypeEnum.String
-                                                        && maxEntity.S7DataType != S7DataTypeEnum.S7String)
+                                                             && maxEntity.S7DataType != S7DataTypeEnum.S7String)
                 input.DBEnd = maxEntity.DataOffset +
                               maxEntity.S7DataType.GetEnumAttribute<S7DataTypeAttribute>().DataSize;
             else

@@ -1,9 +1,7 @@
-﻿using Common.Application.Event;
-using Common.Application.MediatR.Behaviors;
+﻿using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using MassTransit;
 using Plc.Application.Abstract;
-using Plc.Contracts.Request;
 using Plc.Contracts.Respon;
 using Plc.CustomEvents.Saga;
 using Plc.Domain.S7;
@@ -13,7 +11,10 @@ namespace Plc.Application.DBHandler.Insert;
 /// <summary>
 ///     excel导入只能一块插入
 /// </summary>
-public class InsertS7NetConfigCommandHandler(IS7NetManager netManager, IUnitOfWork unitOfWork, IPublishEndpoint _publishEndpoint)
+public class InsertS7NetConfigCommandHandler(
+    IS7NetManager netManager,
+    IUnitOfWork unitOfWork,
+    IPublishEndpoint _publishEndpoint)
     : ICommandHandler<InsertS7NetConfigCommand, Result<IEnumerable<S7NetDto>>>
 {
     public async Task<Result<IEnumerable<S7NetDto>>> Handle(InsertS7NetConfigCommand request,
@@ -59,12 +60,14 @@ public class InsertS7NetConfigCommandHandler(IS7NetManager netManager, IUnitOfWo
         await netManager.InsertS7NetAsync(s7NetConfigs);
 
         #region 发送分布式事件
-        foreach (var item in request.S7NetEntityItemRequests.GroupBy(p=>p.DeviceName))
+
+        foreach (var item in request.S7NetEntityItemRequests.GroupBy(p => p.DeviceName))
         {
-            string[] entityNames=item.Select(p=>p.Name).ToArray();
-            PlcMap.PlcMapCreated plcMap = new PlcMap.PlcMapCreated(item.Key, entityNames);
-            await _publishEndpoint.Publish<PlcMap.PlcMapCreated>(plcMap);
+            var entityNames = item.Select(p => p.Name).ToArray();
+            var plcMap = new PlcMap.PlcMapCreated(item.Key, entityNames);
+            await _publishEndpoint.Publish(plcMap);
         }
+
         #endregion
 
         await unitOfWork.SaveChangesAsync();

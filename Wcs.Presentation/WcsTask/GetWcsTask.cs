@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using NPOI.OpenXmlFormats;
 using Wcs.Application.DBHandler.WcsTask.Get;
 using Wcs.Contracts.Respon.WcsTask;
 
@@ -20,7 +19,7 @@ public class GetWcsTask : IEndpoint
             ISender sender) =>
         {
             Result<IEnumerable<WcsTaskDto>> result = new();
-            var data= await sender.Send(new GetWcsTaskQuery
+            var data = await sender.Send(new GetWcsTaskQuery
             {
                 SerialNumber = request
             });

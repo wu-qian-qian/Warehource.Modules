@@ -78,13 +78,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
-app.UseMiddleware<GlobalLogMiddleware>();
-//app.UseMiddleware<GlobalResponseMiddleware>();
-//app.UseMiddleware<GlobalEncodingRequestMiddleware>();
+
+app.UseSerilogRequest();
 app.UseHttpsRedirection();
 
 
-app.UseSerilogRequest();
 app.AddGlobalExceptionMiddleware();
 app.UseAuthentication();
 app.UseAuthorization();

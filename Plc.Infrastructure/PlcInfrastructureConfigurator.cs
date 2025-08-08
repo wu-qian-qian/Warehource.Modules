@@ -15,6 +15,7 @@ using Plc.Infrastructure.Database;
 using Plc.Infrastructure.db;
 using Plc.Infrastructure.Service;
 using Plc.Presentation.Custom;
+using Plc.Presentation.Saga;
 using AssemblyReference = Plc.Presentation.AssemblyReference;
 
 namespace Plc.Infrastructure;
@@ -42,6 +43,7 @@ public static class PlcInfrastructureConfigurator
             options.UseSqlServer(connStr, builder =>
                 builder.MigrationsHistoryTable(Schemas.TableSchema + HistoryRepository.DefaultTableName));
         });
+
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<PlcDBContext>());
     }
 
@@ -72,11 +74,12 @@ public static class PlcInfrastructureConfigurator
         registrationConfigurator.AddConsumer<WritePlcEventConsumer<S7WritePlcDataBlockEvent>>();
         registrationConfigurator.AddConsumer<PlcMapEventCommitConsumer>();
         //saga注入
-        registrationConfigurator.AddSagaStateMachine<Presentation.Saga.PlcMapSaga, Presentation.Saga.PlcMapState>()
-       .InMemoryRepository();
+        registrationConfigurator.AddSagaStateMachine<PlcMapSaga, PlcMapState>()
+            .InMemoryRepository();
     }
+
     /// <summary>
-    /// 端点配置
+    ///     端点配置
     /// </summary>
     /// <param name="cfg"></param>
     /// <param name="context"></param>
@@ -86,8 +89,8 @@ public static class PlcInfrastructureConfigurator
         {
             // e.ConfigureConsumer<PlcMapDataIntegrationConsumer>(context);
         });
-
     }
+
     /// <summary>
     ///     automapper注入
     /// </summary>

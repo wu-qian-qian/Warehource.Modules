@@ -42,6 +42,4 @@ internal sealed class CacheService(IDistributedCache cache) : ICacheService
     {
         return cache.RemoveAsync(key, cancellationToken);
     }
-
-  
 }

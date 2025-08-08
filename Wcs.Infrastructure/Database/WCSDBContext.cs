@@ -1,7 +1,6 @@
 using Common.Infrastructure.EF;
 using Microsoft.EntityFrameworkCore;
 using Wcs.Application.Abstract;
-using Wcs.Domain.Device;
 using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.JobConfigs;
 using Wcs.Domain.Plc;

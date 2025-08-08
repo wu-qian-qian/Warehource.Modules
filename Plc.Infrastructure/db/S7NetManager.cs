@@ -1,6 +1,5 @@
 ﻿using Common.Infrastructure.EF;
 using Microsoft.EntityFrameworkCore;
-using NPOI.OpenXmlFormats;
 using Plc.Domain.S7;
 using Plc.Infrastructure.Database;
 
@@ -44,13 +43,15 @@ public class S7NetManager(PlcDBContext context) : IS7NetManager
             .ToListAsync();
         return netconfig;
     }
+
     public Task<List<S7EntityItem>?> GetNetWiteDeviceNameAsync(string deviceName, bool isUse)
     {
         var netconfig = context.Query<S7EntityItem>()
-          .Where(p => p.DeviceName == deviceName)
-          .ToListAsync();
+            .Where(p => p.DeviceName == deviceName)
+            .ToListAsync();
         return netconfig;
     }
+
     public Task<List<S7EntityItem>> GetDeviceNameWithDBNameAsync(string deviceName, List<string> dbNames)
     {
         var netconfig = context.Query<S7EntityItem>()
@@ -62,7 +63,6 @@ public class S7NetManager(PlcDBContext context) : IS7NetManager
 
     public void UpdateS7EntityItem(IEnumerable<S7EntityItem> entityItems)
     {
-       context.UpdateRange(entityItems);
+        context.UpdateRange(entityItems);
     }
-
 }

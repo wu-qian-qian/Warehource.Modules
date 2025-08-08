@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
-using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
-using Wcs.CustomEvents;
 
 namespace Wcs.Application;
 

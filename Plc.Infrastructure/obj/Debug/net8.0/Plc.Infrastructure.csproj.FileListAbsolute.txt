@@ -39,3 +39,5 @@ D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\refint\
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\Plc.Infrastructure.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\Plc.Infrastructure.genruntimeconfig.cache
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\ref\Plc.Infrastructure.dll
+D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Wcs.CustomEvents.dll
+D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Wcs.CustomEvents.pdb

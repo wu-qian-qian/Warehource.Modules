@@ -8,6 +8,7 @@ public class PlcMap
 
     // 3. 数据集成服务处理结果反馈事件
     public record PlcMapDataIntegrationCompleted(string DeviceName, bool Success);
+
     // 4. 流程最终状态通知事件
     public record PlcMapProcessed(string DeviceName, bool Success);
 }

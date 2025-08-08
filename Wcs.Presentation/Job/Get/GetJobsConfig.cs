@@ -1,6 +1,7 @@
 ﻿using Common.Application.MediatR.Behaviors;
 using Common.Presentation.Endpoints;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -13,7 +14,7 @@ internal sealed class GetJobsConfig : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapGet("job/get-jobs", async (ISender sender) =>
+        app.MapGet("job/get-jobs", [Authorize] async (ISender sender) =>
             {
                 var result = new Result<IEnumerable<JobDto>>();
                 var data = await sender.Send(new GetAllJobQuery());
