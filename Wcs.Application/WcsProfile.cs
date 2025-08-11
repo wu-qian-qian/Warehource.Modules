@@ -7,7 +7,6 @@ using Wcs.Contracts.Respon.ExecuteNode;
 using Wcs.Contracts.Respon.Job;
 using Wcs.Contracts.Respon.Region;
 using Wcs.Contracts.Respon.WcsTask;
-using Wcs.Domain.Device;
 using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.JobConfigs;
 using Wcs.Domain.Region;
@@ -41,6 +40,6 @@ internal class WcsProfile : Profile
             .ForMember(x => x.RegionDescription, x => x.MapFrom(x => x.Region.Description))
             .ForMember(x => x.RegionCode, x => x.MapFrom(x => x.Region.Code));
 
-        CreateMap<Device, DeviceDto>();
+        CreateMap<Domain.Device.Device, DeviceDto>();
     }
 }

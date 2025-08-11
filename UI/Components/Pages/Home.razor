@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using AntDesign.TableModels
+@using UI.Helper
 @using UI.Model.Home
 @using UI.Service.HomeService
 @inject IMessageService _message;
@@ -8,30 +9,42 @@
 
 <div>
     <Row Style="display: flex; justify-content: space-between; margin:5px">
-
         <AntDesign.Col >
-            <Button Type="ButtonType.Primary" Style="margin-top:20px" @onclick="_ => LoadTableData()">重新加载</Button>
+            <Row Style="margin-top:5px">
+                <Switch Checked="@_isStartSwitch" OnClick="_ => SwitchStrategy()" CheckedChildren="开启定时刷新" UnCheckedChildren="关闭定时刷新"/>
+            </Row>
+            <Row>
+                <Button Type="ButtonType.Primary" Style="margin-top:5px" @onclick="_ => LoadTableData()">重新加载</Button>
+            </Row>
         </AntDesign.Col>
         <AntDesign.Col Span="3">
             <Text>任务号</Text>
-            <Input Placeholder="请输入" TValue="string"/>
+            <Input Placeholder="请输入" TValue="string" @bind-Value="TaskCodeInput"/>
         </AntDesign.Col>
 
         <AntDesign.Col Span="3">
             <Text>流水号</Text>
-            <Input Placeholder="请输入" TValue="string"/>
+            <Input Placeholder="请输入" TValue="int?" @bind-Value="SerialNumberInput"/>
+        </AntDesign.Col>
+
+        <AntDesign.Col Span="3">
+            <Text>容器编码</Text>
+            <Input Placeholder="请输入" TValue="string" @bind-Value="ContainerCodeInput"/>
         </AntDesign.Col>
 
         <AntDesign.Col >
-            <DatePicker TValue="DateOnly?" Picker="DatePickerType.Date" Style="margin-top:20px"/>
+            <RangePicker TValue="DateTime?[]"
+                         Value="TimershaftInput"
+                         ValueChanged="OnRangeChanged"
+                         Picker="DatePickerType.Date" Style="margin-top:20px"/>
         </AntDesign.Col>
 
         <AntDesign.Col Style="float:right;margin:5px">
             <Row>
-                <Button Type="ButtonType.Primary">查询</Button>
+                <Button Type="ButtonType.Primary" @onclick="_ => SearchTask()">查询</Button>
             </Row>
             <Row Style="margin-top:5px">
-                <Button Type="ButtonType.Primary">重置</Button>
+                <Button Type="ButtonType.Primary" @onclick="_ => RestSearchInput()">重置</Button>
             </Row>
         </AntDesign.Col>
     </Row>
@@ -39,9 +52,10 @@
         <Table DataSource="data" PageSize="10" ScrollX="2000" StickyOffsetHeader="64" @ref="_table" OnRowClick="_rowClickCallback" Class="my-table">
             <PropertyColumn Property="c => c.TaskCode" Width="200" Fixed="ColumnFixPlacement.Left" Title="任务号"/>
             <PropertyColumn Property="c => c.SerialNumber" Width="120" Fixed="ColumnFixPlacement.Left" Title="流水号"/>
-            <PropertyColumn Property="c => c.TaskTypeDesc" Width="120" Title="任务类型"/>
+            <PropertyColumn Property="c => c.Container" Width="120" Fixed="ColumnFixPlacement.Left" Title="容器编码"/>
+            <PropertyColumn Property="c => c.TaskType" Width="120" Title="任务类型"/>
             <PropertyColumn Property="c => c.ExecuteDesc" Width="120" Title="步骤说明"/>
-            <PropertyColumn Property="c => c.TaskStatusDesc" Width="120" Title="任务状态"/>
+            <PropertyColumn Property="c => c.TaskStatus" Width="120" Title="任务状态"/>
             <PropertyColumn Property="c => c.Description" Width="160" Title="任务描述"/>
             <PropertyColumn Property="c => c.GetTunnel" Width="70" Title="取货巷道"/>
             <PropertyColumn Property="c => c.GetFloor" Width="70" Title="取货层"/>
@@ -57,7 +71,9 @@
 </div>
 
 <div>
-    <Drawer Closable="true" Width="420" Visible="TaskDetailVisible" Title='"任务面板"' OnClose="_ => TaskDetailPanelClose()">
+    <Drawer Closable="true" Width="420"
+
+            Visible="TaskDetailVisible" Title='"任务面板"' OnClose="_ => TaskDetailPanelClose()">
         <Template style="height:90%">
             <Row Gutter="18">
                 <AntDesign.Col Span="12">
@@ -169,11 +185,39 @@
 
     ITable _table;
 
+    string TaskCodeInput { get; set; } = string.Empty;
+    int? SerialNumberInput { get; set; }
+    string ContainerCodeInput { get; set; } = string.Empty;
+    DateTime?[] TimershaftInput { get; set; } = new DateTime?[2];
+
     WcsTaskModel? SelectTaskModel { get; set; }
     WcsTaskModel[] data;
 
+
+    /// <summary>
+    ///     行点击事件
+    /// </summary>
     EventCallback<RowData<WcsTaskModel>> _rowClickCallback;
 
+    CancellationTokenSource? cts;
+    bool _isStartSwitch;
+
+    private void SwitchStrategy()
+    {
+        _isStartSwitch = !_isStartSwitch;
+        if (_isStartSwitch == false)
+        {
+            if (cts != null)
+            {
+                cts.Cancel();
+            }
+        }
+        else
+        {
+            cts = new CancellationTokenSource();
+            TaskHelper.CreatJobAsync(5, LoadTableData, cts.Token);
+        }
+    }
 
     private async Task LoadTableData()
     {
@@ -185,6 +229,30 @@
     {
         SelectTaskModel = rowData.Data;
         TaskDetailPanelOpen();
+    }
+
+    private void OnRangeChanged(DateTime?[] value)
+    {
+        TimershaftInput = value;
+    }
+
+    private void SearchTask()
+    {
+        data = data.WhereIf(TaskCodeInput != string.Empty, x => x.TaskCode.Contains(TaskCodeInput))
+            .WhereIf(ContainerCodeInput != string.Empty, x => x.Container.Contains(ContainerCodeInput))
+            .WhereIf(SerialNumberInput != null, x => x.SerialNumber == SerialNumberInput)
+            .WhereIf(TimershaftInput.All(p => p != null), x => x.CreationTime >= TimershaftInput[0]
+                                                               && x.CreationTime <= TimershaftInput[1])
+            .ToArray();
+    }
+
+    private async Task RestSearchInput()
+    {
+        TaskCodeInput = string.Empty;
+        ContainerCodeInput = string.Empty;
+        SerialNumberInput = null;
+        TimershaftInput = null;
+        await LoadTableData();
     }
 
     #endregion

@@ -1,11 +1,12 @@
-﻿using Plc.Contracts.Input;
+﻿using Plc.Contracts.DataModel;
+using Plc.Contracts.Input;
 using Plc.Domain.S7;
 
 namespace Plc.Application.Behaviors;
 
 internal static partial class PlcReadWriteDtoHelper
 {
-    internal static List<WriteKey> _WriteBufferInputs = new();
+    internal static List<WriteModel> _WriteBufferInputs = new();
 
     internal static Semaphore _semaphoreWrite = new(1, 1);
 
@@ -20,12 +21,12 @@ internal static partial class PlcReadWriteDtoHelper
                 foreach (var groupItem in S7EntityItemGroup)
                 foreach (var item in groupItem)
                 {
-                    var writeKey = new WriteKey();
+                    var writeKey = new WriteModel();
                     writeKey._key = key;
                     writeKey._ipAddress = groupItem.Key;
                     var itemInput = new WriteBufferItemInput
                     {
-                        ArratCount = item.ArrtypeLength,
+                        ArratCount = item.ArrayLength,
                         DBBit = item.BitOffset,
                         DBAddress = item.DBAddress,
                         DBStart = item.DataOffset,
@@ -53,7 +54,7 @@ internal static partial class PlcReadWriteDtoHelper
         {
             var itemInput = new WriteBufferItemInput
             {
-                ArratCount = item.ArrtypeLength,
+                ArratCount = item.ArrayLength,
                 DBBit = item.BitOffset,
                 DBAddress = item.DBAddress,
                 DBStart = item.DataOffset,

@@ -110,3 +110,5 @@ D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\obj\Debug\net8.0\refint\
 D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\obj\Debug\net8.0\Wcs.Infrastructure.pdb
 D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\obj\Debug\net8.0\Wcs.Infrastructure.genruntimeconfig.cache
 D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\obj\Debug\net8.0\ref\Wcs.Infrastructure.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\bin\Debug\net8.0\Wcs.Device.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Infrastructure\bin\Debug\net8.0\Wcs.Device.pdb

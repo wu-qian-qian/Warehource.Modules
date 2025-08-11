@@ -58,7 +58,7 @@ public class S7EntityItem : IEntity
     /// <summary>
     ///     数组类型的长度
     /// </summary>
-    public byte? ArrtypeLength { get; set; }
+    public byte? ArrayLength { get; set; }
 
     /// <summary>
     ///     关联设备
@@ -80,7 +80,7 @@ public class S7EntityItem : IEntity
 
     //public void CreateCode()
     //{
-    //    var code = $"{S7DataType}{DBAddress}{DataOffset}{BitOffset}{S7BlockType}{ArrtypeLength}";
+    //    var code = $"{S7DataType}{DBAddress}{DataOffset}{BitOffset}{S7BlockType}{ArrayLength}";
     //    HashCode = code.GetHashCode();
     //}
 }

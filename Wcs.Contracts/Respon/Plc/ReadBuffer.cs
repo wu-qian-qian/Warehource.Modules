@@ -1,15 +1,15 @@
 ﻿namespace Wcs.Contracts.Respon.Plc;
 
-public struct ReadBuffer
+public struct PlcBuffer
 {
-    public ReadBuffer(int db, byte[] data)
+    public PlcBuffer(string dbName, string data)
     {
-        DB = db;
+        DBName = dbName;
 
         Data = data;
     }
 
-    public int DB { get; set; }
+    public string DBName { get; set; }
 
-    public byte[] Data { get; set; }
+    public string Data { get; set; }
 }

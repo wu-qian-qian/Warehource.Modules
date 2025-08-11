@@ -1,0 +1,153 @@
+2025-08-11 10:04:48.032 +08:00 [INF] 地址：::1
+URL:/plc/add-allplc-config
+请求体：
+响应体：
+时间：567
+2025-08-11 10:06:00.001 +08:00 [INF] 地址：::1
+URL:/plc/add-allplc-config
+请求体：
+响应体：
+时间：78
+2025-08-11 10:06:11.990 +08:00 [INF] 地址：::1
+URL:/plc/add-allplc-config
+请求体：
+响应体：{"isSuccess":true,"value":[{"id":"7b279bf4-11c9-4fb0-9e06-119d09308f88","ip":"127.0.0.1","port":102,"s7Type":0,"solt":1,"rack":0,"readTimeOut":2000,"writeTimeOut":3000,"isUse":false,"readHeart":null,"writeHeart":null}],"message":null}
+时间：2402
+2025-08-11 10:07:52.698 +08:00 [INF] 地址：::1
+URL:/executenode/add-or-update
+请求体：{
+  "pahtNodeGroup": "001",
+  "currentDeviceType": 1,
+  "taskType": 1,
+  "currentDeviceName": "StockIn1",
+  "regionCode": "1",
+  "nextDeviceName": "StackerInTranish1"
+}
+响应体：{"isSuccess":true,"value":{"pahtNodeGroup":"001","currentDeviceType":"StockPortIn","taskType":"StockIn","currentDeviceName":"StockIn1","nextDeviceName":"StackerInTranish1","regionDescription":"1巷道","regionCode":"1","id":"d85b4cee-aec3-42e4-978e-43d9b713d715","creationTime":"2025-08-11T10:07:52.6157134+08:00","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：518
+2025-08-11 10:08:07.130 +08:00 [INF] 地址：::1
+URL:/executenode/add-or-update
+请求体：{
+  "pahtNodeGroup": "001",
+  "currentDeviceType": 1,
+  "taskType": 1,
+  "currentDeviceName": "StackerInTranish1",
+  "regionCode": "1",
+  "nextDeviceName": "Stacker1"
+}
+响应体：{"isSuccess":true,"value":{"pahtNodeGroup":"001","currentDeviceType":"StackerInTranish","taskType":"StockIn","currentDeviceName":"StackerInTranish1","nextDeviceName":"Stacker1","regionDescription":"1巷道","regionCode":"1","id":"11e0fc24-3606-4123-9ca2-3dfa2e67b919","creationTime":"2025-08-11T10:08:07.1203474+08:00","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：19
+2025-08-11 10:08:17.807 +08:00 [INF] 地址：::1
+URL:/executenode/add-or-update
+请求体：{
+  "pahtNodeGroup": "001",
+  "currentDeviceType": 1,
+  "taskType": 1,
+  "currentDeviceName": "Stacker1",
+  "regionCode": "1",
+  "nextDeviceName": ""
+}
+响应体：{"isSuccess":true,"value":{"pahtNodeGroup":"001","currentDeviceType":"Stacker","taskType":"StockIn","currentDeviceName":"Stacker1","nextDeviceName":"","regionDescription":"1巷道","regionCode":"1","id":"dff215c5-fcd2-4fab-aa49-4e4cedf33169","creationTime":"2025-08-11T10:08:17.7994464+08:00","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：20
+2025-08-11 10:09:21.765 +08:00 [INF] 地址：::1
+URL:/executenode/add-or-update
+请求体：{
+  "pahtNodeGroup": "002",
+  "currentDeviceType": 1,
+  "taskType": 1,
+  "currentDeviceName": "StockIn1",
+  "regionCode": "2",
+  "nextDeviceName": "StackerInTranish2"
+}
+响应体：{"isSuccess":true,"value":{"pahtNodeGroup":"002","currentDeviceType":"StockPortIn","taskType":"StockIn","currentDeviceName":"StockIn1","nextDeviceName":"StackerInTranish2","regionDescription":"2巷道","regionCode":"2","id":"963fa425-6877-44d9-93d3-3006dc3c0c62","creationTime":"2025-08-11T10:09:21.7598951+08:00","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：22
+2025-08-11 10:09:34.129 +08:00 [INF] 地址：::1
+URL:/executenode/add-or-update
+请求体：{
+  "pahtNodeGroup": "002",
+  "currentDeviceType": 1,
+  "taskType": 1,
+  "currentDeviceName": "StackerInTranish2",
+  "regionCode": "2",
+  "nextDeviceName": "Stacker2"
+}
+响应体：{"isSuccess":true,"value":{"pahtNodeGroup":"002","currentDeviceType":"StackerInTranish","taskType":"StockIn","currentDeviceName":"StackerInTranish2","nextDeviceName":"Stacker2","regionDescription":"2巷道","regionCode":"2","id":"9d24b6d8-4961-4dbb-ad40-5ef24e5133b4","creationTime":"2025-08-11T10:09:34.1246337+08:00","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：19
+2025-08-11 10:09:38.466 +08:00 [INF] 地址：::1
+URL:/executenode/add-or-update
+请求体：{
+  "pahtNodeGroup": "002",
+  "currentDeviceType": 1,
+  "taskType": 1,
+  "currentDeviceName": "Stacker2",
+  "regionCode": "2",
+  "nextDeviceName": ""
+}
+响应体：{"isSuccess":true,"value":{"pahtNodeGroup":"002","currentDeviceType":"Stacker","taskType":"StockIn","currentDeviceName":"Stacker2","nextDeviceName":"","regionDescription":"2巷道","regionCode":"2","id":"543e8a56-34fb-4be6-8e36-f88c543ea3ec","creationTime":"2025-08-11T10:09:38.4623542+08:00","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：17
+2025-08-11 10:10:28.162 +08:00 [INF] 地址：::1
+URL:/executenode/add-or-update
+请求体：{
+  "pahtNodeGroup": "out-001",
+  "taskType": 2,
+  "currentDeviceName": "Stacker2",
+  "regionCode": "2",
+  "nextDeviceName": "StackerInTranish2"
+}
+响应体：{"isSuccess":true,"value":{"pahtNodeGroup":"out-001","currentDeviceType":"Stacker","taskType":"StockOut","currentDeviceName":"Stacker2","nextDeviceName":"StackerInTranish2","regionDescription":"2巷道","regionCode":"2","id":"eaa65a42-bb38-4c01-ac43-536db087f7cc","creationTime":"2025-08-11T10:10:28.1536792+08:00","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：17
+2025-08-11 10:10:46.710 +08:00 [INF] 地址：::1
+URL:/executenode/add-or-update
+请求体：{
+  "pahtNodeGroup": "out-001",
+  "taskType": 2,
+  "currentDeviceName": "StackerInTranish2",
+  "regionCode": "2",
+  "nextDeviceName": "StockOut1"
+}
+响应体：{"isSuccess":true,"value":{"pahtNodeGroup":"out-001","currentDeviceType":"StackerInTranish","taskType":"StockOut","currentDeviceName":"StackerInTranish2","nextDeviceName":"StockOut1","regionDescription":"2巷道","regionCode":"2","id":"c08ecb14-93c9-46eb-95c0-0e5cc4df0990","creationTime":"2025-08-11T10:10:46.7049061+08:00","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：22
+2025-08-11 10:10:56.603 +08:00 [INF] 地址：::1
+URL:/executenode/add-or-update
+请求体：{
+  "pahtNodeGroup": "out-001",
+  "taskType": 2,
+  "currentDeviceName": "StockOut1",
+  "regionCode": "2",
+  "nextDeviceName": ""
+}
+响应体：{"isSuccess":true,"value":{"pahtNodeGroup":"out-001","currentDeviceType":"StockPortOut","taskType":"StockOut","currentDeviceName":"StockOut1","nextDeviceName":"","regionDescription":"2巷道","regionCode":"2","id":"0e069e8f-5c02-4fe2-93cb-5b1e32e5235b","creationTime":"2025-08-11T10:10:56.5986789+08:00","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：8
+2025-08-11 10:11:41.440 +08:00 [INF] 地址：::1
+URL:/executenode/add-or-update
+请求体：{
+  "pahtNodeGroup": "out-002",
+  "taskType": 2,
+  "currentDeviceName": "Stacker1",
+  "regionCode": "1",
+  "nextDeviceName": "StackerOutTranish1"
+}
+响应体：{"isSuccess":true,"value":{"pahtNodeGroup":"out-002","currentDeviceType":"Stacker","taskType":"StockOut","currentDeviceName":"Stacker1","nextDeviceName":"StackerOutTranish1","regionDescription":"1巷道","regionCode":"1","id":"5efb4341-1afd-460b-a8d5-50baf0ac4774","creationTime":"2025-08-11T10:11:41.4364621+08:00","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：7
+2025-08-11 10:11:52.670 +08:00 [INF] 地址：::1
+URL:/executenode/add-or-update
+请求体：{
+  "pahtNodeGroup": "out-002",
+  "taskType": 2,
+  "currentDeviceName": "StackerOutTranish1",
+  "regionCode": "1",
+  "nextDeviceName": "StockOut1"
+}
+响应体：{"isSuccess":true,"value":{"pahtNodeGroup":"out-002","currentDeviceType":"StackerOutTranish","taskType":"StockOut","currentDeviceName":"StackerOutTranish1","nextDeviceName":"StockOut1","regionDescription":"1巷道","regionCode":"1","id":"b509ecbd-49d4-4e68-8f73-96fd4731d5bb","creationTime":"2025-08-11T10:11:52.6652353+08:00","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：30
+2025-08-11 10:11:55.902 +08:00 [INF] 地址：::1
+URL:/executenode/add-or-update
+请求体：{
+  "pahtNodeGroup": "out-002",
+  "taskType": 2,
+  "currentDeviceName": "StockOut1",
+  "regionCode": "1",
+  "nextDeviceName": ""
+}
+响应体：{"isSuccess":true,"value":{"pahtNodeGroup":"out-002","currentDeviceType":"StockPortOut","taskType":"StockOut","currentDeviceName":"StockOut1","nextDeviceName":"","regionDescription":"1巷道","regionCode":"1","id":"370a7b01-219f-4e7b-88a7-8cef5f935fde","creationTime":"2025-08-11T10:11:55.8947882+08:00","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：11

@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "wLONXOw4ISA=",
+  "dgSpecHash": "nzOuhK4mMS4=",
   "success": true,
   "projectFilePath": "D:\\Program\\仓库\\Warehource.Modules\\UI\\UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\吴\\.nuget\\packages\\antdesign\\1.4.3\\antdesign.1.4.3.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\enums.net\\5.0.0\\enums.net.5.0.0.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\extendednumerics.bigdecimal\\2025.1001.2.129\\extendednumerics.bigdecimal.2025.1001.2.129.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\mathnet.numerics.signed\\5.0.0\\mathnet.numerics.signed.5.0.0.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.0\\microsoft.aspnetcore.authorization.8.0.0.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.0\\microsoft.aspnetcore.components.8.0.0.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.0\\microsoft.aspnetcore.components.analyzers.8.0.0.nupkg.sha512",
@@ -16,9 +20,20 @@
     "C:\\Users\\吴\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\microsoft.io.recyclablememorystream\\3.0.1\\microsoft.io.recyclablememorystream.3.0.1.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\microsoft.jsinterop\\8.0.0\\microsoft.jsinterop.8.0.0.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\npoi\\2.7.4\\npoi.2.7.4.nupkg.sha512",
     "C:\\Users\\吴\\.nuget\\packages\\oneof\\3.0.271\\oneof.3.0.271.nupkg.sha512",
-    "C:\\Users\\吴\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512"
+    "C:\\Users\\吴\\.nuget\\packages\\sharpziplib\\1.4.2\\sharpziplib.1.4.2.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\sixlabors.fonts\\1.0.1\\sixlabors.fonts.1.0.1.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\sixlabors.imagesharp\\2.1.10\\sixlabors.imagesharp.2.1.10.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.1\\system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\system.security.cryptography.xml\\8.0.2\\system.security.cryptography.xml.8.0.2.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512",
+    "C:\\Users\\吴\\.nuget\\packages\\zstring\\2.6.0\\zstring.2.6.0.nupkg.sha512"
   ],
   "logs": []
 }

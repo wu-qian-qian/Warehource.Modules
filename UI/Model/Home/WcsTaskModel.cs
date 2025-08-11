@@ -1,6 +1,6 @@
 ﻿namespace UI.Model.Home;
 
-public class WcsTaskModel
+public class WcsTaskModel : BaseModel
 {
     public string TaskCode { get; set; }
 
@@ -10,14 +10,24 @@ public class WcsTaskModel
     public int SerialNumber { get; set; }
 
     /// <summary>
+    ///     容器编码
+    /// </summary>
+    public string Container { get; set; }
+
+    /// <summary>
     ///     任务类型
     /// </summary>
-    public string TaskTypeDesc { get; set; }
+    public string TaskType { get; set; }
 
     /// <summary>
     ///     任务状态
     /// </summary>
-    public string TaskStatusDesc { get; set; }
+    public string TaskStatus { get; set; }
+
+    /// <summary>
+    ///     创建系统
+    /// </summary>
+    public string CreatorSystemType { get; set; }
 
     /// <summary>
     ///     任务描述
@@ -78,7 +88,10 @@ public class WcsTaskModel
     /// <summary>
     ///     步骤
     /// </summary>
-    public string ExecuteDesc { get; set; }
+    public string? ExecuteDesc { get; set; }
 
-    public DateTime CreationTime { get; set; }
+    /// <summary>
+    ///     路径
+    /// </summary>
+    public string? ExecutePath { get; set; }
 }

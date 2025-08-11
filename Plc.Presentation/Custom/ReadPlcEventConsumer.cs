@@ -2,7 +2,7 @@
 using Common.Shared;
 using MassTransit;
 using MediatR;
-using Plc.Application.PlcHandler.Read;
+using Plc.Application.S7ReadWriteHandler.Read;
 using Plc.CustomEvents;
 using Serilog;
 
@@ -30,7 +30,7 @@ public class ReadPlcEventConsumer<TIntegrationEvent>(ISender sender)
             DeviceName = s7ReadPlcConsumevent.DeviceName,
             IsBath = s7ReadPlcConsumevent.IsBath,
             DBNames = s7ReadPlcConsumevent.DBNames,
-            Id = s7ReadPlcConsumevent.EventHash
+            Id = s7ReadPlcConsumevent.EventId
         };
         try
         {

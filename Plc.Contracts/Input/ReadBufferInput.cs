@@ -5,7 +5,7 @@ namespace Plc.Contracts.Input;
 /// <summary>
 ///     TODO 都是批处理待进行优化成支持单个
 /// </summary>
-public class ReadBufferInput
+public struct ReadBufferInput
 {
     public string Ip { get; set; }
 

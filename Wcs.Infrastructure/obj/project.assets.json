@@ -2490,6 +2490,7 @@
           "Plc.CustomEvents": "1.0.0",
           "Wcs.Contracts": "1.0.0",
           "Wcs.CustomEvents": "1.0.0",
+          "Wcs.Device": "1.0.0",
           "Wcs.Domain": "1.0.0"
         },
         "compile": {
@@ -2523,6 +2524,19 @@
         },
         "runtime": {
           "bin/placeholder/Wcs.CustomEvents.dll": {}
+        }
+      },
+      "Wcs.Device/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Wcs.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Wcs.Device.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Wcs.Device.dll": {}
         }
       },
       "Wcs.Domain/1.0.0": {
@@ -6406,6 +6420,11 @@
       "type": "project",
       "path": "../Wcs.CustomEvents/Wcs.CustomEvents.csproj",
       "msbuildProject": "../Wcs.CustomEvents/Wcs.CustomEvents.csproj"
+    },
+    "Wcs.Device/1.0.0": {
+      "type": "project",
+      "path": "../Wcs.Device/Wcs.Device.csproj",
+      "msbuildProject": "../Wcs.Device/Wcs.Device.csproj"
     },
     "Wcs.Domain/1.0.0": {
       "type": "project",

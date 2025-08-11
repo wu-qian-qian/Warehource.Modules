@@ -151,7 +151,7 @@ public static class TransferBufferHelper
 
     #region Plc的Real 类型对应 Float 此处为Plc Real类型操作
 
-    public static float RealFromByteArray(byte[] bytes, bool isLittleEndian)
+    public static float RealFromByteArray(byte[] bytes, bool isLittleEndian = false)
     {
         if (bytes.Length != 4) throw new ArgumentException("Wrong number of bytes. Bytes array must contain 4 bytes.");
 

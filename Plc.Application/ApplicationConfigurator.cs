@@ -18,7 +18,7 @@ public static class ApplicationConfigurator
     {
         configuration.AddOpenBehavior(typeof(BathReadS7PlcPipelineBehavior<,>));
         configuration.AddOpenBehavior(typeof(SingleReadS7PlcPipelineBehavior<,>));
-        configuration.AddOpenBehavior(typeof(FilterReadS7PlcPipelineBehavior<,>));
+        configuration.AddOpenBehavior(typeof(TransferReadS7PlcPipelineBehavior<,>));
         configuration.AddOpenBehavior(typeof(WriteDtoInitPipelineBehavior<,>));
     }
 

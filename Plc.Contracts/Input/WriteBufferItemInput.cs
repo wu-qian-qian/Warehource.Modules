@@ -2,7 +2,7 @@
 
 namespace Plc.Contracts.Input;
 
-public class WriteBufferItemInput
+public struct WriteBufferItemInput
 {
     public string Value { get; set; }
 

@@ -31,7 +31,7 @@ namespace Plc.Infrastructure.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<byte?>("ArrtypeLength")
+                    b.Property<byte?>("ArrayLength")
                         .HasColumnType("tinyint");
 
                     b.Property<byte?>("BitOffset")

@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Plc.Application.PlcHandler.Read;
+using Plc.Application.S7ReadWriteHandler.Read;
 using Plc.Domain.S7;
 
 namespace Plc.Application.Behaviors.Read;

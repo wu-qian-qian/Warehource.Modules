@@ -163,12 +163,11 @@ public partial class S7NetToken : S7Net
                 }
                 case S7DataTypeEnum.Array:
                 {
-                    var separator = "-";
                     var res = _plc.Read(dbType, input.DBAddress, input.DBStart, VarType.Byte, input.ArratCount.Value);
                     if (res is byte[] byteArray)
                     {
                         var hexValues = Array.ConvertAll(byteArray, b => b.ToString());
-                        result = string.Join(separator, hexValues);
+                        result = string.Join(Symbol.Split, hexValues);
                     }
 
                     break;
@@ -199,7 +198,9 @@ public partial class S7NetToken : S7Net
         }
         else
         {
-            foreach (var item in bulkItems)
+            for (var i = 0; i < bulkItems.Length; i++)
+            {
+                var item = bulkItems[i];
                 if (item.Buffer == null)
                     switch (item.S7DataType)
                     {
@@ -268,6 +269,7 @@ public partial class S7NetToken : S7Net
                             Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC无解析数据");
                             break;
                     }
+            }
 
             try
             {

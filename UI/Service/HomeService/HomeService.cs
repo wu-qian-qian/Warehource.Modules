@@ -13,8 +13,8 @@ public class HomeService : IHomeService
             TaskCode = $"Edrward {i}",
             SerialNumber = i,
             Description = $"London Park no. {i}",
-            TaskTypeDesc = $"Task Type {i}",
-            TaskStatusDesc = $"Task Status {i}",
+            TaskType = $"Task Type {i}",
+            TaskStatus = $"Task Status {i}",
             CreationTime = DateTime.Now.AddDays(-i),
             ExecuteDesc = $"Execute Step {i}"
         });

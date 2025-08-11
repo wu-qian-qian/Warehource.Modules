@@ -73,7 +73,7 @@ public class PlcMapSaga : MassTransitStateMachine<PlcMapState>
         // 处理中状态：等待数据集成服务的结果反馈
         During(Processing,
             When(PlcMapDataIntegrationCompleted)
-                .Publish(context => new PlcMap.PlcMapProcessed(
+                .Publish(context => new PlcMapProcessed(
                     context.Saga.DeviceName,
                     context.Message.Success)).TransitionTo(Pending));
 
@@ -89,7 +89,7 @@ public class PlcMapSaga : MassTransitStateMachine<PlcMapState>
     public State Pending { get; } // 处理成功状态
 
     // 定义事件
-    public Event<PlcMap.PlcMapCreated> PlcMapCreated { get; }
-    public Event<PlcMap.PlcMapDataIntegrationCompleted> PlcMapDataIntegrationCompleted { get; }
-    public Event<PlcMap.PlcMapProcessed> PlcMapProcessed { get; }
+    public Event<PlcMapCreated> PlcMapCreated { get; }
+    public Event<PlcMapDataIntegrationCompleted> PlcMapDataIntegrationCompleted { get; }
+    public Event<PlcMapProcessed> PlcMapProcessed { get; }
 }

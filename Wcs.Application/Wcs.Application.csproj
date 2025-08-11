@@ -18,6 +18,7 @@
         <ProjectReference Include="..\Plc.IntegrationEvents\Plc.CustomEvents.csproj"/>
         <ProjectReference Include="..\Wcs.Contracts\Wcs.Contracts.csproj"/>
         <ProjectReference Include="..\Wcs.CustomEvents\Wcs.CustomEvents.csproj"/>
+        <ProjectReference Include="..\Wcs.Device\Wcs.Device.csproj"/>
         <ProjectReference Include="..\Wcs.Domain\Wcs.Domain.csproj"/>
     </ItemGroup>
 

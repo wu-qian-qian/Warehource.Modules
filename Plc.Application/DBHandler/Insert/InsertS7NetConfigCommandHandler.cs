@@ -49,7 +49,7 @@ public class InsertS7NetConfigCommandHandler(
                     S7BlockType = p.S7BlockType,
                     Description = p.Description,
                     Index = p.Index,
-                    ArrtypeLength = p.ArrtypeLength,
+                    ArrayLength = p.ArrtypeLength,
                     DeviceName = p.DeviceName,
                     IsUse = false
                 });
@@ -63,10 +63,10 @@ public class InsertS7NetConfigCommandHandler(
 
         //可以使用 Parallel并行  ，这边对于效率无高要求
         var entityGroupArray = request.S7NetEntityItemRequests.GroupBy(p => p.DeviceName).ToArray();
-        for (int i = 0; i < entityGroupArray.Length; i++)
+        for (var i = 0; i < entityGroupArray.Length; i++)
         {
             var entityNames = entityGroupArray[i].Select(p => p.Name).ToArray();
-            var plcMap = new PlcMap.PlcMapCreated(entityGroupArray[i].Key, entityNames);
+            var plcMap = new PlcMapCreated(entityGroupArray[i].Key, entityNames);
             await _publishEndpoint.Publish(plcMap);
         }
 

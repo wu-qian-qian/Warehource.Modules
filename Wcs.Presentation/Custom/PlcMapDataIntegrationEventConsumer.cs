@@ -10,19 +10,21 @@ public class PlcMapDataIntegrationEventConsumer(ISender sender) : IConsumer<PlcM
 {
     public async Task Consume(ConsumeContext<PlcMapDataIntegrationEvent> context)
     {
-        PlcMap.PlcMapDataIntegrationCompleted plcMapDataIntegrationCompleted = default;
+        PlcMapDataIntegrationCompleted plcMapDataIntegrationCompleted = default;
         //TODO Mediatr 发送事件
         try
         {
             await sender.Send(new InsertOrUpdateEvent
                 { DeviceName = context.Message.DeviceName, PlcEntityName = context.Message.PlcEntityName });
+            //Saga 状态
             plcMapDataIntegrationCompleted =
-                new PlcMap.PlcMapDataIntegrationCompleted(context.Message.DeviceName, true);
+                new PlcMapDataIntegrationCompleted(context.Message.DeviceName, true);
         }
         catch (Exception)
         {
+            //Saga 状态
             plcMapDataIntegrationCompleted =
-                new PlcMap.PlcMapDataIntegrationCompleted(context.Message.DeviceName, false);
+                new PlcMapDataIntegrationCompleted(context.Message.DeviceName, false);
         }
 
         //返回Saga状态

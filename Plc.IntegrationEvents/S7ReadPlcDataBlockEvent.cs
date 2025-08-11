@@ -42,14 +42,15 @@ public class S7ReadPlcDataBlockEvent : IMassTransitDomainEvent
     ///     是否为批量读取
     ///     非批处理需要唯一id来获取缓存中的变量
     ///     批处理可通过唯一id，或者设备好，ip
+    ///     单个读取不存在变量则触发批量读取
     /// </summary>
     public bool IsBath
     {
         get
         {
             if (DBNames != null && DBNames.Any())
-                return false;
-            return true;
+                return true;
+            return false;
         }
     }
 }
