@@ -61,10 +61,12 @@ public class InsertS7NetConfigCommandHandler(
 
         #region 发送分布式事件
 
-        foreach (var item in request.S7NetEntityItemRequests.GroupBy(p => p.DeviceName))
+        //可以使用 Parallel并行  ，这边对于效率无高要求
+        var entityGroupArray = request.S7NetEntityItemRequests.GroupBy(p => p.DeviceName).ToArray();
+        for (int i = 0; i < entityGroupArray.Length; i++)
         {
-            var entityNames = item.Select(p => p.Name).ToArray();
-            var plcMap = new PlcMap.PlcMapCreated(item.Key, entityNames);
+            var entityNames = entityGroupArray[i].Select(p => p.Name).ToArray();
+            var plcMap = new PlcMap.PlcMapCreated(entityGroupArray[i].Key, entityNames);
             await _publishEndpoint.Publish(plcMap);
         }
 
