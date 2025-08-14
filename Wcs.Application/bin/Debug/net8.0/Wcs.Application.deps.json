@@ -877,6 +877,7 @@
       },
       "Wcs.Device/1.0.0": {
         "dependencies": {
+          "Common": "1.0.0",
           "Common.Domain": "1.0.0",
           "Wcs.Contracts": "1.0.0"
         },

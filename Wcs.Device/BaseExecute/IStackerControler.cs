@@ -1,4 +1,4 @@
-﻿namespace Wcs.Application.Abstract.Device.BaseExecute;
+﻿namespace Wcs.Device.Device.BaseExecute;
 
 /// <summary>
 ///     堆垛机调度中心

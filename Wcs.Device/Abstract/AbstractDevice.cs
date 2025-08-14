@@ -1,8 +1,7 @@
 ﻿using System.Linq.Expressions;
-using Wcs.Application.Abstract.Device;
 using Wcs.Device.DeviceDB;
 
-namespace Wcs.Application.Abstract;
+namespace Wcs.Device.Device;
 
 public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     where TConfig : class where TDBEntity : BaseEntity

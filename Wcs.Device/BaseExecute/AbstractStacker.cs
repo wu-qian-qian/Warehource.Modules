@@ -2,7 +2,7 @@
 using Wcs.Device.Config;
 using Wcs.Device.DeviceDB;
 
-namespace Wcs.Application.Abstract.Device.BaseExecute;
+namespace Wcs.Device.Device.BaseExecute;
 
 /// <summary>
 ///     TODO 变量业务逻辑判断

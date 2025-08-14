@@ -1,6 +1,8 @@
-﻿namespace Wcs.Domain.JobConfigs;
+﻿using Wcs.Application.Abstract;
 
-public class JobService(IJobConfigRepository jobConfigRepository)
+namespace Wcs.Domain.JobConfigs;
+
+public class JobService(IJobConfigRepository jobConfigRepository) : IJobService
 {
     public async Task<JobConfig> GetJobConfigAsync(Guid id)
     {

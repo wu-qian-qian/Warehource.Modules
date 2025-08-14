@@ -12,7 +12,7 @@ using Wcs.Shared;
 namespace Wcs.Application.DBHandler.Job.Insert;
 
 internal class AddJobEventHandler(
-    JobService jobService,
+    IJobService jobService,
     IUnitOfWork unitOfWork,
     IServiceProvider serviceProvider,
     IMapper mapper) : ICommandHandler<AddJobEvent, Result<JobDto>>

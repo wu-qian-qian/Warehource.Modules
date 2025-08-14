@@ -54,7 +54,7 @@ public static class WcsInfrastructureConfigurator
 
     public static IServiceCollection AddRepository(this IServiceCollection service)
     {
-        service.AddScoped<JobService>();
+        service.AddScoped<IJobService, JobService>();
         service.AddScoped<IJobConfigRepository, JobConfigRepository>();
         service.AddScoped<IRegionRepository, RegionRepository>();
         service.AddScoped<IWcsTaskRepository, WcsTaskRepository>();

@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Common.Application.MediatR.Message;
+using Wcs.Application.Abstract;
 using Wcs.Contracts.Respon.Job;
-using JobService = Wcs.Domain.JobConfigs.JobService;
 
 namespace Wcs.Application.DBHandler.Job.Get;
 
-internal sealed class GetJobQueryHandler(JobService jobService, IMapper mapper) : IQueryHandler<GetJobQuery, JobDto>
+internal sealed class GetJobQueryHandler(IJobService jobService, IMapper mapper) : IQueryHandler<GetJobQuery, JobDto>
 {
     public async Task<JobDto> Handle(GetJobQuery request, CancellationToken cancellationToken)
     {

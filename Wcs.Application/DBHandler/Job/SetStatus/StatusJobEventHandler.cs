@@ -4,12 +4,11 @@ using Common.Application.MediatR.Message;
 using Quartz;
 using Wcs.Application.Abstract;
 using Wcs.Contracts.Respon.Job;
-using Wcs.Domain.JobConfigs;
 
 namespace Wcs.Application.DBHandler.Job.SetStatus;
 
 internal class StatusJobEventHandler(
-    JobService jobService,
+    IJobService jobService,
     IUnitOfWork unitOfWork,
     IScheduler scheduler,
     IMapper mapper) : ICommandHandler<StatusJobEvent, Result<JobDto>>

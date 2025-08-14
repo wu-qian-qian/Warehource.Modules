@@ -1,4 +1,4 @@
-﻿namespace Wcs.Application.Abstract.Device;
+﻿namespace Wcs.Device.Device;
 
 public interface IDevice<T> where T : class
 {
