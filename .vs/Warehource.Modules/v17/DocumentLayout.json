@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5969F2F6-79B6-43D9-8E02-4892668C79C8}|Wcs.Device\\Wcs.Device.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.device\\device\\baseexecute\\abstractstacker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5969F2F6-79B6-43D9-8E02-4892668C79C8}|Wcs.Device\\Wcs.Device.csproj|solutionrelative:wcs.device\\device\\baseexecute\\abstractstacker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\device\\service\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\device\\service\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\wcsinfrastructureconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\wcsinfrastructureconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\dbhandler\\device\\addorupdate\\addorupdatedevicehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\dbhandler\\device\\addorupdate\\addorupdatedevicehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\abstract\\abstractdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\abstract\\abstractdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\devicehandler\\readplcblock\\getplcdbqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,7 +94,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AbstractStacker.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Device\\Device\\BaseExecute\\AbstractStacker.cs",
+              "RelativeDocumentMoniker": "Wcs.Device\\Device\\BaseExecute\\AbstractStacker.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Device\\Device\\BaseExecute\\AbstractStacker.cs",
+              "RelativeToolTip": "Wcs.Device\\Device\\BaseExecute\\AbstractStacker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T05:47:14.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "DeviceService.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Device\\Service\\DeviceService.cs",
+              "RelativeDocumentMoniker": "Wcs.Infrastructure\\Device\\Service\\DeviceService.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Device\\Service\\DeviceService.cs",
+              "RelativeToolTip": "Wcs.Infrastructure\\Device\\Service\\DeviceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T05:46:47.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "WCSDBContext.cs",
               "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\WCSDBContext.cs",
               "RelativeDocumentMoniker": "Wcs.Infrastructure\\Database\\WCSDBContext.cs",
@@ -98,12 +128,11 @@
               "RelativeToolTip": "Wcs.Infrastructure\\Database\\WCSDBContext.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAhwA4AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T05:13:40.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T05:13:40.922Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AddOrUpdateDeviceHandler.cs",
               "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DBHandler\\Device\\AddOrUpdate\\AddOrUpdateDeviceHandler.cs",
               "RelativeDocumentMoniker": "Wcs.Application\\DBHandler\\Device\\AddOrUpdate\\AddOrUpdateDeviceHandler.cs",
@@ -111,38 +140,24 @@
               "RelativeToolTip": "Wcs.Application\\DBHandler\\Device\\AddOrUpdate\\AddOrUpdateDeviceHandler.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwB8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T05:12:17.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T05:12:17.64Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "WcsInfrastructureConfigurator.cs",
               "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\WcsInfrastructureConfigurator.cs",
               "RelativeDocumentMoniker": "Wcs.Infrastructure\\WcsInfrastructureConfigurator.cs",
               "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\WcsInfrastructureConfigurator.cs",
               "RelativeToolTip": "Wcs.Infrastructure\\WcsInfrastructureConfigurator.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAqwDIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAqwDgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T05:10:53.284Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AbstractDevice.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Abstract\\AbstractDevice.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\Abstract\\AbstractDevice.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Abstract\\AbstractDevice.cs",
-              "RelativeToolTip": "Wcs.Application\\Abstract\\AbstractDevice.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswAsAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T05:10:42.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "StackerControler.cs",
               "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Device\\Controler\\Stacker\\StackerControler.cs",
               "RelativeDocumentMoniker": "Wcs.Infrastructure\\Device\\Controler\\Stacker\\StackerControler.cs",
@@ -150,12 +165,11 @@
               "RelativeToolTip": "Wcs.Infrastructure\\Device\\Controler\\Stacker\\StackerControler.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAApwCAAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T05:09:19.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T05:09:19.817Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GetPlcDBQueryHandler.cs",
               "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DeviceHandler\\ReadPlcBlock\\GetPlcDBQueryHandler.cs",
               "RelativeDocumentMoniker": "Wcs.Application\\DeviceHandler\\ReadPlcBlock\\GetPlcDBQueryHandler.cs",
@@ -163,12 +177,11 @@
               "RelativeToolTip": "Wcs.Application\\DeviceHandler\\ReadPlcBlock\\GetPlcDBQueryHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAawBEAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T05:09:08.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T05:09:08.863Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GetPlcDBQuery.cs",
               "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DeviceHandler\\ReadPlcBlock\\GetPlcDBQuery.cs",
               "RelativeDocumentMoniker": "Wcs.Application\\DeviceHandler\\ReadPlcBlock\\GetPlcDBQuery.cs",
@@ -176,12 +189,11 @@
               "RelativeToolTip": "Wcs.Application\\DeviceHandler\\ReadPlcBlock\\GetPlcDBQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAswAYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T05:08:57.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T05:08:57.02Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "StackerCommandHandler.cs",
               "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DeviceHandler\\Business\\Stacker\\StackerCommandHandler.cs",
               "RelativeDocumentMoniker": "Wcs.Application\\DeviceHandler\\Business\\Stacker\\StackerCommandHandler.cs",
@@ -189,8 +201,7 @@
               "RelativeToolTip": "Wcs.Application\\DeviceHandler\\Business\\Stacker\\StackerCommandHandler.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T05:08:34.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T05:08:34.221Z"
             }
           ]
         }
