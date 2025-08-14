@@ -3,7 +3,7 @@ using MediatR;
 using Quartz;
 using Wcs.Application.DeviceHandler.WcsTaskAnalysis;
 
-namespace Wcs.Infrastructure.Job;
+namespace Wcs.Infrastructure.Job.JobItems;
 
 [DisallowConcurrentExecution]
 internal class WcsTaskAnalysisJob(ISender sender) : BaseJob

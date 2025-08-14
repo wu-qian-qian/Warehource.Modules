@@ -2,7 +2,7 @@
 using MediatR;
 using Quartz;
 
-namespace Wcs.Infrastructure.Job;
+namespace Wcs.Infrastructure.Job.JobItems;
 
 /// <summary>
 ///     用来重连

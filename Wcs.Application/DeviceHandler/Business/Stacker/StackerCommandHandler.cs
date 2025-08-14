@@ -7,7 +7,7 @@ using Serilog;
 using Wcs.Application.DeviceHandler.GetWcsTask;
 using Wcs.Application.DeviceHandler.ReadPlcBlock;
 using Wcs.Application.Http.Complate;
-using Wcs.Device.Device.BaseExecute;
+using Wcs.Device.BaseDevice;
 using Wcs.Device.DeviceDB;
 using Wcs.Domain.Task;
 using Wcs.Shared;

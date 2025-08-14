@@ -1,4 +1,4 @@
-﻿namespace Wcs.Device.Device;
+﻿namespace Wcs.Device.Abstract;
 
 public interface IControl
 {
