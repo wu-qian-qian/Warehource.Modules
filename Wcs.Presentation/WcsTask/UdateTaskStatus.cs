@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.DBHandler.WcsTask.UpdateStatus;
+using Wcs.Application.Handler.DB.WcsTask.UpdateStatus;
 using Wcs.Contracts.Request.WcsTask;
 
 namespace Wcs.Presentation.WcsTask;
@@ -17,7 +17,7 @@ public class UdateTaskStatus : IEndpoint
             UpdateWcsTaskRequest request,
             ISender sender) =>
         {
-            await sender.Send(new UpdateWcsTaskStatusEvent
+            await sender.Send(new UpdateWcsTaskStatusCommand
             {
                 SerialNumber = request.SerialNumber,
                 WcsTaskStatusType = request.WcsTaskStatusType

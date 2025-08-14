@@ -15,7 +15,7 @@ internal class AddRole : IEndpoint
     {
         app.MapPost("user/add-role", [Authorize(Roles = "admin")] async (AddRoleRequest request, ISender sender) =>
         {
-            return await sender.Send(new AddRoleEvent
+            return await sender.Send(new AddRoleCommand
             {
                 RoleName = request.RoleName,
                 Description = request.Description

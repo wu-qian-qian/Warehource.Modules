@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.DBHandler.ExecueNode.Delete;
+using Wcs.Application.Handler.DB.ExecueNode.Delete;
 
 namespace Wcs.Presentation.ExecuteNode;
 
@@ -16,7 +16,7 @@ public class Delete : IEndpoint
             Guid request,
             ISender sender) =>
         {
-            return await sender.Send(new DeleteExecuteNodeEvent
+            return await sender.Send(new DeleteExecuteNodeCommand
             {
                 Id = request
             });

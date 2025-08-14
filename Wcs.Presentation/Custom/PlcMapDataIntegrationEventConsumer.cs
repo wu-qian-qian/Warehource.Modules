@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using MediatR;
 using Plc.CustomEvents.Saga;
-using Wcs.Application.DBHandler.PlcMap.InsertOrUpdate;
+using Wcs.Application.Handler.DB.PlcMap.InsertOrUpdate;
 using Wcs.CustomEvents;
 
 namespace Wcs.Presentation.Custom;
@@ -14,7 +14,7 @@ public class PlcMapDataIntegrationEventConsumer(ISender sender) : IConsumer<PlcM
         //TODO Mediatr 发送事件
         try
         {
-            await sender.Send(new InsertOrUpdateEvent
+            await sender.Send(new InsertOrUpdateCommand
                 { DeviceName = context.Message.DeviceName, PlcEntityName = context.Message.PlcEntityName });
             //Saga 状态
             plcMapDataIntegrationCompleted =

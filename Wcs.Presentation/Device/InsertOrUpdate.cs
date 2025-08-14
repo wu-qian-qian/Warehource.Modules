@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.DBHandler.Device.AddOrUpdate;
+using Wcs.Application.Handler.DB.Device.AddOrUpdate;
 using Wcs.Contracts.Request.Device;
 
 namespace Wcs.Presentation.Device;
@@ -18,7 +18,7 @@ public class InsertOrUpdate : IEndpoint
             async (DeviceRequest request, ISender sender) =>
             {
                 var json = JsonSerializer.Serialize(request.Config);
-                return await sender.Send(new AddOrUpdateDeviceEvent
+                return await sender.Send(new AddOrUpdateDeviceCommand
                 {
                     DeviceName = request.DeviceName,
                     DeviceType = request.DeviceType,

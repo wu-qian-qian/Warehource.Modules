@@ -17,7 +17,7 @@ internal class Login : IEndpoint
         app.MapPost("user/user-login", [AllowAnonymous]
             async (ISender sender, LoginRequst requst, ITokenService tokenService) =>
             {
-                return await sender.Send(new LoginEvent
+                return await sender.Send(new LoginCommand
                 {
                     Username = requst.Username,
                     Password = requst.Password

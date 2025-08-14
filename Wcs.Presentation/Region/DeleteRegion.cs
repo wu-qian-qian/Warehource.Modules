@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.DBHandler.Region.Delete;
+using Wcs.Application.Handler.DB.Region.Delete;
 
 namespace Wcs.Presentation.Region;
 
@@ -16,7 +16,7 @@ public class DeleteRegion : IEndpoint
             Guid id,
             ISender sender) =>
         {
-            return await sender.Send(new DeleteRegionEvent
+            return await sender.Send(new DeleteRegionCommand
             {
                 Id = id
             });

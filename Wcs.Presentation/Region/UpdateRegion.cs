@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.DBHandler.Region.AddOrUpdate;
+using Wcs.Application.Handler.DB.Region.AddOrUpdate;
 using Wcs.Contracts.Request.Region;
 
 namespace Wcs.Presentation.Region;
@@ -17,7 +17,7 @@ public class UpdateRegion : IEndpoint
             RegionRequest request,
             ISender sender) =>
         {
-            return await sender.Send(new AddOrUpdateRegionEvent
+            return await sender.Send(new AddOrUpdateRegionCommand
             {
                 Code = request.Code,
                 Description = request.Description

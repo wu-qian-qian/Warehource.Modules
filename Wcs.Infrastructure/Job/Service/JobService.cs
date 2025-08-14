@@ -1,6 +1,7 @@
 ﻿using Wcs.Application.Abstract;
+using Wcs.Domain.JobConfigs;
 
-namespace Wcs.Domain.JobConfigs;
+namespace Wcs.Infrastructure.Job.Service;
 
 public class JobService(IJobConfigRepository jobConfigRepository) : IJobService
 {
@@ -14,17 +15,17 @@ public class JobService(IJobConfigRepository jobConfigRepository) : IJobService
         return await jobConfigRepository.GetListAsync();
     }
 
-    public async System.Threading.Tasks.Task AddJobConfigAsync(JobConfig jobConfig)
+    public async Task AddJobConfigAsync(JobConfig jobConfig)
     {
         await jobConfigRepository.InserAsync(jobConfig);
     }
 
-    public async System.Threading.Tasks.Task UpdateJobConfigAsync(JobConfig jobConfig)
+    public async Task UpdateJobConfigAsync(JobConfig jobConfig)
     {
         await jobConfigRepository.UpdateAsync(jobConfig);
     }
 
-    public async System.Threading.Tasks.Task DeleteJobConfigAsync(Guid id)
+    public async Task DeleteJobConfigAsync(Guid id)
     {
         var jobConfig = await jobConfigRepository.GetAsync(id);
         if (jobConfig != null) jobConfig.SoftDelete();

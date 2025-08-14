@@ -1,9 +1,9 @@
 ﻿using Common.Application.QuartzJob;
 using MediatR;
 using Quartz;
-using Wcs.Application.DeviceHandler.WcsTaskAnalysis;
+using Wcs.Application.Handler.Execute.WcsTaskAnalysis;
 
-namespace Wcs.Infrastructure.Job;
+namespace Wcs.Infrastructure.Job.JobItems;
 
 [DisallowConcurrentExecution]
 internal class WcsTaskAnalysisJob(ISender sender) : BaseJob
@@ -13,7 +13,7 @@ internal class WcsTaskAnalysisJob(ISender sender) : BaseJob
         await base.Execute(context);
         try
         {
-            await sender.Send(new AnalysisCommandEvent(), _linkedCts.Token);
+            await sender.Send(new AnalysisCommand(), _linkedCts.Token);
         }
         catch (OperationCanceledException ex)
         {

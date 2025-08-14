@@ -13,7 +13,7 @@ internal class AddAdminRole : IEndpoint
     {
         app.MapPost("user/add-adminrole", async (ISender sender) =>
         {
-            return await sender.Send(new AddRoleEvent
+            return await sender.Send(new AddRoleCommand
             {
                 RoleName = "admin"
             });

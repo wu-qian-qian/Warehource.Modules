@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.DBHandler.Job.Insert;
+using Wcs.Application.Handler.DB.Job.Insert;
 using Wcs.Contracts.Request.Job;
 
 namespace Wcs.Presentation.Job.Add;
@@ -17,7 +17,7 @@ internal sealed class AddJobConfig : IEndpoint
             AddJobRequest request,
             ISender sender) =>
         {
-            return await sender.Send(new AddJobEvent
+            return await sender.Send(new AddJobCommand
             {
                 Name = request.Name, JobType = request.Jobtype,
                 Description = request.Description, TimeOut = request.TimeOut, Timer = request.Timer,

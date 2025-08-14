@@ -1,10 +1,11 @@
 ﻿using Common.Application.QuartzJob;
 using Microsoft.Extensions.DependencyInjection;
 using Quartz;
+using Wcs.Application.Abstract;
 using Wcs.Domain.JobConfigs;
 using Wcs.Shared;
 
-namespace Wcs.Infrastructure.Job;
+namespace Wcs.Infrastructure.Job.Options;
 
 internal class JobOptions(IServiceScopeFactory serviceScope, IScheduler scheduler)
 {
@@ -14,7 +15,7 @@ internal class JobOptions(IServiceScopeFactory serviceScope, IScheduler schedule
         var serviceProvider = serviceScope.CreateScope().ServiceProvider;
 
         var jobTypes = serviceProvider.GetKeyedService<Type[]>(Constant.JobKey);
-        var jobService = serviceProvider.GetService<JobService>();
+        var jobService = serviceProvider.GetService<IJobService>();
         var jobConfigs = jobService.GetAllJobConfigsAsync().GetAwaiter().GetResult();
         foreach (var item in jobConfigs)
         {

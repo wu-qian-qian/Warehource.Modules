@@ -13,7 +13,7 @@ internal class AddAdminUser : IEndpoint
     {
         app.MapPost("user/add-adminuser", async (ISender sender) =>
         {
-            return await sender.Send(new AddUserEvent
+            return await sender.Send(new AddUserCommand
             {
                 Name = "管理员",
                 Username = "admin",

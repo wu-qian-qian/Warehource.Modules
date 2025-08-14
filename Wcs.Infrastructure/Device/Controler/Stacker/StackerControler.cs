@@ -1,10 +1,10 @@
 ﻿using Common.JsonExtension;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Wcs.Application.DBHandler.Device.Get;
-using Wcs.Application.DeviceHandler.Business.Stacker;
+using Wcs.Application.Handler.DB.Device.Get;
+using Wcs.Application.Handler.Execute.Business.Stacker;
+using Wcs.Device.BaseDevice;
 using Wcs.Device.Config;
-using Wcs.Device.Device.BaseExecute;
 using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler.Stacker;
@@ -61,7 +61,7 @@ internal class StackerControler : IStackerControler
         // 使用Parallel.ForEachAsync处理异步并行          注意如果是一巷道多堆垛需要先对设备进行分组然后在进行调度
         await Parallel.ForEachAsync(Stackers, parallelOptions, async (item, cancelToken) =>
         {
-            await sender.Send(new StackerCommandEvent
+            await sender.Send(new StackerCommand
             {
                 Stacker = item
             }, cancelToken);

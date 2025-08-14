@@ -19,6 +19,7 @@ public static class MediatRExtensions
         services.AddMediatR(config =>
         {
             config.RegisterServicesFromAssemblies(moduleAssemblies);
+            config.AddOpenBehavior(typeof(CancelPipelineBehavior<,>));
             config.AddOpenBehavior(typeof(ValidationPipelineBehavior<,>));
         });
         services.AddValidatorsFromAssemblies(moduleAssemblies, includeInternalTypes: true);
@@ -53,6 +54,7 @@ public static class MediatRExtensions
         services.AddMediatR(config =>
         {
             config.RegisterServicesFromAssemblies(moduleAssemblies);
+            config.AddOpenBehavior(typeof(CancelPipelineBehavior<,>));
             config.AddOpenBehavior(typeof(ValidationPipelineBehavior<,>));
             foreach (var action in behaviors) action(config);
         });

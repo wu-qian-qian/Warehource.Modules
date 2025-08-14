@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.DBHandler.Device.Delete;
+using Wcs.Application.Handler.DB.Device.Delete;
 
 namespace Wcs.Presentation.Device;
 
@@ -16,7 +16,7 @@ public class Delete : IEndpoint
             Guid request,
             ISender sender) =>
         {
-            return await sender.Send(new DeleteDeviceEvent
+            return await sender.Send(new DeleteDeviceCommand
             {
                 Id = request
             });

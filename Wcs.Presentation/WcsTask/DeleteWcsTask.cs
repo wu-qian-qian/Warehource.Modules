@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.DBHandler.WcsTask.Delete;
+using Wcs.Application.Handler.DB.WcsTask.Delete;
 
 namespace Wcs.Presentation.WcsTask;
 
@@ -16,7 +16,7 @@ public class DeleteWcsTask : IEndpoint
             int request,
             ISender sender) =>
         {
-            return await sender.Send(new DeleteWcsTaskEvent
+            return await sender.Send(new DeleteWcsTaskCommand
             {
                 SerialNumber = request
             });

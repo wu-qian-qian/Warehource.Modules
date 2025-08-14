@@ -1,5 +1,5 @@
-﻿using Wcs.Device.Config;
-using Wcs.Device.Device.BaseExecute;
+﻿using Wcs.Device.BaseDevice;
+using Wcs.Device.Config;
 
 namespace Wcs.Infrastructure.Device.Execute.Stacker;
 

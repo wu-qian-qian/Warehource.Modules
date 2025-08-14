@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.DBHandler.ExecueNode.AddOrUpdate;
+using Wcs.Application.Handler.DB.ExecueNode.AddOrUpdate;
 using Wcs.Contracts.Request.ExecuteNode;
 
 namespace Wcs.Presentation.ExecuteNode;
@@ -16,7 +16,7 @@ public class InsertOrUpdate : IEndpoint
         app.MapPost("executenode/add-or-update", [Authorize(Roles = "admin")]
             async (ExecuteNodeRequest request, ISender sender) =>
             {
-                return await sender.Send(new AddOrUpdateExecuteNodeEvent
+                return await sender.Send(new AddOrUpdateExecuteNodeCommand
                 {
                     Id = request.Id ?? Guid.NewGuid(),
                     PahtNodeGroup = request.PahtNodeGroup,

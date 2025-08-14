@@ -15,7 +15,7 @@ internal class AddUser : IEndpoint
     {
         app.MapPost("user/add-user", [Authorize(Roles = "admin")] async (AddUserRequst requst, ISender sender) =>
         {
-            return await sender.Send(new AddUserEvent
+            return await sender.Send(new AddUserCommand
             {
                 Name = requst.Name,
                 Email = requst.Email,

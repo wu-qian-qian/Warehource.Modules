@@ -5,7 +5,7 @@ using MediatR;
 using Plc.CustomEvents;
 using Quartz;
 
-namespace Wcs.Infrastructure.Job;
+namespace Wcs.Infrastructure.Job.JobItems;
 
 [DisallowConcurrentExecution]
 internal class ReadPlcJob(IMassTransitEventBus bus, ISender sender, ICacheService cacheService) : BaseJob

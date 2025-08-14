@@ -12,8 +12,4 @@
         <ProjectReference Include="..\User.Domain\Identity.Domain.csproj"/>
     </ItemGroup>
 
-    <ItemGroup>
-        <Folder Include="Handler\"/>
-    </ItemGroup>
-
 </Project>

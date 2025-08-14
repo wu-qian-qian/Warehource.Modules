@@ -2,7 +2,7 @@
 using MediatR;
 using Quartz;
 
-namespace Wcs.Infrastructure.Job;
+namespace Wcs.Infrastructure.Job.JobItems;
 
 [DisallowConcurrentExecution]
 internal class ExecuteDeviceJob(ISender sender) : BaseJob

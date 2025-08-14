@@ -6,4 +6,4 @@ namespace Common.Application.MediatR.Message;
 ///     查询实体
 /// </summary>
 /// <typeparam name="TResponse">返回实体</typeparam>
-public interface IQuery<TResponse> : IRequest<TResponse>;
+public interface IQuery<TResponse> : IRequest<TResponse>, IBaseCommand;
