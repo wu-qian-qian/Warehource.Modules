@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Quartz;
 using Wcs.Application.Abstract;
 using Wcs.Domain.JobConfigs;
+using Wcs.Infrastructure.Job.Service;
 using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Job.Options;
