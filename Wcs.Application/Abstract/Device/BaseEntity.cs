@@ -1,0 +1,1 @@
+﻿namespace Wcs.Application.Abstract.Device;
