@@ -877,7 +877,8 @@
       },
       "Wcs.Device/1.0.0": {
         "dependencies": {
-          "Wcs.Shared": "1.0.0"
+          "Common.Domain": "1.0.0",
+          "Wcs.Contracts": "1.0.0"
         },
         "runtime": {
           "Wcs.Device.dll": {

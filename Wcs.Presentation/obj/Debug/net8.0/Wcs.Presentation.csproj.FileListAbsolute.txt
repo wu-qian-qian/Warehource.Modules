@@ -56,6 +56,12 @@ D:\Program\仓库\Warehouse.Modules\Warehource.Modules\Wcs.Presentation\obj\Debu
 D:\Program\仓库\Warehouse.Modules\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\refint\Wcs.Presentation.dll
 D:\Program\仓库\Warehouse.Modules\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.pdb
 D:\Program\仓库\Warehouse.Modules\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\ref\Wcs.Presentation.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.csproj.AssemblyReference.cache
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.AssemblyInfoInputs.cache
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.AssemblyInfo.cs
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.csproj.CoreCompileInputs.cache
+D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.sourcelink.json
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Wcs.Presentation.deps.json
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Wcs.Presentation.dll
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Wcs.Presentation.pdb
@@ -81,12 +87,6 @@ D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Wcs.Contr
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Wcs.CustomEvents.pdb
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Wcs.Domain.pdb
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\bin\Debug\net8.0\Wcs.Shared.pdb
-D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.csproj.AssemblyReference.cache
-D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.AssemblyInfoInputs.cache
-D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.AssemblyInfo.cs
-D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.csproj.CoreCompileInputs.cache
-D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.sourcelink.json
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Pres.C8B91483.Up2Date
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\Wcs.Presentation.dll
 D:\Program\仓库\Warehource.Modules\Wcs.Presentation\obj\Debug\net8.0\refint\Wcs.Presentation.dll

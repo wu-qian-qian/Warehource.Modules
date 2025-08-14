@@ -12,9 +12,11 @@ D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Plc.Contr
 D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Plc.CustomEvents.dll
 D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Plc.Domain.dll
 D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Plc.Shared.dll
+D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Wcs.CustomEvents.dll
 D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Common.Presentation.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Common.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Plc.Application.pdb
+D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Wcs.CustomEvents.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Common.Application.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Common.Domain.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Common.Shared.pdb
@@ -33,5 +35,3 @@ D:\Program\仓库\Warehource.Modules\Plc.Presentation\obj\Debug\net8.0\Plc.Prese
 D:\Program\仓库\Warehource.Modules\Plc.Presentation\obj\Debug\net8.0\refint\Plc.Presentation.dll
 D:\Program\仓库\Warehource.Modules\Plc.Presentation\obj\Debug\net8.0\Plc.Presentation.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Presentation\obj\Debug\net8.0\ref\Plc.Presentation.dll
-D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Wcs.CustomEvents.dll
-D:\Program\仓库\Warehource.Modules\Plc.Presentation\bin\Debug\net8.0\Wcs.CustomEvents.pdb

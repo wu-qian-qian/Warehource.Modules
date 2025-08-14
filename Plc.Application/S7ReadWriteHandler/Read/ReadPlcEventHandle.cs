@@ -29,10 +29,16 @@ internal class ReadPlcEventHandle(INetService netService)
             var input = request.readBufferInputs[i];
             var buffer = await netService.ReadAsync(input);
             if (buffer != null)
+            {
                 buffers[i] = new ReadBuffer(input.DBAddress, buffer);
+            }
             else
+            {
                 Log.Logger.ForCategory(LogCategory.Net)
                     .Error($"IP:{request.Ip} 设备名称{request.DeviceName}读取失败");
+                buffers = null;
+                break;
+            }
         }
 
         return buffers;

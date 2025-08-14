@@ -20,10 +20,14 @@ public class Device : IEntity
 
     public string? Description { get; set; }
 
+    public string? WcsTaskCode { get; set; }
+
     /// <summary>
     ///     配置
     /// </summary>
     public string Config { get; set; }
 
     public bool Enable { get; set; }
+
+    public string? GroupName { get; set; }
 }

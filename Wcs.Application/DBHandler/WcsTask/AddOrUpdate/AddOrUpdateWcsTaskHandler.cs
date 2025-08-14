@@ -3,6 +3,7 @@ using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using Wcs.Application.Abstract;
 using Wcs.Contracts.Respon.WcsTask;
+using Wcs.Domain.Region;
 using Wcs.Domain.Task;
 using Wcs.Domain.TaskExecuteStep;
 using Wcs.Shared;
@@ -11,14 +12,15 @@ namespace Wcs.Application.DBHandler.WcsTask.AddOrUpdate;
 
 public class AddOrUpdateWcsTaskHandler(
     IWcsTaskRepository _wcsTaskRepository,
+    IRegionRepository _regionRepository,
     IUnitOfWork _unitOfWork,
     IMapper _mapper) : ICommandHandler<AddOrUpdateWcsTaskEvent, Result<WcsTaskDto>>
 {
     public async Task<Result<WcsTaskDto>> Handle(AddOrUpdateWcsTaskEvent request, CancellationToken cancellationToken)
     {
         Result<WcsTaskDto> result = new();
-        //TODO 根据规则匹配区域
         var wcsTask = _wcsTaskRepository.Get(request.Id);
+        var region = _regionRepository.Get(request.RegionCode);
         if (wcsTask == null)
         {
             wcsTask = new Domain.Task.WcsTask
@@ -35,6 +37,9 @@ public class AddOrUpdateWcsTaskHandler(
                     , request.GetFloor.ToString(), request.GetRow.ToString()
                     , request.GetColumn.ToString(), request.GetDepth.ToString()),
                 Description = request.Description,
+                StockInPosition = request.StockInPosition,
+                StockOutPosition = request.StockOutPosition,
+                RegionId = region?.Id,
                 TaskExecuteStep = new TaskExecuteStep
                 {
                     Description = "任务创建"
@@ -46,6 +51,8 @@ public class AddOrUpdateWcsTaskHandler(
         {
             if (wcsTask.TaskCode == request.TaskCode)
             {
+                wcsTask.Level = request.Level;
+                wcsTask.IsEnforce = request.IsEnforce;
                 var getTunnel = request.GetTunnel != null
                     ? request.GetTunnel.ToString()
                     : wcsTask.GetLocation.GetTunnel;

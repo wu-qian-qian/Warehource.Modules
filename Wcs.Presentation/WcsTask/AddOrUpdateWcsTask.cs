@@ -14,12 +14,11 @@ public class AddOrUpdateWcsTask : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("wcstask/add-or-update-wcstask", [Authorize] async (
-            InsertWcsTaskRequest request,
-            ISender sender, IMapper mapper) =>
-        {
-            var command = mapper.Map<AddOrUpdateWcsTaskEvent>(request);
-            return await sender.Send(command);
-        }).WithTags(AssemblyReference.WcsTask);
+        app.MapPost("wcstask/add-or-update-wcstask", [Authorize]
+            async (InsertWcsTaskRequest request, ISender sender, IMapper mapper) =>
+            {
+                var command = mapper.Map<AddOrUpdateWcsTaskEvent>(request);
+                return await sender.Send(command);
+            }).WithTags(AssemblyReference.WcsTask);
     }
 }

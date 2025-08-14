@@ -33,12 +33,14 @@ internal class WcsProfile : Profile
             .ForMember(x => x.PutRow, x => x.MapFrom(x => x.PutLocation.PutRow))
             .ForMember(x => x.PutDepth, x => x.MapFrom(x => x.PutLocation.PutDepth))
             .ForMember(x => x.PutFloor, x => x.MapFrom(x => x.PutLocation.PutFloor))
-            .ForMember(x => x.PutTunnel, x => x.MapFrom(x => x.PutLocation.PutTunnel));
+            .ForMember(x => x.PutTunnel, x => x.MapFrom(x => x.PutLocation.PutTunnel))
+            .ForMember(x => x.ExecuteDesc, x => x.MapFrom(x => x.TaskExecuteStep.Description))
+            .ForMember(x => x.ExecutePath, x => x.MapFrom(x => x.TaskExecuteStep.PathNodeGroup))
+            .ForMember(x => x.CurrentDevice, x => x.MapFrom(x => x.TaskExecuteStep.CurentDevice));
+
         CreateMap<InsertWcsTaskRequest, AddOrUpdateWcsTaskEvent>();
 
-        CreateMap<ExecuteNodePath, ExecuteNodeDto>()
-            .ForMember(x => x.RegionDescription, x => x.MapFrom(x => x.Region.Description))
-            .ForMember(x => x.RegionCode, x => x.MapFrom(x => x.Region.Code));
+        CreateMap<ExecuteNodePath, ExecuteNodeDto>();
 
         CreateMap<Domain.Device.Device, DeviceDto>();
     }

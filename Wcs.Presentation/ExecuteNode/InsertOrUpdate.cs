@@ -13,20 +13,18 @@ public class InsertOrUpdate : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("executenode/add-or-update", [Authorize(Roles = "admin")] async (
-            ExecuteNodeRequest request,
-            ISender sender) =>
-        {
-            return await sender.Send(new AddOrUpdateExecuteNodeEvent
+        app.MapPost("executenode/add-or-update", [Authorize(Roles = "admin")]
+            async (ExecuteNodeRequest request, ISender sender) =>
             {
-                Id = request.Id ?? Guid.NewGuid(),
-                PahtNodeGroup = request.PahtNodeGroup,
-                CurrentDeviceName = request.CurrentDeviceName,
-                CurrentDeviceType = request.CurrentDeviceType,
-                RegionCode = request.RegionCode,
-                TaskType = request.TaskType,
-                NextDeviceName = request.NextDeviceName
-            });
-        }).WithTags(AssemblyReference.ExecuteNode);
+                return await sender.Send(new AddOrUpdateExecuteNodeEvent
+                {
+                    Id = request.Id ?? Guid.NewGuid(),
+                    PahtNodeGroup = request.PahtNodeGroup,
+                    CurrentDeviceType = request.CurrentDeviceType,
+                    TaskType = request.TaskType,
+                    RegionCode = request.RegionCode,
+                    Index = request.Index
+                });
+            }).WithTags(AssemblyReference.ExecuteNode);
     }
 }

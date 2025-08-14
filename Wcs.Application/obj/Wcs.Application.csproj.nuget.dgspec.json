@@ -650,8 +650,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Program\\仓库\\Warehource.Modules\\Wcs.Shared\\Wcs.Shared.csproj": {
-                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Wcs.Shared\\Wcs.Shared.csproj"
+              "D:\\Program\\仓库\\Warehource.Modules\\Common.Domain\\Common.Domain.csproj": {
+                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common.Domain\\Common.Domain.csproj"
+              },
+              "D:\\Program\\仓库\\Warehource.Modules\\Wcs.Contracts\\Wcs.Contracts.csproj": {
+                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Wcs.Contracts\\Wcs.Contracts.csproj"
               }
             }
           }

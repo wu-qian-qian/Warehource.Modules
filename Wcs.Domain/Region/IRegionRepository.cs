@@ -13,4 +13,6 @@ public interface IRegionRepository
     void Delete(Guid id);
 
     IEnumerable<Region> GetAllRegions();
+
+    IQueryable<Region> GetQuery();
 }

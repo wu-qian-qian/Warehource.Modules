@@ -17,5 +17,7 @@ public class DeviceRequest
     /// </summary>
     public object? Config { get; set; }
 
+
+    public string? GroupName { get; set; }
     public bool? Enable { get; set; }
 }

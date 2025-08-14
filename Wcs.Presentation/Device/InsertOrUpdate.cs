@@ -14,20 +14,20 @@ public class InsertOrUpdate : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("decive/add-or-update", [Authorize(Roles = "admin")] async (
-            DeviceRequest request,
-            ISender sender) =>
-        {
-            var json = JsonSerializer.Serialize(request.Config);
-            return await sender.Send(new AddOrUpdateDeviceEvent
+        app.MapPost("decive/add-or-update", [Authorize(Roles = "admin")]
+            async (DeviceRequest request, ISender sender) =>
             {
-                DeviceName = request.DeviceName,
-                DeviceType = request.DeviceType,
-                Config = json,
-                Enable = request.Enable,
-                Description = request.Description,
-                Id = request.Id.Value
-            });
-        }).WithTags(AssemblyReference.Decive);
+                var json = JsonSerializer.Serialize(request.Config);
+                return await sender.Send(new AddOrUpdateDeviceEvent
+                {
+                    DeviceName = request.DeviceName,
+                    DeviceType = request.DeviceType,
+                    Config = json,
+                    Enable = request.Enable,
+                    Description = request.Description,
+                    Id = request.Id.Value,
+                    GroupName = request.GroupName
+                });
+            }).WithTags(AssemblyReference.Decive);
     }
 }

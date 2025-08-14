@@ -45,7 +45,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Wcs.Contracts.Request.Device.DeviceRequest"
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.Device.GetDviceRequest"
               }
             }
           },
@@ -124,7 +124,7 @@
         }
       }
     },
-    "/executenode/get": {
+    "/executenode/gets": {
       "post": {
         "tags": [
           "ExecuteNode"
@@ -1432,6 +1432,27 @@
           "config": {
             "nullable": true
           },
+          "groupName": {
+            "type": "string",
+            "nullable": true
+          },
+          "enable": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wcs.Contracts.Request.Device.GetDviceRequest": {
+        "type": "object",
+        "properties": {
+          "deviceType": {
+            "$ref": "#/components/schemas/Wcs.Shared.DeviceTypeEnum"
+          },
+          "deviceName": {
+            "type": "string",
+            "nullable": true
+          },
           "enable": {
             "type": "boolean",
             "nullable": true
@@ -1447,6 +1468,10 @@
             "format": "uuid",
             "nullable": true
           },
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
           "pahtNodeGroup": {
             "type": "string",
             "nullable": true
@@ -1457,15 +1482,7 @@
           "taskType": {
             "$ref": "#/components/schemas/Wcs.Shared.WcsTaskTypeEnum"
           },
-          "currentDeviceName": {
-            "type": "string",
-            "nullable": true
-          },
           "regionCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "nextDeviceName": {
             "type": "string",
             "nullable": true
           }
@@ -1593,6 +1610,13 @@
             "type": "string",
             "nullable": true
           },
+          "level": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isEnforce": {
+            "type": "boolean"
+          },
           "taskType": {
             "$ref": "#/components/schemas/Wcs.Shared.WcsTaskTypeEnum"
           },
@@ -1657,7 +1681,15 @@
             "format": "int32",
             "nullable": true
           },
-          "executeDesc": {
+          "stockOutPosition": {
+            "type": "string",
+            "nullable": true
+          },
+          "stockInPosition": {
+            "type": "string",
+            "nullable": true
+          },
+          "regionCode": {
             "type": "string",
             "nullable": true
           }
@@ -1716,6 +1748,10 @@
             "type": "string",
             "nullable": true
           },
+          "regionCode": {
+            "type": "string",
+            "nullable": true
+          },
           "enable": {
             "type": "boolean"
           }
@@ -1742,6 +1778,10 @@
             "format": "date-time",
             "nullable": true
           },
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
           "pahtNodeGroup": {
             "type": "string",
             "nullable": true
@@ -1751,14 +1791,6 @@
             "nullable": true
           },
           "taskType": {
-            "type": "string",
-            "nullable": true
-          },
-          "currentDeviceName": {
-            "type": "string",
-            "nullable": true
-          },
-          "nextDeviceName": {
             "type": "string",
             "nullable": true
           },
@@ -1955,6 +1987,18 @@
           "executePath": {
             "type": "string",
             "nullable": true
+          },
+          "stockInPosition": {
+            "type": "string",
+            "nullable": true
+          },
+          "stockOutPosition": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentDevice": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1984,7 +2028,8 @@
           2,
           3,
           4,
-          5
+          5,
+          6
         ],
         "type": "integer",
         "format": "int32"

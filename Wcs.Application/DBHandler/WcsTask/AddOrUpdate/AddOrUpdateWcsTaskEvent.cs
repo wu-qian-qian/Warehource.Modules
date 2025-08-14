@@ -11,6 +11,16 @@ public class AddOrUpdateWcsTaskEvent : ICommand<Result<WcsTaskDto>>
     public string TaskCode { get; set; }
 
     /// <summary>
+    ///     等级
+    /// </summary>
+    public int Level { get; set; } = 99;
+
+    /// <summary>
+    ///     是否强制执行
+    /// </summary>
+    public bool IsEnforce { get; set; } = false;
+
+    /// <summary>
     ///     任务类型
     /// </summary>
     public WcsTaskTypeEnum TaskType { get; set; }
@@ -82,7 +92,14 @@ public class AddOrUpdateWcsTaskEvent : ICommand<Result<WcsTaskDto>>
     public int? PutDepth { get; set; }
 
     /// <summary>
-    ///     步骤
+    ///     出入目标位
     /// </summary>
-    public string? ExecuteDesc { get; set; }
+    public string? StockOutPosition { get; set; }
+
+    /// <summary>
+    ///     出入目标位
+    /// </summary>
+    public string? StockInPosition { get; set; }
+
+    public string? RegionCode { get; set; }
 }

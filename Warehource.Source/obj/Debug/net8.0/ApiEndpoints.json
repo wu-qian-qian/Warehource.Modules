@@ -63,7 +63,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Wcs.Contracts.Request.Device.DeviceRequest",
+        "Type": "Wcs.Contracts.Request.Device.GetDviceRequest",
         "IsRequired": true
       }
     ],
@@ -137,7 +137,7 @@
   {
     "ContainingType": "Wcs.Presentation.ExecuteNode.Get\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
-    "RelativePath": "executenode/get",
+    "RelativePath": "executenode/gets",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,

@@ -9,7 +9,6 @@
 
     <ItemGroup>
         <Folder Include="DBHandler\Job\"/>
-        <Folder Include="ExecuteDevice\Behaviors\"/>
     </ItemGroup>
 
     <ItemGroup>

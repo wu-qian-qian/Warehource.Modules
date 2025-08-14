@@ -1,4 +1,5 @@
 ﻿using Common.Domain.EF;
+using Wcs.Shared;
 
 namespace Wcs.Domain.TaskExecuteStep;
 
@@ -27,8 +28,7 @@ public class TaskExecuteStep : IEntity
     /// </summary>
     public string? PathNodeGroup { get; set; }
 
-    /// <summary>
-    ///     当前节点
-    /// </summary>
-    public Guid? ExecuteNodePath { get; set; }
+    public string? CurentDevice { get; set; }
+
+    public DeviceTypeEnum? DeviceType { get; set; }
 }

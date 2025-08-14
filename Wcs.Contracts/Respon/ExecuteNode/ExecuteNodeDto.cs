@@ -2,6 +2,8 @@
 
 public class ExecuteNodeDto : BaseDto
 {
+    public byte Index { get; set; }
+
     /// <summary>
     ///     路径组
     /// </summary>
@@ -16,17 +18,6 @@ public class ExecuteNodeDto : BaseDto
     ///     任务类型
     /// </summary>
     public string TaskType { get; set; }
-
-    /// <summary>
-    ///     当前节点设备名
-    /// </summary>
-    public string CurrentDeviceName { get; set; }
-
-    /// <summary>
-    ///     下一节点设备名
-    /// </summary>
-
-    public string? NextDeviceName { get; set; }
 
     /// <summary>
     ///     区域描述

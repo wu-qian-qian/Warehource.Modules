@@ -15,6 +15,7 @@ D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Plc.Cus
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Plc.Domain.dll
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Plc.Presentation.dll
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Plc.Shared.dll
+D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Wcs.CustomEvents.dll
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Common.Infrastructure.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Plc.Application.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Plc.Presentation.pdb
@@ -27,6 +28,7 @@ D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Plc.Con
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Plc.CustomEvents.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Plc.Domain.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Plc.Shared.pdb
+D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Wcs.CustomEvents.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\Plc.Infrastructure.csproj.AssemblyReference.cache
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\Plc.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\Plc.Infrastructure.AssemblyInfoInputs.cache
@@ -39,5 +41,3 @@ D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\refint\
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\Plc.Infrastructure.pdb
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\Plc.Infrastructure.genruntimeconfig.cache
 D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\obj\Debug\net8.0\ref\Plc.Infrastructure.dll
-D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Wcs.CustomEvents.dll
-D:\Program\仓库\Warehource.Modules\Plc.Infrastructure\bin\Debug\net8.0\Wcs.CustomEvents.pdb

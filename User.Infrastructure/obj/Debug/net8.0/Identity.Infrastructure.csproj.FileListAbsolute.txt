@@ -3,6 +3,7 @@ D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Identi
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Identity.Infrastructure.dll
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Identity.Infrastructure.pdb
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.Application.dll
+D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.dll
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.Domain.dll
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.Infrastructure.dll
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.Presentation.dll
@@ -15,6 +16,7 @@ D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Identity.Application.pdb
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Identity.Domain.pdb
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Identity.Presentation.pdb
+D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.pdb
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.Application.pdb
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.Domain.pdb
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.Presentation.pdb
@@ -32,5 +34,3 @@ D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\refint
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\Identity.Infrastructure.pdb
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\Identity.Infrastructure.genruntimeconfig.cache
 D:\Program\仓库\Warehource.Modules\User.Infrastructure\obj\Debug\net8.0\ref\Identity.Infrastructure.dll
-D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.dll
-D:\Program\仓库\Warehource.Modules\User.Infrastructure\bin\Debug\net8.0\Common.pdb

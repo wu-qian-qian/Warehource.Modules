@@ -9,7 +9,7 @@ internal sealed class CacheService(IDistributedCache cache) : ICacheService
     public async Task<T?> GetAsync<T>(string key, CancellationToken cancellationToken = default)
     {
         var bytes = await cache.GetAsync(key, cancellationToken);
-
+        if (bytes != null) await SetAsync(key, bytes);
         return bytes is null ? default : BufferHelper.Deserialize<T>(bytes);
     }
 
@@ -26,6 +26,7 @@ internal sealed class CacheService(IDistributedCache cache) : ICacheService
     public async Task<byte[]?> GetAsync(string key, CancellationToken cancellationToken = default)
     {
         var bytes = await cache.GetAsync(key, cancellationToken);
+        if (bytes != null) await SetAsync(key, bytes);
         return bytes;
     }
 

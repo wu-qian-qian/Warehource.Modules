@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Plc.Application.S7ReadWriteHandler.Read;
+using Plc.Contracts.Respon;
 using Plc.Domain.S7;
 
 namespace Plc.Application.Behaviors.Read;
@@ -7,10 +8,11 @@ namespace Plc.Application.Behaviors.Read;
 /// <summary>
 ///     单变量读取配置
 /// </summary>
-internal class SingleReadS7PlcPipelineBehavior<TRequest, TResponse>(IS7NetManager netManager)
-    : IPipelineBehavior<TRequest, TResponse> where TRequest : ReadPlcEventCommand
+internal class SingleReadS7PlcPipelineBehavior(IS7NetManager netManager)
+    : IPipelineBehavior<ReadPlcEventCommand, IEnumerable<ReadBuffer>>
 {
-    public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next,
+    public async Task<IEnumerable<ReadBuffer>> Handle(ReadPlcEventCommand request,
+        RequestHandlerDelegate<IEnumerable<ReadBuffer>> next,
         CancellationToken cancellationToken)
     {
         if (request.IsBath == false)

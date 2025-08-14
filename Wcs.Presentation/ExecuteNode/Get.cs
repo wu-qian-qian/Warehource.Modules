@@ -13,16 +13,12 @@ public class Get : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("executenode/get", [Authorize(Roles = "admin")] async (
-            ExecuteNodeRequest request,
-            ISender sender) =>
+        app.MapPost("executenode/gets", [Authorize] async (ExecuteNodeRequest request, ISender sender) =>
         {
             return await sender.Send(new GetExecuteNodeQuery
             {
                 PahtNodeGroup = request.PahtNodeGroup,
-                CurrentDeviceName = request.CurrentDeviceName,
                 CurrentDeviceType = request.CurrentDeviceType,
-                RegionCode = request.RegionCode,
                 TaskType = request.TaskType
             });
         }).WithTags(AssemblyReference.ExecuteNode);

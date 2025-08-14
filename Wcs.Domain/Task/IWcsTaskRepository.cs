@@ -13,4 +13,6 @@ public interface IWcsTaskRepository
     IQueryable<WcsTask> GetWcsTaskQuerys();
 
     void Update(WcsTask wcsTask);
+
+    void Updates(IEnumerable<WcsTask> tasks);
 }

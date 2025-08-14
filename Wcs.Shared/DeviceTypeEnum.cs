@@ -4,7 +4,7 @@ public enum DeviceTypeEnum
 {
     StockPortIn = 1,
     StockPortOut = 2,
-    StackerInTranish = 3,
-    StackerOutTranish = 4,
+    StackerInTranShip = 3,
+    StackerOutTranShip = 4,
     Stacker = 5
 }

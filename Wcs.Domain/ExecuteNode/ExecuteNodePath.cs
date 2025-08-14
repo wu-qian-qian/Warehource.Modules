@@ -12,6 +12,8 @@ public class ExecuteNodePath : IEntity
     {
     }
 
+    public byte Index { get; set; }
+
     /// <summary>
     ///     路径组
     /// </summary>
@@ -27,18 +29,17 @@ public class ExecuteNodePath : IEntity
     /// </summary>
     public WcsTaskTypeEnum TaskType { get; set; }
 
-    /// <summary>
-    ///     当前节点设备名
-    /// </summary>
-    public string CurrentDeviceName { get; set; }
-
-    /// <summary>
-    ///     下一节点设备名
-    /// </summary>
-
-    public string? NextDeviceName { get; set; }
 
     public Guid? RegionId { get; set; }
 
+    /// <summary>
+    ///     区域字符组
+    /// </summary>
+
     public Region.Region Region { get; set; }
+
+    /// <summary>
+    ///     是否启动
+    /// </summary>
+    public bool Enable { get; set; }
 }

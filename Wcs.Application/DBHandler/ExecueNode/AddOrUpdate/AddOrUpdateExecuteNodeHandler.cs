@@ -20,51 +20,30 @@ public class AddOrUpdateExecuteNodeHandler(
         CancellationToken cancellationToken)
     {
         var result = new Result<ExecuteNodeDto>();
-        var region = _regionRepository.Get(request.RegionCode);
-        var device = _deviceRepository.Get(request.CurrentDeviceName);
         var entity = _executeNodeRepository.Get(request.Id);
+        var region = _regionRepository.Get(request.RegionCode);
         if (entity == null)
         {
-            if (region != null && device != null)
+            entity = new ExecuteNodePath
             {
-                entity = new ExecuteNodePath
-                {
-                    PahtNodeGroup = request.PahtNodeGroup,
-                    CurrentDeviceName = request.CurrentDeviceName,
-                    TaskType = request.TaskType,
-                    CurrentDeviceType = device.DeviceType,
-                    Region = region,
-                    RegionId = region.Id,
-                    NextDeviceName = request.NextDeviceName
-                };
-                _executeNodeRepository.Insert([entity]);
-                await _unitOfWork.SaveChangesAsync();
-                result.SetValue(_mapper.Map<ExecuteNodeDto>(entity));
-            }
-            else
-            {
-                result.SetMessage("无区域和设备编码");
-            }
+                PahtNodeGroup = request.PahtNodeGroup,
+                TaskType = request.TaskType.Value,
+                CurrentDeviceType = request.CurrentDeviceType.Value,
+                Index = request.Index,
+                RegionId = region?.Id
+            };
+            _executeNodeRepository.Insert([entity]);
+            await _unitOfWork.SaveChangesAsync();
+            result.SetValue(_mapper.Map<ExecuteNodeDto>(entity));
         }
         else
         {
-            if (region != null && device != null)
-            {
-                result.SetMessage("无区域和设备编码");
-            }
-            else
-            {
-                entity.PahtNodeGroup = request.PahtNodeGroup;
-                entity.CurrentDeviceName = request.CurrentDeviceName;
-                entity.TaskType = request.TaskType;
-                entity.CurrentDeviceType = device.DeviceType;
-                entity.Region = region;
-                entity.RegionId = region.Id;
-                entity.NextDeviceName = request.NextDeviceName;
-                _executeNodeRepository.Update(entity);
-                await _unitOfWork.SaveChangesAsync();
-                result.SetValue(_mapper.Map<ExecuteNodeDto>(entity));
-            }
+            entity.PahtNodeGroup = request.PahtNodeGroup;
+            entity.TaskType = request.TaskType.Value;
+            entity.CurrentDeviceType = request.CurrentDeviceType.Value;
+            _executeNodeRepository.Update(entity);
+            await _unitOfWork.SaveChangesAsync();
+            result.SetValue(_mapper.Map<ExecuteNodeDto>(entity));
         }
 
         return result;

@@ -10,11 +10,7 @@ public class ExecuteNodePatheConfiguration : IEntityTypeConfiguration<Domain.Exe
     {
         builder.ToTable(Schemas.TableSchema + nameof(Domain.ExecuteNode.ExecuteNodePath));
         builder.HasKey(t => t.Id).IsClustered(false);
-        builder.Property(t => t.CurrentDeviceName).IsRequired(false)
-            .HasMaxLength(20);
-        builder.HasOne(b => b.Region)
-            .WithMany()
-            .HasForeignKey(b => b.RegionId);
         builder.Property(p => p.LastModifierUser).HasMaxLength(20);
+        builder.HasOne(p => p.Region).WithOne().HasForeignKey<Domain.ExecuteNode.ExecuteNodePath>(p => p.RegionId);
     }
 }

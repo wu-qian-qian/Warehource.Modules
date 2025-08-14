@@ -21,16 +21,4 @@ public class GetExecuteNodeQuery : IQuery<Result<IEnumerable<ExecuteNodeDto>>>
     ///     任务类型
     /// </summary>
     public WcsTaskTypeEnum? TaskType { get; set; }
-
-    public string? NextDeviceName { get; set; }
-
-    /// <summary>
-    ///     当前节点设备名
-    /// </summary>
-    public string? CurrentDeviceName { get; set; }
-
-    /// <summary>
-    ///     区域编码
-    /// </summary>
-    public string? RegionCode { get; set; }
 }

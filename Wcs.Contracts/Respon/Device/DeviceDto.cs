@@ -15,5 +15,11 @@ public class DeviceDto : BaseDto
     /// </summary>
     public string Config { get; set; }
 
+    /// <summary>
+    ///     区域字符组
+    /// </summary>
+
+    public string RegionCode { get; set; }
+
     public bool Enable { get; set; }
 }

@@ -15,11 +15,8 @@ public class GetExecuteNodeQueryHandler(IExecuteNodeRepository _executeNodeRepos
     {
         var result = new Result<IEnumerable<ExecuteNodeDto>>();
         var data = _executeNodeRepository.GetQuerys()
-            .WhereIf(request.RegionCode != null, x => x.Region.Code == request.RegionCode)
             .WhereIf(request.PahtNodeGroup != null, x => x.PahtNodeGroup == request.PahtNodeGroup)
-            .WhereIf(request.CurrentDeviceName != null, x => x.CurrentDeviceName == request.CurrentDeviceName)
             .WhereIf(request.TaskType != null, x => x.TaskType == request.TaskType)
-            .WhereIf(request.CurrentDeviceType != null, x => x.CurrentDeviceType == request.CurrentDeviceType)
             .ToList();
         var source = _mapper.Map<IEnumerable<ExecuteNodeDto>>(data);
         result.SetValue(source);

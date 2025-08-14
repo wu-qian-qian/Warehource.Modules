@@ -51,6 +51,10 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<bool>("Enable")
                         .HasColumnType("bit");
 
+                    b.Property<string>("GroupName")
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -60,6 +64,10 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<string>("LastModifierUser")
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("WcsTaskCode")
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
 
                     b.HasKey("Id");
 
@@ -80,12 +88,14 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<DateTime>("CreationTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("CurrentDeviceName")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
                     b.Property<int>("CurrentDeviceType")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Enable")
+                        .HasColumnType("bit");
+
+                    b.Property<byte>("Index")
+                        .HasColumnType("tinyint");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -96,9 +106,6 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<string>("LastModifierUser")
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("NextDeviceName")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PahtNodeGroup")
                         .IsRequired()
@@ -114,7 +121,9 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                     SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"), false);
 
-                    b.HasIndex("RegionId");
+                    b.HasIndex("RegionId")
+                        .IsUnique()
+                        .HasFilter("[RegionId] IS NOT NULL");
 
                     b.ToTable("Wcs.ExecuteNodePath", (string)null);
                 });
@@ -273,12 +282,18 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsEnforce")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime?>("LastModificationTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastModifierUser")
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("int");
 
                     b.Property<Guid?>("RegionId")
                         .HasColumnType("uniqueidentifier");
@@ -289,8 +304,13 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SerialNumber"), 4000L);
 
+                    b.Property<string>("StockInPosition")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<string>("StockOutPosition")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("TaskCode")
                         .HasMaxLength(50)
@@ -336,12 +356,16 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<DateTime>("CreationTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CurentDevice")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<string>("Description")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<Guid?>("ExecuteNodePath")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("DeviceType")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -375,8 +399,8 @@ namespace Wcs.Infrastructure.Database.Migrations
             modelBuilder.Entity("Wcs.Domain.ExecuteNode.ExecuteNodePath", b =>
                 {
                     b.HasOne("Wcs.Domain.Region.Region", "Region")
-                        .WithMany()
-                        .HasForeignKey("RegionId");
+                        .WithOne()
+                        .HasForeignKey("Wcs.Domain.ExecuteNode.ExecuteNodePath", "RegionId");
 
                     b.Navigation("Region");
                 });

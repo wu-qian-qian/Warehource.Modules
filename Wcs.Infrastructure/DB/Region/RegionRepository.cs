@@ -41,4 +41,9 @@ public sealed class RegionRepository(WCSDBContext _db) : IRegionRepository
     {
         return _db.Query<Domain.Region.Region>().ToList();
     }
+
+    public IQueryable<Domain.Region.Region> GetQuery()
+    {
+        return _db.Query<Domain.Region.Region>();
+    }
 }

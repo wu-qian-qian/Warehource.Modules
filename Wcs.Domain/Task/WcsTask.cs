@@ -9,6 +9,16 @@ public class WcsTask : IEntity
     {
     }
 
+    /// <summary>
+    ///     等级
+    /// </summary>
+    public int Level { get; set; }
+
+    /// <summary>
+    ///     是否强制执行
+    /// </summary>
+    public bool IsEnforce { get; set; }
+
     public string TaskCode { get; set; }
 
     /// <summary>
@@ -53,6 +63,7 @@ public class WcsTask : IEntity
 
     public string? StockOutPosition { get; set; }
 
+    public string? StockInPosition { get; set; }
 
     public Guid? RegionId { get; set; }
 

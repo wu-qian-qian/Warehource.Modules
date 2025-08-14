@@ -21,4 +21,8 @@ public class AddOrUpdateDeviceEvent : ICommand<Result<DeviceDto>>
     public string? Config { get; set; }
 
     public bool? Enable { get; set; }
+
+    public string RegionCode { get; set; }
+
+    public string? GroupName { get; set; }
 }

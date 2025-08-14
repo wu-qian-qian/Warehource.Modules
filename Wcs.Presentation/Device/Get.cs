@@ -13,9 +13,7 @@ public class Get : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("decive/get", [Authorize] async (
-            DeviceRequest request,
-            ISender sender) =>
+        app.MapPost("decive/get", [Authorize] async (GetDviceRequest request, ISender sender) =>
         {
             return await sender.Send(new GetDeviceQuery
             {
