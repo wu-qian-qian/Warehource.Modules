@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.Handler.DB.Device.Get;
+using Wcs.Application.Handler.DataBase.Device.Get;
 using Wcs.Contracts.Request.Device;
 
 namespace Wcs.Presentation.Device;

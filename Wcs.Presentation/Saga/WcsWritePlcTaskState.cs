@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Wcs.Presentation.Saga
 {
-    internal class WcsWritePlcTaskState : SagaStateMachineInstance, ISagaVersion
+    public class WcsWritePlcTaskState : SagaStateMachineInstance, ISagaVersion
     {
         // 当前状态（由MassTransit自动管理）
         public string CurrentState { get; set; }

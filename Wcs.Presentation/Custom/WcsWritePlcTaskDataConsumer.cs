@@ -13,7 +13,7 @@ namespace Wcs.Presentation.Custom
     /// 状态机更新状态如果写入数据失败，状态机任务状态，重新写入数据
     /// </summary>
     /// <param name="send"></param>
-    internal class WcsWritePlcTaskDataConsumer(ISender send) : IConsumer<WcsWritePlcTaskDataIntegrationEvent>
+    public class WcsWritePlcTaskDataConsumer(ISender send) : IConsumer<WcsWritePlcTaskDataIntegrationEvent>
     {
         public async Task Consume(ConsumeContext<WcsWritePlcTaskDataIntegrationEvent> context)
         {

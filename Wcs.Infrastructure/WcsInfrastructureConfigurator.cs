@@ -28,6 +28,7 @@ using Wcs.Infrastructure.Job.Options;
 using Wcs.Infrastructure.Job.Service;
 using Wcs.Infrastructure.SignalR;
 using Wcs.Presentation.Custom;
+using Wcs.Presentation.Saga;
 using Wcs.Shared;
 using AssemblyReference = Wcs.Presentation.AssemblyReference;
 
@@ -93,6 +94,10 @@ public static class WcsInfrastructureConfigurator
     public static void AddConsumers(IRegistrationConfigurator registrationConfigurator)
     {
         registrationConfigurator.AddConsumer<PlcMapDataIntegrationEventConsumer>();
+        registrationConfigurator.AddConsumer<WcsWritePlcTaskDataConsumer>();
+        //saga注入
+        registrationConfigurator.AddSagaStateMachine<WcsWritePlcTaskSaga, WcsWritePlcTaskState>()
+            .InMemoryRepository();
     }
 
     /// <summary>

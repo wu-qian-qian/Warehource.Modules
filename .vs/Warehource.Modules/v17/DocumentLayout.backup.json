@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\s7readwritehandler\\write\\writelplceventcommandhandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\s7readwritehandler\\write\\writelplceventcommandhandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\s7readwritehandler\\write\\writeplceventcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\s7readwritehandler\\write\\writeplceventcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.presentation\\custom\\writeplceventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|solutionrelative:plc.presentation\\custom\\writeplceventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\saga\\wcswriteplctasksaga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\saga\\wcswriteplctasksaga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.presentation\\saga\\plcmapsaga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|solutionrelative:plc.presentation\\saga\\plcmapsaga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\custom\\plcmapdataintegrationeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\custom\\plcmapdataintegrationeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -103,84 +78,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WritelPlcEventCommandHandle.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\S7ReadWriteHandler\\Write\\WritelPlcEventCommandHandle.cs",
-              "RelativeDocumentMoniker": "Plc.Application\\S7ReadWriteHandler\\Write\\WritelPlcEventCommandHandle.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\S7ReadWriteHandler\\Write\\WritelPlcEventCommandHandle.cs",
-              "RelativeToolTip": "Plc.Application\\S7ReadWriteHandler\\Write\\WritelPlcEventCommandHandle.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAADwvx0AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T02:12:23.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WritePlcEventCommand.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\S7ReadWriteHandler\\Write\\WritePlcEventCommand.cs",
-              "RelativeDocumentMoniker": "Plc.Application\\S7ReadWriteHandler\\Write\\WritePlcEventCommand.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\S7ReadWriteHandler\\Write\\WritePlcEventCommand.cs",
-              "RelativeToolTip": "Plc.Application\\S7ReadWriteHandler\\Write\\WritePlcEventCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T02:12:22.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WritePlcEventConsumer.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\Custom\\WritePlcEventConsumer.cs",
-              "RelativeDocumentMoniker": "Plc.Presentation\\Custom\\WritePlcEventConsumer.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\Custom\\WritePlcEventConsumer.cs",
-              "RelativeToolTip": "Plc.Presentation\\Custom\\WritePlcEventConsumer.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAApwBwAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T02:10:40.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PlcMapDataIntegrationEventConsumer.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Custom\\PlcMapDataIntegrationEventConsumer.cs",
-              "RelativeDocumentMoniker": "Wcs.Presentation\\Custom\\PlcMapDataIntegrationEventConsumer.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Custom\\PlcMapDataIntegrationEventConsumer.cs",
-              "RelativeToolTip": "Wcs.Presentation\\Custom\\PlcMapDataIntegrationEventConsumer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T02:09:47.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlcMapSaga.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\Saga\\PlcMapSaga.cs",
-              "RelativeDocumentMoniker": "Plc.Presentation\\Saga\\PlcMapSaga.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\Saga\\PlcMapSaga.cs",
-              "RelativeToolTip": "Plc.Presentation\\Saga\\PlcMapSaga.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAqwEsAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T02:09:10.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WcsWritePlcTaskSaga.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Saga\\WcsWritePlcTaskSaga.cs",
-              "RelativeDocumentMoniker": "Wcs.Presentation\\Saga\\WcsWritePlcTaskSaga.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Saga\\WcsWritePlcTaskSaga.cs",
-              "RelativeToolTip": "Wcs.Presentation\\Saga\\WcsWritePlcTaskSaga.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAcwGMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T02:09:03.071Z",
-              "EditorCaption": ""
             }
           ]
         }

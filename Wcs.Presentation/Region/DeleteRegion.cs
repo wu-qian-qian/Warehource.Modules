@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.Handler.DB.Region.Delete;
+using Wcs.Application.Handler.DataBase.Region.Delete;
 
 namespace Wcs.Presentation.Region;
 

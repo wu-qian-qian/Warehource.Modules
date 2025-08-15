@@ -1,12 +1,16 @@
 ﻿using System.Linq.Expressions;
 using Common.JsonExtension;
-using Wcs.Device.DeviceDB;
 
 namespace Wcs.Device.Abstract;
 
+/// <summary>
+/// 设备数据结构
+/// </summary>
+/// <typeparam name="TConfig"></typeparam>
+/// <typeparam name="TDBEntity"></typeparam>
 public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     where TConfig : BaseDeviceConfig where TDBEntity : BaseDBEntity
-{ 
+{
     public abstract TDBEntity DBEntity { get; protected set; }
     public abstract string Name { get; init; }
     public abstract TConfig Config { get; protected set; }

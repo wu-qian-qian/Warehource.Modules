@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.Handler.DB.Job.Delete;
+using Wcs.Application.Handler.DataBase.Job.Delete;
 using Wcs.Contracts.Request.Job;
 
 namespace Wcs.Presentation.Job.Delete;

@@ -6,7 +6,9 @@ using Common.Shared;
 using Plc.CustomEvents;
 using Serilog;
 using Wcs.Contracts.Respon.Plc;
-using Wcs.Device.DeviceDB;
+using Wcs.Device.Abstract;
+using Wcs.Device.DataBlock;
+using Wcs.Device.Helper;
 using Wcs.Domain.Plc;
 using Wcs.Shared;
 
@@ -25,7 +27,8 @@ internal class GetPlcDBQueryHandler(
         {
             result = request.DeviceType switch
             {
-                DeviceTypeEnum.Stacker => StackerDBEntity.CreatDBEntity(dbResult.ToArray()),
+                DeviceTypeEnum.Stacker => CreatDBEntity.CreatEntity<StackerDBEntity>(dbResult.ToArray(),
+                    request.DBEntity),
                 DeviceTypeEnum.StockPortIn => throw new NotImplementedException(),
                 DeviceTypeEnum.StockPortOut => throw new NotImplementedException(),
                 DeviceTypeEnum.StackerInTranShip => throw new NotImplementedException(),

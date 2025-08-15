@@ -11,12 +11,8 @@ using Wcs.CustomEvents.Saga;
 
 namespace Wcs.Presentation.Saga
 {
-    internal class WcsWritePlcTaskSaga : MassTransitStateMachine<WcsWritePlcTaskState>
+    public class WcsWritePlcTaskSaga : MassTransitStateMachine<WcsWritePlcTaskState>
     {
-        public State Processing { get; } // 处理中（等待服务结果）
-        public State Pending { get; } // 处理成功状态
-
-
         public WcsWritePlcTaskSaga()
         {
             // 绑定状态存储字段
@@ -46,8 +42,9 @@ namespace Wcs.Presentation.Saga
                 //})
                 // 发布数据集成服务调用事件
                 .Publish(context =>
-                    new S7WritePlcDataBlockIntegrationEvent( DateTime.Now,
-                    context.Message.DeviceName,context.Message.DBNameToDataValue,context.Message.Ip,context.Message.key))
+                    new S7WritePlcDataBlockIntegrationEvent(DateTime.Now,
+                        context.Message.DeviceName, context.Message.DBNameToDataValue, context.Message.Ip,
+                        context.Message.key))
                 // 进入"处理中"状态，等待服务结果
                 .TransitionTo(Processing));
 
@@ -84,16 +81,19 @@ namespace Wcs.Presentation.Saga
                 When(WcsWritePlcTaskDataCompleted)
                     .Publish(context => new WcsWritePlcTaskProcessed(
                         context.Saga.DeviceName,
-                        context.Message.Success,context.Message.key)).TransitionTo(Pending));
+                        context.Message.Success, context.Message.key)).TransitionTo(Pending));
 
             // 可以在这里添加对最终状态的后续处理（如超时控制等） 如果object是强一致性就需要用消息队列
             DuringAny(
                 When(WcsWritePlcTaskDataProcessed)
-                    .Publish(context => 
-                    new WcsWritePlcTaskDataIntegrationEvent(context.Message.key, context.Message.Success))
+                    .Publish(context =>
+                        new WcsWritePlcTaskDataIntegrationEvent(context.Message.key, context.Message.Success))
                     .Finalize() // 结束Saga实例
             );
         }
+
+        public State Processing { get; } // 处理中（等待服务结果）
+        public State Pending { get; } // 处理成功状态
 
         // 定义事件
         public Event<WcsWritePlcTaskCreated> WcsWritePlcTaskDataCreated { get; }

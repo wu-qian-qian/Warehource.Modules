@@ -1,7 +1,7 @@
 ﻿using Common.Application.Caching;
 using MediatR;
-using Plc.Application.S7ReadWriteHandler;
-using Plc.Application.S7ReadWriteHandler.Read;
+using Plc.Application.Handler.ReadWrite;
+using Plc.Application.Handler.ReadWrite.Read;
 using Plc.Contracts.DataModel;
 using Plc.Contracts.Respon;
 using Plc.Domain.S7;

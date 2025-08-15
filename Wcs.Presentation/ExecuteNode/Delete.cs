@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.Handler.DB.ExecueNode.Delete;
+using Wcs.Application.Handler.DataBase.ExecueNode.Delete;
 
 namespace Wcs.Presentation.ExecuteNode;
 

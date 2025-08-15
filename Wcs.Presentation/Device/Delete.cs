@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.Handler.DB.Device.Delete;
+using Wcs.Application.Handler.DataBase.Device.Delete;
 
 namespace Wcs.Presentation.Device;
 

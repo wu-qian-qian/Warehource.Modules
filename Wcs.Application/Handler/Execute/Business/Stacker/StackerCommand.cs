@@ -1,5 +1,5 @@
 ﻿using Common.Application.MediatR.Message;
-using Wcs.Device.BaseDevice;
+using Wcs.Device.Device.Stacker;
 
 namespace Wcs.Application.Handler.Execute.Business.Stacker;
 

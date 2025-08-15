@@ -12,8 +12,4 @@
         <ProjectReference Include="..\Wcs.Contracts\Wcs.Contracts.csproj"/>
     </ItemGroup>
 
-    <ItemGroup>
-        <Folder Include="BaseDevice\Tranship\"/>
-    </ItemGroup>
-
 </Project>

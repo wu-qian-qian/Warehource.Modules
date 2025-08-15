@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using MediatR;
 using Plc.CustomEvents.Saga;
-using Wcs.Application.Handler.DB.PlcMap.InsertOrUpdate;
+using Wcs.Application.Handler.DataBase.PlcMap.InsertOrUpdate;
 using Wcs.CustomEvents;
 
 namespace Wcs.Presentation.Custom;

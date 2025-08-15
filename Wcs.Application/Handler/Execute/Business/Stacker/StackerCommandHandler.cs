@@ -7,8 +7,8 @@ using Serilog;
 using Wcs.Application.Handler.Execute.GetWcsTask;
 using Wcs.Application.Handler.Execute.ReadPlcBlock;
 using Wcs.Application.Handler.Http.Complate;
-using Wcs.Device.BaseDevice;
-using Wcs.Device.DeviceDB;
+using Wcs.Device.DataBlock;
+using Wcs.Device.Device.Stacker;
 using Wcs.Domain.Task;
 using Wcs.Shared;
 
@@ -26,7 +26,12 @@ internal class StackerCommandHandler(ISender sender, ICacheService _cacheService
         var stackerDBEntity = (StackerDBEntity)
             await sender.Send(
                 new GetPlcDBQuery
-                    { DeviceName = stacker.Name, Key = stacker.Config.DBKey, DeviceType = DeviceTypeEnum.Stacker },
+                {
+                    DeviceName = stacker.Name,
+                    Key = stacker.Config.DBKey,
+                    DeviceType = DeviceTypeEnum.Stacker,
+                    DBEntity = stacker.DBEntity
+                },
                 cancellationToken);
         if (stackerDBEntity != null)
         {

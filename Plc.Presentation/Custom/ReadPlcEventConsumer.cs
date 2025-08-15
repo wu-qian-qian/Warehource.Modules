@@ -2,7 +2,7 @@
 using Common.Shared;
 using MassTransit;
 using MediatR;
-using Plc.Application.S7ReadWriteHandler.Read;
+using Plc.Application.Handler.ReadWrite.Read;
 using Plc.CustomEvents;
 using Serilog;
 

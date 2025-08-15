@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Wcs.Application.Handler.DB.Region.Get;
+using Wcs.Application.Handler.DataBase.Region.Get;
 using Wcs.Contracts.Respon.Region;
 
 namespace Wcs.Presentation.Region;

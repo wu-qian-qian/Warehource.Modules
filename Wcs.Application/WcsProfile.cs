@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Wcs.Application.Handler.DB.Job.Insert;
-using Wcs.Application.Handler.DB.WcsTask.AddOrUpdate;
+using Wcs.Application.Handler.DataBase.Job.Insert;
+using Wcs.Application.Handler.DataBase.WcsTask.AddOrUpdate;
 using Wcs.Contracts.Request.WcsTask;
 using Wcs.Contracts.Respon.Device;
 using Wcs.Contracts.Respon.ExecuteNode;

@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\execute\\business\\stacker\\stackercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\execute\\business\\stacker\\stackercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -83,19 +78,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StackerCommandHandler.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Execute\\Business\\Stacker\\StackerCommandHandler.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\Execute\\Business\\Stacker\\StackerCommandHandler.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Execute\\Business\\Stacker\\StackerCommandHandler.cs",
-              "RelativeToolTip": "Wcs.Application\\Handler\\Execute\\Business\\Stacker\\StackerCommandHandler.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAowDAAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T03:07:10.067Z",
-              "EditorCaption": ""
             }
           ]
         }

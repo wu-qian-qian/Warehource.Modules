@@ -8,17 +8,19 @@ namespace Wcs.Device.Abstract
 {
     public abstract class BaseDeviceConfig
     {
-
         protected BaseDeviceConfig()
         {
             Key = Guid.NewGuid().ToString();
             DBKey = Guid.NewGuid().ToString();
             TaskKey = Guid.NewGuid().ToString();
         }
+
+        public string Code { get; set; }
+
         /// <summary>
         /// 缓存使用    唯一标识
         /// </summary>
-        public  string Key { get;protected set; }
+        public string Key { get; protected set; }
 
         /// <summary>
         /// 用于DB块读取的key

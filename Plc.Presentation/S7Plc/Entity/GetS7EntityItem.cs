@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Plc.Application.DBHandler.Get.Entity;
+using Plc.Application.Handler.DataBase.Get.Entity;
 
 namespace Plc.Presentation.S7Plc.Entity;
 
