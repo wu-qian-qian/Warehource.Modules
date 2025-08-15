@@ -2,6 +2,9 @@
 
 namespace Wcs.CustomEvents;
 
+/// <summary>
+///     变量映射事件
+/// </summary>
 public class PlcMapDataIntegrationEvent : IMassTransitDomainEvent
 {
     public PlcMapDataIntegrationEvent(DateTime occurredOnUtc) : base(occurredOnUtc)

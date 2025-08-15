@@ -69,7 +69,8 @@ namespace Plc.Infrastructure.Database.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastModifierUser")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -117,7 +118,8 @@ namespace Plc.Infrastructure.Database.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastModifierUser")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("Port")
                         .HasColumnType("int");

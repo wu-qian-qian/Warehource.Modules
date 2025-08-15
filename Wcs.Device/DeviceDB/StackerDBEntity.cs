@@ -3,7 +3,7 @@ using Wcs.Contracts.Respon.Plc;
 
 namespace Wcs.Device.DeviceDB;
 
-public class StackerDBEntity : BaseEntity
+public class StackerDBEntity : BaseDBEntity
 {
     public static PropertyInfo[] _propertyInfos = typeof(StackerDBEntity).GetProperties();
     public string RTask { get; set; }

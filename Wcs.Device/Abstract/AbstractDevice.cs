@@ -1,18 +1,32 @@
 ﻿using System.Linq.Expressions;
+using Common.JsonExtension;
 using Wcs.Device.DeviceDB;
 
 namespace Wcs.Device.Abstract;
 
 public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
-    where TConfig : class where TDBEntity : BaseEntity
-{
+    where TConfig : BaseDeviceConfig where TDBEntity : BaseDBEntity
+{ 
     public abstract TDBEntity DBEntity { get; protected set; }
     public abstract string Name { get; init; }
     public abstract TConfig Config { get; protected set; }
 
-    public abstract void SetConfig(string config);
+    /// <summary>
+    ///     设置配置项
+    /// </summary>
+    /// <param name="config"></param>
+    public virtual void SetConfig(string config)
+    {
+        Config = config.ParseJson<TConfig>();
+    }
 
-    public abstract void SetDBEntity(TDBEntity config);
+    /// <summary>
+    /// </summary>
+    /// <param name="StackerDBEntity"></param>
+    public virtual void SetDBEntity(TDBEntity StackerDBEntity)
+    {
+        DBEntity = StackerDBEntity;
+    }
 
     public abstract bool IsNewStart();
 

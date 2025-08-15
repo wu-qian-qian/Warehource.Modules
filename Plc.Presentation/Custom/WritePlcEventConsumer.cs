@@ -6,6 +6,7 @@ using MediatR;
 using Plc.Application.S7ReadWriteHandler.Write;
 using Plc.CustomEvents;
 using Serilog;
+using Wcs.CustomEvents.Saga;
 
 namespace Plc.Presentation.Custom;
 
@@ -19,11 +20,12 @@ namespace Plc.Presentation.Custom;
 /// <param name="cache"></param>
 public class WritePlcEventConsumer<TIntegrationEvent>(IMassTransitEventBus bus, ISender sender)
     : IConsumer<TIntegrationEvent>
-    where TIntegrationEvent : S7WritePlcDataBlockEvent
+    where TIntegrationEvent : S7WritePlcDataBlockIntegrationEvent
 {
     public async Task Consume(ConsumeContext<TIntegrationEvent> context)
     {
-        S7WritePlcDataBlockEvent s7ReadPlcConsumevent = context.Message;
+        WcsWritePlcTaskCompleted completed = default;
+        S7WritePlcDataBlockIntegrationEvent s7ReadPlcConsumevent = context.Message;
         var readPlcEvent = new WritePlcEventCommand
         {
             UseMemory = s7ReadPlcConsumevent.UseMemory,
@@ -32,11 +34,15 @@ public class WritePlcEventConsumer<TIntegrationEvent>(IMassTransitEventBus bus, 
         };
         try
         {
-            await sender.Send(readPlcEvent);
+            var @bool = await sender.Send(readPlcEvent);
+            completed = new WcsWritePlcTaskCompleted(context.Message.DeviceName, @bool, context.Message.Key);
         }
         catch (Exception e)
         {
-            Log.Logger.ForCategory(LogCategory.Event).Information($"{context.Host}--发送Plc读取出现异常{e.Message}");
+            Log.Logger.ForCategory(LogCategory.Event).Information($"{context.Host}--发送Plc写入出现异常{e.Message}");
+            completed = new WcsWritePlcTaskCompleted(context.Message.DeviceName, false, context.Message.Key);
         }
+
+        await context.Publish(completed);
     }
 }

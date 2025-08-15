@@ -1,6 +1,8 @@
-﻿namespace Wcs.Device.Config;
+﻿using Wcs.Device.Abstract;
 
-public class StockInConfig
+namespace Wcs.Device.Config;
+
+public class StockInConfig : BaseDeviceConfig
 {
     public string Code { get; set; }
 }

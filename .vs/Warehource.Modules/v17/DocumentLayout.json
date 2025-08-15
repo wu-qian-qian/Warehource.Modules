@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\db\\region\\addorupdate\\addorupdateregioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\db\\region\\addorupdate\\addorupdateregioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\db\\region\\addorupdate\\addorupdateregioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\db\\region\\addorupdate\\addorupdateregioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\db\\region\\addorupdate\\addorupdateregioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\db\\region\\addorupdate\\addorupdateregioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\execute\\readplcblock\\getplcdbqueryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\execute\\readplcblock\\getplcdbqueryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\execute\\business\\stacker\\stackercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\execute\\business\\stacker\\stackercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,54 +86,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddOrUpdateRegionCommandHandler.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DB\\Region\\AddOrUpdate\\AddOrUpdateRegionCommandHandler.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\DB\\Region\\AddOrUpdate\\AddOrUpdateRegionCommandHandler.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DB\\Region\\AddOrUpdate\\AddOrUpdateRegionCommandHandler.cs",
-              "RelativeToolTip": "Wcs.Application\\Handler\\DB\\Region\\AddOrUpdate\\AddOrUpdateRegionCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T08:13:37.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AddOrUpdateRegionCommandValidator.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DB\\Region\\AddOrUpdate\\AddOrUpdateRegionCommandValidator.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\DB\\Region\\AddOrUpdate\\AddOrUpdateRegionCommandValidator.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DB\\Region\\AddOrUpdate\\AddOrUpdateRegionCommandValidator.cs",
-              "RelativeToolTip": "Wcs.Application\\Handler\\DB\\Region\\AddOrUpdate\\AddOrUpdateRegionCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAAlAAAAAAAAAA==",
+              "Title": "StackerCommandHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Execute\\Business\\Stacker\\StackerCommandHandler.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\Execute\\Business\\Stacker\\StackerCommandHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Execute\\Business\\Stacker\\StackerCommandHandler.cs",
+              "RelativeToolTip": "Wcs.Application\\Handler\\Execute\\Business\\Stacker\\StackerCommandHandler.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAowDAAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T08:13:30.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AddOrUpdateRegionCommand.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DB\\Region\\AddOrUpdate\\AddOrUpdateRegionCommand.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\DB\\Region\\AddOrUpdate\\AddOrUpdateRegionCommand.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DB\\Region\\AddOrUpdate\\AddOrUpdateRegionCommand.cs",
-              "RelativeToolTip": "Wcs.Application\\Handler\\DB\\Region\\AddOrUpdate\\AddOrUpdateRegionCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T08:13:26.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetPlcDBQueryValidator.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Execute\\ReadPlcBlock\\GetPlcDBQueryValidator.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\Execute\\ReadPlcBlock\\GetPlcDBQueryValidator.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Execute\\ReadPlcBlock\\GetPlcDBQueryValidator.cs",
-              "RelativeToolTip": "Wcs.Application\\Handler\\Execute\\ReadPlcBlock\\GetPlcDBQueryValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T08:12:49.852Z",
+              "WhenOpened": "2025-08-15T03:07:10.067Z",
               "EditorCaption": ""
             }
           ]

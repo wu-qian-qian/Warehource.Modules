@@ -31,6 +31,7 @@ public class PlcMapSaga : MassTransitStateMachine<PlcMapState>
         });
         // 初始流程：第一次收到PlcMapCreated事件
         Initially(When(PlcMapCreated)
+            //用来限制同一DeviceName只能发送一次  
             .Then(context =>
             {
                 // 通过context.Saga访问当前Saga实例的状态对象
@@ -80,7 +81,8 @@ public class PlcMapSaga : MassTransitStateMachine<PlcMapState>
         // 可以在这里添加对最终状态的后续处理（如超时控制等） 如果object是强一致性就需要用消息队列
         DuringAny(
             When(PlcMapProcessed)
-                .Publish(context => new PlcMapEventCommitEvent(context.Message.DeviceName, context.Message.Success))
+                .Publish(context =>
+                    new PlcMapEventCommitIntegrationEvent(context.Message.DeviceName, context.Message.Success))
                 .Finalize() // 结束Saga实例
         );
     } // 定义状态

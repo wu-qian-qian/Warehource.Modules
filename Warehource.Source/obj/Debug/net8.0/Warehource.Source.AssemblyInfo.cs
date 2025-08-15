@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Warehource.Source")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+685f5f02ef84767cbc610ff6efa012e2d5cd2d4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1552e8d006af4512dfac2519ca26e113decdfc48")]
 [assembly: System.Reflection.AssemblyProductAttribute("Warehource.Source")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Warehource.Source")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

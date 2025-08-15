@@ -68,7 +68,12 @@ builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
-
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+    app.Initialization(); //在开发环境中应用数据库迁移
+}
 app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 

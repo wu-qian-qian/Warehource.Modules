@@ -70,8 +70,8 @@ public static class PlcInfrastructureConfigurator
     /// <param name="registrationConfigurator"></param>
     public static void AddConsumers(IRegistrationConfigurator registrationConfigurator)
     {
-        registrationConfigurator.AddConsumer<ReadPlcEventConsumer<S7ReadPlcDataBlockEvent>>();
-        registrationConfigurator.AddConsumer<WritePlcEventConsumer<S7WritePlcDataBlockEvent>>();
+        registrationConfigurator.AddConsumer<ReadPlcEventConsumer<S7ReadPlcDataBlockIntegrationEvent>>();
+        registrationConfigurator.AddConsumer<WritePlcEventConsumer<S7WritePlcDataBlockIntegrationEvent>>();
         registrationConfigurator.AddConsumer<PlcMapEventCommitConsumer>();
         //saga注入
         registrationConfigurator.AddSagaStateMachine<PlcMapSaga, PlcMapState>()

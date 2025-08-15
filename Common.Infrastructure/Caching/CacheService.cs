@@ -4,6 +4,10 @@ using Microsoft.Extensions.Caching.Distributed;
 
 namespace Common.Infrastructure.Caching;
 
+/// <summary>
+///     每一次获取数据缓存的时间会被重置
+/// </summary>
+/// <param name="cache"></param>
 internal sealed class CacheService(IDistributedCache cache) : ICacheService
 {
     public async Task<T?> GetAsync<T>(string key, CancellationToken cancellationToken = default)

@@ -1,7 +1,11 @@
-﻿namespace Wcs.Device.Config;
+﻿using Wcs.Device.Abstract;
 
-public class StackerConfig
+namespace Wcs.Device.Config;
+
+public class StackerConfig : BaseDeviceConfig
 {
+    /// <summary>
+    ///     巷道编码
+    /// </summary>
     public int Tunnle { get; set; }
-    public string Code { get; set; }
 }

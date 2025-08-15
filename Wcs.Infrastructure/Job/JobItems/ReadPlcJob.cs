@@ -18,7 +18,7 @@ internal class ReadPlcJob(IMassTransitEventBus bus, ISender sender, ICacheServic
         {
             //事件触发，最终直接通过读取唯一id
             var guid = Guid.NewGuid();
-            await bus.PublishAsync(new S7ReadPlcDataBlockEvent(DateTime.Now)
+            await bus.PublishAsync(new S7ReadPlcDataBlockIntegrationEvent(DateTime.Now)
             {
                 Ip = "127.0.0.1"
             });

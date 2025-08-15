@@ -425,36 +425,6 @@
         }
       }
     },
-    "/job/get-job/{id}": {
-      "get": {
-        "tags": [
-          "Job"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/job/get-jobs": {
       "get": {
         "tags": [

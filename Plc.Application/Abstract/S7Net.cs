@@ -52,12 +52,6 @@ public abstract class S7Net : INet
     /// <returns></returns>
     public abstract Task<string> ReadTResultAsync(ReadBufferInput input);
 
-    /// <summary>
-    ///     写入数据以byte数组的形式写入
-    /// </summary>
-    /// <param name="bulkItems"></param>
-    /// <returns></returns>
-    public abstract Task WriteToBytesAsync(WriteBufferItemInput[] bulkItems);
 
     /// <summary>
     ///     检查写入数据写入后在检查数据一致

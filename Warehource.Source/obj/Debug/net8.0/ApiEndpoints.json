@@ -237,33 +237,6 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.Job.Get.GetJobConfig\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoint\u003Eb__0_0",
-    "RelativePath": "job/get-job/{id}",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "Tags": [
-      "Job"
-    ]
-  },
-  {
     "ContainingType": "Wcs.Presentation.Job.Get.GetJobsConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "job/get-jobs",

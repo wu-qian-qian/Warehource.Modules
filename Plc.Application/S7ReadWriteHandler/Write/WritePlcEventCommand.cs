@@ -6,7 +6,7 @@ namespace Plc.Application.S7ReadWriteHandler.Write;
 /// <summary>
 ///     上层的 模型
 /// </summary>
-public class WritePlcEventCommand : ICommand
+public class WritePlcEventCommand : ICommand<bool>
 {
     /// <summary>
     ///     PLC的读取数据结构

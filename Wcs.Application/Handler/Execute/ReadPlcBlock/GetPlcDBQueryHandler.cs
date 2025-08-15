@@ -15,12 +15,12 @@ namespace Wcs.Application.Handler.Execute.ReadPlcBlock;
 internal class GetPlcDBQueryHandler(
     ICacheService _cacheService,
     IPlcMapRepository _plcMapRepository,
-    IMassTransitEventBus _bus) : IQueryHandler<GetPlcDBQuery, BaseEntity>
+    IMassTransitEventBus _bus) : IQueryHandler<GetPlcDBQuery, BaseDBEntity>
 {
-    public async Task<BaseEntity> Handle(GetPlcDBQuery request, CancellationToken cancellationToken)
+    public async Task<BaseDBEntity> Handle(GetPlcDBQuery request, CancellationToken cancellationToken)
     {
-        var dbResult = await _cacheService.GetAsync<IEnumerable<PlcBuffer>>(request.DeviceName, cancellationToken);
-        BaseEntity result = default;
+        var dbResult = await _cacheService.GetAsync<IEnumerable<PlcBuffer>>(request.Key, cancellationToken);
+        BaseDBEntity result = default;
         if (dbResult != null)
         {
             result = request.DeviceType switch
@@ -37,7 +37,7 @@ internal class GetPlcDBQueryHandler(
         }
         else
         {
-            await _bus.PublishAsync(new S7ReadPlcDataBlockEvent(DateTime.Now)
+            await _bus.PublishAsync(new S7ReadPlcDataBlockIntegrationEvent(DateTime.Now)
             {
                 DeviceName = request.DeviceName,
                 UseMemory = false

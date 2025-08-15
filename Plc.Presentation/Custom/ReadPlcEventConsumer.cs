@@ -18,11 +18,11 @@ namespace Plc.Presentation.Custom;
 /// <param name="cache"></param>
 public class ReadPlcEventConsumer<TIntegrationEvent>(ISender sender)
     : IConsumer<TIntegrationEvent>
-    where TIntegrationEvent : S7ReadPlcDataBlockEvent
+    where TIntegrationEvent : S7ReadPlcDataBlockIntegrationEvent
 {
     public async Task Consume(ConsumeContext<TIntegrationEvent> context)
     {
-        S7ReadPlcDataBlockEvent s7ReadPlcConsumevent = context.Message;
+        S7ReadPlcDataBlockIntegrationEvent s7ReadPlcConsumevent = context.Message;
         var readPlcEvent = new ReadPlcEventCommand
         {
             UseMemory = s7ReadPlcConsumevent.UseMemory,

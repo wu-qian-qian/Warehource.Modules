@@ -92,7 +92,6 @@ public static class WcsInfrastructureConfigurator
     /// <param name="registrationConfigurator"></param>
     public static void AddConsumers(IRegistrationConfigurator registrationConfigurator)
     {
-        registrationConfigurator.AddConsumer<WcsCustomEventConsumer<WcsIntegrationEvent>>();
         registrationConfigurator.AddConsumer<PlcMapDataIntegrationEventConsumer>();
     }
 

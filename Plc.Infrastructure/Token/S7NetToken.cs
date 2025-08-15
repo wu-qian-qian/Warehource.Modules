@@ -1,5 +1,6 @@
 using System.Text;
 using Common.Application.Log;
+using Common.Helper;
 using Common.Shared;
 using Common.TransferBuffer;
 using Plc.Application.Abstract;
@@ -198,136 +199,226 @@ public partial class S7NetToken : S7Net
         }
         else
         {
-            for (var i = 0; i < bulkItems.Length; i++)
-            {
-                var item = bulkItems[i];
-                if (item.Buffer == null)
-                    switch (item.S7DataType)
-                    {
-                        case S7DataTypeEnum.Bool:
-                        {
-                            var dbType = EnumConvert.S7BlockTypeToDataType(item.S7BlockType);
-                            bool.TryParse(item.Value, out var @bool);
-                            _plc.WriteBit(dbType, item.DBAddress, item.DBStart, item.DBBit.Value, @bool);
-                            break;
-                        }
-                        case S7DataTypeEnum.Byte:
-                        {
-                            byte.TryParse(item.Value, out var @byte);
-                            item.Buffer = new[] { @byte };
-                            break;
-                        }
-                        case S7DataTypeEnum.Int:
-                        {
-                            short.TryParse(item.Value, out var @short);
-                            item.Buffer = TransferBufferHelper.IntToByteArray(@short);
-                            break;
-                        }
-                        case S7DataTypeEnum.DInt:
-                        {
-                            int.TryParse(item.Value, out var result);
-                            item.Buffer = TransferBufferHelper.DIntToByteArray(result);
-                            break;
-                        }
-                        case S7DataTypeEnum.Word:
-                        {
-                            ushort.TryParse(item.Value, out var result);
-                            item.Buffer = TransferBufferHelper.WordToByteArray(result);
-                            break;
-                        }
-                        case S7DataTypeEnum.DWord:
-                        {
-                            uint.TryParse(item.Value, out var result);
-                            item.Buffer = TransferBufferHelper.DWordToByteArray(result);
-                            break;
-                        }
-                        case S7DataTypeEnum.Real:
-                        {
-                            float.TryParse(item.Value, out var result);
-                            item.Buffer = TransferBufferHelper.RealToByteArray(result);
-                            break;
-                        }
-                        case S7DataTypeEnum.LReal:
-                        {
-                            double.TryParse(item.Value, out var result);
-                            item.Buffer = TransferBufferHelper.LRealToByteArray(result);
-                            break;
-                        }
-                        case S7DataTypeEnum.String:
-                        {
-                            item.Buffer = TransferBufferHelper.StringToByteArray(item.Value, item.ArratCount.Value);
-                            break;
-                        }
-                        case S7DataTypeEnum.S7String:
-                        {
-                            item.Buffer =
-                                TransferBufferHelper.S7StringToByteArray(item.Value, item.ArratCount.Value,
-                                    Encoding.ASCII);
-                            break;
-                        }
-                        default:
-                            Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC无解析数据");
-                            break;
-                    }
-            }
-
             try
             {
-                await WriteToBytesAsync(bulkItems);
-                Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--写入数据成功");
+                for (var i = 0; i < bulkItems.Length; i++)
+                {
+                    var item = bulkItems[i];
+                    var dbType = EnumConvert.S7BlockTypeToDataType(item.S7BlockType);
+                    if (item.Buffer == null)
+                        switch (item.S7DataType)
+                        {
+                            case S7DataTypeEnum.Bool:
+                            {
+                                bool.TryParse(item.Value, out var @bool);
+                                _plc.WriteBit(dbType, item.DBAddress, item.DBStart, item.DBBit.Value, @bool);
+                                break;
+                            }
+                            case S7DataTypeEnum.Byte:
+                            {
+                                byte.TryParse(item.Value, out var @byte);
+                                item.Buffer = new[] { @byte };
+                                await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                                break;
+                            }
+                            case S7DataTypeEnum.Int:
+                            {
+                                short.TryParse(item.Value, out var @short);
+                                item.Buffer = TransferBufferHelper.IntToByteArray(@short);
+                                await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                                break;
+                            }
+                            case S7DataTypeEnum.DInt:
+                            {
+                                int.TryParse(item.Value, out var result);
+                                item.Buffer = TransferBufferHelper.DIntToByteArray(result);
+                                await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                                break;
+                            }
+                            case S7DataTypeEnum.Word:
+                            {
+                                ushort.TryParse(item.Value, out var result);
+                                item.Buffer = TransferBufferHelper.WordToByteArray(result);
+                                await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                                break;
+                            }
+                            case S7DataTypeEnum.DWord:
+                            {
+                                uint.TryParse(item.Value, out var result);
+                                item.Buffer = TransferBufferHelper.DWordToByteArray(result);
+                                await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                                break;
+                            }
+                            case S7DataTypeEnum.Real:
+                            {
+                                float.TryParse(item.Value, out var result);
+                                item.Buffer = TransferBufferHelper.RealToByteArray(result);
+                                await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                                break;
+                            }
+                            case S7DataTypeEnum.LReal:
+                            {
+                                double.TryParse(item.Value, out var result);
+                                item.Buffer = TransferBufferHelper.LRealToByteArray(result);
+                                await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                                break;
+                            }
+                            case S7DataTypeEnum.String:
+                            {
+                                item.Buffer = TransferBufferHelper.StringToByteArray(item.Value, item.ArratCount.Value);
+                                await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                                break;
+                            }
+                            case S7DataTypeEnum.S7String:
+                            {
+                                item.Buffer =
+                                    TransferBufferHelper.S7StringToByteArray(item.Value, item.ArratCount.Value,
+                                        Encoding.ASCII);
+                                await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                                break;
+                            }
+                            case S7DataTypeEnum.Array:
+                            {
+                                await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                                break;
+                            }
+                            default:
+                                Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC无解析数据");
+                                break;
+                        }
+                }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Log.Logger.ForCategory(LogCategory.Net).Information($"写入失败详细{e.Message}");
+                Log.Logger.ForCategory(LogCategory.Net).Information($"数据读取失败: {_plc.IP}-{ex}");
             }
         }
     }
 
-    public override async Task WriteToBytesAsync(WriteBufferItemInput[] bulkItems)
-    {
-        if (!_plc.IsConnected)
-            Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC未连接");
-        else
-            foreach (var item in bulkItems)
-            {
-                if (item.S7DataType == S7DataTypeEnum.Bool)
-                    continue;
-                var dbType = EnumConvert.S7BlockTypeToDataType(item.S7BlockType);
-                await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
-            }
-    }
 
     public override async Task<bool> CheckWriteToBytesAsync(WriteBufferItemInput[] bulkItems)
     {
-        var @bool = true;
+        var result = true;
         if (!_plc.IsConnected)
         {
             Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC未连接");
-            @bool = false;
+            result = false;
         }
         else
         {
-            foreach (var item in bulkItems)
-                if (item.Buffer != null)
+            for (var i = 0; i < bulkItems.Length; i++)
+            {
+                var item = bulkItems[i];
+                var dbType = EnumConvert.S7BlockTypeToDataType(item.S7BlockType);
+                switch (item.S7DataType)
                 {
-                    var dbType = EnumConvert.S7BlockTypeToDataType(item.S7BlockType);
-                    await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
-                    var buffer = await ReadAsync(new ReadBufferInput
+                    case S7DataTypeEnum.Bool:
                     {
-                        DBBit = item.DBBit,
-                        DBAddress = item.DBAddress,
-                        S7BlockType = item.S7BlockType,
-                        DBEnd = item.Buffer.Length,
-                        DBStart = item.DBStart
-                    });
-                    if (ReferenceEquals(item.Buffer, buffer) == false)
-                    {
-                        @bool = false;
+                        bool.TryParse(item.Value, out var @bool);
+                        _plc.WriteBit(dbType, item.DBAddress, item.DBStart, item.DBBit.Value, @bool);
+                        var res = _plc.Read(dbType, item.DBAddress, item.DBStart, VarType.Bit, item.DBBit.Value);
+                        if (!@bool.Equals(res))
+                            result = false;
                         break;
                     }
+                    case S7DataTypeEnum.Byte:
+                    {
+                        byte.TryParse(item.Value, out var @byte);
+                        item.Buffer = new[] { @byte };
+                        await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                        var buffer = _plc.ReadBytes(dbType, item.DBAddress, item.DBStart, 1);
+                        if (SequenceEquals.ByteSequenceEquals(buffer, item.Buffer) == false) result = false;
+                        break;
+                    }
+                    case S7DataTypeEnum.Int:
+                    {
+                        short.TryParse(item.Value, out var @short);
+                        item.Buffer = TransferBufferHelper.IntToByteArray(@short);
+                        await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                        var buffer = _plc.ReadBytes(dbType, item.DBAddress, item.DBStart, 2);
+                        if (SequenceEquals.ByteSequenceEquals(buffer, item.Buffer) == false) result = false;
+                        break;
+                    }
+                    case S7DataTypeEnum.DInt:
+                    {
+                        int.TryParse(item.Value, out var @int);
+                        item.Buffer = TransferBufferHelper.DIntToByteArray(@int);
+                        await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                        var buffer = _plc.ReadBytes(dbType, item.DBAddress, item.DBStart, 4);
+                        if (SequenceEquals.ByteSequenceEquals(buffer, item.Buffer) == false) result = false;
+                        break;
+                    }
+                    case S7DataTypeEnum.Word:
+                    {
+                        ushort.TryParse(item.Value, out var @ushort);
+                        item.Buffer = TransferBufferHelper.WordToByteArray(@ushort);
+                        await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                        var buffer = _plc.ReadBytes(dbType, item.DBAddress, item.DBStart, 2);
+                        if (SequenceEquals.ByteSequenceEquals(buffer, item.Buffer) == false) result = false;
+                        break;
+                    }
+                    case S7DataTypeEnum.DWord:
+                    {
+                        uint.TryParse(item.Value, out var @uint);
+                        item.Buffer = TransferBufferHelper.DWordToByteArray(@uint);
+                        await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                        var buffer = _plc.ReadBytes(dbType, item.DBAddress, item.DBStart, 4);
+                        if (SequenceEquals.ByteSequenceEquals(buffer, item.Buffer) == false) result = false;
+                        break;
+                    }
+                    case S7DataTypeEnum.Real:
+                    {
+                        float.TryParse(item.Value, out var @float);
+                        item.Buffer = TransferBufferHelper.RealToByteArray(@float);
+                        await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                        var buffer = _plc.ReadBytes(dbType, item.DBAddress, item.DBStart, 4);
+                        if (SequenceEquals.ByteSequenceEquals(buffer, item.Buffer) == false) result = false;
+                        break;
+                    }
+                    case S7DataTypeEnum.LReal:
+                    {
+                        double.TryParse(item.Value, out var @double);
+                        item.Buffer = TransferBufferHelper.LRealToByteArray(@double);
+                        await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                        var buffer = _plc.ReadBytes(dbType, item.DBAddress, item.DBStart, 8);
+                        if (SequenceEquals.ByteSequenceEquals(buffer, item.Buffer) == false) result = false;
+                        break;
+                    }
+                    case S7DataTypeEnum.String:
+                    {
+                        item.Buffer = TransferBufferHelper.StringToByteArray(item.Value, item.ArratCount.Value);
+                        await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                        var buffer = _plc.ReadBytes(dbType, item.DBAddress, item.DBStart, item.ArratCount.Value);
+                        if (SequenceEquals.ByteSequenceEquals(buffer, item.Buffer) == false) result = false;
+                        break;
+                    }
+                    case S7DataTypeEnum.S7String:
+                    {
+                        item.Buffer =
+                            TransferBufferHelper.S7StringToByteArray(item.Value, item.ArratCount.Value,
+                                Encoding.ASCII);
+                        await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                        var buffer = _plc.ReadBytes(dbType, item.DBAddress, item.DBStart, item.ArratCount.Value);
+                        if (SequenceEquals.ByteSequenceEquals(buffer, item.Buffer) == false) result = false;
+                        break;
+                    }
+                    case S7DataTypeEnum.Array:
+                    {
+                        await _plc.WriteBytesAsync(dbType, item.DBAddress, item.DBStart, item.Buffer);
+                        var buffer = _plc.ReadBytes(dbType, item.DBAddress, item.DBStart, item.Buffer.Length);
+                        if (SequenceEquals.ByteSequenceEquals(buffer, item.Buffer) == false) result = false;
+                        break;
+                    }
+                    default:
+                        Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC无解析数据");
+                        break;
                 }
+
+                if (result == false)
+                    break;
+            }
         }
 
-        return @bool;
+        return result;
     }
 }

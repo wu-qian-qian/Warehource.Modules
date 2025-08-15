@@ -1,0 +1,208 @@
+2025-08-15 09:18:26.646 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Presentation.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-15 09:18:26.679 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-08-15 09:18:26.681 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-15 09:18:26.682 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-15 09:18:26.684 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-08-15 09:18:26.732 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-08-15 09:18:27.427 +08:00 [DBG] Starting bus instances: IBus
+2025-08-15 09:18:27.431 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-15 09:18:27.484 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-08-15 09:18:27.484 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-15 09:18:27.484 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-08-15 09:18:27.484 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-08-15 09:18:27.484 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-15 09:18:27.484 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-15 09:18:27.484 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_3tcoyyrronegmdfhbdq7zgpdyx"
+2025-08-15 09:18:27.487 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-15 09:20:04.017 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Presentation.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-15 09:20:04.055 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-08-15 09:20:04.058 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-15 09:20:04.061 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-15 09:20:04.064 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-08-15 09:20:04.116 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-08-15 09:20:04.356 +08:00 [DBG] Starting bus instances: IBus
+2025-08-15 09:20:04.361 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-15 09:20:04.405 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-15 09:20:04.405 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-08-15 09:20:04.405 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-15 09:20:04.405 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-08-15 09:20:04.405 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-15 09:20:04.415 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_wysoyyrronegkhs5bdq7zgq7y4"
+2025-08-15 09:20:04.417 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-08-15 09:20:04.434 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-15 09:20:26.620 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapCreated"
+2025-08-15 09:20:26.730 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapCreated" "a02d0000-8480-9065-d5c9-08dddb99ea73" Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:20:26.830 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"420ecd43-b554-4672-ae3c-8da64608bdba" Created Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:20:26.845 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"420ecd43-b554-4672-ae3c-8da64608bdba" Added Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:20:26.891 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Wcs.CustomEvents:PlcMapDataIntegrationEvent"
+2025-08-15 09:20:26.920 +08:00 [DBG] SEND "loopback://localhost/urn:message:Wcs.CustomEvents:PlcMapDataIntegrationEvent" "a02d0000-8480-9065-a50f-08dddb99ea9a" Wcs.CustomEvents.PlcMapDataIntegrationEvent
+2025-08-15 09:20:26.987 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapState" "a02d0000-8480-9065-d5c9-08dddb99ea73" Plc.CustomEvents.Saga.PlcMapCreated Plc.Presentation.Saga.PlcMapState("00:00:00.1355801")
+2025-08-15 09:20:27.353 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapDataIntegrationCompleted"
+2025-08-15 09:20:27.437 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapDataIntegrationCompleted" "a02d0000-8480-9065-36a6-08dddb99eae4" Plc.CustomEvents.Saga.PlcMapDataIntegrationCompleted
+2025-08-15 09:20:27.509 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"420ecd43-b554-4672-ae3c-8da64608bdba" Used Plc.CustomEvents.Saga.PlcMapDataIntegrationCompleted
+2025-08-15 09:20:27.530 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapDataIntegrationEvent" "a02d0000-8480-9065-a50f-08dddb99ea9a" Wcs.CustomEvents.PlcMapDataIntegrationEvent Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer("00:00:00.6035382")
+2025-08-15 09:20:27.590 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapProcessed"
+2025-08-15 09:20:27.859 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapProcessed" "a02d0000-8480-9065-d5de-08dddb99eb18" Plc.CustomEvents.Saga.PlcMapProcessed
+2025-08-15 09:20:27.971 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapState" "a02d0000-8480-9065-36a6-08dddb99eae4" Plc.CustomEvents.Saga.PlcMapDataIntegrationCompleted Plc.Presentation.Saga.PlcMapState("00:00:00.5288920")
+2025-08-15 09:20:28.014 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"420ecd43-b554-4672-ae3c-8da64608bdba" Used Plc.CustomEvents.Saga.PlcMapProcessed
+2025-08-15 09:20:28.050 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Plc.CustomEvents:PlcMapEventCommitEvent"
+2025-08-15 09:20:28.061 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents:PlcMapEventCommitEvent" "a02d0000-8480-9065-c65b-08dddb99eb4b" Plc.CustomEvents.PlcMapEventCommitEvent
+2025-08-15 09:20:28.071 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapState" "a02d0000-8480-9065-d5de-08dddb99eb18" Plc.CustomEvents.Saga.PlcMapProcessed Plc.Presentation.Saga.PlcMapState("00:00:00.1997059")
+2025-08-15 09:20:28.638 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:MassTransit:Fault[[Plc.CustomEvents:PlcMapEventCommitEvent]]"
+2025-08-15 09:20:28.698 +08:00 [DBG] SEND "loopback://localhost/urn:message:MassTransit:Fault[[Plc.CustomEvents:PlcMapEventCommitEvent]]" "a02d0000-8480-9065-1a5e-08dddb99eba7" MassTransit.Fault<Plc.CustomEvents.PlcMapEventCommitEvent>
+2025-08-15 09:20:28.707 +08:00 [ERR] R-FAULT "loopback://localhost/PlcMapEventCommit" "a02d0000-8480-9065-c65b-08dddb99eb4b" Plc.CustomEvents.PlcMapEventCommitEvent Plc.Presentation.Custom.PlcMapEventCommitConsumer("00:00:00.4500974")
+Microsoft.Data.SqlClient.SqlException (0x80131904): 列名 'ArrayLength' 无效。
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Plc.Presentation.Custom.PlcMapEventCommitConsumer.Consume(ConsumeContext`1 context) in D:\Program\仓库\Warehource.Modules\Plc.Presentation\Custom\PlcMapEventCommitConsumer.cs:line 13
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.Middleware.ConsumerMessageFilter`2.MassTransit.IFilter<MassTransit.ConsumeContext<TMessage>>.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/ConsumerMessageFilter.cs:line 48
+ClientConnectionId:23cae0b7-c769-4287-a231-ff3fc4e4f5cc
+Error Number:207,State:1,Class:16
+2025-08-15 09:22:49.453 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Presentation.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-15 09:22:49.496 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-08-15 09:22:49.499 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-15 09:22:49.501 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-15 09:22:49.503 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-08-15 09:22:49.554 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-08-15 09:22:49.787 +08:00 [DBG] Starting bus instances: IBus
+2025-08-15 09:22:49.791 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-15 09:22:49.864 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-08-15 09:22:49.864 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-08-15 09:22:49.864 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-15 09:22:49.864 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-15 09:22:49.864 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_3btoyyrronegkxa7bdq7zgt9fz"
+2025-08-15 09:22:49.864 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-15 09:22:49.864 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-08-15 09:22:49.868 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-15 09:23:47.880 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapCreated"
+2025-08-15 09:23:47.949 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapCreated" "c8630000-8480-9065-0c3b-08dddb9a6268" Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:23:48.017 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"ce0f443e-26a1-4d68-8f1c-0b83a427ccfd" Created Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:23:48.032 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"ce0f443e-26a1-4d68-8f1c-0b83a427ccfd" Added Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:23:48.075 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Wcs.CustomEvents:PlcMapDataIntegrationEvent"
+2025-08-15 09:23:48.134 +08:00 [DBG] SEND "loopback://localhost/urn:message:Wcs.CustomEvents:PlcMapDataIntegrationEvent" "c8630000-8480-9065-c9ab-08dddb9a6284" Wcs.CustomEvents.PlcMapDataIntegrationEvent
+2025-08-15 09:23:48.217 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapState" "c8630000-8480-9065-0c3b-08dddb9a6268" Plc.CustomEvents.Saga.PlcMapCreated Plc.Presentation.Saga.PlcMapState("00:00:00.1548961")
+2025-08-15 09:23:48.331 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapDataIntegrationCompleted"
+2025-08-15 09:23:48.342 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapDataIntegrationCompleted" "c8630000-8480-9065-f883-08dddb9a62ab" Plc.CustomEvents.Saga.PlcMapDataIntegrationCompleted
+2025-08-15 09:23:48.350 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapDataIntegrationEvent" "c8630000-8480-9065-c9ab-08dddb9a6284" Wcs.CustomEvents.PlcMapDataIntegrationEvent Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer("00:00:00.2104676")
+2025-08-15 09:23:48.353 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"ce0f443e-26a1-4d68-8f1c-0b83a427ccfd" Used Plc.CustomEvents.Saga.PlcMapDataIntegrationCompleted
+2025-08-15 09:23:48.362 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapProcessed"
+2025-08-15 09:23:48.369 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapProcessed" "c8630000-8480-9065-a2c4-08dddb9a62b0" Plc.CustomEvents.Saga.PlcMapProcessed
+2025-08-15 09:23:48.381 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapState" "c8630000-8480-9065-f883-08dddb9a62ab" Plc.CustomEvents.Saga.PlcMapDataIntegrationCompleted Plc.Presentation.Saga.PlcMapState("00:00:00.0365278")
+2025-08-15 09:23:48.384 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"ce0f443e-26a1-4d68-8f1c-0b83a427ccfd" Used Plc.CustomEvents.Saga.PlcMapProcessed
+2025-08-15 09:23:48.401 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Plc.CustomEvents:PlcMapEventCommitEvent"
+2025-08-15 09:23:48.409 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents:PlcMapEventCommitEvent" "c8630000-8480-9065-b70b-08dddb9a62b6" Plc.CustomEvents.PlcMapEventCommitEvent
+2025-08-15 09:23:48.416 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapState" "c8630000-8480-9065-a2c4-08dddb9a62b0" Plc.CustomEvents.Saga.PlcMapProcessed Plc.Presentation.Saga.PlcMapState("00:00:00.0453285")
+2025-08-15 09:23:48.467 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapEventCommit" "c8630000-8480-9065-b70b-08dddb9a62b6" Plc.CustomEvents.PlcMapEventCommitEvent Plc.Presentation.Custom.PlcMapEventCommitConsumer("00:00:00.0565456")
+2025-08-15 09:23:55.191 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapCreated" "c8630000-8480-9065-fa4a-08dddb9a66c1" Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:23:55.192 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"ce0f443e-26a1-4d68-8f1c-0b83a427ccfd" Used Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:23:55.565 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:MassTransit:Fault[[Plc.CustomEvents.Saga:PlcMapCreated]]"
+2025-08-15 09:23:55.579 +08:00 [DBG] SEND "loopback://localhost/urn:message:MassTransit:Fault[[Plc.CustomEvents.Saga:PlcMapCreated]]" "c8630000-8480-9065-6c0e-08dddb9a66fb" MassTransit.Fault<Plc.CustomEvents.Saga.PlcMapCreated>
+2025-08-15 09:23:55.584 +08:00 [ERR] R-FAULT "loopback://localhost/PlcMapState" "c8630000-8480-9065-fa4a-08dddb9a66c1" Plc.CustomEvents.Saga.PlcMapCreated Plc.Presentation.Saga.PlcMapState("00:00:00.3284880")
+MassTransit.NotAcceptedStateMachineException: Plc.Presentation.Saga.PlcMapState(ce0f443e-26a1-4d68-8f1c-0b83a427ccfd) Saga exception on receipt of Plc.CustomEvents.Saga.PlcMapCreated: Not accepted in state Final
+ ---> MassTransit.UnhandledEventException: The PlcMapCreated event is not handled during the Final state for the PlcMapSaga state machine
+   at MassTransit.MassTransitStateMachine`1.DefaultUnhandledEventCallback(UnhandledEventContext`1 context) in /_/src/MassTransit/SagaStateMachine/MassTransitStateMachine.cs:line 222
+   at MassTransit.MassTransitStateMachine`1.UnhandledEvent(BehaviorContext`1 context, State state) in /_/src/MassTransit/SagaStateMachine/MassTransitStateMachine.cs:line 1266
+   at MassTransit.MassTransitStateMachine`1.<.ctor>b__19_2(BehaviorContext`1 context, State state) in /_/src/MassTransit/SagaStateMachine/MassTransitStateMachine.cs:line 55
+   at MassTransit.MassTransitStateMachine`1.StateMachineState.MassTransit.State<TInstance>.Raise[T](BehaviorContext`2 context) in /_/src/MassTransit/SagaStateMachine/SagaStateMachine/StateMachineState.cs:line 165
+   at MassTransit.MassTransitStateMachine`1.MassTransit.StateMachine<TInstance>.RaiseEvent[T](BehaviorContext`2 context) in /_/src/MassTransit/SagaStateMachine/MassTransitStateMachine.cs:line 135
+   at MassTransit.Middleware.StateMachineSagaMessageFilter`2.Send(SagaConsumeContext`2 context, IPipe`1 next) in /_/src/MassTransit/Middleware/StateMachineSagaMessageFilter.cs:line 66
+   --- End of inner exception stack trace ---
+   at MassTransit.Middleware.StateMachineSagaMessageFilter`2.Send(SagaConsumeContext`2 context, IPipe`1 next) in /_/src/MassTransit/Middleware/StateMachineSagaMessageFilter.cs:line 81
+   at MassTransit.Middleware.StateMachineSagaMessageFilter`2.Send(SagaConsumeContext`2 context, IPipe`1 next) in /_/src/MassTransit/Middleware/StateMachineSagaMessageFilter.cs:line 104
+   at MassTransit.Middleware.SendQuerySagaPipe`2.<>c__DisplayClass4_0.<<Send>g__SendToInstance|0>d.MoveNext() in /_/src/MassTransit/Middleware/SendQuerySagaPipe.cs:line 40
+--- End of stack trace from previous location ---
+   at MassTransit.Middleware.SendQuerySagaPipe`2.<>c__DisplayClass4_0.<<Send>g__SendToInstance|0>d.MoveNext() in /_/src/MassTransit/Middleware/SendQuerySagaPipe.cs:line 64
+--- End of stack trace from previous location ---
+   at MassTransit.Middleware.SendQuerySagaPipe`2.Send(SagaRepositoryQueryContext`2 context) in /_/src/MassTransit/Middleware/SendQuerySagaPipe.cs:line 72
+   at MassTransit.Saga.InMemorySagaRepositoryContextFactory`1.SendQuery[T](ConsumeContext`1 context, ISagaQuery`1 query, IPipe`1 next) in /_/src/MassTransit/Sagas/Saga/InMemoryRepository/InMemorySagaRepositoryContextFactory.cs:line 68
+   at MassTransit.DependencyInjection.DependencyInjectionSagaRepositoryContextFactory`1.Send[T](ConsumeContext`1 context, Func`3 send) in /_/src/MassTransit/DependencyInjection/DependencyInjection/DependencyInjectionSagaRepositoryContextFactory.cs:line 87
+   at MassTransit.DependencyInjection.DependencyInjectionSagaRepositoryContextFactory`1.Send[T](ConsumeContext`1 context, Func`3 send) in /_/src/MassTransit/DependencyInjection/DependencyInjection/DependencyInjectionSagaRepositoryContextFactory.cs:line 96
+   at MassTransit.Middleware.QuerySagaFilter`2.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/QuerySagaFilter.cs:line 50
+2025-08-15 09:24:14.696 +08:00 [DBG] Stopping bus instances: IBus
+2025-08-15 09:24:14.699 +08:00 [DBG] Stopping bus: "loopback://localhost/"
+2025-08-15 09:24:14.705 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/WcsIntegrationEvent"
+2025-08-15 09:24:14.709 +08:00 [DBG] Consumer Stopping: "loopback://localhost/WcsIntegrationEvent" (Stop Receive Transport)
+2025-08-15 09:24:14.722 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-08-15 09:24:14.722 +08:00 [DBG] Endpoint Completed: "loopback://localhost/WcsIntegrationEvent"
+2025-08-15 09:24:14.724 +08:00 [DBG] Consumer Stopping: "loopback://localhost/PlcMapDataIntegrationEvent" (Stop Receive Transport)
+2025-08-15 09:24:14.730 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-15 09:24:14.730 +08:00 [DBG] Endpoint Completed: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-08-15 09:24:14.731 +08:00 [DBG] Consumer Completed: "loopback://localhost/WcsIntegrationEvent": 0 received, 0 concurrent
+2025-08-15 09:24:14.732 +08:00 [DBG] Consumer Stopping: "loopback://localhost/S7ReadPlcDataBlockEvent" (Stop Receive Transport)
+2025-08-15 09:24:14.734 +08:00 [DBG] Consumer Completed: "loopback://localhost/PlcMapDataIntegrationEvent": 1 received, 1 concurrent
+2025-08-15 09:24:14.744 +08:00 [DBG] Endpoint Completed: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-15 09:24:14.744 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-15 09:24:14.747 +08:00 [DBG] Consumer Completed: "loopback://localhost/S7ReadPlcDataBlockEvent": 0 received, 0 concurrent
+2025-08-15 09:24:14.750 +08:00 [DBG] Consumer Stopping: "loopback://localhost/S7WritePlcDataBlockEvent" (Stop Receive Transport)
+2025-08-15 09:24:14.753 +08:00 [DBG] Endpoint Completed: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-15 09:24:14.753 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/PlcMapEventCommit"
+2025-08-15 09:24:14.754 +08:00 [DBG] Consumer Completed: "loopback://localhost/S7WritePlcDataBlockEvent": 0 received, 0 concurrent
+2025-08-15 09:24:14.755 +08:00 [DBG] Consumer Stopping: "loopback://localhost/PlcMapEventCommit" (Stop Receive Transport)
+2025-08-15 09:24:14.763 +08:00 [DBG] Endpoint Completed: "loopback://localhost/PlcMapEventCommit"
+2025-08-15 09:24:14.763 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/PlcMapState"
+2025-08-15 09:24:14.764 +08:00 [DBG] Consumer Completed: "loopback://localhost/PlcMapEventCommit": 1 received, 1 concurrent
+2025-08-15 09:24:14.765 +08:00 [DBG] Consumer Stopping: "loopback://localhost/PlcMapState" (Stop Receive Transport)
+2025-08-15 09:24:14.773 +08:00 [DBG] Endpoint Completed: "loopback://localhost/PlcMapState"
+2025-08-15 09:24:14.774 +08:00 [DBG] Consumer Completed: "loopback://localhost/PlcMapState": 4 received, 2 concurrent
+2025-08-15 09:24:14.782 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/_WarehourceSource_bus_3btoyyrronegkxa7bdq7zgt9fz"
+2025-08-15 09:24:14.786 +08:00 [DBG] Consumer Stopping: "loopback://localhost/_WarehourceSource_bus_3btoyyrronegkxa7bdq7zgt9fz" (Stop Receive Transport)
+2025-08-15 09:24:14.793 +08:00 [DBG] Endpoint Completed: "loopback://localhost/_WarehourceSource_bus_3btoyyrronegkxa7bdq7zgt9fz"
+2025-08-15 09:24:14.795 +08:00 [DBG] Consumer Completed: "loopback://localhost/_WarehourceSource_bus_3btoyyrronegkxa7bdq7zgt9fz": 0 received, 0 concurrent
+2025-08-15 09:24:14.832 +08:00 [INF] Bus stopped: "loopback://localhost/"
+2025-08-15 09:27:10.665 +08:00 [INF] Configured endpoint WcsIntegrationEvent, Consumer: Wcs.Presentation.Custom.WcsCustomEventConsumer<Wcs.CustomEvents.WcsIntegrationEvent>
+2025-08-15 09:27:10.703 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-08-15 09:27:10.705 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockEvent>
+2025-08-15 09:27:10.707 +08:00 [INF] Configured endpoint S7WritePlcDataBlockEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockEvent>
+2025-08-15 09:27:10.709 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-08-15 09:27:10.754 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-08-15 09:27:10.978 +08:00 [DBG] Starting bus instances: IBus
+2025-08-15 09:27:10.985 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-08-15 09:27:11.040 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_s1eoyyrronegmmcgbdq7zgs5dg"
+2025-08-15 09:27:11.040 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockEvent"
+2025-08-15 09:27:11.040 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockEvent"
+2025-08-15 09:27:11.040 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsIntegrationEvent"
+2025-08-15 09:27:11.040 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-08-15 09:27:11.040 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-08-15 09:27:11.042 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-08-15 09:27:11.055 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-08-15 09:27:29.739 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapCreated"
+2025-08-15 09:27:29.827 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapCreated" "b4910000-8480-9065-2539-08dddb9ae6a5" Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:27:29.932 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"66fd8e49-5650-4c53-b3ea-0c78a127b045" Created Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:27:29.956 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"66fd8e49-5650-4c53-b3ea-0c78a127b045" Added Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:27:30.003 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Wcs.CustomEvents:PlcMapDataIntegrationEvent"
+2025-08-15 09:27:30.028 +08:00 [DBG] SEND "loopback://localhost/urn:message:Wcs.CustomEvents:PlcMapDataIntegrationEvent" "b4910000-8480-9065-26be-08dddb9ae6cc" Wcs.CustomEvents.PlcMapDataIntegrationEvent
+2025-08-15 09:27:30.112 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapState" "b4910000-8480-9065-2539-08dddb9ae6a5" Plc.CustomEvents.Saga.PlcMapCreated Plc.Presentation.Saga.PlcMapState("00:00:00.1347924")
+2025-08-15 09:27:30.231 +08:00 [DBG] Create send transport: "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapDataIntegrationCompleted"
+2025-08-15 09:27:30.241 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapDataIntegrationCompleted" "b4910000-8480-9065-21a7-08dddb9ae6ef" Plc.CustomEvents.Saga.PlcMapDataIntegrationCompleted
+2025-08-15 09:27:30.337 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapState" "b4910000-8480-9065-21a7-08dddb9ae6ef" Plc.CustomEvents.Saga.PlcMapDataIntegrationCompleted Plc.Presentation.Saga.PlcMapState("00:00:00.0915440")
+2025-08-15 09:27:30.343 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapDataIntegrationEvent" "b4910000-8480-9065-26be-08dddb9ae6cc" Wcs.CustomEvents.PlcMapDataIntegrationEvent Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer("00:00:00.3077684")
+2025-08-15 09:27:32.979 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapCreated" "b4910000-8480-9065-cbaf-08dddb9ae891" Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:27:32.984 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"6044a990-4276-4ef6-ab6a-702e6404a2b8" Created Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:27:32.988 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"6044a990-4276-4ef6-ab6a-702e6404a2b8" Added Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:27:32.994 +08:00 [DBG] SEND "loopback://localhost/urn:message:Wcs.CustomEvents:PlcMapDataIntegrationEvent" "b4910000-8480-9065-fe1f-08dddb9ae893" Wcs.CustomEvents.PlcMapDataIntegrationEvent
+2025-08-15 09:27:33.048 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapState" "b4910000-8480-9065-cbaf-08dddb9ae891" Plc.CustomEvents.Saga.PlcMapCreated Plc.Presentation.Saga.PlcMapState("00:00:00.0682795")
+2025-08-15 09:27:33.060 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapDataIntegrationCompleted" "b4910000-8480-9065-ea74-08dddb9ae89d" Plc.CustomEvents.Saga.PlcMapDataIntegrationCompleted
+2025-08-15 09:27:33.063 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapState" "b4910000-8480-9065-ea74-08dddb9ae89d" Plc.CustomEvents.Saga.PlcMapDataIntegrationCompleted Plc.Presentation.Saga.PlcMapState("00:00:00.0008078")
+2025-08-15 09:27:33.070 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapDataIntegrationEvent" "b4910000-8480-9065-fe1f-08dddb9ae893" Wcs.CustomEvents.PlcMapDataIntegrationEvent Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer("00:00:00.0760075")
+2025-08-15 09:27:43.805 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapCreated" "b4910000-8480-9065-b89d-08dddb9aef05" Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:27:43.806 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"6bf908aa-0d22-4062-bc45-dab6dc67a136" Created Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:27:43.809 +08:00 [DBG] SAGA:Plc.Presentation.Saga.PlcMapState:"6bf908aa-0d22-4062-bc45-dab6dc67a136" Added Plc.CustomEvents.Saga.PlcMapCreated
+2025-08-15 09:27:43.815 +08:00 [DBG] SEND "loopback://localhost/urn:message:Wcs.CustomEvents:PlcMapDataIntegrationEvent" "b4910000-8480-9065-2d53-08dddb9aef07" Wcs.CustomEvents.PlcMapDataIntegrationEvent
+2025-08-15 09:27:43.823 +08:00 [DBG] SEND "loopback://localhost/urn:message:Plc.CustomEvents.Saga:PlcMapDataIntegrationCompleted" "b4910000-8480-9065-60d8-08dddb9aef08" Plc.CustomEvents.Saga.PlcMapDataIntegrationCompleted
+2025-08-15 09:27:43.823 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapState" "b4910000-8480-9065-60d8-08dddb9aef08" Plc.CustomEvents.Saga.PlcMapDataIntegrationCompleted Plc.Presentation.Saga.PlcMapState("00:00:00.0004413")
+2025-08-15 09:27:43.824 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapState" "b4910000-8480-9065-b89d-08dddb9aef05" Plc.CustomEvents.Saga.PlcMapCreated Plc.Presentation.Saga.PlcMapState("00:00:00.0183371")
+2025-08-15 09:27:43.910 +08:00 [DBG] RECEIVE "loopback://localhost/PlcMapDataIntegrationEvent" "b4910000-8480-9065-2d53-08dddb9aef07" Wcs.CustomEvents.PlcMapDataIntegrationEvent Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer("00:00:00.0948024")
