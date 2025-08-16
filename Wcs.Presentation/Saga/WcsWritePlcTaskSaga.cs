@@ -1,11 +1,5 @@
 ﻿using MassTransit;
 using Plc.CustomEvents;
-using Plc.CustomEvents.Saga;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Wcs.CustomEvents;
 using Wcs.CustomEvents.Saga;
 
@@ -43,7 +37,7 @@ namespace Wcs.Presentation.Saga
                 // 发布数据集成服务调用事件
                 .Publish(context =>
                     new S7WritePlcDataBlockIntegrationEvent(DateTime.Now,
-                        context.Message.DeviceName, context.Message.DBNameToDataValue, context.Message.Ip,
+                        context.Message.DeviceName, context.Message.DBNameToDataValue,
                         context.Message.key))
                 // 进入"处理中"状态，等待服务结果
                 .TransitionTo(Processing));

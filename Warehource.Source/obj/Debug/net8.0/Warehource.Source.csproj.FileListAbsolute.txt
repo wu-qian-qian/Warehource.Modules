@@ -396,7 +396,6 @@ D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwe
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Warehource.Source.props
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Warehource.Source.props
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets.pack.json
-D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehour.B4D12DB0.Up2Date
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehource.Source.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\refint\Warehource.Source.dll

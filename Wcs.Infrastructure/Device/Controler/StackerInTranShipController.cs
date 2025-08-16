@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Wcs.Application.Abstract;
-using Wcs.Application.Handler.Execute.Business.Stacker;
 using Wcs.Application.Handler.Execute.CreatDeviceData;
 using Wcs.Device.Device.Tranship;
 using Wcs.Shared;

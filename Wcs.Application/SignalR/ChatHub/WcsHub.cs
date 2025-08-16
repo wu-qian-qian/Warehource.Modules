@@ -9,7 +9,6 @@ namespace Wcs.Application.SignalR.ChatHub;
 [Authorize]
 public class WcsHub : Hub<IClient>
 {
-    private readonly HttpContext _context;
     public static ConcurrentDictionary<string, string> UserConnections { get; } = new();
 
 

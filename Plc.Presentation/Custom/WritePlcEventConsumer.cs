@@ -30,7 +30,7 @@ public class WritePlcEventConsumer<TIntegrationEvent>(IMassTransitEventBus bus, 
         {
             UseMemory = s7ReadPlcConsumevent.UseMemory,
             DeviceName = s7ReadPlcConsumevent.DeviceName,
-            DBNameToDataValue = s7ReadPlcConsumevent.DBNameToDataValue
+            DBNameToDataValue = s7ReadPlcConsumevent.DbNameToDataValue
         };
         try
         {

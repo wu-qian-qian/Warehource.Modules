@@ -24,7 +24,7 @@ public sealed class CancelPipelineBehavior<TRequest, TResponse>
         }
         catch (OperationCanceledException ex)
         {
-            Serilog.Log.Logger.ForCategory(LogCategory.Error).Information("任务超时触发结束");
+            Serilog.Log.Logger.ForCategory(LogCategory.Error).Information($"任务超时触发结束{ex.Message}");
             return Task.FromResult(default(TResponse));
         }
     }

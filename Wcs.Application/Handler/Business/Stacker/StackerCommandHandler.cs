@@ -12,7 +12,7 @@ using Wcs.Device.Device.Stacker;
 using Wcs.Domain.Task;
 using Wcs.Shared;
 
-namespace Wcs.Application.Handler.Execute.Business.Stacker;
+namespace Wcs.Application.Handler.Business.Stacker;
 
 /// <summary>
 ///     堆垛机业务处理事件
@@ -38,14 +38,10 @@ internal class StackerCommandHandler(ISender sender, ICacheService _cacheService
             stacker.SetDBEntity(stackerDBEntity);
             //判断是否可执行
             if (stacker.CanExecute())
-            {
                 await Execute(sender, stacker, _cacheService, cancellationToken);
-            }
             else
-            {
                 Log.Logger.ForCategory(LogCategory.Business)
                     .Information($"{stacker.Name}--堆垛机连接异常无法执行任务");
-            }
         }
     }
 

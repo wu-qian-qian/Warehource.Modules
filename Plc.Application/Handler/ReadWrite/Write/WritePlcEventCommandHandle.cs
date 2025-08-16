@@ -8,7 +8,7 @@ namespace Plc.Application.Handler.ReadWrite.Write;
 ///     最终处理者
 /// </summary>
 /// <param name="service"></param>
-internal class WritelPlcEventCommandHandle(INetService netService, IS7NetManager netManager)
+internal class WritePlcEventCommandHandle(INetService netService, IS7NetManager netManager)
     : ICommandHandler<WritePlcEventCommand, bool>
 {
     /// <summary>
@@ -18,7 +18,7 @@ internal class WritelPlcEventCommandHandle(INetService netService, IS7NetManager
     /// <returns></returns>
     public async Task<bool> Handle(WritePlcEventCommand request, CancellationToken cancellationToken)
     {
-        bool @bool = false;
+        var @bool = false;
         foreach (var item in request.writeBufferInputs)
         {
             @bool = await netService.CheckWriteByteAsync(item);

@@ -1,5 +1,9 @@
-﻿namespace Wcs.Infrastructure.Device.Service;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Wcs.Application.Abstract;
 
-internal class DeviceService
+namespace Wcs.Infrastructure.Device.Service;
+
+internal class DeviceService : IDeviceService
 {
+    private readonly IServiceScopeFactory _scopeFactory;
 }

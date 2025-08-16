@@ -25,9 +25,10 @@ Action<HttpResponseMessage> policyCallback = result =>
         result.StatusCode, result.RequestMessage?.RequestUri, result.RequestMessage?.Method);
 };
 
+
 builder.Services.AddInfrastructure(builder.Configuration, policyCallback);
 //单体模块注入
-
+//待优化反射注入
 builder.Services.AddModules(builder.Configuration,
     //程序集
     [
@@ -74,6 +75,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
     app.Initialization(); //在开发环境中应用数据库迁移
 }
+
 app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 

@@ -1,10 +1,5 @@
 ﻿using MassTransit;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Wcs.CustomEvents;
 
 namespace Wcs.Presentation.Custom
@@ -19,8 +14,10 @@ namespace Wcs.Presentation.Custom
         {
             if (context.Message.IsSucess == false)
             {
+                //将Send值修改为false 触发重新写入
                 await send.Send(context.Message.Key);
             }
+            //TODO 触发事件更新任务执行节点任务数据
         }
     }
 }

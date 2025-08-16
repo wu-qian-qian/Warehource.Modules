@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Wcs.Application.Handler.Execute.Business.Stacker;
+namespace Wcs.Application.Handler.Business.Stacker;
 
 internal class StackerCommandValibator : AbstractValidator<StackerCommand>
 {

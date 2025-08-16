@@ -9,49 +9,51 @@ public class EfCoreRepository<T, TDbContext> : IEfCoreRepository<T> where T :
 {
     public EfCoreRepository(TDbContext dbContext)
     {
-        this.dbContext = dbContext;
+        DbContext = dbContext;
     }
 
-    protected TDbContext dbContext { get; init; }
+    protected TDbContext DbContext { get; init; }
 
-    public virtual async Task<T?> GetAsync(Guid id)
+    public virtual Task<T?> GetAsync(Guid id)
     {
-        if (dbContext.Set<T>().Any(p => p.Id == id)) return dbContext.Set<T>().First(p => p.Id == id);
-        return null;
+        T entity = default;
+        if (DbContext.Set<T>().Any(p => p.Id == id)) entity = DbContext.Set<T>().First(p => p.Id == id);
+
+        return Task.FromResult(entity);
     }
 
     public virtual Task UpdateAsync(T entity)
     {
-        dbContext.Update(entity);
+        DbContext.Update(entity);
         return Task.CompletedTask;
     }
 
     public virtual Task DeleteAsync(T entity)
     {
-        dbContext.Remove(entity);
+        DbContext.Remove(entity);
         return Task.CompletedTask;
     }
 
     public virtual async Task InserAsync(T entity)
     {
-        await dbContext.AddAsync(entity);
+        await DbContext.AddAsync(entity);
     }
 
     public virtual async Task<List<T>> GetListAsync()
     {
-        return await dbContext.Query<T>().ToListAsync();
+        return await DbContext.Query<T>().ToListAsync();
     }
 
     public virtual Task<IQueryable<T>> GetQueryableAsync(bool asNoTrack = true)
     {
         if (asNoTrack)
         {
-            var queryable = dbContext.Query<T>();
+            var queryable = DbContext.Query<T>();
             return Task.FromResult(queryable);
         }
         else
         {
-            var queryable = dbContext.Set<T>().AsQueryable();
+            var queryable = DbContext.Set<T>().AsQueryable();
             return Task.FromResult(queryable);
         }
     }

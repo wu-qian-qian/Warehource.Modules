@@ -14,11 +14,11 @@ internal class UserRepository : EfCoreRepository<Domain.User, UserDBContext>, IU
 
     public Task<Domain.User> GetUserAndRoleAsync(string userName)
     {
-        return dbContext.Query<Domain.User>().Include(p => p.Role).FirstOrDefaultAsync(p => p.Username == userName);
+        return DbContext.Query<Domain.User>().Include(p => p.Role).FirstOrDefaultAsync(p => p.Username == userName);
     }
 
     public Task<List<Domain.User>> GetAllUserAndRoleAsync()
     {
-        return dbContext.Query<Domain.User>().Include(p => p.Role).ToListAsync();
+        return DbContext.Query<Domain.User>().Include(p => p.Role).ToListAsync();
     }
 }

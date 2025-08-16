@@ -47,7 +47,6 @@ public static class ExcelHelper
     ///     生成一个文件包含多类型的表
     /// </summary>
     /// <param name="dic"></param>
-    /// <typeparam name="T"></typeparam>
     /// <returns></returns>
     public static byte[] CreateExcelFromList(Dictionary<string, List<object>> dic)
     {

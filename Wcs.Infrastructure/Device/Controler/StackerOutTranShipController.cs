@@ -9,8 +9,6 @@ namespace Wcs.Infrastructure.Device.Controler;
 
 public class StackerTranShipOutController : BaseDependy, IStackerTranshipController
 {
-    private readonly IServiceScopeFactory _scopeFactory;
-
     public StackerTranShipOutController(IServiceScopeFactory serviceScopeFactory) : base(serviceScopeFactory)
     {
         DeviceType = DeviceTypeEnum.StackerOutTranShip;

@@ -61,10 +61,11 @@ public sealed class HttpClientFactory
     }
 
     /// <summary>
-    ///     发送josn格式以body
+    ///    发送josn格式以body
     /// </summary>
     /// <param name="josn"></param>
     /// <param name="method"></param>
+    /// <param name="uri"></param>
     /// <returns></returns>
     public static HttpRequestMessage CreatRequest(string josn, HttpMethod method, Uri uri)
     {

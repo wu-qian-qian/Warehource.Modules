@@ -9,7 +9,9 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Wcs.Application;
 using Wcs.Application.Abstract;
 using Wcs.Application.SignalR;
-using Wcs.CustomEvents;
+using Wcs.Device.Device.Stacker;
+using Wcs.Device.Device.StockPort;
+using Wcs.Device.Device.Tranship;
 using Wcs.Domain.Device;
 using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.JobConfigs;
@@ -23,6 +25,8 @@ using Wcs.Infrastructure.DB.JobConfig;
 using Wcs.Infrastructure.DB.PlcMap;
 using Wcs.Infrastructure.DB.Region;
 using Wcs.Infrastructure.DB.WcsTask;
+using Wcs.Infrastructure.Device.Controler;
+using Wcs.Infrastructure.Device.Service;
 using Wcs.Infrastructure.Job.JobItems;
 using Wcs.Infrastructure.Job.Options;
 using Wcs.Infrastructure.Job.Service;
@@ -42,6 +46,8 @@ public static class WcsInfrastructureConfigurator
     public static void AddWcsInfrastructureModule(this IServiceCollection services,
         IConfiguration configuration)
     {
+        var ass = typeof(WcsInfrastructureConfigurator).Assembly;
+
         AddRepository(services);
         AddEndPoint(services);
         services.AddDbContext<WCSDBContext>(options =>
@@ -98,6 +104,22 @@ public static class WcsInfrastructureConfigurator
         //saga注入
         registrationConfigurator.AddSagaStateMachine<WcsWritePlcTaskSaga, WcsWritePlcTaskState>()
             .InMemoryRepository();
+    }
+
+    /// <summary>
+    /// </summary>
+    /// <param name="service"></param>
+    public static void AddCoreBusiness(IServiceCollection service)
+    {
+        // [FromKeyedServices(nameof(StackerInTranShipController))] IStackerTranshipController inController  构造获取方式
+        service.AddSingleton<IStackerController, StackerController>();
+        service.AddKeyedSingleton<IStackerTranshipController, StackerInTranShipController>(
+            nameof(StackerInTranShipController));
+        service.AddKeyedSingleton<IStackerTranshipController, StackerTranShipOutController>(
+            nameof(StackerTranShipOutController));
+        service.AddKeyedSingleton<IStockPortController, StockPortInController>(nameof(StockPortInController));
+        service.AddKeyedSingleton<IStockPortController, StockPortOutController>(nameof(StockPortOutController));
+        service.AddSingleton<IDeviceService, DeviceService>();
     }
 
     /// <summary>
