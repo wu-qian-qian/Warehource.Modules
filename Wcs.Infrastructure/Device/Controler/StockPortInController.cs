@@ -1,33 +1,25 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Wcs.Application.Abstract;
-using Wcs.Application.Handler.Execute.CreatDeviceData;
+using Wcs.Application.Abstract.Device;
+using Wcs.Application.Handler.Business.CreatDeviceData;
 using Wcs.Device.Device.StockPort;
 using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler;
 
-internal class StockPortInController : BaseDependy, IStockPortController
+internal class StockPortInController : AbstractStockInPortController
 {
     public StockPortInController(IServiceScopeFactory serviceScopeFactory) : base(serviceScopeFactory)
     {
         DeviceType = DeviceTypeEnum.StockPortIn;
     }
 
-    public DeviceTypeEnum DeviceType { get; init; }
-
-    public AbstractStockPort[] Devices { get; private set; }
-
-    public async Task ExecuteAsync(CancellationToken token = default)
+    public override async Task ExecuteAsync(CancellationToken token = default)
     {
-        using var scope = _scopeFactory.CreateScope();
-        var sender = scope.ServiceProvider.GetService<ISender>();
         if (Devices == null || Devices.Length == 0)
         {
-            Devices = (AbstractStockPort[])await sender.Send(new CreatDeviceDataCommand
-            {
-                DeviceType = this.DeviceType,
-            });
+            await base.ExecuteAsync(token);
         }
         else
         {

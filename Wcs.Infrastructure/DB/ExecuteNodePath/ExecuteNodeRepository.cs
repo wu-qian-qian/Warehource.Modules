@@ -1,4 +1,5 @@
 ﻿using Common.Infrastructure.EF;
+using Microsoft.EntityFrameworkCore;
 using Wcs.Domain.ExecuteNode;
 using Wcs.Infrastructure.Database;
 
@@ -24,7 +25,7 @@ public class ExecuteNodeRepository(WCSDBContext _db) : IExecuteNodeRepository
 
     public IQueryable<Domain.ExecuteNode.ExecuteNodePath> GetQuerys()
     {
-        return _db.Query<Domain.ExecuteNode.ExecuteNodePath>();
+        return _db.Query<Domain.ExecuteNode.ExecuteNodePath>().Include(p => p.Region);
     }
 
     public void Update(Domain.ExecuteNode.ExecuteNodePath nodes)

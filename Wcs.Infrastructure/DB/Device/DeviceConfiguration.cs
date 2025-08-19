@@ -16,7 +16,7 @@ public class DeviceConfiguration : IEntityTypeConfiguration<Domain.Device.Device
         builder.Property(p => p.Description).HasMaxLength(100);
         builder.Property(p => p.Config).HasMaxLength(512);
         builder.Property(p => p.LastModifierUser).HasMaxLength(20);
-        builder.Property(p => p.WcsTaskCode).HasMaxLength(64);
+        builder.Property(p => p.RegionCode).HasMaxLength(64);
         builder.Property(p => p.GroupName).HasMaxLength(64);
     }
 }

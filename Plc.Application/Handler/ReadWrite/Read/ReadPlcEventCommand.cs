@@ -34,7 +34,7 @@ public class ReadPlcEventCommand : ICommand<IEnumerable<ReadBuffer>>
 
     public bool IsBath { get; set; }
 
-    public Guid? Id { get; set; }
+    public string Key { get; set; }
 
     public bool IsApi { get; set; } = false;
 }

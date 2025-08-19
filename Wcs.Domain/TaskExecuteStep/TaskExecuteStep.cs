@@ -18,8 +18,10 @@ public class TaskExecuteStep : IEntity
 
     /// <summary>
     ///     是否发送设备
+    ///     发送，发送中，发送结束，成功
+    ///     如果我发送结束说明发送失败需要重新推送
     /// </summary>
-    public bool IsSend { get; set; }
+    public TaskExecuteStepTypeEnum TaskExecuteStepType { get; set; }
 
     public string? Description { get; set; }
 

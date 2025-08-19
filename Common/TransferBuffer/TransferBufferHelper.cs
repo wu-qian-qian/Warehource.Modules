@@ -170,7 +170,7 @@ public static class TransferBufferHelper
     /// <summary>
     /// </summary>
     /// <param name="value"></param>
-    /// <param name="isLittleEndian" >其他系统是否为小端存储</param>
+    /// <param name="isLittleEndian">其他系统是否为小端存储</param>
     /// <returns></returns>
     public static byte[] RealToByteArray(float value, bool isLittleEndian = false)
     {
@@ -193,7 +193,7 @@ public static class TransferBufferHelper
     /// <summary>
     /// </summary>
     /// <param name="bytes"></param>
-    /// <param name="isLittleEndian" >其他系统是否为小端存储</param>
+    /// <param name="isLittleEndian">其他系统是否为小端存储</param>
     /// <returns></returns>
     /// <exception cref="ArgumentException"></exception>
     public static double LRealFromByteArray(byte[] bytes, bool isLittleEndian = false)

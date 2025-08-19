@@ -1,5 +1,6 @@
 ﻿using Wcs.Device.Device.Stacker;
 using Wcs.Device.DeviceConfig;
+using Wcs.Shared;
 
 namespace Wcs.Device.DeviceData;
 
@@ -8,9 +9,9 @@ namespace Wcs.Device.DeviceData;
 /// </summary>
 public class Stacker : AbstractStacker
 {
-    public Stacker(string name, StackerConfig config)
+    public Stacker(string name, StackerConfig config, string regionCode, bool enable) : base(name, config, regionCode,
+        enable)
     {
-        Name = name;
-        Config = config;
+        DeviceType = DeviceTypeEnum.Stacker;
     }
 }

@@ -1,18 +1,52 @@
 ﻿using System.Linq.Expressions;
 using Common.JsonExtension;
+using Wcs.Shared;
 
 namespace Wcs.Device.Abstract;
 
 /// <summary>
-/// 设备数据结构
+///     设备数据结构
 /// </summary>
 /// <typeparam name="TConfig"></typeparam>
 /// <typeparam name="TDBEntity"></typeparam>
 public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     where TConfig : BaseDeviceConfig where TDBEntity : BaseDBEntity
 {
+    protected AbstractDevice(bool enable, string regionCodes)
+    {
+        Enable = enable;
+        RegionCodes = regionCodes;
+    }
+
+    /// <summary>
+    /// 设备类型
+    /// </summary>
+    public DeviceTypeEnum DeviceType { get; init; }
+
+    /// <summary>
+    /// 信号量
+    /// </summary>
     public abstract TDBEntity DBEntity { get; protected set; }
-    public abstract string Name { get; init; }
+
+    /// <summary>
+    /// 是否启动
+    /// </summary>
+    public bool Enable { get; protected set; }
+
+    /// <summary>
+    /// 设备的区域编码组
+    /// </summary>
+
+    public string RegionCodes { get; protected set; }
+
+    /// <summary>
+    /// 设备名
+    /// </summary>
+    public string Name { get; init; }
+
+    /// <summary>
+    /// 设备的独立配置文件
+    /// </summary>
     public abstract TConfig Config { get; protected set; }
 
     /// <summary>
@@ -27,9 +61,14 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     /// <summary>
     /// </summary>
     /// <param name="StackerDBEntity"></param>
-    public virtual void SetDBEntity(TDBEntity StackerDBEntity)
+    public virtual void SetDBEntity(TDBEntity dBEntity)
     {
-        DBEntity = StackerDBEntity;
+        dBEntity.IsRead = false;
+    }
+
+    public virtual void SetEnable()
+    {
+        Enable = !Enable;
     }
 
     public abstract bool IsNewStart();

@@ -30,7 +30,7 @@ public class ReadPlcEventConsumer<TIntegrationEvent>(ISender sender)
             DeviceName = s7ReadPlcConsumevent.DeviceName,
             IsBath = s7ReadPlcConsumevent.IsBath,
             DBNames = s7ReadPlcConsumevent.DBNames,
-            Id = s7ReadPlcConsumevent.EventId
+            Key = s7ReadPlcConsumevent.Key
         };
         try
         {

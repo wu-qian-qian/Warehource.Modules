@@ -4,6 +4,8 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>68ed504d-664a-432e-8484-13096a76fdfe</UserSecretsId>
+        <!--<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>-->
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,6 +14,7 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
     </ItemGroup>
 
@@ -19,6 +22,30 @@
         <ProjectReference Include="..\Plc.Infrastructure\Plc.Infrastructure.csproj"/>
         <ProjectReference Include="..\User.Infrastructure\Identity.Infrastructure.csproj"/>
         <ProjectReference Include="..\Wcs.Infrastructure\Wcs.Infrastructure.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="..\.dockerignore"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="..\.dockerignore"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="..\.dockerignore"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="..\.dockerignore"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="..\.dockerignore"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="..\.dockerignore"/>
     </ItemGroup>
 
 </Project>

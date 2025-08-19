@@ -65,7 +65,7 @@ namespace Wcs.Infrastructure.Database.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("WcsTaskCode")
+                    b.Property<string>("RegionCode")
                         .HasMaxLength(64)
                         .HasColumnType("nvarchar(64)");
 
@@ -370,9 +370,6 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsSend")
-                        .HasColumnType("bit");
-
                     b.Property<DateTime?>("LastModificationTime")
                         .HasColumnType("datetime2");
 
@@ -383,6 +380,9 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<string>("PathNodeGroup")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("TaskExecuteStepType")
+                        .HasColumnType("int");
 
                     b.Property<byte[]>("Version")
                         .IsConcurrencyToken()

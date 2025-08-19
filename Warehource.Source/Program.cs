@@ -1,7 +1,9 @@
 using Common.Application.Log;
 using Common.Infrastructure;
+using Common.Infrastructure.ConfigurationExtensions;
 using Common.Infrastructure.Log;
 using Common.Infrastructure.Middleware;
+using Common.JsonExtension;
 using Common.Presentation.Endpoints;
 using Common.Shared;
 using Identity.Infrastructure;
@@ -16,6 +18,10 @@ builder.AddSerilogConfiguratorCategory();
 
 builder.Services.AddCors();
 
+List<KeyValuePair<int, string>> ks = new List<KeyValuePair<int, string>>();
+ks.Add(new KeyValuePair<int, string>(1, "2"));
+ks.Add(new KeyValuePair<int, string>(1, "2"));
+var js = ks.ToJsonString();
 
 //服务通用模块
 Action<HttpResponseMessage> policyCallback = result =>
@@ -24,9 +30,11 @@ Action<HttpResponseMessage> policyCallback = result =>
         "Http请求失败，状态码：{StatusCode}，请求地址：{RequestUri}，请求方法：{Method}",
         result.StatusCode, result.RequestMessage?.RequestUri, result.RequestMessage?.Method);
 };
-
-
+//一些配置模块注入  swagger、jwt、缓存、httpclient
 builder.Services.AddInfrastructure(builder.Configuration, policyCallback);
+
+builder.Configuration.AddModuleConfiguration(["Wcs.Stacker"]);
+
 //单体模块注入
 //待优化反射注入
 builder.Services.AddModules(builder.Configuration,

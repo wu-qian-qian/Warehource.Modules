@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using Wcs.Contracts.Respon.Plc;
-using Wcs.Device.Abstract;
+﻿using Wcs.Device.Abstract;
 
-namespace Wcs.Device.DataBlock
+namespace Wcs.Device.DataBlock;
+
+public class PipeLineDBEntity : BaseDBEntity
 {
-    public class PipeLineDBEntity : BaseDBEntity
-    {
-        public string RTask { get; set; }
-    }
+    public string RTask { get; set; }
+
+    public string RBarCode { get; set; }
+
+    public string WTask { get; set; }
+
+    public string WTargetCode { get; set; }
+    public bool IsRead { get; set; }
 }

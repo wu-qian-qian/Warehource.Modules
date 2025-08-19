@@ -404,3 +404,5 @@ D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\Warehour
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\ref\Warehource.Source.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\Wcs.Device.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\Wcs.Device.pdb
+D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Debug\net8.0\Wcs.Stacker.json
+D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

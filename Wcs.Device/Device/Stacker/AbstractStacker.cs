@@ -6,15 +6,26 @@ namespace Wcs.Device.Device.Stacker;
 
 /// <summary>
 ///     TODO 变量业务逻辑判断
+///     设备的数据结构
 /// </summary>
 public abstract class AbstractStacker : AbstractDevice<StackerConfig, StackerDBEntity>
 {
-    public override string Name { get; init; }
+    protected AbstractStacker(string name, StackerConfig config, string regionCode, bool enable) : base(enable,
+        regionCode)
+    {
+        Name = name;
+        Config = config;
+    }
 
     public override StackerConfig Config { get; protected set; }
 
     public override StackerDBEntity DBEntity { get; protected set; }
 
+    public override void SetDBEntity(StackerDBEntity dBEntity)
+    {
+        base.SetDBEntity(dBEntity);
+        DBEntity = dBEntity;
+    }
 
     /// <summary>
     ///     是否可以写入变量状态

@@ -26,7 +26,8 @@ public class InsertOrUpdate : IEndpoint
                     Enable = request.Enable,
                     Description = request.Description,
                     Id = request.Id.Value,
-                    GroupName = request.GroupName
+                    GroupName = request.GroupName,
+                    RegionCode = request.RegionCodes
                 });
             }).WithTags(AssemblyReference.Decive);
     }

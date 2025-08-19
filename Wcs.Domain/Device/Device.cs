@@ -20,8 +20,6 @@ public class Device : IEntity
 
     public string? Description { get; set; }
 
-    public string? WcsTaskCode { get; set; }
-
     /// <summary>
     ///     配置
     /// </summary>
@@ -29,5 +27,14 @@ public class Device : IEntity
 
     public bool Enable { get; set; }
 
+    /// <summary>
+    /// 区域编码
+    /// 如a,b,c,d
+    /// </summary>
+    public string? RegionCode { get; set; }
+
+    /// <summary>
+    /// 设备组 ，如同巷道多小车，同巷道多堆垛机
+    /// </summary>
     public string? GroupName { get; set; }
 }

@@ -54,3 +54,4 @@ D:\Program\仓库\Warehource.Modules\UI\obj\Debug\net8.0\refint\UI.dll
 D:\Program\仓库\Warehource.Modules\UI\obj\Debug\net8.0\UI.pdb
 D:\Program\仓库\Warehource.Modules\UI\obj\Debug\net8.0\UI.genruntimeconfig.cache
 D:\Program\仓库\Warehource.Modules\UI\obj\Debug\net8.0\ref\UI.dll
+D:\Program\仓库\Warehource.Modules\UI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

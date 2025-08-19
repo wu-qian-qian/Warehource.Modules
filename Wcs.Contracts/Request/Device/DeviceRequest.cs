@@ -12,6 +12,8 @@ public class DeviceRequest
 
     public string? Description { get; set; }
 
+    public string? RegionCodes { get; set; }
+
     /// <summary>
     ///     配置
     /// </summary>

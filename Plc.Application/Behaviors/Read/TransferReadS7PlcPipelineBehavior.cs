@@ -21,22 +21,11 @@ internal class TransferReadS7PlcPipelineBehavior(
         RequestHandlerDelegate<IEnumerable<ReadBuffer>> next,
         CancellationToken cancellationToken)
     {
-        var key = string.Empty;
-        if (request.IsBath)
-        {
-            if (request.DeviceName != null)
-                key = request.Id != null ? request.Id.ToString() : request.DeviceName;
-            else
-                key = request.Id != null ? request.Id.ToString() : request.Ip;
-        }
-        else
-        {
-            key = request.Id.ToString();
-        }
-
-        var mapKey = $"{key}Transfer";
+        var key = request.Key;
         //映射数据存入缓存
-        var memoryEntity = await cacheService.GetAsync<IEnumerable<EntityItemModel>>(mapKey);
+        var mapkey = $"{request.Key}#map";
+        //获取到映射转换器 
+        var memoryEntity = await cacheService.GetAsync<IEnumerable<EntityItemModel>>(mapkey);
         if (memoryEntity == null)
         {
             var entityItems = (await netManager.GetNetWiteDeviceNameAsync(request.DeviceName))
@@ -46,7 +35,7 @@ internal class TransferReadS7PlcPipelineBehavior(
                 return new EntityItemModel(p.Name, p.S7DataType, p.DBAddress, p.DataOffset, p.BitOffset,
                     p.ArrayLength);
             });
-            await cacheService.SetAsync(mapKey, entityItemModels);
+            await cacheService.SetAsync(mapkey, entityItemModels);
         }
 
         //公共模块触发，将数据放入缓存
@@ -69,7 +58,7 @@ internal class TransferReadS7PlcPipelineBehavior(
                                 p.S7DataType, p.ArrayLength);
                             return new ReadModel(p.DBName, data);
                         });
-                        readModels.AddRange(readModels);
+                        readModels.AddRange(readModelArray);
                     }
 
                     await cacheService.SetAsync<IEnumerable<ReadModel>>(key, readModels);

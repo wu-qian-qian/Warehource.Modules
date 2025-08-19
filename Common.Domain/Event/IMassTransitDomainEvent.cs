@@ -8,6 +8,4 @@ public abstract class IMassTransitDomainEvent
     }
 
     public DateTime OccurredOnUtc { get; }
-
-    public Guid? EventId { get; set; }
 }

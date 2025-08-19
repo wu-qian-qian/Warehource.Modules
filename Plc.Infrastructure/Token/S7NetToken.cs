@@ -194,11 +194,8 @@ public partial class S7NetToken : S7Net
     public override async Task WriteAsync(WriteBufferItemInput[] bulkItems)
     {
         if (!_plc.IsConnected)
-        {
             Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--PLC未连接");
-        }
         else
-        {
             try
             {
                 for (var i = 0; i < bulkItems.Length; i++)
@@ -292,7 +289,6 @@ public partial class S7NetToken : S7Net
             {
                 Log.Logger.ForCategory(LogCategory.Net).Information($"数据读取失败: {_plc.IP}-{ex}");
             }
-        }
     }
 
 

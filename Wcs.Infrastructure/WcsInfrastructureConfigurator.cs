@@ -1,4 +1,5 @@
 using AutoMapper;
+using Common.Infrastructure.Authentication;
 using Common.Presentation.Endpoints;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Wcs.Application;
 using Wcs.Application.Abstract;
 using Wcs.Application.SignalR;
+using Wcs.Contracts.Options;
 using Wcs.Device.Device.Stacker;
 using Wcs.Device.Device.StockPort;
 using Wcs.Device.Device.Tranship;
@@ -59,6 +61,8 @@ public static class WcsInfrastructureConfigurator
         //获取到当前使用的生命周期，在从中获取到dbContext
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<WCSDBContext>());
         services.AddSignalRConfiguration();
+
+        services.Configure<StackerMapOptions>(configuration.GetSection("Stacker:StackerMapOptions"));
     }
 
     public static IServiceCollection AddRepository(this IServiceCollection service)
@@ -119,7 +123,24 @@ public static class WcsInfrastructureConfigurator
             nameof(StackerTranShipOutController));
         service.AddKeyedSingleton<IStockPortController, StockPortInController>(nameof(StockPortInController));
         service.AddKeyedSingleton<IStockPortController, StockPortOutController>(nameof(StockPortOutController));
-        service.AddSingleton<IDeviceService, DeviceService>();
+        //可以采用构造注入，这边为了使用的便捷采用了手动的注入
+        service.AddSingleton<IDeviceService>(sp =>
+        {
+            var stackerController = sp.GetService<IStackerController>();
+            var stackerInTranShipController =
+                sp.GetKeyedService<IStackerTranshipController>(nameof(StackerInTranShipController));
+            var stackerTranShipOutController =
+                sp.GetKeyedService<IStackerTranshipController>(nameof(StackerTranShipOutController));
+            var stockPortInController = sp.GetKeyedService<IStockPortController>(nameof(StockPortInController));
+            var stockPortOutController = sp.GetKeyedService<IStockPortController>(nameof(StockPortOutController));
+            var serviceScopeFactory = sp.GetService<IServiceScopeFactory>();
+            DeviceService service = new DeviceService(serviceScopeFactory,
+            [
+                stackerController, stackerInTranShipController, stackerTranShipOutController, stockPortInController,
+                stockPortOutController
+            ]);
+            return service;
+        });
     }
 
     /// <summary>

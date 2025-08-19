@@ -25,7 +25,7 @@ public class GlobalLogMiddleware
         var responseData = string.Empty;
         var requestData = string.Empty;
         //可以让 Request.Body 可以再次读取
-        if (request.ContentLength != null)
+        if (request.ContentLength != null && request.ContentLength != 0)
         {
             // 允许请求体被多次读取
             context.Request.EnableBuffering();

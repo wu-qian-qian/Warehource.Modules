@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Wcs.Device.Abstract;
+﻿using Wcs.Device.Abstract;
 
-namespace Wcs.Device.Device.StockPort
+namespace Wcs.Device.Device.StockPort;
+
+public interface IStockPortController : IController<AbstractStockPort>
 {
-    public interface IStockPortController : IController<AbstractStockPort>
-    {
-    }
 }

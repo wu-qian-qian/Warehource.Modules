@@ -1,11 +1,14 @@
 ﻿using Wcs.Device.Device.Tranship;
 using Wcs.Device.DeviceConfig;
+using Wcs.Shared;
 
 namespace Wcs.Device.DeviceData;
 
-public class StackerOutTranShip : AbstrraStackerTranship
+public class StackerOutTranShip : AbstractStackerTranship
 {
-    public StackerOutTranShip(string name, StackerTranShipConfig config) : base(name, config)
+    public StackerOutTranShip(StackerTranShipConfig config, string name, string regionCodes, bool enable) : base(config,
+        name, regionCodes, enable)
     {
+        DeviceType = DeviceTypeEnum.StackerOutTranShip;
     }
 }

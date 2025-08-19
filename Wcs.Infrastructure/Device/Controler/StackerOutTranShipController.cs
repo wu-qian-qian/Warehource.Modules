@@ -1,33 +1,25 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Wcs.Application.Abstract;
-using Wcs.Application.Handler.Execute.CreatDeviceData;
+using Wcs.Application.Abstract.Device;
+using Wcs.Application.Handler.Business.CreatDeviceData;
 using Wcs.Device.Device.Tranship;
 using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler;
 
-public class StackerTranShipOutController : BaseDependy, IStackerTranshipController
+public class StackerTranShipOutController : AbstractStackerTranshipOutController
 {
     public StackerTranShipOutController(IServiceScopeFactory serviceScopeFactory) : base(serviceScopeFactory)
     {
         DeviceType = DeviceTypeEnum.StackerOutTranShip;
     }
 
-    public AbstrraStackerTranship[] Devices { get; private set; }
-
-    public DeviceTypeEnum DeviceType { get; init; }
-
-    public async Task ExecuteAsync(CancellationToken token = default)
+    public override async Task ExecuteAsync(CancellationToken token = default)
     {
-        using var scope = _scopeFactory.CreateScope();
-        var sender = scope.ServiceProvider.GetService<ISender>();
         if (Devices == null || Devices.Length == 0)
         {
-            Devices = (AbstrraStackerTranship[])await sender.Send(new CreatDeviceDataCommand
-            {
-                DeviceType = this.DeviceType,
-            });
+            await base.ExecuteAsync(token);
         }
         else
         {

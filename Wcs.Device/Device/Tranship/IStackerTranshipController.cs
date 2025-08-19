@@ -1,8 +1,7 @@
 ﻿using Wcs.Device.Abstract;
 
-namespace Wcs.Device.Device.Tranship
+namespace Wcs.Device.Device.Tranship;
+
+public interface IStackerTranshipController : IController<AbstractStackerTranship>
 {
-    public interface IStackerTranshipController : IController<AbstrraStackerTranship>
-    {
-    }
 }

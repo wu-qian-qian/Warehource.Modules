@@ -1,7 +1,6 @@
 ﻿using System.Collections.Concurrent;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
 
 namespace Wcs.Application.SignalR.ChatHub;

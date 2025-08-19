@@ -61,7 +61,7 @@ public sealed class HttpClientFactory
     }
 
     /// <summary>
-    ///    发送josn格式以body
+    ///     发送josn格式以body
     /// </summary>
     /// <param name="josn"></param>
     /// <param name="method"></param>

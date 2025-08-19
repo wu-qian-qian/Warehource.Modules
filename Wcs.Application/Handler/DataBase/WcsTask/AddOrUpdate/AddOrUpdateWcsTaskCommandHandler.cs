@@ -20,6 +20,7 @@ public class AddOrUpdateWcsTaskCommandHandler(
     {
         Result<WcsTaskDto> result = new();
         var wcsTask = _wcsTaskRepository.Get(request.Id);
+        //这边是上游传输，需要注意如果上游是可以双区域任意入库则需要进一步细化如获取某一个任务少量的区域
         var region = _regionRepository.Get(request.RegionCode);
         if (wcsTask == null)
         {

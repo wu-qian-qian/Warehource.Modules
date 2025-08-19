@@ -53,4 +53,6 @@ public class S7ReadPlcDataBlockIntegrationEvent : IMassTransitDomainEvent
             return false;
         }
     }
+
+    public string Key { get; set; }
 }

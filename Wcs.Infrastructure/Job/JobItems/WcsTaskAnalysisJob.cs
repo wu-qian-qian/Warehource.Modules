@@ -1,7 +1,7 @@
 ﻿using Common.Application.QuartzJob;
 using MediatR;
 using Quartz;
-using Wcs.Application.Handler.Execute.WcsTaskAnalysis;
+using Wcs.Application.Handler.Business.WcsTaskAnalysis;
 
 namespace Wcs.Infrastructure.Job.JobItems;
 
