@@ -1,11 +1,13 @@
-﻿using UI.Model.Job;
+﻿using UI.Model;
+using UI.Model.Job;
 
 namespace UI.Service.JobService;
 
 public class JobService : IJobService
 {
-    public Task<JobModel[]> GetJobsAsync()
+    public Task<Result<JobModel[]>> GetJobsAsync()
     {
+        Result<JobModel[]> result = new();
         var jobs = new List<JobModel>();
         jobs.Add(
             new JobModel
@@ -18,15 +20,16 @@ public class JobService : IJobService
                 Description = "用来读取Plc",
                 IsStart = false
             });
-        return Task.FromResult(jobs.ToArray());
+        result.Value = jobs.ToArray();
+        return Task.FromResult(result);
     }
 
-    public Task<JobModel> AddJobAsync(JobModel jobModel)
+    public Task<Result<JobModel>> AddJobAsync(JobModel jobModel)
     {
         throw new NotImplementedException();
     }
 
-    public Task<JobModel> JobStatusAsync(JobModel jobModel)
+    public Task<Result<JobModel>> JobStatusAsync(JobModel jobModel)
     {
         throw new NotImplementedException();
     }

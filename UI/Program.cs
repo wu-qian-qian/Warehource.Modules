@@ -1,4 +1,7 @@
 using UI.Components;
+using UI.Service;
+using UI.Service.DeviceService;
+using UI.Service.ExecuteNodeService;
 using UI.Service.HomeService;
 using UI.Service.IdentityService;
 using UI.Service.JobService;
@@ -22,6 +25,12 @@ builder.Services.AddScoped<IJobService, JobService>();
 builder.Services.AddScoped<IIdentityService, IdentityService>();
 
 builder.Services.AddScoped<IPlcService, PlcService>();
+
+builder.Services.AddScoped<IExecuteNodeService, ExecuteNodeService>();
+
+builder.Services.AddScoped<IRegionService, RegionService>();
+
+builder.Services.AddScoped<IDeviceService, DeviceService>();
 builder.Services.AddHttpClient();
 
 var app = builder.Build();

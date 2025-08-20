@@ -65,6 +65,7 @@
             <PropertyColumn Property="c => c.PutFloor" Width="70" Title="放货层"/>
             <PropertyColumn Property="c => c.PutRow" Width="70" Title="放货排"/>
             <PropertyColumn Property="c => c.PutColumn" Width="70" Title="放货列"/>
+            <PropertyColumn Property="c => c.CurrentDevice" Width="70" Title="当前执行设备"/>
             <PropertyColumn Property="c => c.CreationTime" Width="168" Title="创建时间"/>
         </Table>
     </Row>
@@ -72,7 +73,6 @@
 
 <div>
     <Drawer Closable="true" Width="420"
-
             Visible="TaskDetailVisible" Title='"任务面板"' OnClose="_ => TaskDetailPanelClose()">
         <Template style="height:90%">
             <Row Gutter="18">
@@ -177,7 +177,6 @@
         base.OnInitialized();
         _rowClickCallback = EventCallback.Factory.Create<RowData<WcsTaskModel>>(this, SelectRowCallback);
         await LoadTableData();
-        await LoadTaskExecuteList();
         base.OnInitializedAsync();
     }
 
@@ -221,7 +220,7 @@
 
     private async Task LoadTableData()
     {
-        data = await _homeService.GetTasksAsync();
+        data = (await _homeService.GetTasksAsync()).Value;
         _message.Success("Table data loaded successfully!");
     }
 
@@ -280,23 +279,6 @@
     {
         Console.WriteLine($"value: {SelectValue} selected: " +
                           $"{string.Join(",", selectedNodes.Select(x => x.Value))}");
-    }
-
-    /// <summary>
-    ///     执行步骤列表
-    /// </summary>
-    async Task LoadTaskExecuteList()
-    {
-        options = new List<CascaderNode>();
-        var executeSteps = await _homeService.GetExecutesAsync();
-        foreach (var item in executeSteps)
-        {
-            options.Add(new CascaderNode
-            {
-                Label = item.ExecuteName,
-                Value = item.ExecuteName
-            });
-        }
     }
 
     #endregion

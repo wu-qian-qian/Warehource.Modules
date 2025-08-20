@@ -1,0 +1,214 @@
+﻿@page "/ExecuteNodePath"
+@using UI.Model.ExecuteNode
+@using UI.Service.ExecuteNodeService
+@inject IExecuteNodeService _ExecuteNodeService
+@inject IMessageService _message
+<PageTitle>ExecuteNodePath</PageTitle>
+
+<div>
+    <Row Class="ant-table-tbody" Style="display: flex; justify-content: space-between; margin:5px">
+        <AntDesign.Col Flex="1">
+            <Button Type="ButtonType.Primary" Style="margin-top:20px" @onclick="_ => LoadTableData()">重新加载</Button>
+        </AntDesign.Col>
+        <AntDesign.Col Flex="1">
+            <Button Type="ButtonType.Primary" Style="margin-top:20px" @onclick="_ => TaskDetailPanelOpen()">
+                添加路径
+            </Button>
+        </AntDesign.Col>
+        <AntDesign.Col Flex="8">
+            <div Style="margin-top:20px">
+                <Text>路径组</Text>
+                <Input Placeholder="请输入" TValue="string" width="160px"/>
+            </div>
+        </AntDesign.Col>
+
+        <AntDesign.Col Flex="1">
+            <Button Type="ButtonType.Primary" Style="margin-top:20px">查询</Button>
+        </AntDesign.Col>
+    </Row>
+    <Row Style="display: flex;margin-top: 30px; flex-direction: column; height: calc(100vh - 150px);">
+        <Table DataSource="data" PageSize="10" ScrollX="1200" StickyOffsetHeader="64" Class="my-table">
+            <PropertyColumn Property="c => c.PahtNodeGroup" Width="200" Title="节点组"/>
+            <PropertyColumn Property="c => c.Index" Width="160" Title="组编号"/>
+            <PropertyColumn Property="c => c.CurrentDeviceType" Width="200" Title="设备类型"/>
+            <PropertyColumn Property="c => c.TaskType" Width="160" Title="任务类型"/>
+            <PropertyColumn Property="c => c.RegionCode" Width="160" Title="区域编码"/>
+            <PropertyColumn Property="c => c.RegionDescription" Width="160" Title="区域描述"/>
+            <PropertyColumn Property="c => c.LastModifierUser" Width="160" Title="修改人"/>
+            <PropertyColumn Property="c => c.LastModificationTime" Width="160" Title="修改人时间"/>
+        </Table>
+    </Row>
+</div>
+<div>
+    <Drawer Closable="true" Width="420"
+            Visible="DrawerVisible" Title='"任务面板"' OnClose="_ => TaskDetailPanelClose()">
+        <Template style="height:90%">
+            <Row Gutter="18">
+                <AntDesign.Col Span="12">
+                    <Text>节点组：</Text>
+                    <Input Placeholder="请输入" @bind-Value="@select.PahtNodeGroup" TValue="string"/>
+                </AntDesign.Col>
+                <AntDesign.Col Span="12">
+                    <Text>组编号：</Text>
+                    <Input Placeholder="请输入" @bind-Value="@select.Index" TValue="int"/>
+                </AntDesign.Col>
+            </Row>
+            <Row Gutter="18">
+                <AntDesign.Col Span="12">
+                    <Text>设备类型：</Text>
+                    <div>
+                        <Cascader Options="@taskOptions" @bind-Value="TaskSelectValue" ChangeOnSelect="true"></Cascader>
+                    </div>
+                    >
+
+                </AntDesign.Col>
+                <AntDesign.Col Span="12">
+                    <Text>任务类型：</Text>
+                    <div>
+                        <Cascader Options="@deviceOptions" @bind-Value="DeviceSelectValue"
+                                  ChangeOnSelect="true">
+                        </Cascader>
+                    </div>
+                </AntDesign.Col>
+            </Row>
+            <Row Gutter="18">
+                <AntDesign.Col Span="12">
+                    <Text>区域编码：</Text>
+                    <Input Placeholder="请输入" @bind-Value="@select.RegionCode" TValue="string"/>
+                </AntDesign.Col>
+            </Row>
+            <br/>
+            <Row>
+                <AntDesign.Col Span="18">
+                </AntDesign.Col>
+                <AntDesign.Col Span="6">
+                    <Button Type="ButtonType.Primary" @onclick="_ => Commit()">提交</Button>
+                </AntDesign.Col>
+            </Row>
+        </Template>
+    </Drawer>
+</div>
+<style>
+    /* 在 wwwroot/css/site.css 或组件样式部分添加 */
+    .my-table .ant-table-tbody > tr:nth-child(odd) > td {
+        background-color: #f8f8f8; /* 浅色行 */
+    }
+
+    .my-table .ant-table-tbody > tr:nth-child(even) > td {
+        background-color: #ffffff; /* 白色行（或更深颜色） */
+    }
+
+    /* 鼠标悬停效果 */
+    .my-table .ant-table-tbody > tr:hover > td {
+        background-color: #e6f7ff !important; /* 悬停高亮色 */
+    }
+
+</style>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await LoadTableData();
+        select = new ExecuteNodeModel
+        {
+            Index = 5
+        };
+    }
+
+    ExecuteNodeModel select;
+    ExecuteNodeModel[] data;
+
+    async Task LoadTableData()
+    {
+        data = (await _ExecuteNodeService.GetExecuteNodesAsync()).Value;
+        Initialize();
+    }
+
+    bool DrawerVisible;
+
+    void TaskDetailPanelOpen()
+    {
+        DrawerVisible = true;
+    }
+
+    void TaskDetailPanelClose()
+    {
+        DrawerVisible = false;
+    }
+
+    async Task Commit()
+    {
+        select.CurrentDeviceType = DeviceSelectValue;
+        select.TaskType = TaskSelectValue;
+        var result = await _ExecuteNodeService.CreateExecuteNodeAsync(select);
+        if (result.IsSuccess)
+        {
+            _message.Success("Sucess");
+        }
+        else
+        {
+            _message.Error(result.Message);
+        }
+    }
+
+    #region 下拉
+
+    string TaskSelectValue { get; set; }
+    List<CascaderNode> taskOptions;
+
+
+    string DeviceSelectValue { get; set; }
+    List<CascaderNode> deviceOptions;
+
+
+    void Initialize()
+    {
+        taskOptions = new List<CascaderNode>();
+        taskOptions.Add(new CascaderNode
+        {
+            Label = "出库",
+            Value = "StockOut"
+        });
+        taskOptions.Add(new CascaderNode
+        {
+            Label = "入库",
+            Value = "StockIn"
+        });
+        taskOptions.Add(new CascaderNode
+        {
+            Label = "移库",
+            Value = "StockMove"
+        });
+        deviceOptions = new List<CascaderNode>();
+        deviceOptions.Add(new CascaderNode
+        {
+            Label = "入库口",
+            Value = "StockPortIn"
+        });
+        deviceOptions.Add(new CascaderNode
+        {
+            Label = "出库口",
+            Value = "StockPortOut"
+        });
+        deviceOptions.Add(new CascaderNode
+        {
+            Label = "堆垛机取货口",
+            Value = "StackerInTranShip"
+        });
+        deviceOptions.Add(new CascaderNode
+        {
+            Label = "堆垛机放货口",
+            Value = "StackerOutTranShip"
+        });
+        deviceOptions.Add(new CascaderNode
+        {
+            Label = "堆垛机",
+            Value = "Stacker"
+        });
+    }
+
+    #endregion
+
+}

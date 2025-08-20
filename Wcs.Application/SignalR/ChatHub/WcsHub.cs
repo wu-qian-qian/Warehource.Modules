@@ -20,6 +20,7 @@ public class WcsHub : Hub<IClient>
 
     public async Task SendMessage(string message)
     {
+        await Task.Delay(100);
         Console.WriteLine(message);
     }
 }

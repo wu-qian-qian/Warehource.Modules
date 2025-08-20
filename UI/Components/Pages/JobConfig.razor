@@ -109,7 +109,7 @@
 
     private async Task LoadTableData()
     {
-        data = await _JobService.GetJobsAsync();
+        data = (await _JobService.GetJobsAsync()).Value;
     }
 
     private void SelectRowCallback(RowData<JobModel> rowData)

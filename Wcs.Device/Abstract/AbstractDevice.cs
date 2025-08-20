@@ -19,33 +19,33 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     }
 
     /// <summary>
-    /// 设备类型
+    ///     设备类型
     /// </summary>
     public DeviceTypeEnum DeviceType { get; init; }
 
     /// <summary>
-    /// 信号量
+    ///     信号量
     /// </summary>
     public abstract TDBEntity DBEntity { get; protected set; }
 
     /// <summary>
-    /// 是否启动
+    ///     是否启动
     /// </summary>
     public bool Enable { get; protected set; }
 
     /// <summary>
-    /// 设备的区域编码组
+    ///     设备的区域编码组
     /// </summary>
 
     public string RegionCodes { get; protected set; }
 
     /// <summary>
-    /// 设备名
+    ///     设备名
     /// </summary>
     public string Name { get; init; }
 
     /// <summary>
-    /// 设备的独立配置文件
+    ///     设备的独立配置文件
     /// </summary>
     public abstract TConfig Config { get; protected set; }
 

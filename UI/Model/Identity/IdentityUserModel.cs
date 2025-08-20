@@ -13,6 +13,8 @@ public class IdentityUserModel
 
     public string Username { get; set; }
 
+    public string PassWord { get; set; }
+
     public DateTimeOffset LockoutEnd { get; set; }
 
     public string RoleName { get; set; }

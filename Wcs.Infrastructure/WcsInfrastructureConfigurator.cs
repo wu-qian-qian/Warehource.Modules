@@ -1,5 +1,4 @@
 using AutoMapper;
-using Common.Infrastructure.Authentication;
 using Common.Presentation.Endpoints;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
@@ -134,11 +133,8 @@ public static class WcsInfrastructureConfigurator
             var stockPortInController = sp.GetKeyedService<IStockPortController>(nameof(StockPortInController));
             var stockPortOutController = sp.GetKeyedService<IStockPortController>(nameof(StockPortOutController));
             var serviceScopeFactory = sp.GetService<IServiceScopeFactory>();
-            DeviceService service = new DeviceService(serviceScopeFactory,
-            [
-                stackerController, stackerInTranShipController, stackerTranShipOutController, stockPortInController,
-                stockPortOutController
-            ]);
+            var service = new DeviceService(serviceScopeFactory, stackerController, stackerInTranShipController,
+                stackerTranShipOutController, stockPortInController, stockPortOutController);
             return service;
         });
     }

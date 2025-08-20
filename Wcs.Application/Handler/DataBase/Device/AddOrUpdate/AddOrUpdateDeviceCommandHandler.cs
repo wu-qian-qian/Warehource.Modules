@@ -37,7 +37,7 @@ public class AddOrUpdateDeviceCommandHandler(
                 Enable = request.Enable.Value,
                 Description = request.Description,
                 GroupName = request.GroupName,
-                RegionCode = request.RegionCode,
+                RegionCode = request.RegionCode
             };
             _deviceRepository.Add(entity);
             await _unitOfWork.SaveChangesAsync();

@@ -3,7 +3,6 @@ using Wcs.Application.Abstract;
 using Wcs.Application.Abstract.Device;
 using Wcs.Contracts.Business;
 using Wcs.Device.Abstract;
-using Wcs.Infrastructure.Device.Controler;
 using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Service;
@@ -21,7 +20,7 @@ internal class DeviceService : IDeviceService
 
     public async Task<RecommendTunnle> GerRecommendTunnleAsync(DeviceTypeEnum deviceType)
     {
-        IController controller = _deviceController
+        var controller = _deviceController
             .First(controller => controller.DeviceType == deviceType);
         var target = string.Empty;
         if (controller is AbstractStackerTranshipInController targetController)

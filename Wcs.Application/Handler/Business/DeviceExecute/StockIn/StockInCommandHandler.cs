@@ -2,12 +2,11 @@
 using Common.Application.Log;
 using Common.Application.MediatR.Message;
 using Common.Shared;
-using EnumsNET;
 using MassTransit;
 using MediatR;
 using Serilog;
 using Wcs.Application.Abstract;
-using Wcs.Application.Handler.Http.ApplyTunnle;
+using Wcs.Application.Handler.Business.RefreshExecuteType;
 using Wcs.CustomEvents.Saga;
 using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.Task;
@@ -33,6 +32,7 @@ internal class StockInCommandHandler(
         {
             if (stockIn.CanExecute())
             {
+                //可考虑使用状态机
                 if (wcsTask.TaskExecuteStep.TaskExecuteStepType == TaskExecuteStepTypeEnum.ToBeSend)
                 {
                     var executeNodePath = _nodeRepository.GetQuerys()
@@ -44,14 +44,16 @@ internal class StockInCommandHandler(
                         var executeNode = executeNodePath.FirstOrDefault(p => p.Index == nextType);
                         if (executeNode != null)
                         {
-                            wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.BeSending;
-                            wcsTask.TaskExecuteStep.DeviceType = executeNode.CurrentDeviceType;
                             var targetCode =
                                 await _deviceService.GerRecommendTunnleAsync(executeNode.CurrentDeviceType);
+                            //刷新任务数据
                             wcsTask.TaskExecuteStep.CurentDevice = targetCode.DeviceName;
+                            wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.BeSending;
+                            wcsTask.TaskExecuteStep.DeviceType = executeNode.CurrentDeviceType;
+                            wcsTask.TaskStatus = WcsTaskStatusEnum.InProgress;
 
                             await _cacheService.SetAsync(stockIn.Config.Key, wcsTask);
-                            Serilog.Log.Logger.ForCategory(LogCategory.Business)
+                            Log.Logger.ForCategory(LogCategory.Business)
                                 .Information($"{wcsTask.SerialNumber}--发送执行任务");
                             var dic = new Dictionary<string, string>();
                             await _publishEndpoint.Publish(new WcsWritePlcTaskCreated(stockIn.Name, dic,
@@ -60,7 +62,7 @@ internal class StockInCommandHandler(
                     }
                     else
                     {
-                        Serilog.Log.Logger.ForCategory(LogCategory.Business)
+                        Log.Logger.ForCategory(LogCategory.Business)
                             .Information($"设备，不能执行该区域的任务{executeNodePath[0].Region.Code}");
                     }
                 }
@@ -69,8 +71,9 @@ internal class StockInCommandHandler(
                     //重新发送
                     wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.BeSending;
                     await _cacheService.SetAsync(stockIn.Config.Key, wcsTask);
-                    Serilog.Log.Logger.ForCategory(LogCategory.Business)
+                    Log.Logger.ForCategory(LogCategory.Business)
                         .Information($"{wcsTask.SerialNumber}--重发执行任务");
+                    //数据写入
                     var dic = new Dictionary<string, string>();
                     await _publishEndpoint.Publish(
                         new WcsWritePlcTaskCreated(stockIn.Name, dic, stockIn.Config.TaskKey));
@@ -78,6 +81,7 @@ internal class StockInCommandHandler(
                 else if (wcsTask.TaskExecuteStep.TaskExecuteStepType == TaskExecuteStepTypeEnum.Complate)
                 {
                     //任务数据更新到数据库
+                    await _sender.Send(new RefreshExecuteTypeCommand { Key = stockIn.Config.TaskKey });
                 }
             }
         }

@@ -4,7 +4,6 @@ using Microsoft.Extensions.Options;
 using Wcs.Contracts.Options;
 using Wcs.Contracts.Respon.Region;
 using Wcs.Domain.Region;
-using static Microsoft.IO.RecyclableMemoryStreamManager;
 
 namespace Wcs.Application.Handler.DataBase.Region.Get;
 

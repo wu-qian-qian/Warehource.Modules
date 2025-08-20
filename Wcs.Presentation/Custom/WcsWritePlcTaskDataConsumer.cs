@@ -16,7 +16,7 @@ public class WcsWritePlcTaskDataConsumer(ISender send) : IConsumer<WcsWritePlcTa
         await send.Send(new WritePlcTaskdataCommand
         {
             Key = context.Message.Key,
-            IsSucess = context.Message.IsSucess,
+            IsSucess = context.Message.IsSucess
         });
     }
 }

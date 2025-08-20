@@ -15,13 +15,9 @@ public class FilterStackerCommandHandler : ICommandHandler<FilterStackerCommand,
             tempWcsTasks = wcsTasks.Where(p => p.TaskType == WcsTaskTypeEnum.StockMove);
             if (tempWcsTasks.Any() == false)
                 if (request.IsTranShipPoint)
-                {
                     tempWcsTasks = wcsTasks.Where(p => p.TaskType == WcsTaskTypeEnum.StockIn);
-                }
                 else
-                {
                     tempWcsTasks = wcsTasks.Where(p => p.TaskType == WcsTaskTypeEnum.StockOut);
-                }
         }
 
         if (tempWcsTasks.Any() == false) tempWcsTasks = wcsTasks;

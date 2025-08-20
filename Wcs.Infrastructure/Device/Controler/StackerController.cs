@@ -1,12 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Wcs.Application.Abstract;
 using Wcs.Application.Abstract.Device;
-using Wcs.Application.Handler.Business.CreatDeviceData;
 using Wcs.Application.Handler.Business.DeviceExecute.Stacker;
-using Wcs.Application.Handler.Business.FilterStackerTask;
-using Wcs.Device.Device.Stacker;
-using Wcs.Domain.Task;
 using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler;
@@ -38,7 +33,7 @@ internal class StackerController : AbstractStackerController
                     var sender = scope.ServiceProvider.GetService<ISender>();
                     await sender.Send(new StackerCommand
                     {
-                        Stacker = item,
+                        Stacker = item
                     }, cancelToken);
                 });
         }

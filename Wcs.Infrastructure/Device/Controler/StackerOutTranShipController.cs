@@ -1,9 +1,5 @@
-﻿using MediatR;
-using Microsoft.Extensions.DependencyInjection;
-using Wcs.Application.Abstract;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Wcs.Application.Abstract.Device;
-using Wcs.Application.Handler.Business.CreatDeviceData;
-using Wcs.Device.Device.Tranship;
 using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler;

@@ -157,7 +157,7 @@
                 Message = "登入成功",
                 Duration = 3
             });
-            User = await MainService.LoginAsync(UserName, PassWord);
+            User = (await MainService.LoginAsync(UserName, PassWord)).Value;
             menuItems = await MainService.GetMenuItemDatas(User.RoleName);
             LoginPanelClose();
         }

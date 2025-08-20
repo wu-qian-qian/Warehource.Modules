@@ -23,4 +23,9 @@ public static class TypeHelper
             return convertedValue;
         }
     }
+
+    public static bool IsNullableType(this Type type)
+    {
+        return type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>);
+    }
 }

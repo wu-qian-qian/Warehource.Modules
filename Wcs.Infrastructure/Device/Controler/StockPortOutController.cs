@@ -1,8 +1,5 @@
-﻿using MediatR;
-using Microsoft.Extensions.DependencyInjection;
-using Wcs.Application.Abstract;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Wcs.Application.Abstract.Device;
-using Wcs.Application.Handler.Business.CreatDeviceData;
 using Wcs.Device.Device.StockPort;
 using Wcs.Shared;
 
@@ -15,7 +12,7 @@ internal class StockPortOutController : AbstractStockOutPortController
         DeviceType = DeviceTypeEnum.StockPortOut;
     }
 
-    public AbstractStockPort[] Devices { get; private set; }
+    public AbstractStockPort[] Devices { get; }
 
     public DeviceTypeEnum DeviceType { get; init; }
 

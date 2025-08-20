@@ -16,19 +16,17 @@ internal class WritePlcTaskPlcCommadHandler(ICacheService _cacheService) : IComm
         if (wcsTask != null)
         {
             if (request.IsSucess)
-            {
                 //更新数据库 TODO
                 wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.Complate;
-            }
             else
-            {
                 //更新数据库 TODO
                 wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.SendEnding;
-            }
 
             await _cacheService.SetAsync(request.Key, wcsTask);
         }
         else
+        {
             Log.Logger.ForCategory(LogCategory.Business).Information($"缓存失效,{request.Key}，状态更新失败");
+        }
     }
 }

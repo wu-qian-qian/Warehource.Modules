@@ -10,6 +10,13 @@
         <AntDesign.Col Flex="1">
             <Button Type="ButtonType.Primary" Style="margin-top:20px" @onclick="_ => LoadTableData()">重新加载</Button>
         </AntDesign.Col>
+
+        <AntDesign.Col Flex="1">
+            <Button Type="ButtonType.Primary" Style="margin-top:20px" @onclick="_ => TaskDetailPanelOpen()">
+                添加
+            </Button>
+        </AntDesign.Col>
+
         <AntDesign.Col Flex="8">
             <div Style="margin-top:20px">
                 <Text>角色名</Text>
@@ -33,6 +40,52 @@
     </Row>
 </div>
 
+<div>
+    <Drawer Closable="true" Width="420"
+            Visible="DrawerVisible" Title='"添加面板"' OnClose="_ => TaskDetailPanelClose()">
+        <Template style="height:90%">
+            <Row Gutter="18">
+                <AntDesign.Col Span="12">
+                    <Text>名称：</Text>
+                    <Input Placeholder="请输入" @bind-Value="@select.Name" TValue="string"/>
+                </AntDesign.Col>
+                <AntDesign.Col Span="12">
+                    <Text>描述：</Text>
+                    <Input Placeholder="请输入" @bind-Value="@select.Description" TValue="string"/>
+                </AntDesign.Col>
+            </Row>
+
+            <Row Gutter="18">
+                <AntDesign.Col Span="12">
+                    <Text>邮箱：</Text>
+                    <Input Placeholder="请输入" @bind-Value="@select.Email" TValue="string"/>
+                </AntDesign.Col>
+                <AntDesign.Col Span="12">
+                    <Text>电话：</Text>
+                    <Input Placeholder="请输入" @bind-Value="@select.Phone" TValue="string"/>
+                </AntDesign.Col>
+            </Row>
+
+            <Row Gutter="18">
+                <AntDesign.Col Span="12">
+                    <Text>账户：</Text>
+                    <Input Placeholder="请输入" @bind-Value="@select.Username" TValue="string"/>
+                </AntDesign.Col>
+                <AntDesign.Col Span="12">
+                    <Text>密码：</Text>
+                    <Input Placeholder="请输入" @bind-Value="@select.PassWord" TValue="string"/>
+                </AntDesign.Col>
+            </Row>
+            <Row>
+                <AntDesign.Col Span="18">
+                </AntDesign.Col>
+                <AntDesign.Col Span="6">
+                    <Button Type="ButtonType.Primary" @onclick="_ => Commit()">提交</Button>
+                </AntDesign.Col>
+            </Row>
+        </Template>
+    </Drawer>
+</div>
 
 <style>
     /* 在 wwwroot/css/site.css 或组件样式部分添加 */
@@ -57,14 +110,33 @@
     {
         await base.OnInitializedAsync();
         await LoadTableData();
+        select = new IdentityUserModel();
     }
 
     IdentityUserModel[] data;
 
     async Task LoadTableData()
     {
-        data = await _IdentityService.GetUsersAsync();
+        data = (await _IdentityService.GetUsersAsync()).Value;
     }
 
+    IdentityUserModel select;
+
+    bool DrawerVisible;
+
+    void TaskDetailPanelOpen()
+    {
+        DrawerVisible = true;
+    }
+
+    void TaskDetailPanelClose()
+    {
+        DrawerVisible = false;
+    }
+
+    async Task Commit()
+    {
+        await _IdentityService.CreateUserAsync(select);
+    }
 
 }

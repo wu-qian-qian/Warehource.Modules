@@ -1,4 +1,5 @@
-﻿using UI.Model.Identity;
+﻿using UI.Model;
+using UI.Model.Identity;
 
 namespace UI.Service.IdentityService;
 
@@ -11,8 +12,9 @@ public class IdentityService : IIdentityService
         _httpClientFactory = httpClientFactory;
     }
 
-    public Task<IdentityUserModel[]> GetUsersAsync()
+    public Task<Result<IdentityUserModel[]>> GetUsersAsync()
     {
+        Result<IdentityUserModel[]> result = new();
         var data = Enumerable.Range(0, 20).Select(
             p => new IdentityUserModel
             {
@@ -22,26 +24,29 @@ public class IdentityService : IIdentityService
                 Phone = "0123456789",
                 Email = "user" + p
             });
-        return Task.FromResult(data.ToArray());
+        result.Value = data.ToArray();
+        return Task.FromResult(result);
     }
 
-    public Task<IdentityRoleModel[]> GetRolesAsync()
+    public Task<Result<IdentityRoleModel[]>> GetRolesAsync()
     {
+        Result<IdentityRoleModel[]> result = new();
         var data = Enumerable.Range(0, 20).Select(
             p => new IdentityRoleModel
             {
                 RoleName = $"Role{p}",
                 Description = "This is a test user"
             });
-        return Task.FromResult(data.ToArray());
+        result.Value = data.ToArray();
+        return Task.FromResult(result);
     }
 
-    public Task CreateUserAsync(IdentityUserModel user)
+    public Task<Result<IdentityUserModel>> CreateUserAsync(IdentityUserModel user)
     {
         throw new NotImplementedException();
     }
 
-    public Task CreateRoleAsync(IdentityRoleModel role)
+    public Task<Result<IdentityRoleModel>> CreateRoleAsync(IdentityRoleModel role)
     {
         throw new NotImplementedException();
     }

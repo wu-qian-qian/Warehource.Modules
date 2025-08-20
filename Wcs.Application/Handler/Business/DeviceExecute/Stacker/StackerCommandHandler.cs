@@ -84,7 +84,9 @@ internal class StackerCommandHandler(ISender sender, IPublishEndpoint _publishEn
             }
         }
         else
+        {
             Log.Logger.ForCategory(LogCategory.Business)
                 .Information($"{stacker.Name}--堆垛机连接异常无法执行任务");
+        }
     }
 }

@@ -18,7 +18,7 @@ builder.AddSerilogConfiguratorCategory();
 
 builder.Services.AddCors();
 
-List<KeyValuePair<int, string>> ks = new List<KeyValuePair<int, string>>();
+var ks = new List<KeyValuePair<int, string>>();
 ks.Add(new KeyValuePair<int, string>(1, "2"));
 ks.Add(new KeyValuePair<int, string>(1, "2"));
 var js = ks.ToJsonString();

@@ -19,7 +19,7 @@ internal class AnalysisCommandHandler(
 {
     public async Task Handle(AnalysisCommand request, CancellationToken cancellationToken)
     {
-        StackerMapOptions options = mapOptions.Value;
+        var options = mapOptions.Value;
         var wcsTasks = _wcsTaskRepository
             .GetWcsTaskQuerys()
             .Where(p => p.TaskStatus == WcsTaskStatusEnum.Created)
@@ -48,7 +48,7 @@ internal class AnalysisCommandHandler(
                             p.Tunnle.ToString() == wcsTask.GetLocation.GetTunnel);
                         if (map == null)
                         {
-                            Serilog.Log.Logger.ForCategory(LogCategory.Business)
+                            Log.Logger.ForCategory(LogCategory.Business)
                                 .Information($"{wcsTask.TaskCode}--解析任务出现未知配置巷道--{wcsTask.GetLocation.GetTunnel}");
                             wcsTask.TaskStatus = WcsTaskStatusEnum.Analysited;
                             continue;

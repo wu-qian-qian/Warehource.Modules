@@ -6,7 +6,7 @@ namespace Wcs.Application.Abstract;
 public interface IDeviceService
 {
     /// <summary>
-    /// 获取推荐巷道
+    ///     获取推荐巷道
     /// </summary>
     /// <returns></returns>
     public Task<RecommendTunnle> GerRecommendTunnleAsync(DeviceTypeEnum deviceType);

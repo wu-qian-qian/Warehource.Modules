@@ -1,14 +1,15 @@
-﻿using UI.Model.Identity;
+﻿using UI.Model;
+using UI.Model.Identity;
 
 namespace UI.Service.IdentityService;
 
 public interface IIdentityService
 {
-    Task<IdentityUserModel[]> GetUsersAsync();
+    Task<Result<IdentityUserModel[]>> GetUsersAsync();
 
-    Task<IdentityRoleModel[]> GetRolesAsync();
+    Task<Result<IdentityRoleModel[]>> GetRolesAsync();
 
-    Task CreateUserAsync(IdentityUserModel user);
+    Task<Result<IdentityUserModel>> CreateUserAsync(IdentityUserModel user);
 
-    Task CreateRoleAsync(IdentityRoleModel role);
+    Task<Result<IdentityRoleModel>> CreateRoleAsync(IdentityRoleModel role);
 }

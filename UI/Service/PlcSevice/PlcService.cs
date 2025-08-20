@@ -1,5 +1,6 @@
 ﻿using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Components.Forms;
+using UI.Model;
 using UI.Model.Plc;
 
 namespace UI.Service.PlcSevice;
@@ -54,8 +55,9 @@ public class PlcService : IPlcService
         var response = await httpClient.GetAsync("http://localhost:5050/plc/downLoad-plc-template");
     }
 
-    public Task<S7NetModel[]> GetS7NetModesAsync()
+    public Task<Result<S7NetModel[]>> GetS7NetModesAsync()
     {
+        Result<S7NetModel[]> result = new();
         var data = new List<S7NetModel>
         {
             new()
@@ -179,6 +181,7 @@ public class PlcService : IPlcService
                 }.ToArray()
             }
         }.ToArray();
-        return Task.FromResult(data);
+        result.Value = data;
+        return Task.FromResult(result);
     }
 }

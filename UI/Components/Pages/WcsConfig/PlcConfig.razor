@@ -116,7 +116,7 @@
 
     async Task LoadDataAsync()
     {
-        data = await _plcService.GetS7NetModesAsync();
+        data = (await _plcService.GetS7NetModesAsync()).Value;
     }
 
     //只有展开时才获取数据
