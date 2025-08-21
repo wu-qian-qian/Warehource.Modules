@@ -1,5 +1,4 @@
 using UI.Components;
-using UI.Service;
 using UI.Service.DeviceService;
 using UI.Service.ExecuteNodeService;
 using UI.Service.HomeService;
@@ -7,6 +6,7 @@ using UI.Service.IdentityService;
 using UI.Service.JobService;
 using UI.Service.MainService;
 using UI.Service.PlcSevice;
+using UI.Service.RegionService;
 
 var builder = WebApplication.CreateBuilder(args);
 

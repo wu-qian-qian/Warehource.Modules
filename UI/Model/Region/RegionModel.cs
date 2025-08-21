@@ -1,4 +1,4 @@
-﻿namespace UI.Model;
+﻿namespace UI.Model.Region;
 
 public class RegionModel : BaseModel
 {

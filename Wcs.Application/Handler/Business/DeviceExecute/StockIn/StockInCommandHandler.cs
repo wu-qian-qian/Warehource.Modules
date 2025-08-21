@@ -7,7 +7,7 @@ using MediatR;
 using Serilog;
 using Wcs.Application.Abstract;
 using Wcs.Application.Handler.Business.CheckExecuteNode;
-using Wcs.Application.Handler.Business.RefreshExecuteType;
+using Wcs.Application.Handler.Business.RefreshTaskStatus;
 using Wcs.Application.Handler.Http.ApplyTunnle;
 using Wcs.CustomEvents.Saga;
 using Wcs.Domain.ExecuteNode;

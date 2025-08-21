@@ -1,6 +1,7 @@
 ﻿using UI.Model;
+using UI.Model.Region;
 
-namespace UI.Service;
+namespace UI.Service.RegionService;
 
 public class RegionService : IRegionService
 {

@@ -1,6 +1,6 @@
 ﻿using Common.Application.MediatR.Message;
 
-namespace Wcs.Application.Handler.Business.RefreshExecuteType;
+namespace Wcs.Application.Handler.Business.RefreshTaskStatus;
 
 public class RefreshTaskStatusCommand : ICommand
 {

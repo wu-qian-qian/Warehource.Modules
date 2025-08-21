@@ -4,7 +4,7 @@ using Wcs.Application.Abstract;
 using Wcs.Domain.Task;
 using Wcs.Shared;
 
-namespace Wcs.Application.Handler.Business.RefreshExecuteType;
+namespace Wcs.Application.Handler.Business.RefreshTaskStatus;
 
 /// <summary>
 ///     将缓存数据更新到数据库
