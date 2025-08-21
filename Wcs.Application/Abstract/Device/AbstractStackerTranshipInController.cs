@@ -32,6 +32,10 @@ public abstract class AbstractStackerTranshipInController : IStackerTranshipCont
         }
     }
 
+    /// <summary>
+    ///     TODO 根据(变量)当前的状态来获得可以执行的借货后
+    /// </summary>
+    /// <returns></returns>
     public virtual int[] GetReCommendTranship()
     {
         var tunnle = 0;

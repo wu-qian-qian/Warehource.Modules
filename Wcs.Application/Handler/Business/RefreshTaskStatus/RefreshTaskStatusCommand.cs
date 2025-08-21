@@ -2,7 +2,7 @@
 
 namespace Wcs.Application.Handler.Business.RefreshExecuteType;
 
-public class RefreshExecuteTypeCommand : ICommand
+public class RefreshTaskStatusCommand : ICommand
 {
     public string Key { get; set; }
 }

@@ -9,5 +9,8 @@ public interface IDeviceService
     ///     获取推荐巷道
     /// </summary>
     /// <returns></returns>
-    public Task<RecommendTunnle> GerRecommendTunnleAsync(DeviceTypeEnum deviceType);
+    Task<int[]?> GetCanExecuteTunnleAsync(DeviceTypeEnum deviceType);
+
+    Task<RecommendTunnle> GetRecommendTunnleAsync(DeviceTypeEnum deviceType, int tullne);
+    Task<string> GetTargetPipelinAsync(DeviceTypeEnum deviceType, string deviceName);
 }

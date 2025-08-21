@@ -19,6 +19,9 @@ internal class AnalysisCommandHandler(
 {
     public async Task Handle(AnalysisCommand request, CancellationToken cancellationToken)
     {
+        //如果上游系统不维护区域，这个获取路线判断就不能添加区域判断，如入库任务获取到第一节点；然后执行时赋值区域；出移库根据巷道获取到区域
+        //区域表示行走路线  一个设备有多个区域，表示多条路线经过该设备
+
         var options = mapOptions.Value;
         var wcsTasks = _wcsTaskRepository
             .GetWcsTaskQuerys()

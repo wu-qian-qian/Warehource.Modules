@@ -1,11 +1,75 @@
-﻿using Common.Application.MediatR.Message;
+﻿using Common.Application.Log;
+using Common.Application.MediatR.Message;
+using Common.Shared;
+using MediatR;
+using Serilog;
+using Wcs.Application.Abstract;
+using Wcs.Application.Handler.Business.CheckExecuteNode;
+using Wcs.Application.Handler.Http.ApplyLocation;
+using Wcs.Domain.ExecuteNode;
+using Wcs.Domain.Task;
 
 namespace Wcs.Application.Handler.Business.DeviceExecute.StackerTranshipIn;
 
-internal class StackerTranshipInCommandHandler : ICommandHandler<StackerTranshipInCommand>
+internal class StackerTranshipInCommandHandler(
+    IWcsTaskRepository _wcsTaskRepository,
+    IUnitOfWork _unitOfWork,
+    IDeviceService _deviceService,
+    IExecuteNodeRepository _executeNodeRepository,
+    ISender sender)
+    : ICommandHandler<StackerTranshipInCommand>
 {
-    public Task Handle(StackerTranshipInCommand request, CancellationToken cancellationToken)
+    public async Task Handle(StackerTranshipInCommand request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var stackerTranshipIn = request.InTranShip;
+        if (stackerTranshipIn.CanExecute())
+        {
+            if (stackerTranshipIn.IsNewStart())
+            {
+                var wcsTask = _wcsTaskRepository.Get(stackerTranshipIn.DBEntity.RTask);
+                if (wcsTask.TaskExecuteStep.CurentDevice
+                    == stackerTranshipIn.Name || wcsTask.TaskExecuteStep.DeviceType == stackerTranshipIn.DeviceType)
+                {
+                    var result = await sender.Send(new ApplyLocationCommand { TaskCode = wcsTask.TaskCode });
+                    if (result.IsSuccess)
+                    {
+                        var location = result.Value.Split('_');
+                        var putLocation =
+                            new PutLocation(stackerTranshipIn.Config.Tunnle.ToString(),
+                                location[0], location[1], location[2], string.Empty);
+                        var getLocation = new GetLocation(stackerTranshipIn.Config.Tunnle.ToString(),
+                            stackerTranshipIn.Config.Floor.ToString(), stackerTranshipIn.Config.Row.ToString()
+                            , stackerTranshipIn.Config.Column.ToString(), string.Empty);
+                        wcsTask.GetLocation = getLocation;
+                        wcsTask.PutLocation = putLocation;
+                        var check = await sender.Send(new CheckExecuteNodeCommand
+                        {
+                            WcsTask = wcsTask,
+                            DeviceRegionCode = stackerTranshipIn.RegionCodes
+                        });
+                        if (result.IsSuccess)
+                            await _unitOfWork.SaveChangesAsync();
+                        else
+                            Log.Logger.ForCategory(LogCategory.Business)
+                                .Information($"{stackerTranshipIn.Name}:{check.Message}");
+                    }
+                    else
+                    {
+                        Log.Logger.ForCategory(LogCategory.Business)
+                            .Information($"{stackerTranshipIn.Name}:{wcsTask.SerialNumber}--申请库位失败");
+                    }
+                }
+                else
+                {
+                    Log.Logger.ForCategory(LogCategory.Business)
+                        .Information($"{stackerTranshipIn.Name}:当前任务不符合设备类型执行失败{wcsTask.SerialNumber}");
+                }
+            }
+        }
+        else
+        {
+            Log.Logger.ForCategory(LogCategory.Business)
+                .Information($"{stackerTranshipIn.Name}：无法执行存在报警或是手动");
+        }
     }
 }

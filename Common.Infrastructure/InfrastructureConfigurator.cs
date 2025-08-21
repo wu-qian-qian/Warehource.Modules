@@ -38,7 +38,8 @@ public static class InfrastructureConfigurator
         var options = configuration.GetSection("JWTOptions").Get<JWTOptions>();
         services.AddJwtAuthenticationConfigurationoptions(options);
         //注册缓存
-        services.AddRedisCacheing("localhost:63w9");
+        var redisCoon = configuration.GetConnectionString("redis");
+        services.AddRedisCacheing(redisCoon);
         //HttpContext 注入
         services.AddHttpContextAccessor();
         // 添加HttpClient

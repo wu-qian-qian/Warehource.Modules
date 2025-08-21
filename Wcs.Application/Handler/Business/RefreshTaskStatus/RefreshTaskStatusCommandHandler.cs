@@ -12,12 +12,12 @@ namespace Wcs.Application.Handler.Business.RefreshExecuteType;
 /// <param name="_wcsTaskRepository"></param>
 /// <param name="_cacheService"></param>
 /// <param name="_unitOfWork"></param>
-public class RefreshExecuteTypeCommandHandler(
+public class RefreshTaskStatusCommandHandler(
     IWcsTaskRepository _wcsTaskRepository,
     ICacheService _cacheService,
-    IUnitOfWork _unitOfWork) : ICommandHandler<RefreshExecuteTypeCommand>
+    IUnitOfWork _unitOfWork) : ICommandHandler<RefreshTaskStatusCommand>
 {
-    public async Task Handle(RefreshExecuteTypeCommand request, CancellationToken cancellationToken)
+    public async Task Handle(RefreshTaskStatusCommand request, CancellationToken cancellationToken)
     {
         var wcsTask = await _cacheService.GetAsync<WcsTask>(request.Key);
         if (wcsTask != null)

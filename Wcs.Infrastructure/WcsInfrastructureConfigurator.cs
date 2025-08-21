@@ -62,8 +62,14 @@ public static class WcsInfrastructureConfigurator
         services.AddSignalRConfiguration();
 
         services.Configure<StackerMapOptions>(configuration.GetSection("Stacker:StackerMapOptions"));
+        AddCoreBusiness(services);
     }
 
+    /// <summary>
+    ///     仓储注入
+    /// </summary>
+    /// <param name="service"></param>
+    /// <returns></returns>
     public static IServiceCollection AddRepository(this IServiceCollection service)
     {
         service.AddScoped<IJobService, JobService>();
@@ -76,6 +82,11 @@ public static class WcsInfrastructureConfigurator
         return service;
     }
 
+    /// <summary>
+    ///     Singnal 通讯注入
+    /// </summary>
+    /// <param name="services"></param>
+    /// <returns></returns>
     public static IServiceCollection AddSignalRConfiguration(this IServiceCollection services)
     {
         // 注册SignalR服务
@@ -85,12 +96,21 @@ public static class WcsInfrastructureConfigurator
         return services;
     }
 
+    /// <summary>
+    ///     API端点注入
+    /// </summary>
+    /// <param name="services"></param>
+    /// <returns></returns>
     public static IServiceCollection AddEndPoint(this IServiceCollection services)
     {
         services.AddEndpoints(AssemblyReference.Assembly);
         return services;
     }
 
+    /// <summary>
+    ///     管道注入
+    /// </summary>
+    /// <param name="configuration"></param>
     public static void AddBehaviorModule(MediatRServiceConfiguration configuration)
     {
         ApplicationConfigurator.AddMediatR(configuration);
@@ -110,6 +130,7 @@ public static class WcsInfrastructureConfigurator
     }
 
     /// <summary>
+    /// 核心业务逻辑注入
     /// </summary>
     /// <param name="service"></param>
     public static void AddCoreBusiness(IServiceCollection service)

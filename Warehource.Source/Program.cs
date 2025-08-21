@@ -3,7 +3,6 @@ using Common.Infrastructure;
 using Common.Infrastructure.ConfigurationExtensions;
 using Common.Infrastructure.Log;
 using Common.Infrastructure.Middleware;
-using Common.JsonExtension;
 using Common.Presentation.Endpoints;
 using Common.Shared;
 using Identity.Infrastructure;
@@ -18,10 +17,6 @@ builder.AddSerilogConfiguratorCategory();
 
 builder.Services.AddCors();
 
-var ks = new List<KeyValuePair<int, string>>();
-ks.Add(new KeyValuePair<int, string>(1, "2"));
-ks.Add(new KeyValuePair<int, string>(1, "2"));
-var js = ks.ToJsonString();
 
 //服务通用模块
 Action<HttpResponseMessage> policyCallback = result =>
