@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\database\\wcsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\database\\wcsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.infrastructure\\plcinfrastructureconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|solutionrelative:plc.infrastructure\\plcinfrastructureconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\business\\deviceexecute\\stockin\\stockincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\business\\deviceexecute\\stockin\\stockincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\device\\service\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\device\\service\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\business\\deviceexecute\\stockin\\stockincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\business\\deviceexecute\\stockin\\stockincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\device\\controler\\stackercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\device\\controler\\stackercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\device\\controler\\stockportincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\device\\controler\\stockportincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\warehource.source\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|solutionrelative:warehource.source\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -107,79 +91,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WCSDBContext.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\WCSDBContext.cs",
-              "RelativeDocumentMoniker": "Wcs.Infrastructure\\Database\\WCSDBContext.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Database\\WCSDBContext.cs",
-              "RelativeToolTip": "Wcs.Infrastructure\\Database\\WCSDBContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxMAAABUAAAAAAAAAA==",
+              "Title": "PlcInfrastructureConfigurator.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
+              "RelativeDocumentMoniker": "Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
+              "RelativeToolTip": "Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T01:56:25.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StockPortInController.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Device\\Controler\\StockPortInController.cs",
-              "RelativeDocumentMoniker": "Wcs.Infrastructure\\Device\\Controler\\StockPortInController.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Device\\Controler\\StockPortInController.cs",
-              "RelativeToolTip": "Wcs.Infrastructure\\Device\\Controler\\StockPortInController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAIwCkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T01:34:40.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StackerController.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Device\\Controler\\StackerController.cs",
-              "RelativeDocumentMoniker": "Wcs.Infrastructure\\Device\\Controler\\StackerController.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Device\\Controler\\StackerController.cs",
-              "RelativeToolTip": "Wcs.Infrastructure\\Device\\Controler\\StackerController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAywB0AAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T01:30:55.209Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeviceService.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Device\\Service\\DeviceService.cs",
-              "RelativeDocumentMoniker": "Wcs.Infrastructure\\Device\\Service\\DeviceService.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\Device\\Service\\DeviceService.cs",
-              "RelativeToolTip": "Wcs.Infrastructure\\Device\\Service\\DeviceService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T01:28:58.965Z",
+              "WhenOpened": "2025-08-23T00:33:22.852Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "StockInCommandHandler.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Business\\DeviceExecute\\StockIn\\StockInCommandHandler.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\Business\\DeviceExecute\\StockIn\\StockInCommandHandler.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Business\\DeviceExecute\\StockIn\\StockInCommandHandler.cs",
-              "RelativeToolTip": "Wcs.Application\\Handler\\Business\\DeviceExecute\\StockIn\\StockInCommandHandler.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAADwvxoAAAAQAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Program.cs",
+              "RelativeDocumentMoniker": "Warehource.Source\\Program.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Program.cs",
+              "RelativeToolTip": "Warehource.Source\\Program.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAUwE4AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T01:24:25.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StockInCommand.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Business\\DeviceExecute\\StockIn\\StockInCommand.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\Business\\DeviceExecute\\StockIn\\StockInCommand.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Business\\DeviceExecute\\StockIn\\StockInCommand.cs",
-              "RelativeToolTip": "Wcs.Application\\Handler\\Business\\DeviceExecute\\StockIn\\StockInCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T01:24:23.58Z",
+              "WhenOpened": "2025-08-21T09:29:48.685Z",
               "EditorCaption": ""
             }
           ]

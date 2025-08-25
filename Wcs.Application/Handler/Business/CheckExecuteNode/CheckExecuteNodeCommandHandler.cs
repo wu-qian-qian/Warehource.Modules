@@ -17,6 +17,7 @@ public class CheckExecuteNodeCommandHandler(
         var region = _regionRepository.Get(wcsTask.RegionId.Value);
         if (region != null)
         {
+            //设备的区域组保函该区域
             if (request.DeviceRegionCode.Contains(region.Code))
             {
                 var executeNodePath = _executeNodeRepository.GetQuerys()

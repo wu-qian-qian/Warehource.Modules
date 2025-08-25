@@ -21,11 +21,6 @@ public abstract class AbstractStacker : AbstractDevice<StackerConfig, StackerDBE
 
     public override StackerDBEntity DBEntity { get; protected set; }
 
-    public override void SetDBEntity(StackerDBEntity dBEntity)
-    {
-        base.SetDBEntity(dBEntity);
-        DBEntity = dBEntity;
-    }
 
     /// <summary>
     ///     是否可以写入变量状态

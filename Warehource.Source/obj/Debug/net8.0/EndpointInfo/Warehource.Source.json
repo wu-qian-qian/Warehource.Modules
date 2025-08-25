@@ -1399,6 +1399,10 @@
             "type": "string",
             "nullable": true
           },
+          "regionCodes": {
+            "type": "string",
+            "nullable": true
+          },
           "config": {
             "nullable": true
           },

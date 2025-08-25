@@ -8,6 +8,8 @@ public class CreatDBEntity
 {
     private static readonly Dictionary<string, PropertyInfo[]> _properMap;
 
+    internal static SemaphoreSlim _semaphoreSlim = new(1, 1);
+
     static CreatDBEntity()
     {
         _properMap = new Dictionary<string, PropertyInfo[]>();
@@ -17,11 +19,25 @@ public class CreatDBEntity
     {
         var type = typeof(T);
         var t = new T();
-        _properMap.TryGetValue(type.Name, out var propers);
-        if (propers == null)
+        PropertyInfo[] propers = default;
+        try
         {
-            propers = type.GetProperties();
-            _properMap[type.Name] = propers;
+            _properMap.TryGetValue(type.Name, out propers);
+            //双重校验
+            if (propers == null)
+            {
+                _semaphoreSlim.Wait();
+                _properMap.TryGetValue(type.Name, out propers);
+                if (propers == null)
+                {
+                    propers = type.GetProperties();
+                    _properMap[type.Name] = propers;
+                }
+            }
+        }
+        finally
+        {
+            _semaphoreSlim.Release();
         }
 
         for (var i = 0; i < plcBuffers.Length; i++)
@@ -33,16 +49,37 @@ public class CreatDBEntity
         return t;
     }
 
+    /// <summary>
+    ///     可能需要考虑添加锁
+    /// </summary>
+    /// <param name="plcBuffers"></param>
+    /// <param name="ins"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
     public static T CreatEntity<T>(PlcBuffer[] plcBuffers, BaseDBEntity ins) where T : BaseDBEntity, new()
     {
         if (ins == null) ins = new T();
 
-        var type = typeof(T);
-        _properMap.TryGetValue(type.Name, out var propers);
-        if (propers == null)
+        var type = ins.GetType();
+        PropertyInfo[] propers = default;
+        try
         {
-            propers = type.GetProperties();
-            _properMap[type.Name] = propers;
+            _properMap.TryGetValue(type.Name, out propers);
+            //双重校验
+            if (propers == null)
+            {
+                _semaphoreSlim.Wait();
+                _properMap.TryGetValue(type.Name, out propers);
+                if (propers == null)
+                {
+                    propers = type.GetProperties();
+                    _properMap[type.Name] = propers;
+                }
+            }
+        }
+        finally
+        {
+            _semaphoreSlim.Release();
         }
 
         for (var i = 0; i < plcBuffers.Length; i++)
@@ -51,7 +88,6 @@ public class CreatDBEntity
             propertyInfo.SetValue(ins, plcBuffers[i].Data);
         }
 
-        ins.IsRead = true;
         return (T)ins;
     }
 }

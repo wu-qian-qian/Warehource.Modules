@@ -130,7 +130,7 @@ public static class WcsInfrastructureConfigurator
     }
 
     /// <summary>
-    /// 核心业务逻辑注入
+    ///     核心业务逻辑注入
     /// </summary>
     /// <param name="service"></param>
     public static void AddCoreBusiness(IServiceCollection service)

@@ -12,7 +12,7 @@ internal static partial class PlcReadWriteDtoHelper
 {
     internal static Dictionary<string, IEnumerable<ReadBufferInput>> _readBufferInputs = new();
 
-    internal static Semaphore _semaphoreRead = new(1, 1);
+    internal static SemaphoreSlim _semaphoreSlimRead = new(1, 1);
 
     /// <summary>
     ///     初始化读取模型并保存，后续直接使用模型
@@ -21,7 +21,7 @@ internal static partial class PlcReadWriteDtoHelper
     /// <param name="netConfig"></param>
     internal static void UseMemoryInitReadBufferInput(S7NetConfig netConfig, string key)
     {
-        _semaphoreRead.WaitOne();
+        _semaphoreSlimRead.Wait();
         try
         {
             if (!_readBufferInputs.ContainsKey(netConfig.Ip))
@@ -33,7 +33,7 @@ internal static partial class PlcReadWriteDtoHelper
         }
         finally
         {
-            _semaphoreRead.Release();
+            _semaphoreSlimRead.Release();
         }
     }
 
@@ -75,7 +75,7 @@ internal static partial class PlcReadWriteDtoHelper
 
     internal static void UseMemoryInitReadBufferInput(string key, params S7EntityItem[] items)
     {
-        _semaphoreRead.WaitOne();
+        _semaphoreSlimRead.Wait();
         try
         {
             if (!_readBufferInputs.ContainsKey(key))
@@ -86,7 +86,7 @@ internal static partial class PlcReadWriteDtoHelper
         }
         finally
         {
-            _semaphoreRead.Release();
+            _semaphoreSlimRead.Release();
         }
     }
 

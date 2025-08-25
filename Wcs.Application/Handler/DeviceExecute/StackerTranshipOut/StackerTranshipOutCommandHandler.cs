@@ -1,6 +1,6 @@
 ﻿using Common.Application.MediatR.Message;
 
-namespace Wcs.Application.Handler.Business.DeviceExecute.StackerTranshipOut;
+namespace Wcs.Application.Handler.DeviceExecute.StackerTranshipOut;
 
 internal class StackerTranshipOutCommandHandler : ICommandHandler<StackerTranshipOutCommand>
 {

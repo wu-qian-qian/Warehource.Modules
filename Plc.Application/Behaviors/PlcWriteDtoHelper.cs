@@ -8,11 +8,11 @@ internal static partial class PlcReadWriteDtoHelper
 {
     internal static List<WriteModel> _WriteBufferInputs = new();
 
-    internal static Semaphore _semaphoreWrite = new(1, 1);
+    internal static SemaphoreSlim _semaphoreSlimWrite = new(1, 1);
 
     internal static void UseMemoryInitWriteBufferInput(string key, params S7EntityItem[] s7EntityItems)
     {
-        _semaphoreWrite.WaitOne();
+        _semaphoreSlimWrite.Wait();
         try
         {
             if (!_WriteBufferInputs.Any(p => p._key == key))
@@ -40,7 +40,7 @@ internal static partial class PlcReadWriteDtoHelper
         }
         finally
         {
-            _semaphoreWrite.Release();
+            _semaphoreSlimWrite.Release();
         }
     }
 

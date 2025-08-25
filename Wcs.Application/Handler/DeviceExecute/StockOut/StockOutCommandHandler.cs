@@ -1,6 +1,6 @@
 ﻿using Common.Application.MediatR.Message;
 
-namespace Wcs.Application.Handler.Business.DeviceExecute.StockOut;
+namespace Wcs.Application.Handler.DeviceExecute.StockOut;
 
 internal class StockOutCommandHandler : ICommandHandler<StockOutCommand>
 {

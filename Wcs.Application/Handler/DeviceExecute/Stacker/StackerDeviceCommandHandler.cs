@@ -10,18 +10,21 @@ using Wcs.Application.Handler.Http.Complate;
 using Wcs.Domain.Task;
 using Wcs.Shared;
 
-namespace Wcs.Application.Handler.Business.DeviceExecute.Stacker;
+namespace Wcs.Application.Handler.DeviceExecute.Stacker;
 
 /// <summary>
 ///     堆垛机业务处理事件
 /// </summary>
 /// <param name="sender"></param>
-internal class StackerCommandHandler(ISender sender, IPublishEndpoint _publishEndpoint, ICacheService _cacheService)
-    : ICommandHandler<StackerCommand>
+internal class StackerDeviceCommandHandler(
+    ISender sender,
+    IPublishEndpoint _publishEndpoint,
+    ICacheService _cacheService)
+    : ICommandHandler<StackerDeviceCommand>
 {
-    public async Task Handle(StackerCommand request, CancellationToken cancellationToken)
+    public async Task Handle(StackerDeviceCommand request, CancellationToken cancellationToken)
     {
-        var stacker = request.Stacker;
+        var stacker = request.Device;
         //判断是否可执行
         if (stacker.CanExecute())
         {

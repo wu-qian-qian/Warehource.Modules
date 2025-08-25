@@ -11,5 +11,4 @@ public class PipeLineDBEntity : BaseDBEntity
     public string WTask { get; set; }
 
     public string WTargetCode { get; set; }
-    public bool IsRead { get; set; }
 }

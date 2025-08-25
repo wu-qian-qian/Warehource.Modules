@@ -17,11 +17,6 @@ public abstract class AbstractStackerTranship : AbstractDevice<StackerTranShipCo
 
     public override PipeLineDBEntity DBEntity { get; protected set; }
 
-    public override void SetDBEntity(PipeLineDBEntity dBEntity)
-    {
-        base.SetDBEntity(dBEntity);
-        DBEntity = dBEntity;
-    }
 
     public override bool CanExecute()
     {

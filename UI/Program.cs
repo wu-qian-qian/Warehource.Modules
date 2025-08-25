@@ -13,9 +13,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-//ע��ant
+//ant blazor 注入
 builder.Services.AddAntDesign();
-//ע��HttpClient
+
 builder.Services.AddScoped<IMainService, MainService>();
 
 builder.Services.AddScoped<IHomeService, HomeService>();
@@ -31,6 +31,7 @@ builder.Services.AddScoped<IExecuteNodeService, ExecuteNodeService>();
 builder.Services.AddScoped<IRegionService, RegionService>();
 
 builder.Services.AddScoped<IDeviceService, DeviceService>();
+// httpClient 注入
 builder.Services.AddHttpClient();
 
 var app = builder.Build();

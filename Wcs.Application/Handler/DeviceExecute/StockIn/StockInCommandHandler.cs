@@ -14,7 +14,7 @@ using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.Task;
 using Wcs.Shared;
 
-namespace Wcs.Application.Handler.Business.DeviceExecute.StockIn;
+namespace Wcs.Application.Handler.DeviceExecute.StockIn;
 
 internal class StockInCommandHandler(
     IWcsTaskRepository _taskRepository,
@@ -27,7 +27,7 @@ internal class StockInCommandHandler(
 {
     public async Task Handle(StockInCommand request, CancellationToken cancellationToken)
     {
-        var stockIn = request.StockIn;
+        var stockIn = request.Device;
         var wcsTask = await _cacheService.GetAsync<WcsTask>(stockIn.Config.TaskKey);
         //表示
         if (wcsTask != null)

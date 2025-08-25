@@ -6,22 +6,19 @@ using Serilog;
 using Wcs.Application.Abstract;
 using Wcs.Application.Handler.Business.CheckExecuteNode;
 using Wcs.Application.Handler.Http.ApplyLocation;
-using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.Task;
 
-namespace Wcs.Application.Handler.Business.DeviceExecute.StackerTranshipIn;
+namespace Wcs.Application.Handler.DeviceExecute.StackerTranshipIn;
 
 internal class StackerTranshipInCommandHandler(
     IWcsTaskRepository _wcsTaskRepository,
     IUnitOfWork _unitOfWork,
-    IDeviceService _deviceService,
-    IExecuteNodeRepository _executeNodeRepository,
     ISender sender)
     : ICommandHandler<StackerTranshipInCommand>
 {
     public async Task Handle(StackerTranshipInCommand request, CancellationToken cancellationToken)
     {
-        var stackerTranshipIn = request.InTranShip;
+        var stackerTranshipIn = request.Device;
         if (stackerTranshipIn.CanExecute())
         {
             if (stackerTranshipIn.IsNewStart())
@@ -30,6 +27,7 @@ internal class StackerTranshipInCommandHandler(
                 if (wcsTask.TaskExecuteStep.CurentDevice
                     == stackerTranshipIn.Name || wcsTask.TaskExecuteStep.DeviceType == stackerTranshipIn.DeviceType)
                 {
+                    //事件获取放货位置
                     var result = await sender.Send(new ApplyLocationCommand { TaskCode = wcsTask.TaskCode });
                     if (result.IsSuccess)
                     {
@@ -42,12 +40,14 @@ internal class StackerTranshipInCommandHandler(
                             , stackerTranshipIn.Config.Column.ToString(), string.Empty);
                         wcsTask.GetLocation = getLocation;
                         wcsTask.PutLocation = putLocation;
+                        //检测
                         var check = await sender.Send(new CheckExecuteNodeCommand
                         {
                             WcsTask = wcsTask,
                             DeviceRegionCode = stackerTranshipIn.RegionCodes
                         });
-                        if (result.IsSuccess)
+                        //因为存在状态追踪
+                        if (check.IsSuccess)
                             await _unitOfWork.SaveChangesAsync();
                         else
                             Log.Logger.ForCategory(LogCategory.Business)

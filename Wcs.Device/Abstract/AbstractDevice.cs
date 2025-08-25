@@ -10,12 +10,13 @@ namespace Wcs.Device.Abstract;
 /// <typeparam name="TConfig"></typeparam>
 /// <typeparam name="TDBEntity"></typeparam>
 public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
-    where TConfig : BaseDeviceConfig where TDBEntity : BaseDBEntity
+    where TConfig : BaseDeviceConfig where TDBEntity : BaseDBEntity, new()
 {
     protected AbstractDevice(bool enable, string regionCodes)
     {
         Enable = enable;
         RegionCodes = regionCodes;
+        DBEntity = new TDBEntity();
     }
 
     /// <summary>
@@ -35,8 +36,9 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
 
     /// <summary>
     ///     设备的区域编码组
+    /// 可能包含多个
+    /// 因为一个区域表示一条路径，且多调路径可能经过某同一设备
     /// </summary>
-
     public string RegionCodes { get; protected set; }
 
     /// <summary>
@@ -58,13 +60,6 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
         Config = config.ParseJson<TConfig>();
     }
 
-    /// <summary>
-    /// </summary>
-    /// <param name="StackerDBEntity"></param>
-    public virtual void SetDBEntity(TDBEntity dBEntity)
-    {
-        dBEntity.IsRead = false;
-    }
 
     public virtual void SetEnable()
     {
