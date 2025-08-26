@@ -21,50 +21,50 @@ internal class StackerTranshipInCommandHandler(
         var stackerTranshipIn = request.Device;
         if (stackerTranshipIn.CanExecute())
         {
-            if (stackerTranshipIn.IsNewStart())
-            {
-                var wcsTask = _wcsTaskRepository.Get(stackerTranshipIn.DBEntity.RTask);
-                if (wcsTask.TaskExecuteStep.CurentDevice
-                    == stackerTranshipIn.Name || wcsTask.TaskExecuteStep.DeviceType == stackerTranshipIn.DeviceType)
+            var wcsTask = _wcsTaskRepository.Get(stackerTranshipIn.DBEntity.RTask);
+            if (wcsTask.TaskExecuteStep.CurentDevice == stackerTranshipIn.Name
+                || wcsTask.TaskExecuteStep.DeviceType == stackerTranshipIn.DeviceType)
+                if (stackerTranshipIn.IsNewStart())
                 {
-                    //事件获取放货位置
-                    var result = await sender.Send(new ApplyLocationCommand { TaskCode = wcsTask.TaskCode });
-                    if (result.IsSuccess)
+                    if (wcsTask.TaskExecuteStep.CurentDevice
+                        == stackerTranshipIn.Name || wcsTask.TaskExecuteStep.DeviceType == stackerTranshipIn.DeviceType)
                     {
-                        var location = result.Value.Split('_');
-                        var putLocation =
-                            new PutLocation(stackerTranshipIn.Config.Tunnle.ToString(),
-                                location[0], location[1], location[2], string.Empty);
-                        var getLocation = new GetLocation(stackerTranshipIn.Config.Tunnle.ToString(),
-                            stackerTranshipIn.Config.Floor.ToString(), stackerTranshipIn.Config.Row.ToString()
-                            , stackerTranshipIn.Config.Column.ToString(), string.Empty);
-                        wcsTask.GetLocation = getLocation;
-                        wcsTask.PutLocation = putLocation;
-                        //检测
-                        var check = await sender.Send(new CheckExecuteNodeCommand
+                        //事件获取放货位置
+                        var result = await sender.Send(new ApplyLocationCommand { TaskCode = wcsTask.TaskCode });
+                        if (result.IsSuccess)
                         {
-                            WcsTask = wcsTask,
-                            DeviceRegionCode = stackerTranshipIn.RegionCodes
-                        });
-                        //因为存在状态追踪
-                        if (check.IsSuccess)
-                            await _unitOfWork.SaveChangesAsync();
+                            var location = result.Value.Split('_');
+                            var putLocation =
+                                new PutLocation(stackerTranshipIn.Config.Tunnle,
+                                    location[0], location[1], location[2], string.Empty);
+                            wcsTask.PutLocation = putLocation;
+                            //检测
+                            var check = await sender.Send(new CheckExecuteNodeCommand
+                            {
+                                WcsTask = wcsTask,
+                                DeviceRegionCode = stackerTranshipIn.RegionCodes,
+                                Title = stackerTranshipIn.Config.Tunnle
+                            });
+
+                            //因为存在状态追踪
+                            if (check.IsSuccess)
+                                await _unitOfWork.SaveChangesAsync();
+                            else
+                                Log.Logger.ForCategory(LogCategory.Business)
+                                    .Information($"{stackerTranshipIn.Name}:{check.Message}");
+                        }
                         else
+                        {
                             Log.Logger.ForCategory(LogCategory.Business)
-                                .Information($"{stackerTranshipIn.Name}:{check.Message}");
+                                .Information($"{stackerTranshipIn.Name}:{wcsTask.SerialNumber}--申请库位失败");
+                        }
                     }
                     else
                     {
                         Log.Logger.ForCategory(LogCategory.Business)
-                            .Information($"{stackerTranshipIn.Name}:{wcsTask.SerialNumber}--申请库位失败");
+                            .Information($"{stackerTranshipIn.Name}:当前任务不符合设备类型执行失败{wcsTask.SerialNumber}");
                     }
                 }
-                else
-                {
-                    Log.Logger.ForCategory(LogCategory.Business)
-                        .Information($"{stackerTranshipIn.Name}:当前任务不符合设备类型执行失败{wcsTask.SerialNumber}");
-                }
-            }
         }
         else
         {

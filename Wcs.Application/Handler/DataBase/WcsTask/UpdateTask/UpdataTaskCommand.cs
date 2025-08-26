@@ -10,4 +10,6 @@ public class UpdataTaskCommand : ICommand
     ///     属性   数据 的对应
     /// </summary>
     public IEnumerable<KeyValuePair<string, object>> DataMap { get; set; }
+
+    public Domain.Task.WcsTask WcsTask { get; set; }
 }

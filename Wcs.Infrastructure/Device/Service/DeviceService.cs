@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Wcs.Application.Abstract;
 using Wcs.Application.Abstract.Device;
-using Wcs.Contracts.Business;
 using Wcs.Device.Abstract;
 using Wcs.Shared;
 
@@ -27,29 +26,15 @@ internal class DeviceService : IDeviceService
     /// </summary>
     /// <param name="deviceType"></param>
     /// <returns></returns>
-    public Task<int[]?> GetCanExecuteTunnleAsync(DeviceTypeEnum deviceType)
+    public Task<string[]?> GetCanExecuteTunnleAsync(DeviceTypeEnum deviceType)
     {
-        int[]? tunnels = default;
+        string[]? tunnels = default;
         var controller = _deviceController
             .First(controller => controller.DeviceType == deviceType);
         if (controller is AbstractStackerTranshipInController targetController)
             tunnels = targetController.GetReCommendTranship();
 
         return Task.FromResult(tunnels);
-    }
-
-    public Task<RecommendTunnle> GetRecommendTunnleAsync(DeviceTypeEnum deviceType, int tunnle)
-    {
-        var controller = _deviceController
-            .First(controller => controller.DeviceType == deviceType);
-        RecommendTunnle recommendTunnle = default;
-        if (controller is AbstractStackerTranshipInController targetController)
-        {
-            var transhipInController = targetController.Devices.First(p => p.Config.Tunnle == tunnle);
-            recommendTunnle = new RecommendTunnle(transhipInController.Name, transhipInController.Config.PipelinCode);
-        }
-
-        return Task.FromResult(recommendTunnle);
     }
 
     /// <summary>
@@ -78,5 +63,69 @@ internal class DeviceService : IDeviceService
         }
 
         return Task.FromResult(targetCode);
+    }
+
+    public Task<string> GetTranshipPositionAsync(DeviceTypeEnum deviceType, string tunnle)
+    {
+        var controller = _deviceController
+            .First(controller => controller.DeviceType == deviceType);
+        var location = string.Empty;
+        if (controller is AbstractStackerTranshipInController targetInController)
+        {
+            var tarController = targetInController.Devices
+                .First(p => p.Config.Tunnle == tunnle);
+            location =
+                $"{tarController.Config.Tunnle}_{tarController.Config.Floor}_{tarController.Config.Row}_{tarController.Config.Column}";
+        }
+        else if (controller is AbstractStackerTranshipInController targetOutController)
+        {
+            var tarController = targetOutController.Devices
+                .First(p => p.Config.Tunnle == tunnle);
+            location =
+                $"{tarController.Config.Tunnle}_{tarController.Config.Floor}_{tarController.Config.Row}_{tarController.Config.Column}";
+        }
+
+        return Task.FromResult(location);
+    }
+
+    /// <summary>
+    ///     根据条件获取设备
+    /// </summary>
+    /// <param name="deviceType"></param>
+    /// <param name="tunnle"></param>
+    /// <returns></returns>
+    public Task<string> GetDeviceNameAsync(DeviceTypeEnum deviceType, string title)
+    {
+        var controller = _deviceController
+            .First(controller => controller.DeviceType == deviceType);
+        var deviceName = string.Empty;
+        if (controller is AbstractStackerTranshipInController targetInController)
+        {
+            var tarController = targetInController.Devices
+                .First(p => p.Config.Tunnle == title);
+            deviceName = tarController.Name;
+        }
+        else if (controller is AbstractStackerTranshipInController targetOutController)
+        {
+            var tarController = targetOutController.Devices
+                .First(p => p.Config.Tunnle == title);
+            deviceName = tarController.Name;
+        }
+        else if (controller is AbstractStackerController stackerController)
+        {
+            var tarController = stackerController.Devices
+                .First(p => p.Config.Tunnle == title);
+            deviceName = tarController.Name;
+        }
+        else if (controller is AbstractStockOutPortController stockPortController)
+        {
+            var tarController = stockPortController.Devices
+                .First(p => p.Config.PipeLineCode == title);
+            deviceName = tarController.Name;
+        }
+
+        if (deviceName == string.Empty)
+            throw new AggregateException($"{deviceType}未获取到设备信息，请检查配置加载,{title}");
+        return Task.FromResult(deviceName);
     }
 }

@@ -17,8 +17,4 @@
         <ProjectReference Include="..\Wcs.Domain\Wcs.Domain.csproj"/>
     </ItemGroup>
 
-    <ItemGroup>
-        <Folder Include="Handler\Business\StockOutComplate\"/>
-    </ItemGroup>
-
 </Project>

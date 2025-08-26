@@ -19,14 +19,10 @@ public class RefreshTaskStatusCommandHandler(
 {
     public async Task Handle(RefreshTaskStatusCommand request, CancellationToken cancellationToken)
     {
-        var wcsTask = await _cacheService.GetAsync<WcsTask>(request.Key);
-        if (wcsTask != null)
-        {
-            //初始该设备的状态
-            wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.ToBeSend;
-            _wcsTaskRepository.Update(wcsTask);
-            await _unitOfWork.SaveChangesAsync();
-            await _cacheService.RemoveAsync(request.Key);
-        }
+        //初始该设备的状态
+        request.WcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.ToBeSend;
+        _wcsTaskRepository.Update(request.WcsTask);
+        await _unitOfWork.SaveChangesAsync();
+        await _cacheService.RemoveAsync(request.Key);
     }
 }

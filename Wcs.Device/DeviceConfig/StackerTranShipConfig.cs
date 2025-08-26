@@ -6,11 +6,11 @@ public class StackerTranShipConfig : BaseDeviceConfig
 {
     public string PipelinCode { get; set; }
 
-    public int Row { get; set; }
+    public string Row { get; set; }
 
-    public int Column { get; set; }
+    public string Column { get; set; }
 
-    public int Floor { get; set; }
+    public string Floor { get; set; }
 
-    public int Tunnle { get; set; }
+    public string Tunnle { get; set; }
 }

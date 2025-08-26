@@ -7,8 +7,7 @@ namespace Wcs.Application.Handler.Business.Behaviors;
 /// <summary>
 ///     是否可以执行业务
 ///     如果此次获取到db数据业务即可执行反正不执行
-///
-/// 有优化项
+///     有优化项
 /// </summary>
 /// <param name="sender"></param>
 /// <typeparam name="TRequest"></typeparam>

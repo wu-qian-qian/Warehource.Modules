@@ -38,7 +38,7 @@ public class WcsWritePlcTaskSaga : MassTransitStateMachine<WcsWritePlcTaskState>
             .Publish(context =>
                 new S7WritePlcDataBlockIntegrationEvent(DateTime.Now,
                     context.Message.DeviceName, context.Message.DBNameToDataValue,
-                    context.Message.key))
+                    context.Message.Key))
             // 进入"处理中"状态，等待服务结果
             .TransitionTo(Processing));
 
@@ -75,13 +75,13 @@ public class WcsWritePlcTaskSaga : MassTransitStateMachine<WcsWritePlcTaskState>
             When(WcsWritePlcTaskDataCompleted)
                 .Publish(context => new WcsWritePlcTaskProcessed(
                     context.Saga.DeviceName,
-                    context.Message.Success, context.Message.key)).TransitionTo(Pending));
+                    context.Message.Success, context.Message.Key)).TransitionTo(Pending));
 
         // 可以在这里添加对最终状态的后续处理（如超时控制等） 如果object是强一致性就需要用消息队列
         DuringAny(
             When(WcsWritePlcTaskDataProcessed)
                 .Publish(context =>
-                    new WcsWritePlcTaskDataIntegrationEvent(context.Message.key, context.Message.Success))
+                    new WcsWritePlcTaskDataIntegrationEvent(context.Message.Key, context.Message.Success))
                 .Finalize() // 结束Saga实例
         );
     }

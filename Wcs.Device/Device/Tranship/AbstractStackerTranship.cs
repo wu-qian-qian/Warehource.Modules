@@ -18,13 +18,21 @@ public abstract class AbstractStackerTranship : AbstractDevice<StackerTranShipCo
     public override PipeLineDBEntity DBEntity { get; protected set; }
 
 
+    /// <summary>
+    ///     是否可以执行
+    /// </summary>
+    /// <returns></returns>
     public override bool CanExecute()
     {
-        throw new NotImplementedException();
+        return DBEntity.RMode == "1" && DBEntity.RErrCode == "0" && Enable;
     }
 
+    /// <summary>
+    ///     是否可以下发
+    /// </summary>
+    /// <returns></returns>
     public override bool IsNewStart()
     {
-        throw new NotImplementedException();
+        return DBEntity.RLoad == "1" && DBEntity.RFree == "0";
     }
 }

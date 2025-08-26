@@ -4,9 +4,13 @@ using Wcs.Shared;
 
 namespace Wcs.Application.Handler.Business.FilterStackerTask;
 
-public class FilterStackerCommandHandler : ICommandHandler<FilterStackerCommand, WcsTask>
+/// <summary>
+///     筛选出符合要求的执行任务
+/// </summary>
+public class FilterStackerCommandHandler
+    : ICommandHandler<FilterStackerCommand, WcsTask>
 {
-    public Task<WcsTask> Handle(FilterStackerCommand request, CancellationToken cancellationToken)
+    public async Task<WcsTask> Handle(FilterStackerCommand request, CancellationToken cancellationToken)
     {
         var wcsTasks = request.WcsTasks;
         var tempWcsTasks = wcsTasks.Where(p => p.IsEnforce);
@@ -22,6 +26,8 @@ public class FilterStackerCommandHandler : ICommandHandler<FilterStackerCommand,
 
         if (tempWcsTasks.Any() == false) tempWcsTasks = wcsTasks;
         tempWcsTasks = tempWcsTasks.OrderBy(p => p.Level).ThenBy(p => p.CreationTime);
-        return Task.FromResult(tempWcsTasks.First());
+
+        var wcsTask = tempWcsTasks.FirstOrDefault();
+        return wcsTask;
     }
 }

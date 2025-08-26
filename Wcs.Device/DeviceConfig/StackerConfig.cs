@@ -7,5 +7,5 @@ public class StackerConfig : BaseDeviceConfig
     /// <summary>
     ///     巷道编码
     /// </summary>
-    public int Tunnle { get; set; }
+    public string Tunnle { get; set; }
 }

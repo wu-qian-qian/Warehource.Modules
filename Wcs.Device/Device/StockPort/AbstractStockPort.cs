@@ -20,6 +20,12 @@ public abstract class AbstractStockPort : AbstractDevice<StockPortConfig, PipeLi
 
     public override bool CanExecute()
     {
-        throw new NotImplementedException();
+        return DBEntity.RMode == "1" && DBEntity.RErrCode == "0" && Enable;
+        ;
+    }
+
+    public override bool IsNewStart()
+    {
+        return DBEntity.RLoad == "1" && DBEntity.RFree == "1";
     }
 }

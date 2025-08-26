@@ -36,14 +36,14 @@ public abstract class AbstractStackerTranshipInController : IStackerTranshipCont
     ///     TODO 根据(变量)当前的状态来获得可以执行的借货后
     /// </summary>
     /// <returns></returns>
-    public virtual int[] GetReCommendTranship()
+    public virtual string[] GetReCommendTranship()
     {
         var tunnle = 0;
         var tempDevices = Devices.Where(p => p.Enable);
         return tempDevices.Select(p => p.Config.Tunnle).ToArray();
     }
 
-    public virtual string TargetPostion(int tunnel)
+    public virtual string TargetPostion(string tunnel)
     {
         return Devices.First(p => p.Config.Tunnle == tunnel).Config.PipelinCode;
     }

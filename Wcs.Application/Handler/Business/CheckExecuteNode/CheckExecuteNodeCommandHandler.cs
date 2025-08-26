@@ -1,16 +1,21 @@
 ﻿using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
+using MediatR;
+using Wcs.Application.Handler.Business.StackerOutComplate;
+using Wcs.Application.Handler.Http.Complate;
 using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.Region;
+using Wcs.Shared;
 
 namespace Wcs.Application.Handler.Business.CheckExecuteNode;
 
 public class CheckExecuteNodeCommandHandler(
+    ISender _sender,
     IExecuteNodeRepository _executeNodeRepository,
     IRegionRepository _regionRepository)
     : ICommandHandler<CheckExecuteNodeCommand, Result<bool>>
 {
-    public Task<Result<bool>> Handle(CheckExecuteNodeCommand request, CancellationToken cancellationToken)
+    public async Task<Result<bool>> Handle(CheckExecuteNodeCommand request, CancellationToken cancellationToken)
     {
         Result<bool> result = new();
         var wcsTask = request.WcsTask;
@@ -26,17 +31,34 @@ public class CheckExecuteNodeCommandHandler(
                 {
                     var index = executeNodePath.First(p => p.CurrentDeviceType == wcsTask.TaskExecuteStep.DeviceType)
                         .Index;
+                    if (index == 1) wcsTask.TaskStatus = WcsTaskStatusEnum.InProgress;
+
                     var nextType = index++;
                     var executeNode = executeNodePath.FirstOrDefault(p => p.Index == nextType);
                     if (executeNode != null)
                     {
                         wcsTask.TaskExecuteStep.DeviceType = executeNode.CurrentDeviceType;
+                        if (request.IsGetDeviceName)
+                        {
+                            var deviceName = await _sender
+                                .Send(new SetExecuteDeviceCommand
+                                {
+                                    DeviceType = wcsTask.TaskExecuteStep.DeviceType.Value,
+                                    Title = request.Title
+                                });
+                            wcsTask.TaskExecuteStep.CurentDevice = deviceName;
+                        }
+
                         result.SetValue(true);
                     }
                     else
                     {
                         result.SetValue(false);
-                        //任务完结
+                        wcsTask.TaskStatus = WcsTaskStatusEnum.Completed;
+                        await _sender.Send(new ComplateCommand
+                        {
+                            WcsTask = request.WcsTask
+                        });
                     }
                 }
                 else
@@ -54,6 +76,6 @@ public class CheckExecuteNodeCommandHandler(
             result.SetMessage("区域信息未获取到");
         }
 
-        return Task.FromResult(result);
+        return result;
     }
 }

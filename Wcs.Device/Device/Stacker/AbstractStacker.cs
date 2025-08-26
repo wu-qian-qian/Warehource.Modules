@@ -28,16 +28,17 @@ public abstract class AbstractStacker : AbstractDevice<StackerConfig, StackerDBE
     /// <returns></returns>
     public override bool IsNewStart()
     {
-        return true;
+        return DBEntity.RLoad == "0" && DBEntity.RExecuteStatus == "1";
     }
 
     /// <summary>
     ///     是否可以执行
+    ///     在线无报警表示可以行走
     /// </summary>
     /// <returns></returns>
     public override bool CanExecute()
     {
-        return true;
+        return DBEntity.RMode == "2" && DBEntity.RErrCode == "0" && Enable;
     }
 
     /// <summary>
@@ -56,6 +57,6 @@ public abstract class AbstractStacker : AbstractDevice<StackerConfig, StackerDBE
     /// <returns></returns>
     public bool IsComplate()
     {
-        return true;
+        return DBEntity.RExecuteStatus == "2";
     }
 }

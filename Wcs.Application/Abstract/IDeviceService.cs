@@ -1,5 +1,4 @@
-﻿using Wcs.Contracts.Business;
-using Wcs.Shared;
+﻿using Wcs.Shared;
 
 namespace Wcs.Application.Abstract;
 
@@ -9,8 +8,29 @@ public interface IDeviceService
     ///     获取推荐巷道
     /// </summary>
     /// <returns></returns>
-    Task<int[]?> GetCanExecuteTunnleAsync(DeviceTypeEnum deviceType);
+    Task<string[]?> GetCanExecuteTunnleAsync(DeviceTypeEnum deviceType);
 
-    Task<RecommendTunnle> GetRecommendTunnleAsync(DeviceTypeEnum deviceType, int tullne);
+    /// <summary>
+    ///     /
+    /// </summary>
+    /// <param name="deviceType"></param>
+    /// <param name="deviceName"></param>
+    /// <returns></returns>
     Task<string> GetTargetPipelinAsync(DeviceTypeEnum deviceType, string deviceName);
+
+    /// <summary>
+    ///     获取取放货口坐标
+    /// </summary>
+    /// <param name="deviceType"></param>
+    /// <param name="tunnle"></param>
+    /// <returns></returns>
+    Task<string> GetTranshipPositionAsync(DeviceTypeEnum deviceType, string tunnle);
+
+    /// <summary>
+    ///     获取设备名
+    /// </summary>
+    /// <param name="deviceType"></param>
+    /// <param name="tunnle"></param>
+    /// <returns></returns>
+    Task<string> GetDeviceNameAsync(DeviceTypeEnum deviceType, string title);
 }

@@ -10,7 +10,7 @@ using Wcs.Application.Handler.Business.CheckExecuteNode;
 using Wcs.Application.Handler.Business.RefreshTaskStatus;
 using Wcs.Application.Handler.Http.ApplyTunnle;
 using Wcs.CustomEvents.Saga;
-using Wcs.Domain.ExecuteNode;
+using Wcs.Device.Device.StockPort;
 using Wcs.Domain.Task;
 using Wcs.Shared;
 
@@ -21,7 +21,6 @@ internal class StockInCommandHandler(
     ISender _sender,
     ICacheService _cacheService,
     IPublishEndpoint _publishEndpoint,
-    IExecuteNodeRepository _nodeRepository,
     IDeviceService _deviceService)
     : ICommandHandler<StockInCommand>
 {
@@ -30,62 +29,47 @@ internal class StockInCommandHandler(
         var stockIn = request.Device;
         var wcsTask = await _cacheService.GetAsync<WcsTask>(stockIn.Config.TaskKey);
         //表示
-        if (wcsTask != null)
+        if (stockIn.CanExecute())
         {
-            if (stockIn.CanExecute())
+            //存在任务，且输送可以执行
+            if (wcsTask != null && stockIn.IsNewStart())
             {
                 //可考虑使用状态机
                 if (wcsTask.TaskExecuteStep.TaskExecuteStepType == TaskExecuteStepTypeEnum.ToBeSend)
                 {
-                    var check = await _sender.Send(new CheckExecuteNodeCommand
+                    var @bool = await _sender.Send(new ApplyTunnleCommand
                     {
-                        WcsTask = wcsTask,
-                        DeviceRegionCode = stockIn.RegionCodes
-                    });
-                    if (check.IsSuccess)
+                        WcsTask = wcsTask
+                    }, cancellationToken);
+                    if (@bool)
                     {
-                        //获取推荐巷道集合
-                        var recommendTunnle =
-                            await _deviceService.GetCanExecuteTunnleAsync(wcsTask.TaskExecuteStep.DeviceType.Value);
-                        //刷新任务数据
-                        if (recommendTunnle != null)
+                        var check = await _sender.Send(new CheckExecuteNodeCommand
                         {
-                            //获取巷道准确的巷道
-                            var result = await _sender.Send(new ApplyTunnleCommand
+                            WcsTask = wcsTask,
+                            DeviceRegionCode = stockIn.RegionCodes,
+                            Title = wcsTask.GetLocation.GetTunnel
+                        });
+                        if (check.IsSuccess)
+                        {
+                            if (check.Value)
                             {
-                                WcsTaskCode = wcsTask.TaskCode,
-                                Tunnles = recommendTunnle
-                            }, cancellationToken);
-                            if (result.IsSuccess)
-                            {
-                                wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.BeSending;
-                                wcsTask.TaskStatus = WcsTaskStatusEnum.InProgress;
+                                wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.SendEnding;
                                 //任务数据更新缓存
                                 await _cacheService.SetAsync(stockIn.Config.Key, wcsTask);
-                                //发送写入任务数据事件
-                                var dic = new Dictionary<string, string>();
-                                await _publishEndpoint.Publish(new WcsWritePlcTaskCreated(stockIn.Name, dic,
-                                    stockIn.Config.TaskKey));
-
                                 Log.Logger.ForCategory(LogCategory.Business)
                                     .Information($"{wcsTask.SerialNumber}--发送执行任务");
-                            }
-                            else
-                            {
-                                Log.Logger.ForCategory(LogCategory.Business)
-                                    .Information($"{wcsTask.SerialNumber}--无法获取到执行设备");
                             }
                         }
                         else
                         {
                             Log.Logger.ForCategory(LogCategory.Business)
-                                .Information($"{wcsTask.SerialNumber}--无法获取推荐巷道");
+                                .Information($"{stockIn.Name}：{check.Message}");
                         }
                     }
                     else
                     {
                         Log.Logger.ForCategory(LogCategory.Business)
-                            .Information($"{stockIn.Name}：{check.Message}");
+                            .Information($"{wcsTask.SerialNumber}--未申请到巷道");
                     }
                 }
                 else if (wcsTask.TaskExecuteStep.TaskExecuteStepType == TaskExecuteStepTypeEnum.SendEnding)
@@ -97,22 +81,19 @@ internal class StockInCommandHandler(
                         await _deviceService.GetTargetPipelinAsync(wcsTask.TaskExecuteStep.DeviceType.Value
                             , wcsTask.TaskExecuteStep.CurentDevice);
                     //数据写入
-                    var dic = new Dictionary<string, string>();
-                    await _publishEndpoint.Publish(
-                        new WcsWritePlcTaskCreated(stockIn.Name, dic, stockIn.Config.TaskKey));
+                    await WriteTaskData(stockIn, wcsTask, targetCode);
+
                     Log.Logger.ForCategory(LogCategory.Business)
                         .Information($"{wcsTask.SerialNumber}--重发执行任务");
                 }
                 else if (wcsTask.TaskExecuteStep.TaskExecuteStepType == TaskExecuteStepTypeEnum.Complate)
                 {
                     //任务数据更新到数据库
-                    await _sender.Send(new RefreshTaskStatusCommand { Key = stockIn.Config.TaskKey });
+                    await _sender.Send(new RefreshTaskStatusCommand
+                        { Key = stockIn.Config.TaskKey, WcsTask = wcsTask });
                 }
             }
-        }
-        else
-        {
-            if (stockIn.IsNewStart())
+            else
             {
                 wcsTask = _taskRepository.GetWcsTaskQuerys()
                     .Where(p => p.TaskExecuteStep.DeviceType == stockIn.DeviceType)
@@ -131,5 +112,17 @@ internal class StockInCommandHandler(
                 }
             }
         }
+    }
+
+    private async Task WriteTaskData(AbstractStockPort stockIn, WcsTask wcsTask, string targetCode)
+    {
+        var dic = new Dictionary<string, string>();
+        dic.Add(stockIn.CreatWriteExpression(p => p.WTask), wcsTask.SerialNumber.ToString());
+        dic.Add(stockIn.CreatWriteExpression(p => p.WTargetCode), targetCode);
+        dic.Add(stockIn.CreatWriteExpression(p => p.WTaskType), ((int)wcsTask.TaskType).ToString());
+        dic.Add(stockIn.CreatWriteExpression(p => p.WStart), "1");
+        await _publishEndpoint.Publish(new WcsWritePlcTaskCreated(stockIn.Name, dic,
+            stockIn.Config.TaskKey));
+        wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.BeSending;
     }
 }

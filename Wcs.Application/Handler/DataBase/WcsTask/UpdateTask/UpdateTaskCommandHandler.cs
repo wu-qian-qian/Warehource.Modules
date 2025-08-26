@@ -12,12 +12,20 @@ public class UpdateTaskCommandHandler(IWcsTaskRepository _wcsTaskRepository, IUn
 
     public async Task Handle(UpdataTaskCommand request, CancellationToken cancellationToken)
     {
-        var wcsTask = _wcsTaskRepository.Get(request.SerialNumber);
-        if (wcsTask != null)
+        if (request.WcsTask == null)
         {
-            foreach (var item in request.DataMap)
-                propertyInfos.First(p => p.Name == item.Key).SetValue(wcsTask, item.Value);
+            _wcsTaskRepository.Update(request.WcsTask);
             await _unitOfWork.SaveChangesAsync();
+        }
+        else
+        {
+            var wcsTask = _wcsTaskRepository.Get(request.SerialNumber);
+            if (wcsTask != null)
+            {
+                foreach (var item in request.DataMap)
+                    propertyInfos.First(p => p.Name == item.Key).SetValue(wcsTask, item.Value);
+                await _unitOfWork.SaveChangesAsync();
+            }
         }
     }
 }

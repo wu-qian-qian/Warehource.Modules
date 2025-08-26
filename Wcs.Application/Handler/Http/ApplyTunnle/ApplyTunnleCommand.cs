@@ -1,12 +1,9 @@
-﻿using Common.Application.MediatR.Behaviors;
-using Common.Application.MediatR.Message;
-using Wcs.Contracts.Business;
+﻿using Common.Application.MediatR.Message;
+using Wcs.Domain.Task;
 
 namespace Wcs.Application.Handler.Http.ApplyTunnle;
 
-public class ApplyTunnleCommand : ICommand<Result<RecommendTunnle>>
+public class ApplyTunnleCommand : ICommand<bool>
 {
-    public string WcsTaskCode { get; set; }
-
-    public IEnumerable<int> Tunnles { get; set; }
+    public WcsTask WcsTask { get; set; }
 }

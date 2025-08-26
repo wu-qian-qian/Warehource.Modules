@@ -36,8 +36,8 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
 
     /// <summary>
     ///     设备的区域编码组
-    /// 可能包含多个
-    /// 因为一个区域表示一条路径，且多调路径可能经过某同一设备
+    ///     可能包含多个
+    ///     因为一个区域表示一条路径，且多调路径可能经过某同一设备
     /// </summary>
     public string RegionCodes { get; protected set; }
 
