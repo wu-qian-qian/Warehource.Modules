@@ -1,3 +1,5 @@
+using Common.Application.Net.Http;
+using Microsoft.AspNetCore.SignalR.Client;
 using UI.Components;
 using UI.Service.DeviceService;
 using UI.Service.ExecuteNodeService;
@@ -9,12 +11,12 @@ using UI.Service.PlcSevice;
 using UI.Service.RegionService;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 //ant blazor 注入
 builder.Services.AddAntDesign();
+builder.Services.AddScoped<IMainService, MainService>();
 
 builder.Services.AddScoped<IMainService, MainService>();
 
@@ -31,8 +33,25 @@ builder.Services.AddScoped<IExecuteNodeService, ExecuteNodeService>();
 builder.Services.AddScoped<IRegionService, RegionService>();
 
 builder.Services.AddScoped<IDeviceService, DeviceService>();
+var path = builder.Configuration.GetSection("WcsService:ServiceUrl").Value;
+var uri = new Uri(path);
 // httpClient 注入
-builder.Services.AddHttpClient();
+builder.Services.AddHttpClient("ServiceClient", client => { client.BaseAddress = uri; });
+builder.Services.AddSingleton<HttpClientFactory>(sp =>
+{
+    var basehttpFactory = sp.GetService<IHttpClientFactory>();
+    var clientFactory = new HttpClientFactory("ServiceClient", basehttpFactory);
+    return clientFactory;
+});
+builder.Services.AddScoped<HubConnection>(sp =>
+{
+    var mainService = sp.GetRequiredService<IMainService>();
+    var hubConnection = new HubConnectionBuilder()
+        .WithUrl("path/wcshub", options => { options.AccessTokenProvider = () => mainService.GetToken(); })
+        .Build();
+    hubConnection.StartAsync().GetAwaiter().GetResult();
+    return hubConnection;
+});
 
 var app = builder.Build();
 

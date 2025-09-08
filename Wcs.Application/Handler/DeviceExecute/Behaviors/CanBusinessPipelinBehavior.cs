@@ -20,12 +20,14 @@ internal class CanBusinessPipelinBehavior<TRequest, TResponse>(ISender sender) :
     {
         if (request.ReadPlc != null)
         {
+            //TODO 添加
             var dbEntity = await sender.Send(new GetPlcDBQuery
                 {
                     DeviceName = request.ReadPlc.DeviceName,
                     Key = request.ReadPlc.Key,
                     DeviceType = request.ReadPlc.DeviceType,
-                    DBEntity = request.ReadPlc.DBEntity
+                    DBEntity = request.ReadPlc.DBEntity,
+                    UseMemory = request.ReadPlc.UseMemory
                 },
                 cancellationToken);
             if (dbEntity != null) return await next();

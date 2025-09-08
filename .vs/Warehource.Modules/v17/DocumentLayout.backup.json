@@ -3,12 +3,44 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.infrastructure\\plcinfrastructureconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3209EEB8-00AF-4B8E-A303-7ABFADC808F2}|Plc.Infrastructure\\Plc.Infrastructure.csproj|solutionrelative:plc.infrastructure\\plcinfrastructureconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\service\\loginservice\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\service\\loginservice\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\warehource.source\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1740483-F8F5-46CE-9EC0-EE9705DD2292}|Warehource.Source\\Warehource.Source.csproj|solutionrelative:warehource.source\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\service\\loginservice\\iloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\service\\loginservice\\iloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\service\\mainservice\\mainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\service\\mainservice\\mainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\service\\mainservice\\imainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\service\\mainservice\\imainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\service\\executeservice\\executeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\service\\executeservice\\executeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\service\\executeservice\\iexecuteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\service\\executeservice\\iexecuteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +50,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 18,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMainService.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\MainService\\IMainService.cs",
+              "RelativeDocumentMoniker": "UI\\Service\\MainService\\IMainService.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\MainService\\IMainService.cs",
+              "RelativeToolTip": "UI\\Service\\MainService\\IMainService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAgAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T08:51:13.094Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -91,27 +136,118 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlcInfrastructureConfigurator.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
-              "RelativeDocumentMoniker": "Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
-              "RelativeToolTip": "Plc.Infrastructure\\PlcInfrastructureConfigurator.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\LoginService\\LoginService.cs",
+              "RelativeDocumentMoniker": "UI\\Service\\LoginService\\LoginService.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\LoginService\\LoginService.cs",
+              "RelativeToolTip": "UI\\Service\\LoginService\\LoginService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T00:33:22.852Z",
+              "WhenOpened": "2025-08-27T08:50:46.476Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Program.cs",
-              "RelativeDocumentMoniker": "Warehource.Source\\Program.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Warehource.Source\\Program.cs",
-              "RelativeToolTip": "Warehource.Source\\Program.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAUwE4AAAAXAAAAAAAAAA==",
+              "Title": "ILoginService.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\LoginService\\ILoginService.cs",
+              "RelativeDocumentMoniker": "UI\\Service\\LoginService\\ILoginService.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\LoginService\\ILoginService.cs",
+              "RelativeToolTip": "UI\\Service\\LoginService\\ILoginService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T09:29:48.685Z",
+              "WhenOpened": "2025-08-27T08:50:38.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainService.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\MainService\\MainService.cs",
+              "RelativeDocumentMoniker": "UI\\Service\\MainService\\MainService.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\MainService\\MainService.cs",
+              "RelativeToolTip": "UI\\Service\\MainService\\MainService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T08:47:54.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Home.razor",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "UI\\Components\\Pages\\Home.razor",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "UI\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-27T08:47:41.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Error.razor",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "UI\\Components\\Pages\\Error.razor",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "UI\\Components\\Pages\\Error.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-27T08:47:41.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "UI\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "UI\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAEwKEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-27T08:47:27.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Program.cs",
+              "RelativeDocumentMoniker": "UI\\Program.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Program.cs",
+              "RelativeToolTip": "UI\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwCQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T08:42:40.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ExecuteService.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\ExecuteService\\ExecuteService.cs",
+              "RelativeDocumentMoniker": "UI\\Service\\ExecuteService\\ExecuteService.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\ExecuteService\\ExecuteService.cs",
+              "RelativeToolTip": "UI\\Service\\ExecuteService\\ExecuteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T08:41:32.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IExecuteService.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\ExecuteService\\IExecuteService.cs",
+              "RelativeDocumentMoniker": "UI\\Service\\ExecuteService\\IExecuteService.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\ExecuteService\\IExecuteService.cs",
+              "RelativeToolTip": "UI\\Service\\ExecuteService\\IExecuteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T08:39:23.682Z",
               "EditorCaption": ""
             }
           ]

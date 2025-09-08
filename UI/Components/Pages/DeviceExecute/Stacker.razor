@@ -1,0 +1,38 @@
+﻿@page "/Stacker"
+@using UI.Model.Execute
+
+<Tabs @bind-ActiveKey="@currentActiveKey" Type="TabType.Line">
+    @foreach (var tab in _tabs)
+    {
+        <TabPane Key="@tab.Name" Tab="@tab.Name">
+            <GridRow>
+                <GridCol>
+                    <Card Hoverable>
+                        <Image Src="/Image/Stacker.jpg"></Image>
+                        <CardMeta Title="Europe Street beat" Description="www.instagram.com"/>
+                    </Card>
+                </GridCol>
+                @foreach (var tab in _tabs)
+                {
+                    <div style="margin: 10px">
+                        <GridRow>
+                            <Card Hoverable Style="width: 240px;height: 240px">
+                                <Image Src="/Image/PipeLine.jpg"></Image>
+                                <CardMeta Title="Europe Street beat" Description="www.instagram.com"/>
+                            </Card>
+                            <Card Hoverable Style="width: 240px;height: 240px">
+                                <Image Src="/Image/PipeLine.jpg"></Image>
+                                <CardMeta Title="Europe Street beat" Description="www.instagram.com"/>
+                            </Card>
+                        </GridRow>
+                    </div>
+                }
+            </GridRow>
+        </TabPane>
+    }
+</Tabs>
+
+@code {
+    List<StackerModel> _tabs;
+    private string currentActiveKey = "1";
+}

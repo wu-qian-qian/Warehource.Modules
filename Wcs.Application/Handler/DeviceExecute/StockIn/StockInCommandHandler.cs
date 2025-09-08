@@ -16,6 +16,13 @@ using Wcs.Shared;
 
 namespace Wcs.Application.Handler.DeviceExecute.StockIn;
 
+/// <summary>
+/// </summary>
+/// <param name="_taskRepository"></param>
+/// <param name="_sender"></param>
+/// <param name="_cacheService"></param>
+/// <param name="_publishEndpoint"></param>
+/// <param name="_deviceService"></param>
 internal class StockInCommandHandler(
     IWcsTaskRepository _taskRepository,
     ISender _sender,

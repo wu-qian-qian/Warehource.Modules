@@ -1,0 +1,15 @@
+﻿@page "/StockPort"
+
+
+<Tabs DefaultActiveKey="1" Type="TabType.Line">
+    @foreach (var tab in _tabs)
+    {
+        <TabPane Key="@tab" Tab="@tab">
+            @tab
+        </TabPane>
+    }
+</Tabs>
+
+@code {
+    readonly List<string> _tabs = ["page1", "page2", "page3"];
+}

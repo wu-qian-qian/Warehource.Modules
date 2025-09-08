@@ -43,7 +43,7 @@ internal class GetPlcDBQueryHandler(
             {
                 DeviceName = request.DeviceName,
                 Key = request.Key,
-                UseMemory = false
+                UseMemory = request.UseMemory
             }, cancellationToken);
         }
 

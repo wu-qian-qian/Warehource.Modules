@@ -45,7 +45,7 @@
     </Sider>
     <Layout Class="site-layout">
         <Header Class="site-layout-background" Style="padding: 3px;">
-            <Image Src="/Image/Warehouse.jpg" Height="45px" Width="45px"></Image>
+            <Image Src="/Image/Warehouse.jpg" Height="60px" Width="85px"></Image>
             <div Style="float: right;">
                 <Avatar Icon="@IconType.Outline.User"/>
                 <Button type="ButtonType.Link" @onclick="_ => LoginPanelOpen()">@User?.Name</Button>
@@ -159,6 +159,7 @@
             });
             User = (await MainService.LoginAsync(UserName, PassWord)).Value;
             menuItems = await MainService.GetMenuItemDatas(User.RoleName);
+            NavigateTo("WcsTask");
             LoginPanelClose();
         }
     }

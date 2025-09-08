@@ -139,8 +139,8 @@ public static class WcsInfrastructureConfigurator
         service.AddSingleton<IStackerController, StackerController>();
         service.AddKeyedSingleton<IStackerTranshipController, StackerInTranShipController>(
             nameof(StackerInTranShipController));
-        service.AddKeyedSingleton<IStackerTranshipController, StackerTranShipOutController>(
-            nameof(StackerTranShipOutController));
+        service.AddKeyedSingleton<IStackerTranshipController, StackerOutTranShipController>(
+            nameof(StackerOutTranShipController));
         service.AddKeyedSingleton<IStockPortController, StockPortInController>(nameof(StockPortInController));
         service.AddKeyedSingleton<IStockPortController, StockPortOutController>(nameof(StockPortOutController));
         //可以采用构造注入，这边为了使用的便捷采用了手动的注入
@@ -150,7 +150,7 @@ public static class WcsInfrastructureConfigurator
             var stackerInTranShipController =
                 sp.GetKeyedService<IStackerTranshipController>(nameof(StackerInTranShipController));
             var stackerTranShipOutController =
-                sp.GetKeyedService<IStackerTranshipController>(nameof(StackerTranShipOutController));
+                sp.GetKeyedService<IStackerTranshipController>(nameof(StackerOutTranShipController));
             var stockPortInController = sp.GetKeyedService<IStockPortController>(nameof(StockPortInController));
             var stockPortOutController = sp.GetKeyedService<IStockPortController>(nameof(StockPortOutController));
             var serviceScopeFactory = sp.GetService<IServiceScopeFactory>();
@@ -167,7 +167,7 @@ public static class WcsInfrastructureConfigurator
     public static void AddJobs(IServiceCollection service)
     {
         service.TryAddSingleton<JobOptions>();
-        Type[] jobtypes = { typeof(ReadPlcJob) };
+        Type[] jobtypes = { typeof(ConnectPlcJob), typeof(WcsTaskAnalysisJob) };
         service.AddKeyedSingleton(Constant.JobKey, jobtypes);
     }
 

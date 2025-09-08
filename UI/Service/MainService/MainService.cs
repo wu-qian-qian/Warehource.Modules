@@ -7,9 +7,17 @@ public class MainService : IMainService
 {
     private readonly IHttpClientFactory _httpFactory;
 
+
     public MainService(IHttpClientFactory httpFactory)
     {
         _httpFactory = httpFactory;
+    }
+
+    public string Token { get; private set; }
+
+    public Task<string> GetToken()
+    {
+        return Task.FromResult(Token);
     }
 
     public Task<Result<UserModel>> LoginAsync(string username, string password)
@@ -21,6 +29,7 @@ public class MainService : IMainService
             RoleName = "admin",
             IsLogin = true
         };
+        Token = DateTime.Now.ToString();
         return Task.FromResult(result);
     }
 
@@ -33,17 +42,17 @@ public class MainService : IMainService
     {
         var menuItems = new List<MenuItemData>
         {
-            new()
-            {
-                Key = "1",
-                Title = "首页",
-                Href = "/",
-                Children = null
-            }
         };
 
         if (role == "admin")
         {
+            menuItems.Add(new MenuItemData
+            {
+                Key = "1",
+                Title = "首页",
+                Children = null,
+                Href = "WcsTask"
+            });
             menuItems.Add(new MenuItemData
             {
                 Key = "2",
@@ -73,7 +82,8 @@ public class MainService : IMainService
                 Title = "执行设备状态",
                 Children = new List<MenuItemData>
                 {
-                    new() { Key = "4-1", Title = "执行设备" }
+                    new() { Key = "4-1", Title = "堆垛机", Href = "Stacker" },
+                    new() { Key = "4-2", Title = "出入库口", Href = "StockPort" }
                 }
             });
             menuItems.Add(new MenuItemData

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Components.Forms;
 using UI.Model;
 using UI.Model.Plc;
+using UI.Service.MainService;
 
 namespace UI.Service.PlcSevice;
 
@@ -9,7 +10,7 @@ public class PlcService : IPlcService
 {
     private readonly IHttpClientFactory _httpFactory;
 
-    public PlcService(IHttpClientFactory httpFactory)
+    public PlcService(IHttpClientFactory httpFactory, IMainService service)
     {
         _httpFactory = httpFactory;
     }
