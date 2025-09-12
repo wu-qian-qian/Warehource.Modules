@@ -3,44 +3,36 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\service\\loginservice\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\service\\loginservice\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C71FC1D-3989-4652-A9D6-1C3B860ECEED}|User.Contrancts\\Identity.Contrancts.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.contrancts\\request\\update\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C71FC1D-3989-4652-A9D6-1C3B860ECEED}|User.Contrancts\\Identity.Contrancts.csproj|solutionrelative:user.contrancts\\request\\update\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\service\\loginservice\\iloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\service\\loginservice\\iloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35540014-59C3-4E45-BF0E-44B73C176CEA}|User.Presentation\\Identity.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.presentation\\update\\updateuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35540014-59C3-4E45-BF0E-44B73C176CEA}|User.Presentation\\Identity.Presentation.csproj|solutionrelative:user.presentation\\update\\updateuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{35540014-59C3-4E45-BF0E-44B73C176CEA}|User.Presentation\\Identity.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.presentation\\update\\updaterole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35540014-59C3-4E45-BF0E-44B73C176CEA}|User.Presentation\\Identity.Presentation.csproj|solutionrelative:user.presentation\\update\\updaterole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\service\\mainservice\\mainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\service\\mainservice\\mainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.application\\handler\\update\\role\\updateroleeventcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|solutionrelative:user.application\\handler\\update\\role\\updateroleeventcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\service\\mainservice\\imainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\service\\mainservice\\imainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.application\\handler\\update\\role\\updaterolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|solutionrelative:user.application\\handler\\update\\role\\updaterolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.application\\handler\\update\\user\\updateusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|solutionrelative:user.application\\handler\\update\\user\\updateusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.application\\handler\\update\\user\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|solutionrelative:user.application\\handler\\update\\user\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\service\\executeservice\\executeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\service\\executeservice\\executeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\ui\\service\\executeservice\\iexecuteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{275EA473-8FFB-4AAB-BDB2-73FFC9106EA7}|UI\\UI.csproj|solutionrelative:ui\\service\\executeservice\\iexecuteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C71FC1D-3989-4652-A9D6-1C3B860ECEED}|User.Contrancts\\Identity.Contrancts.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.contrancts\\request\\update\\updaterolerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C71FC1D-3989-4652-A9D6-1C3B860ECEED}|User.Contrancts\\Identity.Contrancts.csproj|solutionrelative:user.contrancts\\request\\update\\updaterolerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,21 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 20,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IMainService.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\MainService\\IMainService.cs",
-              "RelativeDocumentMoniker": "UI\\Service\\MainService\\IMainService.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\MainService\\IMainService.cs",
-              "RelativeToolTip": "UI\\Service\\MainService\\IMainService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswAgAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T08:51:13.094Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -135,119 +114,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginService.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\LoginService\\LoginService.cs",
-              "RelativeDocumentMoniker": "UI\\Service\\LoginService\\LoginService.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\LoginService\\LoginService.cs",
-              "RelativeToolTip": "UI\\Service\\LoginService\\LoginService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswAkAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T08:50:46.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ILoginService.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\LoginService\\ILoginService.cs",
-              "RelativeDocumentMoniker": "UI\\Service\\LoginService\\ILoginService.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\LoginService\\ILoginService.cs",
-              "RelativeToolTip": "UI\\Service\\LoginService\\ILoginService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T08:50:38.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MainService.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\MainService\\MainService.cs",
-              "RelativeDocumentMoniker": "UI\\Service\\MainService\\MainService.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\MainService\\MainService.cs",
-              "RelativeToolTip": "UI\\Service\\MainService\\MainService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Title": "UpdateRoleEventCommandHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\Role\\UpdateRoleEventCommandHandler.cs",
+              "RelativeDocumentMoniker": "User.Application\\Handler\\Update\\Role\\UpdateRoleEventCommandHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\Role\\UpdateRoleEventCommandHandler.cs",
+              "RelativeToolTip": "User.Application\\Handler\\Update\\Role\\UpdateRoleEventCommandHandler.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvxQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T08:47:54.25Z",
+              "WhenOpened": "2025-09-11T06:07:58.844Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Home.razor",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "UI\\Components\\Pages\\Home.razor",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Components\\Pages\\Home.razor",
-              "RelativeToolTip": "UI\\Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-27T08:47:41.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Error.razor",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Components\\Pages\\Error.razor",
-              "RelativeDocumentMoniker": "UI\\Components\\Pages\\Error.razor",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Components\\Pages\\Error.razor",
-              "RelativeToolTip": "UI\\Components\\Pages\\Error.razor",
+              "DocumentIndex": 4,
+              "Title": "UpdateRoleCommand.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\Role\\UpdateRoleCommand.cs",
+              "RelativeDocumentMoniker": "User.Application\\Handler\\Update\\Role\\UpdateRoleCommand.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\Role\\UpdateRoleCommand.cs",
+              "RelativeToolTip": "User.Application\\Handler\\Update\\Role\\UpdateRoleCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-27T08:47:41.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Components\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "UI\\Components\\Layout\\MainLayout.razor",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Components\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "UI\\Components\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAEwKEAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-27T08:47:27.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Program.cs",
-              "RelativeDocumentMoniker": "UI\\Program.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Program.cs",
-              "RelativeToolTip": "UI\\Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwCQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T08:42:40.323Z",
+              "WhenOpened": "2025-09-11T06:07:57.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ExecuteService.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\ExecuteService\\ExecuteService.cs",
-              "RelativeDocumentMoniker": "UI\\Service\\ExecuteService\\ExecuteService.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\ExecuteService\\ExecuteService.cs",
-              "RelativeToolTip": "UI\\Service\\ExecuteService\\ExecuteService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Title": "UpdateRoleRequest.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Contrancts\\Request\\Update\\UpdateRoleRequest.cs",
+              "RelativeDocumentMoniker": "User.Contrancts\\Request\\Update\\UpdateRoleRequest.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Contrancts\\Request\\Update\\UpdateRoleRequest.cs",
+              "RelativeToolTip": "User.Contrancts\\Request\\Update\\UpdateRoleRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T08:41:32.767Z",
+              "WhenOpened": "2025-09-11T06:07:52.193Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IExecuteService.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\ExecuteService\\IExecuteService.cs",
-              "RelativeDocumentMoniker": "UI\\Service\\ExecuteService\\IExecuteService.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\UI\\Service\\ExecuteService\\IExecuteService.cs",
-              "RelativeToolTip": "UI\\Service\\ExecuteService\\IExecuteService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UpdateUserRequest.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Contrancts\\Request\\Update\\UpdateUserRequest.cs",
+              "RelativeDocumentMoniker": "User.Contrancts\\Request\\Update\\UpdateUserRequest.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Contrancts\\Request\\Update\\UpdateUserRequest.cs",
+              "RelativeToolTip": "User.Contrancts\\Request\\Update\\UpdateUserRequest.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswBkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T08:39:23.682Z",
+              "WhenOpened": "2025-09-11T06:01:33.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateRole.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Presentation\\Update\\UpdateRole.cs",
+              "RelativeDocumentMoniker": "User.Presentation\\Update\\UpdateRole.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Presentation\\Update\\UpdateRole.cs",
+              "RelativeToolTip": "User.Presentation\\Update\\UpdateRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswBkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T06:00:37.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateUser.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Presentation\\Update\\UpdateUser.cs",
+              "RelativeDocumentMoniker": "User.Presentation\\Update\\UpdateUser.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Presentation\\Update\\UpdateUser.cs",
+              "RelativeToolTip": "User.Presentation\\Update\\UpdateUser.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAYwBQAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T06:00:30.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateUserCommand.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\User\\UpdateUserCommand.cs",
+              "RelativeDocumentMoniker": "User.Application\\Handler\\Update\\User\\UpdateUserCommand.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\User\\UpdateUserCommand.cs",
+              "RelativeToolTip": "User.Application\\Handler\\Update\\User\\UpdateUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T06:00:14.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateUserCommandHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\User\\UpdateUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "User.Application\\Handler\\Update\\User\\UpdateUserCommandHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\User\\UpdateUserCommandHandler.cs",
+              "RelativeToolTip": "User.Application\\Handler\\Update\\User\\UpdateUserCommandHandler.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvx0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T05:57:54.837Z",
               "EditorCaption": ""
             }
           ]

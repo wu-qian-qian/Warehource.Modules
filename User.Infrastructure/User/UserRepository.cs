@@ -21,4 +21,10 @@ internal class UserRepository : EfCoreRepository<Domain.User, UserDBContext>, IU
     {
         return DbContext.Query<Domain.User>().Include(p => p.Role).ToListAsync();
     }
+
+    public IQueryable<Domain.User> GetQueryable()
+    {
+        var queryable = DbContext.Query<Domain.User>().Include(p => p.Role);
+        return queryable;
+    }
 }

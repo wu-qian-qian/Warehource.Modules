@@ -6,6 +6,8 @@ using Common.Infrastructure.Authentication;
 using Common.Infrastructure.Caching;
 using Common.Infrastructure.Middleware;
 using Common.Infrastructure.Swagger;
+using Common.JsonExtension;
+using Microsoft.AspNetCore.Http.Json;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -25,6 +27,12 @@ public static class InfrastructureConfigurator
     public static IServiceCollection AddInfrastructure(this IServiceCollection services,
         IConfiguration configuration, Action<HttpResponseMessage> policCallback = null)
     {
+        //json格式设置
+        services.Configure<JsonOptions>(options =>
+        {
+            //设置时间格式。而非“2008-08-08T08:08:08”这样的格式
+            options.SerializerOptions.Converters.Add(new DateTimeJsonConverter("yyyy-MM-dd HH:mm:ss"));
+        });
         // 配置异常拦截事件
         services.AddGlobalException();
         //配置SwaggerUI

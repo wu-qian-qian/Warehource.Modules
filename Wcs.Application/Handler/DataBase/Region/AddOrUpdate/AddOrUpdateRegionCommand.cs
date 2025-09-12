@@ -11,4 +11,14 @@ public class AddOrUpdateRegionCommand : ICommand<Result<RegionDto>>
     public string? Description { get; set; }
 
     public Guid? Id { get; set; }
+
+    /// <summary>
+    ///     当前区域任务进行中数量
+    ///     用来限流
+    ///     需要使用锁
+    /// </summary>
+    public int CurrentNum { get; set; }
+
+    //最大流量
+    public int MaxNum { get; set; }
 }

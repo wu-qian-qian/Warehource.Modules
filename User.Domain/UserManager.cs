@@ -41,4 +41,24 @@ public class UserManager(IUserRepository userRepository, IRoleRepository roleRep
     {
         return await userRepository.GetAllUserAndRoleAsync();
     }
+
+    public Task<IQueryable<User>> GetUserQueryAsync()
+    {
+        return Task.FromResult(userRepository.GetQueryable());
+    }
+
+    public async Task<IQueryable<Role>> GetRoleQueryAsync()
+    {
+        return await roleRepository.GetQueryableAsync();
+    }
+
+    public async Task UpdateUser(User user)
+    {
+        await userRepository.UpdateAsync(user);
+    }
+
+    public async Task UpdateRole(Role role)
+    {
+        await roleRepository.UpdateAsync(role);
+    }
 }

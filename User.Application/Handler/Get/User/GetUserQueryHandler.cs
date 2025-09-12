@@ -11,6 +11,8 @@ internal class GetUserQueryHandler(UserManager userManager, IMapper mapper)
     public async Task<IEnumerable<UserDto>> Handle(GetUserQuery request, CancellationToken cancellationToken)
     {
         var userList = await userManager.GetAllUserAndRoleAsync();
+        if (request.UserName != string.Empty) userList = userList.Where(p => p.Username == request.UserName);
+
         return mapper.Map<IEnumerable<UserDto>>(userList);
     }
 }

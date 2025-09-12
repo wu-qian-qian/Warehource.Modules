@@ -232,7 +232,7 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<DateTime>("CreationTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("CurrentNum")
+                    b.Property<int>("CurrentNum")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -248,6 +248,9 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<string>("LastModifierUser")
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("MaxNum")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

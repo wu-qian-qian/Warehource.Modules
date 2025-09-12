@@ -19,4 +19,11 @@ public static class IEnumerableHelper
     {
         return condition ? list.Where(predicate) : list;
     }
+
+    public static IQueryable<T> ToPageBySortAsc<T>(this IQueryable<T> list, int skinCount, int total
+        , Expression<Func<T, DateTime>> predicate)
+    {
+        list.OrderByDescending(predicate);
+        return list.Skip(skinCount).Take(total);
+    }
 }

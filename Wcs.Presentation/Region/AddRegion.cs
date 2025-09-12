@@ -17,6 +17,8 @@ public class AddRegion : IEndpoint
         {
             return await sender.Send(new AddOrUpdateRegionCommand
             {
+                CurrentNum = request.CurrentNum,
+                MaxNum = request.MaxNum,
                 Code = request.Code,
                 Description = request.Description
             });
