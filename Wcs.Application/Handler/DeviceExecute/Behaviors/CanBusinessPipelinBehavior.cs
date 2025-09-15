@@ -1,8 +1,7 @@
 ﻿using MediatR;
 using Wcs.Application.Handler.Business.ReadPlcBlock;
-using Wcs.Application.Handler.DeviceExecute;
 
-namespace Wcs.Application.Handler.Business.Behaviors;
+namespace Wcs.Application.Handler.DeviceExecute.Behaviors;
 
 /// <summary>
 ///     是否可以执行业务
@@ -31,6 +30,7 @@ internal class CanBusinessPipelinBehavior<TRequest, TResponse>(ISender sender) :
                 },
                 cancellationToken);
             if (dbEntity != null) return await next();
+            return default;
         }
 
         return await next();

@@ -2693,6 +2693,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Common.Shared": "1.0.0",
           "Wcs.Shared": "1.0.0"
         },
         "compile": {

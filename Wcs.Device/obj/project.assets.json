@@ -274,10 +274,21 @@
           "bin/placeholder/Common.Domain.dll": {}
         }
       },
+      "Common.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Common.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.Shared.dll": {}
+        }
+      },
       "Wcs.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Common.Shared": "1.0.0",
           "Wcs.Shared": "1.0.0"
         },
         "compile": {
@@ -732,6 +743,11 @@
       "type": "project",
       "path": "../Common.Domain/Common.Domain.csproj",
       "msbuildProject": "../Common.Domain/Common.Domain.csproj"
+    },
+    "Common.Shared/1.0.0": {
+      "type": "project",
+      "path": "../Common.Shared/Common.Shared.csproj",
+      "msbuildProject": "../Common.Shared/Common.Shared.csproj"
     },
     "Wcs.Contracts/1.0.0": {
       "type": "project",

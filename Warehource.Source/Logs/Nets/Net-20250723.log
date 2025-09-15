@@ -1,2 +1,0 @@
-2025-07-23 08:29:24.918 +08:00 [ERR] Cannot resolve 'MediatR.IRequestHandler`2[Wcs.Application.S7Plc.Get.GetS7NetQuery,System.Collections.Generic.IEnumerable`1[Wcs.Domain.S7.S7NetConfig]]' from root provider because it requires scoped service 'Wcs.Domain.S7.IS7NetManager'.-无法初始化服务
-2025-07-23 08:30:26.103 +08:00 [ERR] Cannot resolve 'MediatR.IRequestHandler`2[Wcs.Application.S7Plc.Get.GetS7NetQuery,System.Collections.Generic.IEnumerable`1[Wcs.Domain.S7.S7NetConfig]]' from root provider because it requires scoped service 'Wcs.Domain.S7.IS7NetManager'.-无法初始化服务

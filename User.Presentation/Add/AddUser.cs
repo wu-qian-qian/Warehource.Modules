@@ -1,6 +1,6 @@
 ﻿using Common.Presentation.Endpoints;
 using Identity.Application.Handler.Add.User;
-using Identity.Contrancts.Request;
+using Identity.Contrancts.Request.Add;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;

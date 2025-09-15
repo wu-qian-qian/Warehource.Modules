@@ -9,11 +9,6 @@ public class GetWcsTaskQuery : IQuery<IEnumerable<WcsTaskDto>>
     /// <summary>
     ///     任务状态
     /// </summary>
-    public WcsTaskStatusEnum TaskStatus { get; set; } = WcsTaskStatusEnum.Created;
-
-    /// <summary>
-    ///     任务状态
-    /// </summary>
     public CreatorSystemTypeEnum? CreatorSystemType { get; set; }
 
     public string? Container { get; set; }

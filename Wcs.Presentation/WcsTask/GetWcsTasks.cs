@@ -15,9 +15,8 @@ public class GetWcsTasks : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("wcstask/get-wcstasks", [Authorize] async (
-            GetWcsTaskRequest request,
-            ISender sender) =>
+        //获取执行中的任务
+        app.MapPost("wcstask/get-execute-wcstask", [Authorize] async (GetWcsTaskRequest request, ISender sender) =>
         {
             Result<IEnumerable<WcsTaskDto>> result = new();
             var data = await sender.Send(new GetWcsTaskQuery
@@ -28,7 +27,8 @@ public class GetWcsTasks : IEndpoint
                 StartTime = request.StartTime,
                 TaskCode = request.TaskCode,
                 SerialNumber = request.SerialNumber,
-                TaskStatus = request.TaskStatus
+                GetLocation = request.GetLocation,
+                PutLocation = request.PutLocation
             });
             result.SetValue(data);
             return result;

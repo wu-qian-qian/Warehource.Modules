@@ -24,16 +24,12 @@ internal class WcsProfile : Profile
         CreateMap<Region, RegionDto>();
 
         CreateMap<WcsTask, WcsTaskDto>()
-            .ForMember(x => x.GetColumn, x => x.MapFrom(x => x.GetLocation.GetColumn))
-            .ForMember(x => x.GetRow, x => x.MapFrom(x => x.GetLocation.GetRow))
-            .ForMember(x => x.GetDepth, x => x.MapFrom(x => x.GetLocation.GetDepth))
-            .ForMember(x => x.GetFloor, x => x.MapFrom(x => x.GetLocation.GetFloor))
-            .ForMember(x => x.GetTunnel, x => x.MapFrom(x => x.GetLocation.GetTunnel))
-            .ForMember(x => x.PutColumn, x => x.MapFrom(x => x.PutLocation.PutColumn))
-            .ForMember(x => x.PutRow, x => x.MapFrom(x => x.PutLocation.PutRow))
-            .ForMember(x => x.PutDepth, x => x.MapFrom(x => x.PutLocation.PutDepth))
-            .ForMember(x => x.PutFloor, x => x.MapFrom(x => x.PutLocation.PutFloor))
-            .ForMember(x => x.PutTunnel, x => x.MapFrom(x => x.PutLocation.PutTunnel))
+            .ForMember(x => x.GetLocation, x =>
+                x.MapFrom(x =>
+                    $"{x.GetLocation.GetTunnel}_{x.GetLocation.GetRow}_{x.GetLocation.GetColumn}_{x.GetLocation.GetFloor}_{x.GetLocation.GetDepth}"))
+            .ForMember(x => x.PutLocation, x =>
+                x.MapFrom(x =>
+                    $"{x.PutLocation.PutTunnel}_{x.PutLocation.PutRow}_{x.PutLocation.PutColumn}_{x.PutLocation.PutFloor}_{x.PutLocation.PutDepth}"))
             .ForMember(x => x.ExecuteDesc, x => x.MapFrom(x => x.TaskExecuteStep.Description))
             .ForMember(x => x.ExecutePath, x => x.MapFrom(x => x.TaskExecuteStep.PathNodeGroup))
             .ForMember(x => x.CurrentDevice, x => x.MapFrom(x => x.TaskExecuteStep.CurentDevice));

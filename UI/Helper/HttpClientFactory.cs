@@ -1,6 +1,6 @@
 ﻿using System.Net.Http.Headers;
 
-namespace Common.Application.Net.Http;
+namespace UI.Helper;
 
 public sealed class HttpClientFactory
 {

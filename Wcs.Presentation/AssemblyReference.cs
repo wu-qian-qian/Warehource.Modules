@@ -15,4 +15,6 @@ public static class AssemblyReference
     public static readonly string ExecuteNode = "ExecuteNode";
 
     public static readonly string Decive = "Decive";
+
+    public static readonly string Enum = "Enum";
 }

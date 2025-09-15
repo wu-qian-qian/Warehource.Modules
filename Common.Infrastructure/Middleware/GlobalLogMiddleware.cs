@@ -27,20 +27,15 @@ public class GlobalLogMiddleware
         var contentType = context.Response.ContentType;
         var isFileResponse = MiddlewareHelper.IsFileResponse(contentType);
         if (isFileResponse == false) //如果请求流不为文件
-            using (var responseBody = new MemoryStream())
-            {
-                var containsGet = Regex.IsMatch(context.Request.Path, "get");
-                if (request.Method != "Get" || containsGet) //get方法不做日志记录
+        {
+            var containsGet = Regex.IsMatch(context.Request.Path, "get");
+            if (request.Method == "Get" || containsGet) //get方法不做日志记录
+                await _next(context);
+            else
+                using (var responseBody = new MemoryStream())
                 {
-                    await _next(context);
-                }
-                else
-                {
-                    context.Response.Body = responseBody;
-                    _stopwatch.Restart();
-                    await _next(context);
-                    _stopwatch.Stop();
                     var originalBodyStream = context.Response.Body;
+                    context.Response.Body = responseBody;
                     //可以让 Request.Body 可以再次读取
                     if (request.ContentLength != null && request.ContentLength != 0)
                     {
@@ -58,13 +53,16 @@ public class GlobalLogMiddleware
                         }
                     }
 
+                    _stopwatch.Restart();
+                    await _next(context);
+                    _stopwatch.Stop();
                     responseData = await GetResponse(context.Response);
                     await responseBody.CopyToAsync(originalBodyStream);
                     Serilog.Log.Logger.ForCategory(LogCategory.Http)
                         .Information(
                             $"地址：{context.Connection.RemoteIpAddress.ToString()}\nURL:{context.Request.Path}\n请求体：{requestData}\n响应体：{responseData}\n时间：{_stopwatch.ElapsedMilliseconds}");
                 }
-            }
+        }
     }
 
     /// <summary>

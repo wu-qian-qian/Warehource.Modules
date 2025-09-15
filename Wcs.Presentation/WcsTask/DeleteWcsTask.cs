@@ -12,9 +12,7 @@ public class DeleteWcsTask : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapDelete("wcstask/delete-wcstask/{serialNumber}", [Authorize] async (
-            int request,
-            ISender sender) =>
+        app.MapDelete("wcstask/delete-wcstask/{serialNumber}", [Authorize] async (int request, ISender sender) =>
         {
             return await sender.Send(new DeleteWcsTaskCommand
             {

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Identity.Contrancts;
+using Identity.Contrancts.Respon;
 using Identity.Domain;
 
 namespace Identity.Application;

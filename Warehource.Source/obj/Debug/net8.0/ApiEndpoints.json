@@ -264,6 +264,90 @@
     ]
   },
   {
+    "ContainingType": "Wcs.Presentation.GetEnum.GetCreatorSystemTypeEnum\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "getenum/get-creatorSystemType",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String[]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Enum"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.GetEnum.GetDevuceTypeEnum\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "getenum/get-devucetype",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String[]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Enum"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.GetEnum.GetWcsTaskStatusEnum\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "getenum/get-wcstaskstatus",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String[]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Enum"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.GetEnum.GetWcsTaskTypeEnum\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "getenum/get-wcstasktype",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String[]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Enum"
+    ]
+  },
+  {
     "ContainingType": "Wcs.Presentation.Job.Add.AddJobConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "job/add-job",
@@ -858,16 +942,16 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.WcsTask.GetWcsTask\u002B\u003C\u003Ec",
+    "ContainingType": "Wcs.Presentation.WcsTask.GetWcsTasks\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
-    "RelativePath": "wcstask/get-wcstask/{serialNumber}",
-    "HttpMethod": "GET",
+    "RelativePath": "wcstask/get-execute-wcstask",
+    "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "System.Int32",
+        "Type": "Wcs.Contracts.Request.WcsTask.GetWcsTaskRequest",
         "IsRequired": true
       }
     ],
@@ -885,16 +969,43 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.WcsTask.GetWcsTasks\u002B\u003C\u003Ec",
+    "ContainingType": "Wcs.Presentation.WcsTask.GetPageQuery\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
-    "RelativePath": "wcstask/get-wcstasks",
+    "RelativePath": "wcstask/get-wcstask-pagequery",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Wcs.Contracts.Request.WcsTask.GetWcsTaskRequest",
+        "Type": "Wcs.Contracts.Request.WcsTask.GetWcsTaskPageQueryRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Shared.PageResult\u00601[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "WcsTask"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.WcsTask.GetWcsTask\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "wcstask/get-wcstask/{serialNumber}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -937,7 +1048,7 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.WcsTask.UdateTaskStatus\u002B\u003C\u003Ec",
+    "ContainingType": "Wcs.Presentation.WcsTask.UpdateTaskStatus\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "wcstask/update-wcstask-status",
     "HttpMethod": "PUT",

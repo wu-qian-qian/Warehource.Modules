@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C71FC1D-3989-4652-A9D6-1C3B860ECEED}|User.Contrancts\\Identity.Contrancts.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.contrancts\\request\\update\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C71FC1D-3989-4652-A9D6-1C3B860ECEED}|User.Contrancts\\Identity.Contrancts.csproj|solutionrelative:user.contrancts\\request\\update\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\wcstask\\getwcstasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\wcstask\\getwcstasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35540014-59C3-4E45-BF0E-44B73C176CEA}|User.Presentation\\Identity.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.presentation\\update\\updateuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35540014-59C3-4E45-BF0E-44B73C176CEA}|User.Presentation\\Identity.Presentation.csproj|solutionrelative:user.presentation\\update\\updateuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\database\\wcstask\\page\\getwcstaskpagequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\database\\wcstask\\page\\getwcstaskpagequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35540014-59C3-4E45-BF0E-44B73C176CEA}|User.Presentation\\Identity.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.presentation\\update\\updaterole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35540014-59C3-4E45-BF0E-44B73C176CEA}|User.Presentation\\Identity.Presentation.csproj|solutionrelative:user.presentation\\update\\updaterole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\wcstask\\getpagequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\wcstask\\getpagequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.application\\handler\\update\\role\\updateroleeventcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|solutionrelative:user.application\\handler\\update\\role\\updateroleeventcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\wcsprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\wcsprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.application\\handler\\update\\role\\updaterolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|solutionrelative:user.application\\handler\\update\\role\\updaterolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.application\\handler\\update\\user\\updateusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|solutionrelative:user.application\\handler\\update\\user\\updateusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.application\\handler\\update\\user\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD52AC83-A590-4B67-BB03-4991D396AF2D}|User.Application\\Identity.Application.csproj|solutionrelative:user.application\\handler\\update\\user\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C71FC1D-3989-4652-A9D6-1C3B860ECEED}|User.Contrancts\\Identity.Contrancts.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\user.contrancts\\request\\update\\updaterolerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C71FC1D-3989-4652-A9D6-1C3B860ECEED}|User.Contrancts\\Identity.Contrancts.csproj|solutionrelative:user.contrancts\\request\\update\\updaterolerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\wcstask\\getwcstask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\wcstask\\getwcstask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,10 +78,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
@@ -114,106 +98,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetWcsTaskPageQueryHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DataBase\\WcsTask\\Page\\GetWcsTaskPageQueryHandler.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\DataBase\\WcsTask\\Page\\GetWcsTaskPageQueryHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DataBase\\WcsTask\\Page\\GetWcsTaskPageQueryHandler.cs",
+              "RelativeToolTip": "Wcs.Application\\Handler\\DataBase\\WcsTask\\Page\\GetWcsTaskPageQueryHandler.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T07:32:37.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UpdateRoleEventCommandHandler.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\Role\\UpdateRoleEventCommandHandler.cs",
-              "RelativeDocumentMoniker": "User.Application\\Handler\\Update\\Role\\UpdateRoleEventCommandHandler.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\Role\\UpdateRoleEventCommandHandler.cs",
-              "RelativeToolTip": "User.Application\\Handler\\Update\\Role\\UpdateRoleEventCommandHandler.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvxQAAAAoAAAAAAAAAA==",
+              "Title": "WcsProfile.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\WcsProfile.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\WcsProfile.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\WcsProfile.cs",
+              "RelativeToolTip": "Wcs.Application\\WcsProfile.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAIwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T06:07:58.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UpdateRoleCommand.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\Role\\UpdateRoleCommand.cs",
-              "RelativeDocumentMoniker": "User.Application\\Handler\\Update\\Role\\UpdateRoleCommand.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\Role\\UpdateRoleCommand.cs",
-              "RelativeToolTip": "User.Application\\Handler\\Update\\Role\\UpdateRoleCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T06:07:57.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UpdateRoleRequest.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Contrancts\\Request\\Update\\UpdateRoleRequest.cs",
-              "RelativeDocumentMoniker": "User.Contrancts\\Request\\Update\\UpdateRoleRequest.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Contrancts\\Request\\Update\\UpdateRoleRequest.cs",
-              "RelativeToolTip": "User.Contrancts\\Request\\Update\\UpdateRoleRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T06:07:52.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdateUserRequest.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Contrancts\\Request\\Update\\UpdateUserRequest.cs",
-              "RelativeDocumentMoniker": "User.Contrancts\\Request\\Update\\UpdateUserRequest.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Contrancts\\Request\\Update\\UpdateUserRequest.cs",
-              "RelativeToolTip": "User.Contrancts\\Request\\Update\\UpdateUserRequest.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAswBkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T06:01:33.022Z",
+              "WhenOpened": "2025-09-15T07:15:05.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UpdateRole.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Presentation\\Update\\UpdateRole.cs",
-              "RelativeDocumentMoniker": "User.Presentation\\Update\\UpdateRole.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Presentation\\Update\\UpdateRole.cs",
-              "RelativeToolTip": "User.Presentation\\Update\\UpdateRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswBkAAAAiAAAAAAAAAA==",
+              "Title": "GetPageQuery.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\GetPageQuery.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\WcsTask\\GetPageQuery.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\GetPageQuery.cs",
+              "RelativeToolTip": "Wcs.Presentation\\WcsTask\\GetPageQuery.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADgvyUAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T06:00:37.736Z",
+              "WhenOpened": "2025-09-15T05:50:05.974Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateUser.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Presentation\\Update\\UpdateUser.cs",
-              "RelativeDocumentMoniker": "User.Presentation\\Update\\UpdateUser.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Presentation\\Update\\UpdateUser.cs",
-              "RelativeToolTip": "User.Presentation\\Update\\UpdateUser.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAYwBQAAABhAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GetWcsTasks.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\GetWcsTasks.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\WcsTask\\GetWcsTasks.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\GetWcsTasks.cs",
+              "RelativeToolTip": "Wcs.Presentation\\WcsTask\\GetWcsTasks.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvxMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T06:00:30.187Z",
+              "WhenOpened": "2025-09-15T05:42:31.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UpdateUserCommand.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\User\\UpdateUserCommand.cs",
-              "RelativeDocumentMoniker": "User.Application\\Handler\\Update\\User\\UpdateUserCommand.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\User\\UpdateUserCommand.cs",
-              "RelativeToolTip": "User.Application\\Handler\\Update\\User\\UpdateUserCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswAYAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "GetWcsTask.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\GetWcsTask.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\WcsTask\\GetWcsTask.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\GetWcsTask.cs",
+              "RelativeToolTip": "Wcs.Presentation\\WcsTask\\GetWcsTask.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T06:00:14.767Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UpdateUserCommandHandler.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\User\\UpdateUserCommandHandler.cs",
-              "RelativeDocumentMoniker": "User.Application\\Handler\\Update\\User\\UpdateUserCommandHandler.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\User.Application\\Handler\\Update\\User\\UpdateUserCommandHandler.cs",
-              "RelativeToolTip": "User.Application\\Handler\\Update\\User\\UpdateUserCommandHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAADwvx0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T05:57:54.837Z",
+              "WhenOpened": "2025-09-15T05:42:29.297Z",
               "EditorCaption": ""
             }
           ]

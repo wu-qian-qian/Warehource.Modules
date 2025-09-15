@@ -3,6 +3,7 @@ using Common.Application.MediatR.Message;
 using Common.Helper;
 using Wcs.Contracts.Respon.WcsTask;
 using Wcs.Domain.Task;
+using Wcs.Shared;
 
 namespace Wcs.Application.Handler.DataBase.WcsTask.Get;
 
@@ -19,7 +20,8 @@ public class GetWcsTaskQueryHandler(
             .WhereIf(request.EndTime != null, p => p.CreationTime <= request.EndTime)
             .WhereIf(request.SerialNumber != null, p => p.SerialNumber == request.SerialNumber)
             .WhereIf(request.CreatorSystemType != null, p => p.CreatorSystemType == request.CreatorSystemType)
-            .Where(p => p.TaskStatus == request.TaskStatus).ToArray();
+            .Where(p => p.TaskStatus != WcsTaskStatusEnum.Completed ||
+                        p.TaskStatus != WcsTaskStatusEnum.Cancelled).ToArray();
         return Task.FromResult(_mapper.Map<IEnumerable<WcsTaskDto>>(wcsTasks));
     }
 }

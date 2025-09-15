@@ -1,7 +1,7 @@
 ﻿using Common.Application.MediatR.Message;
 using Wcs.Application.Abstract;
 
-namespace Wcs.Application.Handler.Business.StackerOutComplate;
+namespace Wcs.Application.Handler.Business.SetExecuteDevice;
 
 public class SetExecuteDeviceCommandHandler(IDeviceService _deviceService)
     : ICommandHandler<SetExecuteDeviceCommand, string>
