@@ -56,9 +56,11 @@ public class WcsTaskRepository(WCSDBContext _db) : IWcsTaskRepository
         return wcsTask;
     }
 
-    public IQueryable<Domain.Task.WcsTask> GetWcsTaskQuerys()
+    public IQueryable<Domain.Task.WcsTask> GetWcsTaskQuerys(bool isInclide = true)
     {
-        return _db.Query<Domain.Task.WcsTask>().Include(p => p.TaskExecuteStep);
+        if (isInclide)
+            return _db.Query<Domain.Task.WcsTask>().Include(p => p.TaskExecuteStep);
+        return _db.Query<Domain.Task.WcsTask>();
     }
 
     public void Update(Domain.Task.WcsTask wcsTask)

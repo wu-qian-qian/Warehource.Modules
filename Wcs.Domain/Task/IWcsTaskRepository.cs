@@ -10,7 +10,7 @@ public interface IWcsTaskRepository
 
     WcsTask Get(int serialNumber);
 
-    IQueryable<WcsTask> GetWcsTaskQuerys();
+    IQueryable<WcsTask> GetWcsTaskQuerys(bool isInclude = true);
 
     void Update(WcsTask wcsTask);
 

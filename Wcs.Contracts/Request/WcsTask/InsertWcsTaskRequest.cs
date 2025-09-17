@@ -19,7 +19,7 @@ public class InsertWcsTaskRequest
     /// <summary>
     ///     任务类型
     /// </summary>
-    public WcsTaskTypeEnum TaskType { get; set; }
+    public WcsTaskTypeEnum? TaskType { get; set; }
 
     /// <summary>
     ///     创建系统
@@ -99,4 +99,14 @@ public class InsertWcsTaskRequest
 
 
     public string? RegionCode { get; set; }
+
+    /// <summary>
+    ///     库位只传这个
+    /// </summary>
+    public string? GetLocation { get; set; }
+
+    /// <summary>
+    ///     库位只传这个
+    /// </summary>
+    public string? Putlocation { get; set; }
 }

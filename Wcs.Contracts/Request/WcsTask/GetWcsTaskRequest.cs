@@ -21,7 +21,7 @@ public class GetWcsTaskRequest
     /// <summary>
     ///     任务状态
     /// </summary>
-    public WcsTaskStatusEnum TaskStatus { get; set; } = WcsTaskStatusEnum.Created;
+    public WcsTaskTypeEnum? TaskType { get; set; }
 
     /// <summary>
     ///     任务状态

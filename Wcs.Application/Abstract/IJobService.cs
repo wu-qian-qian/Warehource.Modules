@@ -8,7 +8,7 @@ public interface IJobService
 
     public Task<IEnumerable<JobConfig>> GetAllJobConfigsAsync();
 
-    public Task AddJobConfigAsync(JobConfig jobConfig);
+    public Task<bool> AddJobConfigAsync(JobConfig jobConfig);
 
     public Task UpdateJobConfigAsync(JobConfig jobConfig);
 
@@ -17,4 +17,7 @@ public interface IJobService
     public Task<JobConfig?> DeleteJobConfigAsync(string name);
 
     public Task<JobConfig?> GetJobConfigAsync(string name);
+
+    Task<IQueryable<JobConfig>> GetQueryableAsync(bool asNoTrack = true);
+    bool CraetJob(JobConfig jobConfig);
 }

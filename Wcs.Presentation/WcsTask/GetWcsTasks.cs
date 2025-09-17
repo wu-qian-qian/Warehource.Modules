@@ -28,7 +28,8 @@ public class GetWcsTasks : IEndpoint
                 TaskCode = request.TaskCode,
                 SerialNumber = request.SerialNumber,
                 GetLocation = request.GetLocation,
-                PutLocation = request.PutLocation
+                PutLocation = request.PutLocation,
+                TaskType = request.TaskType
             });
             result.SetValue(data);
             return result;

@@ -31,6 +31,9 @@ public class TaskExecuteStep : IEntity
     /// </summary>
     public string? PathNodeGroup { get; set; }
 
+    /// <summary>
+    ///     当前设备
+    /// </summary>
     public string? CurentDevice { get; set; }
 
     public DeviceTypeEnum? DeviceType { get; set; }

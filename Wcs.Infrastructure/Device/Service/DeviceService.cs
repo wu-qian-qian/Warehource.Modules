@@ -75,14 +75,14 @@ internal class DeviceService : IDeviceService
             var tarController = targetInController.Devices
                 .First(p => p.Config.Tunnle == tunnle);
             location =
-                $"{tarController.Config.Tunnle}_{tarController.Config.Floor}_{tarController.Config.Row}_{tarController.Config.Column}";
+                $"{tarController.Config.Tunnle}_{tarController.Config.Row}_{tarController.Config.Column}_{tarController.Config.Floor}__{tarController.Config.Depth}";
         }
         else if (controller is AbstractStackerTranshipInController targetOutController)
         {
             var tarController = targetOutController.Devices
                 .First(p => p.Config.Tunnle == tunnle);
             location =
-                $"{tarController.Config.Tunnle}_{tarController.Config.Floor}_{tarController.Config.Row}_{tarController.Config.Column}";
+                $"{tarController.Config.Tunnle}_{tarController.Config.Row}_{tarController.Config.Column}_{tarController.Config.Floor}__{tarController.Config.Depth}";
         }
 
         return Task.FromResult(location);

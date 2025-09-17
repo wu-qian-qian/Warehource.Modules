@@ -322,7 +322,7 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<Guid>("TaskExecuteStepId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("TaskStatus")
+                    b.Property<int>("TaskType")
                         .HasColumnType("int");
 
                     b.Property<int>("TaskType")

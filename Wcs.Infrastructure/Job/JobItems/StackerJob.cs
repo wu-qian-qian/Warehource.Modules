@@ -10,7 +10,7 @@ public class StackerJob(IHubManager _hubManager, IStackerController _controller)
 {
     public override async Task Execute(IJobExecutionContext context)
     {
-        await _controller.ExecuteAsync(_linkedCts.Token);
         await base.Execute(context);
+        await _controller.ExecuteAsync(_linkedCts.Token);
     }
 }

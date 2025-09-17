@@ -19,8 +19,10 @@ public class UpdateRegion : IEndpoint
         {
             return await sender.Send(new AddOrUpdateRegionCommand
             {
+                Id = request.Id,
                 Code = request.Code,
-                Description = request.Description
+                Description = request.Description,
+                MaxNum = request.MaxNum
             });
         }).WithTags(AssemblyReference.Region);
     }

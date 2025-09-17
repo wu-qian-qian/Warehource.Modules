@@ -24,7 +24,8 @@ internal class StackerDeviceCommandHandler(
     ISender _sender,
     IPublishEndpoint _publishEndpoint,
     ICacheService _cacheService,
-    IDeviceService _deviceService)
+    IDeviceService _deviceService,
+    IAnalysisLocation _locationService)
     : ICommandHandler<StackerDeviceCommand>
 {
     public async Task Handle(StackerDeviceCommand request, CancellationToken cancellationToken)
@@ -90,10 +91,7 @@ internal class StackerDeviceCommandHandler(
                                 var result = await _deviceService.GetTranshipPositionAsync(
                                     DeviceTypeEnum.StackerOutTranShip,
                                     wcsTask.GetLocation.GetTunnel);
-                                var location = result.Split("_");
-                                var putLocation =
-                                    new PutLocation(location[0],
-                                        location[1], location[2], location[3], string.Empty);
+                                var putLocation = _locationService.AnalysisPutLocation(result);
                                 wcsTask.PutLocation = putLocation;
                             }
 

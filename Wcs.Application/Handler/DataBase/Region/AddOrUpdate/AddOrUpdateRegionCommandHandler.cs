@@ -21,6 +21,7 @@ public class AddOrUpdateRegionCommandHandler(
             region = _regionPepository.Get(request.Id.Value);
             region.Code = request.Code;
             region.Description = request.Description;
+            region.MaxNum = request.MaxNum;
         }
         else
         {

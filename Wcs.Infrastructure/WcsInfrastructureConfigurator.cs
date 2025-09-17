@@ -1,4 +1,5 @@
 using AutoMapper;
+using Common.Application.QuartzJob;
 using Common.Presentation.Endpoints;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
@@ -28,9 +29,9 @@ using Wcs.Infrastructure.DB.Region;
 using Wcs.Infrastructure.DB.WcsTask;
 using Wcs.Infrastructure.Device.Controler;
 using Wcs.Infrastructure.Device.Service;
-using Wcs.Infrastructure.Job.JobItems;
 using Wcs.Infrastructure.Job.Options;
 using Wcs.Infrastructure.Job.Service;
+using Wcs.Infrastructure.Service;
 using Wcs.Infrastructure.SignalR;
 using Wcs.Presentation.Custom;
 using Wcs.Presentation.Saga;
@@ -72,6 +73,7 @@ public static class WcsInfrastructureConfigurator
     /// <returns></returns>
     public static IServiceCollection AddRepository(this IServiceCollection service)
     {
+        service.AddSingleton<IAnalysisLocation, AnalysisLocation>();
         service.AddScoped<IJobService, JobService>();
         service.AddScoped<IJobConfigRepository, JobConfigRepository>();
         service.AddScoped<IRegionRepository, RegionRepository>();
@@ -166,8 +168,10 @@ public static class WcsInfrastructureConfigurator
     /// <param name="service"></param>
     public static void AddJobs(IServiceCollection service)
     {
+        var ass = typeof(WcsInfrastructureConfigurator).Assembly;
         service.TryAddSingleton<JobOptions>();
-        Type[] jobtypes = { typeof(ConnectPlcJob), typeof(WcsTaskAnalysisJob) };
+        var jobtypes = ass.GetTypes().Where(type => type is { IsAbstract: false, IsInterface: false } &&
+                                                    type.IsAssignableTo(typeof(BaseJob))).ToArray();
         service.AddKeyedSingleton(Constant.JobKey, jobtypes);
     }
 

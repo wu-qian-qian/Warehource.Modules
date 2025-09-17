@@ -26,6 +26,8 @@ public class AddOrUpdateWcsTaskCommandHandler(
         {
             wcsTask = new Domain.Task.WcsTask
             {
+                Level = request.Level,
+                IsEnforce = request.IsEnforce,
                 TaskCode = request.TaskCode,
                 CreatorSystemType = request.CreatorSystemType,
                 TaskStatus = WcsTaskStatusEnum.Created,

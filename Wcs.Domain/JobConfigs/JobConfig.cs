@@ -29,4 +29,14 @@ public class JobConfig : IEntity
     {
         IsStart = isStart;
     }
+
+    public void SetTimer(int timer)
+    {
+        Timer = timer;
+    }
+
+    public void SetTimerOut(int timerOut)
+    {
+        TimeOut = timerOut;
+    }
 }

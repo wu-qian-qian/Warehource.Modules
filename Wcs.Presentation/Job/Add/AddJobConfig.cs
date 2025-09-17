@@ -13,9 +13,7 @@ internal sealed class AddJobConfig : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("job/add-job", [Authorize(Roles = "admin")] async (
-            AddJobRequest request,
-            ISender sender) =>
+        app.MapPost("job/add-job", [Authorize(Roles = "admin")] async (AddJobRequest request, ISender sender) =>
         {
             return await sender.Send(new AddJobCommand
             {

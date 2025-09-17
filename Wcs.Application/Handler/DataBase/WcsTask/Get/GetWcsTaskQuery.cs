@@ -6,9 +6,7 @@ namespace Wcs.Application.Handler.DataBase.WcsTask.Get;
 
 public class GetWcsTaskQuery : IQuery<IEnumerable<WcsTaskDto>>
 {
-    /// <summary>
-    ///     任务状态
-    /// </summary>
+    public WcsTaskTypeEnum? TaskType { get; set; }
     public CreatorSystemTypeEnum? CreatorSystemType { get; set; }
 
     public string? Container { get; set; }

@@ -177,7 +177,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Common.Shared.PageResult\u00601[[Identity.Contrancts.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Shared.PageResult\u00601[[Identity.Contrancts.Respon.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -204,7 +204,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Common.Shared.PageResult\u00601[[Identity.Contrancts.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Shared.PageResult\u00601[[Identity.Contrancts.Respon.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -231,7 +231,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Identity.Contrancts.UserDto",
+        "Type": "Identity.Contrancts.Respon.UserDto",
         "MediaTypes": [
           "application/json"
         ],
@@ -252,7 +252,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Identity.Contrancts.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Identity.Contrancts.Respon.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -295,6 +295,27 @@
     "ReturnTypes": [
       {
         "Type": "System.String[]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Enum"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.GetEnum.GetJobTypes\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "getenum/get-jobtypes",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -402,6 +423,33 @@
     ]
   },
   {
+    "ContainingType": "Wcs.Presentation.Job.Page.GetPageQuery\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "job/get-jobpage-query",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Wcs.Contracts.Request.Job.GetPageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Shared.PageResult\u00601[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Job"
+    ]
+  },
+  {
     "ContainingType": "Wcs.Presentation.Job.Get.GetJobsConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "job/get-jobs",
@@ -432,7 +480,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Wcs.Contracts.Request.Job.StatusRequest",
+        "Type": "Wcs.Contracts.Request.Job.UpdateJobRequest",
         "IsRequired": true
       }
     ],
@@ -595,13 +643,40 @@
     "ContainingType": "Wcs.Presentation.Region.GetRegion\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "region/get-region",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Region"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.Region.GetPageRequest\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "region/get-regionpage",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Wcs.Contracts.Request.Region.GetRegionPageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Shared.PageResult\u00601[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -649,7 +724,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.Respon.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -670,7 +745,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.Respon.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -691,13 +766,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Identity.Contrancts.Request.AddRoleRequest",
+        "Type": "Identity.Contrancts.Request.Add.AddRoleRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.Respon.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -718,13 +793,13 @@
     "Parameters": [
       {
         "Name": "requst",
-        "Type": "Identity.Contrancts.Request.AddUserRequst",
+        "Type": "Identity.Contrancts.Request.Add.AddUserRequst",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.Respon.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -795,7 +870,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Identity.Contrancts.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Identity.Contrancts.Respon.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -822,7 +897,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.Respon.RoleDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -843,13 +918,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Identity.Contrancts.Request.UpdateUserRequest",
+        "Type": "Identity.Contrancts.Request.Update.UpdateUserRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Identity.Contrancts.Respon.UserDto, Identity.Contrancts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -891,6 +966,33 @@
     "ContainingType": "Wcs.Presentation.WcsTask.AddOrUpdateWcsTask\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "wcstask/add-or-update-wcstask",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Wcs.Contracts.Request.WcsTask.InsertWcsTaskRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Application.MediatR.Behaviors.Result\u00601[[Wcs.Contracts.Respon.WcsTask.WcsTaskDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "WcsTask"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.WcsTask.AddWcsTask\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "wcstask/add-self-wcstask",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
@@ -969,6 +1071,33 @@
     ]
   },
   {
+    "ContainingType": "Wcs.Presentation.WcsTask.GetWcsTaskData\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "wcstask/get-TaskData/{time}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "time",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.WcsTask.GetWcsDataDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "WcsTask"
+    ]
+  },
+  {
     "ContainingType": "Wcs.Presentation.WcsTask.GetPageQuery\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "wcstask/get-wcstask-pagequery",
@@ -1023,32 +1152,7 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.WcsTask.UpdateExecuteStep\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoint\u003Eb__0_0",
-    "RelativePath": "wcstask/update-wcstask-executestep",
-    "HttpMethod": "PUT",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Wcs.Contracts.Request.WcsTask.UpdateWcsTaskRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ],
-    "Tags": [
-      "WcsTask"
-    ]
-  },
-  {
-    "ContainingType": "Wcs.Presentation.WcsTask.UpdateTaskStatus\u002B\u003C\u003Ec",
+    "ContainingType": "Wcs.Presentation.WcsTask.UpdateTask\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "wcstask/update-wcstask-status",
     "HttpMethod": "PUT",

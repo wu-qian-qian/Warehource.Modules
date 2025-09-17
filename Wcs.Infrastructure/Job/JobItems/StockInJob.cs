@@ -15,7 +15,7 @@ public class StockInJob(
 {
     public override async Task Execute(IJobExecutionContext context)
     {
-        await _controller.ExecuteAsync(_linkedCts.Token);
         await base.Execute(context);
+        await _controller.ExecuteAsync(_linkedCts.Token);
     }
 }

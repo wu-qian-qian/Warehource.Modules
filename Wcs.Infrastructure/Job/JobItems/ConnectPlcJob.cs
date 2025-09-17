@@ -14,6 +14,7 @@ public class ConnectPlcJob(ISender sender) : BaseJob
 {
     public override Task Execute(IJobExecutionContext context)
     {
+        Console.WriteLine("被执行");
         return base.Execute(context);
     }
 }

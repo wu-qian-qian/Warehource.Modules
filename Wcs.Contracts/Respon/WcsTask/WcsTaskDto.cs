@@ -2,6 +2,9 @@
 
 public class WcsTaskDto : BaseDto
 {
+    public int Level { get; set; }
+
+    public bool IsEnforce { get; set; }
     public string TaskCode { get; set; }
 
     /// <summary>

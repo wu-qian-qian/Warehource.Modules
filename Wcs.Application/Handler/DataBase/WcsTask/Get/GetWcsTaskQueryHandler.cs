@@ -14,14 +14,16 @@ public class GetWcsTaskQueryHandler(
     public Task<IEnumerable<WcsTaskDto>> Handle(GetWcsTaskQuery request, CancellationToken cancellationToken)
     {
         var wcsTasks = _wcsTaskRepository.GetWcsTaskQuerys()
-            .WhereIf(request.Container != null, p => p.Container == request.Container)
-            .WhereIf(request.TaskCode != null, p => p.TaskCode == request.TaskCode)
+            .WhereIf(request.Container != null, p => p.Container.Contains(request.Container))
+            .WhereIf(request.TaskCode != null, p => p.TaskCode.Contains(request.TaskCode))
             .WhereIf(request.StartTime != null, p => p.CreationTime >= request.StartTime)
             .WhereIf(request.EndTime != null, p => p.CreationTime <= request.EndTime)
             .WhereIf(request.SerialNumber != null, p => p.SerialNumber == request.SerialNumber)
             .WhereIf(request.CreatorSystemType != null, p => p.CreatorSystemType == request.CreatorSystemType)
-            .Where(p => p.TaskStatus != WcsTaskStatusEnum.Completed ||
-                        p.TaskStatus != WcsTaskStatusEnum.Cancelled).ToArray();
+            .WhereIf(request.TaskType != null, p => p.TaskType == request.TaskType)
+            .Where(p => p.TaskStatus != WcsTaskStatusEnum.Completed)
+            .Where(p => p.TaskStatus != WcsTaskStatusEnum.Cancelled)
+            .ToArray();
         return Task.FromResult(_mapper.Map<IEnumerable<WcsTaskDto>>(wcsTasks));
     }
 }

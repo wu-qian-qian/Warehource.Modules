@@ -1,4 +1,5 @@
-﻿using Common.Application.Caching;
+﻿using System.Text.Json.Serialization;
+using Common.Application.Caching;
 using Common.Application.Encodings;
 using Common.Application.Net.Http;
 using Common.Application.QuartzJob;
@@ -32,6 +33,8 @@ public static class InfrastructureConfigurator
         {
             //设置时间格式。而非“2008-08-08T08:08:08”这样的格式
             options.SerializerOptions.Converters.Add(new DateTimeJsonConverter("yyyy-MM-dd HH:mm:ss"));
+            //字符串枚举兼容字符反序列化枚举
+            options.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
         });
         // 配置异常拦截事件
         services.AddGlobalException();

@@ -1,13 +1,9 @@
 ﻿using AutoMapper;
 using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
-using Common.Application.QuartzJob;
-using Microsoft.Extensions.DependencyInjection;
-using Quartz;
 using Wcs.Application.Abstract;
 using Wcs.Contracts.Respon.Job;
 using Wcs.Domain.JobConfigs;
-using Wcs.Shared;
 
 namespace Wcs.Application.Handler.DataBase.Job.Insert;
 
@@ -29,20 +25,16 @@ internal class AddJobCommandHandler(
             Timer = request.Timer,
             IsStart = request.IsStart
         };
-        await jobService.AddJobConfigAsync(jobConfig);
-
-        var types = serviceProvider.GetKeyedService<Type[]>(Constant.JobKey);
-        var sc = serviceProvider.GetService<IScheduler>();
-        if (types.Any(p => p.Name == request.JobType) == false)
+        var @bool = await jobService.AddJobConfigAsync(jobConfig);
+        if (@bool)
         {
-            result.SetMessage($"{nameof(AddJobCommand)}--不存在该类型");
+            jobService.CraetJob(jobConfig);
+            await unitOfWork.SaveChangesAsync();
+            result.SetValue(mapper.Map<JobDto>(request));
         }
         else
         {
-            var jobtype = types.First(x => x.Name == request.JobType);
-            QuatrzJobExtensions.CreateJobDetail(jobtype, jobConfig, sc);
-            await unitOfWork.SaveChangesAsync();
-            result.SetValue(mapper.Map<JobDto>(request));
+            result.SetMessage("任务类型已存在无法重复添加");
         }
 
         return result;

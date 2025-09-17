@@ -2,11 +2,11 @@
 
 namespace Wcs.Contracts.Request.WcsTask;
 
-public record UpdateWcsTaskRequest
-{
-    public int SerialNumber { get; set; }
-
-    public string DeviceName { get; set; }
-
-    public WcsTaskStatusEnum WcsTaskStatusType { get; set; }
-}
+public record UpdateWcsTaskRequest(
+    int? Level,
+    bool? IsEnforce,
+    int SerialNumber,
+    string? DeviceName,
+    WcsTaskStatusEnum? TaskStatus,
+    string? GetLocation,
+    string? PutLocation);

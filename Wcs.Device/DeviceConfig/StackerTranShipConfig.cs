@@ -13,4 +13,6 @@ public class StackerTranShipConfig : BaseDeviceConfig
     public string Floor { get; set; }
 
     public string Tunnle { get; set; }
+
+    public string Depth { get; set; }
 }
