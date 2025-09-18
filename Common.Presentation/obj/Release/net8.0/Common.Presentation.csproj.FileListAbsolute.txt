@@ -1,0 +1,12 @@
+D:\Program\仓库\Warehource.Modules\Common.Presentation\bin\Release\net8.0\Common.Presentation.deps.json
+D:\Program\仓库\Warehource.Modules\Common.Presentation\bin\Release\net8.0\Common.Presentation.dll
+D:\Program\仓库\Warehource.Modules\Common.Presentation\bin\Release\net8.0\Common.Presentation.pdb
+D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Release\net8.0\Common.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Release\net8.0\Common.Presentation.AssemblyInfoInputs.cache
+D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Release\net8.0\Common.Presentation.AssemblyInfo.cs
+D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Release\net8.0\Common.Presentation.csproj.CoreCompileInputs.cache
+D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Release\net8.0\Common.Presentation.sourcelink.json
+D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Release\net8.0\Common.Presentation.dll
+D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Release\net8.0\refint\Common.Presentation.dll
+D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Release\net8.0\Common.Presentation.pdb
+D:\Program\仓库\Warehource.Modules\Common.Presentation\obj\Release\net8.0\ref\Common.Presentation.dll

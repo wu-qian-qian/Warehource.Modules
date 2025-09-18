@@ -1,0 +1,16 @@
+﻿{
+  "Stacker": {
+    "StackerMapOptions": {
+      "StackerMap": [
+        {
+          "Tunnle": 1,
+          "Stacker": "堆垛机1"
+        },
+        {
+          "Tunnle": 2,
+          "Stacker": "堆垛机2"
+        }
+      ]
+    }
+  }
+}

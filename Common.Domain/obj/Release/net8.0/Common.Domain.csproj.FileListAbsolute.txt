@@ -1,0 +1,12 @@
+D:\Program\仓库\Warehource.Modules\Common.Domain\bin\Release\net8.0\Common.Domain.deps.json
+D:\Program\仓库\Warehource.Modules\Common.Domain\bin\Release\net8.0\Common.Domain.dll
+D:\Program\仓库\Warehource.Modules\Common.Domain\bin\Release\net8.0\Common.Domain.pdb
+D:\Program\仓库\Warehource.Modules\Common.Domain\obj\Release\net8.0\Common.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program\仓库\Warehource.Modules\Common.Domain\obj\Release\net8.0\Common.Domain.AssemblyInfoInputs.cache
+D:\Program\仓库\Warehource.Modules\Common.Domain\obj\Release\net8.0\Common.Domain.AssemblyInfo.cs
+D:\Program\仓库\Warehource.Modules\Common.Domain\obj\Release\net8.0\Common.Domain.csproj.CoreCompileInputs.cache
+D:\Program\仓库\Warehource.Modules\Common.Domain\obj\Release\net8.0\Common.Domain.sourcelink.json
+D:\Program\仓库\Warehource.Modules\Common.Domain\obj\Release\net8.0\Common.Domain.dll
+D:\Program\仓库\Warehource.Modules\Common.Domain\obj\Release\net8.0\refint\Common.Domain.dll
+D:\Program\仓库\Warehource.Modules\Common.Domain\obj\Release\net8.0\Common.Domain.pdb
+D:\Program\仓库\Warehource.Modules\Common.Domain\obj\Release\net8.0\ref\Common.Domain.dll

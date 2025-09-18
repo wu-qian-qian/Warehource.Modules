@@ -1,0 +1,10 @@
+2025-09-15 17:11:37.402 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk0NjM0OTcsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.PvJ18M0r9qLqynJu7EfrAobQCveDfo435RgzgdFwdPw","message":null}
+时间：2394
+2025-09-15 17:17:57.000 +08:00 [INF] 地址：::1
+URL:/wcstask/get-execute-wcstask
+请求体：{"SerialNumber":null,"Container":null,"TaskCode":null,"GetLocation":null,"PutLocation":null,"CreatorSystemType":"Wcs","TaskType":null,"StartTime":null,"EndTime":null}
+响应体：{"type":"https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1","title":"Server failure","status":500}
+时间：4376

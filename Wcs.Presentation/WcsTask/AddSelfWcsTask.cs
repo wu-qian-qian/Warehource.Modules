@@ -1,0 +1,49 @@
+﻿using AutoMapper;
+using Common.Presentation.Endpoints;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Wcs.Application.Abstract;
+using Wcs.Application.Handler.DataBase.WcsTask.AddOrUpdate;
+using Wcs.Contracts.Request.WcsTask;
+
+namespace Wcs.Presentation.WcsTask
+{
+    public class AddSelfWcsTask : IEndpoint
+    {
+        public void MapEndpoint(IEndpointRouteBuilder app)
+        {
+            app.MapPost("wcstask/add-self-wcstask", [Authorize(Roles ="admin")]
+            async (InsertWcsTaskRequest request, ISender sender, IMapper mapper,IAnalysisLocation locationService) =>
+            {
+                var getLocation = locationService.Analysis(request.GetLocation);
+                var putLocation = locationService.Analysis(request.Putlocation);
+                if (getLocation.Length > 3)
+                {
+                    request.GetTunnel = int.Parse(getLocation[0]);
+                    request.GetRow = int.Parse(getLocation[1]);
+                    request.GetColumn = int.Parse(getLocation[2]);
+                    request.GetFloor = int.Parse(getLocation[3]);
+                    request.GetDepth= int.Parse(getLocation[4]);
+                }
+                if (putLocation.Length > 3)
+                {
+                    request.PutTunnel = int.Parse(putLocation[0]);
+                    request.PutRow = int.Parse(putLocation[1]);
+                    request.PutColumn = int.Parse(putLocation[2]);
+                    request.PutFloor = int.Parse(putLocation[3]);
+                    request.GetDepth = int.Parse(putLocation[4]);
+                }
+                var command = mapper.Map<AddOrUpdateWcsTaskCommand>(request);
+                return await sender.Send(command);
+            }).WithTags(AssemblyReference.WcsTask);
+        }
+    }
+}

@@ -1,0 +1,112 @@
+2025-09-16 09:18:40.168 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk1MjE1MjAsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.LENjAoscnzv2-9q_nZwk5B8kZghgYq_bjqrWHjzMRQo","message":null}
+时间：1692
+2025-09-16 09:41:12.643 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk1MjI4NzIsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.VTfojYthn4aPbytz09cEtb9E1t_wf8G4YZ_BuGVyYN0","message":null}
+时间：34
+2025-09-16 09:41:51.125 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk1MjI5MTEsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.HOwbKoHME2HimhaOzTx2T-7-qJKwIKneNVe96X9fi08","message":null}
+时间：12
+2025-09-16 10:10:29.122 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk1MjQ2MjksImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.maw312oyD-nt7BhnAI7SAlXsaXm8R4sWQto4usjDdDU","message":null}
+时间：24
+2025-09-16 10:23:18.601 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk1MjUzOTgsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.95P9pMkKFFQXXsBqm_YbeVBUt4sHuKDZTzkdJy98L34","message":null}
+时间：2174
+2025-09-16 11:02:17.026 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk1Mjc3MzcsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.DPtDQ3TWCzfMiNWePNpWinWUM2F5qZvkCY0_0TfFGCE","message":null}
+时间：152
+2025-09-16 12:57:35.969 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk1MzQ2NTUsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.iJDOgNjupmTk4xd3nIVLuWXvKLD5ZkJer1cdupUhv-I","message":null}
+时间：35
+2025-09-16 13:37:58.022 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk1MzcwNzcsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.N8czehmJm5lzGS6LebAMtCT3jbvT-gyLjFAhm-kyE_w","message":null}
+时间：249
+2025-09-16 13:39:04.555 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk1MzcxNDQsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.GwBrzyztaAUTw2wyDJ_cYetYLqF3eqAiOCgPh5JLAGU","message":null}
+时间：11
+2025-09-16 14:58:28.596 +08:00 [INF] 地址：::1
+URL:/region/add-region
+请求体：{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "code": "A",
+  "description": "第一路径",
+  "currentNum": 0,
+  "maxNum": 50
+}
+响应体：
+时间：127
+2025-09-16 14:58:39.959 +08:00 [INF] 地址：::1
+URL:/region/add-region
+请求体：{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "code": "A",
+  "description": "第一路径",
+  "currentNum": 0,
+  "maxNum": 50
+}
+响应体：{"isSuccess":true,"value":{"code":"A","description":"第一路径","id":"72e80c51-a640-4538-bc32-9b15a23aa50c","creationTime":"2025-09-16 14:58:39","lastModifierUser":null,"lastModificationTime":null},"message":null}
+时间：775
+2025-09-16 15:15:23.331 +08:00 [INF] 地址：::1
+URL:/wcstask/add-self-wcstask
+请求体：{"taskCode":"asfda","isEnforce":true,"creatorSystemType":"Wcs","container":"123","description":"123","getLocation":"","putLocation":"1_1_1_1","regionCode":"A","taskType":"StockIn","location":"1_1_1_1"}
+响应体：{"isSuccess":true,"value":{"level":99,"isEnforce":true,"taskCode":"asfda","serialNumber":4025,"container":"123","taskType":"StockIn","taskStatus":"Created","creatorSystemType":"Wcs","description":"123","getLocation":"____","putLocation":"1_1_1_1_","executeDesc":"任务创建","executePath":null,"stockInPosition":null,"stockOutPosition":null,"currentDevice":null,"id":"9489d452-d1c0-46c0-b6f4-ed2debe22ab6","creationTime":"2025-09-16 15:15:22","lastModifierUser":"管理员","lastModificationTime":"2025-09-16 15:15:23"},"message":null}
+时间：6468
+2025-09-16 15:23:15.927 +08:00 [INF] 地址：::1
+URL:/wcstask/add-self-wcstask
+请求体：{"taskCode":"123","isEnforce":true,"creatorSystemType":"Wcs","container":"123","description":null,"getLocation":"1_1_1_1","putLocation":"","regionCode":"A","taskType":"StockOut"}
+响应体：{"isSuccess":true,"value":{"level":99,"isEnforce":true,"taskCode":"123","serialNumber":4026,"container":"123","taskType":"StockOut","taskStatus":"Created","creatorSystemType":"Wcs","description":null,"getLocation":"1_1_1_1_","putLocation":"____","executeDesc":"任务创建","executePath":null,"stockInPosition":null,"stockOutPosition":null,"currentDevice":null,"id":"f2c9ea22-750b-47a6-b81b-7aa98c3fca9b","creationTime":"2025-09-16 15:23:15","lastModifierUser":"管理员","lastModificationTime":"2025-09-16 15:23:15"},"message":null}
+时间：858
+2025-09-16 17:21:22.705 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk1NTA0ODIsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.bwfrD1wC8W85Fth7KvjCjQbxxF2mE-H581GESxskJBM","message":null}
+时间：350
+2025-09-16 17:30:44.915 +08:00 [INF] 地址：::1
+URL:/wcstask/update-wcstask-status
+请求体：{"taskCode":null,"isEnforce":true,"creatorSystemType":"Wcs","container":null,"description":null,"getLocation":null,"putLocation":null,"regionCode":null,"taskType":null}
+响应体：
+时间：0
+2025-09-16 17:31:09.733 +08:00 [INF] 地址：::1
+URL:/wcstask/update-wcstask-status
+请求体：{"taskCode":null,"isEnforce":true,"creatorSystemType":"Wcs","container":null,"description":null,"getLocation":null,"putLocation":null,"regionCode":null,"taskType":null}
+响应体：
+时间：132
+2025-09-16 17:37:48.402 +08:00 [INF] 地址：::1
+URL:/wcstask/update-wcstask-status
+请求体：{"level":"12","isEnforce":false,"serialNumber":4000,"deviceName":null,"taskStatus":"Created","getLocation":"0_0_0_0_0","putLocation":"0_0_0_0_0"}
+响应体：
+时间：2296
+2025-09-16 17:38:37.964 +08:00 [INF] 地址：::1
+URL:/wcstask/update-wcstask-status
+请求体：{"level":"12","isEnforce":false,"serialNumber":4000,"deviceName":null,"taskStatus":"Created","getLocation":"0_0_0_0_0","putLocation":"0_0_0_0_0"}
+响应体：
+时间：40001
+2025-09-16 17:39:56.549 +08:00 [INF] 地址：::1
+URL:/wcstask/update-wcstask-status
+请求体：{"level":"12","isEnforce":false,"serialNumber":4000,"deviceName":null,"taskStatus":"Created","getLocation":"0_0_0_0_0","putLocation":"0_0_0_0_0"}
+响应体：
+时间：3491
+2025-09-16 17:41:12.311 +08:00 [INF] 地址：::1
+URL:/wcstask/update-wcstask-status
+请求体：{"level":"13","isEnforce":false,"serialNumber":4000,"deviceName":null,"taskStatus":"Created","getLocation":"0_0_0_0_0","putLocation":"0_0_0_0_0"}
+响应体：
+时间：2721
