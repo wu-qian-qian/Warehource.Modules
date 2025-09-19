@@ -17,5 +17,4 @@ public class UpdateWcsTaskCommand : ICommand<Result<string>>
     public string? GetLocation { get; set; }
 
     public string? PutLocation { get; set; }
-
 }

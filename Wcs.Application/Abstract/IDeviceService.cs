@@ -8,7 +8,7 @@ public interface IDeviceService
     ///     获取推荐巷道
     /// </summary>
     /// <returns></returns>
-    Task<string[]?> GetCanExecuteTunnleAsync(DeviceTypeEnum deviceType);
+    Task<string[]?> GetCanExecuteTunnleAsync(DeviceTypeEnum deviceType, string regionCode);
 
     /// <summary>
     ///     /
@@ -24,7 +24,7 @@ public interface IDeviceService
     /// <param name="deviceType"></param>
     /// <param name="tunnle"></param>
     /// <returns></returns>
-    Task<string> GetTranshipPositionAsync(DeviceTypeEnum deviceType, string tunnle);
+    Task<string> GetTranshipPositionAsync(DeviceTypeEnum deviceType, string tunnle, string region);
 
     /// <summary>
     ///     获取设备名
@@ -32,5 +32,15 @@ public interface IDeviceService
     /// <param name="deviceType"></param>
     /// <param name="tunnle"></param>
     /// <returns></returns>
-    Task<string> GetDeviceNameAsync(DeviceTypeEnum deviceType, string title);
+    Task<string> GetDeviceNameWithTunnleAsync(DeviceTypeEnum deviceType, string tunnle, string region);
+
+    /// <summary>
+    ///     获取设备名
+    /// </summary>
+    /// <param name="deviceType"></param>
+    /// <param name="tunnle"></param>
+    /// <returns></returns>
+    Task<string> GetDeviceNameWithTargetCodeAsync(DeviceTypeEnum deviceType, string pipLineCode, string region);
+
+    void SetDviceEnable(bool enable, DeviceTypeEnum deviceType, string deviceName);
 }

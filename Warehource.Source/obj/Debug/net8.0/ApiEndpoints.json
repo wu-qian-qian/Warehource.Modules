@@ -81,6 +81,54 @@
     ]
   },
   {
+    "ContainingType": "Wcs.Presentation.Device.GetDeviceGroup\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "decive/get-group-code",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Decive"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.Device.GetPage\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "decive/get-page",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Wcs.Contracts.Request.Device.GetDevicePageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Shared.PageResult\u00601[[Wcs.Contracts.Respon.Device.DeviceDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Decive"
+    ]
+  },
+  {
     "ContainingType": "Wcs.Presentation.ExecuteNode.InsertOrUpdate\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "executenode/add-or-update",
@@ -471,7 +519,7 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.Job.Status.JobStatusConfig\u002B\u003C\u003Ec",
+    "ContainingType": "Wcs.Presentation.Job.Update.JobStatusConfig\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "job/job-status",
     "HttpMethod": "POST",
@@ -650,6 +698,27 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[Wcs.Contracts.Respon.Region.RegionDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Region"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.Region.GetRegionCode\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "region/get-regionCode",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "application/json"
         ],
@@ -963,7 +1032,7 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.WcsTask.AddOrUpdateWcsTask\u002B\u003C\u003Ec",
+    "ContainingType": "Wcs.Presentation.WcsTask.AddWcsTask\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "wcstask/add-or-update-wcstask",
     "HttpMethod": "POST",
@@ -990,7 +1059,7 @@
     ]
   },
   {
-    "ContainingType": "Wcs.Presentation.WcsTask.AddWcsTask\u002B\u003C\u003Ec",
+    "ContainingType": "Wcs.Presentation.WcsTask.AddSelfWcsTask\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "wcstask/add-self-wcstask",
     "HttpMethod": "POST",

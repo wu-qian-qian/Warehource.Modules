@@ -13,9 +13,9 @@ internal class GetUser : IEndpoint
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
         app.MapGet("get/get-user/{username}",
-                [Authorize] async (string username,ISender sender) =>
+                [Authorize] async (string username, ISender sender) =>
                 {
-                    return (await sender.Send(new GetUserQuery { UserName=username})).First();
+                    return (await sender.Send(new GetUserQuery { UserName = username })).First();
                 })
             .WithTags(AssemblyReference.User);
     }

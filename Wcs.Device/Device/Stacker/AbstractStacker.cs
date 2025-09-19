@@ -10,11 +10,14 @@ namespace Wcs.Device.Device.Stacker;
 /// </summary>
 public abstract class AbstractStacker : AbstractDevice<StackerConfig, StackerDBEntity>
 {
-    protected AbstractStacker(string name, StackerConfig config, string regionCode, bool enable) : base(enable,
-        regionCode)
+    protected AbstractStacker(string name, StackerConfig config, string regionCode, bool enable, string deviceGroup) :
+        base(enable,
+            regionCode)
     {
         Name = name;
         Config = config;
+        Config.Name = name;
+        DeviceGroupCode = DeviceGroupCode;
     }
 
     public override StackerConfig Config { get; protected set; }

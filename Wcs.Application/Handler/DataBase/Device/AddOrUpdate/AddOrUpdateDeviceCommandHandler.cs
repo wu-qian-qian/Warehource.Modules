@@ -18,23 +18,21 @@ public class AddOrUpdateDeviceCommandHandler(
     public async Task<Result<DeviceDto>> Handle(AddOrUpdateDeviceCommand request, CancellationToken cancellationToken)
     {
         Result<DeviceDto> result = new();
-        var entity = _deviceRepository.Get(request.Id);
-
         var regionCodes = request.RegionCode
-            .Split(request.RegionCode, Symbol.Split[0], StringSplitOptions.RemoveEmptyEntries).ToList();
+            .Split(',', StringSplitOptions.RemoveEmptyEntries).ToList();
 
         var regions = _regionRepository.GetQuery()
             .Where(p => regionCodes.Contains(p.Code)).Select(p => p.Code).ToArray();
 
         request.RegionCode = string.Join(Symbol.Split, regions);
-        if (entity == null)
+        if (request.Id.HasValue == false)
         {
-            entity = new Domain.Device.Device
+            var entity = new Domain.Device.Device
             {
                 DeviceName = request.DeviceName,
                 DeviceType = request.DeviceType.Value,
                 Config = request.Config,
-                Enable = request.Enable.Value,
+                Enable = request.Enable ?? false,
                 Description = request.Description,
                 GroupName = request.GroupName,
                 RegionCode = request.RegionCode
@@ -45,12 +43,14 @@ public class AddOrUpdateDeviceCommandHandler(
         }
         else
         {
-            entity.DeviceName = request.DeviceName;
-            entity.DeviceType = request.DeviceType.Value;
-            entity.Config = request.Config;
-            entity.Enable = request.Enable.Value;
-            entity.Description = request.Description;
-            entity.GroupName = request.GroupName;
+            var entity = _deviceRepository.Get(request.Id.Value);
+            if (request.DeviceName != null) entity.DeviceName = request.DeviceName;
+            if (request.DeviceType != null) entity.DeviceType = request.DeviceType.Value;
+            if (request.Config != null) entity.Config = request.Config;
+            if (request.Enable != null) entity.Enable = request.Enable.Value;
+            if (request.DeviceName != null) entity.Description = request.Description;
+            if (request.GroupName != null) entity.GroupName = request.GroupName;
+            if (request.RegionCode != null) entity.RegionCode = request.RegionCode;
             _deviceRepository.Update(entity);
             await _unitOfWork.SaveChangesAsync();
             result.SetValue(_mapper.Map<DeviceDto>(entity));

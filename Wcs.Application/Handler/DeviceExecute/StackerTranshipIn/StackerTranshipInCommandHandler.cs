@@ -42,7 +42,7 @@ internal class StackerTranshipInCommandHandler(
                                     WcsTask = wcsTask,
                                     DeviceRegionCode = stackerTranshipIn.RegionCodes,
                                     Title = stackerTranshipIn.Config.Tunnle
-                                });
+                                }, cancellationToken);
 
                                 //因为存在状态追踪
                                 if (check.IsSuccess)

@@ -37,7 +37,7 @@ internal class StackerTranshipOutCommandHandler(
                 if (wcsTasks.Any())
                 {
                     wcsTask = wcsTasks.First();
-                    await _cacheService.SetAsync(device.Config.Key, wcsTask);
+                    await _cacheService.SetAsync(device.Config.TaskKey, wcsTask);
                     Log.Logger.ForCategory(LogCategory.Business)
                         .Information($"{device.Name}:获取执行任务");
                 }
@@ -53,12 +53,12 @@ internal class StackerTranshipOutCommandHandler(
                             WcsTask = wcsTask,
                             DeviceRegionCode = device.RegionCodes,
                             Title = wcsTask.StockOutPosition
-                        });
+                        }, cancellationToken);
                         wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.BeSending;
                         if (check.IsSuccess)
                             if (check.Value)
                             {
-                                await _cacheService.SetAsync(device.Config.Key, wcsTask);
+                                await _cacheService.SetAsync(device.Config.TaskKey, wcsTask);
                                 Log.Logger.ForCategory(LogCategory.Business)
                                     .Information($"{device.Name}:发送执行任务");
                             }
@@ -67,7 +67,7 @@ internal class StackerTranshipOutCommandHandler(
                     {
                         await WriteTaskData(device, wcsTask);
                         wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.BeSending;
-                        await _cacheService.SetAsync(device.Config.Key, wcsTask);
+                        await _cacheService.SetAsync(device.Config.TaskKey, wcsTask);
                     }
                     else if (wcsTask.TaskExecuteStep.TaskExecuteStepType == TaskExecuteStepTypeEnum.Complate)
                     {

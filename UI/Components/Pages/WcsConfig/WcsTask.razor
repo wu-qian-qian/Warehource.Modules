@@ -178,7 +178,7 @@
 @code {
 
 
-    protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync()
     {
         base.OnInitialized();
         _rowClickCallback = EventCallback.Factory.Create<RowData<WcsTaskModel>>(this, SelectRowCallback);
@@ -224,7 +224,7 @@
         }
     }
 
-    private async System.Threading.Tasks.Task LoadTableData()
+    private async Task LoadTableData()
     {
         data = (await _homeService.GetTasksAsync()).Value;
         _message.Success("Table data loaded successfully!");
@@ -251,7 +251,7 @@
             .ToArray();
     }
 
-    private async System.Threading.Tasks.Task RestSearchInput()
+    private async Task RestSearchInput()
     {
         TaskCodeInput = string.Empty;
         ContainerCodeInput = string.Empty;

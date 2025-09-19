@@ -1,6 +1,7 @@
 ﻿using Common.Application.MediatR.Behaviors;
 using Common.Application.MediatR.Message;
 using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 using Wcs.Application.Handler.Business.SetExecuteDevice;
 using Wcs.Application.Handler.Http.Complate;
 using Wcs.Domain.ExecuteNode;
@@ -12,13 +13,19 @@ namespace Wcs.Application.Handler.Business.CheckExecuteNode;
 public class CheckExecuteNodeCommandHandler(
     ISender _sender,
     IExecuteNodeRepository _executeNodeRepository,
-    IRegionRepository _regionRepository)
+    IRegionRepository _regionRepository,
+    IServiceScopeFactory scopeFactory
+)
     : ICommandHandler<CheckExecuteNodeCommand, Result<bool>>
 {
+    private static readonly SemaphoreSlim _semaphore = new(1, 1);
+
+    //TODO 路径可以考虑使用缓存减少数据库访问
     public async Task<Result<bool>> Handle(CheckExecuteNodeCommand request, CancellationToken cancellationToken)
     {
         Result<bool> result = new();
         var wcsTask = request.WcsTask;
+        //任务区域
         var region = _regionRepository.Get(wcsTask.RegionId.Value);
         if (region != null)
         {
@@ -31,29 +38,76 @@ public class CheckExecuteNodeCommandHandler(
                 {
                     var index = executeNodePath.First(p => p.CurrentDeviceType == wcsTask.TaskExecuteStep.DeviceType)
                         .Index;
-                    if (index == 1) wcsTask.TaskStatus = WcsTaskStatusEnum.InProgress;
-
-                    var nextType = index++;
-                    var executeNode = executeNodePath.FirstOrDefault(p => p.Index == nextType);
-                    if (executeNode != null)
-                    {
-                        wcsTask.TaskExecuteStep.DeviceType = executeNode.CurrentDeviceType;
-                        if (request.IsGetDeviceName)
+                    if (index == 1)
+                        try
                         {
-                            var deviceName = await _sender
-                                .Send(new SetExecuteDeviceCommand
-                                {
-                                    DeviceType = wcsTask.TaskExecuteStep.DeviceType.Value,
-                                    Title = request.Title
-                                });
-                            wcsTask.TaskExecuteStep.CurentDevice = deviceName;
+                            await _semaphore.WaitAsync(cancellationToken);
+                            if (region.MaxNum <= region.CurrentNum)
+                            {
+                                result.SetMessage("限流处理");
+                                return result;
+                            }
+                            else
+                            {
+                                region.CurrentNum += 1;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            result.SetMessage(ex.Message);
+                        }
+                        finally
+                        {
+                            _semaphore.Release();
                         }
 
-                        result.SetValue(true);
+                    var nextType = index++;
+                    var nextNode = executeNodePath.FirstOrDefault(p => p.Index == nextType);
+                    if (nextNode != null)
+                    {
+                        wcsTask.TaskExecuteStep.DeviceType = nextNode.CurrentDeviceType;
+                        //获取下一节点所执行的设备
+                        if (request.IsGetNextNode)
+                        {
+                            var deviceName =
+                                await _sender.Send(new GetNextNodeCommand
+                                {
+                                    DeviceType = wcsTask.TaskExecuteStep.DeviceType.Value,
+                                    Title = request.Title,
+                                    RegionCode = region.Code
+                                }, cancellationToken);
+                            if (deviceName != null || deviceName != string.Empty)
+                            {
+                                wcsTask.TaskExecuteStep.CurentDevice = deviceName;
+                                result.SetValue(true);
+                            }
+                            else
+                            {
+                                result.SetMessage("无法获取到下一节点执行设备");
+                            }
+                        }
+                        else
+                        {
+                            result.SetValue(true);
+                        }
                     }
                     else
                     {
                         result.SetValue(false);
+                        try
+                        {
+                            await _semaphore.WaitAsync(cancellationToken);
+                            region.CurrentNum -= 1;
+                        }
+                        catch (Exception ex)
+                        {
+                            result.SetMessage(ex.Message);
+                        }
+                        finally
+                        {
+                            _semaphore.Release();
+                        }
+
                         wcsTask.TaskStatus = WcsTaskStatusEnum.Completed;
                         await _sender.Send(new ComplateCommand
                         {

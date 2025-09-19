@@ -21,5 +21,7 @@ public class DeviceDto : BaseDto
 
     public string RegionCode { get; set; }
 
+    public string GroupName { get; set; }
+
     public bool Enable { get; set; }
 }

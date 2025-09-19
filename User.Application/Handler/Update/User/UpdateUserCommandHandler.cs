@@ -20,10 +20,7 @@ internal class UpdateUserCommandHandler(IUnitOfWork unitOfWork, UserManager user
             user.Description = request.Description;
             user.Email = request.Email;
             user.Phone = request.Phone;
-            if (request.LockoutEnd)
-            {
-                user.LockoutEnd = DateTimeOffset.Now.AddDays(3);
-            }
+            if (request.LockoutEnd) user.LockoutEnd = DateTimeOffset.Now.AddDays(3);
             user.Username = request.Username;
             user.Password = request.Password;
             user.Name = request.Name;

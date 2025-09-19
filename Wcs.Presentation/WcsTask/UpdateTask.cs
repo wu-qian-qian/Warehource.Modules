@@ -13,8 +13,7 @@ public class UpdateTask : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPut("wcstask/update-wcstask-status", [Authorize] 
-        async (UpdateWcsTaskRequest request,ISender sender) =>
+        app.MapPut("wcstask/update-wcstask-status", [Authorize] async (UpdateWcsTaskRequest request, ISender sender) =>
         {
             await sender.Send(new UpdateWcsTaskCommand
             {
@@ -23,8 +22,8 @@ public class UpdateTask : IEndpoint
                 DeviceName = request.DeviceName,
                 GetLocation = request.GetLocation,
                 PutLocation = request.PutLocation,
-                IsEnforce=request.IsEnforce,
-                Level=request.Level
+                IsEnforce = request.IsEnforce,
+                Level = request.Level
             });
         }).WithTags(AssemblyReference.WcsTask);
     }

@@ -31,4 +31,16 @@ public abstract class AbstractStackerController : IStackerController
             });
         }
     }
+
+    public void SetEnable(bool enable, string name)
+    {
+        if (Devices.Any(d => d.Name == name)) Devices.First().SetEnable(enable);
+    }
+
+    public string GetDeviceNameWithTunnle(string tunnle, string region)
+    {
+        var device = Devices
+            .FirstOrDefault(d => (region.Contains(d.RegionCodes) || d.RegionCodes.Contains(region)) && d.Enable);
+        return device?.Name;
+    }
 }

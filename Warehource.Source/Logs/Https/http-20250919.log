@@ -1,0 +1,20 @@
+2025-09-19 08:21:41.282 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk3NzczMDEsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.JmNpUPN43UpjLok-YArqOQdElet5lKp3JlqCsOEvQX8","message":null}
+时间：418
+2025-09-19 08:23:41.813 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3ODk3Nzc0MjEsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.76h2U9tLJpQesGg0X-UJ8W0QJXzcFgaH-BNMTZ0Cfmg","message":null}
+时间：15
+2025-09-19 08:32:19.916 +08:00 [INF] 地址：::1
+URL:/decive/add-or-update
+请求体：{"id":null,"deviceType":"StockPortIn","deviceName":"入库口1","regionCodes":"A,B","description":"入库口001","config":{"name":"StockPort","pipeLineCode":"999"},"groupName":null,"enable":null}
+响应体：{"isSuccess":true,"value":{"deviceType":"StockPortIn","deviceName":"入库口1","description":"入库口001","config":"{\"name\":\"StockPort\",\"pipeLineCode\":\"999\"}","regionCode":"A,B","groupName":null,"enable":false,"id":"d6acd691-8470-47f0-be5a-6d5e162a632a","creationTime":"2025-09-19 08:32:15","lastModifierUser":"管理员","lastModificationTime":"2025-09-19 08:32:18"},"message":null}
+时间：14711
+2025-09-19 08:33:10.898 +08:00 [INF] 地址：::1
+URL:/decive/add-or-update
+请求体：{"id":"d6acd691-8470-47f0-be5a-6d5e162a632a","deviceType":"StockPortIn","deviceName":"入库口1","regionCodes":"A,B","description":"入库口001","config":{"name":"StockPort","pipeLineCode":"888"},"groupName":null,"enable":true}
+响应体：{"isSuccess":true,"value":{"deviceType":"StockPortIn","deviceName":"入库口1","description":"入库口001","config":"{\"name\":\"StockPort\",\"pipeLineCode\":\"888\"}","regionCode":"A,B","groupName":null,"enable":true,"id":"d6acd691-8470-47f0-be5a-6d5e162a632a","creationTime":"2025-09-19 08:32:15","lastModifierUser":"管理员","lastModificationTime":"2025-09-19 08:33:10"},"message":null}
+时间：34313

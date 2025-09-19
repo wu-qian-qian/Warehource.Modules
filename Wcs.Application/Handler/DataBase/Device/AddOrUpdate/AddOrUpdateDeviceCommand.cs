@@ -7,7 +7,7 @@ namespace Wcs.Application.Handler.DataBase.Device.AddOrUpdate;
 
 public class AddOrUpdateDeviceCommand : ICommand<Result<DeviceDto>>
 {
-    public Guid Id { get; set; }
+    public Guid? Id { get; set; }
 
     public DeviceTypeEnum? DeviceType { get; set; }
 

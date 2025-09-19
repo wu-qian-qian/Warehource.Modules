@@ -1,8 +1,4 @@
-﻿using Common.Application.Exception;
-using Common.Application.Log;
-using Common.Shared;
-using Microsoft.Extensions.DependencyInjection;
-using Serilog;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Wcs.Application.Abstract;
 using Wcs.Application.Abstract.Device;
 using Wcs.Device.Abstract;
@@ -26,13 +22,13 @@ internal class DeviceService : IDeviceService
     /// </summary>
     /// <param name="deviceType"></param>
     /// <returns></returns>
-    public Task<string[]?> GetCanExecuteTunnleAsync(DeviceTypeEnum deviceType)
+    public Task<string[]?> GetCanExecuteTunnleAsync(DeviceTypeEnum deviceType, string regoinCode)
     {
         string[]? tunnels = default;
         var controller = _deviceController
             .First(controller => controller.DeviceType == deviceType);
-        if (controller is AbstractStackerTranshipInController targetController)
-            tunnels = targetController.GetReCommendTranship();
+        if (controller is AbstractStackerTranshipController targetController)
+            tunnels = targetController.GetReCommendTranship(regoinCode);
 
         return Task.FromResult(tunnels);
     }
@@ -48,84 +44,64 @@ internal class DeviceService : IDeviceService
         var controller = _deviceController
             .First(controller => controller.DeviceType == deviceType);
         var targetCode = string.Empty;
-        if (controller is AbstractStackerTranshipInController targetController)
-        {
-            var device = targetController.Devices.First(p => p.Name == deviceName);
-            targetCode = device.Config.PipelinCode;
-        }
-
-        if (targetCode == string.Empty)
-        {
-            Log.Logger.ForCategory(LogCategory.Business)
-                .Error($"无法解析设备号和任务{deviceType},{deviceName}");
-            //这边需要抛出异常，因为不一些设备的对应关系必须要有
-            throw new CommonException($"无法解析设备号和任务{deviceType},{deviceName}");
-        }
-
+        if (controller is AbstractStackerTranshipController targetController)
+            targetCode = targetController.GetCurrentPipline(deviceName);
         return Task.FromResult(targetCode);
     }
 
-    public Task<string> GetTranshipPositionAsync(DeviceTypeEnum deviceType, string tunnle)
-    {
-        var controller = _deviceController
-            .First(controller => controller.DeviceType == deviceType);
-        var location = string.Empty;
-        if (controller is AbstractStackerTranshipInController targetInController)
-        {
-            var tarController = targetInController.Devices
-                .First(p => p.Config.Tunnle == tunnle);
-            location =
-                $"{tarController.Config.Tunnle}_{tarController.Config.Row}_{tarController.Config.Column}_{tarController.Config.Floor}__{tarController.Config.Depth}";
-        }
-        else if (controller is AbstractStackerTranshipInController targetOutController)
-        {
-            var tarController = targetOutController.Devices
-                .First(p => p.Config.Tunnle == tunnle);
-            location =
-                $"{tarController.Config.Tunnle}_{tarController.Config.Row}_{tarController.Config.Column}_{tarController.Config.Floor}__{tarController.Config.Depth}";
-        }
-
-        return Task.FromResult(location);
-    }
-
     /// <summary>
-    ///     根据条件获取设备
+    ///     获取站台
     /// </summary>
     /// <param name="deviceType"></param>
     /// <param name="tunnle"></param>
     /// <returns></returns>
-    public Task<string> GetDeviceNameAsync(DeviceTypeEnum deviceType, string title)
+    public Task<string> GetTranshipPositionAsync(DeviceTypeEnum deviceType, string tunnle, string region)
+    {
+        var controller = _deviceController
+            .First(controller => controller.DeviceType == deviceType);
+        var location = string.Empty;
+        if (controller is AbstractStackerTranshipController targetInController)
+            location = targetInController.GetCurrentPosWithTunnle(tunnle, region);
+        return Task.FromResult(location);
+    }
+
+    /// <summary>
+    ///     根据巷道获取设备
+    /// </summary>
+    /// <param name="deviceType"></param>
+    /// <param name="tunnle"></param>
+    /// <returns></returns>
+    public Task<string> GetDeviceNameWithTunnleAsync(DeviceTypeEnum deviceType, string tunnle, string region)
     {
         var controller = _deviceController
             .First(controller => controller.DeviceType == deviceType);
         var deviceName = string.Empty;
-        if (controller is AbstractStackerTranshipInController targetInController)
-        {
-            var tarController = targetInController.Devices
-                .First(p => p.Config.Tunnle == title);
-            deviceName = tarController.Name;
-        }
-        else if (controller is AbstractStackerTranshipInController targetOutController)
-        {
-            var tarController = targetOutController.Devices
-                .First(p => p.Config.Tunnle == title);
-            deviceName = tarController.Name;
-        }
+        if (controller is AbstractStackerTranshipController targetInController)
+            deviceName = targetInController.GetDeviceNameWithTunnle(tunnle, region);
         else if (controller is AbstractStackerController stackerController)
-        {
-            var tarController = stackerController.Devices
-                .First(p => p.Config.Tunnle == title);
-            deviceName = tarController.Name;
-        }
-        else if (controller is AbstractStockOutPortController stockPortController)
-        {
-            var tarController = stockPortController.Devices
-                .First(p => p.Config.PipeLineCode == title);
-            deviceName = tarController.Name;
-        }
+            deviceName = stackerController.GetDeviceNameWithTunnle(tunnle, region);
+        return Task.FromResult(deviceName);
+    }
 
-        if (deviceName == string.Empty)
-            throw new AggregateException($"{deviceType}未获取到设备信息，请检查配置加载,{title}");
+    /// <summary>
+    /// </summary>
+    /// <param name="enable"></param>
+    /// <param name="deviceType"></param>
+    /// <param name="deviceName"></param>
+    public void SetDviceEnable(bool enable, DeviceTypeEnum deviceType, string deviceName)
+    {
+        var controller = _deviceController
+            .First(controller => controller.DeviceType == deviceType);
+        controller.SetEnable(enable, deviceName);
+    }
+
+    public Task<string> GetDeviceNameWithTargetCodeAsync(DeviceTypeEnum deviceType, string pipLineCode, string region)
+    {
+        var controller = _deviceController
+            .First(controller => controller.DeviceType == deviceType);
+        var deviceName = string.Empty;
+        if (controller is AbstractStockPortController targetController)
+            deviceName = targetController.GetDeviceNameWithPipLine(pipLineCode, region);
         return Task.FromResult(deviceName);
     }
 }

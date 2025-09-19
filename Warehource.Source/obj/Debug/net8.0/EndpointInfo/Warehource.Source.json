@@ -65,6 +65,57 @@
         }
       }
     },
+    "/decive/get-group-code": {
+      "get": {
+        "tags": [
+          "Decive"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/decive/get-page": {
+      "post": {
+        "tags": [
+          "Decive"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.Device.GetDevicePageRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Common.Shared.PageResult`1[[Wcs.Contracts.Respon.Device.DeviceDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/decive/add-or-update": {
       "post": {
         "tags": [
@@ -988,6 +1039,28 @@
         }
       }
     },
+    "/region/get-regionCode": {
+      "get": {
+        "tags": [
+          "Region"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/region/update-region": {
       "post": {
         "tags": [
@@ -1017,7 +1090,7 @@
         }
       }
     },
-    "/wcstask/add-or-update-wcstask": {
+    "/wcstask/add-self-wcstask": {
       "post": {
         "tags": [
           "WcsTask"
@@ -1046,7 +1119,7 @@
         }
       }
     },
-    "/wcstask/add-self-wcstask": {
+    "/wcstask/add-or-update-wcstask": {
       "post": {
         "tags": [
           "WcsTask"
@@ -1534,6 +1607,23 @@
         },
         "additionalProperties": false
       },
+      "Common.Shared.PageResult`1[[Wcs.Contracts.Respon.Device.DeviceDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wcs.Contracts.Respon.Device.DeviceDto"
+            },
+            "nullable": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
       "Common.Shared.PageResult`1[[Wcs.Contracts.Respon.Job.JobDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
         "type": "object",
         "properties": {
@@ -1982,6 +2072,46 @@
             "nullable": true
           },
           "groupName": {
+            "type": "string",
+            "nullable": true
+          },
+          "enable": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wcs.Contracts.Request.Device.GetDevicePageRequest": {
+        "type": "object",
+        "properties": {
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skipCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "deviceType": {
+            "$ref": "#/components/schemas/Wcs.Shared.DeviceTypeEnum"
+          },
+          "deviceName": {
             "type": "string",
             "nullable": true
           },
@@ -2475,6 +2605,10 @@
             "nullable": true
           },
           "regionCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupName": {
             "type": "string",
             "nullable": true
           },

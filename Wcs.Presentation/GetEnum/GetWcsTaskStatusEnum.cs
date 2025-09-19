@@ -3,25 +3,18 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Wcs.Shared;
 
-namespace Wcs.Presentation.GetEnum
+namespace Wcs.Presentation.GetEnum;
+
+internal class GetWcsTaskStatusEnum : IEndpoint
 {
-    internal class GetWcsTaskStatusEnum : IEndpoint
+    public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        public void MapEndpoint(IEndpointRouteBuilder app)
+        app.MapGet("getenum/get-wcstaskstatus", [Authorize]() =>
         {
-            app.MapGet("getenum/get-wcstaskstatus", [Authorize]
-            () =>
-            {
-                var res = typeof(WcsTaskStatusEnum).GetEnumNames();
-                return res;
-            }).WithTags(AssemblyReference.Enum);
-        }
+            var res = typeof(WcsTaskStatusEnum).GetEnumNames();
+            return res;
+        }).WithTags(AssemblyReference.Enum);
     }
 }

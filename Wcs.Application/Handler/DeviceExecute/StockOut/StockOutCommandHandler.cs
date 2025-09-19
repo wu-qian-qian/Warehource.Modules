@@ -21,7 +21,7 @@ internal class StockOutCommandHandler(IWcsTaskRepository _wcsTaskRepository, ISe
                 {
                     DeviceRegionCode = device.RegionCodes,
                     WcsTask = wcsTask
-                });
+                }, cancellationToken);
                 if (check.IsSuccess)
                     if (check.Value)
                     {

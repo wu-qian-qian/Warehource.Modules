@@ -8,7 +8,7 @@ using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler;
 
-internal class StockPortOutController : AbstractStockOutPortController
+internal class StockPortOutController : AbstractStockPortController
 {
     public StockPortOutController(IServiceScopeFactory serviceScopeFactory) : base(serviceScopeFactory)
     {
@@ -23,7 +23,7 @@ internal class StockPortOutController : AbstractStockOutPortController
     {
         if (Devices == null || Devices.Length == 0)
         {
-            base.ExecuteAsync(token);
+            await base.ExecuteAsync(token);
         }
         else
         {

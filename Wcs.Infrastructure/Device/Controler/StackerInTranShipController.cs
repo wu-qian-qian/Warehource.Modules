@@ -7,7 +7,7 @@ using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler;
 
-internal class StackerInTranShipController : AbstractStackerTranshipInController
+internal class StackerInTranShipController : AbstractStackerTranshipController
 {
     public StackerInTranShipController(IServiceScopeFactory serviceScopeFactory) : base(serviceScopeFactory)
     {

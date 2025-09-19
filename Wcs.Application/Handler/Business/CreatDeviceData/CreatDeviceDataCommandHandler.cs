@@ -43,31 +43,31 @@ internal class CreatDeviceDataCommandHandler(ISender sender) : ICommandHandler<C
             case DeviceTypeEnum.Stacker:
             {
                 var config = dto.Config.ParseJson<StackerConfig>();
-                device = new Stacker(dto.DeviceName, config, dto.RegionCode, dto.Enable);
+                device = new Stacker(config, dto);
             }
                 break;
             case DeviceTypeEnum.StackerInTranShip:
             {
                 var config = dto.Config.ParseJson<StackerTranShipConfig>();
-                device = new StackerInTranShip(dto.DeviceName, config, dto.RegionCode, dto.Enable);
+                device = new StackerInTranShip(config, dto);
             }
                 break;
             case DeviceTypeEnum.StockPortIn:
             {
                 var config = dto.Config.ParseJson<StockPortConfig>();
-                device = new StockInPort(config, dto.DeviceName, dto.RegionCode, dto.Enable);
+                device = new StockInPort(config, dto);
             }
                 break;
             case DeviceTypeEnum.StockPortOut:
             {
                 var config = dto.Config.ParseJson<StockPortConfig>();
-                device = new StockInPort(config, dto.DeviceName, dto.RegionCode, dto.Enable);
+                device = new StockOutPort(config, dto);
             }
                 break;
             case DeviceTypeEnum.StackerOutTranShip:
             {
                 var config = dto.Config.ParseJson<StackerTranShipConfig>();
-                device = new StackerOutTranShip(config, dto.DeviceName, dto.RegionCode, dto.Enable);
+                device = new StackerOutTranShip(config, dto);
             }
                 break;
             default: throw new ArgumentException("不支持添加该类型");

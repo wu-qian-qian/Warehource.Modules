@@ -7,7 +7,7 @@ using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler;
 
-internal class StockPortInController : AbstractStockInPortController
+internal class StockPortInController : AbstractStockPortController
 {
     public StockPortInController(IServiceScopeFactory serviceScopeFactory) : base(serviceScopeFactory)
     {

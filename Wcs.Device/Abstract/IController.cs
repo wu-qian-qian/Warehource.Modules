@@ -11,4 +11,6 @@ public interface IController
 {
     DeviceTypeEnum DeviceType { get; }
     Task ExecuteAsync(CancellationToken token = default);
+
+    public void SetEnable(bool enable, string name);
 }

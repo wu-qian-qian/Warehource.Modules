@@ -11,12 +11,15 @@ public class CheckExecuteNodeCommand : ICommand<Result<bool>>
 {
     public WcsTask WcsTask { get; set; }
 
+    /// <summary>
+    ///     设备行驶区域
+    /// </summary>
     public string DeviceRegionCode { get; set; }
 
     /// <summary>
-    ///     是否获取下一节点所执行的设备
+    ///     因为有一些设备涉及逻辑动态分配无法进行明确的指定
     /// </summary>
-    public bool IsGetDeviceName { get; set; } = true;
+    public bool IsGetNextNode { get; set; } = true;
 
     public string Title { get; set; }
 }

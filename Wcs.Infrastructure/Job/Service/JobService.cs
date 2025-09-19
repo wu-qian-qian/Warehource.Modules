@@ -81,10 +81,7 @@ public class JobService(IJobConfigRepository _jobConfigRepository, IServiceProvi
     {
         var types = serviceProvider.GetKeyedService<Type[]>(Constant.JobKey);
         var sc = serviceProvider.GetService<IScheduler>();
-        if (types.Any(p => p.Name == jobConfig.JobType) == false)
-        {
-            return false;
-        }
+        if (types.Any(p => p.Name == jobConfig.JobType) == false) return false;
 
         var jobtype = types.First(x => x.Name == jobConfig.JobType);
         QuatrzJobExtensions.CreateJobDetail(jobtype, jobConfig, sc);

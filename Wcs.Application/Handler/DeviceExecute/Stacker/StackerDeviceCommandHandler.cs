@@ -8,6 +8,7 @@ using Serilog;
 using Wcs.Application.Abstract;
 using Wcs.Application.Handler.Business.CheckExecuteNode;
 using Wcs.Application.Handler.Business.FilterStackerTask;
+using Wcs.Application.Handler.Business.GetStackerStation;
 using Wcs.Application.Handler.Business.RefreshTaskStatus;
 using Wcs.CustomEvents.Saga;
 using Wcs.Device.Device.Stacker;
@@ -66,7 +67,7 @@ internal class StackerDeviceCommandHandler(
                         WcsTask = wcsTask,
                         DeviceRegionCode = stacker.RegionCodes,
                         Title = stacker.Config.Tunnle
-                    });
+                    }, cancellationToken);
                     if (check.IsSuccess)
                     {
                         Log.Logger.ForCategory(LogCategory.Business)
@@ -86,20 +87,24 @@ internal class StackerDeviceCommandHandler(
                     if (stacker.IsNewStart())
                         if (wcsTask.TaskExecuteStep.TaskExecuteStepType == TaskExecuteStepTypeEnum.ToBeSend)
                         {
-                            if (wcsTask.TaskType == WcsTaskTypeEnum.StockOut)
+                            var result = await _sender.Send(new GetStackerStaionCommand
                             {
-                                var result = await _deviceService.GetTranshipPositionAsync(
-                                    DeviceTypeEnum.StackerOutTranShip,
-                                    wcsTask.GetLocation.GetTunnel);
-                                var putLocation = _locationService.AnalysisPutLocation(result);
-                                wcsTask.PutLocation = putLocation;
+                                WcsTask = wcsTask,
+                                Region = stacker.RegionCodes
+                            });
+                            if (result.IsSuccess)
+                            {
+                                wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.SendEnding;
+                                await _cacheService.SetAsync(stacker.Config.TaskKey, wcsTask,
+                                    cancellationToken: cancellationToken);
+                                Log.Logger.ForCategory(LogCategory.Business)
+                                    .Information($"{wcsTask.SerialNumber}任务数据更新");
                             }
-
-                            wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.SendEnding;
-                            await _cacheService.SetAsync(stacker.Config.TaskKey, wcsTask,
-                                cancellationToken: cancellationToken);
-                            Log.Logger.ForCategory(LogCategory.Business)
-                                .Information("任务数据更新");
+                            else
+                            {
+                                Log.Logger.ForCategory(LogCategory.Business)
+                                    .Information($"{wcsTask.SerialNumber}无法更新排列数据");
+                            }
                         }
                         else if (wcsTask.TaskExecuteStep.TaskExecuteStepType == TaskExecuteStepTypeEnum.SendEnding)
                         {

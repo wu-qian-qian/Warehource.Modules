@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Shared", "Common.Sha
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{F09B3F70-BF99-4628-9C62-90D97D09E150}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wcs", "Wcs", "{9708B6A4-1EA4-4759-A8C0-BBF1CE2FF4AA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stacker", "Stacker", "{9708B6A4-1EA4-4759-A8C0-BBF1CE2FF4AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Application", "User.Application\Identity.Application.csproj", "{BD52AC83-A590-4B67-BB03-4991D396AF2D}"
 EndProject

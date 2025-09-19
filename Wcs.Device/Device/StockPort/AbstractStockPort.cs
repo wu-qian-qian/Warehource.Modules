@@ -6,11 +6,14 @@ namespace Wcs.Device.Device.StockPort;
 
 public abstract class AbstractStockPort : AbstractDevice<StockPortConfig, PipeLineDBEntity>
 {
-    protected AbstractStockPort(StockPortConfig config, string name, string regionCodes, bool enable) : base(enable,
-        regionCodes)
+    protected AbstractStockPort(string name, StockPortConfig config, string regionCode, bool enable, string deviceGroup)
+        : base(enable,
+            regionCode)
     {
         Config = config;
         Name = name;
+        Config.Name = name;
+        DeviceGroupCode = deviceGroup;
     }
 
     public override StockPortConfig Config { get; protected set; }

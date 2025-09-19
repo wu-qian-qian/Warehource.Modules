@@ -3,32 +3,43 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\job\\page\\getpagequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\job\\page\\getpagequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\business\\creatdevicedata\\creatdevicedatacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\business\\creatdevicedata\\creatdevicedatacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\database\\region\\page\\getregionpagecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\database\\region\\page\\getregionpagecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5969F2F6-79B6-43D9-8E02-4892668C79C8}|Wcs.Device\\Wcs.Device.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.device\\devicedata\\stockinport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5969F2F6-79B6-43D9-8E02-4892668C79C8}|Wcs.Device\\Wcs.Device.csproj|solutionrelative:wcs.device\\devicedata\\stockinport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A3D8FA2-7C38-4832-B813-01F48A0B468B}|Wcs.Contracts\\Wcs.Contracts.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.contracts\\respon\\region\\regiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A3D8FA2-7C38-4832-B813-01F48A0B468B}|Wcs.Contracts\\Wcs.Contracts.csproj|solutionrelative:wcs.contracts\\respon\\region\\regiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5969F2F6-79B6-43D9-8E02-4892668C79C8}|Wcs.Device\\Wcs.Device.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.device\\devicedata\\stockoutport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5969F2F6-79B6-43D9-8E02-4892668C79C8}|Wcs.Device\\Wcs.Device.csproj|solutionrelative:wcs.device\\devicedata\\stockoutport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\database\\region\\addorupdate\\addorupdateregioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\database\\region\\addorupdate\\addorupdateregioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\deviceexecute\\stacker\\stackerdevicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\deviceexecute\\stacker\\stackerdevicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\region\\addregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\region\\addregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\business\\checkexecutenode\\checkexecutenodecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\business\\checkexecutenode\\checkexecutenodecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\region\\updateregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\region\\updateregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\database\\device\\addorupdate\\addorupdatedevicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\database\\device\\addorupdate\\addorupdatedevicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\region\\getpagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\region\\getpagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u5434\\AppData\\Local\\Temp\\.vsdbgsrc\\deeb6cff6ef110001eeb84dbdc44516167898fe9ac38308be1cedf17f931d20a\\Mediator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\device\\insertorupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\device\\insertorupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\middleware\\globallogmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\middleware\\globallogmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\behaviors\\read\\transferreads7plcpipelinebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\behaviors\\read\\transferreads7plcpipelinebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,8 +49,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 18,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StockInPort.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Device\\DeviceData\\StockInPort.cs",
+              "RelativeDocumentMoniker": "Wcs.Device\\DeviceData\\StockInPort.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Device\\DeviceData\\StockInPort.cs",
+              "RelativeToolTip": "Wcs.Device\\DeviceData\\StockInPort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T01:12:09.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StockOutPort.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Device\\DeviceData\\StockOutPort.cs",
+              "RelativeDocumentMoniker": "Wcs.Device\\DeviceData\\StockOutPort.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Device\\DeviceData\\StockOutPort.cs",
+              "RelativeToolTip": "Wcs.Device\\DeviceData\\StockOutPort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T01:11:37.988Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -107,92 +144,103 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GetPageQuery.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Job\\Page\\GetPageQuery.cs",
-              "RelativeDocumentMoniker": "Wcs.Presentation\\Job\\Page\\GetPageQuery.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Job\\Page\\GetPageQuery.cs",
-              "RelativeToolTip": "Wcs.Presentation\\Job\\Page\\GetPageQuery.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAIwAsAAAAwAAAAAAAAAA==",
+              "Title": "CreatDeviceDataCommandHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Business\\CreatDeviceData\\CreatDeviceDataCommandHandler.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\Business\\CreatDeviceData\\CreatDeviceDataCommandHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Business\\CreatDeviceData\\CreatDeviceDataCommandHandler.cs",
+              "RelativeToolTip": "Wcs.Application\\Handler\\Business\\CreatDeviceData\\CreatDeviceDataCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T08:39:42.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetRegionPageCommandHandler.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DataBase\\Region\\Page\\GetRegionPageCommandHandler.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\DataBase\\Region\\Page\\GetRegionPageCommandHandler.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DataBase\\Region\\Page\\GetRegionPageCommandHandler.cs",
-              "RelativeToolTip": "Wcs.Application\\Handler\\DataBase\\Region\\Page\\GetRegionPageCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T08:37:33.635Z",
+              "WhenOpened": "2025-09-19T00:59:49.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AddOrUpdateRegionCommand.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DataBase\\Region\\AddOrUpdate\\AddOrUpdateRegionCommand.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\DataBase\\Region\\AddOrUpdate\\AddOrUpdateRegionCommand.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DataBase\\Region\\AddOrUpdate\\AddOrUpdateRegionCommand.cs",
-              "RelativeToolTip": "Wcs.Application\\Handler\\DataBase\\Region\\AddOrUpdate\\AddOrUpdateRegionCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswA0AAAAAAAAAAAAAAA==",
+              "Title": "StackerDeviceCommandHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DeviceExecute\\Stacker\\StackerDeviceCommandHandler.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\DeviceExecute\\Stacker\\StackerDeviceCommandHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DeviceExecute\\Stacker\\StackerDeviceCommandHandler.cs",
+              "RelativeToolTip": "Wcs.Application\\Handler\\DeviceExecute\\Stacker\\StackerDeviceCommandHandler.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAtwCEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T08:35:43.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegionDto.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Contracts\\Respon\\Region\\RegionDto.cs",
-              "RelativeDocumentMoniker": "Wcs.Contracts\\Respon\\Region\\RegionDto.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Contracts\\Respon\\Region\\RegionDto.cs",
-              "RelativeToolTip": "Wcs.Contracts\\Respon\\Region\\RegionDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T08:35:09.86Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UpdateRegion.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\UpdateRegion.cs",
-              "RelativeDocumentMoniker": "Wcs.Presentation\\Region\\UpdateRegion.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\UpdateRegion.cs",
-              "RelativeToolTip": "Wcs.Presentation\\Region\\UpdateRegion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxMAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T08:32:11.554Z",
+              "WhenOpened": "2025-09-19T00:57:23.813Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AddRegion.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\AddRegion.cs",
-              "RelativeDocumentMoniker": "Wcs.Presentation\\Region\\AddRegion.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\AddRegion.cs",
-              "RelativeToolTip": "Wcs.Presentation\\Region\\AddRegion.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAawBEAAABBAAAAAAAAAA==",
+              "Title": "CheckExecuteNodeCommandHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Business\\CheckExecuteNode\\CheckExecuteNodeCommandHandler.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\Business\\CheckExecuteNode\\CheckExecuteNodeCommandHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\Business\\CheckExecuteNode\\CheckExecuteNodeCommandHandler.cs",
+              "RelativeToolTip": "Wcs.Application\\Handler\\Business\\CheckExecuteNode\\CheckExecuteNodeCommandHandler.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAADgv0sAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T08:31:48.612Z",
+              "WhenOpened": "2025-09-19T00:56:59.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "GetPageRequest.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\GetPageRequest.cs",
-              "RelativeDocumentMoniker": "Wcs.Presentation\\Region\\GetPageRequest.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Region\\GetPageRequest.cs",
-              "RelativeToolTip": "Wcs.Presentation\\Region\\GetPageRequest.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAADwvxkAAAAQAAAAAAAAAA==",
+              "Title": "Mediator.cs",
+              "DocumentMoniker": "C:\\Users\\\u5434\\AppData\\Local\\Temp\\.vsdbgsrc\\deeb6cff6ef110001eeb84dbdc44516167898fe9ac38308be1cedf17f931d20a\\Mediator.cs",
+              "ToolTip": "C:\\Users\\\u5434\\AppData\\Local\\Temp\\.vsdbgsrc\\deeb6cff6ef110001eeb84dbdc44516167898fe9ac38308be1cedf17f931d20a\\Mediator.cs [\u53EA\u8BFB]",
+              "ViewState": "AgIAABMAAAAAAAAAAAAowCQAAAACAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T08:21:55.167Z",
+              "WhenOpened": "2025-09-19T00:32:44.683Z",
+              "EditorCaption": " [\u53EA\u8BFB]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TransferReadS7PlcPipelineBehavior.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Behaviors\\Read\\TransferReadS7PlcPipelineBehavior.cs",
+              "RelativeDocumentMoniker": "Plc.Application\\Behaviors\\Read\\TransferReadS7PlcPipelineBehavior.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Behaviors\\Read\\TransferReadS7PlcPipelineBehavior.cs",
+              "RelativeToolTip": "Plc.Application\\Behaviors\\Read\\TransferReadS7PlcPipelineBehavior.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAqwDgAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T00:28:47.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddOrUpdateDeviceCommandHandler.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DataBase\\Device\\AddOrUpdate\\AddOrUpdateDeviceCommandHandler.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\DataBase\\Device\\AddOrUpdate\\AddOrUpdateDeviceCommandHandler.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DataBase\\Device\\AddOrUpdate\\AddOrUpdateDeviceCommandHandler.cs",
+              "RelativeToolTip": "Wcs.Application\\Handler\\DataBase\\Device\\AddOrUpdate\\AddOrUpdateDeviceCommandHandler.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAuwD4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T00:25:35.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InsertOrUpdate.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Device\\InsertOrUpdate.cs",
+              "RelativeDocumentMoniker": "Wcs.Presentation\\Device\\InsertOrUpdate.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Device\\InsertOrUpdate.cs",
+              "RelativeToolTip": "Wcs.Presentation\\Device\\InsertOrUpdate.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwBkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T09:47:15.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GlobalLogMiddleware.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
+              "RelativeDocumentMoniker": "Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
+              "RelativeToolTip": "Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAuwDgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T09:46:35.922Z",
               "EditorCaption": ""
             }
           ]

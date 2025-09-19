@@ -1,0 +1,108 @@
+2025-09-19 08:21:00.841 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-09-19 08:21:00.885 +08:00 [INF] Configured endpoint WcsWritePlcTaskData, Consumer: Wcs.Presentation.Custom.WcsWritePlcTaskDataConsumer
+2025-09-19 08:21:00.888 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockIntegrationEvent>
+2025-09-19 08:21:00.891 +08:00 [INF] Configured endpoint S7WritePlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockIntegrationEvent>
+2025-09-19 08:21:00.896 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-09-19 08:21:00.950 +08:00 [INF] Configured endpoint WcsWritePlcTaskState, Saga: Wcs.Presentation.Saga.WcsWritePlcTaskState, State Machine: Wcs.Presentation.Saga.WcsWritePlcTaskSaga
+2025-09-19 08:21:00.964 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-09-19 08:21:01.208 +08:00 [DBG] Starting bus instances: IBus
+2025-09-19 08:21:01.214 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-09-19 08:21:01.275 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskState"
+2025-09-19 08:21:01.275 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-09-19 08:21:01.275 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-09-19 08:21:01.275 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_9teyyyrronegkr9ebdq9qrujfp"
+2025-09-19 08:21:01.275 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskData"
+2025-09-19 08:21:01.276 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-09-19 08:21:01.276 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent"
+2025-09-19 08:21:01.276 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent"
+2025-09-19 08:21:01.281 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-09-19 08:25:49.573 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-09-19 08:25:49.622 +08:00 [INF] Configured endpoint WcsWritePlcTaskData, Consumer: Wcs.Presentation.Custom.WcsWritePlcTaskDataConsumer
+2025-09-19 08:25:49.626 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockIntegrationEvent>
+2025-09-19 08:25:49.628 +08:00 [INF] Configured endpoint S7WritePlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockIntegrationEvent>
+2025-09-19 08:25:49.635 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-09-19 08:25:49.705 +08:00 [INF] Configured endpoint WcsWritePlcTaskState, Saga: Wcs.Presentation.Saga.WcsWritePlcTaskState, State Machine: Wcs.Presentation.Saga.WcsWritePlcTaskSaga
+2025-09-19 08:25:49.726 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-09-19 08:25:50.042 +08:00 [DBG] Starting bus instances: IBus
+2025-09-19 08:25:50.048 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-09-19 08:25:50.099 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent"
+2025-09-19 08:25:50.099 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent"
+2025-09-19 08:25:50.099 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-09-19 08:25:50.115 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-09-19 08:25:50.103 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskData"
+2025-09-19 08:25:50.107 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-09-19 08:25:50.111 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskState"
+2025-09-19 08:25:50.119 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_8tdoyyrronegkczhbdq9qraigx"
+2025-09-19 08:25:50.131 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-09-19 08:27:14.358 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-09-19 08:27:14.395 +08:00 [INF] Configured endpoint WcsWritePlcTaskData, Consumer: Wcs.Presentation.Custom.WcsWritePlcTaskDataConsumer
+2025-09-19 08:27:14.397 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockIntegrationEvent>
+2025-09-19 08:27:14.399 +08:00 [INF] Configured endpoint S7WritePlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockIntegrationEvent>
+2025-09-19 08:27:14.404 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-09-19 08:27:14.457 +08:00 [INF] Configured endpoint WcsWritePlcTaskState, Saga: Wcs.Presentation.Saga.WcsWritePlcTaskState, State Machine: Wcs.Presentation.Saga.WcsWritePlcTaskSaga
+2025-09-19 08:27:14.474 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-09-19 08:27:14.719 +08:00 [DBG] Starting bus instances: IBus
+2025-09-19 08:27:14.725 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-09-19 08:27:14.783 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskData"
+2025-09-19 08:27:14.783 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-09-19 08:27:14.783 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-09-19 08:27:14.783 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent"
+2025-09-19 08:27:14.783 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_4djyyyrronegm1iebdq9qr4enp"
+2025-09-19 08:27:14.783 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-09-19 08:27:14.783 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskState"
+2025-09-19 08:27:14.783 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent"
+2025-09-19 08:27:14.787 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-09-19 08:27:54.983 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-09-19 08:27:55.045 +08:00 [INF] Configured endpoint WcsWritePlcTaskData, Consumer: Wcs.Presentation.Custom.WcsWritePlcTaskDataConsumer
+2025-09-19 08:27:55.050 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockIntegrationEvent>
+2025-09-19 08:27:55.054 +08:00 [INF] Configured endpoint S7WritePlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockIntegrationEvent>
+2025-09-19 08:27:55.060 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-09-19 08:27:55.124 +08:00 [INF] Configured endpoint WcsWritePlcTaskState, Saga: Wcs.Presentation.Saga.WcsWritePlcTaskState, State Machine: Wcs.Presentation.Saga.WcsWritePlcTaskSaga
+2025-09-19 08:27:55.156 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-09-19 08:27:55.463 +08:00 [DBG] Starting bus instances: IBus
+2025-09-19 08:27:55.469 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-09-19 08:27:55.535 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_wbfoyyrronegm4ozbdq9qr5yri"
+2025-09-19 08:27:55.535 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskState"
+2025-09-19 08:27:55.535 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-09-19 08:27:55.535 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskData"
+2025-09-19 08:27:55.535 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-09-19 08:27:55.535 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent"
+2025-09-19 08:27:55.535 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent"
+2025-09-19 08:27:55.535 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-09-19 08:27:55.539 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-09-19 08:30:15.214 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-09-19 08:30:15.284 +08:00 [INF] Configured endpoint WcsWritePlcTaskData, Consumer: Wcs.Presentation.Custom.WcsWritePlcTaskDataConsumer
+2025-09-19 08:30:15.294 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockIntegrationEvent>
+2025-09-19 08:30:15.298 +08:00 [INF] Configured endpoint S7WritePlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockIntegrationEvent>
+2025-09-19 08:30:15.305 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-09-19 08:30:15.356 +08:00 [INF] Configured endpoint WcsWritePlcTaskState, Saga: Wcs.Presentation.Saga.WcsWritePlcTaskState, State Machine: Wcs.Presentation.Saga.WcsWritePlcTaskSaga
+2025-09-19 08:30:15.376 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-09-19 08:30:15.678 +08:00 [DBG] Starting bus instances: IBus
+2025-09-19 08:30:15.691 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-09-19 08:30:15.778 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-09-19 08:30:15.778 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskData"
+2025-09-19 08:30:15.778 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-09-19 08:30:15.778 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_4njoyyrronegkbq3bdq9qr7wbj"
+2025-09-19 08:30:15.778 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskState"
+2025-09-19 08:30:15.778 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent"
+2025-09-19 08:30:15.778 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-09-19 08:30:15.778 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent"
+2025-09-19 08:30:15.785 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-09-19 08:31:57.596 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-09-19 08:31:57.638 +08:00 [INF] Configured endpoint WcsWritePlcTaskData, Consumer: Wcs.Presentation.Custom.WcsWritePlcTaskDataConsumer
+2025-09-19 08:31:57.644 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockIntegrationEvent>
+2025-09-19 08:31:57.648 +08:00 [INF] Configured endpoint S7WritePlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockIntegrationEvent>
+2025-09-19 08:31:57.654 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-09-19 08:31:57.706 +08:00 [INF] Configured endpoint WcsWritePlcTaskState, Saga: Wcs.Presentation.Saga.WcsWritePlcTaskState, State Machine: Wcs.Presentation.Saga.WcsWritePlcTaskSaga
+2025-09-19 08:31:57.717 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-09-19 08:31:57.937 +08:00 [DBG] Starting bus instances: IBus
+2025-09-19 08:31:57.944 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-09-19 08:31:58.018 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-09-19 08:31:58.018 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskData"
+2025-09-19 08:31:58.018 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskState"
+2025-09-19 08:31:58.018 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent"
+2025-09-19 08:31:58.018 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-09-19 08:31:58.018 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_4bcoyyrronegm7wbbdq9qr9ty6"
+2025-09-19 08:31:58.018 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-09-19 08:31:58.018 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent"
+2025-09-19 08:31:58.023 +08:00 [INF] Bus started: "loopback://localhost/"

@@ -6,8 +6,11 @@ using Wcs.Domain.Task;
 
 namespace Wcs.Application.Handler.DataBase.WcsTask.UpdateTask;
 
-internal class UpdateWcsTaskCommandHandler(IWcsTaskRepository _wcsTaskRepositoty,IDeviceRepository _deviceRepository
-    ,IUnitOfWork _unitofWork,IAnalysisLocation _locationService)
+internal class UpdateWcsTaskCommandHandler(
+    IWcsTaskRepository _wcsTaskRepositoty,
+    IDeviceRepository _deviceRepository,
+    IUnitOfWork _unitofWork,
+    IAnalysisLocation _locationService)
     : ICommandHandler<UpdateWcsTaskCommand, Result<string>>
 {
     public async Task<Result<string>> Handle(UpdateWcsTaskCommand request, CancellationToken cancellationToken)
@@ -17,37 +20,31 @@ internal class UpdateWcsTaskCommandHandler(IWcsTaskRepository _wcsTaskRepositoty
 
         if (wcstask != null)
         {
-            if (request.WcsTaskStatusType != null)
-            {
-                wcstask.TaskStatus = request.WcsTaskStatusType.Value;
-            }
+            if (request.WcsTaskStatusType != null) wcstask.TaskStatus = request.WcsTaskStatusType.Value;
             if (request.DeviceName != null)
             {
-                var device =  _deviceRepository.Get(request.DeviceName);
+                var device = _deviceRepository.Get(request.DeviceName);
                 if (device != null)
                 {
                     wcstask.TaskExecuteStep.CurentDevice = device.DeviceName;
-                    wcstask.TaskExecuteStep.DeviceType=device.DeviceType;
+                    wcstask.TaskExecuteStep.DeviceType = device.DeviceType;
                 }
             }
-            if(request.PutLocation != null)
+
+            if (request.PutLocation != null)
             {
-                var location=_locationService.AnalysisPutLocation(request.PutLocation);
+                var location = _locationService.AnalysisPutLocation(request.PutLocation);
                 wcstask.PutLocation = location;
             }
-            if(request.GetLocation != null)
+
+            if (request.GetLocation != null)
             {
                 var location = _locationService.AnalysisGetLocation(request.GetLocation);
-                wcstask.GetLocation= location;
+                wcstask.GetLocation = location;
             }
-            if (request.Level.HasValue)
-            {
-                wcstask.Level = request.Level.Value;
-            }
-            if (request.IsEnforce.HasValue)
-            {
-                wcstask.IsEnforce = request.IsEnforce.Value;
-            }
+
+            if (request.Level.HasValue) wcstask.Level = request.Level.Value;
+            if (request.IsEnforce.HasValue) wcstask.IsEnforce = request.IsEnforce.Value;
             await _unitofWork.SaveChangesAsync(cancellationToken);
         }
         else

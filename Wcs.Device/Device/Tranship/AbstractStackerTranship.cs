@@ -6,11 +6,14 @@ namespace Wcs.Device.Device.Tranship;
 
 public abstract class AbstractStackerTranship : AbstractDevice<StackerTranShipConfig, PipeLineDBEntity>
 {
-    protected AbstractStackerTranship(StackerTranShipConfig config, string name, string regionCodes, bool enable) :
-        base(enable, regionCodes)
+    protected AbstractStackerTranship(string name, StackerTranShipConfig config, string regionCode, bool enable,
+        string deviceGroup) :
+        base(enable, regionCode)
     {
         Config = config;
         Name = name;
+        Config.Name = name;
+        DeviceGroupCode = deviceGroup;
     }
 
     public override StackerTranShipConfig Config { get; protected set; }

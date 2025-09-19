@@ -22,13 +22,12 @@ internal class UpdateJobCommandHandler(
         if (jobconfig != null)
         {
             if (request.IsStart.HasValue)
-            {
                 if (request.IsStart.Value != jobconfig.IsStart)
                 {
                     if (request.IsStart.Value)
                     {
                         jobconfig.SetStatus(true);
-                        await StartJob(jobconfig);                      
+                        await StartJob(jobconfig);
                     }
                     else
                     {
@@ -36,22 +35,14 @@ internal class UpdateJobCommandHandler(
                         await PauseJob(scheduler, request.Name);
                     }
                 }
-            }
+
             if (jobconfig.IsStart == false)
             {
-                if (request.Timer.HasValue)
-                {
-                    jobconfig.SetTimer(request.Timer.Value);
-                }
-                if (request.TimerOut.HasValue)
-                {
-                    jobconfig.SetTimerOut(request.TimerOut.Value);
-                }
-                if (request.Description != null)
-                {
-                    jobconfig.Description=request.Description;
-                }
+                if (request.Timer.HasValue) jobconfig.SetTimer(request.Timer.Value);
+                if (request.TimerOut.HasValue) jobconfig.SetTimerOut(request.TimerOut.Value);
+                if (request.Description != null) jobconfig.Description = request.Description;
             }
+
             await unitOfWork.SaveChangesAsync();
             result.SetValue(mapper.Map<JobDto>(jobconfig));
         }
@@ -70,16 +61,12 @@ internal class UpdateJobCommandHandler(
         scheduler.PauseJob(jobKey);
     }
 
-    private  async Task StartJob( JobConfig config)
+    private async Task StartJob(JobConfig config)
     {
         var allJobKeys = await scheduler.GetJobKeys(GroupMatcher<JobKey>.AnyGroup());
         if (allJobKeys.Any(p => p.Name == config.Name))
-        {
             scheduler.ResumeJob(new JobKey(config.Name));
-        }
         else
-        {
             jobService.CraetJob(config);
-        }
     }
 }

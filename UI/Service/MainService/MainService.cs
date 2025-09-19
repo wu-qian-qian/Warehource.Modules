@@ -40,9 +40,7 @@ public class MainService : IMainService
     /// <exception cref="NotImplementedException"></exception>
     public Task<List<MenuItemData>> GetMenuItemDatas(string? role)
     {
-        var menuItems = new List<MenuItemData>
-        {
-        };
+        var menuItems = new List<MenuItemData>();
 
         if (role == "admin")
         {

@@ -1,26 +1,20 @@
 ﻿using Common.Presentation.Endpoints;
-using Identity.Application.Handler.Add.User;
-using Identity.Contrancts.Request;
+using Identity.Application.Handler.Update.User;
+using Identity.Contrancts.Request.Update;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Identity.Application.Handler.Update.User;
-using Identity.Contrancts.Request.Update;
 
-namespace Identity.Presentation.Update
+namespace Identity.Presentation.Update;
+
+internal class UpdateUser : IEndpoint
 {
-    internal class UpdateUser : IEndpoint
+    public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        public void MapEndpoint(IEndpointRouteBuilder app)
-        {
-            app.MapPost("user/update-user", [Authorize(Roles = "admin")] async (UpdateUserRequest request, ISender sender) =>
+        app.MapPost("user/update-user", [Authorize(Roles = "admin")]
+            async (UpdateUserRequest request, ISender sender) =>
             {
                 return await sender.Send(new UpdateUserCommand
                 {
@@ -35,6 +29,5 @@ namespace Identity.Presentation.Update
                     Username = request.Username
                 });
             }).WithTags(AssemblyReference.User);
-        }
     }
 }

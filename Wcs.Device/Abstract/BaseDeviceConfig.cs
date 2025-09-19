@@ -4,12 +4,12 @@ public abstract class BaseDeviceConfig
 {
     protected BaseDeviceConfig()
     {
-        Key = Guid.NewGuid().ToString();
-        DBKey = Guid.NewGuid().ToString();
-        TaskKey = Guid.NewGuid().ToString();
+        Key = $"{Name.GetHashCode()}{nameof(Key).GetHashCode()}";
+        DBKey = $"{Name.GetHashCode()}{nameof(DBKey).GetHashCode()}";
+        TaskKey = $"{Name.GetHashCode()}{nameof(TaskKey).GetHashCode()}";
     }
 
-    public string Code { get; set; }
+    public string Name { get; set; }
 
     /// <summary>
     ///     缓存使用    唯一标识

@@ -1,4 +1,5 @@
-﻿using Wcs.Device.Device.StockPort;
+﻿using Wcs.Contracts.Respon.Device;
+using Wcs.Device.Device.StockPort;
 using Wcs.Device.DeviceConfig;
 using Wcs.Shared;
 
@@ -6,8 +7,8 @@ namespace Wcs.Device.DeviceData;
 
 public class StockInPort : AbstractStockPort
 {
-    public StockInPort(StockPortConfig config, string name, string regionCodes, bool enable) : base(config, name,
-        regionCodes, enable)
+    public StockInPort(StockPortConfig config, DeviceDto device) : base(device.DeviceName, config, device.RegionCode,
+        device.Enable, device.GroupName)
     {
         DeviceType = DeviceTypeEnum.StockPortIn;
     }
