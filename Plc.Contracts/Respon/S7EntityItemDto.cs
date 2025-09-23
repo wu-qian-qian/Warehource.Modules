@@ -45,4 +45,12 @@ public class S7EntityItemDto
     ///     数组类型的长度
     /// </summary>
     public int? ArrtypeLength { get; set; }
+
+    public string? DeviceName { get; set; }
+
+    public string Ip { get; set; }
+
+    public bool IsUse { get; set; }
+
+    public string? DBAddress { get; set; }
 }

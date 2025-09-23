@@ -47,4 +47,8 @@ public class S7NetConfig : INetEnitty
     public string? WriteHeart { get; set; }
 
     public ICollection<S7EntityItem> S7EntityItems { get; set; }
+
+    public void UpdateIp(string ip) => Ip = ip;
+
+    public void UpdatePort(int port) => Port = port;
 }

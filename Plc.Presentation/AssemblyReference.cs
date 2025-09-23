@@ -8,4 +8,6 @@ public static class AssemblyReference
 
 
     public static readonly string Plc = "Plc";
+
+    public static readonly string Enum = "Enum";
 }

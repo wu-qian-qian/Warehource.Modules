@@ -36,7 +36,7 @@ public class S7EntityItem : IEntity
     public byte? BitOffset { get; set; }
 
     /// <summary>
-    ///     PLC的类型
+    ///     PLC的存储类型
     /// </summary>
     public S7BlockTypeEnum S7BlockType { get; set; }
 

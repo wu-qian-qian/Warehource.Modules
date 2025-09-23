@@ -8,7 +8,7 @@ public class ExecuteNodeRequest
     /// </summary>
     public Guid? Id { get; set; }
 
-    public byte Index { get; set; }
+    public byte? Index { get; set; }
 
     /// <summary>
     ///     路径组

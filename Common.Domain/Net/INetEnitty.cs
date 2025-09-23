@@ -11,7 +11,7 @@ public abstract class INetEnitty : IEntity
     {
     }
 
-    public string Ip { get; init; }
+    public string Ip { get; protected set; }
 
-    public int Port { get; init; }
+    public int Port { get; protected set; }
 }

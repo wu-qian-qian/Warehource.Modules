@@ -16,8 +16,8 @@ public static class ApplicationConfigurator
     /// <param name="configuration"></param>
     public static void AddMediatR(MediatRServiceConfiguration configuration)
     {
-        configuration.AddBehavior(typeof(BathReadS7PlcPipelineBehavior));
-        configuration.AddBehavior(typeof(SingleReadS7PlcPipelineBehavior));
+        configuration.AddBehavior(typeof(DeviceReadS7PlcPipelineBehavior));
+        //  configuration.AddBehavior(typeof(SingleReadS7PlcPipelineBehavior));
         configuration.AddBehavior(typeof(TransferReadS7PlcPipelineBehavior));
         configuration.AddOpenBehavior(typeof(WriteDtoInitPipelineBehavior<,>));
     }

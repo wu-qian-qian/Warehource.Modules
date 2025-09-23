@@ -9,9 +9,9 @@ public class AddOrUpdateExecuteNodeCommand : ICommand<Result<ExecuteNodeDto>>
 {
     /// <summary>
     /// </summary>
-    public Guid Id { get; set; }
+    public Guid? Id { get; set; }
 
-    public byte Index { get; set; }
+    public byte? Index { get; set; }
 
     /// <summary>
     ///     路径组

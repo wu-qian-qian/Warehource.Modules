@@ -66,4 +66,24 @@ internal static partial class PlcReadWriteDtoHelper
 
         return itemInputs;
     }
+
+    internal static Exception ReloadWrite()
+    {
+        Exception exception = null;
+        try
+        {
+            _semaphoreSlimWrite.Wait();
+            _WriteBufferInputs.Clear();
+        }
+        catch (Exception ex)
+        {
+            exception = ex;
+        }
+        finally
+        {
+            _semaphoreSlimWrite.Release();
+        }
+
+        return exception;
+    }
 }

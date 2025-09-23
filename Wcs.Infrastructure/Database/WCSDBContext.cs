@@ -8,6 +8,7 @@ using Wcs.Domain.Region;
 using Wcs.Domain.Task;
 using Wcs.Domain.TaskExecuteStep;
 using Wcs.Infrastructure.DB.Device;
+using Wcs.Infrastructure.DB.Event;
 using Wcs.Infrastructure.DB.ExecuteNodePath;
 using Wcs.Infrastructure.DB.JobConfig;
 using Wcs.Infrastructure.DB.PlcMap;
@@ -41,6 +42,8 @@ public sealed class WCSDBContext : BaseDbContext, IUnitOfWork
 
     public DbSet<PlcMap> PlcMaps { get; set; }
 
+    public DbSet<Domain.Event.Event> Events { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -51,6 +54,7 @@ public sealed class WCSDBContext : BaseDbContext, IUnitOfWork
         modelBuilder.ApplyConfiguration(new WcsTaskConfiguration());
         modelBuilder.ApplyConfiguration(new ExecuteNodePatheConfiguration());
         modelBuilder.ApplyConfiguration(new PlcMapConfiguration());
+        modelBuilder.ApplyConfiguration(new EventConfiguration());
         modelBuilder.EnableSoftDeletionGlobalFilter();
     }
 

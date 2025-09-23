@@ -15,8 +15,7 @@ public class CheckExecuteNodeCommandHandler(
     IExecuteNodeRepository _executeNodeRepository,
     IRegionRepository _regionRepository,
     IServiceScopeFactory scopeFactory
-)
-    : ICommandHandler<CheckExecuteNodeCommand, Result<bool>>
+) : ICommandHandler<CheckExecuteNodeCommand, Result<bool>>
 {
     private static readonly SemaphoreSlim _semaphore = new(1, 1);
 

@@ -373,6 +373,10 @@
             "NPOI": {
               "target": "Package",
               "version": "[2.7.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
             }
           },
           "imports": [
@@ -511,6 +515,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "D:\\Program\\仓库\\Warehource.Modules\\Common.Shared\\Common.Shared.csproj": {
+                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common.Shared\\Common.Shared.csproj"
+              },
               "D:\\Program\\仓库\\Warehource.Modules\\Plc.Shared\\Plc.Shared.csproj": {
                 "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Plc.Shared\\Plc.Shared.csproj"
               }
@@ -723,6 +730,9 @@
             "projectReferences": {
               "D:\\Program\\仓库\\Warehource.Modules\\Common.Presentation\\Common.Presentation.csproj": {
                 "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common.Presentation\\Common.Presentation.csproj"
+              },
+              "D:\\Program\\仓库\\Warehource.Modules\\Common.Shared\\Common.Shared.csproj": {
+                "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common.Shared\\Common.Shared.csproj"
               },
               "D:\\Program\\仓库\\Warehource.Modules\\Common\\Common.csproj": {
                 "projectPath": "D:\\Program\\仓库\\Warehource.Modules\\Common\\Common.csproj"

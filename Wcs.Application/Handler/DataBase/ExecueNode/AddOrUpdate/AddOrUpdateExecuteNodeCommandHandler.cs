@@ -20,32 +20,45 @@ public class AddOrUpdateExecuteNodeCommandHandler(
         CancellationToken cancellationToken)
     {
         var result = new Result<ExecuteNodeDto>();
-        var entity = _executeNodeRepository.Get(request.Id);
-        var region = _regionRepository.Get(request.RegionCode);
-        if (entity == null)
+        ExecuteNodePath entity;
+        if (request.Id.HasValue == false)
         {
+            byte index;
+            var region = _regionRepository.Get(request.RegionCode);
+            if (_executeNodeRepository.GetQuerys().Any(p => p.PahtNodeGroup == request.PahtNodeGroup))
+            {
+                index = _executeNodeRepository.GetQuerys()
+                    .Where(p => p.PahtNodeGroup == request.PahtNodeGroup)
+                    .OrderBy(P => P.CreationTime)
+                    .Select(p => p.Index).First();
+                index += 1;
+            }
+            else
+            {
+                index = 1;
+            }
+
             entity = new ExecuteNodePath
             {
                 PahtNodeGroup = request.PahtNodeGroup,
                 TaskType = request.TaskType.Value,
                 CurrentDeviceType = request.CurrentDeviceType.Value,
-                Index = request.Index,
+                Index = index,
                 RegionId = region?.Id
             };
             _executeNodeRepository.Insert([entity]);
-            await _unitOfWork.SaveChangesAsync();
-            result.SetValue(_mapper.Map<ExecuteNodeDto>(entity));
         }
         else
         {
+            entity = _executeNodeRepository.Get(request.Id.Value);
             entity.PahtNodeGroup = request.PahtNodeGroup;
             entity.TaskType = request.TaskType.Value;
             entity.CurrentDeviceType = request.CurrentDeviceType.Value;
-            _executeNodeRepository.Update(entity);
-            await _unitOfWork.SaveChangesAsync();
-            result.SetValue(_mapper.Map<ExecuteNodeDto>(entity));
+            entity.Index = request.Index ?? entity.Index;
         }
 
+        await _unitOfWork.SaveChangesAsync();
+        result.SetValue(_mapper.Map<ExecuteNodeDto>(entity));
         return result;
     }
 }

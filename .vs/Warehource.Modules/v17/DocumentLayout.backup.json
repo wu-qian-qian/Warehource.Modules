@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\database\\device\\addorupdate\\addorupdatedevicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\database\\device\\addorupdate\\addorupdatedevicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AB3544A4-FA30-4064-ABF1-4367D6474706}|Plc.Contracts\\Plc.Contracts.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.contracts\\respon\\s7entityitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB3544A4-FA30-4064-ABF1-4367D6474706}|Plc.Contracts\\Plc.Contracts.csproj|solutionrelative:plc.contracts\\respon\\s7entityitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\device\\insertorupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\device\\insertorupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.presentation\\s7plc\\page\\getentityitempage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|solutionrelative:plc.presentation\\s7plc\\page\\getentityitempage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\middleware\\globallogmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\middleware\\globallogmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.application\\behaviors\\read\\transferreads7plcpipelinebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F04CE40-057F-4300-916B-08E7E60FE5A8}|Plc.Application\\Plc.Application.csproj|solutionrelative:plc.application\\behaviors\\read\\transferreads7plcpipelinebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\plc.presentation\\s7plc\\update\\updateentityitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{771B7E45-A13F-4C3B-80A5-2E2028B552FF}|Plc.Presentation\\Plc.Presentation.csproj|solutionrelative:plc.presentation\\s7plc\\update\\updateentityitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "S7EntityItemDto.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Contracts\\Respon\\S7EntityItemDto.cs",
+              "RelativeDocumentMoniker": "Plc.Contracts\\Respon\\S7EntityItemDto.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Contracts\\Respon\\S7EntityItemDto.cs",
+              "RelativeToolTip": "Plc.Contracts\\Respon\\S7EntityItemDto.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAswDAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T09:05:08.921Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -94,54 +103,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TransferReadS7PlcPipelineBehavior.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Behaviors\\Read\\TransferReadS7PlcPipelineBehavior.cs",
-              "RelativeDocumentMoniker": "Plc.Application\\Behaviors\\Read\\TransferReadS7PlcPipelineBehavior.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Application\\Behaviors\\Read\\TransferReadS7PlcPipelineBehavior.cs",
-              "RelativeToolTip": "Plc.Application\\Behaviors\\Read\\TransferReadS7PlcPipelineBehavior.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAqwDgAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T00:28:47.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddOrUpdateDeviceCommandHandler.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DataBase\\Device\\AddOrUpdate\\AddOrUpdateDeviceCommandHandler.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\DataBase\\Device\\AddOrUpdate\\AddOrUpdateDeviceCommandHandler.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DataBase\\Device\\AddOrUpdate\\AddOrUpdateDeviceCommandHandler.cs",
-              "RelativeToolTip": "Wcs.Application\\Handler\\DataBase\\Device\\AddOrUpdate\\AddOrUpdateDeviceCommandHandler.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCIAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T00:25:35.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "InsertOrUpdate.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Device\\InsertOrUpdate.cs",
-              "RelativeDocumentMoniker": "Wcs.Presentation\\Device\\InsertOrUpdate.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\Device\\InsertOrUpdate.cs",
-              "RelativeToolTip": "Wcs.Presentation\\Device\\InsertOrUpdate.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwBUAAAAQAAAAAAAAAA==",
+              "Title": "GetEntityItemPage.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\S7Plc\\Page\\GetEntityItemPage.cs",
+              "RelativeDocumentMoniker": "Plc.Presentation\\S7Plc\\Page\\GetEntityItemPage.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\S7Plc\\Page\\GetEntityItemPage.cs",
+              "RelativeToolTip": "Plc.Presentation\\S7Plc\\Page\\GetEntityItemPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxYAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T09:47:15.756Z",
+              "WhenOpened": "2025-09-23T09:04:44.739Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GlobalLogMiddleware.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
-              "RelativeDocumentMoniker": "Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
-              "RelativeToolTip": "Common.Infrastructure\\Middleware\\GlobalLogMiddleware.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAuwDgAAAAUAAAAAAAAAA==",
+              "Title": "UpdateEntityItem.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\S7Plc\\Update\\UpdateEntityItem.cs",
+              "RelativeDocumentMoniker": "Plc.Presentation\\S7Plc\\Update\\UpdateEntityItem.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Plc.Presentation\\S7Plc\\Update\\UpdateEntityItem.cs",
+              "RelativeToolTip": "Plc.Presentation\\S7Plc\\Update\\UpdateEntityItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxMAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T09:46:35.922Z",
+              "WhenOpened": "2025-09-23T08:58:03.611Z",
               "EditorCaption": ""
             }
           ]

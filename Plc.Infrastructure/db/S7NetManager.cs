@@ -9,7 +9,7 @@ public class S7NetManager(PlcDBContext context) : IS7NetManager
 {
     public Task<S7NetConfig> GetNetWiteIdAsync(Guid id)
     {
-        return context.Query<S7NetConfig>().FirstAsync(p => p.Id == id);
+        return context.Query<S7NetConfig>().Include(p => p.S7EntityItems).FirstAsync(p => p.Id == id);
     }
 
     public Task<List<S7NetConfig>> GetAllNetAsync()
@@ -64,5 +64,42 @@ public class S7NetManager(PlcDBContext context) : IS7NetManager
     public void UpdateS7EntityItem(IEnumerable<S7EntityItem> entityItems)
     {
         context.UpdateRange(entityItems);
+    }
+
+
+    public IQueryable<S7NetConfig> GetQueryNetConfig()
+    {
+        return context.Query<S7NetConfig>().Include(p => p.S7EntityItems).AsNoTracking();
+    }
+
+    public IQueryable<S7EntityItem> GetQueryS7EntityItem()
+    {
+        return context.Query<S7EntityItem>().AsNoTracking();
+    }
+
+    public Task DeleteAsync(S7NetConfig[] s7NetConfigs)
+    {
+        for (int i = 0; i < s7NetConfigs.Count(); i++)
+        {
+            s7NetConfigs[i].SoftDelete();
+            foreach (var item in s7NetConfigs[i].S7EntityItems)
+            {
+                item.SoftDelete();
+            }
+        }
+
+        UpdateS7Net(s7NetConfigs);
+        return Task.CompletedTask;
+    }
+
+    public void UpdateS7Net(IEnumerable<S7NetConfig> nets)
+    {
+        context.Nets.UpdateRange(nets);
+    }
+
+    public Task<S7EntityItem> GetEntityItemAsync(Guid id)
+    {
+        var entity = context.S7Entitys.First(p => p.Id == id);
+        return Task.FromResult(entity);
     }
 }

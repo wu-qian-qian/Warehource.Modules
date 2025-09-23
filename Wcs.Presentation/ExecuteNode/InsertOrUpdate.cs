@@ -18,7 +18,7 @@ public class InsertOrUpdate : IEndpoint
             {
                 return await sender.Send(new AddOrUpdateExecuteNodeCommand
                 {
-                    Id = request.Id ?? Guid.NewGuid(),
+                    Id = request.Id,
                     PahtNodeGroup = request.PahtNodeGroup,
                     CurrentDeviceType = request.CurrentDeviceType,
                     TaskType = request.TaskType,

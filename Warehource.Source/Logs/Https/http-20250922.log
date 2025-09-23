@@ -1,0 +1,5 @@
+2025-09-22 14:54:15.018 +08:00 [INF] 地址：::1
+URL:/user/user-login
+请求体：{"username":"admin","password":"qwe"}
+响应体：{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAwNjAwNTQsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.HYEaJAA4HbSeSX6ebPVb5ULZkRs6MJnRBYF01GDQtk4","message":null}
+时间：405

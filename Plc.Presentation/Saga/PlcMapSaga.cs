@@ -32,11 +32,11 @@ public class PlcMapSaga : MassTransitStateMachine<PlcMapState>
         // 初始流程：第一次收到PlcMapCreated事件
         Initially(When(PlcMapCreated)
             //用来限制同一DeviceName只能发送一次  
-            .Then(context =>
-            {
-                // 通过context.Saga访问当前Saga实例的状态对象
-                context.Saga.DeviceName = context.Message.DeviceName;
-            })
+            //.Then(context =>
+            //{
+            //    // 通过context.Saga访问当前Saga实例的状态对象
+            //    context.Saga.DeviceName = context.Message.DeviceName;
+            //})
             // 发布数据集成服务调用事件
             .Publish(context =>
                 new PlcMapDataIntegrationEvent(DateTime.Now, context.Message.DeviceName, context.Message.EntityNames))

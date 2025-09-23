@@ -1,0 +1,153 @@
+2025-09-22 13:05:00.623 +08:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-22 13:05:00.736 +08:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Wcs.__EFMigrationsHistory]');
+2025-09-22 13:05:00.742 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-22 13:05:00.744 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Wcs.__EFMigrationsHistory]');
+2025-09-22 13:05:00.760 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Wcs.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-22 13:05:00.776 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-09-22 13:05:00.819 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-22 13:05:00.823 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Identity.__EFMigrationsHistory]');
+2025-09-22 13:05:00.827 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-22 13:05:00.831 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Identity.__EFMigrationsHistory]');
+2025-09-22 13:05:00.849 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Identity.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-22 13:05:00.852 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-09-22 13:05:00.959 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-22 13:05:00.962 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Plc.__EFMigrationsHistory]');
+2025-09-22 13:05:00.965 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-22 13:05:00.967 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[Plc.__EFMigrationsHistory]');
+2025-09-22 13:05:00.975 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [Plc.__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-22 13:05:00.986 +08:00 [INF] No migrations were applied. The database is already up to date.
+2025-09-22 13:05:01.694 +08:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[CreationTime], [w].[Description], [w].[IsDeleted], [w].[IsStart], [w].[JobType], [w].[LastModificationTime], [w].[LastModifierUser], [w].[Name], [w].[TimeOut], [w].[Timer]
+FROM [Wcs.JobConfig] AS [w]
+WHERE [w].[IsDeleted] = CAST(0 AS bit)
+2025-09-22 13:05:02.027 +08:00 [INF] User profile is available. Using 'C:\Users\吴\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-22 13:05:02.138 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-09-22 13:05:02.143 +08:00 [INF] Configured endpoint WcsWritePlcTaskData, Consumer: Wcs.Presentation.Custom.WcsWritePlcTaskDataConsumer
+2025-09-22 13:05:02.146 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockIntegrationEvent>
+2025-09-22 13:05:02.150 +08:00 [INF] Configured endpoint S7WritePlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockIntegrationEvent>
+2025-09-22 13:05:02.152 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-09-22 13:05:02.234 +08:00 [INF] Configured endpoint WcsWritePlcTaskState, Saga: Wcs.Presentation.Saga.WcsWritePlcTaskState, State Machine: Wcs.Presentation.Saga.WcsWritePlcTaskSaga
+2025-09-22 13:05:02.256 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-09-22 13:05:02.603 +08:00 [DBG] Starting bus instances: IBus
+2025-09-22 13:05:02.610 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-09-22 13:05:02.734 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskState"
+2025-09-22 13:05:02.734 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent"
+2025-09-22 13:05:02.734 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-09-22 13:05:02.734 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-09-22 13:05:02.734 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskData"
+2025-09-22 13:05:02.734 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent"
+2025-09-22 13:05:02.734 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-09-22 13:05:02.737 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_qbwyyyrronegm49gbdq9ufcsn4"
+2025-09-22 13:05:02.747 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-09-22 13:05:03.128 +08:00 [INF] Now listening on: http://localhost:5050
+2025-09-22 13:05:03.152 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-09-22 13:05:03.628 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-22 13:05:03.630 +08:00 [INF] Hosting environment: Development
+2025-09-22 13:05:03.632 +08:00 [INF] Content root path: D:\Program\仓库\Warehource.Modules\Warehource.Source
+2025-09-22 13:05:04.247 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/index.html - null null
+2025-09-22 13:05:04.697 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/index.html - 200 null text/html;charset=utf-8 465.623ms
+2025-09-22 13:05:04.718 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-22 13:05:04.726 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.5097ms
+2025-09-22 13:05:04.841 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/_vs/browserLink - null null
+2025-09-22 13:05:04.959 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/_vs/browserLink - 200 null text/javascript; charset=UTF-8 118.0901ms
+2025-09-22 13:05:05.001 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - null null
+2025-09-22 13:05:05.042 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.5439ms
+2025-09-22 13:05:07.500 +08:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5050/wcstask/get-TaskData/2025-09-22 - null null
+2025-09-22 13:05:07.514 +08:00 [INF] CORS policy execution successful.
+2025-09-22 13:05:07.521 +08:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5050/wcstask/get-TaskData/2025-09-22 - 204 null null 20.7044ms
+2025-09-22 13:05:07.525 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/wcstask/get-TaskData/2025-09-22 - null null
+2025-09-22 13:05:07.532 +08:00 [INF] CORS policy execution successful.
+2025-09-22 13:05:07.542 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-09-22 13:05:07.855 +08:00 [INF] Executing endpoint 'HTTP: GET wcstask/get-TaskData/{time}'
+2025-09-22 13:05:08.460 +08:00 [INF] Executed DbCommand (119ms) [Parameters=[@__request_StartTime_0='?' (DbType = DateTime2), @__request_EndTime_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT DATEPART(hour, [w].[CreationTime]) AS [Hour], [w].[TaskStatus]
+FROM [Wcs.WcsTask] AS [w]
+WHERE [w].[IsDeleted] = CAST(0 AS bit) AND [w].[CreationTime] >= @__request_StartTime_0 AND [w].[CreationTime] <= @__request_EndTime_1 AND [w].[TaskStatus] <> 6
+ORDER BY DATEPART(hour, [w].[CreationTime])
+2025-09-22 13:05:08.485 +08:00 [INF] Executed endpoint 'HTTP: GET wcstask/get-TaskData/{time}'
+2025-09-22 13:05:08.491 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/wcstask/get-TaskData/2025-09-22 - 200 null application/json; charset=utf-8 966.4974ms
+2025-09-22 13:05:12.499 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/wcstask/get-TaskData/2025-09-22 - null null
+2025-09-22 13:05:12.508 +08:00 [INF] CORS policy execution successful.
+2025-09-22 13:05:12.510 +08:00 [INF] Executing endpoint 'HTTP: GET wcstask/get-TaskData/{time}'
+2025-09-22 13:05:12.518 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_StartTime_0='?' (DbType = DateTime2), @__request_EndTime_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT DATEPART(hour, [w].[CreationTime]) AS [Hour], [w].[TaskStatus]
+FROM [Wcs.WcsTask] AS [w]
+WHERE [w].[IsDeleted] = CAST(0 AS bit) AND [w].[CreationTime] >= @__request_StartTime_0 AND [w].[CreationTime] <= @__request_EndTime_1 AND [w].[TaskStatus] <> 6
+ORDER BY DATEPART(hour, [w].[CreationTime])
+2025-09-22 13:05:12.521 +08:00 [INF] Executed endpoint 'HTTP: GET wcstask/get-TaskData/{time}'
+2025-09-22 13:05:12.523 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/wcstask/get-TaskData/2025-09-22 - 200 null application/json; charset=utf-8 23.9103ms
+2025-09-22 13:05:17.495 +08:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5050/wcstask/get-TaskData/2025-09-22 - null null
+2025-09-22 13:05:17.499 +08:00 [INF] CORS policy execution successful.
+2025-09-22 13:05:17.500 +08:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5050/wcstask/get-TaskData/2025-09-22 - 204 null null 5.1126ms
+2025-09-22 13:05:17.504 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/wcstask/get-TaskData/2025-09-22 - null null
+2025-09-22 13:05:17.512 +08:00 [INF] CORS policy execution successful.
+2025-09-22 13:05:17.514 +08:00 [INF] Executing endpoint 'HTTP: GET wcstask/get-TaskData/{time}'
+2025-09-22 13:05:17.521 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_StartTime_0='?' (DbType = DateTime2), @__request_EndTime_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT DATEPART(hour, [w].[CreationTime]) AS [Hour], [w].[TaskStatus]
+FROM [Wcs.WcsTask] AS [w]
+WHERE [w].[IsDeleted] = CAST(0 AS bit) AND [w].[CreationTime] >= @__request_StartTime_0 AND [w].[CreationTime] <= @__request_EndTime_1 AND [w].[TaskStatus] <> 6
+ORDER BY DATEPART(hour, [w].[CreationTime])
+2025-09-22 13:05:17.524 +08:00 [INF] Executed endpoint 'HTTP: GET wcstask/get-TaskData/{time}'
+2025-09-22 13:05:17.527 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/wcstask/get-TaskData/2025-09-22 - 200 null application/json; charset=utf-8 23.0667ms
+2025-09-22 13:05:22.203 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/wcstask/get-TaskData/2025-09-22 - null null
+2025-09-22 13:05:22.209 +08:00 [INF] CORS policy execution successful.
+2025-09-22 13:05:22.212 +08:00 [INF] Executing endpoint 'HTTP: GET wcstask/get-TaskData/{time}'
+2025-09-22 13:05:22.215 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_StartTime_0='?' (DbType = DateTime2), @__request_EndTime_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT DATEPART(hour, [w].[CreationTime]) AS [Hour], [w].[TaskStatus]
+FROM [Wcs.WcsTask] AS [w]
+WHERE [w].[IsDeleted] = CAST(0 AS bit) AND [w].[CreationTime] >= @__request_StartTime_0 AND [w].[CreationTime] <= @__request_EndTime_1 AND [w].[TaskStatus] <> 6
+ORDER BY DATEPART(hour, [w].[CreationTime])
+2025-09-22 13:05:22.218 +08:00 [INF] Executed endpoint 'HTTP: GET wcstask/get-TaskData/{time}'
+2025-09-22 13:05:22.220 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/wcstask/get-TaskData/2025-09-22 - 200 null application/json; charset=utf-8 16.5904ms
+2025-09-22 13:05:27.203 +08:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5050/wcstask/get-TaskData/2025-09-22 - null null
+2025-09-22 13:05:27.206 +08:00 [INF] CORS policy execution successful.
+2025-09-22 13:05:27.207 +08:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5050/wcstask/get-TaskData/2025-09-22 - 204 null null 4.179ms
+2025-09-22 13:05:27.211 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5050/wcstask/get-TaskData/2025-09-22 - null null
+2025-09-22 13:05:27.213 +08:00 [INF] CORS policy execution successful.
+2025-09-22 13:05:27.215 +08:00 [INF] Executing endpoint 'HTTP: GET wcstask/get-TaskData/{time}'
+2025-09-22 13:05:27.225 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_StartTime_0='?' (DbType = DateTime2), @__request_EndTime_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT DATEPART(hour, [w].[CreationTime]) AS [Hour], [w].[TaskStatus]
+FROM [Wcs.WcsTask] AS [w]
+WHERE [w].[IsDeleted] = CAST(0 AS bit) AND [w].[CreationTime] >= @__request_StartTime_0 AND [w].[CreationTime] <= @__request_EndTime_1 AND [w].[TaskStatus] <> 6
+ORDER BY DATEPART(hour, [w].[CreationTime])
+2025-09-22 13:05:27.235 +08:00 [INF] Executed endpoint 'HTTP: GET wcstask/get-TaskData/{time}'
+2025-09-22 13:05:27.237 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5050/wcstask/get-TaskData/2025-09-22 - 200 null application/json; charset=utf-8 26.5726ms
+2025-09-22 13:06:16.690 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-09-22 13:06:16.742 +08:00 [INF] Configured endpoint WcsWritePlcTaskData, Consumer: Wcs.Presentation.Custom.WcsWritePlcTaskDataConsumer
+2025-09-22 13:06:16.748 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockIntegrationEvent>
+2025-09-22 13:06:16.754 +08:00 [INF] Configured endpoint S7WritePlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockIntegrationEvent>
+2025-09-22 13:06:16.759 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-09-22 13:06:16.860 +08:00 [INF] Configured endpoint WcsWritePlcTaskState, Saga: Wcs.Presentation.Saga.WcsWritePlcTaskState, State Machine: Wcs.Presentation.Saga.WcsWritePlcTaskSaga
+2025-09-22 13:06:16.879 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-09-22 13:06:17.140 +08:00 [DBG] Starting bus instances: IBus
+2025-09-22 13:06:17.147 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-09-22 13:06:17.208 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent"
+2025-09-22 13:06:17.208 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskData"
+2025-09-22 13:06:17.208 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_gdfoyyrronegmxmnbdq9ufqngq"
+2025-09-22 13:06:17.208 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-09-22 13:06:17.208 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-09-22 13:06:17.208 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-09-22 13:06:17.208 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent"
+2025-09-22 13:06:17.208 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskState"
+2025-09-22 13:06:17.212 +08:00 [INF] Bus started: "loopback://localhost/"

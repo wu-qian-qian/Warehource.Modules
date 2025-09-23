@@ -79,6 +79,36 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.ToTable("Wcs.Device", (string)null);
                 });
 
+            modelBuilder.Entity("Wcs.Domain.Event.Event", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Errored")
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<string>("EventName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EventStatus")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Wcs.Event", (string)null);
+                });
+
             modelBuilder.Entity("Wcs.Domain.ExecuteNode.ExecuteNodePath", b =>
                 {
                     b.Property<Guid>("Id")
@@ -121,9 +151,7 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                     SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"), false);
 
-                    b.HasIndex("RegionId")
-                        .IsUnique()
-                        .HasFilter("[RegionId] IS NOT NULL");
+                    b.HasIndex("RegionId");
 
                     b.ToTable("Wcs.ExecuteNodePath", (string)null);
                 });
@@ -322,7 +350,7 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<Guid>("TaskExecuteStepId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("TaskType")
+                    b.Property<int>("TaskStatus")
                         .HasColumnType("int");
 
                     b.Property<int>("TaskType")
@@ -402,8 +430,8 @@ namespace Wcs.Infrastructure.Database.Migrations
             modelBuilder.Entity("Wcs.Domain.ExecuteNode.ExecuteNodePath", b =>
                 {
                     b.HasOne("Wcs.Domain.Region.Region", "Region")
-                        .WithOne()
-                        .HasForeignKey("Wcs.Domain.ExecuteNode.ExecuteNodePath", "RegionId");
+                        .WithMany()
+                        .HasForeignKey("RegionId");
 
                     b.Navigation("Region");
                 });

@@ -45,6 +45,7 @@ internal class TransferReadS7PlcPipelineBehavior(
             var readModelArray = await cacheService.GetAsync<IEnumerable<ReadModel>>(key);
             if (readModelArray == null)
             {
+                //
                 var response = await next();
                 if (response != null)
                 {

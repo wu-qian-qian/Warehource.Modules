@@ -24,7 +24,7 @@ public class GlobalLogMiddleware
 
         var responseData = string.Empty;
         var requestData = string.Empty;
-        var contentType = context.Response.ContentType;
+        var contentType = context.Request.ContentType;
         var isFileResponse = MiddlewareHelper.IsFileResponse(contentType);
         if (isFileResponse == false) //如果请求流不为文件
         {
@@ -62,6 +62,10 @@ public class GlobalLogMiddleware
                         .Information(
                             $"地址：{context.Connection.RemoteIpAddress.ToString()}\nURL:{context.Request.Path}\n请求体：{requestData}\n响应体：{responseData}\n时间：{_stopwatch.ElapsedMilliseconds}");
                 }
+        }
+        else
+        {
+            await _next(context);
         }
     }
 

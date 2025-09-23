@@ -8,8 +8,14 @@ public struct EntityItemModel
 
     public S7DataTypeEnum S7DataType;
 
+    /// <summary>
+    /// db地址
+    /// </summary>
     public int DBAddress;
 
+    /// <summary>
+    /// byte偏移量
+    /// </summary>
     public int OffSet;
 
     public byte? BitOffSet;

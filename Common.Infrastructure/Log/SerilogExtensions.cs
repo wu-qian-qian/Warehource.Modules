@@ -31,7 +31,7 @@ public static class SerilogExtensions
         Serilog.Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Debug()
             .WriteTo.Console()
-            .MinimumLevel.Override("Microsoft", LogEventLevel.Fatal)
+            .MinimumLevel.Override("Microsoft", LogEventLevel.Error)
             .MinimumLevel.Override("Quartz", LogEventLevel.Warning)
             .Enrich.FromLogContext()
             // 系统日志

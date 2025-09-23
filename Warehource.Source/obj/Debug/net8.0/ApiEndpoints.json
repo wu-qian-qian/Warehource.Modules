@@ -183,6 +183,54 @@
     ]
   },
   {
+    "ContainingType": "Wcs.Presentation.ExecuteNode.GetExecuteNodeGroupCode\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "executenode/get-group-code",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "ExecuteNode"
+    ]
+  },
+  {
+    "ContainingType": "Wcs.Presentation.ExecuteNode.GetPage\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "executenode/get-page",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Wcs.Contracts.Request.ExecuteNode.GetExecuteNodePathPage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Shared.PageResult\u00601[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "ExecuteNode"
+    ]
+  },
+  {
     "ContainingType": "Wcs.Presentation.ExecuteNode.Get\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "executenode/gets",
@@ -573,6 +621,31 @@
     ]
   },
   {
+    "ContainingType": "Plc.Presentation.S7Plc.Delete.DeletePlc\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/delete-plc/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Plc"
+    ]
+  },
+  {
     "ContainingType": "Plc.Presentation.S7Plc.DownLoad\u002BDownLoadS7NetTemplate\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "plc/downLoad-plc-template",
@@ -626,6 +699,192 @@
         "MediaTypes": [
           "application/json"
         ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Plc"
+    ]
+  },
+  {
+    "ContainingType": "Plc.Presentation.S7Plc.Page.GetEntityItemPage\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/get-entityitem-page",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Plc.Contracts.Request.GetEntityItemPageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Shared.PageResult\u00601[[Plc.Contracts.Respon.S7EntityItemDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Plc"
+    ]
+  },
+  {
+    "ContainingType": "Plc.Presentation.S7Plc.Page.GetS7NetPage\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/get-plcnet-page",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Plc.Contracts.Request.GetS7NetPageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Shared.PageResult\u00601[[Plc.Contracts.Respon.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Plc"
+    ]
+  },
+  {
+    "ContainingType": "Plc.Presentation.GetEnum.GetS7BlockTypeEnum\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/get-s7blocktype-enum",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String[]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Enum"
+    ]
+  },
+  {
+    "ContainingType": "Plc.Presentation.GetEnum.GetDataTypeEnum\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/get-s7datatype-Enum",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String[]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Enum"
+    ]
+  },
+  {
+    "ContainingType": "Plc.Presentation.GetEnum.GetS7TypeEnum\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/get-s7Type-Enum",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String[]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Enum"
+    ]
+  },
+  {
+    "ContainingType": "Plc.Presentation.ReloadCache.ReloadPlcCache\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/reload-plc-cache",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Plc"
+    ]
+  },
+  {
+    "ContainingType": "Plc.Presentation.S7Plc.Update.UpdateEntityItem\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/update-entityitem",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Plc.Contracts.Request.UpdateEntityItemRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Plc"
+    ]
+  },
+  {
+    "ContainingType": "Plc.Presentation.S7Plc.Update.UpdateS7Net\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_0",
+    "RelativePath": "plc/update-s7net",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Plc.Contracts.Request.UpdateS7NetRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ],

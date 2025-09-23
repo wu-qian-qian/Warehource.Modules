@@ -13,7 +13,7 @@ namespace Common.Infrastructure.Event;
 public static class EventExtension
 {
     /// <summary>
-    ///     注意实体事件需要和实体在同一个程序集下
+    ///     注意实体事件需要和实体在最好在同一个程序集下
     /// </summary>
     /// <param name="services"></param>
     /// <param name="assembly"></param>
@@ -42,22 +42,25 @@ public static class EventExtension
         if (assemblies == null || assemblies.Length == 0)
             throw new ArgumentException("At least one assembly must be provided.", nameof(assemblies));
         var dictionary = new Dictionary<string, Type[]>();
-        foreach (var assembly in assemblies)
+        var assTypeList = assemblies.Select(p => p.GetTypes());
+        List<Type> types = new List<Type>();
+        foreach (var item in assTypeList)
         {
-            //获取所有实现了IEventDomain接口的类型
-            var handlerDomains = assembly.GetTypes().Where(type => type is { IsAbstract: false, IsInterface: false } &&
-                                                                   type.IsAssignableTo(typeof(IEventDomain)));
+            types.AddRange(item);
+        }
 
-            foreach (var item in handlerDomains)
-            {
-                //获取所有实现了IDomainEventHandler<item>接口的处理器类型
-                var handlers = assembly.GetTypes()
-                    .Where(t => t is { IsAbstract: false, IsInterface: false } &&
-                                t.IsAssignableTo(typeof(IDomainEventHandler<>).MakeGenericType(item)))
-                    .ToArray();
-                foreach (var handler in handlers) descriptors.AddTransient(handler);
-                dictionary.Add(item.FullName, handlers);
-            }
+        var handlerDomains = types.Where(type => type is { IsAbstract: false, IsInterface: false } &&
+                                                 type.IsAssignableTo(typeof(IEventDomain)));
+
+        foreach (var item in handlerDomains)
+        {
+            //获取所有实现了IDomainEventHandler<item>接口的处理器类型
+            var handlers = types
+                .Where(t => t is { IsAbstract: false, IsInterface: false } &&
+                            t.IsAssignableTo(typeof(IDomainEventHandler<>).MakeGenericType(item)))
+                .ToArray();
+            foreach (var handler in handlers) descriptors.AddTransient(handler);
+            dictionary.Add(item.FullName, handlers);
         }
 
         return dictionary;

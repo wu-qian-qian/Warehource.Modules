@@ -5,7 +5,7 @@ namespace Wcs.Application.Handler.DataBase.WcsTask.GetData;
 
 public class GetDataCommand : ICommand<IEnumerable<GetWcsDataDto>>
 {
-    public DateTimeOffset StartTime { get; set; }
+    public DateTime StartTime { get; set; }
 
-    public DateTimeOffset EndTime { get; set; }
+    public DateTime EndTime { get; set; }
 }

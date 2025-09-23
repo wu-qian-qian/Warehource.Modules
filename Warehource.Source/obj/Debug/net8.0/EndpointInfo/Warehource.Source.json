@@ -255,6 +255,72 @@
         }
       }
     },
+    "/plc/get-s7datatype-Enum": {
+      "get": {
+        "tags": [
+          "Enum"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/plc/get-s7blocktype-enum": {
+      "get": {
+        "tags": [
+          "Enum"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/plc/get-s7Type-Enum": {
+      "get": {
+        "tags": [
+          "Enum"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/executenode/delete/{id}": {
       "delete": {
         "tags": [
@@ -307,6 +373,57 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Common.Application.MediatR.Behaviors.Result`1[[System.Collections.Generic.IEnumerable`1[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/executenode/get-group-code": {
+      "get": {
+        "tags": [
+          "ExecuteNode"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/executenode/get-page": {
+      "post": {
+        "tags": [
+          "ExecuteNode"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wcs.Contracts.Request.ExecuteNode.GetExecuteNodePathPage"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Common.Shared.PageResult`1[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
                 }
               }
             }
@@ -879,6 +996,108 @@
         }
       }
     },
+    "/plc/update-entityitem": {
+      "put": {
+        "tags": [
+          "Plc"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Plc.Contracts.Request.UpdateEntityItemRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/plc/update-s7net": {
+      "put": {
+        "tags": [
+          "Plc"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Plc.Contracts.Request.UpdateS7NetRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/plc/get-entityitem-page": {
+      "post": {
+        "tags": [
+          "Plc"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Plc.Contracts.Request.GetEntityItemPageRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Common.Shared.PageResult`1[[Plc.Contracts.Respon.S7EntityItemDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/plc/get-plcnet-page": {
+      "post": {
+        "tags": [
+          "Plc"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Plc.Contracts.Request.GetS7NetPageRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Common.Shared.PageResult`1[[Plc.Contracts.Respon.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/plc/get-allplc": {
       "get": {
         "tags": [
@@ -913,6 +1132,41 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/plc/delete-plc/{id}": {
+      "delete": {
+        "tags": [
+          "Plc"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/plc/reload-plc-cache": {
+      "post": {
+        "tags": [
+          "Plc"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -1607,6 +1861,40 @@
         },
         "additionalProperties": false
       },
+      "Common.Shared.PageResult`1[[Plc.Contracts.Respon.S7EntityItemDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Plc.Contracts.Respon.S7EntityItemDto"
+            },
+            "nullable": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Shared.PageResult`1[[Plc.Contracts.Respon.S7NetDto, Plc.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Plc.Contracts.Respon.S7NetDto"
+            },
+            "nullable": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
       "Common.Shared.PageResult`1[[Wcs.Contracts.Respon.Device.DeviceDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
         "type": "object",
         "properties": {
@@ -1614,6 +1902,23 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Wcs.Contracts.Respon.Device.DeviceDto"
+            },
+            "nullable": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common.Shared.PageResult`1[[Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto, Wcs.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wcs.Contracts.Respon.ExecuteNode.ExecuteNodeDto"
             },
             "nullable": true
           },
@@ -1918,6 +2223,190 @@
         },
         "additionalProperties": false
       },
+      "Plc.Contracts.Request.GetEntityItemPageRequest": {
+        "type": "object",
+        "properties": {
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skipCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "ip": {
+            "type": "string",
+            "nullable": true
+          },
+          "deviceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Plc.Contracts.Request.GetS7NetPageRequest": {
+        "type": "object",
+        "properties": {
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skipCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "ip": {
+            "type": "string",
+            "nullable": true
+          },
+          "s7Type": {
+            "$ref": "#/components/schemas/Plc.Shared.S7TypeEnum"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Plc.Contracts.Request.UpdateEntityItemRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "s7DataType": {
+            "$ref": "#/components/schemas/Plc.Shared.S7DataTypeEnum"
+          },
+          "s7BlockType": {
+            "$ref": "#/components/schemas/Plc.Shared.S7BlockTypeEnum"
+          },
+          "isUse": {
+            "type": "boolean"
+          },
+          "dbAddress": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dataOffset": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bitOffset": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "arrayLength": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "deviceName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Plc.Contracts.Request.UpdateS7NetRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ip": {
+            "type": "string",
+            "nullable": true
+          },
+          "readHeart": {
+            "type": "string",
+            "nullable": true
+          },
+          "writeHeart": {
+            "type": "string",
+            "nullable": true
+          },
+          "isUse": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "readTimeOut": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "writeTimeOut": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "s7Type": {
+            "$ref": "#/components/schemas/Plc.Shared.S7TypeEnum"
+          },
+          "port": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "solt": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "rack": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Plc.Contracts.Respon.S7EntityItemDto": {
         "type": "object",
         "properties": {
@@ -1955,6 +2444,21 @@
           "arrtypeLength": {
             "type": "integer",
             "format": "int32",
+            "nullable": true
+          },
+          "deviceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ip": {
+            "type": "string",
+            "nullable": true
+          },
+          "isUse": {
+            "type": "boolean"
+          },
+          "dbAddress": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -2149,7 +2653,8 @@
           },
           "index": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "pahtNodeGroup": {
             "type": "string",
@@ -2164,6 +2669,42 @@
           "regionCode": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wcs.Contracts.Request.ExecuteNode.GetExecuteNodePathPage": {
+        "type": "object",
+        "properties": {
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skipCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "pahtNodeGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "taskType": {
+            "$ref": "#/components/schemas/Wcs.Shared.WcsTaskTypeEnum"
           }
         },
         "additionalProperties": false

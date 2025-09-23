@@ -22,12 +22,27 @@ public class InsertS7NetConfigCommandHandler(
     {
         Result<IEnumerable<S7NetDto>> result = new();
         var s7NetConfigs = new List<S7NetConfig>();
+        var ips = request.S7NetRequests.Select(p => p.Ip);
+        bool canExist = netManager.GetQueryNetConfig().Any(p => ips.Contains(p.Ip));
+        if (canExist == true)
+        {
+            result.SetMessage("存在相同ip");
+            return result;
+        }
+
+        var itemNames = request.S7NetEntityItemRequests.Select(p => $"{p.Ip}_{p.DeviceName}_{p.Name}").ToList();
+        var query = netManager.GetQueryS7EntityItem()
+            .Select(item => item.Ip + "_" + item.DeviceName + "_" + item.Name).Any(p => itemNames.Contains(p));
+        if (query == true)
+        {
+            result.SetMessage("数据导入重复");
+            return result;
+        }
+
         foreach (var netDto in request.S7NetRequests)
         {
             var config = new S7NetConfig
             {
-                Ip = netDto.Ip,
-                Port = netDto.Port,
                 S7Type = netDto.S7Type,
                 Solt = netDto.Solt,
                 Rack = netDto.Rack,
@@ -35,6 +50,8 @@ public class InsertS7NetConfigCommandHandler(
                 WriteTimeOut = netDto.WriteTimeOut,
                 IsUse = false
             };
+            config.UpdateIp(netDto.Ip);
+            config.UpdatePort(netDto.Port);
             var s7entityItems = request.S7NetEntityItemRequests
                 .Where(p => p.Ip == netDto.Ip);
             var s7EntityItemsList = s7entityItems
@@ -62,13 +79,13 @@ public class InsertS7NetConfigCommandHandler(
         #region 发送分布式事件
 
         //可以使用 Parallel并行  ，这边对于效率无高要求
-        var entityGroupArray = request.S7NetEntityItemRequests.GroupBy(p => p.DeviceName).ToArray();
-        for (var i = 0; i < entityGroupArray.Length; i++)
-        {
-            var entityNames = entityGroupArray[i].Select(p => p.Name).ToArray();
-            var plcMap = new PlcMapCreated(entityGroupArray[i].Key, entityNames);
-            await _publishEndpoint.Publish(plcMap);
-        }
+        //var entityGroupArray = request.S7NetEntityItemRequests.GroupBy(p => p.DeviceName).ToArray();
+        //for (var i = 0; i < entityGroupArray.Length; i++)
+        //{
+        //    var entityNames = entityGroupArray[i].Select(p => p.Name).ToArray();
+        //    var plcMap = new PlcMapCreated(entityGroupArray[i].Key, entityNames);
+        //    await _publishEndpoint.Publish(plcMap);
+        //}
 
         #endregion
 
