@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using Plc.Application.Handler.ReadWrite.Read;
-using Plc.Contracts.Input;
 using Plc.Contracts.Respon;
 using Plc.Domain.S7;
 

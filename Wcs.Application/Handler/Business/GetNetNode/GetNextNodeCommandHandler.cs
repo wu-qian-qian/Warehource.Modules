@@ -2,7 +2,7 @@
 using Wcs.Application.Abstract;
 using Wcs.Shared;
 
-namespace Wcs.Application.Handler.Business.SetExecuteDevice;
+namespace Wcs.Application.Handler.Business.GetNetNode;
 
 public class GetNextNodeCommandHandler(IDeviceService _deviceService)
     : ICommandHandler<GetNextNodeCommand, string>

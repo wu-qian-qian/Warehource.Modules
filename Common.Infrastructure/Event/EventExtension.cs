@@ -43,11 +43,8 @@ public static class EventExtension
             throw new ArgumentException("At least one assembly must be provided.", nameof(assemblies));
         var dictionary = new Dictionary<string, Type[]>();
         var assTypeList = assemblies.Select(p => p.GetTypes());
-        List<Type> types = new List<Type>();
-        foreach (var item in assTypeList)
-        {
-            types.AddRange(item);
-        }
+        var types = new List<Type>();
+        foreach (var item in assTypeList) types.AddRange(item);
 
         var handlerDomains = types.Where(type => type is { IsAbstract: false, IsInterface: false } &&
                                                  type.IsAssignableTo(typeof(IEventDomain)));

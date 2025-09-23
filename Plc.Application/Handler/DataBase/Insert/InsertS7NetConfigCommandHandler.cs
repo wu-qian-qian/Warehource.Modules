@@ -3,7 +3,6 @@ using Common.Application.MediatR.Message;
 using MassTransit;
 using Plc.Application.Abstract;
 using Plc.Contracts.Respon;
-using Plc.CustomEvents.Saga;
 using Plc.Domain.S7;
 
 namespace Plc.Application.Handler.DataBase.Insert;
@@ -23,8 +22,8 @@ public class InsertS7NetConfigCommandHandler(
         Result<IEnumerable<S7NetDto>> result = new();
         var s7NetConfigs = new List<S7NetConfig>();
         var ips = request.S7NetRequests.Select(p => p.Ip);
-        bool canExist = netManager.GetQueryNetConfig().Any(p => ips.Contains(p.Ip));
-        if (canExist == true)
+        var canExist = netManager.GetQueryNetConfig().Any(p => ips.Contains(p.Ip));
+        if (canExist)
         {
             result.SetMessage("存在相同ip");
             return result;
@@ -33,7 +32,7 @@ public class InsertS7NetConfigCommandHandler(
         var itemNames = request.S7NetEntityItemRequests.Select(p => $"{p.Ip}_{p.DeviceName}_{p.Name}").ToList();
         var query = netManager.GetQueryS7EntityItem()
             .Select(item => item.Ip + "_" + item.DeviceName + "_" + item.Name).Any(p => itemNames.Contains(p));
-        if (query == true)
+        if (query)
         {
             result.SetMessage("数据导入重复");
             return result;

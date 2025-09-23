@@ -2,14 +2,12 @@
 using Common.Helper;
 using Common.Presentation.Endpoints;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Plc.Application.Handler.DataBase.Insert;
 using Plc.Contracts.Request;
 using Plc.Contracts.Respon;
-using System.Collections.Generic;
 
 namespace Plc.Presentation.S7Plc;
 

@@ -1,6 +1,7 @@
 using Common.Infrastructure.EF;
 using Microsoft.EntityFrameworkCore;
 using Wcs.Application.Abstract;
+using Wcs.Domain.Event;
 using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.JobConfigs;
 using Wcs.Domain.Plc;
@@ -42,7 +43,7 @@ public sealed class WCSDBContext : BaseDbContext, IUnitOfWork
 
     public DbSet<PlcMap> PlcMaps { get; set; }
 
-    public DbSet<Domain.Event.Event> Events { get; set; }
+    public DbSet<Event> Events { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

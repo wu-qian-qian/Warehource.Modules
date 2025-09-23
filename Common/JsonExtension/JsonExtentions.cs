@@ -1,7 +1,8 @@
-﻿using Newtonsoft.Json;
-using System.Text.Encodings.Web;
+﻿using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Unicode;
+using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Common.JsonExtension;
 
@@ -32,14 +33,14 @@ public static class JsonExtentions
     public static string ToJsonString(this object value, bool camelCase = false)
     {
         var opt = CreateJsonSerializerOptions(camelCase);
-        return System.Text.Json.JsonSerializer.Serialize(value, value.GetType(), opt);
+        return JsonSerializer.Serialize(value, value.GetType(), opt);
     }
 
     public static T? ParseJson<T>(this string value)
     {
         if (string.IsNullOrWhiteSpace(value)) return default;
         var opt = CreateJsonSerializerOptions();
-        return System.Text.Json.JsonSerializer.Deserialize<T>(value, opt);
+        return JsonSerializer.Deserialize<T>(value, opt);
     }
 
     public static string NewtonsoftToJsonString(this object value)

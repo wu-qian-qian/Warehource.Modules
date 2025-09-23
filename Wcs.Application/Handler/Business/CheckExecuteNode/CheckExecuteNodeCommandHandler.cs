@@ -2,7 +2,7 @@
 using Common.Application.MediatR.Message;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Wcs.Application.Handler.Business.SetExecuteDevice;
+using Wcs.Application.Handler.Business.GetNetNode;
 using Wcs.Application.Handler.Http.Complate;
 using Wcs.Domain.ExecuteNode;
 using Wcs.Domain.Region;

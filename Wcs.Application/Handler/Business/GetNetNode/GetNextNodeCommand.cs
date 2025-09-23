@@ -1,7 +1,7 @@
 ﻿using Common.Application.MediatR.Message;
 using Wcs.Shared;
 
-namespace Wcs.Application.Handler.Business.SetExecuteDevice;
+namespace Wcs.Application.Handler.Business.GetNetNode;
 
 /// <summary>
 ///     巷道获取下一节点

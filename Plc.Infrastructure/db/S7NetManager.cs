@@ -79,13 +79,10 @@ public class S7NetManager(PlcDBContext context) : IS7NetManager
 
     public Task DeleteAsync(S7NetConfig[] s7NetConfigs)
     {
-        for (int i = 0; i < s7NetConfigs.Count(); i++)
+        for (var i = 0; i < s7NetConfigs.Count(); i++)
         {
             s7NetConfigs[i].SoftDelete();
-            foreach (var item in s7NetConfigs[i].S7EntityItems)
-            {
-                item.SoftDelete();
-            }
+            foreach (var item in s7NetConfigs[i].S7EntityItems) item.SoftDelete();
         }
 
         UpdateS7Net(s7NetConfigs);
