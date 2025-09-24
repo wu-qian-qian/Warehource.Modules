@@ -1,0 +1,878 @@
+{
+    "Timestamp": "2025-09-24T10:02:09.6228707+08:00",
+    "Level": "Information",
+    "URL": "::1",
+    "Request": "{"username":"string","password":"string"}",
+    "Response": "{"isSuccess":false,"value":null,"message":"无该用户string"}",
+    "TimeUsed": 287
+}
+{
+    "Timestamp": "2025-09-24T10:02:10.2823891+08:00",
+    "Level": "Information",
+    "URL": "::1",
+    "Request": "{"username":"string","password":"string"}",
+    "Response": "{"isSuccess":false,"value":null,"message":"无该用户string"}",
+    "TimeUsed": 14
+}
+{
+    "Timestamp": "2025-09-24T10:03:27.8375362+08:00",
+    "Level": "Information",
+    "URL": "::1",
+    "Request": "{  "username": "string",  "password": "string"}",
+    "Response": "{"isSuccess":false,"value":null,"message":"无该用户string"}",
+    "TimeUsed": 381
+}
+{
+    "Timestamp": "2025-09-24T10:03:28.4310348+08:00",
+    "Level": "Information",
+    "URL": "::1",
+    "Request": "{  "username": "string",  "password": "string"}",
+    "Response": "{"isSuccess":false,"value":null,"message":"无该用户string"}",
+    "TimeUsed": 21
+}
+{
+    "Timestamp": "2025-09-24T10:03:29.0973705+08:00",
+    "Level": "Information",
+    "URL": "::1",
+    "Request": "{  "username": "string",  "password": "string"}",
+    "Response": "{"isSuccess":false,"value":null,"message":"无该用户string"}",
+    "TimeUsed": 16
+}
+
+{
+    "Timestamp": "2025-09-24T13:09:09.4124819+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMjY1NDksImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.GbXqIbOJEyt4_BdOyuNK7oa7816hdrfmMFZLQTUXEP8","message":null}",
+    "TimeUsed": 197
+}
+{
+    "Timestamp": "2025-09-24T14:06:05.7694291+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMjk5NjUsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.dM2ZWkeN_mdkm46FEjC1udnollJDrsKv7XpS7j-S3kQ","message":null}",
+    "TimeUsed": 277
+}
+{
+    "Timestamp": "2025-09-24T14:06:13.7748391+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMjk5NzMsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.V2ioE9QVdYRdjDg0eOJd0hBmA1PjqHKv-fWUE7QUdbM","message":null}",
+    "TimeUsed": 7
+}
+{
+    "Timestamp": "2025-09-24T14:21:16.1512523+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzA4NzYsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.FaXsY7H0zemQCAQJoaN9YzIRuKAbUsV2rIjOMIqLN6U","message":null}",
+    "TimeUsed": 26
+}
+{
+    "Timestamp": "2025-09-24T14:26:52.0300326+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzEyMTIsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.-DmHZ11aLJwJGn5JI1dwfg2hTzmHsihFiIboYDgsOvw","message":null}",
+    "TimeUsed": 10
+}
+{
+    "Timestamp": "2025-09-24T14:30:10.0279455+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzE0MTAsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.3SRKTqs5EGdss87LDXw3AICskqAr9SzAESy10l_Qw5A","message":null}",
+    "TimeUsed": 10
+}
+{
+    "Timestamp": "2025-09-24T14:30:19.4681633+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzE0MTksImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.tOGamRRBfQjO6j7rx19Ytn6xQy8HmWxQqjBjN-ICQBw","message":null}",
+    "TimeUsed": 2
+}
+{
+    "Timestamp": "2025-09-24T14:31:30.2013915+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzE0OTAsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.LeM-fOfohSk9nlr4lYIPfgCqa1JrKC-Jd1i9GkMjSQw","message":null}",
+    "TimeUsed": 9
+}
+{
+    "Timestamp": "2025-09-24T14:32:15.1234465+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzE1MzUsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.MuieABFocmDEFS6FD92ZGsyxO99DZICa794li045864","message":null}",
+    "TimeUsed": 7
+}
+{
+    "Timestamp": "2025-09-24T14:34:02.4512245+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"c2z6zNLXfG2almUKsNhIbg","connectionToken":"LR8RbBK0lBklqMVLcpCeEw","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 15
+}
+{
+    "Timestamp": "2025-09-24T14:35:43.3944258+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzE3NDMsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.VvkMUpBN3fBbBYyU44pa3WfixQASRf_3EwhTA9XXpow","message":null}",
+    "TimeUsed": 14
+}
+{
+    "Timestamp": "2025-09-24T14:35:49.6419931+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzE3NDksImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.Rraqtjl2f7pocysIjm8kAffHNuwkYfd6lt5Vl3OfjXo","message":null}",
+    "TimeUsed": 3
+}
+{
+    "Timestamp": "2025-09-24T14:36:55.5420460+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzE4MTUsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.OpktRrJtwfl6ZA7HGvTZ9m0QzEqe6_fwC4_pljUs2Hc","message":null}",
+    "TimeUsed": 7
+}
+{
+    "Timestamp": "2025-09-24T14:39:59.1077767+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzE5OTksImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.KJ66AqY2jryXU-f2hGZFY6R-8XGGl1Eh-ZeP9Nqtb9Y","message":null}",
+    "TimeUsed": 12
+}
+{
+    "Timestamp": "2025-09-24T14:45:41.9386326+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzIzNDEsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.KFL75MSDAu_MNVb7plVtWn3Ho98NcM8KjSXjed7tlz4","message":null}",
+    "TimeUsed": 15
+}
+{
+    "Timestamp": "2025-09-24T14:47:34.7222794+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzI0NTQsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.GAtM4D4zVVFVnNMqJgl6wCI1WDZ6zYdnztf-r0e6hEg","message":null}",
+    "TimeUsed": 8
+}
+{
+    "Timestamp": "2025-09-24T14:48:44.2674027+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 8
+}
+{
+    "Timestamp": "2025-09-24T14:49:18.0200088+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzI1NTcsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.MktGKYefXZU-4cBYm1yO4RvGpjkJVqVrtmBy1BE0zDU","message":null}",
+    "TimeUsed": 370
+}
+{
+    "Timestamp": "2025-09-24T14:53:18.6418261+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzI3OTgsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.nrWT49fVy0l7hRJmI7wkqfNnPRQvhgaKT7i9n_r4s-8","message":null}",
+    "TimeUsed": 391
+}
+{
+    "Timestamp": "2025-09-24T14:53:21.0165353+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"_sFUYLKFfmW-rzbujfS8Cg","connectionToken":"UelaTUFfRuvcWzdaNYRF7A","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 16
+}
+{
+    "Timestamp": "2025-09-24T14:53:56.8402189+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 35818
+}
+{
+    "Timestamp": "2025-09-24T14:54:15.1133176+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzI4NTUsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.8cFsjqLISGZC_XOML22NcLYCQTvy6PuSV-lHpBmqeNQ","message":null}",
+    "TimeUsed": 38
+}
+{
+    "Timestamp": "2025-09-24T14:54:16.9453815+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"RBLy2tZ2BVZcLJyl4BCCuA","connectionToken":"RZPiMqdLxyxq7g0iMAgwaA","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 1
+}
+{
+    "Timestamp": "2025-09-24T14:54:58.8471040+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 41895
+}
+{
+    "Timestamp": "2025-09-24T14:55:28.1619246+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzI5MjgsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.slOMzE_neTcxl1G6e4gXDMDr_3pLkFvJq8Hp444_Tb0","message":null}",
+    "TimeUsed": 24
+}
+{
+    "Timestamp": "2025-09-24T14:55:34.1571293+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzI5MzQsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.QnW5i9jPuqtP1kHP5BEUvM_njk6WfpJfI5nbdf00Un8","message":null}",
+    "TimeUsed": 4
+}
+{
+    "Timestamp": "2025-09-24T14:55:36.6901363+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"Fh6ieA_eSiGCv_H9QTynyw","connectionToken":"UoEszbhrIXO8_jSqMa5Fzg","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-24T14:57:15.7402026+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 99044
+}
+{
+    "Timestamp": "2025-09-24T14:59:04.7959287+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzMxNDQsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.6lhvkR3P1_c1rW-tg_DJ1vERAgEu3g86HjJjVz5LZyI","message":null}",
+    "TimeUsed": 766
+}
+{
+    "Timestamp": "2025-09-24T14:59:14.2348863+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"n5c--VkeLl_IPEgycllaTw","connectionToken":"6HfqJLV0TNjyOX0OWcoTlA","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 11
+}
+{
+    "Timestamp": "2025-09-24T15:00:46.8579875+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 92618
+}
+{
+    "Timestamp": "2025-09-24T15:01:04.6115157+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"Y2ZTnEB1os5Lg_U52ikHaw","connectionToken":"MRIchOBPK4EtMcyId6587g","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-24T15:01:13.1773865+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzMyNzMsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.ijbjWEhDxLh2DnOxP5XR9E3f_eWkHDMGWZsRkCKiTL4","message":null}",
+    "TimeUsed": 21
+}
+{
+    "Timestamp": "2025-09-24T15:01:14.7612952+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"8vecrhD9baFLiBRvU0jprA","connectionToken":"M7oFggglUBRXg8QQ4rI83A","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-24T15:02:47.1509690+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 92384
+}
+{
+    "Timestamp": "2025-09-24T15:02:47.1510620+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 92384
+}
+{
+    "Timestamp": "2025-09-24T15:03:37.9023041+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"KHviVRcJtlf_-6ZsMe9OmQ","connectionToken":"RfZMGI2qO4fH6U_mqG6kpQ","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 123
+}
+{
+    "Timestamp": "2025-09-24T15:04:07.3337040+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"MYEdoh9VWzKIriA5xbJiIw","connectionToken":"Oqc54rzEpwGBjvIhv2CL_Q","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 7
+}
+{
+    "Timestamp": "2025-09-24T15:04:29.8342354+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 21677
+}
+{
+    "Timestamp": "2025-09-24T15:08:54.1568867+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"A1h7wgIQFXldQh4kLhiTzw","connectionToken":"wWkBnt2INHuNmjkEB0yVeQ","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 261
+}
+{
+    "Timestamp": "2025-09-24T15:13:11.9377492+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/.well-known/appspecific/com.chrome.devtools.json",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 65
+}
+{
+    "Timestamp": "2025-09-24T15:13:27.9900802+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{  "username": "admin",  "password": "qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzQwMDcsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.GnzVcdwqUhAXVkqsljw3ju_YJwS0k1pDLpIBBCNo7BM","message":null}",
+    "TimeUsed": 320
+}
+{
+    "Timestamp": "2025-09-24T15:34:53.0405762+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzUyOTMsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.C2F4rEXJhZBkrLpM5KBUzRbaGxpUY561b48ZY5rQNdc","message":null}",
+    "TimeUsed": 250
+}
+{
+    "Timestamp": "2025-09-24T15:35:28.3169216+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/update-wcstask-status",
+    "Request": "{"level":99,"isEnforce":false,"serialNumber":4000,"deviceName":null,"taskStatus":"Created","getLocation":"1_1_1_1_1","putLocation":"1_1_1_1_1"}",
+    "Response": "",
+    "TimeUsed": 577
+}
+{
+    "Timestamp": "2025-09-24T15:40:13.8689685+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzU2MTMsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.TLrixaWYlwdFFSXcF67lrkiMPKlzUKVgroJHH9s7ygU","message":null}",
+    "TimeUsed": 16
+}
+{
+    "Timestamp": "2025-09-24T15:41:04.9527615+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzU2NjQsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9._g81hjZm003yttj4SJdsBppUFE4TH_wpg-mcJEiACGY","message":null}",
+    "TimeUsed": 15
+}
+{
+    "Timestamp": "2025-09-24T15:44:13.7240424+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzU4NTMsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.Pm9QZhff_DblbYJUqMNWxxCPxiVtMOxyNhHLJvN9-AQ","message":null}",
+    "TimeUsed": 12
+}
+{
+    "Timestamp": "2025-09-24T15:45:00.6999338+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzU5MDAsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.wT11upPYsHViITX_p8tBXSGhapnG3b8M50jvzeLrJJU","message":null}",
+    "TimeUsed": 17
+}
+{
+    "Timestamp": "2025-09-24T15:46:01.8777335+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzU5NjEsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.f5zJKlqx0hPWrtO2llW_R7oij7BZvPxHrZ1704MT5aw","message":null}",
+    "TimeUsed": 547
+}
+{
+    "Timestamp": "2025-09-24T15:46:56.5254840+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzYwMTYsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.MZRd6xrwVfNLZqIjFvo5lGlMLCSWfPTBiYwsQpOL7A4","message":null}",
+    "TimeUsed": 13
+}
+{
+    "Timestamp": "2025-09-24T15:48:41.3897308+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzYxMjEsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.AtJShzD2w8UiXk1iEMaTszW0pi1EezAGTAlTO4ZRLTQ","message":null}",
+    "TimeUsed": 17
+}
+{
+    "Timestamp": "2025-09-24T15:53:55.7162777+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzY0MzUsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.D-NQGD0IN5A-yGF1v3S7ONuPAtHEKelYMQzWNucwb54","message":null}",
+    "TimeUsed": 37
+}
+{
+    "Timestamp": "2025-09-24T15:55:25.7004491+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzY1MjUsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.m5DfawKh6tDwbsGGk6ZvF_JfNOQFn6am7_9QEVAHWXM","message":null}",
+    "TimeUsed": 17
+}
+{
+    "Timestamp": "2025-09-24T15:55:43.2973384+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzY1NDMsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.K8KO441n5pDnF0BWGjeWEVku3UkhKdDy50n0xvOVYWQ","message":null}",
+    "TimeUsed": 8
+}
+{
+    "Timestamp": "2025-09-24T15:56:20.3652319+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzY1ODAsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.R_TdvMQJZkHwFHAxYzkBu8_FQ2Z3k-cC83k_2c4Ajvw","message":null}",
+    "TimeUsed": 7
+}
+{
+    "Timestamp": "2025-09-24T15:58:58.2683706+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzY3MzgsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.tpRGhM1kjMNA7LSGoQ7_DbWD_HtRt29D0CnHwM_o7V0","message":null}",
+    "TimeUsed": 14
+}
+{
+    "Timestamp": "2025-09-24T16:00:23.7841459+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzY4MjMsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.mFLE7xnrP1aHdSFxdF-33pMmNSGxURQZtuKW2IGb-q4","message":null}",
+    "TimeUsed": 7
+}
+{
+    "Timestamp": "2025-09-24T16:02:07.5222649+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzY5MjcsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.GZHW8pV7DtXxGSOYlGSzCh2d8N5adVPcadzrscwSW0w","message":null}",
+    "TimeUsed": 15
+}
+{
+    "Timestamp": "2025-09-24T16:03:11.4402477+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyMzY5OTEsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.eshixJnqXzZBQHmF1FePV6iif2EateOSeG1GQt7zgNE","message":null}",
+    "TimeUsed": 17
+}
+{
+    "Timestamp": "2025-09-24T16:03:13.0556126+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"U_7RptSLj3L0xHdWc9g6KQ","connectionToken":"WD8hgXjiB3WxXccucrx67Q","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 8
+}
+{
+    "Timestamp": "2025-09-24T16:03:49.8614898+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"aWHS_Pj-SS18WBhpDwD-qA","connectionToken":"4KyF_-LdnLXsCecyvlkgMA","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-24T16:03:57.2731846+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"6fXyEEIjrz9q9JajkOflZg","connectionToken":"J8tkLlcePSM1cE8A2sHZFA","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-24T16:04:20.0897144+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"bkL9UXMntWNLejCIvvaLrw","connectionToken":"lI7vQkogC5k-3sPPZ_v5Eg","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-24T16:05:23.1326704+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"Sm3R0_M0h8DZcaT4IrG5rQ","connectionToken":"ohk4lOBAgxmoFiuBQ4EQZA","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 8
+}
+{
+    "Timestamp": "2025-09-24T16:10:54.4912267+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"ue5Ikn4eG-EQgmIV3ip7EQ","connectionToken":"R2jsg2jBaJ0eFDTB4ZHQow","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 8
+}
+{
+    "Timestamp": "2025-09-24T16:12:33.8970533+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"m5mkHDbX7gjs-LXZtE52Tw","connectionToken":"mGuEvQFTuOvbSnmAj0WF3g","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 123
+}
+{
+    "Timestamp": "2025-09-24T16:14:12.1958983+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"hMMhWLD_VY2X1LgvVYVirA","connectionToken":"cb24sc0JisLBp4bMxo5s4g","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 175
+}
+{
+    "Timestamp": "2025-09-24T16:15:45.8951849+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"RycARONOT4oBc5Xgee_5uA","connectionToken":"HVHU-6DYoayCV_3Ab86heQ","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 244
+}
+{
+    "Timestamp": "2025-09-24T16:15:53.4824617+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"YykGrxOwjS3NFv6mnjzkHw","connectionToken":"Zn1I35SwmtBH3Uke5_-ynQ","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 6
+}
+{
+    "Timestamp": "2025-09-24T16:16:02.5973833+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/getenum/get-creatorSystemType",
+    "Request": "",
+    "Response": "["Wcs","Other"]",
+    "TimeUsed": 2
+}
+{
+    "Timestamp": "2025-09-24T16:16:02.6092613+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/getenum/get-wcstaskstatus",
+    "Request": "",
+    "Response": "["Created","Analysited","InProgress","Completed","Failed","Cancelled"]",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-24T16:16:02.6160475+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/getenum/get-wcstasktype",
+    "Request": "",
+    "Response": "["Error","StockIn","StockOut","StockMove"]",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-24T16:16:02.7537415+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/region/get-region",
+    "Request": "",
+    "Response": "[{"code":"A","description":"路线A","maxNum":0,"currentNum":0,"id":"2e5f87f4-298e-4f38-ba0c-54c0bf9d20a9","creationTime":"2025-09-19 16:04:33","lastModifierUser":"管理员","lastModificationTime":"2025-09-19 16:04:33"}]",
+    "TimeUsed": 131
+}
+{
+    "Timestamp": "2025-09-24T16:16:03.1115983+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-wcstask-pagequery",
+    "Request": "{"SerialNumber":null,"Container":null,"TaskCode":null,"GetLocation":null,"PutLocation":null,"CreatorSystemType":null,"TaskType":null,"TaskStatus":null,"StartTime":null,"EndTime":null,"PageIndex":1,"Total":20}",
+    "Response": "{"data":[{"level":99,"isEnforce":false,"taskCode":"123","serialNumber":4000,"container":"123","taskType":"StockIn","taskStatus":"Created","creatorSystemType":"Wcs","description":null,"getLocation":"1_1_1_1_1","putLocation":"1_1_1_1_1","executeDesc":"任务创建","executePath":null,"stockInPosition":null,"stockOutPosition":null,"currentDevice":null,"id":"38f9828a-b56f-4275-ad7d-a1a29968ce94","creationTime":"2025-09-19 16:19:53","lastModifierUser":"管理员","lastModificationTime":"2025-09-24 15:35:28"}],"totalCount":1}",
+    "TimeUsed": 346
+}
+{
+    "Timestamp": "2025-09-24T16:32:20.6060373+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/favicon.ico",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 330
+}
+{
+    "Timestamp": "2025-09-24T16:32:40.8991643+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 343
+}
+{
+    "Timestamp": "2025-09-24T16:32:45.5353634+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 15
+}
+{
+    "Timestamp": "2025-09-24T16:32:50.7836317+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 12
+}
+{
+    "Timestamp": "2025-09-24T16:32:55.7716880+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 4
+}
+{
+    "Timestamp": "2025-09-24T16:33:00.7888744+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 7
+}
+{
+    "Timestamp": "2025-09-24T16:33:05.7845043+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 12
+}
+{
+    "Timestamp": "2025-09-24T16:33:10.7806774+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 2
+}
+{
+    "Timestamp": "2025-09-24T16:33:15.7822904+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 10
+}
+{
+    "Timestamp": "2025-09-24T16:33:20.7694816+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 1
+}
+{
+    "Timestamp": "2025-09-24T16:33:25.7647803+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 2
+}
+{
+    "Timestamp": "2025-09-24T16:33:30.7652515+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 2
+}
+{
+    "Timestamp": "2025-09-24T16:33:35.7687549+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 5
+}
+{
+    "Timestamp": "2025-09-24T16:33:40.7669983+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 3
+}
+{
+    "Timestamp": "2025-09-24T16:33:45.7642277+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 2
+}
+{
+    "Timestamp": "2025-09-24T16:34:03.7687587+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 4
+}
+{
+    "Timestamp": "2025-09-24T16:35:03.7760056+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 6
+}
+{
+    "Timestamp": "2025-09-24T16:36:03.7765203+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 5
+}
+{
+    "Timestamp": "2025-09-24T16:37:03.7722758+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 5
+}

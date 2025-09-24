@@ -1,0 +1,106 @@
+{ "Timestamp": "2025-09-24T08:50:49.0356480+08:00",
+  "Exception": "", 
+"StackTrace": "" }{ "Timestamp": "2025-09-24T08:52:54.7169358+08:00",
+  "Exception": "FluentValidation.ValidationException: Validation failed: 
+ -- Username: 'Username' 不能为Null。 Severity: Error
+ -- Password: 'Password' 不能为Null。 Severity: Error
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 21
+   at Identity.Presentation.Login.Login.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\User.Presentation\Login\Login.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+", 
+"StackTrace": "FluentValidation.ValidationException: Validation failed: 
+ -- Username: 'Username' 不能为Null。 Severity: Error
+ -- Password: 'Password' 不能为Null。 Severity: Error
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 21
+   at Identity.Presentation.Login.Login.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\User.Presentation\Login\Login.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+" }{ "Timestamp": "2025-09-24T08:54:25.1513224+08:00",
+  "Exception": "FluentValidation.ValidationException: Validation failed: 
+ -- Username: 'Username' 不能为Null。 Severity: Error
+ -- Password: 'Password' 不能为Null。 Severity: Error
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 21
+   at Identity.Presentation.Login.Login.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\User.Presentation\Login\Login.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+", 
+"StackTrace": "FluentValidation.ValidationException: Validation failed: 
+ -- Username: 'Username' 不能为Null。 Severity: Error
+ -- Password: 'Password' 不能为Null。 Severity: Error
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 21
+   at Identity.Presentation.Login.Login.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\User.Presentation\Login\Login.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+" }{ "Timestamp": "2025-09-24T08:57:21.6593268+08:00",
+  "Exception": "FluentValidation.ValidationException: Validation failed: 
+ -- Username: 'Username' 不能为Null。 Severity: Error
+ -- Password: 'Password' 不能为Null。 Severity: Error
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 21
+   at Identity.Presentation.Login.Login.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\User.Presentation\Login\Login.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+", 
+"StackTrace": "FluentValidation.ValidationException: Validation failed: 
+ -- Username: 'Username' 不能为Null。 Severity: Error
+ -- Password: 'Password' 不能为Null。 Severity: Error
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 21
+   at Identity.Presentation.Login.Login.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\User.Presentation\Login\Login.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+" }2025-09-24 08:58:36.044 +08:00 [ERR] 
+FluentValidation.ValidationException: Validation failed: 
+ -- Username: 'Username' 不能为Null。 Severity: Error
+ -- Password: 'Password' 不能为Null。 Severity: Error
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 21
+   at Identity.Presentation.Login.Login.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\User.Presentation\Login\Login.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-09-24 08:59:57.707 +08:00 [ERR] 
+FluentValidation.ValidationException: Validation failed: 
+ -- Username: 'Username' 不能为Null。 Severity: Error
+ -- Password: 'Password' 不能为Null。 Severity: Error
+   at Common.Application.MediatR.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Program\仓库\Warehource.Modules\Common.Application\MediatR\Behaviors\ValidationPipelineBehavior.cs:line 21
+   at Identity.Presentation.Login.Login.<>c.<<MapEndpoint>b__0_0>d.MoveNext() in D:\Program\仓库\Warehource.Modules\User.Presentation\Login\Login.cs:line 20
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfT>g__ExecuteAwaited|133_0[T](Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
