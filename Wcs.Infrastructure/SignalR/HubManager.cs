@@ -20,11 +20,11 @@ internal class HubManager : IHubManager
     public async Task SendUserMessage(string userName, string content)
     {
         var userId = WcsHub.UserConnections.FirstOrDefault(x => x.Key == userName).Value;
-        await _hubContext.Clients.User(userId).SendMessage(content);
+        await _hubContext.Clients.User(userId).ReceiveMessage(content);
     }
 
     public async Task SendAllUserMessage(string content)
     {
-        await _hubContext.Clients.All.SendMessage(content);
+        await _hubContext.Clients.All.ReceiveMessage(content);
     }
 }

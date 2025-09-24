@@ -1,12 +1,14 @@
 ﻿using System.Collections.Concurrent;
 using System.Security.Claims;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
+using Wcs.Application.Handler.DataBase.Job.Get;
 
 namespace Wcs.Application.SignalR.ChatHub;
 
 [Authorize]
-public class WcsHub : Hub<IClient>
+public class WcsHub(ISender sender) : Hub<IClient>
 {
     public static ConcurrentDictionary<string, string> UserConnections { get; } = new();
 
@@ -20,7 +22,9 @@ public class WcsHub : Hub<IClient>
 
     public async Task SendMessage(string message)
     {
+        var data = await sender.Send(new GetAllJobQuery());
         await Task.Delay(100);
         Console.WriteLine(message);
+        await Clients.All.ReceiveMessage("服务器回信...." + message);
     }
 }

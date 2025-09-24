@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using Common.Application.Log;
 using Common.Shared;
+using Common.Shared.Log;
 using Microsoft.AspNetCore.Http;
 
 namespace Common.Infrastructure.Middleware;
@@ -29,6 +30,7 @@ public class GlobalLogMiddleware
         if (isFileResponse == false) //如果请求流不为文件
         {
             var containsGet = Regex.IsMatch(context.Request.Path, "get");
+            containsGet = containsGet && Regex.IsMatch(context.Request.Path, "hub");
             if (request.Method == "Get" || containsGet) //get方法不做日志记录
                 await _next(context);
             else
@@ -58,9 +60,10 @@ public class GlobalLogMiddleware
                     _stopwatch.Stop();
                     responseData = await GetResponse(context.Response);
                     await responseBody.CopyToAsync(originalBodyStream);
-                    Serilog.Log.Logger.ForCategory(LogCategory.Http)
-                        .Information(
-                            $"地址：{context.Connection.RemoteIpAddress.ToString()}\nURL:{context.Request.Path}\n请求体：{requestData}\n响应体：{responseData}\n时间：{_stopwatch.ElapsedMilliseconds}");
+                    // 确保所有属性名称与模板中的占位符完全匹配
+                    Serilog.Log.Logger.HttpInformation(LogCategory.Http,
+                        new HttpLog(context?.Connection?.RemoteIpAddress?.ToString(),
+                            request.Path, _stopwatch.ElapsedMilliseconds, requestData, responseData));
                 }
         }
         else

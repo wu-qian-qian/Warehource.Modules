@@ -21,7 +21,7 @@ public sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logge
         CancellationToken cancellationToken)
     {
         Serilog.Log.Logger.ForCategory(LogCategory.Error)
-            .Error($"{exception.StackTrace}--{exception.InnerException.Message}--{exception.Message}");
+            .Error(exception, "");
         var problemDetails = new ProblemDetails
         {
             Status = StatusCodes.Status500InternalServerError,

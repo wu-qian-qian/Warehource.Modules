@@ -5,5 +5,5 @@
 /// </summary>
 public interface IClient
 {
-    public Task SendMessage(string message);
+    public Task ReceiveMessage(string message);
 }

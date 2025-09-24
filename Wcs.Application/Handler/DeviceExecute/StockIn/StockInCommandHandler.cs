@@ -62,7 +62,7 @@ internal class StockInCommandHandler(
                             {
                                 wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.SendEnding;
                                 //任务数据更新缓存
-                                await _cacheService.SetAsync(stockIn.Config.TaskKey, wcsTask);
+                                await _cacheService.SetAsync(stockIn.Config.Key, wcsTask);
                                 Log.Logger.ForCategory(LogCategory.Business)
                                     .Information($"{wcsTask.SerialNumber}--发送执行任务");
                             }
@@ -83,7 +83,7 @@ internal class StockInCommandHandler(
                 {
                     //重新发送
                     wcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.BeSending;
-                    await _cacheService.SetAsync(stockIn.Config.TaskKey, wcsTask);
+                    await _cacheService.SetAsync(stockIn.Config.Key, wcsTask);
                     var targetCode =
                         await _deviceService.GetTargetPipelinAsync(wcsTask.TaskExecuteStep.DeviceType.Value
                             , wcsTask.TaskExecuteStep.CurentDevice);

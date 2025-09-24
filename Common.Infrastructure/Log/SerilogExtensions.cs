@@ -30,30 +30,44 @@ public static class SerilogExtensions
         //配置日志
         Serilog.Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Debug()
-            .WriteTo.Console()
             .MinimumLevel.Override("Microsoft", LogEventLevel.Error)
             .MinimumLevel.Override("Quartz", LogEventLevel.Warning)
             .Enrich.FromLogContext()
             // 系统日志
             .WriteTo.Logger(l => l
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") == false)
+                .WriteTo.Console()
                 .WriteTo.File("Logs/systems/system-.log", rollingInterval: RollingInterval.Day,
                     outputTemplate:
-                    "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
+                    "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}"))
             // 业务日志
             .WriteTo.Logger(l => l
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&
                                              e.Properties["Category"].ToString() == "Business")
                 .WriteTo.File("Logs/business/business-.log", rollingInterval: RollingInterval.Day,
                     outputTemplate:
-                    "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
+                    @"{{
+    ""Timestamp"": ""{Timestamp:o}"",
+    ""Level"": ""{Level}"",
+ ""DeviceName"": ""{DeviceName}"",
+    ""SerialNum"": ""{SerialNum}"",
+    ""Message"": ""{Message}""
+}}{NewLine}"))
             //Http日志
             .WriteTo.Logger(l => l
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&
                                              e.Properties["Category"].ToString() == "Http")
                 .WriteTo.File("Logs/Https/http-.log", rollingInterval: RollingInterval.Day,
-                    outputTemplate:
-                    "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
+                    outputTemplate: @"{{
+    ""Timestamp"": ""{Timestamp:o}"",
+    ""Level"": ""{Level}"",
+ ""IP"": ""{IP}"",
+    ""URL"": ""{URL}"",
+    ""Request"": ""{Request}"",
+    ""Response"": ""{Response}"",
+    ""TimeUsed"": {TimeUsed}
+}}{NewLine}")
+            )
             //error日志
             .WriteTo.Logger(l => l
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&
@@ -63,12 +77,12 @@ public static class SerilogExtensions
                     "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
 
             //Event日志
-            .WriteTo.Logger(l => l
+            /*.WriteTo.Logger(l => l
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&
                                              e.Properties["Event"].ToString() == "Event")
                 .WriteTo.File("Logs/Event/event-.log", rollingInterval: RollingInterval.Day,
                     outputTemplate:
-                    "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
+                    "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))*/
             //网络链接日志
             .WriteTo.Logger(l => l
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&

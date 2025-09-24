@@ -9,6 +9,6 @@ public class SignalEndpoint : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapHub<WcsHub>("/wcshub");
+        app.MapHub<WcsHub>("/wcshub").RequireCors();
     }
 }

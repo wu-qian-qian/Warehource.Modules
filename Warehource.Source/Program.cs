@@ -15,9 +15,17 @@ using Wcs.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 builder.AddSerilogConfiguratorCategory();
 
-builder.Services.AddCors();
-
-
+//跨域设置
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithMethods("PUT", "DELETE", "GET", "POST", "PATCH")
+            .SetIsOriginAllowed(_ => true)
+            .AllowAnyHeader()
+            .AllowCredentials();
+    });
+});
 //服务通用模块
 Action<HttpResponseMessage> policyCallback = result =>
 {
@@ -80,7 +88,7 @@ if (app.Environment.IsDevelopment())
     app.Initialization(); //在开发环境中应用数据库迁移
 }
 
-app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+app.UseCors();
 
 
 app.UseSerilogRequest();

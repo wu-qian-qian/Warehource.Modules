@@ -1858,3 +1858,56 @@ System.ArgumentException: Type provided must be an Enum. (Parameter 'enumType')
 2025-09-23 17:05:36.870 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_ddooyyrronegmpn3bdq9iynhb5"
 2025-09-23 17:05:36.870 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskData"
 2025-09-23 17:05:36.874 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-09-23 17:28:57.674 +08:00 [INF] Configured endpoint PlcMapDataIntegrationEvent, Consumer: Wcs.Presentation.Custom.PlcMapDataIntegrationEventConsumer
+2025-09-23 17:28:57.751 +08:00 [INF] Configured endpoint WcsWritePlcTaskData, Consumer: Wcs.Presentation.Custom.WcsWritePlcTaskDataConsumer
+2025-09-23 17:28:57.763 +08:00 [INF] Configured endpoint S7ReadPlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.ReadPlcEventConsumer<Plc.CustomEvents.S7ReadPlcDataBlockIntegrationEvent>
+2025-09-23 17:28:57.770 +08:00 [INF] Configured endpoint S7WritePlcDataBlockIntegrationEvent, Consumer: Plc.Presentation.Custom.WritePlcEventConsumer<Plc.CustomEvents.S7WritePlcDataBlockIntegrationEvent>
+2025-09-23 17:28:57.775 +08:00 [INF] Configured endpoint PlcMapEventCommit, Consumer: Plc.Presentation.Custom.PlcMapEventCommitConsumer
+2025-09-23 17:28:57.987 +08:00 [INF] Configured endpoint WcsWritePlcTaskState, Saga: Wcs.Presentation.Saga.WcsWritePlcTaskState, State Machine: Wcs.Presentation.Saga.WcsWritePlcTaskSaga
+2025-09-23 17:28:58.023 +08:00 [INF] Configured endpoint PlcMapState, Saga: Plc.Presentation.Saga.PlcMapState, State Machine: Plc.Presentation.Saga.PlcMapSaga
+2025-09-23 17:28:58.519 +08:00 [DBG] Starting bus instances: IBus
+2025-09-23 17:28:58.527 +08:00 [DBG] Starting bus: "loopback://localhost/"
+2025-09-23 17:28:58.595 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-09-23 17:28:58.595 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskState"
+2025-09-23 17:28:58.595 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapState"
+2025-09-23 17:28:58.595 +08:00 [DBG] Endpoint Ready: "loopback://localhost/WcsWritePlcTaskData"
+2025-09-23 17:28:58.595 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent"
+2025-09-23 17:28:58.595 +08:00 [DBG] Endpoint Ready: "loopback://localhost/PlcMapEventCommit"
+2025-09-23 17:28:58.595 +08:00 [DBG] Endpoint Ready: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent"
+2025-09-23 17:28:58.595 +08:00 [DBG] Endpoint Ready: "loopback://localhost/_WarehourceSource_bus_8dpyyyrronegkddxbdq9iyh9fq"
+2025-09-23 17:28:58.604 +08:00 [INF] Bus started: "loopback://localhost/"
+2025-09-23 17:29:57.384 +08:00 [DBG] Stopping bus instances: IBus
+2025-09-23 17:29:57.392 +08:00 [DBG] Stopping bus: "loopback://localhost/"
+2025-09-23 17:29:57.405 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-09-23 17:29:57.408 +08:00 [DBG] Consumer Stopping: "loopback://localhost/PlcMapDataIntegrationEvent" (Stop Receive Transport)
+2025-09-23 17:29:57.425 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/WcsWritePlcTaskData"
+2025-09-23 17:29:57.426 +08:00 [DBG] Endpoint Completed: "loopback://localhost/PlcMapDataIntegrationEvent"
+2025-09-23 17:29:57.427 +08:00 [DBG] Consumer Stopping: "loopback://localhost/WcsWritePlcTaskData" (Stop Receive Transport)
+2025-09-23 17:29:57.430 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent"
+2025-09-23 17:29:57.430 +08:00 [DBG] Endpoint Completed: "loopback://localhost/WcsWritePlcTaskData"
+2025-09-23 17:29:57.433 +08:00 [DBG] Consumer Stopping: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent" (Stop Receive Transport)
+2025-09-23 17:29:57.438 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent"
+2025-09-23 17:29:57.438 +08:00 [DBG] Endpoint Completed: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent"
+2025-09-23 17:29:57.439 +08:00 [DBG] Consumer Stopping: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent" (Stop Receive Transport)
+2025-09-23 17:29:57.442 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/PlcMapEventCommit"
+2025-09-23 17:29:57.442 +08:00 [DBG] Endpoint Completed: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent"
+2025-09-23 17:29:57.444 +08:00 [DBG] Consumer Stopping: "loopback://localhost/PlcMapEventCommit" (Stop Receive Transport)
+2025-09-23 17:29:57.447 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/WcsWritePlcTaskState"
+2025-09-23 17:29:57.447 +08:00 [DBG] Endpoint Completed: "loopback://localhost/PlcMapEventCommit"
+2025-09-23 17:29:57.447 +08:00 [DBG] Consumer Completed: "loopback://localhost/S7WritePlcDataBlockIntegrationEvent": 0 received, 0 concurrent
+2025-09-23 17:29:57.447 +08:00 [DBG] Consumer Completed: "loopback://localhost/S7ReadPlcDataBlockIntegrationEvent": 0 received, 0 concurrent
+2025-09-23 17:29:57.447 +08:00 [DBG] Consumer Completed: "loopback://localhost/WcsWritePlcTaskData": 0 received, 0 concurrent
+2025-09-23 17:29:57.447 +08:00 [DBG] Consumer Completed: "loopback://localhost/PlcMapDataIntegrationEvent": 0 received, 0 concurrent
+2025-09-23 17:29:57.448 +08:00 [DBG] Consumer Stopping: "loopback://localhost/WcsWritePlcTaskState" (Stop Receive Transport)
+2025-09-23 17:29:57.449 +08:00 [DBG] Consumer Completed: "loopback://localhost/PlcMapEventCommit": 0 received, 0 concurrent
+2025-09-23 17:29:57.459 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/PlcMapState"
+2025-09-23 17:29:57.459 +08:00 [DBG] Endpoint Completed: "loopback://localhost/WcsWritePlcTaskState"
+2025-09-23 17:29:57.462 +08:00 [DBG] Consumer Stopping: "loopback://localhost/PlcMapState" (Stop Receive Transport)
+2025-09-23 17:29:57.463 +08:00 [DBG] Consumer Completed: "loopback://localhost/WcsWritePlcTaskState": 0 received, 0 concurrent
+2025-09-23 17:29:57.465 +08:00 [DBG] Endpoint Completed: "loopback://localhost/PlcMapState"
+2025-09-23 17:29:57.469 +08:00 [DBG] Consumer Completed: "loopback://localhost/PlcMapState": 0 received, 0 concurrent
+2025-09-23 17:29:57.475 +08:00 [DBG] Endpoint Stopping: "loopback://localhost/_WarehourceSource_bus_8dpyyyrronegkddxbdq9iyh9fq"
+2025-09-23 17:29:57.476 +08:00 [DBG] Consumer Stopping: "loopback://localhost/_WarehourceSource_bus_8dpyyyrronegkddxbdq9iyh9fq" (Stop Receive Transport)
+2025-09-23 17:29:57.478 +08:00 [DBG] Endpoint Completed: "loopback://localhost/_WarehourceSource_bus_8dpyyyrronegkddxbdq9iyh9fq"
+2025-09-23 17:29:57.480 +08:00 [DBG] Consumer Completed: "loopback://localhost/_WarehourceSource_bus_8dpyyyrronegkddxbdq9iyh9fq": 0 received, 0 concurrent
+2025-09-23 17:29:57.499 +08:00 [INF] Bus stopped: "loopback://localhost/"
