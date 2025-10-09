@@ -67,7 +67,7 @@ public static class ReflectionHelper
     /// <returns></returns>
     private static bool IsManagedAssembly(string file)
     {
-        using var fs = File.OpenRead(file);
+        using var fs = System.IO.File.OpenRead(file);
         using var peReader = new PEReader(fs);
         return peReader.HasMetadata && peReader.GetMetadataReader().IsAssembly;
     }

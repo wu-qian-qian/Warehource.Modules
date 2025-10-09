@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Common;
+namespace Common.File;
 
 public static class ReadFileText
 {
@@ -13,7 +13,7 @@ public static class ReadFileText
     public static Dictionary<int, string> ReadFixedLinesLargeFile(string filePath, int[] targetLineNumbers)
     {
         // 验证参数
-        if (!File.Exists(filePath))
+        if (!System.IO.File.Exists(filePath))
             throw new FileNotFoundException("文件不存在", filePath);
         if (targetLineNumbers == null || targetLineNumbers.Length == 0)
             throw new ArgumentNullException(nameof(targetLineNumbers), "请指定要读取的行号");
