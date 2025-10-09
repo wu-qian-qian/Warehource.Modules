@@ -1,0 +1,54 @@
+{
+    "Timestamp": "2025-09-25T16:10:14.1120373+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 13
+}
+{
+    "Timestamp": "2025-09-25T16:10:22.9139775+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 1
+}
+{
+    "Timestamp": "2025-09-25T16:10:31.6672568+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/swagger",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 1
+}
+{
+    "Timestamp": "2025-09-25T16:12:35.9249241+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 10
+}
+{
+    "Timestamp": "2025-09-25T16:13:22.7187673+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-25T16:13:52.3657455+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{  "username": "admin",  "password": "qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAzMjQwMzIsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.StjxT11_L679SI3SXLAaeFyf4SzyX7xY5-lBVIeTSL4","message":null}",
+    "TimeUsed": 287
+}

@@ -9,6 +9,17 @@ namespace Warehource.Source;
 
 public static class AddModulesExtensions
 {
+    /// <summary>
+    /// </summary>
+    /// <param name="service"></param>
+    /// <param name="configuration">配置</param>
+    /// <param name="assemblies">程序集</param>
+    /// <param name="infrastructureModules">模块的基础设施</param>
+    /// <param name="mediatrActions">mediatr中介者</param>
+    /// <param name="moduleConfigureConsumers">模块通讯消费者</param>
+    /// <param name="jobActs">后台任务</param>
+    /// <param name="mapConfigs">automapper</param>
+    /// <returns></returns>
     public static IServiceCollection AddModules(this IServiceCollection service,
         IConfiguration configuration,
         Assembly[] assemblies,
@@ -18,12 +29,19 @@ public static class AddModulesExtensions
         Action<IServiceCollection>[] jobActs,
         Action<IMapperConfigurationExpression>[] mapConfigs)
     {
+        //基础设施模块注入
         AddInfrastructureModules(service, configuration, infrastructureModules);
+        //模块masstransit事件消费者
         AddMassTransit(service, moduleConfigureConsumers);
+        //本地事件总线
         AddEvent(service, assemblies);
+        //中介者
         AddMediatR(service, assemblies, mediatrActions);
+        //后台任务
         AddJob(service, jobActs);
+        // automapper
         AddAutoMap(service, mapConfigs);
+        //数据库拦截器
         service.AddScoped<LastModificationInterceptor>();
         return service;
     }

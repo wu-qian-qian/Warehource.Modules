@@ -876,3 +876,120 @@
     "Response": "[]",
     "TimeUsed": 5
 }
+{
+    "Timestamp": "2025-09-24T17:31:09.2320255+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcstask/get-TaskData/2025-09-24",
+    "Request": "",
+    "Response": "[]",
+    "TimeUsed": 395
+}
+{
+    "Timestamp": "2025-09-24T17:31:10.7276532+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/user/user-login",
+    "Request": "{"username":"admin","password":"qwe"}",
+    "Response": "{"isSuccess":true,"value":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiLnrqHnkIblkZgiLCJleHAiOjE3OTAyNDIyNzAsImlzcyI6Im15SXNzdWVyIiwiYXVkIjoibXlBdWRpZW5jZSJ9.4AFKumBEXqxDYUtM12OkZeJlzYFN0jx1DoPsSltcJpg","message":null}",
+    "TimeUsed": 233
+}
+{
+    "Timestamp": "2025-09-24T17:31:10.9656496+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/get/get-user/admin",
+    "Request": "",
+    "Response": "{"id":"1cfb5897-61a3-4292-af0a-f5b04bf949c4","name":"管理员","description":null,"email":null,"phone":null,"username":"admin","lockoutEnd":"1925-09-19T16:15:32.790746+08:00","roleName":"admin"}",
+    "TimeUsed": 231
+}
+{
+    "Timestamp": "2025-09-24T17:31:12.8169780+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"2d4kJyJrTK4dE3xV1vEl-w","connectionToken":"vbcE1TFWELnu-E19nt0GUw","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 10
+}
+{
+    "Timestamp": "2025-09-24T17:32:38.8086072+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"QEMbNweE4QX88RGM-zAa5A","connectionToken":"bDNQ92BF2lnmZSstz4zmnQ","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-24T17:32:38.9466263+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"U3ycldIIsYUCFzHnxAL9fA","connectionToken":"PYfz_Eo3PrJE3twce9IO5w","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-24T17:32:39.0844589+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"5RL32FqvIHWfTnRMmDkAtA","connectionToken":"K3FLTXwN9hfi7OzT9kn0Lw","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-24T17:32:39.2448297+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub/negotiate",
+    "Request": "",
+    "Response": "{"negotiateVersion":1,"connectionId":"Tiils_C8CbfSPf_lxmxmQg","connectionToken":"rSLEAKdN1D6U0wAcb7q7Zw","availableTransports":[{"transport":"WebSockets","transferFormats":["Text","Binary"]},{"transport":"ServerSentEvents","transferFormats":["Text"]},{"transport":"LongPolling","transferFormats":["Text","Binary"]}]}",
+    "TimeUsed": 0
+}
+{
+    "Timestamp": "2025-09-24T17:33:59.8079948+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 161106
+}
+{
+    "Timestamp": "2025-09-24T17:33:59.8079904+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 161106
+}
+{
+    "Timestamp": "2025-09-24T17:33:59.8079904+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 161106
+}
+{
+    "Timestamp": "2025-09-24T17:33:59.8105958+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 161106
+}
+{
+    "Timestamp": "2025-09-24T17:33:59.8079907+08:00",
+    "Level": "Information",
+ "IP": "",
+    "URL": "/wcshub",
+    "Request": "",
+    "Response": "",
+    "TimeUsed": 161106
+}

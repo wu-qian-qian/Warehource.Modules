@@ -14,3 +14,5 @@ D:\Program\仓库\Warehource.Modules\Wcs.Contracts\obj\Release\net8.0\Wcs.Contra
 D:\Program\仓库\Warehource.Modules\Wcs.Contracts\obj\Release\net8.0\refint\Wcs.Contracts.dll
 D:\Program\仓库\Warehource.Modules\Wcs.Contracts\obj\Release\net8.0\Wcs.Contracts.pdb
 D:\Program\仓库\Warehource.Modules\Wcs.Contracts\obj\Release\net8.0\ref\Wcs.Contracts.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Contracts\bin\Release\net8.0\Common.Shared.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Contracts\bin\Release\net8.0\Common.Shared.pdb

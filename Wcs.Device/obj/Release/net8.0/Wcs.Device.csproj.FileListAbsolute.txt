@@ -20,3 +20,5 @@ D:\Program\仓库\Warehource.Modules\Wcs.Device\obj\Release\net8.0\Wcs.Device.dl
 D:\Program\仓库\Warehource.Modules\Wcs.Device\obj\Release\net8.0\refint\Wcs.Device.dll
 D:\Program\仓库\Warehource.Modules\Wcs.Device\obj\Release\net8.0\Wcs.Device.pdb
 D:\Program\仓库\Warehource.Modules\Wcs.Device\obj\Release\net8.0\ref\Wcs.Device.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Device\bin\Release\net8.0\Common.Shared.dll
+D:\Program\仓库\Warehource.Modules\Wcs.Device\bin\Release\net8.0\Common.Shared.pdb

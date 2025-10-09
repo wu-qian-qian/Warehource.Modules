@@ -26,3 +26,5 @@ D:\Program\仓库\Warehource.Modules\User.Presentation\obj\Release\net8.0\Identi
 D:\Program\仓库\Warehource.Modules\User.Presentation\obj\Release\net8.0\refint\Identity.Presentation.dll
 D:\Program\仓库\Warehource.Modules\User.Presentation\obj\Release\net8.0\Identity.Presentation.pdb
 D:\Program\仓库\Warehource.Modules\User.Presentation\obj\Release\net8.0\ref\Identity.Presentation.dll
+D:\Program\仓库\Warehource.Modules\User.Presentation\bin\Release\net8.0\Common.dll
+D:\Program\仓库\Warehource.Modules\User.Presentation\bin\Release\net8.0\Common.pdb

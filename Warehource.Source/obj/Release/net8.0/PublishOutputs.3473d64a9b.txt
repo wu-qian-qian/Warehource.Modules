@@ -53,6 +53,7 @@ D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Release\net8.0\PubTmp
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Release\net8.0\PubTmp\Out\Microsoft.SqlServer.Server.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Release\net8.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Release\net8.0\PubTmp\Out\NPOI.Core.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Release\net8.0\PubTmp\Out\NPOI.OOXML.dll
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Release\net8.0\PubTmp\Out\NPOI.OpenXml4Net.dll

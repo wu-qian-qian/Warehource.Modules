@@ -12,9 +12,9 @@ public class WcsTaskConfiguration : IEntityTypeConfiguration<Domain.Task.WcsTask
         builder.HasKey(t => t.Id).IsClustered(false);
         builder.HasIndex(p => p.SerialNumber).IsUnique();
         builder.HasIndex(p => p.TaskCode).IsUnique();
-        builder.Property(p => p.SerialNumber).UseIdentityColumn(4000);
+        builder.Property(p => p.SerialNumber).IsRequired().UseIdentityColumn(4000);
         builder.Property(t => t.TaskCode)
-            .IsRequired(false)
+            .IsRequired()
             .HasMaxLength(50);
         builder.Property(p => p.Container).IsRequired().HasMaxLength(50);
         builder.OwnsOne(t => t.GetLocation, g =>

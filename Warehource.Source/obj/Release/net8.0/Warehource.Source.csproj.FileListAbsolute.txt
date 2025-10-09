@@ -254,3 +254,4 @@ D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Release\net8.0\refint
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Release\net8.0\Warehource.Source.pdb
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Release\net8.0\Warehource.Source.genruntimeconfig.cache
 D:\Program\仓库\Warehource.Modules\Warehource.Source\obj\Release\net8.0\ref\Warehource.Source.dll
+D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Release\net8.0\Newtonsoft.Json.dll

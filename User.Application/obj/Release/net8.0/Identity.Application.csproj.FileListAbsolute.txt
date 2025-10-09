@@ -22,3 +22,5 @@ D:\Program\仓库\Warehource.Modules\User.Application\obj\Release\net8.0\Identit
 D:\Program\仓库\Warehource.Modules\User.Application\obj\Release\net8.0\refint\Identity.Application.dll
 D:\Program\仓库\Warehource.Modules\User.Application\obj\Release\net8.0\Identity.Application.pdb
 D:\Program\仓库\Warehource.Modules\User.Application\obj\Release\net8.0\ref\Identity.Application.dll
+D:\Program\仓库\Warehource.Modules\User.Application\bin\Release\net8.0\Common.dll
+D:\Program\仓库\Warehource.Modules\User.Application\bin\Release\net8.0\Common.pdb

@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>D:\Program\仓库\Warehource.Modules\Warehource.Source\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2025-09-09T06:17:53.3630198Z||;</History>
+    <History>True|2025-09-25T08:11:29.2129005Z||;True|2025-09-25T16:07:44.9925498+08:00||;True|2025-09-09T14:17:53.3630198+08:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
