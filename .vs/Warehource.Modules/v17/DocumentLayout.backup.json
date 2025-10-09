@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.infrastructure\\db\\wcstask\\wcstaskconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC22CC0-2A67-44B5-AB63-290B717017CC}|Wcs.Infrastructure\\Wcs.Infrastructure.csproj|solutionrelative:wcs.infrastructure\\db\\wcstask\\wcstaskconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\event\\eventextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\event\\eventextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\database\\wcstask\\addorupdate\\addorupdatewcstaskcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\database\\wcstask\\addorupdate\\addorupdatewcstaskcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\event\\domainevent\\locallocaleventbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\event\\domainevent\\locallocaleventbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\wcstask\\addselfwcstask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\wcstask\\addselfwcstask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.presentation\\wcstask\\updatetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8B9649A-E60F-413A-959E-0A62091C5DCA}|Wcs.Presentation\\Wcs.Presentation.csproj|solutionrelative:wcs.presentation\\wcstask\\updatetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\common.infrastructure\\event\\domainevent\\eventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2553AC2-5D2C-4E1D-8FB6-3B5484E3A9B8}|Common.Infrastructure\\Common.Infrastructure.csproj|solutionrelative:common.infrastructure\\event\\domainevent\\eventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,52 +90,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WcsTaskConfiguration.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\DB\\WcsTask\\WcsTaskConfiguration.cs",
-              "RelativeDocumentMoniker": "Wcs.Infrastructure\\DB\\WcsTask\\WcsTaskConfiguration.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Infrastructure\\DB\\WcsTask\\WcsTaskConfiguration.cs",
-              "RelativeToolTip": "Wcs.Infrastructure\\DB\\WcsTask\\WcsTaskConfiguration.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA4AAAA6AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "LocalLocalEventBus.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Event\\DomainEvent\\LocalLocalEventBus.cs",
+              "RelativeDocumentMoniker": "Common.Infrastructure\\Event\\DomainEvent\\LocalLocalEventBus.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Event\\DomainEvent\\LocalLocalEventBus.cs",
+              "RelativeToolTip": "Common.Infrastructure\\Event\\DomainEvent\\LocalLocalEventBus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T05:39:02.93Z",
+              "WhenOpened": "2025-10-09T05:14:10.881Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddOrUpdateWcsTaskCommandHandler.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DataBase\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskCommandHandler.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\DataBase\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskCommandHandler.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DataBase\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskCommandHandler.cs",
-              "RelativeToolTip": "Wcs.Application\\Handler\\DataBase\\WcsTask\\AddOrUpdate\\AddOrUpdateWcsTaskCommandHandler.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAApwBUAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T05:17:57.208Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AddSelfWcsTask.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\AddSelfWcsTask.cs",
-              "RelativeDocumentMoniker": "Wcs.Presentation\\WcsTask\\AddSelfWcsTask.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\AddSelfWcsTask.cs",
-              "RelativeToolTip": "Wcs.Presentation\\WcsTask\\AddSelfWcsTask.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAUwCgAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T05:17:34.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdateTask.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\UpdateTask.cs",
-              "RelativeDocumentMoniker": "Wcs.Presentation\\WcsTask\\UpdateTask.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Presentation\\WcsTask\\UpdateTask.cs",
-              "RelativeToolTip": "Wcs.Presentation\\WcsTask\\UpdateTask.cs",
+              "Title": "EventManager.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Event\\DomainEvent\\EventManager.cs",
+              "RelativeDocumentMoniker": "Common.Infrastructure\\Event\\DomainEvent\\EventManager.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Event\\DomainEvent\\EventManager.cs",
+              "RelativeToolTip": "Common.Infrastructure\\Event\\DomainEvent\\EventManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T05:15:53.262Z"
+              "WhenOpened": "2025-10-09T05:14:06.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EventExtension.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Event\\EventExtension.cs",
+              "RelativeDocumentMoniker": "Common.Infrastructure\\Event\\EventExtension.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Common.Infrastructure\\Event\\EventExtension.cs",
+              "RelativeToolTip": "Common.Infrastructure\\Event\\EventExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T05:13:58.401Z",
+              "EditorCaption": ""
             }
           ]
         }

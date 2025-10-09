@@ -1,8 +1,8 @@
 ﻿using Common.Application.Caching;
-using Common.Application.Event;
 using Common.Application.Log;
 using Common.Application.MediatR.Message;
 using Common.Shared;
+using MassTransit;
 using Plc.CustomEvents;
 using Serilog;
 using Wcs.Contracts.Respon.Plc;
@@ -15,7 +15,7 @@ namespace Wcs.Application.Handler.Business.ReadPlcBlock;
 
 internal class GetPlcDBQueryHandler(
     ICacheService _cacheService,
-    IMassTransitEventBus _bus) : IQueryHandler<GetPlcDBQuery, BaseDBEntity>
+    IBus _bus) : IQueryHandler<GetPlcDBQuery, BaseDBEntity>
 {
     public async Task<BaseDBEntity> Handle(GetPlcDBQuery request, CancellationToken cancellationToken)
     {
@@ -39,7 +39,7 @@ internal class GetPlcDBQueryHandler(
         }
         else
         {
-            await _bus.PublishAsync(new S7ReadPlcDataBlockIntegrationEvent(DateTime.Now)
+            await _bus.Publish(new S7ReadPlcDataBlockIntegrationEvent(DateTime.Now)
             {
                 DeviceName = request.DeviceName,
                 Key = request.Key,

@@ -1,5 +1,4 @@
-﻿using Common.Application.Event;
-using Common.Application.Log;
+﻿using Common.Application.Log;
 using Common.Shared;
 using MassTransit;
 using MediatR;
@@ -16,9 +15,8 @@ namespace Plc.Presentation.Custom;
 ///     2、公共事件触发
 /// </summary>
 /// <typeparam name="TIntegrationEvent"></typeparam>
-/// <param name="bus"></param>
 /// <param name="cache"></param>
-public class WritePlcEventConsumer<TIntegrationEvent>(IMassTransitEventBus bus, ISender sender)
+public class WritePlcEventConsumer<TIntegrationEvent>(ISender sender)
     : IConsumer<TIntegrationEvent>
     where TIntegrationEvent : S7WritePlcDataBlockIntegrationEvent
 {
@@ -43,6 +41,7 @@ public class WritePlcEventConsumer<TIntegrationEvent>(IMassTransitEventBus bus, 
             completed = new WcsWritePlcTaskCompleted(context.Message.DeviceName, false, context.Message.Key);
         }
 
+        //saga状态机事件
         await context.Publish(completed);
     }
 }

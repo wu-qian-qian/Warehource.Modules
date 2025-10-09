@@ -1,12 +1,9 @@
 ﻿using System.Reflection;
 using Common.Application.Event;
-using Common.Application.Event.Local;
 using Common.Domain.Event;
-using Common.Infrastructure.Event.Local;
-using Common.Infrastructure.Event.Masstransit;
+using Common.Infrastructure.Event.DomainEvent;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Common.Infrastructure.Event;
 
@@ -21,7 +18,7 @@ public static class EventExtension
     public static IServiceCollection AddEventExtensionConfiguator(this IServiceCollection services, Assembly[] assembly)
     {
         var handlerTypes = GetEventTypes(assembly, services);
-        services.AddSingleton<ILocalEventBus>(sp =>
+        services.AddSingleton<IDomainEventBus>(sp =>
         {
             var eventManager = new EventManager();
             foreach (var item in handlerTypes) eventManager.AddSubscription(item.Key, item.Value);
@@ -77,7 +74,6 @@ public static class EventExtension
             busConfigurator.UsingInMemory((context, cfg) => { cfg.ConfigureEndpoints(context); });
             // 使用内存作为消息传输
         });
-        services.TryAddSingleton<IMassTransitEventBus, MassTransitEventBus>();
         return services;
     }
 }
