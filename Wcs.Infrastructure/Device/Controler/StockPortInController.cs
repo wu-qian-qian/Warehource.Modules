@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Wcs.Application.Abstract.Device;
+using Wcs.Application.DeviceController.StockPort;
 using Wcs.Application.Handler.DeviceExecute;
 using Wcs.Application.Handler.DeviceExecute.StockIn;
 using Wcs.Shared;

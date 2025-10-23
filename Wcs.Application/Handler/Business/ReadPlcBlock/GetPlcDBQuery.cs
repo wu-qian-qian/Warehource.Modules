@@ -15,7 +15,7 @@ public class GetPlcDBQuery : IQuery<BaseDBEntity>
     /// <summary>
     ///     可重复利用实例，这样可以有效的减少对象的生成
     /// </summary>
-    public BaseDBEntity DBEntity { get; set; }
+    public BaseDBEntity? DBEntity { get; set; }
 
     public bool UseMemory { get; set; } = true;
 }

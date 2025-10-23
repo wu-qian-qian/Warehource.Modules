@@ -10,7 +10,9 @@ public static class JsonExtentions
 {
     public static readonly JavaScriptEncoder Encoder = JavaScriptEncoder.Create(UnicodeRanges.All);
 
-    //  设置 type   
+    /// <summary>
+    ///     设置type头这样可以实现接口的序列化反序列化
+    /// </summary>
     public static readonly JsonSerializerSettings Instance = new()
     {
         TypeNameHandling = TypeNameHandling.All,

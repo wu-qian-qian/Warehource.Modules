@@ -5,6 +5,13 @@ using Wcs.Domain.ExecuteNode;
 
 namespace Wcs.Application.Handler.Business.GetStackerStation;
 
+/// <summary>
+///     通过取放位获取到站台
+///     待修改成事件
+/// </summary>
+/// <param name="_executeNodeRepository"></param>
+/// <param name="_deviceService"></param>
+/// <param name="analysisLocation"></param>
 internal class GetStackerStationCommandHandler(
     IExecuteNodeRepository _executeNodeRepository,
     IDeviceService _deviceService,

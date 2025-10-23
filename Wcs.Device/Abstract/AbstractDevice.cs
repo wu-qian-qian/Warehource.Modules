@@ -56,6 +56,11 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     /// </summary>
     public abstract TConfig Config { get; protected set; }
 
+    public virtual void SetEnable(bool enable)
+    {
+        if (Enable != enable) Enable = enable;
+    }
+
     /// <summary>
     ///     设置配置项
     /// </summary>
@@ -65,15 +70,15 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
         Config = config.ParseJson<TConfig>();
     }
 
+    /// <summary>
+    ///     设备是否可以执行该区域
+    /// </summary>
+    /// <param name="region"></param>
+    /// <returns></returns>
     public virtual bool CanRegionExecute(string region)
     {
         if (region.Contains(RegionCodes) || RegionCodes.Contains(region)) return true;
         return false;
-    }
-
-    public virtual void SetEnable(bool enable)
-    {
-        if (Enable != enable) Enable = enable;
     }
 
     public abstract bool IsNewStart();

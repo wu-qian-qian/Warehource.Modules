@@ -1,7 +1,7 @@
 ﻿using Common.Application.QuartzJob;
 using Quartz;
+using Wcs.Application.DeviceController.Stacker;
 using Wcs.Application.SignalR;
-using Wcs.Device.Device.Stacker;
 
 namespace Wcs.Infrastructure.Job.JobItems;
 

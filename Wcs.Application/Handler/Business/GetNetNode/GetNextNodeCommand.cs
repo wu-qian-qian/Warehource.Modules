@@ -13,7 +13,7 @@ public class GetNextNodeCommand : ICommand<string>
     /// <summary>
     ///     筛选标签，对于出入库口为输送，对于为堆垛机或是堆垛机接驳位为巷道
     /// </summary>
-    public string Title { get; set; }
+    public string Filter { get; set; }
 
     public string RegionCode { get; set; }
 }

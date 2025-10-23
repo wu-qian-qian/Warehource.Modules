@@ -1,4 +1,4 @@
-﻿using Wcs.Device.Device.Tranship;
+﻿using Wcs.Device.DeviceStructure.Tranship;
 
 namespace Wcs.Application.Handler.DeviceExecute.StackerTranshipIn;
 

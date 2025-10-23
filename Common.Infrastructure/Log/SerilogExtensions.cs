@@ -25,7 +25,7 @@ public static class SerilogExtensions
         return builder;
     }
 
-    public static WebApplicationBuilder AddSerilogConfiguratorCategory(this WebApplicationBuilder builder)
+    public static WebApplicationBuilder AddSerilogConfiguration(this WebApplicationBuilder builder)
     {
         //配置日志
         Serilog.Log.Logger = new LoggerConfiguration()

@@ -17,4 +17,9 @@
         <ProjectReference Include="..\Wcs.Domain\Wcs.Domain.csproj"/>
     </ItemGroup>
 
+    <ItemGroup>
+        <Folder Include="DomainEvent\"/>
+        <Folder Include="StateMachine\"/>
+    </ItemGroup>
+
 </Project>

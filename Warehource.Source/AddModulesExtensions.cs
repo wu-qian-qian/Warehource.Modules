@@ -3,6 +3,7 @@ using AutoMapper;
 using Common.Infrastructure.EF;
 using Common.Infrastructure.Event;
 using Common.Infrastructure.MediatR;
+using Common.Infrastructure.StateMachine;
 using MassTransit;
 
 namespace Warehource.Source;
@@ -76,6 +77,12 @@ public static class AddModulesExtensions
     internal static IServiceCollection AddEvent(this IServiceCollection services, Assembly[] modelusAss)
     {
         services.AddEventExtensionConfiguator(modelusAss);
+        return services;
+    }
+
+    internal static IServiceCollection AddState(this IServiceCollection services, Assembly[] modelusAss)
+    {
+        services.AddStateMachineExtensionConfiguator(modelusAss);
         return services;
     }
 

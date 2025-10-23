@@ -13,14 +13,14 @@ using Wcs.Application;
 using Wcs.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.AddSerilogConfiguratorCategory();
+builder.AddSerilogConfiguration();
 
 //跨域设置
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(builder =>
+    options.AddDefaultPolicy(configurePolicy =>
     {
-        builder.WithMethods("PUT", "DELETE", "GET", "POST", "PATCH")
+        configurePolicy.WithMethods("PUT", "DELETE", "GET", "POST", "PATCH")
             .SetIsOriginAllowed(_ => true)
             .AllowAnyHeader()
             .AllowCredentials();
@@ -34,7 +34,7 @@ Action<HttpResponseMessage> policyCallback = result =>
         result.StatusCode, result.RequestMessage?.RequestUri, result.RequestMessage?.Method);
 };
 //一些配置模块注入  swagger、jwt、缓存、httpclient
-builder.Services.AddInfrastructure(builder.Configuration, policyCallback);
+builder.Services.AddInfrastructureModule(builder.Configuration, policyCallback);
 
 builder.Configuration.AddModuleConfiguration(["Wcs.Stacker"]);
 
@@ -49,26 +49,27 @@ builder.Services.AddModules(builder.Configuration,
     ],
     //模块的独立基础设施注入
     [
-        WcsInfrastructureConfigurator.AddWcsInfrastructureModule,
-        UserInfrastructureConfigurator.AddUserInfrastructureConfiguration,
-        PlcInfrastructureConfigurator.AddPlcInfrastructureModule
+        WcsInfrastructureConfiguration.AddWcsInfrastructureModule,
+        UserInfrastructureConfiguration.AddUserInfrastructureModule,
+        PlcInfrastructureConfiguration.AddPlcInfrastructureModule
     ],
     //模块化的MediatR管道注入
     [
-        WcsInfrastructureConfigurator.AddBehaviorModule, PlcInfrastructureConfigurator.AddBehaviorModule
+        WcsInfrastructureConfiguration.AddBehaviorModule,
+        PlcInfrastructureConfiguration.AddBehaviorModule
     ],
     //模块的的公共事件注入
     [
-        WcsInfrastructureConfigurator.AddConsumers,
-        PlcInfrastructureConfigurator.AddConsumers
+        WcsInfrastructureConfiguration.AddConsumers,
+        PlcInfrastructureConfiguration.AddConsumers
     ]
     //模块化job的注入
-    , [WcsInfrastructureConfigurator.AddJobs]
+    , [WcsInfrastructureConfiguration.AddJobs]
     //模块化aotoMapper注入
     , [
-        WcsInfrastructureConfigurator.AddAutoMapper,
-        UserInfrastructureConfigurator.AddAutoMapper,
-        PlcInfrastructureConfigurator.AddAutoMapper
+        WcsInfrastructureConfiguration.AddAutoMapper,
+        UserInfrastructureConfiguration.AddAutoMapper,
+        PlcInfrastructureConfiguration.AddAutoMapper
     ]
 );
 

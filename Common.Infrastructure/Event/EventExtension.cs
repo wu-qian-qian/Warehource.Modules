@@ -22,8 +22,8 @@ public static class EventExtension
         {
             var eventManager = new EventManager();
             foreach (var item in handlerTypes) eventManager.AddSubscription(item.Key, item.Value);
-            var serviceProvider = sp.GetRequiredService<IServiceProvider>();
-            return new LocalLocalEventBus(eventManager, serviceProvider);
+            var serviceScope = sp.GetRequiredService<IServiceScopeFactory>();
+            return new DomainEventBus(eventManager, serviceScope);
         });
         return services;
     }
@@ -72,6 +72,7 @@ public static class EventExtension
         {
             foreach (var item in moduleConfigureConsumers) item(busConfigurator);
             busConfigurator.UsingInMemory((context, cfg) => { cfg.ConfigureEndpoints(context); });
+
             // 使用内存作为消息传输
         });
         return services;

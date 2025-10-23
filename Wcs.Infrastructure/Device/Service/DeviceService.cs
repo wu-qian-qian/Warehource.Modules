@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Wcs.Application.Abstract;
-using Wcs.Application.Abstract.Device;
+using Wcs.Application.DeviceController.Stacker;
+using Wcs.Application.DeviceController.StockPort;
+using Wcs.Application.DeviceController.Tranship;
 using Wcs.Device.Abstract;
 using Wcs.Shared;
 

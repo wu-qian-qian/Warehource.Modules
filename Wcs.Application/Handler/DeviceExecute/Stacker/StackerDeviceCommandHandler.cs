@@ -11,7 +11,7 @@ using Wcs.Application.Handler.Business.FilterStackerTask;
 using Wcs.Application.Handler.Business.GetStackerStation;
 using Wcs.Application.Handler.Business.RefreshTaskStatus;
 using Wcs.CustomEvents.Saga;
-using Wcs.Device.Device.Stacker;
+using Wcs.Device.DeviceStructure.Stacker;
 using Wcs.Domain.Task;
 using Wcs.Shared;
 
@@ -41,7 +41,7 @@ internal class StackerDeviceCommandHandler(
             if (wcsTask == null)
             {
                 //获取该设备所有任务
-                var wcsTasks = await _sender.Send(new GetFilterStackerQuery
+                var wcsTasks = await _sender.Send(new GetFilterWcsTaskQuery
                         { DeviceName = stacker.Name, DeviceType = stacker.DeviceType }
                     , cancellationToken);
                 //获取到执行任务

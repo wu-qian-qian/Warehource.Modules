@@ -1,8 +1,8 @@
 ﻿using Common.Application.QuartzJob;
 using Microsoft.Extensions.DependencyInjection;
 using Quartz;
+using Wcs.Application.DeviceController.Tranship;
 using Wcs.Application.SignalR;
-using Wcs.Device.Device.Tranship;
 using Wcs.Infrastructure.Device.Controler;
 
 namespace Wcs.Infrastructure.Job.JobItems;

@@ -1,4 +1,4 @@
-﻿using Wcs.Device.Device.StockPort;
+﻿using Wcs.Device.DeviceStructure.StockPort;
 
 namespace Wcs.Application.Handler.DeviceExecute.StockIn;
 

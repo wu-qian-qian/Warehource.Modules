@@ -60,7 +60,7 @@ public static class AuthenticationExtensions
         services.Configure<SwaggerGenOptions>(c => { c.AddAuthenticationHeader(); });
         //添加jwt的默认配置
         services.AddAuthenticationInternal(options);
-        services.AddAuthorizationInternal();
+        // services.AddAuthorizationInternal();
         return services;
     }
 

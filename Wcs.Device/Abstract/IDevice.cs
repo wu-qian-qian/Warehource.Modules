@@ -2,11 +2,11 @@
 
 public interface IDevice<T> : IDevice where T : BaseDeviceConfig
 {
-    string Name { get; }
-
     T Config { get; }
 }
 
 public interface IDevice
 {
+    string Name { get; }
+    public void SetEnable(bool enable);
 }

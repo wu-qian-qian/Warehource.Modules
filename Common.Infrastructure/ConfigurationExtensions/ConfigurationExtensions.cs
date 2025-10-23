@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 namespace Common.Infrastructure.ConfigurationExtensions;
 
 /// <summary>
-///     对一些json 文件的注入
+///     对一些json 配置文件的注入
 /// </summary>
 public static class ConfigurationExtensions
 {

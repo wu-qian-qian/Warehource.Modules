@@ -9,7 +9,7 @@ using Wcs.Application.Handler.Business.CheckExecuteNode;
 using Wcs.Application.Handler.Business.FilterStackerTask;
 using Wcs.Application.Handler.Business.RefreshTaskStatus;
 using Wcs.CustomEvents.Saga;
-using Wcs.Device.Device.Tranship;
+using Wcs.Device.DeviceStructure.Tranship;
 using Wcs.Domain.Task;
 using Wcs.Shared;
 
@@ -29,7 +29,7 @@ internal class StackerTranshipOutCommandHandler(
             var wcsTask = await _cacheService.GetAsync<WcsTask>(device.Config.TaskKey);
             if (wcsTask == null)
             {
-                var wcsTasks = await _sender.Send(new GetFilterStackerQuery
+                var wcsTasks = await _sender.Send(new GetFilterWcsTaskQuery
                 {
                     DeviceType = device.DeviceType,
                     DeviceName = device.Name

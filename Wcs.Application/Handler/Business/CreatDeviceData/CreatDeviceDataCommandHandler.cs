@@ -4,9 +4,10 @@ using MediatR;
 using Wcs.Application.Handler.DataBase.Device.Get;
 using Wcs.Contracts.Respon.Device;
 using Wcs.Device.Abstract;
-using Wcs.Device.Device.Stacker;
 using Wcs.Device.DeviceConfig;
-using Wcs.Device.DeviceData;
+using Wcs.Device.DeviceStructure.Stacker;
+using Wcs.Device.DeviceStructure.StockPort;
+using Wcs.Device.DeviceStructure.Tranship;
 using Wcs.Shared;
 
 namespace Wcs.Application.Handler.Business.CreatDeviceData;
@@ -24,7 +25,7 @@ internal class CreatDeviceDataCommandHandler(ISender sender) : ICommandHandler<C
         if (result.IsSuccess)
         {
             var devices = result.Value.ToArray();
-            var tempStacker = new List<AbstractStacker>();
+
             for (var i = 0; i < devices.Length; i++)
             {
                 var device = devices[i];

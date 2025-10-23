@@ -10,7 +10,7 @@ using Wcs.Application.Handler.Business.CheckExecuteNode;
 using Wcs.Application.Handler.Business.RefreshTaskStatus;
 using Wcs.Application.Handler.Http.ApplyTunnle;
 using Wcs.CustomEvents.Saga;
-using Wcs.Device.Device.StockPort;
+using Wcs.Device.DeviceStructure.StockPort;
 using Wcs.Domain.Task;
 using Wcs.Shared;
 

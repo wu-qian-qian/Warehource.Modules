@@ -10,6 +10,13 @@ using Wcs.Shared;
 
 namespace Wcs.Application.Handler.Business.CheckExecuteNode;
 
+/// <summary>
+///     最好修改成领域事件
+/// </summary>
+/// <param name="_sender"></param>
+/// <param name="_executeNodeRepository"></param>
+/// <param name="_regionRepository"></param>
+/// <param name="scopeFactory"></param>
 public class CheckExecuteNodeCommandHandler(
     ISender _sender,
     IExecuteNodeRepository _executeNodeRepository,
@@ -72,7 +79,7 @@ public class CheckExecuteNodeCommandHandler(
                                 await _sender.Send(new GetNextNodeCommand
                                 {
                                     DeviceType = wcsTask.TaskExecuteStep.DeviceType.Value,
-                                    Title = request.Title,
+                                    Filter = request.Title,
                                     RegionCode = region.Code
                                 }, cancellationToken);
                             if (deviceName != null || deviceName != string.Empty)

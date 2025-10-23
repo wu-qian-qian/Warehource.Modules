@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Wcs.Application.Abstract.Device;
+using Wcs.Application.DeviceController.Tranship;
 using Wcs.Application.Handler.DeviceExecute;
 using Wcs.Application.Handler.DeviceExecute.StackerTranshipOut;
 using Wcs.Shared;

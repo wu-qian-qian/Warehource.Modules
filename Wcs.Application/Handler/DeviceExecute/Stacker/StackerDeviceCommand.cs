@@ -1,4 +1,4 @@
-﻿using Wcs.Device.Device.Stacker;
+﻿using Wcs.Device.DeviceStructure.Stacker;
 
 namespace Wcs.Application.Handler.DeviceExecute.Stacker;
 

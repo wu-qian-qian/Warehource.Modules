@@ -20,15 +20,3 @@ D:\Program\仓库\Warehouse.Modules\Warehource.Modules\Common.Shared\obj\Debug\n
 D:\Program\仓库\Warehouse.Modules\Warehource.Modules\Common.Shared\obj\Debug\net8.0\refint\Common.Shared.dll
 D:\Program\仓库\Warehouse.Modules\Warehource.Modules\Common.Shared\obj\Debug\net8.0\Common.Shared.pdb
 D:\Program\仓库\Warehouse.Modules\Warehource.Modules\Common.Shared\obj\Debug\net8.0\ref\Common.Shared.dll
-D:\Program\仓库\Warehource.Modules\Common.Shared\bin\Debug\net8.0\Common.Shared.deps.json
-D:\Program\仓库\Warehource.Modules\Common.Shared\bin\Debug\net8.0\Common.Shared.dll
-D:\Program\仓库\Warehource.Modules\Common.Shared\bin\Debug\net8.0\Common.Shared.pdb
-D:\Program\仓库\Warehource.Modules\Common.Shared\obj\Debug\net8.0\Common.Shared.GeneratedMSBuildEditorConfig.editorconfig
-D:\Program\仓库\Warehource.Modules\Common.Shared\obj\Debug\net8.0\Common.Shared.AssemblyInfoInputs.cache
-D:\Program\仓库\Warehource.Modules\Common.Shared\obj\Debug\net8.0\Common.Shared.AssemblyInfo.cs
-D:\Program\仓库\Warehource.Modules\Common.Shared\obj\Debug\net8.0\Common.Shared.csproj.CoreCompileInputs.cache
-D:\Program\仓库\Warehource.Modules\Common.Shared\obj\Debug\net8.0\Common.Shared.sourcelink.json
-D:\Program\仓库\Warehource.Modules\Common.Shared\obj\Debug\net8.0\Common.Shared.dll
-D:\Program\仓库\Warehource.Modules\Common.Shared\obj\Debug\net8.0\refint\Common.Shared.dll
-D:\Program\仓库\Warehource.Modules\Common.Shared\obj\Debug\net8.0\Common.Shared.pdb
-D:\Program\仓库\Warehource.Modules\Common.Shared\obj\Debug\net8.0\ref\Common.Shared.dll

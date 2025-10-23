@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Wcs.Application.Abstract.Device;
+using Wcs.Application.DeviceController.Tranship;
 using Wcs.Application.Handler.DeviceExecute;
 using Wcs.Application.Handler.DeviceExecute.StackerTranshipIn;
 using Wcs.Shared;
@@ -13,6 +13,7 @@ internal class StackerInTranShipController : AbstractStackerTranshipController
     {
         DeviceType = DeviceTypeEnum.StackerInTranShip;
     }
+
 
     public override async Task ExecuteAsync(CancellationToken token = default)
     {

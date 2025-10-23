@@ -20,7 +20,8 @@ public static class QuatrzJobExtensions
                 tp.MaxConcurrency = 10; // 设置最大并发数
             });
             configurator.AddSchedulerListener<QuartzJobListener>();
-        }).AddSingleton<IScheduler>(sp =>
+        });
+        services.AddSingleton<IScheduler>(sp =>
         {
             var schedulerFactory = sp.GetService<ISchedulerFactory>();
             var scheduler = schedulerFactory.GetScheduler().Result;
@@ -81,11 +82,7 @@ public static class QuatrzJobExtensions
         var jobDetail = jobBuilder.Build();
 
         var trigger = TriggerBuilder.Create()
-            .WithSimpleSchedule(p
-                =>
-            {
-                p.WithInterval(new TimeSpan(0, 0, 0, 0, jobConfig.Timer)).RepeatForever();
-            })
+            .WithSimpleSchedule(p => { p.WithInterval(new TimeSpan(0, 0, 0, 0, jobConfig.Timer)).RepeatForever(); })
             .Build();
         scheduler.ScheduleJob(jobDetail, trigger);
 
