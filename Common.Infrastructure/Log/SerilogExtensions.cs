@@ -77,12 +77,12 @@ public static class SerilogExtensions
                     "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
 
             //Event日志
-            /*.WriteTo.Logger(l => l
+            .WriteTo.Logger(l => l
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&
                                              e.Properties["Event"].ToString() == "Event")
                 .WriteTo.File("Logs/Event/event-.log", rollingInterval: RollingInterval.Day,
                     outputTemplate:
-                    "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))*/
+                    "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
             //网络链接日志
             .WriteTo.Logger(l => l
                 .Filter.ByIncludingOnly(e => e.Properties.ContainsKey("Category") &&

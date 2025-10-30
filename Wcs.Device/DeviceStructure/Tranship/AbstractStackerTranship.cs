@@ -36,6 +36,6 @@ public abstract class AbstractStackerTranship : AbstractDevice<StackerTranShipCo
     /// <returns></returns>
     public override bool IsNewStart()
     {
-        return DBEntity is { RLoad: "1", RFree: "0" };
+        return DBEntity is { RMode: "1", RErrCode: "0" } && Enable;
     }
 }

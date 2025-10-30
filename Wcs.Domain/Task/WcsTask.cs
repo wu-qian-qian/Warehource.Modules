@@ -19,10 +19,14 @@ public class WcsTask : IEntity
     /// </summary>
     public bool IsEnforce { get; set; }
 
+    /// <summary>
+    ///    上游任务号
+    /// </summary>
     public string TaskCode { get; set; }
 
     /// <summary>
     ///     流水号
+    ///     唯一编码
     /// </summary>
     public int SerialNumber { get; set; }
 
@@ -61,11 +65,22 @@ public class WcsTask : IEntity
     /// </summary>
     public PutLocation PutLocation { get; set; }
 
-    public string? StockOutPosition { get; set; }
+    /// <summary>
+    /// 输送起点位置
+    /// </summary>
+    public string? EndPosition { get; set; }
 
-    public string? StockInPosition { get; set; }
+    /// <summary>
+    /// 输送终点位置
+    /// </summary>
+    public string? StartPosition { get; set; }
 
     public Guid? RegionId { get; set; }
+
+    /// <summary>
+    ///    区域编码
+    /// </summary>
+    public string? RegionCode { get; set; }
 
     /// <summary>
     ///     任务执行步骤

@@ -1,8 +1,13 @@
-﻿using MediatR;
+﻿using Common.Shared;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Wcs.Application.DeviceController;
 using Wcs.Application.DeviceController.Stacker;
+using Wcs.Application.DeviceController.Tranship;
 using Wcs.Application.Handler.DeviceExecute;
 using Wcs.Application.Handler.DeviceExecute.Stacker;
+using Wcs.CustomEvents.Saga;
+using Wcs.Device.DeviceStructure.Stacker;
 using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler;
@@ -12,14 +17,15 @@ namespace Wcs.Infrastructure.Device.Controler;
 ///     只是用来处理一些调度
 ///     单例注入
 /// </summary>
-internal class StackerController : AbstractStackerController
+[DependyAttrubite(DependyLifeTimeEnum.Singleton, typeof(IStackerController))]
+internal class StackerController : BaseCommonController<AbstractStacker>, IStackerController
 {
     public StackerController(IServiceScopeFactory scopeFactory) : base(scopeFactory)
     {
         DeviceType = DeviceTypeEnum.Stacker;
     }
 
-    public override async Task ExecuteAsync(CancellationToken token = default)
+    public async ValueTask ExecuteAsync(CancellationToken token = default)
     {
         if (Devices != null && Devices.Any())
         {
@@ -39,7 +45,44 @@ internal class StackerController : AbstractStackerController
         }
         else
         {
-            await base.ExecuteAsync(token);
+            await InitializeAsync(token);
         }
     }
+
+    #region business method
+
+    public string GetTunnleByDeviceName(string deviceName)
+    {
+        return Devices.First(Devices => Devices.Name == deviceName).Config.Tunnle;
+    }
+
+    public bool IsComplateByDeviceName(string deviceName)
+    {
+        return Devices.First(d => d.Name == deviceName).IsComplate();
+    }
+
+    public bool IsTranshipPointByDeviceName(string deviceName)
+    {
+        return Devices.First(Devices => Devices.Name == deviceName).IsTranShipPoint();
+    }
+
+    public WcsWritePlcTaskCreated TryGetWritePlcTaskData(string deviceName)
+    {
+        var device = Devices.First(d => d.Name == deviceName);
+        var wcsTask = device.WcsTask;
+        var dic = new Dictionary<string, string>();
+        dic.Add(device.CreatWriteExpression(p => p.WTask), wcsTask.SerialNumber.ToString());
+        dic.Add(device.CreatWriteExpression(p => p.WGetColumn), wcsTask.SerialNumber.ToString());
+        dic.Add(device.CreatWriteExpression(p => p.WGetFloor), wcsTask.SerialNumber.ToString());
+        dic.Add(device.CreatWriteExpression(p => p.WGetRow), wcsTask.SerialNumber.ToString());
+        dic.Add(device.CreatWriteExpression(p => p.WPutColumn), wcsTask.SerialNumber.ToString());
+        dic.Add(device.CreatWriteExpression(p => p.WPutFloor), wcsTask.SerialNumber.ToString());
+        dic.Add(device.CreatWriteExpression(p => p.WPutRow), wcsTask.SerialNumber.ToString());
+        dic.Add(device.CreatWriteExpression(p => p.WTaskType), ((int)wcsTask.TaskType).ToString());
+        dic.Add(device.CreatWriteExpression(p => p.WStart), "1");
+        return new WcsWritePlcTaskCreated(deviceName, dic,
+            device.Config.TaskKey);
+    }
+
+    #endregion
 }

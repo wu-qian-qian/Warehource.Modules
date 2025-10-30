@@ -2547,7 +2547,8 @@
         "dependencies": {
           "Common": "1.0.0",
           "Common.Domain": "1.0.0",
-          "Wcs.Contracts": "1.0.0"
+          "Wcs.Contracts": "1.0.0",
+          "Wcs.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Wcs.Device.dll": {}

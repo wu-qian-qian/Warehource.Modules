@@ -40,8 +40,8 @@ public class AddOrUpdateWcsTaskCommandHandler(
                     , request.GetFloor.ToString(), request.GetRow.ToString()
                     , request.GetColumn.ToString(), request.GetDepth.ToString()),
                 Description = request.Description,
-                StockInPosition = request.StockInPosition,
-                StockOutPosition = request.StockOutPosition,
+                StartPosition = request.StockInPosition,
+                EndPosition = request.StockOutPosition,
                 RegionId = region?.Id,
                 TaskExecuteStep = new TaskExecuteStep
                 {

@@ -6,10 +6,19 @@ public class StackerDBEntity : BaseDBEntity
 {
     public string RTask { get; set; }
 
+    /// <summary>
+    /// 层
+    /// </summary>
     public string RFloor { get; set; }
 
+    /// <summary>
+    /// 排
+    /// </summary>
     public string RRow { get; set; }
 
+    /// <summary>
+    /// 列
+    /// </summary>
     public string RColumn { get; set; }
 
     /// <summary>

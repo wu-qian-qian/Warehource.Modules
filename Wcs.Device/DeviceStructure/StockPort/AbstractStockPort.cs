@@ -29,6 +29,6 @@ public abstract class AbstractStockPort : AbstractDevice<StockPortConfig, PipeLi
 
     public override bool IsNewStart()
     {
-        return DBEntity is { RLoad: "1", RFree: "1" };
+        return CanExecute() && WcsTask == null;
     }
 }

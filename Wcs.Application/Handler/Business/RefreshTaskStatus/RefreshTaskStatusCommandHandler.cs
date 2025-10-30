@@ -14,15 +14,19 @@ namespace Wcs.Application.Handler.Business.RefreshTaskStatus;
 /// <param name="_unitOfWork"></param>
 public class RefreshTaskStatusCommandHandler(
     IWcsTaskRepository _wcsTaskRepository,
-    ICacheService _cacheService,
     IUnitOfWork _unitOfWork) : ICommandHandler<RefreshTaskStatusCommand>
 {
     public async Task Handle(RefreshTaskStatusCommand request, CancellationToken cancellationToken)
     {
         //初始该设备的状态
-        request.WcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.ToBeSend;
+        if (request.WcsTask.TaskStatus == WcsTaskStatusEnum.Completed)
+        {
+            //TODO 任务完成后续处理
+        }
+
+        request.WcsTask.TaskExecuteStep.TaskExecuteStepType = TaskExecuteStepTypeEnum.None;
+
         _wcsTaskRepository.Update(request.WcsTask);
         await _unitOfWork.SaveChangesAsync();
-        await _cacheService.RemoveAsync(request.Key);
     }
 }

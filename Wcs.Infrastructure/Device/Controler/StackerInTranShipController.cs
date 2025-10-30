@@ -1,13 +1,19 @@
-﻿using MediatR;
+﻿using Common.Shared;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Wcs.Application.DeviceController;
 using Wcs.Application.DeviceController.Tranship;
 using Wcs.Application.Handler.DeviceExecute;
 using Wcs.Application.Handler.DeviceExecute.StackerTranshipIn;
+using Wcs.CustomEvents.Saga;
+using Wcs.Device.DeviceStructure.Tranship;
 using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler;
 
-internal class StackerInTranShipController : AbstractStackerTranshipController
+[DependyAttrubite(DependyLifeTimeEnum.Singleton, typeof(IStackerTranshipInController))]
+internal class StackerInTranShipController : BaseCommonController<AbstractStackerTranship>,
+    IStackerTranshipInController
 {
     public StackerInTranShipController(IServiceScopeFactory serviceScopeFactory) : base(serviceScopeFactory)
     {
@@ -15,7 +21,7 @@ internal class StackerInTranShipController : AbstractStackerTranshipController
     }
 
 
-    public override async Task ExecuteAsync(CancellationToken token = default)
+    public async ValueTask ExecuteAsync(CancellationToken token = default)
     {
         if (Devices != null && Devices.Any())
         {
@@ -34,7 +40,66 @@ internal class StackerInTranShipController : AbstractStackerTranshipController
         }
         else
         {
-            await base.ExecuteAsync(token);
+            await InitializeAsync();
         }
     }
+
+    #region bussiness methd
+
+    public IEnumerable<KeyValuePair<string, string>> GetTunnleAndPiplineCodeByRegion(string regionCode)
+    {
+        var tunnles = Devices.Select(device =>
+        {
+            if (device.CanExecute() && device.CanRegionExecute(regionCode))
+            {
+                return device.Config.Tunnle;
+            }
+
+            return string.Empty;
+        });
+        tunnles = tunnles.Where(t => t != string.Empty).Distinct().ToArray()!;
+        foreach (var tunnle in tunnles)
+        {
+            var target = Devices.First(d => d.Config.Tunnle == tunnle).Config.PipelinCode;
+            yield return new KeyValuePair<string, string>(tunnle, target);
+        }
+    }
+
+    public string GetWcsTaskNoByDeviceName(string deviceName)
+    {
+        var device = Devices.First(p => p.Name == deviceName);
+        if (device.CanExecute())
+        {
+            return device.DBEntity.RTask;
+        }
+
+        return string.Empty;
+    }
+
+    public string GetLocationByDeviceName(string deviceName)
+    {
+        var device = Devices.First(p => p.Name == deviceName);
+        return $"{device.Config.Tunnle}_{device.Config.Floor}_{device.Config.Row}_{device.Config.Column}_1";
+    }
+
+    public string GetTunnleByDeviceName(string deviceName)
+    {
+        return Devices.First(p => p.Name == deviceName).Config.Tunnle;
+    }
+
+    public string GetWcsTaskNoByTunnle(string tunnle)
+    {
+        var devices = Devices.Where(p => p.Config.Tunnle == tunnle);
+        foreach (var device in devices)
+        {
+            if (device.CanExecute())
+            {
+                return device.DBEntity.RTask;
+            }
+        }
+
+        return string.Empty;
+    }
+
+    #endregion
 }

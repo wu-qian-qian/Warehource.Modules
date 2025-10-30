@@ -51,10 +51,10 @@ public class WcsTaskDto : BaseDto
     /// </summary>
     public string? ExecutePath { get; set; }
 
-    public string? StockInPosition { get; set; }
+    public string? StartPosition { get; set; }
 
 
-    public string? StockOutPosition { get; set; }
+    public string? EndPosition { get; set; }
 
     public string? CurrentDevice { get; set; }
 }

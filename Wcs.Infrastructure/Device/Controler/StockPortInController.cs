@@ -1,24 +1,33 @@
-﻿using MediatR;
+﻿using Common.Shared;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Wcs.Application.DeviceController;
 using Wcs.Application.DeviceController.StockPort;
+using Wcs.Application.DeviceController.Tranship;
 using Wcs.Application.Handler.DeviceExecute;
 using Wcs.Application.Handler.DeviceExecute.StockIn;
+using Wcs.CustomEvents.Saga;
+using Wcs.Device.DeviceStructure.StockPort;
+using Wcs.Domain.Task;
 using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler;
 
-internal class StockPortInController : AbstractStockPortController
+[DependyAttrubite(DependyLifeTimeEnum.Singleton, typeof(IStockPortInController))]
+internal class StockPortInController : BaseCommonController<AbstractStockPort>, IStockPortInController
 {
     public StockPortInController(IServiceScopeFactory serviceScopeFactory) : base(serviceScopeFactory)
     {
         DeviceType = DeviceTypeEnum.StockPortIn;
     }
 
-    public override async Task ExecuteAsync(CancellationToken token = default)
+    #region Execute
+
+    public async ValueTask ExecuteAsync(CancellationToken token = default)
     {
         if (Devices == null || Devices.Length == 0)
         {
-            await base.ExecuteAsync(token);
+            await InitializeAsync(token);
         }
         else
         {
@@ -36,4 +45,36 @@ internal class StockPortInController : AbstractStockPortController
             });
         }
     }
+
+    #endregion
+
+    #region bussiness method
+
+    public WcsWritePlcTaskCreated TryGetWritePlcTaskDataByDeviceName(string deviceName)
+    {
+        var device = Devices.First(d => d.Name == deviceName);
+        var wcsTask = device.WcsTask;
+        var dic = new Dictionary<string, string>();
+        dic.Add(device.CreatWriteExpression(p => p.WTask), wcsTask.SerialNumber.ToString());
+        dic.Add(device.CreatWriteExpression(p => p.WTargetCode), wcsTask.StartPosition);
+        dic.Add(device.CreatWriteExpression(p => p.WTaskType), ((int)wcsTask.TaskType).ToString());
+        dic.Add(device.CreatWriteExpression(p => p.WStart), "1");
+        return new WcsWritePlcTaskCreated(deviceName, dic,
+            device.Config.TaskKey);
+    }
+
+
+    public string GetBarCodeByDeviceName(string deviceName)
+    {
+        var device = Devices.First(d => d.Name == deviceName);
+        return device.DBEntity.RBarCode;
+    }
+
+    public string GetPiplineByDeviceName(string deviceName)
+    {
+        var device = Devices.First(d => d.Name == deviceName);
+        return device.Config.PipeLineCode;
+    }
+
+    #endregion
 }

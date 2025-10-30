@@ -1,5 +1,6 @@
 ﻿using System.Linq.Expressions;
 using Common.JsonExtension;
+using Wcs.Domain.Task;
 using Wcs.Shared;
 
 namespace Wcs.Device.Abstract;
@@ -35,16 +36,16 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     public bool Enable { get; protected set; }
 
     /// <summary>
+    ///     设备组
+    /// </summary>
+    public string DeviceGroupCode { get; protected set; }
+
+    /// <summary>
     ///     设备的区域编码组
     ///     可能包含多个
     ///     因为一个区域表示一条路径，且多调路径可能经过某同一设备
     /// </summary>
     public string RegionCodes { get; protected set; }
-
-    /// <summary>
-    ///     设备组
-    /// </summary>
-    public string DeviceGroupCode { get; protected set; }
 
     /// <summary>
     ///     设备名
@@ -56,10 +57,9 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     /// </summary>
     public abstract TConfig Config { get; protected set; }
 
-    public virtual void SetEnable(bool enable)
-    {
-        if (Enable != enable) Enable = enable;
-    }
+
+    public WcsTask? WcsTask { get; protected set; }
+
 
     /// <summary>
     ///     设置配置项
@@ -70,19 +70,17 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
         Config = config.ParseJson<TConfig>();
     }
 
-    /// <summary>
-    ///     设备是否可以执行该区域
-    /// </summary>
-    /// <param name="region"></param>
-    /// <returns></returns>
-    public virtual bool CanRegionExecute(string region)
-    {
-        if (region.Contains(RegionCodes) || RegionCodes.Contains(region)) return true;
-        return false;
-    }
 
+    /// <summary>
+    /// 是否可以执行新任务
+    /// </summary>
+    /// <returns></returns>
     public abstract bool IsNewStart();
 
+    /// <summary>
+    /// 是否可以执行
+    /// </summary>
+    /// <returns></returns>
     public abstract bool CanExecute();
 
     /// <summary>
@@ -115,4 +113,61 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
         // 返回属性名称
         return memberExpr.Member.Name;
     }
+
+
+    #region 抽象的实现
+
+    /// <summary>
+    ///    设置任务
+    /// </summary>
+    /// <param name="wcsTask"></param>
+    public void SetWcsTask(WcsTask wcsTask)
+    {
+        if (WcsTask != null)
+        {
+            WcsTask = wcsTask;
+        }
+    }
+
+    public string GetCacheTaskKey()
+    {
+        return Config.TaskKey;
+    }
+
+    public string GetCacheDBKey()
+    {
+        return Config.DBKey;
+    }
+
+    public string GetCacheKey()
+    {
+        return Config.Key;
+    }
+
+    /// <summary>
+    ///   清除任务
+    /// </summary>
+    public void ClearWcsTask()
+    {
+        WcsTask = default(WcsTask);
+    }
+
+    public virtual void SetEnable(bool enable)
+    {
+        if (Enable != enable) Enable = enable;
+    }
+
+    /// <summary>
+    ///     设备是否可以执行该区域
+    /// </summary>
+    /// <param name="region"></param>
+    /// <returns></returns>
+    public bool CanRegionExecute(string region)
+    {
+        if (string.IsNullOrEmpty(RegionCodes)) return true;
+        if (region.Contains(RegionCodes) || RegionCodes.Contains(region)) return true;
+        return false;
+    }
+
+    #endregion
 }

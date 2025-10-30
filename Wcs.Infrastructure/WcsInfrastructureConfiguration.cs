@@ -1,5 +1,6 @@
 using AutoMapper;
 using Common.Application.QuartzJob;
+using Common.Infrastructure.Dependy;
 using Common.Presentation.Endpoints;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
@@ -28,7 +29,6 @@ using Wcs.Infrastructure.DB.PlcMap;
 using Wcs.Infrastructure.DB.Region;
 using Wcs.Infrastructure.DB.WcsTask;
 using Wcs.Infrastructure.Device.Controler;
-using Wcs.Infrastructure.Device.Service;
 using Wcs.Infrastructure.Job.Options;
 using Wcs.Infrastructure.Job.Service;
 using Wcs.Infrastructure.Service;
@@ -36,7 +36,7 @@ using Wcs.Infrastructure.SignalR;
 using Wcs.Presentation.Custom;
 using Wcs.Presentation.Saga;
 using Wcs.Shared;
-using AssemblyReference = Wcs.Presentation.AssemblyReference;
+
 
 namespace Wcs.Infrastructure;
 
@@ -50,6 +50,7 @@ public static class WcsInfrastructureConfiguration
     {
         AddRepository(services);
         AddEndPoint(services);
+        AddDependy(services);
         services.AddDbContext<WCSDBContext>(options =>
         {
             var connStr = configuration.GetConnectionString("default");
@@ -131,33 +132,15 @@ public static class WcsInfrastructureConfiguration
 
     /// <summary>
     ///     核心业务逻辑注入
+    ///     重构1：使用反射注入，但是每一个的注入都是实现类
     /// </summary>
     /// <param name="service"></param>
     public static void AddCoreBusiness(IServiceCollection service)
     {
         // [FromKeyedServices(nameof(StackerInTranShipController))] IStackerTranshipController inController  构造获取方式
-        service.AddSingleton<IStackerController, StackerController>();
-        service.AddKeyedSingleton<IStackerTranshipController, StackerInTranShipController>(
-            nameof(StackerInTranShipController));
-        service.AddKeyedSingleton<IStackerTranshipController, StackerOutTranShipController>(
-            nameof(StackerOutTranShipController));
-        service.AddKeyedSingleton<IStockPortController, StockPortInController>(nameof(StockPortInController));
-        service.AddKeyedSingleton<IStockPortController, StockPortOutController>(nameof(StockPortOutController));
+
+
         //可以采用构造注入，这边为了使用的便捷采用了手动的注入
-        service.AddSingleton<IDeviceService>(sp =>
-        {
-            var stackerController = sp.GetService<IStackerController>();
-            var stackerInTranShipController =
-                sp.GetKeyedService<IStackerTranshipController>(nameof(StackerInTranShipController));
-            var stackerTranShipOutController =
-                sp.GetKeyedService<IStackerTranshipController>(nameof(StackerOutTranShipController));
-            var stockPortInController = sp.GetKeyedService<IStockPortController>(nameof(StockPortInController));
-            var stockPortOutController = sp.GetKeyedService<IStockPortController>(nameof(StockPortOutController));
-            var serviceScopeFactory = sp.GetService<IServiceScopeFactory>();
-            var service = new DeviceService(serviceScopeFactory, stackerController, stackerInTranShipController,
-                stackerTranShipOutController, stockPortInController, stockPortOutController);
-            return service;
-        });
     }
 
     /// <summary>
@@ -188,5 +171,15 @@ public static class WcsInfrastructureConfiguration
     public static void AddAutoMapper(IMapperConfigurationExpression configurationExpression)
     {
         ApplicationConfigurator.AddAutoMapper(configurationExpression);
+    }
+
+    /// <summary>
+    /// 对特性标注的类型进行DI注入
+    /// </summary>
+    /// <param name="service"></param>
+    public static void AddDependy(IServiceCollection service)
+    {
+        var ass = typeof(WcsInfrastructureConfiguration).Assembly;
+        service.DependyConfiguration([ass]);
     }
 }

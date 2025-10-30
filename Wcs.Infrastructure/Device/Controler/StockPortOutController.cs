@@ -1,6 +1,9 @@
-﻿using MediatR;
+﻿using Common.Shared;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Wcs.Application.DeviceController;
 using Wcs.Application.DeviceController.StockPort;
+using Wcs.Application.DeviceController.Tranship;
 using Wcs.Application.Handler.DeviceExecute;
 using Wcs.Application.Handler.DeviceExecute.StockOut;
 using Wcs.Device.DeviceStructure.StockPort;
@@ -8,22 +11,20 @@ using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler;
 
-internal class StockPortOutController : AbstractStockPortController
+[DependyAttrubite(DependyLifeTimeEnum.Singleton, typeof(IStockPortOutController))]
+internal class StockPortOutController : BaseCommonController<AbstractStockPort>, IStockPortOutController
 {
     public StockPortOutController(IServiceScopeFactory serviceScopeFactory) : base(serviceScopeFactory)
     {
         DeviceType = DeviceTypeEnum.StockPortOut;
     }
 
-    public AbstractStockPort[] Devices { get; }
 
-    public DeviceTypeEnum DeviceType { get; init; }
-
-    public override async Task ExecuteAsync(CancellationToken token = default)
+    public async ValueTask ExecuteAsync(CancellationToken token = default)
     {
         if (Devices == null || Devices.Length == 0)
         {
-            await base.ExecuteAsync(token);
+            await InitializeAsync(token);
         }
         else
         {
@@ -41,4 +42,14 @@ internal class StockPortOutController : AbstractStockPortController
             });
         }
     }
+
+
+    #region
+
+    public string GetWcsTaskCodeByDeviceName(string json)
+    {
+        return Devices.First(p => p.Name == json).DBEntity.RTask;
+    }
+
+    #endregion
 }

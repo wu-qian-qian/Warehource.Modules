@@ -31,7 +31,7 @@ public abstract class AbstractStacker : AbstractDevice<StackerConfig, StackerDBE
     /// <returns></returns>
     public override bool IsNewStart()
     {
-        return DBEntity is { RLoad: "0", RExecuteStatus: "1" };
+        return DBEntity is { RLoad: "0", RExecuteStatus: "1" } && Enable;
     }
 
     /// <summary>
@@ -51,8 +51,12 @@ public abstract class AbstractStacker : AbstractDevice<StackerConfig, StackerDBE
     /// <returns></returns>
     public bool IsTranShipPoint()
     {
-        //TODO 
-        return true;
+        if (DBEntity.RRow == Config.StationRow && DBEntity.RColumn == Config.StationColumn)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>

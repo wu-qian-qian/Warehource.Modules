@@ -36,6 +36,8 @@ public static class AddModulesExtensions
         AddMassTransit(service, moduleConfigureConsumers);
         //本地事件总线
         AddEvent(service, assemblies);
+        //本地状态机处理注入
+        AddFSM(service, assemblies);
         //中介者
         AddMediatR(service, assemblies, mediatrActions);
         //后台任务
@@ -80,7 +82,8 @@ public static class AddModulesExtensions
         return services;
     }
 
-    internal static IServiceCollection AddState(this IServiceCollection services, Assembly[] modelusAss)
+
+    internal static IServiceCollection AddFSM(this IServiceCollection services, Assembly[] modelusAss)
     {
         services.AddStateMachineExtensionConfiguator(modelusAss);
         return services;

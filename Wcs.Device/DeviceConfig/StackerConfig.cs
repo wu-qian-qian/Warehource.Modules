@@ -8,4 +8,10 @@ public class StackerConfig : BaseDeviceConfig
     ///     巷道编码
     /// </summary>
     public string Tunnle { get; set; }
+
+    public string StationColumn { get; set; }
+
+    public string StationFloor { get; set; }
+
+    public string StationRow { get; set; }
 }

@@ -5,6 +5,9 @@ using Wcs.CustomEvents.Saga;
 
 namespace Wcs.Presentation.Saga;
 
+/// <summary>
+/// PLC 通信写入任务状态机
+/// </summary>
 public class WcsWritePlcTaskSaga : MassTransitStateMachine<WcsWritePlcTaskState>
 {
     public WcsWritePlcTaskSaga()
@@ -81,7 +84,8 @@ public class WcsWritePlcTaskSaga : MassTransitStateMachine<WcsWritePlcTaskState>
         DuringAny(
             When(WcsWritePlcTaskDataProcessed)
                 .Publish(context =>
-                    new WcsWritePlcTaskDataIntegrationEvent(context.Message.Key, context.Message.Success))
+                    new WcsWritePlcTaskDataIntegrationEvent(context.Message.DeviceName, context.Message.Key,
+                        context.Message.Success))
                 .Finalize() // 结束Saga实例
         );
     }
@@ -91,6 +95,6 @@ public class WcsWritePlcTaskSaga : MassTransitStateMachine<WcsWritePlcTaskState>
 
     // 定义事件
     public Event<WcsWritePlcTaskCreated> WcsWritePlcTaskDataCreated { get; }
-    public Event<WcsWritePlcTaskCompleted> WcsWritePlcTaskDataCompleted { get; }
+    public Event<WcsWritePlcTaskResult> WcsWritePlcTaskDataCompleted { get; }
     public Event<WcsWritePlcTaskProcessed> WcsWritePlcTaskDataProcessed { get; }
 }

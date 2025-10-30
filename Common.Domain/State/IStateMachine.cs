@@ -2,5 +2,5 @@
 
 public interface IStateMachine
 {
-    ValueTask HandlerAsync(string json, CancellationToken token = default);
+    ValueTask HandlerAsync(string deviceName, CancellationToken token = default);
 }

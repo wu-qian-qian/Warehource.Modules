@@ -10,8 +10,7 @@ namespace Wcs.Infrastructure.Job.JobItems;
 [DisallowConcurrentExecution]
 public class StackerInTranShipJob(
     IHubManager _hubManager,
-    [FromKeyedServices(nameof(StackerInTranShipController))]
-    IStackerTranshipController _controller) : BaseJob
+    IStackerTranshipInController _controller) : BaseJob
 {
     public override async Task Execute(IJobExecutionContext context)
     {

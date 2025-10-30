@@ -310,6 +310,10 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("EndPosition")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -326,6 +330,10 @@ namespace Wcs.Infrastructure.Database.Migrations
                     b.Property<int>("Level")
                         .HasColumnType("int");
 
+                    b.Property<string>("RegionCode")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
                     b.Property<Guid?>("RegionId")
                         .HasColumnType("uniqueidentifier");
 
@@ -335,15 +343,12 @@ namespace Wcs.Infrastructure.Database.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SerialNumber"), 4000L);
 
-                    b.Property<string>("StockInPosition")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("StockOutPosition")
+                    b.Property<string>("StartPosition")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("TaskCode")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -369,8 +374,7 @@ namespace Wcs.Infrastructure.Database.Migrations
                         .IsUnique();
 
                     b.HasIndex("TaskCode")
-                        .IsUnique()
-                        .HasFilter("[TaskCode] IS NOT NULL");
+                        .IsUnique();
 
                     b.HasIndex("TaskExecuteStepId")
                         .IsUnique();
@@ -444,7 +448,7 @@ namespace Wcs.Infrastructure.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.OwnsOne("Wcs.Domain.Task.GetLocation", "GetLocation", b1 =>
+                    b.OwnsOne("Wcs.Domain.Task.GetLocationByDeviceName", "GetLocationByDeviceName", b1 =>
                         {
                             b1.Property<Guid>("WcsTaskId")
                                 .HasColumnType("uniqueidentifier");
@@ -510,7 +514,7 @@ namespace Wcs.Infrastructure.Database.Migrations
                                 .HasForeignKey("WcsTaskId");
                         });
 
-                    b.Navigation("GetLocation")
+                    b.Navigation("GetLocationByDeviceName")
                         .IsRequired();
 
                     b.Navigation("PutLocation")

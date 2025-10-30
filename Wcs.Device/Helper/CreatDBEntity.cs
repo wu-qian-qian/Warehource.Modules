@@ -6,13 +6,13 @@ namespace Wcs.Device.Helper;
 
 public class CreatDBEntity
 {
-    private static readonly Dictionary<string, PropertyInfo[]?> ProperMap;
+    private static readonly Dictionary<string, PropertyInfo[]?> _properMap;
 
-    private static readonly SemaphoreSlim SemaphoreSlim = new(1, 1);
+    private static readonly SemaphoreSlim _semaphoreSlim = new(1, 1);
 
     static CreatDBEntity()
     {
-        ProperMap = new Dictionary<string, PropertyInfo[]?>();
+        _properMap = new Dictionary<string, PropertyInfo[]?>();
     }
 
     public static T CreatEntity<T>(PlcBuffer[] plcBuffers) where T : BaseDBEntity, new()
@@ -22,22 +22,22 @@ public class CreatDBEntity
         PropertyInfo[]? propers = default;
         try
         {
-            ProperMap.TryGetValue(type.Name, out propers);
+            _properMap.TryGetValue(type.Name, out propers);
             //双重校验
             if (propers == null)
             {
-                SemaphoreSlim.Wait();
-                ProperMap.TryGetValue(type.Name, out propers);
+                _semaphoreSlim.Wait();
+                _properMap.TryGetValue(type.Name, out propers);
                 if (propers == null)
                 {
                     propers = type.GetProperties();
-                    ProperMap[type.Name] = propers;
+                    _properMap[type.Name] = propers;
                 }
             }
         }
         finally
         {
-            SemaphoreSlim.Release();
+            _semaphoreSlim.Release();
         }
 
         for (var i = 0; i < plcBuffers.Length; i++)
@@ -65,22 +65,22 @@ public class CreatDBEntity
         PropertyInfo[]? propers = default;
         try
         {
-            ProperMap.TryGetValue(type.Name, out propers);
+            _properMap.TryGetValue(type.Name, out propers);
             //双重校验
             if (propers == null)
             {
-                SemaphoreSlim.Wait();
-                ProperMap.TryGetValue(type.Name, out propers);
+                _semaphoreSlim.Wait();
+                _properMap.TryGetValue(type.Name, out propers);
                 if (propers == null)
                 {
                     propers = type.GetProperties();
-                    ProperMap[type.Name] = propers;
+                    _properMap[type.Name] = propers;
                 }
             }
         }
         finally
         {
-            SemaphoreSlim.Release();
+            _semaphoreSlim.Release();
         }
 
         for (var i = 0; i < plcBuffers.Length; i++)

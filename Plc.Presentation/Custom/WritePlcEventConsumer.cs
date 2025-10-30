@@ -22,7 +22,7 @@ public class WritePlcEventConsumer<TIntegrationEvent>(ISender sender)
 {
     public async Task Consume(ConsumeContext<TIntegrationEvent> context)
     {
-        WcsWritePlcTaskCompleted completed = default;
+        WcsWritePlcTaskResult completed = default;
         S7WritePlcDataBlockIntegrationEvent s7ReadPlcConsumevent = context.Message;
         var readPlcEvent = new WritePlcEventCommand
         {
@@ -33,12 +33,12 @@ public class WritePlcEventConsumer<TIntegrationEvent>(ISender sender)
         try
         {
             var @bool = await sender.Send(readPlcEvent);
-            completed = new WcsWritePlcTaskCompleted(context.Message.DeviceName, @bool, context.Message.Key);
+            completed = new WcsWritePlcTaskResult(context.Message.DeviceName, @bool, context.Message.Key);
         }
         catch (Exception e)
         {
             Log.Logger.ForCategory(LogCategory.Event).Information($"{context.Host}--发送Plc写入出现异常{e.Message}");
-            completed = new WcsWritePlcTaskCompleted(context.Message.DeviceName, false, context.Message.Key);
+            completed = new WcsWritePlcTaskResult(context.Message.DeviceName, false, context.Message.Key);
         }
 
         //saga状态机事件

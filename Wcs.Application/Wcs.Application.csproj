@@ -18,8 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="DomainEvent\"/>
-        <Folder Include="StateMachine\"/>
+        <None Include="StateMachine\Stacker\GetStationFSM.cs"/>
     </ItemGroup>
 
 </Project>

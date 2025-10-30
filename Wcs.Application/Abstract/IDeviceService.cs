@@ -1,4 +1,5 @@
-﻿using Wcs.Shared;
+﻿using Wcs.Domain.Task;
+using Wcs.Shared;
 
 namespace Wcs.Application.Abstract;
 
@@ -42,5 +43,18 @@ public interface IDeviceService
     /// <returns></returns>
     Task<string> GetDeviceNameWithTargetCodeAsync(DeviceTypeEnum deviceType, string pipLineCode, string region);
 
+    /// <summary>
+    ///    ///     设置设备启用状态
+    /// </summary>
+    /// <param name="enable"></param>
+    /// <param name="deviceType"></param>
+    /// <param name="deviceName"></param>
     void SetDviceEnable(bool enable, DeviceTypeEnum deviceType, string deviceName);
+
+    /// <summary>
+    ///    ///     根据设备名称获取任务
+    /// </summary>
+    /// <param name="deviceName"></param>
+    /// <returns></returns>
+    WcsTask GetWcsTaskByDeviceNameAsync(string deviceName);
 }

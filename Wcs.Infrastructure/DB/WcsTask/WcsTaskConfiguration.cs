@@ -34,8 +34,9 @@ public class WcsTaskConfiguration : IEntityTypeConfiguration<Domain.Task.WcsTask
             g.Property(p => p.PutDepth).IsRequired(false).HasMaxLength(10);
         });
 
-        builder.Property(p => p.StockInPosition).HasMaxLength(50);
-        builder.Property(p => p.StockOutPosition).HasMaxLength(50);
+        builder.Property(p => p.StartPosition).HasMaxLength(50);
+        builder.Property(p => p.EndPosition).HasMaxLength(50);
+        builder.Property(p => p.RegionCode).HasMaxLength(20);
 
         builder.HasOne(t => t.TaskExecuteStep)
             .WithOne()

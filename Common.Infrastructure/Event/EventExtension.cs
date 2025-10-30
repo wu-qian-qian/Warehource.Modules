@@ -17,13 +17,11 @@ public static class EventExtension
     /// <returns></returns>
     public static IServiceCollection AddEventExtensionConfiguator(this IServiceCollection services, Assembly[] assembly)
     {
-        var handlerTypes = GetEventTypes(assembly, services);
-        services.AddSingleton<IDomainEventBus>(sp =>
+        var eventManager = GetEventTypes(assembly, services);
+        services.AddSingleton<IEventBus>(sp =>
         {
-            var eventManager = new EventManager();
-            foreach (var item in handlerTypes) eventManager.AddSubscription(item.Key, item.Value);
             var serviceScope = sp.GetRequiredService<IServiceScopeFactory>();
-            return new DomainEventBus(eventManager, serviceScope);
+            return new EventBus(eventManager, serviceScope);
         });
         return services;
     }
@@ -34,30 +32,80 @@ public static class EventExtension
     /// <param name="assemblies"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentException"></exception>
-    internal static Dictionary<string, Type[]> GetEventTypes(Assembly[] assemblies, IServiceCollection descriptors)
+    private static EventManager GetEventTypes(Assembly[] assemblies, IServiceCollection descriptors)
     {
         if (assemblies == null || assemblies.Length == 0)
             throw new ArgumentException("At least one assembly must be provided.", nameof(assemblies));
-        var dictionary = new Dictionary<string, Type[]>();
+        //程序集的所有类
         var assTypeList = assemblies.Select(p => p.GetTypes());
-        var types = new List<Type>();
-        foreach (var item in assTypeList) types.AddRange(item);
+        var allTypeList = new List<Type>();
+        foreach (var item in assTypeList) allTypeList.AddRange(item);
+        //筛选出所有的事件类型
 
-        var handlerDomains = types.Where(type => type is { IsAbstract: false, IsInterface: false } &&
-                                                 type.IsAssignableTo(typeof(IEventDomain)));
+        #region 开启型泛型注入
 
+        var handlerTypes = allTypeList.Where(t => !t.IsAbstract && !t.IsInterface)
+            .Where(t => t.GetInterfaces().Any(i => i.IsGenericType &&
+                                                   i.GetGenericTypeDefinition() == typeof(IEventHandler<,>))).ToArray();
+
+        // 构建事件类型 -> 处理器类型列表 的映射
+        var eventToHandlers = new Dictionary<string, Type>();
+
+        foreach (var handlerType in handlerTypes)
+        {
+            var interfaces = handlerType.GetInterfaces()
+                .Where(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEventHandler<,>));
+
+            if (interfaces.Any() == false || interfaces.Count() > 1)
+            {
+                throw new ArgumentException($"{handlerType.FullName} 必须实现且只能实现一个 IEventHandler<TEvent, TResponse> 接口");
+            }
+
+            // 获取事件类型 IEventHandler<,> 第一个泛型参数 IEvent 第二个返回类型 TResponse
+            var eventType = interfaces.First().GetGenericArguments()[0];
+            if (!eventToHandlers.ContainsKey(eventType.FullName))
+            {
+                eventToHandlers[eventType.FullName] = handlerType;
+                descriptors.AddTransient(handlerType);
+            }
+        }
+
+        #endregion
+
+        var eventManager = new EventManager(eventToHandlers);
+
+        #region 关闭型泛型注入
+
+        var handlerDomains = allTypeList.Where(type => type is { IsAbstract: false, IsInterface: false } &&
+                                                       type.IsAssignableTo(typeof(IEvent)));
         foreach (var item in handlerDomains)
         {
             //获取所有实现了IDomainEventHandler<item>接口的处理器类型
-            var handlers = types
+            var handlers = allTypeList
                 .Where(t => t is { IsAbstract: false, IsInterface: false } &&
-                            t.IsAssignableTo(typeof(IDomainEventHandler<>).MakeGenericType(item)))
+                            t.IsAssignableTo(typeof(IEventHandler<>).MakeGenericType(item)))
                 .ToArray();
-            foreach (var handler in handlers) descriptors.AddTransient(handler);
-            dictionary.Add(item.FullName, handlers);
+            if (handlers.Length == 0 || handlers.Length > 1)
+            {
+                continue;
+            }
+
+            descriptors.AddTransient(handlers[0]);
+            eventManager.AddSubscription(item.FullName, handlers[0]);
         }
 
-        return dictionary;
+        #endregion
+
+        return eventManager;
+    }
+
+    public static bool ImplementsOpenGenericInterface(Type type, Type openGenericInterface)
+    {
+        if (!openGenericInterface.IsInterface || !openGenericInterface.IsGenericTypeDefinition)
+            throw new ArgumentException("Must be an open generic interface", nameof(openGenericInterface));
+
+        return type.GetInterfaces()
+            .Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == openGenericInterface);
     }
 
     /// <summary>

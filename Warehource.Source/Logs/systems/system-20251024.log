@@ -1,0 +1,19 @@
+2025-10-24 14:39:27.669 +08:00 [ERR] Failed executing DbCommand (138ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[CreationTime], [w].[Description], [w].[IsDeleted], [w].[IsStart], [w].[JobType], [w].[LastModificationTime], [w].[LastModifierUser], [w].[Name], [w].[TimeOut], [w].[Timer]
+FROM [Wcs.JobConfig] AS [w]
+WHERE [w].[IsDeleted] = CAST(0 AS bit)2025-10-24 14:39:27.849 +08:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Wcs.Infrastructure.Database.WCSDBContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): 对象名 'Wcs.JobConfig' 无效。
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:c0d766a0-33a1-4b0a-a354-27c59ffc6ed2
+Error Number:208,State:1,Class:16

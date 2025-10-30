@@ -6,7 +6,7 @@ public static class CacheOptions
 {
     public static DistributedCacheEntryOptions DefaultExpiration => new()
     {
-        AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(15)
+        AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(60 * 1000)
     };
 
     public static DistributedCacheEntryOptions Create(TimeSpan? expiration)
