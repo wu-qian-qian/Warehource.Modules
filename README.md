@@ -5,7 +5,7 @@
   - 系统模块之间的通讯使用MassTransit进行模块之间通讯
   - 使用EFCore做为ORM
   - 使用MediatR进行主要的事件驱动
-  - 基于WCS系统设备执行罗使用状态机的模式执行
+  - WCS系统设备执行逻辑使用状态机的模式执行
   - 使用Quartz进行后台任务的执行
   - PLC的通讯采用S7NetPlus
   - 实时数据反馈采用SignalR
