@@ -57,9 +57,7 @@ public static class EventExtension
                 .Where(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEventHandler<,>));
 
             if (interfaces.Any() == false || interfaces.Count() > 1)
-            {
                 throw new ArgumentException($"{handlerType.FullName} 必须实现且只能实现一个 IEventHandler<TEvent, TResponse> 接口");
-            }
 
             // 获取事件类型 IEventHandler<,> 第一个泛型参数 IEvent 第二个返回类型 TResponse
             var eventType = interfaces.First().GetGenericArguments()[0];
@@ -85,10 +83,7 @@ public static class EventExtension
                 .Where(t => t is { IsAbstract: false, IsInterface: false } &&
                             t.IsAssignableTo(typeof(IEventHandler<>).MakeGenericType(item)))
                 .ToArray();
-            if (handlers.Length == 0 || handlers.Length > 1)
-            {
-                continue;
-            }
+            if (handlers.Length == 0 || handlers.Length > 1) continue;
 
             descriptors.AddTransient(handlers[0]);
             eventManager.AddSubscription(item.FullName, handlers[0]);

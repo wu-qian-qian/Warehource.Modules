@@ -9,7 +9,7 @@ public interface IExecuteNodeRepository
     public ExecuteNodePath Get(string pahtNodeGroup);
 
     /// <summary>
-    /// 自带include
+    ///     自带include
     /// </summary>
     /// <returns></returns>
     public IQueryable<ExecuteNodePath> GetQuerys();

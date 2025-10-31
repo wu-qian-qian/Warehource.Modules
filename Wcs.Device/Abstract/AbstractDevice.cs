@@ -21,11 +21,6 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     }
 
     /// <summary>
-    ///     设备类型
-    /// </summary>
-    public DeviceTypeEnum DeviceType { get; init; }
-
-    /// <summary>
     ///     信号量
     /// </summary>
     public abstract TDBEntity DBEntity { get; protected set; }
@@ -39,6 +34,11 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     ///     设备组
     /// </summary>
     public string DeviceGroupCode { get; protected set; }
+
+    /// <summary>
+    ///     设备类型
+    /// </summary>
+    public DeviceTypeEnum DeviceType { get; init; }
 
     /// <summary>
     ///     设备的区域编码组
@@ -62,6 +62,19 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
 
 
     /// <summary>
+    ///     是否可以执行新任务
+    /// </summary>
+    /// <returns></returns>
+    public abstract bool IsNewStart();
+
+    /// <summary>
+    ///     是否可以执行
+    /// </summary>
+    /// <returns></returns>
+    public abstract bool CanExecute();
+
+
+    /// <summary>
     ///     设置配置项
     /// </summary>
     /// <param name="config"></param>
@@ -69,19 +82,6 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     {
         Config = config.ParseJson<TConfig>();
     }
-
-
-    /// <summary>
-    /// 是否可以执行新任务
-    /// </summary>
-    /// <returns></returns>
-    public abstract bool IsNewStart();
-
-    /// <summary>
-    /// 是否可以执行
-    /// </summary>
-    /// <returns></returns>
-    public abstract bool CanExecute();
 
     /// <summary>
     ///     创建出键值对
@@ -118,15 +118,12 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     #region 抽象的实现
 
     /// <summary>
-    ///    设置任务
+    ///     设置任务
     /// </summary>
     /// <param name="wcsTask"></param>
     public void SetWcsTask(WcsTask wcsTask)
     {
-        if (WcsTask != null)
-        {
-            WcsTask = wcsTask;
-        }
+        if (WcsTask != null) WcsTask = wcsTask;
     }
 
     public string GetCacheTaskKey()
@@ -145,11 +142,11 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
     }
 
     /// <summary>
-    ///   清除任务
+    ///     清除任务
     /// </summary>
     public void ClearWcsTask()
     {
-        WcsTask = default(WcsTask);
+        WcsTask = default;
     }
 
     public virtual void SetEnable(bool enable)
@@ -167,6 +164,15 @@ public abstract class AbstractDevice<TConfig, TDBEntity> : IDevice<TConfig>
         if (string.IsNullOrEmpty(RegionCodes)) return true;
         if (region.Contains(RegionCodes) || RegionCodes.Contains(region)) return true;
         return false;
+    }
+
+    /// <summary>
+    ///     设置DB实体
+    /// </summary>
+    /// <param name="dBEntity"></param>
+    public void SetDBEntiry(BaseDBEntity dBEntity)
+    {
+        DBEntity = (TDBEntity)dBEntity;
     }
 
     #endregion

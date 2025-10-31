@@ -1,6 +1,6 @@
-﻿using Common.Application.Event;
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
 using System.Linq.Expressions;
+using Common.Application.Event;
 
 namespace Common.Infrastructure.Event.DomainEvent;
 
@@ -28,9 +28,7 @@ internal sealed partial class EventManager
     {
         if (!HasSubscriptionsForEvent(eventName)) _handlers.TryAdd(eventName, handlers);
         else
-        {
             throw new AggregateException(eventName + " 已经存在订阅");
-        }
     }
 }
 

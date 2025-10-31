@@ -5,11 +5,6 @@ namespace Plc.Application.Abstract;
 
 public abstract class S7Net : INet
 {
-    public S7Net(bool isUset)
-    {
-        UsePlc(isUset);
-    }
-
     public S7.Net.Plc _plc { get; protected set; }
 
     public abstract void Connect();

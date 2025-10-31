@@ -1,14 +1,14 @@
+using System.Collections.Concurrent;
 using Common.Shared;
 using Common.Shared.Log;
 using Serilog;
-using System.Collections.Concurrent;
 
 namespace Common.Application.Log;
 
 public static class LoggerExtensions
 {
     /// <summary>
-    /// 防止缓存的重复记录
+    ///     防止缓存的重复记录
     /// </summary>
     public static ConcurrentDictionary<string, DateTime> LastLogTimes = new();
 
@@ -23,10 +23,7 @@ public static class LoggerExtensions
                     .Where(kvp => (now - kvp.Value).TotalSeconds > 15)
                     .Select(kvp => kvp.Key)
                     .ToList();
-                foreach (var key in keysToRemove)
-                {
-                    LastLogTimes.TryRemove(key, out _);
-                }
+                foreach (var key in keysToRemove) LastLogTimes.TryRemove(key, out _);
 
                 Thread.Sleep(20 * 1000); // 每20秒检查一次
             }
@@ -63,7 +60,7 @@ public static class LoggerExtensions
     //}
 
     /// <summary>
-    /// 业务日志，防止time秒内重复日志记录
+    ///     业务日志，防止time秒内重复日志记录
     /// </summary>
     /// <param name="logger"></param>
     /// <param name="category"></param>
@@ -75,14 +72,9 @@ public static class LoggerExtensions
         if (LastLogTimes.TryGetValue(key, out var lastTime))
         {
             if (lastTime.AddSeconds(time) > DateTime.Now)
-            {
                 // 5秒内重复日志不记录
                 return;
-            }
-            else
-            {
-                LastLogTimes[key] = DateTime.Now;
-            }
+            LastLogTimes[key] = DateTime.Now;
         }
 
         logger.ForContext("Category", category).Information(

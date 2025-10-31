@@ -6,7 +6,7 @@ using Wcs.CustomEvents.Saga;
 namespace Wcs.Presentation.Saga;
 
 /// <summary>
-/// PLC 通信写入任务状态机
+///     PLC 通信写入任务状态机
 /// </summary>
 public class WcsWritePlcTaskSaga : MassTransitStateMachine<WcsWritePlcTaskState>
 {

@@ -20,11 +20,10 @@ public class CreatDBEntity
         var type = typeof(T);
         var t = new T();
         PropertyInfo[]? propers = default;
-        try
-        {
-            _properMap.TryGetValue(type.Name, out propers);
-            //双重校验
-            if (propers == null)
+        _properMap.TryGetValue(type.Name, out propers);
+        //双重校验
+        if (propers == null)
+            try
             {
                 _semaphoreSlim.Wait();
                 _properMap.TryGetValue(type.Name, out propers);
@@ -34,15 +33,14 @@ public class CreatDBEntity
                     _properMap[type.Name] = propers;
                 }
             }
-        }
-        finally
-        {
-            _semaphoreSlim.Release();
-        }
+            finally
+            {
+                _semaphoreSlim.Release();
+            }
 
         for (var i = 0; i < plcBuffers.Length; i++)
         {
-            var propertyInfo = propers.First(p => p.Name == plcBuffers[i].DBName);
+            var propertyInfo = propers.First(p => p.Name.ToLower() == plcBuffers[i].DBName.ToLower());
             propertyInfo.SetValue(t, plcBuffers[i].Data);
         }
 
@@ -63,11 +61,10 @@ public class CreatDBEntity
 
         var type = ins.GetType();
         PropertyInfo[]? propers = default;
-        try
-        {
-            _properMap.TryGetValue(type.Name, out propers);
-            //双重校验
-            if (propers == null)
+        _properMap.TryGetValue(type.Name, out propers);
+        //双重校验
+        if (propers == null)
+            try
             {
                 _semaphoreSlim.Wait();
                 _properMap.TryGetValue(type.Name, out propers);
@@ -77,15 +74,14 @@ public class CreatDBEntity
                     _properMap[type.Name] = propers;
                 }
             }
-        }
-        finally
-        {
-            _semaphoreSlim.Release();
-        }
+            finally
+            {
+                _semaphoreSlim.Release();
+            }
 
         for (var i = 0; i < plcBuffers.Length; i++)
         {
-            var propertyInfo = propers.First(p => p.Name == plcBuffers[i].DBName);
+            var propertyInfo = propers.First(p => p.Name.ToLower() == plcBuffers[i].DBName.ToLower());
             propertyInfo.SetValue(ins, plcBuffers[i].Data);
         }
 

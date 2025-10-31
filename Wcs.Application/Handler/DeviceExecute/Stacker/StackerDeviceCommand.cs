@@ -1,14 +1,10 @@
-﻿using Wcs.Device.DeviceStructure.Stacker;
+﻿using Wcs.Device.Abstract;
 
 namespace Wcs.Application.Handler.DeviceExecute.Stacker;
 
 public class StackerDeviceCommand : IExecuteDeviceCommand
 {
-    public StackerDeviceCommand(AbstractStacker device) : base(device.Name, device.Config.DBKey, device.DeviceType,
-        device.DBEntity)
+    public StackerDeviceCommand(IDevice device) : base(device)
     {
-        Device = device;
     }
-
-    public AbstractStacker Device { get; set; }
 }

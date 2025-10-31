@@ -17,8 +17,7 @@ public class TaskExecuteStep : IEntity
     }
 
     /// <summary>
-    ///     
-    /// 2025-10-24 更新 状态机处理执行状态
+    ///     2025-10-24 更新 状态机处理执行状态
     /// </summary>
     public TaskExecuteStepTypeEnum TaskExecuteStepType { get; set; }
 

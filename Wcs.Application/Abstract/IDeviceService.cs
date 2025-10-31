@@ -44,7 +44,7 @@ public interface IDeviceService
     Task<string> GetDeviceNameWithTargetCodeAsync(DeviceTypeEnum deviceType, string pipLineCode, string region);
 
     /// <summary>
-    ///    ///     设置设备启用状态
+    ///     ///     设置设备启用状态
     /// </summary>
     /// <param name="enable"></param>
     /// <param name="deviceType"></param>
@@ -52,7 +52,7 @@ public interface IDeviceService
     void SetDviceEnable(bool enable, DeviceTypeEnum deviceType, string deviceName);
 
     /// <summary>
-    ///    ///     根据设备名称获取任务
+    ///     ///     根据设备名称获取任务
     /// </summary>
     /// <param name="deviceName"></param>
     /// <returns></returns>

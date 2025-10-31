@@ -30,40 +30,34 @@ internal class TransferReadS7PlcPipelineBehavior(
         {
             var entityItems = (await netManager.GetNetWiteDeviceNameAsync(request.DeviceName))
                 .OrderBy(p => p.Index);
-            var entityItemModels = entityItems.Select(p =>
+            memoryEntity = entityItems.Select(p =>
             {
                 return new EntityItemModel(p.Name, p.S7DataType, p.DBAddress, p.DataOffset, p.BitOffset,
                     p.ArrayLength);
             });
-            await cacheService.SetAsync(mapkey, entityItemModels);
+            await cacheService.SetAsync(mapkey, memoryEntity);
         }
 
         //公共模块触发，将数据放入缓存
         if (request.IsApi == false)
         {
-            //确保每一的值被消费才进行下一次读取，没有被消费说明某一步骤卡死读取也就不存在意义
-            var readModelArray = await cacheService.GetAsync<IEnumerable<ReadModel>>(key);
-            if (readModelArray == null)
+            var response = await next();
+            if (response != null)
             {
-                //
-                var response = await next();
-                if (response != null)
+                var readModels = new List<ReadModel>();
+                foreach (var item in response)
                 {
-                    var readModels = new List<ReadModel>();
-                    foreach (var item in response)
+                    var filterEntity = memoryEntity.Where(p => p.DBAddress == item.DB);
+                    var readModelArray = filterEntity.Select(p =>
                     {
-                        var filterEntity = memoryEntity.Where(p => p.DBAddress == item.DB);
-                        readModelArray = filterEntity.Select(p =>
-                        {
-                            var data = TransferDataHelper.TransferBufferToData(item.Data, p.OffSet, p.BitOffSet.Value,
-                                p.S7DataType, p.ArrayLength);
-                            return new ReadModel(p.DBName, data);
-                        });
-                        readModels.AddRange(readModelArray);
-                    }
-
-                    await cacheService.SetAsync<IEnumerable<ReadModel>>(key, readModels);
+                        var data = TransferDataHelper.TransferBufferToData(item.Data, p.OffSet, p.BitOffSet,
+                            p.S7DataType, p.ArrayLength);
+                        return new ReadModel(p.DBName, data);
+                    });
+                    readModels.AddRange(readModelArray);
                 }
+
+                await cacheService.SetAsync<IEnumerable<ReadModel>>(key, readModels);
             }
         }
 

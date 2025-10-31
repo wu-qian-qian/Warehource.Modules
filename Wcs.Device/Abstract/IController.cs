@@ -1,12 +1,11 @@
-﻿using Wcs.Domain.Task;
-using Wcs.Shared;
+﻿using Wcs.Shared;
 
 namespace Wcs.Device.Abstract;
 
 public interface IController<T> : IController where T : class, IDevice
 {
     /// <summary>
-    /// 设备结构
+    ///     设备结构
     /// </summary>
     T[] Devices { get; }
 
@@ -16,12 +15,12 @@ public interface IController<T> : IController where T : class, IDevice
 public interface IController
 {
     /// <summary>
-    /// 设备类型
+    ///     设备类型
     /// </summary>
     DeviceTypeEnum DeviceType { get; }
 
     /// <summary>
-    /// 逻辑执行
+    ///     逻辑执行
     /// </summary>
     /// <param name="token"></param>
     /// <returns></returns>

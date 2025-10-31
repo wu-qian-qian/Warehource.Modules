@@ -2,13 +2,10 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Wcs.Application.DeviceController;
-using Wcs.Application.DeviceController.StockPort;
 using Wcs.Application.DeviceController.Tranship;
-using Wcs.Application.Handler.DeviceExecute;
 using Wcs.Application.Handler.DeviceExecute.StockIn;
 using Wcs.CustomEvents.Saga;
 using Wcs.Device.DeviceStructure.StockPort;
-using Wcs.Domain.Task;
 using Wcs.Shared;
 
 namespace Wcs.Infrastructure.Device.Controler;
@@ -40,7 +37,7 @@ internal class StockPortInController : BaseCommonController<AbstractStockPort>, 
                 //一条线程一个执行周期
                 using var scope = _scopeFactory.CreateScope();
                 var sender = scope.ServiceProvider.GetService<ISender>();
-                IExecuteDeviceCommand request = new StockInCommand(item);
+                var request = new StockInCommand(item);
                 await sender.Send(request, cancelToken);
             });
         }

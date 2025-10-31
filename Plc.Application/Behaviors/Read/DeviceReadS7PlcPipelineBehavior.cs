@@ -15,31 +15,28 @@ internal class DeviceReadS7PlcPipelineBehavior(IS7NetManager netManager)
         RequestHandlerDelegate<IEnumerable<ReadBuffer>> next,
         CancellationToken cancellationToken)
     {
-        if (request.IsBath)
+        if (request.UseMemory)
         {
-            if (request.UseMemory)
+            if (request.DeviceName != null)
             {
-                if (request.DeviceName != null)
-                {
-                    //将该设备模型加载到内存
-                    var key = request.DeviceName + "Bath";
-                    if (PlcReadWriteDtoHelper._readBufferInputs.ContainsKey(key) == false)
-                    {
-                        var s7EntityItems = await netManager.GetNetWiteDeviceNameAsync(request.DeviceName);
-                        PlcReadWriteDtoHelper.UseMemoryInitReadBufferInput(key, s7EntityItems.ToArray());
-                    }
-
-                    request.readBufferInputs = PlcReadWriteDtoHelper._readBufferInputs[key].ToArray();
-                }
-            }
-            else
-            {
-                if (request.DeviceName != null)
+                //将该设备模型加载到内存
+                var key = request.DeviceName + "Bath";
+                if (PlcReadWriteDtoHelper._readBufferInputs.ContainsKey(key) == false)
                 {
                     var s7EntityItems = await netManager.GetNetWiteDeviceNameAsync(request.DeviceName);
-                    request.readBufferInputs =
-                        PlcReadWriteDtoHelper.CreatReadBufferInput(s7EntityItems.ToArray()).ToArray();
+                    PlcReadWriteDtoHelper.UseMemoryInitReadBufferInput(key, s7EntityItems.ToArray());
                 }
+
+                request.readBufferInputs = PlcReadWriteDtoHelper._readBufferInputs[key].ToArray();
+            }
+        }
+        else
+        {
+            if (request.DeviceName != null)
+            {
+                var s7EntityItems = await netManager.GetNetWiteDeviceNameAsync(request.DeviceName);
+                request.readBufferInputs =
+                    PlcReadWriteDtoHelper.CreatReadBufferInput(s7EntityItems.ToArray()).ToArray();
             }
         }
 

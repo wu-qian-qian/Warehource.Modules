@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
+using Wcs.Application.Handler.DeviceExecute.Behaviors;
 
 namespace Wcs.Application;
 
@@ -10,8 +11,7 @@ public static class ApplicationConfigurator
 {
     public static void AddMediatR(MediatRServiceConfiguration configuration)
     {
-        //  configuration.AddOpenBehavior(typeof(ReadS7PlcPipelineBehavior<>));
-        // configuration.AddBehavior(typeof(GetWcsTaskPipelinBehavior));
+        configuration.AddOpenBehavior(typeof(CanBusinessPipelinBehavior<,>));
     }
 
 

@@ -1,13 +1,11 @@
-﻿using Common.Application.MediatR.Message;
-using MediatR;
-using Wcs.Domain.Task;
+﻿using Common.Application.StateMachine;
+using Wcs.Application.Handler.DeviceExecute.StockIn;
 
 namespace Wcs.Application.Handler.DeviceExecute.StockOut;
 
-internal class StockOutCommandHandler(IWcsTaskRepository _wcsTaskRepository, ISender _sender)
-    : ICommandHandler<StockOutCommand>
+internal class StockOutCommandHandler : DeviceCommandHandler<StockInCommand>
 {
-    public async Task Handle(StockOutCommand request, CancellationToken cancellationToken)
+    public StockOutCommandHandler(IStateMachineManager _statemachineManager) : base(_statemachineManager)
     {
     }
 }

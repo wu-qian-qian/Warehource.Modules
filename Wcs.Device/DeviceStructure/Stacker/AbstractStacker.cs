@@ -51,10 +51,7 @@ public abstract class AbstractStacker : AbstractDevice<StackerConfig, StackerDBE
     /// <returns></returns>
     public bool IsTranShipPoint()
     {
-        if (DBEntity.RRow == Config.StationRow && DBEntity.RColumn == Config.StationColumn)
-        {
-            return true;
-        }
+        if (DBEntity.RRow == Config.StationRow && DBEntity.RColumn == Config.StationColumn) return true;
 
         return false;
     }

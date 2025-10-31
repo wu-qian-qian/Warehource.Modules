@@ -2,7 +2,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Wcs.Application.Handler.Business.CreatDeviceData;
 using Wcs.Device.Abstract;
-using Wcs.Device.DeviceStructure.StockPort;
 using Wcs.Domain.Task;
 using Wcs.Shared;
 
@@ -27,7 +26,7 @@ public abstract class BaseCommonController<TDeviceStructure> where TDeviceStruct
     public DeviceTypeEnum DeviceType { get; init; }
 
     /// <summary>
-    /// 用来初始化当前设备类型控制中心所有拥有的设备数据结构
+    ///     用来初始化当前设备类型控制中心所有拥有的设备数据结构
     /// </summary>
     /// <param name="token"></param>
     /// <returns></returns>
@@ -49,7 +48,7 @@ public abstract class BaseCommonController<TDeviceStructure> where TDeviceStruct
     #region 公共基本的业务
 
     /// <summary>
-    ///设置启用禁用
+    ///     设置启用禁用
     /// </summary>
     /// <param name="enable"></param>
     /// <param name="name"></param>
@@ -59,7 +58,7 @@ public abstract class BaseCommonController<TDeviceStructure> where TDeviceStruct
     }
 
     /// <summary>
-    /// 通过设备名称获取当前设备任务
+    ///     通过设备名称获取当前设备任务
     /// </summary>
     /// <param name="deviceName"></param>
     /// <returns></returns>
@@ -69,7 +68,7 @@ public abstract class BaseCommonController<TDeviceStructure> where TDeviceStruct
     }
 
     /// <summary>
-    /// 通过设备名称设置当前设备任务
+    ///     通过设备名称设置当前设备任务
     /// </summary>
     /// <param name="deviceName"></param>
     /// <param name="wcsTask"></param>
@@ -80,7 +79,7 @@ public abstract class BaseCommonController<TDeviceStructure> where TDeviceStruct
     }
 
     /// <summary>
-    /// 通过设备名称获取当前设备所管辖的区域编码
+    ///     通过设备名称获取当前设备所管辖的区域编码
     /// </summary>
     /// <param name="deviceName"></param>
     /// <returns></returns>
@@ -91,7 +90,7 @@ public abstract class BaseCommonController<TDeviceStructure> where TDeviceStruct
     }
 
     /// <summary>
-    /// 通过设备名称获取当前设备数据结构
+    ///     通过设备名称获取当前设备数据结构
     /// </summary>
     /// <param name="deviceName"></param>
     /// <returns></returns>
@@ -101,7 +100,7 @@ public abstract class BaseCommonController<TDeviceStructure> where TDeviceStruct
     }
 
     /// <summary>
-    /// 通过设备名称清除当前设备任务
+    ///     通过设备名称清除当前设备任务
     /// </summary>
     /// <param name="deviceName"></param>
     public void CleatWcsTaskByDeviceName(string deviceName)
@@ -110,7 +109,7 @@ public abstract class BaseCommonController<TDeviceStructure> where TDeviceStruct
     }
 
     /// <summary>
-    /// 通过设备名称获取当前设备任务缓存key
+    ///     通过设备名称获取当前设备任务缓存key
     /// </summary>
     /// <param name="deviceName"></param>
     /// <returns></returns>

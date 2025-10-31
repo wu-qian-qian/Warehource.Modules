@@ -28,7 +28,7 @@ internal class AddJobCommandHandler(
         var @bool = await jobService.AddJobConfigAsync(jobConfig);
         if (@bool)
         {
-            jobService.CraetJob(jobConfig);
+            if (jobConfig.IsStart) jobService.CraetJob(jobConfig);
             await unitOfWork.SaveChangesAsync();
             result.SetValue(mapper.Map<JobDto>(request));
         }

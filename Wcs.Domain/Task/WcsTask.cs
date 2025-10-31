@@ -20,7 +20,7 @@ public class WcsTask : IEntity
     public bool IsEnforce { get; set; }
 
     /// <summary>
-    ///    上游任务号
+    ///     上游任务号
     /// </summary>
     public string TaskCode { get; set; }
 
@@ -66,19 +66,19 @@ public class WcsTask : IEntity
     public PutLocation PutLocation { get; set; }
 
     /// <summary>
-    /// 输送起点位置
+    ///     输送起点位置
     /// </summary>
     public string? EndPosition { get; set; }
 
     /// <summary>
-    /// 输送终点位置
+    ///     输送终点位置
     /// </summary>
     public string? StartPosition { get; set; }
 
     public Guid? RegionId { get; set; }
 
     /// <summary>
-    ///    区域编码
+    ///     区域编码
     /// </summary>
     public string? RegionCode { get; set; }
 

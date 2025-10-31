@@ -1,6 +1,5 @@
 ﻿using Common.Application.Event;
 using MassTransit;
-using NPOI.OpenXmlFormats.Vml;
 using Wcs.Application.DomainEvent.WritePlcData;
 using Wcs.CustomEvents;
 

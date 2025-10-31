@@ -1,4 +1,5 @@
-﻿using Common.Application.Log;
+﻿using Common.Application.Caching;
+using Common.Application.Log;
 using Common.Shared;
 using MassTransit;
 using MediatR;
@@ -16,13 +17,17 @@ namespace Plc.Presentation.Custom;
 /// <typeparam name="TIntegrationEvent"></typeparam>
 /// <param name="bus"></param>
 /// <param name="cache"></param>
-public class ReadPlcEventConsumer<TIntegrationEvent>(ISender sender)
+public class ReadPlcEventConsumer<TIntegrationEvent>(ISender sender, ICacheService _cacheService)
     : IConsumer<TIntegrationEvent>
     where TIntegrationEvent : S7ReadPlcDataBlockIntegrationEvent
 {
     public async Task Consume(ConsumeContext<TIntegrationEvent> context)
     {
         S7ReadPlcDataBlockIntegrationEvent s7ReadPlcConsumevent = context.Message;
+        var readModelArray = await _cacheService.GetAsync(s7ReadPlcConsumevent.Key);
+        if (readModelArray != null)
+            //已有数据被消费掉，不需要再次读取
+            return;
         var readPlcEvent = new ReadPlcEventCommand
         {
             UseMemory = s7ReadPlcConsumevent.UseMemory,

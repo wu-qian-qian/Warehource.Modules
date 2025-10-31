@@ -10,9 +10,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Wcs.Application;
 using Wcs.Application.Abstract;
-using Wcs.Application.DeviceController.Stacker;
-using Wcs.Application.DeviceController.StockPort;
-using Wcs.Application.DeviceController.Tranship;
 using Wcs.Application.SignalR;
 using Wcs.Contracts.Options;
 using Wcs.Domain.Device;
@@ -28,7 +25,6 @@ using Wcs.Infrastructure.DB.JobConfig;
 using Wcs.Infrastructure.DB.PlcMap;
 using Wcs.Infrastructure.DB.Region;
 using Wcs.Infrastructure.DB.WcsTask;
-using Wcs.Infrastructure.Device.Controler;
 using Wcs.Infrastructure.Job.Options;
 using Wcs.Infrastructure.Job.Service;
 using Wcs.Infrastructure.Service;
@@ -36,7 +32,7 @@ using Wcs.Infrastructure.SignalR;
 using Wcs.Presentation.Custom;
 using Wcs.Presentation.Saga;
 using Wcs.Shared;
-
+using AssemblyReference = Wcs.Presentation.AssemblyReference;
 
 namespace Wcs.Infrastructure;
 
@@ -174,7 +170,7 @@ public static class WcsInfrastructureConfiguration
     }
 
     /// <summary>
-    /// 对特性标注的类型进行DI注入
+    ///     对特性标注的类型进行DI注入
     /// </summary>
     /// <param name="service"></param>
     public static void AddDependy(IServiceCollection service)

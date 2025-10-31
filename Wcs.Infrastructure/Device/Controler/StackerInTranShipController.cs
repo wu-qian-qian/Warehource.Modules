@@ -5,7 +5,6 @@ using Wcs.Application.DeviceController;
 using Wcs.Application.DeviceController.Tranship;
 using Wcs.Application.Handler.DeviceExecute;
 using Wcs.Application.Handler.DeviceExecute.StackerTranshipIn;
-using Wcs.CustomEvents.Saga;
 using Wcs.Device.DeviceStructure.Tranship;
 using Wcs.Shared;
 
@@ -50,10 +49,7 @@ internal class StackerInTranShipController : BaseCommonController<AbstractStacke
     {
         var tunnles = Devices.Select(device =>
         {
-            if (device.CanExecute() && device.CanRegionExecute(regionCode))
-            {
-                return device.Config.Tunnle;
-            }
+            if (device.CanExecute() && device.CanRegionExecute(regionCode)) return device.Config.Tunnle;
 
             return string.Empty;
         });
@@ -68,10 +64,7 @@ internal class StackerInTranShipController : BaseCommonController<AbstractStacke
     public string GetWcsTaskNoByDeviceName(string deviceName)
     {
         var device = Devices.First(p => p.Name == deviceName);
-        if (device.CanExecute())
-        {
-            return device.DBEntity.RTask;
-        }
+        if (device.CanExecute()) return device.DBEntity.RTask;
 
         return string.Empty;
     }
@@ -91,12 +84,8 @@ internal class StackerInTranShipController : BaseCommonController<AbstractStacke
     {
         var devices = Devices.Where(p => p.Config.Tunnle == tunnle);
         foreach (var device in devices)
-        {
             if (device.CanExecute())
-            {
                 return device.DBEntity.RTask;
-            }
-        }
 
         return string.Empty;
     }

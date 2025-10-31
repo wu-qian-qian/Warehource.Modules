@@ -15,7 +15,7 @@ namespace Plc.Infrastructure.Token;
 
 public partial class S7NetToken : S7Net
 {
-    public S7NetToken(S7NetDto netConfig) : base(netConfig.IsUse)
+    public S7NetToken(S7NetDto netConfig)
     {
         var s7Cpu = netConfig.S7Type switch
         {
@@ -26,6 +26,7 @@ public partial class S7NetToken : S7Net
         _plc = new S7.Net.Plc(s7Cpu, netConfig.Ip, netConfig.Port, netConfig.Rack, netConfig.Solt);
         _plc.ReadTimeout = netConfig.ReadTimeOut;
         _plc.WriteTimeout = netConfig.WriteTimeOut;
+        UsePlc(netConfig.IsUse);
     }
 
     public override void Connect()
@@ -49,7 +50,7 @@ public partial class S7NetToken : S7Net
 
     public override void Close()
     {
-        _plc.Close();
+        _plc?.Close();
         Log.Logger.ForCategory(LogCategory.Net).Information($"{_plc.IP}--关闭链接");
     }
 

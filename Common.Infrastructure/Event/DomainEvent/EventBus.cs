@@ -2,10 +2,9 @@
 using Common.Application.Log;
 using Common.Domain.Event;
 using Common.Domain.State;
-using MassTransit;
+using Common.Shared;
 using Microsoft.CSharp.RuntimeBinder;
 using Microsoft.Extensions.DependencyInjection;
-using System.Linq.Expressions;
 
 namespace Common.Infrastructure.Event.DomainEvent;
 
@@ -41,7 +40,7 @@ internal class EventBus : IEventBus
             }
             catch (RuntimeBinderException ex)
             {
-                Serilog.Log.Logger.ForCategory(Shared.LogCategory.Event)
+                Serilog.Log.Logger.ForCategory(LogCategory.Event)
                     .Information(eventName + " 事件处理器绑定失败:" + ex.Message);
             }
         }
@@ -50,7 +49,7 @@ internal class EventBus : IEventBus
     }
 
     /// <summary>
-    ///   发布事件
+    ///     发布事件
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="integrationEvent"></param>
@@ -68,14 +67,12 @@ internal class EventBus : IEventBus
             var scop = _serviceProvider.CreateScope();
             var handler = scop.ServiceProvider.GetService(handel) as IStateMachine;
             if (handler is IEventHandler<T> domainEventHandler)
-            {
                 await domainEventHandler.Handle(integrationEvent, cancellationToken);
-            }
         }
     }
 
     /// <summary>
-    ///    发布事件并获取响应
+    ///     发布事件并获取响应
     /// </summary>
     /// <typeparam name="TResponse"></typeparam>
     /// <param name="event"></param>

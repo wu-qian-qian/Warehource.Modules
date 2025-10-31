@@ -1,32 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Common.Shared;
 
-namespace Common.Shared
+/// <summary>
+///     依赖注入特性
+/// </summary>
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, Inherited = false)]
+public class DependyAttrubite : Attribute
 {
-    /// <summary>
-    /// 依赖注入特性
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, Inherited = false, AllowMultiple = false)]
-    public class DependyAttrubite : Attribute
+    public DependyAttrubite(DependyLifeTimeEnum lifeTime, Type baseType)
     {
-        public DependyAttrubite(DependyLifeTimeEnum lifeTime, Type baseType)
-        {
-            LifeTime = lifeTime;
-            BaseType = baseType;
-        }
-
-        public DependyLifeTimeEnum LifeTime { get; set; }
-
-        public Type BaseType { get; set; }
+        LifeTime = lifeTime;
+        BaseType = baseType;
     }
 
-    public enum DependyLifeTimeEnum
-    {
-        Scoped,
-        Singleton,
-        Transient
-    }
+    public DependyLifeTimeEnum LifeTime { get; set; }
+
+    public Type BaseType { get; set; }
+}
+
+public enum DependyLifeTimeEnum
+{
+    Scoped,
+    Singleton,
+    Transient
 }

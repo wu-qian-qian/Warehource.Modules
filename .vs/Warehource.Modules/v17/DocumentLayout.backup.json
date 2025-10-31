@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\devicecontroller\\basecommoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\devicecontroller\\basecommoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5969F2F6-79B6-43D9-8E02-4892668C79C8}|Wcs.Device\\Wcs.Device.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.device\\helper\\creatdbentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5969F2F6-79B6-43D9-8E02-4892668C79C8}|Wcs.Device\\Wcs.Device.csproj|solutionrelative:wcs.device\\helper\\creatdbentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\devicecontroller\\tranship\\transhipin\\istackertranshipincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\devicecontroller\\tranship\\transhipin\\istackertranshipincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\devicecontroller\\tranship\\itranshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\devicecontroller\\tranship\\itranshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\devicecontroller\\tranship\\transhipout\\istackertranshipoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\devicecontroller\\tranship\\transhipout\\istackertranshipoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|d:\\program\\\u4ED3\u5E93\\warehource.modules\\wcs.application\\handler\\deviceexecute\\behaviors\\canbusinesspipelinbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77BCA099-E20D-437B-B04F-A1C5BFD4F352}|Wcs.Application\\Wcs.Application.csproj|solutionrelative:wcs.application\\handler\\deviceexecute\\behaviors\\canbusinesspipelinbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreatDBEntity.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Device\\Helper\\CreatDBEntity.cs",
+              "RelativeDocumentMoniker": "Wcs.Device\\Helper\\CreatDBEntity.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Device\\Helper\\CreatDBEntity.cs",
+              "RelativeToolTip": "Wcs.Device\\Helper\\CreatDBEntity.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAqwC4AAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T07:54:18.055Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -94,54 +99,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseCommonController.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DeviceController\\BaseCommonController.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\DeviceController\\BaseCommonController.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DeviceController\\BaseCommonController.cs",
-              "RelativeToolTip": "Wcs.Application\\DeviceController\\BaseCommonController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T05:42:59.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IStackerTranshipInController.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DeviceController\\Tranship\\TranshipIn\\IStackerTranshipInController.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\DeviceController\\Tranship\\TranshipIn\\IStackerTranshipInController.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DeviceController\\Tranship\\TranshipIn\\IStackerTranshipInController.cs",
-              "RelativeToolTip": "Wcs.Application\\DeviceController\\Tranship\\TranshipIn\\IStackerTranshipInController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAAAAAAAAAAAA==",
+              "Title": "CanBusinessPipelinBehavior.cs",
+              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DeviceExecute\\Behaviors\\CanBusinessPipelinBehavior.cs",
+              "RelativeDocumentMoniker": "Wcs.Application\\Handler\\DeviceExecute\\Behaviors\\CanBusinessPipelinBehavior.cs",
+              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\Handler\\DeviceExecute\\Behaviors\\CanBusinessPipelinBehavior.cs",
+              "RelativeToolTip": "Wcs.Application\\Handler\\DeviceExecute\\Behaviors\\CanBusinessPipelinBehavior.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAADwvywAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T05:42:43.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IStackerTranshipOutController.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DeviceController\\Tranship\\TranshipOut\\IStackerTranshipOutController.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\DeviceController\\Tranship\\TranshipOut\\IStackerTranshipOutController.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DeviceController\\Tranship\\TranshipOut\\IStackerTranshipOutController.cs",
-              "RelativeToolTip": "Wcs.Application\\DeviceController\\Tranship\\TranshipOut\\IStackerTranshipOutController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T05:42:33.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ITranshipController.cs",
-              "DocumentMoniker": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DeviceController\\Tranship\\ITranshipController.cs",
-              "RelativeDocumentMoniker": "Wcs.Application\\DeviceController\\Tranship\\ITranshipController.cs",
-              "ToolTip": "D:\\Program\\\u4ED3\u5E93\\Warehource.Modules\\Wcs.Application\\DeviceController\\Tranship\\ITranshipController.cs",
-              "RelativeToolTip": "Wcs.Application\\DeviceController\\Tranship\\ITranshipController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswA0AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T05:42:30.189Z",
+              "WhenOpened": "2025-10-31T07:54:03.077Z",
               "EditorCaption": ""
             }
           ]

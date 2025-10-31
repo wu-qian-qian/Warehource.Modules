@@ -2,14 +2,17 @@
 
 public abstract class BaseDeviceConfig
 {
-    protected BaseDeviceConfig()
-    {
-        Key = $"{Name.GetHashCode()}{nameof(Key).GetHashCode()}";
-        DBKey = $"{Name.GetHashCode()}{nameof(DBKey).GetHashCode()}";
-        TaskKey = $"{Name.GetHashCode()}{nameof(TaskKey).GetHashCode()}";
-    }
+    private string _name;
 
-    public string Name { get; set; }
+    public string Name
+    {
+        get => _name;
+        set
+        {
+            _name = value;
+            InitKeys();
+        }
+    }
 
     /// <summary>
     ///     缓存使用    唯一标识
@@ -25,4 +28,11 @@ public abstract class BaseDeviceConfig
     ///     用于任务获取的Key
     /// </summary>
     public string TaskKey { get; protected set; }
+
+    private void InitKeys()
+    {
+        Key = $"{Name.GetHashCode()}{nameof(Key).GetHashCode()}";
+        DBKey = $"{Name.GetHashCode()}{nameof(DBKey).GetHashCode()}";
+        TaskKey = $"{Name.GetHashCode()}{nameof(TaskKey).GetHashCode()}";
+    }
 }

@@ -9,7 +9,7 @@ namespace Plc.Application.Handler.ReadWrite;
 
 public class TransferDataHelper
 {
-    public static string TransferBufferToData(byte[] buffer, int offset, byte bitOffset, S7DataTypeEnum s7DataType,
+    public static string TransferBufferToData(byte[] buffer, int offset, byte? bitOffset, S7DataTypeEnum s7DataType,
         byte? array)
     {
         var result = string.Empty;
@@ -18,7 +18,7 @@ public class TransferDataHelper
             case S7DataTypeEnum.Bool:
             {
                 var res = buffer.Skip(offset).Take(1).ToArray();
-                result = TransferBufferHelper.ByteFromBool(res[0], bitOffset).ToString();
+                result = TransferBufferHelper.ByteFromBool(res[0], bitOffset.Value).ToString();
                 break;
             }
             case S7DataTypeEnum.Byte:
